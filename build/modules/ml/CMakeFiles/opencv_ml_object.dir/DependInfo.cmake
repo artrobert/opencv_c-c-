@@ -1,0 +1,44 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/ann_mlp.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/ann_mlp.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/boost.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/boost.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/data.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/data.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/em.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/em.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/gbt.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/gbt.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/inner_functions.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/inner_functions.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/kdtree.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/kdtree.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/knearest.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/knearest.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/lr.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/lr.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/nbayes.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/nbayes.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/rtrees.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/rtrees.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/svm.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/svm.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/testset.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/testset.cpp.obj"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src/tree.cpp" "C:/Users/rartin/Desktop/build/modules/ml/CMakeFiles/opencv_ml_object.dir/src/tree.cpp.obj"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "CVAPI_EXPORTS"
+  "__OPENCV_BUILD=1"
+  )
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "."
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/include"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/ml/src"
+  "modules/ml"
+  "C:/Users/rartin/Desktop/opencv/sources/modules/core/include"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

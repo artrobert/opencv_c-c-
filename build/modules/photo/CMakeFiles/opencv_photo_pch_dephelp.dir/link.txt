@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc ..\..\lib\libopencv_photo_pch_dephelp.a  CMakeFiles/opencv_photo_pch_dephelp.dir/opencv_photo_pch_dephelp.cxx.obj
+C:\MinGW\bin\ranlib.exe ..\..\lib\libopencv_photo_pch_dephelp.a

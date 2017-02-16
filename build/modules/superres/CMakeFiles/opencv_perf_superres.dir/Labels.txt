@@ -1,0 +1,17 @@
+# Target labels
+ Main
+ opencv_superres
+ PerfTest
+# Source files and their labels
+C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_main.cpp
+ Main
+ opencv_superres
+ PerfTest
+C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_superres.cpp
+ Main
+ opencv_superres
+ PerfTest
+C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_precomp.hpp
+ Main
+ opencv_superres
+ PerfTest

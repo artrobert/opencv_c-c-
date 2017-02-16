@@ -1,0 +1,9 @@
+"D:\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Facultate\c++Project\opencv_c-c-\edgeDetection
+-- OpenCV ARCH: x86
+-- OpenCV RUNTIME: mingw
+-- OpenCV STATIC: ON
+-- Found OpenCV 3.1.0 in D:/Facultate/c++Project/opencv_c-c-/build/install/x86/mingw/lib
+-- You might need to add D:/Facultate/c++Project/opencv_c-c-/build/install/x86/mingw/bin to your PATH to be able to run your applications.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Facultate/c++Project/opencv_c-c-/edgeDetection/cmake-build-debug
