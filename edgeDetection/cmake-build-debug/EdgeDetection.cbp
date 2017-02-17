@@ -86,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.cpp">
+			<Option target="test_cv"/>
+		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h">
+			<Option target="test_cv"/>
+		</Unit>
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp">
 			<Option target="test_cv"/>
 		</Unit>

@@ -122,6 +122,33 @@ test_cv/fast:
 	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/build
 .PHONY : test_cv/fast
 
+IPM.obj: IPM.cpp.obj
+
+.PHONY : IPM.obj
+
+# target to build an object file
+IPM.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/IPM.cpp.obj
+.PHONY : IPM.cpp.obj
+
+IPM.i: IPM.cpp.i
+
+.PHONY : IPM.i
+
+# target to preprocess a source file
+IPM.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/IPM.cpp.i
+.PHONY : IPM.cpp.i
+
+IPM.s: IPM.cpp.s
+
+.PHONY : IPM.s
+
+# target to generate assembly for a file
+IPM.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/IPM.cpp.s
+.PHONY : IPM.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... test_cv
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... IPM.obj
+	@echo ... IPM.i
+	@echo ... IPM.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
