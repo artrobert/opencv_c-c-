@@ -488,7 +488,7 @@ opencv2/features2d/features2d.hpp
 iostream
 -
 
-D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.cpp
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -501,4 +501,20 @@ ctime
 -
 IPM.h
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
+imagePreparation.h
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.h
+
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.h
+
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc.hpp
+-
+IPM.h
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
+imagePreparation.h
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.h
 

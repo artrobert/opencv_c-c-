@@ -149,6 +149,33 @@ IPM.cpp.s:
 	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/IPM.cpp.s
 .PHONY : IPM.cpp.s
 
+imagePreparation.obj: imagePreparation.cpp.obj
+
+.PHONY : imagePreparation.obj
+
+# target to build an object file
+imagePreparation.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.obj
+.PHONY : imagePreparation.cpp.obj
+
+imagePreparation.i: imagePreparation.cpp.i
+
+.PHONY : imagePreparation.i
+
+# target to preprocess a source file
+imagePreparation.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.i
+.PHONY : imagePreparation.cpp.i
+
+imagePreparation.s: imagePreparation.cpp.s
+
+.PHONY : imagePreparation.s
+
+# target to generate assembly for a file
+imagePreparation.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.s
+.PHONY : imagePreparation.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -188,6 +215,9 @@ help:
 	@echo ... IPM.obj
 	@echo ... IPM.i
 	@echo ... IPM.s
+	@echo ... imagePreparation.obj
+	@echo ... imagePreparation.i
+	@echo ... imagePreparation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

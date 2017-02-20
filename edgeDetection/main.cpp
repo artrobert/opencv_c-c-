@@ -1,13 +1,36 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include <iostream>
 #include <opencv2/imgproc.hpp>
-#include <ctime>
 
 #include "IPM.h"
+#include "imagePreparation.h"
 
 using namespace cv;
 using namespace std;
+
+
+
+
+
+int main(int argc, char **argv) {
+
+    Mat im;
+
+    im=imagePreparation::readImage();
+    im=imagePreparation::convertImageGreyscale(im);
+    im=imagePreparation::CannyThreshold(im);
+    im=imagePreparation::dilationImage(im);
+    im = imagePreparation::blurImage(im);
+
+    namedWindow("test", CV_WINDOW_AUTOSIZE);
+    imshow( "test", im );
+
+
+    cv::waitKey(0); // Wait for a keystroke in the window
+    return 0;
+}
+
+//////OLD CODE
 
 //Global variables
 
@@ -53,17 +76,17 @@ const char *corners_window = "Corners detected";
 
 void dostuff();
 
-int readImage(){
-    //Declare the path of the image we will be working on
-    String imageName("../chess.jpg");
-    // Read the file
-    src = imread(imageName);
-    // Check for invalid input
-    if (!src.data) {
-        std::cout << "Could not open or find the frame" << std::endl;
-        return -1;
-    }
-}
+//int readImage(){
+//    //Declare the path of the image we will be working on
+//    String imageName("../chess.jpg");
+//    // Read the file
+//    src = imread(imageName);
+//    // Check for invalid input
+//    if (!src.data) {
+//        std::cout << "Could not open or find the frame" << std::endl;
+//        return -1;
+//    }
+//}
 
 void convertImage(){
     //Create a matrix of the same type and size as src (for dst)
@@ -113,22 +136,10 @@ void getCornerPoints(Mat canny_output){
     Mat drawing = Mat::zeros( canny_output.size(), CV_8UC3 );
     for( size_t i = 1; i< 2; i++ )
     {
+        RNG rng(12345);
         Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
         drawContours( drawing, contours, (int)i, color, 1, 8, hierarchy, 0, Point() );
     }
-}
-
-int main(int argc, char **argv) {
-
-    readImage();
-    convertImage();
-    blurTheGrayscale();
-    applyCannyFilter();
-
-
-
-    cv::waitKey(0); // Wait for a keystroke in the window
-    return 0;
 }
 
 void oldMain(){
