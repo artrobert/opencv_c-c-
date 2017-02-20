@@ -18,14 +18,13 @@ public:
 
     static cv::Mat blurImage(cv::Mat &src);
 
-    static cv::Mat dilationImage(cv::Mat &src);
-
-    std::vector<cv::Point> getCornerPoints(cv::Mat &src);
-
-    cv::Mat warpImage(cv::Mat &image, std::vector<cv::Point> &points);
+    static std::vector<cv::Point2f> getCornerPoints(cv::Mat &src);
 
     static cv::Mat CannyThreshold(cv::Mat &src);
 
+    static cv::Mat dilationImage(cv::Mat &src, int dilation_elem, int dilation_size);
+
+    static cv::Mat warpImage(cv::Mat &image, std::vector<cv::Point2f> &points);
 };
 
 

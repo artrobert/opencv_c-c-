@@ -72,14 +72,14 @@ cv::Mat imagePreparation::blurImage(cv::Mat &src) {
  *
  * Useful if the lines are not fully connected and we need them to be (e.g. after a CANNY filter)
  *
+ *  2 , 2 are good parameters
+ *
+ *
  * @param src The Mat we want to apply the dilation
  * @return The Mat that the dilation was applied
  */
-cv::Mat imagePreparation::dilationImage(cv::Mat &src) {
+cv::Mat imagePreparation::dilationImage(cv::Mat &src,int dilation_elem,int dilation_size) {
     Mat resultDst;
-    int dilation_elem, dilation_size = 0;
-    int const max_elem = 2;
-    int const max_kernel_size = 21;
 
     int dilation_type;
     if (dilation_elem == 0) { dilation_type = MORPH_RECT; }
@@ -100,7 +100,7 @@ cv::Mat imagePreparation::dilationImage(cv::Mat &src) {
  * @param src The image we want to find the corners. Should be blurred
  * @return The vectors with the corner points
  */
-vector<Point> imagePreparation::getCornerPoints(cv::Mat &src) {
+vector<Point2f> imagePreparation::getCornerPoints(cv::Mat &src) {
     vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
     //using this thresh we will get get only the table outline
@@ -115,7 +115,7 @@ vector<Point> imagePreparation::getCornerPoints(cv::Mat &src) {
     vector<Point> co = contours[0];
 
     // The vector of extremity corners to call the warp function
-    vector<Point> corners;
+    vector<Point2f> corners;
 
     // The first value is the first corner so we save it (min Y & minX or maxX)
     corners.push_back(co[0]);
@@ -150,11 +150,11 @@ vector<Point> imagePreparation::getCornerPoints(cv::Mat &src) {
  * @param points The corners of the region we will extract and warp
  * @return The warped image
  */
-cv::Mat imagePreparation::warpImage(cv::Mat &image, vector<Point> &points) {
+cv::Mat imagePreparation::warpImage(cv::Mat &image, vector<Point2f> &points) {
 //    //get the width and height of the src image
     int width = 0, height = 0;
-    width = imgReadSrc.cols;
-    height = imgReadSrc.rows;
+    width = image.cols;
+    height = image.rows;
 
     //Set the points
 
@@ -171,7 +171,7 @@ cv::Mat imagePreparation::warpImage(cv::Mat &image, vector<Point> &points) {
     dstPoints.push_back(Point2f(width, height));
     dstPoints.push_back(Point2f(width, 0));
     dstPoints.push_back(Point2f(0, 0));
-    IPM ipm(Size(width, height), Size(width, height), origPoints, dstPoints);
+    IPM ipm(Size(width, height), Size(width, height), points, dstPoints);
 
 //    if (imgReadSrc.channels() == 3)
 //        cvtColor(src, inputImgGray, CV_BGR2GRAY);
@@ -181,7 +181,7 @@ cv::Mat imagePreparation::warpImage(cv::Mat &image, vector<Point> &points) {
     // Process
     Mat imgHomographyDst;
     clock_t begin = clock();
-    ipm.applyHomography(imgGreySrc, imgHomographyDst);
+    ipm.applyHomography(image, imgHomographyDst);
     clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     printf("%.2f (ms)\r", 1000 * elapsed_secs);
@@ -202,7 +202,7 @@ cv::Mat imagePreparation::warpImage(cv::Mat &image, vector<Point> &points) {
  */
 cv::Mat imagePreparation::CannyThreshold(cv::Mat &src) {
     Mat resultDst;
-    int lowThreshold = 80;
+    int lowThreshold = 80; //this is hardcoded because give the best result , TODO: maybe change it as a parameter
     int ratio = 3;
     int kernel_size = 3;
     /// Reduce noise with a kernel 3x3
