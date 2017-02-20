@@ -26,11 +26,10 @@ Mat imgReadSrc, imgGreySrc, imgBlurredSrc, imgBlurredCannySrc;
  * Function used to read the static image and save the MAT in imageReadSrc
  * @return The error code.
  */
-cv::Mat imagePreparation::readImage() {
+cv::Mat imagePreparation::readImage(String image_name) {
     //Declare the path of the image we will be working on
-    String imageName("../chess.jpg");
     // Read the file
-    imgReadSrc = imread(imageName);
+    imgReadSrc = imread(image_name);
     // Check for invalid input
     if (!imgReadSrc.data) {
         std::cout << "Could not open or find the frame" << std::endl;

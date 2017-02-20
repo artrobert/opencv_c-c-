@@ -12,8 +12,6 @@ class imagePreparation {
 
 public:
 
-    static cv::Mat readImage();
-
     static cv::Mat convertImageGreyscale(cv::Mat &src);
 
     static cv::Mat blurImage(cv::Mat &src);
@@ -25,6 +23,8 @@ public:
     static cv::Mat dilationImage(cv::Mat &src, int dilation_elem, int dilation_size);
 
     static cv::Mat warpImage(cv::Mat &image, std::vector<cv::Point2f> &points);
+
+    static cv::Mat readImage(cv::String image_name);
 };
 
 
