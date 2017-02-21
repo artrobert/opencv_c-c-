@@ -5,6 +5,7 @@
 #include "IPM.h"
 #include "imagePreparation.h"
 #include "featureDetection.h"
+#include "km.h"
 
 using namespace cv;
 using namespace std;
@@ -26,7 +27,8 @@ int main(int argc, char **argv) {
 //    im = imagePreparation::dilationImage(im,2,2); //apply dilation , 2,2 are good parameters
 //    warpImage();
 //    getCornerList();
-    featureDetection::firstTry();
+//    featureDetection::firstTry();
+    km::kmeanstry();
     cv::waitKey(0); // Wait for a keystroke in the window
     return 0;
 }

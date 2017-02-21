@@ -104,6 +104,12 @@
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.h">
 			<Option target="test_cv"/>
 		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/km.cpp">
+			<Option target="test_cv"/>
+		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/km.h">
+			<Option target="test_cv"/>
+		</Unit>
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp">
 			<Option target="test_cv"/>
 		</Unit>

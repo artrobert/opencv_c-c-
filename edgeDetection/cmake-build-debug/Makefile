@@ -203,6 +203,33 @@ imagePreparation.cpp.s:
 	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.s
 .PHONY : imagePreparation.cpp.s
 
+km.obj: km.cpp.obj
+
+.PHONY : km.obj
+
+# target to build an object file
+km.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/km.cpp.obj
+.PHONY : km.cpp.obj
+
+km.i: km.cpp.i
+
+.PHONY : km.i
+
+# target to preprocess a source file
+km.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/km.cpp.i
+.PHONY : km.cpp.i
+
+km.s: km.cpp.s
+
+.PHONY : km.s
+
+# target to generate assembly for a file
+km.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/km.cpp.s
+.PHONY : km.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -248,6 +275,9 @@ help:
 	@echo ... imagePreparation.obj
 	@echo ... imagePreparation.i
 	@echo ... imagePreparation.s
+	@echo ... km.obj
+	@echo ... km.i
+	@echo ... km.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

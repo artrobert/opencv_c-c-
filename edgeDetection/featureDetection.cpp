@@ -1,13 +1,8 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc.hpp>
 #include <opencv2/features2d.hpp>
-#include <vector>
-#include <opencv2/imgcodecs.hpp>
 #include <iostream>
-#include<math.h>
 
-#include "IPM.h"
 #include "imagePreparation.h"
 
 using namespace cv;
@@ -38,7 +33,7 @@ void featureDetection::firstTry(){
     namedWindow("chess_king", CV_WINDOW_AUTOSIZE);
     imshow("chess_king", result2);
 
-   BFMatcher matcher(NORM_HAMMING,true);
+   BFMatcher matcher(NORM_L2,false);
     vector<DMatch> matches;
     matcher.match(desc2,desc1,matches,noArray());
     Mat m;

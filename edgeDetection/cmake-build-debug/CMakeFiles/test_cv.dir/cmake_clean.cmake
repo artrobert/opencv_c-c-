@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_cv.dir/IPM.cpp.obj"
   "CMakeFiles/test_cv.dir/imagePreparation.cpp.obj"
   "CMakeFiles/test_cv.dir/featureDetection.cpp.obj"
+  "CMakeFiles/test_cv.dir/km.cpp.obj"
   "test_cv.pdb"
   "test_cv.exe"
   "test_cv.exe.manifest"

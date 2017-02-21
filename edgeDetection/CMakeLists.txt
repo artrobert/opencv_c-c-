@@ -9,7 +9,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(test_cv main.cpp IPM.cpp IPM.h imagePreparation.cpp imagePreparation.h featureDetection.cpp featureDetection.h)
+add_executable(test_cv main.cpp IPM.cpp IPM.h imagePreparation.cpp imagePreparation.h featureDetection.cpp featureDetection.h km.cpp km.h)
 
 #add libs you need
 set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs opencv_features2d)
