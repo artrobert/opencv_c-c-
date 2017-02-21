@@ -4,6 +4,7 @@
 
 #include "IPM.h"
 #include "imagePreparation.h"
+#include "featureDetection.h"
 
 using namespace cv;
 using namespace std;
@@ -13,18 +14,20 @@ void getCornerList();
 
 int main(int argc, char **argv) {
 
-    Mat im,imGrey;
-
-    im = imagePreparation::readImage("../chess.jpg"); //read the image
-    namedWindow("original", CV_WINDOW_AUTOSIZE);
-    imshow("original", im);
+//    Mat im,imGrey;
+//
+//    im = imagePreparation::readImage("../chess.jpg"); //read the image
+//    namedWindow("original", CV_WINDOW_AUTOSIZE);
+//    imshow("original", im);
 
 //    imGrey = imagePreparation::convertImageGreyscale(im); //convert it to greyscale
 //    im = imagePreparation::blurImage(imGrey); //blur the image
 //    im = imagePreparation::CannyThreshold(im); //apply CANNY , the threshold is good at 80
 //    im = imagePreparation::dilationImage(im,2,2); //apply dilation , 2,2 are good parameters
 //    warpImage();
-    getCornerList();
+//    getCornerList();
+//    featureDetection::detectFeatureORB();
+    featureDetection::firstTry();
     cv::waitKey(0); // Wait for a keystroke in the window
     return 0;
 }

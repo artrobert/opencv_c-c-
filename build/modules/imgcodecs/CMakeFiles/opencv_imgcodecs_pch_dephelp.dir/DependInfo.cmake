@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rartin/Desktop/build/modules/imgcodecs/opencv_imgcodecs_pch_dephelp.cxx" "C:/Users/rartin/Desktop/build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.obj"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgcodecs/opencv_imgcodecs_pch_dephelp.cxx" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,25 +17,25 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjasper"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjasper"
   "3rdparty/libtiff"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/libtiff"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/libwebp"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libwebp"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg"
   "3rdparty/zlib"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/zlib"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/zlib"
   "."
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/openexr/Half"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/openexr/Iex"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/openexr/IlmThread"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/openexr/Imath"
-  "C:/Users/rartin/Desktop/opencv/sources/3rdparty/openexr/IlmImf"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/Half"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/Iex"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/IlmThread"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/Imath"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/IlmImf"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src"
   "modules/imgcodecs"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/core/include"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include"
   )
 
 # Targets to which this target links.

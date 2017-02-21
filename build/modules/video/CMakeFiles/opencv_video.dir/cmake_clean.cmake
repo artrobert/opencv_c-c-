@@ -11,10 +11,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj"
   "CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj"
   "CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj"
-  "../../bin/libopencv_video310.pdb"
-  "../../bin/libopencv_video310.dll"
-  "../../lib/libopencv_video310.dll.a"
-  "../../bin/libopencv_video310.dll.manifest"
+  "../../bin/libopencv_video320.pdb"
+  "../../bin/libopencv_video320.dll"
+  "../../lib/libopencv_video320.dll.a"
+  "../../bin/libopencv_video320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

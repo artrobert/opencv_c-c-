@@ -2,11 +2,11 @@
 # File that provides "make uninstall" target
 #  We use the file 'install_manifest.txt'
 # -----------------------------------------------
-IF(NOT EXISTS "C:/Users/rartin/Desktop/build/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"C:/Users/rartin/Desktop/build/install_manifest.txt\"")
-ENDIF(NOT EXISTS "C:/Users/rartin/Desktop/build/install_manifest.txt")
+IF(NOT EXISTS "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install_manifest.txt\"")
+ENDIF(NOT EXISTS "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install_manifest.txt")
 
-FILE(READ "C:/Users/rartin/Desktop/build/install_manifest.txt" files)
+FILE(READ "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

@@ -59,6 +59,67 @@ CMakeFiles/test_cv.dir/IPM.cpp.obj
  D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/videoio/videoio_c.h
  D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.cpp
  D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
+CMakeFiles/test_cv.dir/featureDetection.cpp.obj
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/cxcore.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/calib3d.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/calib3d/calib3d.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/calib3d/calib3d_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/affine.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/base.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/bufferpool.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/core.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/core_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/cvdef.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/cvstd.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/cvstd.inl.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/fast_math.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/hal/interface.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/mat.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/mat.inl.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/matx.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/neon_utils.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/operations.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/optim.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/persistence.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/ptr.inl.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/saturate.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/traits.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/types.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/types_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/utility.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/core/version.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/features2d.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/features2d/features2d.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/flann/config.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/flann/defines.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/flann/miniflann.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/highgui.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/highgui/highgui.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/highgui/highgui_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/imgcodecs.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/imgcodecs/imgcodecs_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/imgproc.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/imgproc/imgproc.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/imgproc/imgproc_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/imgproc/types_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/ml.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/objdetect.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/objdetect/detection_based_tracker.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/objdetect/objdetect_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/opencv.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/photo.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/photo/photo_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/video.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/video/background_segm.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/video/tracking.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/video/tracking_c.h
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/videoio.hpp
+ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/videoio/videoio_c.h
+ D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
+ D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.cpp
+ D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.h
+ D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.h
 CMakeFiles/test_cv.dir/imagePreparation.cpp.obj
  D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/cxcore.h
  D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/calib3d.hpp
@@ -177,5 +238,6 @@ CMakeFiles/test_cv.dir/main.cpp.obj
  D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/videoio.hpp
  D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/videoio/videoio_c.h
  D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
+ D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.h
  D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.h
  D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp

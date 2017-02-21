@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_video opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_objdetect opencv_superres opencv_ts opencv_features2d opencv_calib3d opencv_stitching opencv_videostab)
+foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_video opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_objdetect opencv_superres opencv_features2d opencv_calib3d opencv_stitching opencv_videostab)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -77,9 +77,6 @@ add_library(opencv_objdetect SHARED IMPORTED)
 # Create imported target opencv_superres
 add_library(opencv_superres SHARED IMPORTED)
 
-# Create imported target opencv_ts
-add_library(opencv_ts STATIC IMPORTED)
-
 # Create imported target opencv_features2d
 add_library(opencv_features2d SHARED IMPORTED)
 
@@ -95,140 +92,132 @@ add_library(opencv_videostab SHARED IMPORTED)
 # Import target "opencv_core" for configuration "Release"
 set_property(TARGET opencv_core APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_core PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_core310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_core320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_core310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_core320.dll"
   )
 
 # Import target "opencv_flann" for configuration "Release"
 set_property(TARGET opencv_flann APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_flann PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_flann310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_flann320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_flann310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_flann320.dll"
   )
 
 # Import target "opencv_imgproc" for configuration "Release"
 set_property(TARGET opencv_imgproc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_imgproc PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_imgproc310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_imgproc320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_imgproc310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_imgproc320.dll"
   )
 
 # Import target "opencv_ml" for configuration "Release"
 set_property(TARGET opencv_ml APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_ml PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_ml310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_ml320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_ml310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_ml320.dll"
   )
 
 # Import target "opencv_photo" for configuration "Release"
 set_property(TARGET opencv_photo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_photo PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_photo310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_photo320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_photo310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_photo320.dll"
   )
 
 # Import target "opencv_video" for configuration "Release"
 set_property(TARGET opencv_video APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_video PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_video310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_video320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_video310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_video320.dll"
   )
 
 # Import target "opencv_imgcodecs" for configuration "Release"
 set_property(TARGET opencv_imgcodecs APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_imgcodecs PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_imgcodecs310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_imgcodecs320.dll.a"
   IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_imgcodecs310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_imgcodecs320.dll"
   )
 
 # Import target "opencv_shape" for configuration "Release"
 set_property(TARGET opencv_shape APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_shape PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_shape310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_shape320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_video"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_shape310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_shape320.dll"
   )
 
 # Import target "opencv_videoio" for configuration "Release"
 set_property(TARGET opencv_videoio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_videoio PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_videoio310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_videoio320.dll.a"
   IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_videoio310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_videoio320.dll"
   )
 
 # Import target "opencv_highgui" for configuration "Release"
 set_property(TARGET opencv_highgui APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_highgui PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_highgui310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_highgui320.dll.a"
   IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_highgui310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_highgui320.dll"
   )
 
 # Import target "opencv_objdetect" for configuration "Release"
 set_property(TARGET opencv_objdetect APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_objdetect PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_objdetect310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_objdetect320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_objdetect310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_objdetect320.dll"
   )
 
 # Import target "opencv_superres" for configuration "Release"
 set_property(TARGET opencv_superres APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_superres PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_superres310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_superres320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_superres310.dll"
-  )
-
-# Import target "opencv_ts" for configuration "Release"
-set_property(TARGET opencv_ts APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(opencv_ts PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_ts310.a"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_superres320.dll"
   )
 
 # Import target "opencv_features2d" for configuration "Release"
 set_property(TARGET opencv_features2d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_features2d PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_features2d310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_features2d320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_features2d310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_features2d320.dll"
   )
 
 # Import target "opencv_calib3d" for configuration "Release"
 set_property(TARGET opencv_calib3d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_calib3d PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_calib3d310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_calib3d320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_calib3d310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_calib3d320.dll"
   )
 
 # Import target "opencv_stitching" for configuration "Release"
 set_property(TARGET opencv_stitching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_stitching PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_stitching310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_stitching320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_objdetect;opencv_features2d;opencv_calib3d"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_stitching310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_stitching320.dll"
   )
 
 # Import target "opencv_videostab" for configuration "Release"
 set_property(TARGET opencv_videostab APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_videostab PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Desktop/build/lib/libopencv_videostab310.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_videostab320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_photo;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Desktop/build/bin/libopencv_videostab310.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_videostab320.dll"
   )
 
 # This file does not depend on other imported targets which have

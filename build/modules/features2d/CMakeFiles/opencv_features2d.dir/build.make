@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/features2d/CMakeFiles/opencv_features2d.dir/depend.make
@@ -56,29 +56,29 @@ include modules/features2d/CMakeFiles/opencv_features2d.dir/progress.make
 # Include the compile flags for this target's objects.
 include modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 
-modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/opencl/brute_force_match.cl
-modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/opencl/fast.cl
-modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/opencl/orb.cl
-modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Desktop/opencv/sources/cmake/cl2cpp.cmake
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencl_kernels_features2d.cpp, opencl_kernels_features2d.hpp"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && "C:\Program Files (x86)\CMake\bin\cmake.exe" -DMODULE_NAME=features2d -DCL_DIR=C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/opencl -DOUTPUT=C:/Users/rartin/Desktop/build/modules/features2d/opencl_kernels_features2d.cpp -P C:/Users/rartin/Desktop/opencv/sources/cmake/cl2cpp.cmake
+modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/opencl/brute_force_match.cl
+modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/opencl/fast.cl
+modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/opencl/orb.cl
+modules/features2d/opencl_kernels_features2d.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/cmake/cl2cpp.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencl_kernels_features2d.cpp, opencl_kernels_features2d.hpp"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && "C:\Program Files (x86)\CMake\bin\cmake.exe" -DMODULE_NAME=features2d -DCL_DIR=C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/opencl -DOUTPUT=C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/opencl_kernels_features2d.cpp -P C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/cmake/cl2cpp.cmake
 
 modules/features2d/opencl_kernels_features2d.hpp: modules/features2d/opencl_kernels_features2d.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate modules\features2d\opencl_kernels_features2d.hpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/agast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\agast.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\agast.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/agast.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\agast.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\agast.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/agast.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\agast.cpp > CMakeFiles\opencv_features2d.dir\src\agast.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\agast.cpp > CMakeFiles\opencv_features2d.dir\src\agast.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/agast.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\agast.cpp -o CMakeFiles\opencv_features2d.dir\src\agast.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\agast.cpp -o CMakeFiles\opencv_features2d.dir\src\agast.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj.requires:
 
@@ -93,17 +93,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj.provides.b
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/agast_score.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\agast_score.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\agast_score.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/agast_score.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\agast_score.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\agast_score.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\agast_score.cpp > CMakeFiles\opencv_features2d.dir\src\agast_score.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\agast_score.cpp > CMakeFiles\opencv_features2d.dir\src\agast_score.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\agast_score.cpp -o CMakeFiles\opencv_features2d.dir\src\agast_score.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\agast_score.cpp -o CMakeFiles\opencv_features2d.dir\src\agast_score.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj.requires:
 
@@ -118,17 +118,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj.prov
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/akaze.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\akaze.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\akaze.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/akaze.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\akaze.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\akaze.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/akaze.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\akaze.cpp > CMakeFiles\opencv_features2d.dir\src\akaze.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\akaze.cpp > CMakeFiles\opencv_features2d.dir\src\akaze.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/akaze.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\akaze.cpp -o CMakeFiles\opencv_features2d.dir\src\akaze.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\akaze.cpp -o CMakeFiles\opencv_features2d.dir\src\akaze.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj.requires:
 
@@ -143,17 +143,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj.provides.b
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/bagofwords.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\bagofwords.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\bagofwords.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/bagofwords.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\bagofwords.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\bagofwords.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\bagofwords.cpp > CMakeFiles\opencv_features2d.dir\src\bagofwords.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\bagofwords.cpp > CMakeFiles\opencv_features2d.dir\src\bagofwords.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\bagofwords.cpp -o CMakeFiles\opencv_features2d.dir\src\bagofwords.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\bagofwords.cpp -o CMakeFiles\opencv_features2d.dir\src\bagofwords.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj.requires:
 
@@ -168,17 +168,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj.provi
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/blobdetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\blobdetector.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\blobdetector.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/blobdetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\blobdetector.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\blobdetector.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\blobdetector.cpp > CMakeFiles\opencv_features2d.dir\src\blobdetector.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\blobdetector.cpp > CMakeFiles\opencv_features2d.dir\src\blobdetector.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\blobdetector.cpp -o CMakeFiles\opencv_features2d.dir\src\blobdetector.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\blobdetector.cpp -o CMakeFiles\opencv_features2d.dir\src\blobdetector.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj.requires:
 
@@ -193,17 +193,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj.pro
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/brisk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\brisk.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\brisk.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/brisk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\brisk.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\brisk.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/brisk.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\brisk.cpp > CMakeFiles\opencv_features2d.dir\src\brisk.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\brisk.cpp > CMakeFiles\opencv_features2d.dir\src\brisk.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/brisk.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\brisk.cpp -o CMakeFiles\opencv_features2d.dir\src\brisk.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\brisk.cpp -o CMakeFiles\opencv_features2d.dir\src\brisk.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj.requires:
 
@@ -218,17 +218,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj.provides.b
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/draw.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\draw.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\draw.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\draw.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\draw.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/draw.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\draw.cpp > CMakeFiles\opencv_features2d.dir\src\draw.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\draw.cpp > CMakeFiles\opencv_features2d.dir\src\draw.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/draw.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\draw.cpp -o CMakeFiles\opencv_features2d.dir\src\draw.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\draw.cpp -o CMakeFiles\opencv_features2d.dir\src\draw.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj.requires:
 
@@ -243,17 +243,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj.provides.bu
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/dynamic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\dynamic.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\dynamic.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/dynamic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\dynamic.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\dynamic.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\dynamic.cpp > CMakeFiles\opencv_features2d.dir\src\dynamic.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\dynamic.cpp > CMakeFiles\opencv_features2d.dir\src\dynamic.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\dynamic.cpp -o CMakeFiles\opencv_features2d.dir\src\dynamic.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\dynamic.cpp -o CMakeFiles\opencv_features2d.dir\src\dynamic.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj.requires:
 
@@ -268,17 +268,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj.provides
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/evaluation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\evaluation.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\evaluation.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/evaluation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\evaluation.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\evaluation.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\evaluation.cpp > CMakeFiles\opencv_features2d.dir\src\evaluation.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\evaluation.cpp > CMakeFiles\opencv_features2d.dir\src\evaluation.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\evaluation.cpp -o CMakeFiles\opencv_features2d.dir\src\evaluation.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\evaluation.cpp -o CMakeFiles\opencv_features2d.dir\src\evaluation.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj.requires:
 
@@ -293,17 +293,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj.provi
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/fast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\fast.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\fast.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/fast.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\fast.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\fast.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/fast.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\fast.cpp > CMakeFiles\opencv_features2d.dir\src\fast.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\fast.cpp > CMakeFiles\opencv_features2d.dir\src\fast.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/fast.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\fast.cpp -o CMakeFiles\opencv_features2d.dir\src\fast.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\fast.cpp -o CMakeFiles\opencv_features2d.dir\src\fast.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj.requires:
 
@@ -318,17 +318,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj.provides.bu
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/fast_score.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\fast_score.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\fast_score.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/fast_score.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\fast_score.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\fast_score.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\fast_score.cpp > CMakeFiles\opencv_features2d.dir\src\fast_score.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\fast_score.cpp > CMakeFiles\opencv_features2d.dir\src\fast_score.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\fast_score.cpp -o CMakeFiles\opencv_features2d.dir\src\fast_score.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\fast_score.cpp -o CMakeFiles\opencv_features2d.dir\src\fast_score.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj.requires:
 
@@ -343,17 +343,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj.provi
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/feature2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\feature2d.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\feature2d.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/feature2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\feature2d.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\feature2d.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\feature2d.cpp > CMakeFiles\opencv_features2d.dir\src\feature2d.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\feature2d.cpp > CMakeFiles\opencv_features2d.dir\src\feature2d.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\feature2d.cpp -o CMakeFiles\opencv_features2d.dir\src\feature2d.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\feature2d.cpp -o CMakeFiles\opencv_features2d.dir\src\feature2d.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj.requires:
 
@@ -368,17 +368,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj.provid
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/gftt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\gftt.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\gftt.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/gftt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\gftt.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\gftt.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/gftt.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\gftt.cpp > CMakeFiles\opencv_features2d.dir\src\gftt.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\gftt.cpp > CMakeFiles\opencv_features2d.dir\src\gftt.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/gftt.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\gftt.cpp -o CMakeFiles\opencv_features2d.dir\src\gftt.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\gftt.cpp -o CMakeFiles\opencv_features2d.dir\src\gftt.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj.requires:
 
@@ -393,17 +393,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj.provides.bu
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/kaze.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/kaze.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/kaze.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze.cpp > CMakeFiles\opencv_features2d.dir\src\kaze.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze.cpp > CMakeFiles\opencv_features2d.dir\src\kaze.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/kaze.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj.requires:
 
@@ -418,17 +418,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj.provides.bu
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/kaze/AKAZEFeatures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\AKAZEFeatures.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\AKAZEFeatures.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/kaze/AKAZEFeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\AKAZEFeatures.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\AKAZEFeatures.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\AKAZEFeatures.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\AKAZEFeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\AKAZEFeatures.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\AKAZEFeatures.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\AKAZEFeatures.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\AKAZEFeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\AKAZEFeatures.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\AKAZEFeatures.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj.requires:
 
@@ -443,17 +443,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.o
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/kaze/KAZEFeatures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\KAZEFeatures.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\KAZEFeatures.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/kaze/KAZEFeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\KAZEFeatures.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\KAZEFeatures.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\KAZEFeatures.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\KAZEFeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\KAZEFeatures.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\KAZEFeatures.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\KAZEFeatures.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\KAZEFeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\KAZEFeatures.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\KAZEFeatures.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj.requires:
 
@@ -468,17 +468,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.ob
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/kaze/fed.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\fed.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\fed.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/kaze/fed.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\fed.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\fed.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\fed.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\fed.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\fed.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\fed.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\fed.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\fed.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\fed.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\fed.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj.requires:
 
@@ -493,17 +493,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj.provide
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/kaze/nldiffusion_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\nldiffusion_functions.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\nldiffusion_functions.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/kaze/nldiffusion_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\kaze\nldiffusion_functions.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\nldiffusion_functions.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\nldiffusion_functions.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\nldiffusion_functions.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\nldiffusion_functions.cpp > CMakeFiles\opencv_features2d.dir\src\kaze\nldiffusion_functions.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\kaze\nldiffusion_functions.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\nldiffusion_functions.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\kaze\nldiffusion_functions.cpp -o CMakeFiles\opencv_features2d.dir\src\kaze\nldiffusion_functions.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj.requires:
 
@@ -518,17 +518,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functio
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/keypoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\keypoint.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\keypoint.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/keypoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\keypoint.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\keypoint.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\keypoint.cpp > CMakeFiles\opencv_features2d.dir\src\keypoint.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\keypoint.cpp > CMakeFiles\opencv_features2d.dir\src\keypoint.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\keypoint.cpp -o CMakeFiles\opencv_features2d.dir\src\keypoint.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\keypoint.cpp -o CMakeFiles\opencv_features2d.dir\src\keypoint.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj.requires:
 
@@ -543,17 +543,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj.provide
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\main.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\main.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\main.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\main.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/main.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\main.cpp > CMakeFiles\opencv_features2d.dir\src\main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\main.cpp > CMakeFiles\opencv_features2d.dir\src\main.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/main.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\main.cpp -o CMakeFiles\opencv_features2d.dir\src\main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\main.cpp -o CMakeFiles\opencv_features2d.dir\src\main.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj.requires:
 
@@ -568,17 +568,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj.provides.bu
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/matchers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\matchers.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\matchers.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/matchers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\matchers.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\matchers.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/matchers.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\matchers.cpp > CMakeFiles\opencv_features2d.dir\src\matchers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\matchers.cpp > CMakeFiles\opencv_features2d.dir\src\matchers.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/matchers.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\matchers.cpp -o CMakeFiles\opencv_features2d.dir\src\matchers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\matchers.cpp -o CMakeFiles\opencv_features2d.dir\src\matchers.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj.requires:
 
@@ -593,17 +593,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj.provide
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/mser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\mser.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\mser.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/mser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\mser.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\mser.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/mser.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\mser.cpp > CMakeFiles\opencv_features2d.dir\src\mser.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\mser.cpp > CMakeFiles\opencv_features2d.dir\src\mser.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/mser.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\mser.cpp -o CMakeFiles\opencv_features2d.dir\src\mser.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\mser.cpp -o CMakeFiles\opencv_features2d.dir\src\mser.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj.requires:
 
@@ -618,17 +618,17 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj.provides.bu
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
-modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/features2d/src/orb.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\orb.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\orb.cpp
+modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/src/orb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\src\orb.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\orb.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/src/orb.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\orb.cpp > CMakeFiles\opencv_features2d.dir\src\orb.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\orb.cpp > CMakeFiles\opencv_features2d.dir\src\orb.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/src/orb.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\features2d\src\orb.cpp -o CMakeFiles\opencv_features2d.dir\src\orb.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d\src\orb.cpp -o CMakeFiles\opencv_features2d.dir\src\orb.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj.requires:
 
@@ -644,16 +644,16 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj.provides.bui
 modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/flags.make
 modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj: modules/features2d/CMakeFiles/opencv_features2d.dir/includes_CXX.rsp
 modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj: modules/features2d/opencl_kernels_features2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\opencl_kernels_features2d.cpp.obj -c C:\Users\rartin\Desktop\build\modules\features2d\opencl_kernels_features2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_features2d.dir\opencl_kernels_features2d.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d\opencl_kernels_features2d.cpp
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\build\modules\features2d\opencl_kernels_features2d.cpp > CMakeFiles\opencv_features2d.dir\opencl_kernels_features2d.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d\opencl_kernels_features2d.cpp > CMakeFiles\opencv_features2d.dir\opencl_kernels_features2d.cpp.i
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/features2d/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\build\modules\features2d\opencl_kernels_features2d.cpp -o CMakeFiles\opencv_features2d.dir\opencl_kernels_features2d.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/features2d/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d\opencl_kernels_features2d.cpp -o CMakeFiles\opencv_features2d.dir\opencl_kernels_features2d.cpp.s
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj.requires:
 
@@ -696,46 +696,46 @@ opencv_features2d_OBJECTS = \
 # External object files for target opencv_features2d
 opencv_features2d_EXTERNAL_OBJECTS =
 
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/build.make
-bin/libopencv_features2d310.dll: lib/libopencv_flann310.dll.a
-bin/libopencv_features2d310.dll: lib/libopencv_ml310.dll.a
-bin/libopencv_features2d310.dll: lib/libopencv_highgui310.dll.a
-bin/libopencv_features2d310.dll: lib/libopencv_videoio310.dll.a
-bin/libopencv_features2d310.dll: lib/libopencv_imgcodecs310.dll.a
-bin/libopencv_features2d310.dll: lib/libopencv_imgproc310.dll.a
-bin/libopencv_features2d310.dll: lib/libopencv_core310.dll.a
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/linklibs.rsp
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/objects1.rsp
-bin/libopencv_features2d310.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX shared library ..\..\bin\libopencv_features2d310.dll"
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_features2d.dir\link.txt --verbose=$(VERBOSE)
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/build.make
+bin/libopencv_features2d320.dll: lib/libopencv_flann320.dll.a
+bin/libopencv_features2d320.dll: lib/libopencv_ml320.dll.a
+bin/libopencv_features2d320.dll: lib/libopencv_highgui320.dll.a
+bin/libopencv_features2d320.dll: lib/libopencv_videoio320.dll.a
+bin/libopencv_features2d320.dll: lib/libopencv_imgcodecs320.dll.a
+bin/libopencv_features2d320.dll: lib/libopencv_imgproc320.dll.a
+bin/libopencv_features2d320.dll: lib/libopencv_core320.dll.a
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/linklibs.rsp
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/objects1.rsp
+bin/libopencv_features2d320.dll: modules/features2d/CMakeFiles/opencv_features2d.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX shared library ..\..\bin\libopencv_features2d320.dll"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_features2d.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-modules/features2d/CMakeFiles/opencv_features2d.dir/build: bin/libopencv_features2d310.dll
+modules/features2d/CMakeFiles/opencv_features2d.dir/build: bin/libopencv_features2d320.dll
 
 .PHONY : modules/features2d/CMakeFiles/opencv_features2d.dir/build
 
@@ -767,11 +767,11 @@ modules/features2d/CMakeFiles/opencv_features2d.dir/requires: modules/features2d
 .PHONY : modules/features2d/CMakeFiles/opencv_features2d.dir/requires
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\features2d && $(CMAKE_COMMAND) -P CMakeFiles\opencv_features2d.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d && $(CMAKE_COMMAND) -P CMakeFiles\opencv_features2d.dir\cmake_clean.cmake
 .PHONY : modules/features2d/CMakeFiles/opencv_features2d.dir/clean
 
 modules/features2d/CMakeFiles/opencv_features2d.dir/depend: modules/features2d/opencl_kernels_features2d.cpp
 modules/features2d/CMakeFiles/opencv_features2d.dir/depend: modules/features2d/opencl_kernels_features2d.hpp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\features2d C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\features2d C:\Users\rartin\Desktop\build\modules\features2d\CMakeFiles\opencv_features2d.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\features2d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d\CMakeFiles\opencv_features2d.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/features2d/CMakeFiles/opencv_features2d.dir/depend
 

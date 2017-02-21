@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/depend.make
@@ -58,17 +58,17 @@ include modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/flags.make
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/flags.make
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/includes_CXX.rsp
-modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/calib3d/perf/opencl/perf_stereobm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\opencl\perf_stereobm.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\opencl\perf_stereobm.cpp
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/calib3d/perf/opencl/perf_stereobm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\opencl\perf_stereobm.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\opencl\perf_stereobm.cpp
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\opencl\perf_stereobm.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\opencl\perf_stereobm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\opencl\perf_stereobm.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\opencl\perf_stereobm.cpp.i
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\opencl\perf_stereobm.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\opencl\perf_stereobm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\opencl\perf_stereobm.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\opencl\perf_stereobm.cpp.s
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj.requires:
 
@@ -81,19 +81,44 @@ modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj.provides.build: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj
 
 
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/flags.make
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/includes_CXX.rsp
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/calib3d/perf/perf_affine2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_affine2d.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_affine2d.cpp
+
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.i"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_affine2d.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_affine2d.cpp.i
+
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.s"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_affine2d.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_affine2d.cpp.s
+
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.requires:
+
+.PHONY : modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.requires
+
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.provides: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.requires
+	$(MAKE) -f modules\calib3d\CMakeFiles\opencv_perf_calib3d.dir\build.make modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.provides.build
+.PHONY : modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.provides
+
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.provides.build: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj
+
+
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/flags.make
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/includes_CXX.rsp
-modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/calib3d/perf/perf_cicrlesGrid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_cicrlesGrid.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_cicrlesGrid.cpp
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/calib3d/perf/perf_cicrlesGrid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_cicrlesGrid.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_cicrlesGrid.cpp
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_cicrlesGrid.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_cicrlesGrid.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_cicrlesGrid.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_cicrlesGrid.cpp.i
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_cicrlesGrid.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_cicrlesGrid.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_cicrlesGrid.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_cicrlesGrid.cpp.s
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj.requires:
 
@@ -108,17 +133,17 @@ modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/flags.make
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/includes_CXX.rsp
-modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/calib3d/perf/perf_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_main.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_main.cpp
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/calib3d/perf/perf_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_main.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_main.cpp
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_main.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_main.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_main.cpp.i
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_main.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_main.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_main.cpp.s
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj.requires:
 
@@ -133,17 +158,17 @@ modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj.provid
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/flags.make
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/includes_CXX.rsp
-modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/calib3d/perf/perf_pnp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_pnp.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_pnp.cpp
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/calib3d/perf/perf_pnp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_pnp.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_pnp.cpp
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_pnp.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_pnp.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_pnp.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_pnp.cpp.i
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_pnp.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_pnp.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_pnp.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_pnp.cpp.s
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj.requires:
 
@@ -158,17 +183,17 @@ modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj.provide
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/flags.make
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/includes_CXX.rsp
-modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/calib3d/perf/perf_stereosgbm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_stereosgbm.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_stereosgbm.cpp
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/calib3d/perf/perf_stereosgbm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_stereosgbm.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_stereosgbm.cpp
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_stereosgbm.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_stereosgbm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_stereosgbm.cpp > CMakeFiles\opencv_perf_calib3d.dir\perf\perf_stereosgbm.cpp.i
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/calib3d/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\calib3d\perf\perf_stereosgbm.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_stereosgbm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/calib3d/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d\perf\perf_stereosgbm.cpp -o CMakeFiles\opencv_perf_calib3d.dir\perf\perf_stereosgbm.cpp.s
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj.requires:
 
@@ -184,6 +209,7 @@ modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj.
 # Object files for target opencv_perf_calib3d
 opencv_perf_calib3d_OBJECTS = \
 "CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj" \
+"CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj" \
 "CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj" \
 "CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj" \
 "CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj" \
@@ -193,26 +219,27 @@ opencv_perf_calib3d_OBJECTS = \
 opencv_perf_calib3d_EXTERNAL_OBJECTS =
 
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj
+bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_stereosgbm.cpp.obj
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/build.make
-bin/opencv_perf_calib3d.exe: lib/libopencv_ts310.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_calib3d310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_features2d310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_flann310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_ml310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_perf_calib3d.exe: lib/libopencv_core310.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_ts320.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_calib3d320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_features2d320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_flann320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_ml320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_perf_calib3d.exe: lib/libopencv_core320.dll.a
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/linklibs.rsp
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/objects1.rsp
 bin/opencv_perf_calib3d.exe: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ..\..\bin\opencv_perf_calib3d.exe"
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_perf_calib3d.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ..\..\bin\opencv_perf_calib3d.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_perf_calib3d.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/build: bin/opencv_perf_calib3d.exe
@@ -220,6 +247,7 @@ modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/build: bin/opencv_perf_calib3
 .PHONY : modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/build
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/requires: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj.requires
+modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/requires: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj.requires
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/requires: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj.requires
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/requires: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj.requires
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/requires: modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj.requires
@@ -228,10 +256,10 @@ modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/requires: modules/calib3d/CMa
 .PHONY : modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/requires
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\calib3d && $(CMAKE_COMMAND) -P CMakeFiles\opencv_perf_calib3d.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d && $(CMAKE_COMMAND) -P CMakeFiles\opencv_perf_calib3d.dir\cmake_clean.cmake
 .PHONY : modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/clean
 
 modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\calib3d C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\calib3d C:\Users\rartin\Desktop\build\modules\calib3d\CMakeFiles\opencv_perf_calib3d.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\calib3d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\calib3d\CMakeFiles\opencv_perf_calib3d.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/calib3d/CMakeFiles/opencv_perf_calib3d.dir/depend
 

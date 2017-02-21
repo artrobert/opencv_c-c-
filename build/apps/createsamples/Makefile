@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -69,7 +69,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\apps\createsamples\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/CMakeFiles/opencv_createsamples.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/createsamples/CMakeFiles/opencv_createsamples.dir/rule
 .PHONY : apps/createsamples/CMakeFiles/opencv_createsamples.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ opencv_createsamples: apps/createsamples/CMakeFiles/opencv_createsamples.dir/rul
 
 # fast build rule for target.
 opencv_createsamples/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/build
 .PHONY : opencv_createsamples/fast
 
 createsamples.obj: createsamples.cpp.obj
@@ -207,7 +207,7 @@ createsamples.obj: createsamples.cpp.obj
 
 # target to build an object file
 createsamples.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj
 .PHONY : createsamples.cpp.obj
 
 createsamples.i: createsamples.cpp.i
@@ -216,7 +216,7 @@ createsamples.i: createsamples.cpp.i
 
 # target to preprocess a source file
 createsamples.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.i
 .PHONY : createsamples.cpp.i
 
 createsamples.s: createsamples.cpp.s
@@ -225,7 +225,7 @@ createsamples.s: createsamples.cpp.s
 
 # target to generate assembly for a file
 createsamples.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.s
 .PHONY : createsamples.cpp.s
 
 utility.obj: utility.cpp.obj
@@ -234,7 +234,7 @@ utility.obj: utility.cpp.obj
 
 # target to build an object file
 utility.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj
 .PHONY : utility.cpp.obj
 
 utility.i: utility.cpp.i
@@ -243,7 +243,7 @@ utility.i: utility.cpp.i
 
 # target to preprocess a source file
 utility.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.i
 .PHONY : utility.cpp.i
 
 utility.s: utility.cpp.s
@@ -252,7 +252,7 @@ utility.s: utility.cpp.s
 
 # target to generate assembly for a file
 utility.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\createsamples\CMakeFiles\opencv_createsamples.dir\build.make apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.s
 .PHONY : utility.cpp.s
 
 # Help Target
@@ -288,6 +288,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

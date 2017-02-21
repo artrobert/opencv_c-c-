@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rartin/Desktop/build/modules/ts/opencv_ts_pch_dephelp.cxx" "C:/Users/rartin/Desktop/build/modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.obj"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/opencv_ts_pch_dephelp.cxx" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,14 +16,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
-  "C:/Users/rartin/Desktop/opencv/sources/modules/ts/include"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/ts/src"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src"
   "modules/ts"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/core/include"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/include"
-  "C:/Users/rartin/Desktop/opencv/sources/modules/highgui/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include"
+  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include"
   )
 
 # Targets to which this target links.

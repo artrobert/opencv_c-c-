@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/opencv_test_calib3d.dir/test/opencl/test_stereobm.cpp.obj"
+  "CMakeFiles/opencv_test_calib3d.dir/test/test_affine2d_estimator.cpp.obj"
   "CMakeFiles/opencv_test_calib3d.dir/test/test_affine3.cpp.obj"
   "CMakeFiles/opencv_test_calib3d.dir/test/test_affine3d_estimator.cpp.obj"
+  "CMakeFiles/opencv_test_calib3d.dir/test/test_affine_partial2d_estimator.cpp.obj"
   "CMakeFiles/opencv_test_calib3d.dir/test/test_cameracalibration.cpp.obj"
   "CMakeFiles/opencv_test_calib3d.dir/test/test_cameracalibration_artificial.cpp.obj"
   "CMakeFiles/opencv_test_calib3d.dir/test/test_cameracalibration_badarg.cpp.obj"

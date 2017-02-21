@@ -15,10 +15,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_photo.dir/src/seamless_cloning_impl.cpp.obj"
   "CMakeFiles/opencv_photo.dir/src/tonemap.cpp.obj"
   "CMakeFiles/opencv_photo.dir/opencl_kernels_photo.cpp.obj"
-  "../../bin/libopencv_photo310.pdb"
-  "../../bin/libopencv_photo310.dll"
-  "../../lib/libopencv_photo310.dll.a"
-  "../../bin/libopencv_photo310.dll.manifest"
+  "../../bin/libopencv_photo320.pdb"
+  "../../bin/libopencv_photo320.dll"
+  "../../lib/libopencv_photo320.dll.a"
+  "../../bin/libopencv_photo320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

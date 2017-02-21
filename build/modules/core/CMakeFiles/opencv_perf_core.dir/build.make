@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/core/CMakeFiles/opencv_perf_core.dir/depend.make
@@ -58,17 +58,17 @@ include modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/cuda/perf_gpumat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\cuda\perf_gpumat.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\cuda\perf_gpumat.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/cuda/perf_gpumat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\cuda\perf_gpumat.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\cuda\perf_gpumat.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\cuda\perf_gpumat.cpp > CMakeFiles\opencv_perf_core.dir\perf\cuda\perf_gpumat.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\cuda\perf_gpumat.cpp > CMakeFiles\opencv_perf_core.dir\perf\cuda\perf_gpumat.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\cuda\perf_gpumat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\cuda\perf_gpumat.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\cuda\perf_gpumat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\cuda\perf_gpumat.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/cuda/perf_gpumat.cpp.obj.provi
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/opencl/perf_arithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_arithm.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_arithm.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_arithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_arithm.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_arithm.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_arithm.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_arithm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_arithm.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_arithm.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_arithm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_arithm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_arithm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_arithm.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj.requires:
 
@@ -108,17 +108,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_arithm.cpp.obj.pro
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/opencl/perf_bufferpool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_bufferpool.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_bufferpool.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_bufferpool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_bufferpool.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_bufferpool.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_bufferpool.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_bufferpool.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_bufferpool.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_bufferpool.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_bufferpool.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_bufferpool.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_bufferpool.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_bufferpool.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj.requires:
 
@@ -133,17 +133,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_bufferpool.cpp.obj
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/opencl/perf_channels.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_channels.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_channels.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_channels.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_channels.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_channels.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_channels.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_channels.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_channels.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_channels.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_channels.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_channels.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_channels.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_channels.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj.requires:
 
@@ -158,17 +158,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_channels.cpp.obj.p
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/opencl/perf_dxt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_dxt.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_dxt.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_dxt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_dxt.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_dxt.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_dxt.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_dxt.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_dxt.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_dxt.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_dxt.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_dxt.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_dxt.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_dxt.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj.requires:
 
@@ -183,17 +183,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_dxt.cpp.obj.provid
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/opencl/perf_gemm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_gemm.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_gemm.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_gemm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_gemm.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_gemm.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_gemm.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_gemm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_gemm.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_gemm.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_gemm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_gemm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_gemm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_gemm.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj.requires:
 
@@ -208,17 +208,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_gemm.cpp.obj.provi
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/opencl/perf_matop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_matop.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_matop.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_matop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_matop.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_matop.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_matop.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_matop.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_matop.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_matop.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_matop.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_matop.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_matop.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_matop.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj.requires:
 
@@ -233,17 +233,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_matop.cpp.obj.prov
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/opencl/perf_usage_flags.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_usage_flags.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_usage_flags.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_usage_flags.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_usage_flags.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_usage_flags.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_usage_flags.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_usage_flags.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_usage_flags.cpp > CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_usage_flags.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\opencl\perf_usage_flags.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_usage_flags.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\opencl\perf_usage_flags.cpp -o CMakeFiles\opencv_perf_core.dir\perf\opencl\perf_usage_flags.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.obj.requires:
 
@@ -258,17 +258,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/opencl/perf_usage_flags.cpp.ob
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_abs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_abs.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_abs.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_abs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_abs.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_abs.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_abs.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_abs.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_abs.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_abs.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_abs.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_abs.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_abs.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_abs.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj.requires:
 
@@ -283,17 +283,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_abs.cpp.obj.provides.buil
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_addWeighted.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_addWeighted.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_addWeighted.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_addWeighted.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_addWeighted.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_addWeighted.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_addWeighted.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_addWeighted.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_addWeighted.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_addWeighted.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_addWeighted.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_addWeighted.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_addWeighted.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_addWeighted.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj.requires:
 
@@ -308,17 +308,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_addWeighted.cpp.obj.provi
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_arithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_arithm.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_arithm.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_arithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_arithm.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_arithm.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_arithm.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_arithm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_arithm.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_arithm.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_arithm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_arithm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_arithm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_arithm.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj.requires:
 
@@ -333,17 +333,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_arithm.cpp.obj.provides.b
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_bitwise.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_bitwise.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_bitwise.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_bitwise.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_bitwise.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_bitwise.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_bitwise.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_bitwise.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_bitwise.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_bitwise.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_bitwise.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_bitwise.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_bitwise.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_bitwise.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj.requires:
 
@@ -358,17 +358,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_bitwise.cpp.obj.provides.
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_compare.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_compare.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_compare.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_compare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_compare.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_compare.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_compare.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_compare.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_compare.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_compare.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_compare.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_compare.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_compare.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_compare.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj.requires:
 
@@ -383,17 +383,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_compare.cpp.obj.provides.
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_convertTo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_convertTo.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_convertTo.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_convertTo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_convertTo.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_convertTo.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_convertTo.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_convertTo.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_convertTo.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_convertTo.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_convertTo.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_convertTo.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_convertTo.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_convertTo.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj.requires:
 
@@ -408,17 +408,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_convertTo.cpp.obj.provide
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_cvround.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_cvround.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_cvround.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_cvround.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_cvround.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_cvround.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_cvround.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_cvround.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_cvround.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_cvround.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_cvround.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_cvround.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_cvround.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_cvround.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj.requires:
 
@@ -433,17 +433,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_cvround.cpp.obj.provides.
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_dft.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_dft.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_dft.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_dft.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_dft.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_dft.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_dft.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_dft.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_dft.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_dft.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_dft.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_dft.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_dft.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_dft.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj.requires:
 
@@ -458,17 +458,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj.provides.buil
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_dot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_dot.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_dot.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_dot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_dot.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_dot.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_dot.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_dot.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_dot.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_dot.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_dot.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_dot.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_dot.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_dot.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj.requires:
 
@@ -483,17 +483,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj.provides.buil
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_inRange.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_inRange.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_inRange.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_inRange.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_inRange.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_inRange.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_inRange.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_inRange.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_inRange.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_inRange.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_inRange.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_inRange.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_inRange.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_inRange.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj.requires:
 
@@ -506,19 +506,44 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj.provides:
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj.provides.build: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj
 
 
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_io_base64.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_io_base64.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_io_base64.cpp
+
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.i"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_io_base64.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_io_base64.cpp.i
+
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.s"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_io_base64.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_io_base64.cpp.s
+
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.requires:
+
+.PHONY : modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.requires
+
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.provides: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.requires
+	$(MAKE) -f modules\core\CMakeFiles\opencv_perf_core.dir\build.make modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.provides.build
+.PHONY : modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.provides
+
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.provides.build: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj
+
+
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_main.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_main.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_main.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_main.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_main.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_main.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_main.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_main.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_main.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_main.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj.requires:
 
@@ -533,17 +558,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj.provides.bui
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_mat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_mat.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_mat.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_mat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_mat.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_mat.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_mat.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_mat.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_mat.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_mat.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_mat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_mat.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_mat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_mat.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj.requires:
 
@@ -558,17 +583,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj.provides.buil
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_math.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_math.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_math.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_math.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_math.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_math.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_math.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_math.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_math.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_math.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_math.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_math.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_math.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_math.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj.requires:
 
@@ -583,17 +608,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj.provides.bui
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_merge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_merge.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_merge.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_merge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_merge.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_merge.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_merge.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_merge.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_merge.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_merge.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_merge.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_merge.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_merge.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_merge.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj.requires:
 
@@ -608,17 +633,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_merge.cpp.obj.provides.bu
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_minmaxloc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_minmaxloc.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_minmaxloc.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_minmaxloc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_minmaxloc.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_minmaxloc.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_minmaxloc.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_minmaxloc.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_minmaxloc.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_minmaxloc.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_minmaxloc.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_minmaxloc.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_minmaxloc.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_minmaxloc.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj.requires:
 
@@ -633,17 +658,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_minmaxloc.cpp.obj.provide
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_norm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_norm.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_norm.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_norm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_norm.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_norm.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_norm.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_norm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_norm.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_norm.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_norm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_norm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_norm.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_norm.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj.requires:
 
@@ -658,17 +683,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_norm.cpp.obj.provides.bui
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_reduce.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_reduce.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_reduce.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_reduce.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_reduce.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_reduce.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_reduce.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_reduce.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_reduce.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_reduce.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_reduce.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_reduce.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_reduce.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_reduce.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj.requires:
 
@@ -683,17 +708,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_reduce.cpp.obj.provides.b
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_sort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_sort.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_sort.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_sort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_sort.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_sort.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_sort.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_sort.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_sort.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_sort.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_sort.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_sort.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_sort.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_sort.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj.requires:
 
@@ -708,17 +733,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_sort.cpp.obj.provides.bui
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_split.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_split.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_split.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_split.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_split.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_split.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_split.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_split.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_split.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_split.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_split.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_split.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_split.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_split.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj.requires:
 
@@ -733,17 +758,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_split.cpp.obj.provides.bu
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_stat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_stat.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_stat.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_stat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_stat.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_stat.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_stat.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_stat.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_stat.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_stat.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_stat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_stat.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_stat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_stat.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj.requires:
 
@@ -758,17 +783,17 @@ modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj.provides.bui
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/flags.make
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj: modules/core/CMakeFiles/opencv_perf_core.dir/includes_CXX.rsp
-modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/core/perf/perf_umat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_umat.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_umat.cpp
+modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_umat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_perf_core.dir\perf\perf_umat.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_umat.cpp
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_umat.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_umat.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_umat.cpp > CMakeFiles\opencv_perf_core.dir\perf\perf_umat.cpp.i
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/core/perf_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\core\perf\perf_umat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_umat.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/perf_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core\perf\perf_umat.cpp -o CMakeFiles\opencv_perf_core.dir\perf\perf_umat.cpp.s
 
 modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj.requires:
 
@@ -801,6 +826,7 @@ opencv_perf_core_OBJECTS = \
 "CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj" \
 "CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj" \
 "CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj" \
+"CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj" \
 "CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj" \
 "CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj" \
 "CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj" \
@@ -834,6 +860,7 @@ bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj
+bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj
@@ -846,17 +873,17 @@ bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_stat.cpp.obj
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_umat.cpp.obj
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/build.make
-bin/opencv_perf_core.exe: lib/libopencv_ts310.a
-bin/opencv_perf_core.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_perf_core.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_perf_core.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_perf_core.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_perf_core.exe: lib/libopencv_core310.dll.a
+bin/opencv_perf_core.exe: lib/libopencv_ts320.a
+bin/opencv_perf_core.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_perf_core.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_perf_core.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_perf_core.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_perf_core.exe: lib/libopencv_core320.dll.a
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/linklibs.rsp
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/objects1.rsp
 bin/opencv_perf_core.exe: modules/core/CMakeFiles/opencv_perf_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable ..\..\bin\opencv_perf_core.exe"
-	cd /d C:\Users\rartin\Desktop\build\modules\core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_perf_core.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable ..\..\bin\opencv_perf_core.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_perf_core.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 modules/core/CMakeFiles/opencv_perf_core.dir/build: bin/opencv_perf_core.exe
@@ -881,6 +908,7 @@ modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/o
 modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj.requires
 modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj.requires
 modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj.requires
+modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj.requires
 modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj.requires
 modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj.requires
 modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj.requires
@@ -896,10 +924,10 @@ modules/core/CMakeFiles/opencv_perf_core.dir/requires: modules/core/CMakeFiles/o
 .PHONY : modules/core/CMakeFiles/opencv_perf_core.dir/requires
 
 modules/core/CMakeFiles/opencv_perf_core.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\core && $(CMAKE_COMMAND) -P CMakeFiles\opencv_perf_core.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core && $(CMAKE_COMMAND) -P CMakeFiles\opencv_perf_core.dir\cmake_clean.cmake
 .PHONY : modules/core/CMakeFiles/opencv_perf_core.dir/clean
 
 modules/core/CMakeFiles/opencv_perf_core.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\core C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\core C:\Users\rartin\Desktop\build\modules\core\CMakeFiles\opencv_perf_core.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\core C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\core\CMakeFiles\opencv_perf_core.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/core/CMakeFiles/opencv_perf_core.dir/depend
 

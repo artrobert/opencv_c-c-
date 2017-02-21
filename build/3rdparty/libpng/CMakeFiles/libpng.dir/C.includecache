@@ -22,17 +22,27 @@ unistd.h
 unixio.h
 -
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/png.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/contrib/intel/filter_sse2_intrinsics.c
+../../pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
+immintrin.h
+-
+
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/contrib/intel/intel_init.c
+../../pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
+
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/png.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/png.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/png.h
 pnglibconf.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pnglibconf.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pnglibconf.h
 pngconf.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngconf.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngconf.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngconf.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngconf.h
 limits.h
 -
 stddef.h
@@ -44,33 +54,33 @@ setjmp.h
 time.h
 -
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngdebug.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngdebug.h
 crtdbg.h
 -
 stdio.h
 -
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngerror.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngerror.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngget.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngget.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pnginfo.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pnginfo.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pnglibconf.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pnglibconf.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngmem.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngmem.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpread.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpread.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 stdlib.h
 -
 string.h
@@ -78,13 +88,13 @@ string.h
 config.h
 -
 pnglibconf.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pnglibconf.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pnglibconf.h
 pngprefix.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngprefix.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngprefix.h
 pngusr.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngusr.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngusr.h
 png.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/png.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/png.h
 float.h
 -
 fp.h
@@ -100,61 +110,61 @@ alloc.h
 windows.h
 -
 pngstruct.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngstruct.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngstruct.h
 pnginfo.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pnginfo.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pnginfo.h
 pngdebug.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngdebug.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngdebug.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngread.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngread.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 errno.h
 -
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngrio.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngrio.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngrtran.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngrtran.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngrutil.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngrutil.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngset.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngset.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngstruct.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngstruct.h
 zlib.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/zlib.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/zlib.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngtrans.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngtrans.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwio.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwio.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwrite.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwrite.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 errno.h
 -
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwtran.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwtran.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwutil.c
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwutil.c
 pngpriv.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpriv.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpriv.h
 
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/zlib/zlib.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/zlib/zlib.h
 zconf.h
-C:/Users/rartin/Desktop/opencv/sources/3rdparty/zlib/zconf.h
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/zlib/zconf.h
 

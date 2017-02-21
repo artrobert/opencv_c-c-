@@ -4,27 +4,37 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/stitching/perf/opencl/perf_stitch.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/perf/opencl/perf_stitch.cpp",
 			"labels" : [ "Main", "opencv_stitching", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/stitching/perf/opencl/perf_warpers.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/perf/opencl/perf_warpers.cpp",
 			"labels" : [ "Main", "opencv_stitching", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/stitching/perf/perf_main.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/perf/perf_estimators.cpp",
 			"labels" : [ "Main", "opencv_stitching", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/stitching/perf/perf_stich.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/perf/perf_main.cpp",
 			"labels" : [ "Main", "opencv_stitching", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/stitching/perf/perf_precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/perf/perf_matchers.cpp",
+			"labels" : [ "Main", "opencv_stitching", "PerfTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/perf/perf_stich.cpp",
+			"labels" : [ "Main", "opencv_stitching", "PerfTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/perf/perf_precomp.hpp",
 			"labels" : [ "Main", "opencv_stitching", "PerfTest" ]
 		}
 	],

@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/video/CMakeFiles/opencv_video.dir/depend.make
@@ -56,30 +56,30 @@ include modules/video/CMakeFiles/opencv_video.dir/progress.make
 # Include the compile flags for this target's objects.
 include modules/video/CMakeFiles/opencv_video.dir/flags.make
 
-modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/opencl/bgfg_mog2.cl
-modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/opencl/optical_flow_farneback.cl
-modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/opencl/optical_flow_tvl1.cl
-modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/opencl/pyrlk.cl
-modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Desktop/opencv/sources/cmake/cl2cpp.cmake
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencl_kernels_video.cpp, opencl_kernels_video.hpp"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && "C:\Program Files (x86)\CMake\bin\cmake.exe" -DMODULE_NAME=video -DCL_DIR=C:/Users/rartin/Desktop/opencv/sources/modules/video/src/opencl -DOUTPUT=C:/Users/rartin/Desktop/build/modules/video/opencl_kernels_video.cpp -P C:/Users/rartin/Desktop/opencv/sources/cmake/cl2cpp.cmake
+modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/opencl/bgfg_mog2.cl
+modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/opencl/optical_flow_farneback.cl
+modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/opencl/optical_flow_tvl1.cl
+modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/opencl/pyrlk.cl
+modules/video/opencl_kernels_video.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/cmake/cl2cpp.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencl_kernels_video.cpp, opencl_kernels_video.hpp"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && "C:\Program Files (x86)\CMake\bin\cmake.exe" -DMODULE_NAME=video -DCL_DIR=C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/opencl -DOUTPUT=C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/opencl_kernels_video.cpp -P C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/cmake/cl2cpp.cmake
 
 modules/video/opencl_kernels_video.hpp: modules/video/opencl_kernels_video.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate modules\video\opencl_kernels_video.hpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/bgfg_KNN.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\bgfg_KNN.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\bgfg_KNN.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/bgfg_KNN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\bgfg_KNN.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\bgfg_KNN.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\bgfg_KNN.cpp > CMakeFiles\opencv_video.dir\src\bgfg_KNN.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\bgfg_KNN.cpp > CMakeFiles\opencv_video.dir\src\bgfg_KNN.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\bgfg_KNN.cpp -o CMakeFiles\opencv_video.dir\src\bgfg_KNN.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\bgfg_KNN.cpp -o CMakeFiles\opencv_video.dir\src\bgfg_KNN.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj.requires:
 
@@ -94,17 +94,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj.provides.build: m
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/bgfg_gaussmix2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\bgfg_gaussmix2.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\bgfg_gaussmix2.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/bgfg_gaussmix2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\bgfg_gaussmix2.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\bgfg_gaussmix2.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\bgfg_gaussmix2.cpp > CMakeFiles\opencv_video.dir\src\bgfg_gaussmix2.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\bgfg_gaussmix2.cpp > CMakeFiles\opencv_video.dir\src\bgfg_gaussmix2.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\bgfg_gaussmix2.cpp -o CMakeFiles\opencv_video.dir\src\bgfg_gaussmix2.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\bgfg_gaussmix2.cpp -o CMakeFiles\opencv_video.dir\src\bgfg_gaussmix2.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj.requires:
 
@@ -119,17 +119,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj.provides.bu
 
 modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/camshift.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\camshift.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\camshift.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/camshift.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\camshift.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\camshift.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/camshift.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\camshift.cpp > CMakeFiles\opencv_video.dir\src\camshift.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\camshift.cpp > CMakeFiles\opencv_video.dir\src\camshift.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/camshift.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\camshift.cpp -o CMakeFiles\opencv_video.dir\src\camshift.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\camshift.cpp -o CMakeFiles\opencv_video.dir\src\camshift.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj.requires:
 
@@ -144,17 +144,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj.provides.build: m
 
 modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/compat_video.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\compat_video.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\compat_video.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/compat_video.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\compat_video.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\compat_video.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/compat_video.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\compat_video.cpp > CMakeFiles\opencv_video.dir\src\compat_video.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\compat_video.cpp > CMakeFiles\opencv_video.dir\src\compat_video.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/compat_video.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\compat_video.cpp -o CMakeFiles\opencv_video.dir\src\compat_video.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\compat_video.cpp -o CMakeFiles\opencv_video.dir\src\compat_video.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj.requires:
 
@@ -169,17 +169,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj.provides.buil
 
 modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/ecc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\ecc.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\ecc.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/ecc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\ecc.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\ecc.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/ecc.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\ecc.cpp > CMakeFiles\opencv_video.dir\src\ecc.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\ecc.cpp > CMakeFiles\opencv_video.dir\src\ecc.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/ecc.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\ecc.cpp -o CMakeFiles\opencv_video.dir\src\ecc.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\ecc.cpp -o CMakeFiles\opencv_video.dir\src\ecc.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj.requires:
 
@@ -194,17 +194,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj.provides.build: module
 
 modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/kalman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\kalman.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\kalman.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/kalman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\kalman.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\kalman.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/kalman.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\kalman.cpp > CMakeFiles\opencv_video.dir\src\kalman.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\kalman.cpp > CMakeFiles\opencv_video.dir\src\kalman.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/kalman.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\kalman.cpp -o CMakeFiles\opencv_video.dir\src\kalman.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\kalman.cpp -o CMakeFiles\opencv_video.dir\src\kalman.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj.requires:
 
@@ -219,17 +219,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj.provides.build: mod
 
 modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/lkpyramid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\lkpyramid.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\lkpyramid.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/lkpyramid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\lkpyramid.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\lkpyramid.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\lkpyramid.cpp > CMakeFiles\opencv_video.dir\src\lkpyramid.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\lkpyramid.cpp > CMakeFiles\opencv_video.dir\src\lkpyramid.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\lkpyramid.cpp -o CMakeFiles\opencv_video.dir\src\lkpyramid.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\lkpyramid.cpp -o CMakeFiles\opencv_video.dir\src\lkpyramid.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj.requires:
 
@@ -244,17 +244,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj.provides.build: 
 
 modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/optflowgf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\optflowgf.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\optflowgf.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/optflowgf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\optflowgf.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\optflowgf.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/optflowgf.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\optflowgf.cpp > CMakeFiles\opencv_video.dir\src\optflowgf.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\optflowgf.cpp > CMakeFiles\opencv_video.dir\src\optflowgf.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/optflowgf.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\optflowgf.cpp -o CMakeFiles\opencv_video.dir\src\optflowgf.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\optflowgf.cpp -o CMakeFiles\opencv_video.dir\src\optflowgf.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj.requires:
 
@@ -269,17 +269,17 @@ modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj.provides.build: 
 
 modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
-modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/video/src/tvl1flow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\tvl1flow.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\video\src\tvl1flow.cpp
+modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/src/tvl1flow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\src\tvl1flow.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\tvl1flow.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\video\src\tvl1flow.cpp > CMakeFiles\opencv_video.dir\src\tvl1flow.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\tvl1flow.cpp > CMakeFiles\opencv_video.dir\src\tvl1flow.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\video\src\tvl1flow.cpp -o CMakeFiles\opencv_video.dir\src\tvl1flow.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video\src\tvl1flow.cpp -o CMakeFiles\opencv_video.dir\src\tvl1flow.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj.requires:
 
@@ -295,16 +295,16 @@ modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj.provides.build: m
 modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/flags.make
 modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj: modules/video/CMakeFiles/opencv_video.dir/includes_CXX.rsp
 modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj: modules/video/opencl_kernels_video.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_video.dir\opencl_kernels_video.cpp.obj -c C:\Users\rartin\Desktop\build\modules\video\opencl_kernels_video.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_video.dir\opencl_kernels_video.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video\opencl_kernels_video.cpp
 
 modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\build\modules\video\opencl_kernels_video.cpp > CMakeFiles\opencv_video.dir\opencl_kernels_video.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video\opencl_kernels_video.cpp > CMakeFiles\opencv_video.dir\opencl_kernels_video.cpp.i
 
 modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/video/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\build\modules\video\opencl_kernels_video.cpp -o CMakeFiles\opencv_video.dir\opencl_kernels_video.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/video/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video\opencl_kernels_video.cpp -o CMakeFiles\opencv_video.dir\opencl_kernels_video.cpp.s
 
 modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj.requires:
 
@@ -333,27 +333,27 @@ opencv_video_OBJECTS = \
 # External object files for target opencv_video
 opencv_video_EXTERNAL_OBJECTS =
 
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/build.make
-bin/libopencv_video310.dll: lib/libopencv_imgproc310.dll.a
-bin/libopencv_video310.dll: lib/libopencv_core310.dll.a
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/linklibs.rsp
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/objects1.rsp
-bin/libopencv_video310.dll: modules/video/CMakeFiles/opencv_video.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ..\..\bin\libopencv_video310.dll"
-	cd /d C:\Users\rartin\Desktop\build\modules\video && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_video.dir\link.txt --verbose=$(VERBOSE)
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/bgfg_KNN.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/bgfg_gaussmix2.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/camshift.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/compat_video.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/ecc.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/kalman.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/lkpyramid.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/optflowgf.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/src/tvl1flow.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/opencl_kernels_video.cpp.obj
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/build.make
+bin/libopencv_video320.dll: lib/libopencv_imgproc320.dll.a
+bin/libopencv_video320.dll: lib/libopencv_core320.dll.a
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/linklibs.rsp
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/objects1.rsp
+bin/libopencv_video320.dll: modules/video/CMakeFiles/opencv_video.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ..\..\bin\libopencv_video320.dll"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_video.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-modules/video/CMakeFiles/opencv_video.dir/build: bin/libopencv_video310.dll
+modules/video/CMakeFiles/opencv_video.dir/build: bin/libopencv_video320.dll
 
 .PHONY : modules/video/CMakeFiles/opencv_video.dir/build
 
@@ -371,11 +371,11 @@ modules/video/CMakeFiles/opencv_video.dir/requires: modules/video/CMakeFiles/ope
 .PHONY : modules/video/CMakeFiles/opencv_video.dir/requires
 
 modules/video/CMakeFiles/opencv_video.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\video && $(CMAKE_COMMAND) -P CMakeFiles\opencv_video.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video && $(CMAKE_COMMAND) -P CMakeFiles\opencv_video.dir\cmake_clean.cmake
 .PHONY : modules/video/CMakeFiles/opencv_video.dir/clean
 
 modules/video/CMakeFiles/opencv_video.dir/depend: modules/video/opencl_kernels_video.cpp
 modules/video/CMakeFiles/opencv_video.dir/depend: modules/video/opencl_kernels_video.hpp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\video C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\video C:\Users\rartin\Desktop\build\modules\video\CMakeFiles\opencv_video.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\video C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\video\CMakeFiles\opencv_video.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/video/CMakeFiles/opencv_video.dir/depend
 

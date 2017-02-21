@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,7 +80,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -91,7 +91,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\3rdparty\libjasper\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjasper\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 3rdparty/libjasper/CMakeFiles/libjasper.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/CMakeFiles/libjasper.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libjasper/CMakeFiles/libjasper.dir/rule
 .PHONY : 3rdparty/libjasper/CMakeFiles/libjasper.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ libjasper: 3rdparty/libjasper/CMakeFiles/libjasper.dir/rule
 
 # fast build rule for target.
 libjasper/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/build
 .PHONY : libjasper/fast
 
 jas_cm.obj: jas_cm.c.obj
@@ -207,7 +207,7 @@ jas_cm.obj: jas_cm.c.obj
 
 # target to build an object file
 jas_cm.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_cm.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_cm.c.obj
 .PHONY : jas_cm.c.obj
 
 jas_cm.i: jas_cm.c.i
@@ -216,7 +216,7 @@ jas_cm.i: jas_cm.c.i
 
 # target to preprocess a source file
 jas_cm.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_cm.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_cm.c.i
 .PHONY : jas_cm.c.i
 
 jas_cm.s: jas_cm.c.s
@@ -225,7 +225,7 @@ jas_cm.s: jas_cm.c.s
 
 # target to generate assembly for a file
 jas_cm.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_cm.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_cm.c.s
 .PHONY : jas_cm.c.s
 
 jas_debug.obj: jas_debug.c.obj
@@ -234,7 +234,7 @@ jas_debug.obj: jas_debug.c.obj
 
 # target to build an object file
 jas_debug.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_debug.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_debug.c.obj
 .PHONY : jas_debug.c.obj
 
 jas_debug.i: jas_debug.c.i
@@ -243,7 +243,7 @@ jas_debug.i: jas_debug.c.i
 
 # target to preprocess a source file
 jas_debug.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_debug.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_debug.c.i
 .PHONY : jas_debug.c.i
 
 jas_debug.s: jas_debug.c.s
@@ -252,7 +252,7 @@ jas_debug.s: jas_debug.c.s
 
 # target to generate assembly for a file
 jas_debug.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_debug.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_debug.c.s
 .PHONY : jas_debug.c.s
 
 jas_getopt.obj: jas_getopt.c.obj
@@ -261,7 +261,7 @@ jas_getopt.obj: jas_getopt.c.obj
 
 # target to build an object file
 jas_getopt.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_getopt.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_getopt.c.obj
 .PHONY : jas_getopt.c.obj
 
 jas_getopt.i: jas_getopt.c.i
@@ -270,7 +270,7 @@ jas_getopt.i: jas_getopt.c.i
 
 # target to preprocess a source file
 jas_getopt.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_getopt.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_getopt.c.i
 .PHONY : jas_getopt.c.i
 
 jas_getopt.s: jas_getopt.c.s
@@ -279,7 +279,7 @@ jas_getopt.s: jas_getopt.c.s
 
 # target to generate assembly for a file
 jas_getopt.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_getopt.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_getopt.c.s
 .PHONY : jas_getopt.c.s
 
 jas_icc.obj: jas_icc.c.obj
@@ -288,7 +288,7 @@ jas_icc.obj: jas_icc.c.obj
 
 # target to build an object file
 jas_icc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_icc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_icc.c.obj
 .PHONY : jas_icc.c.obj
 
 jas_icc.i: jas_icc.c.i
@@ -297,7 +297,7 @@ jas_icc.i: jas_icc.c.i
 
 # target to preprocess a source file
 jas_icc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_icc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_icc.c.i
 .PHONY : jas_icc.c.i
 
 jas_icc.s: jas_icc.c.s
@@ -306,7 +306,7 @@ jas_icc.s: jas_icc.c.s
 
 # target to generate assembly for a file
 jas_icc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_icc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_icc.c.s
 .PHONY : jas_icc.c.s
 
 jas_iccdata.obj: jas_iccdata.c.obj
@@ -315,7 +315,7 @@ jas_iccdata.obj: jas_iccdata.c.obj
 
 # target to build an object file
 jas_iccdata.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_iccdata.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_iccdata.c.obj
 .PHONY : jas_iccdata.c.obj
 
 jas_iccdata.i: jas_iccdata.c.i
@@ -324,7 +324,7 @@ jas_iccdata.i: jas_iccdata.c.i
 
 # target to preprocess a source file
 jas_iccdata.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_iccdata.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_iccdata.c.i
 .PHONY : jas_iccdata.c.i
 
 jas_iccdata.s: jas_iccdata.c.s
@@ -333,7 +333,7 @@ jas_iccdata.s: jas_iccdata.c.s
 
 # target to generate assembly for a file
 jas_iccdata.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_iccdata.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_iccdata.c.s
 .PHONY : jas_iccdata.c.s
 
 jas_image.obj: jas_image.c.obj
@@ -342,7 +342,7 @@ jas_image.obj: jas_image.c.obj
 
 # target to build an object file
 jas_image.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_image.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_image.c.obj
 .PHONY : jas_image.c.obj
 
 jas_image.i: jas_image.c.i
@@ -351,7 +351,7 @@ jas_image.i: jas_image.c.i
 
 # target to preprocess a source file
 jas_image.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_image.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_image.c.i
 .PHONY : jas_image.c.i
 
 jas_image.s: jas_image.c.s
@@ -360,7 +360,7 @@ jas_image.s: jas_image.c.s
 
 # target to generate assembly for a file
 jas_image.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_image.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_image.c.s
 .PHONY : jas_image.c.s
 
 jas_init.obj: jas_init.c.obj
@@ -369,7 +369,7 @@ jas_init.obj: jas_init.c.obj
 
 # target to build an object file
 jas_init.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_init.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_init.c.obj
 .PHONY : jas_init.c.obj
 
 jas_init.i: jas_init.c.i
@@ -378,7 +378,7 @@ jas_init.i: jas_init.c.i
 
 # target to preprocess a source file
 jas_init.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_init.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_init.c.i
 .PHONY : jas_init.c.i
 
 jas_init.s: jas_init.c.s
@@ -387,7 +387,7 @@ jas_init.s: jas_init.c.s
 
 # target to generate assembly for a file
 jas_init.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_init.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_init.c.s
 .PHONY : jas_init.c.s
 
 jas_malloc.obj: jas_malloc.c.obj
@@ -396,7 +396,7 @@ jas_malloc.obj: jas_malloc.c.obj
 
 # target to build an object file
 jas_malloc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_malloc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_malloc.c.obj
 .PHONY : jas_malloc.c.obj
 
 jas_malloc.i: jas_malloc.c.i
@@ -405,7 +405,7 @@ jas_malloc.i: jas_malloc.c.i
 
 # target to preprocess a source file
 jas_malloc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_malloc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_malloc.c.i
 .PHONY : jas_malloc.c.i
 
 jas_malloc.s: jas_malloc.c.s
@@ -414,7 +414,7 @@ jas_malloc.s: jas_malloc.c.s
 
 # target to generate assembly for a file
 jas_malloc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_malloc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_malloc.c.s
 .PHONY : jas_malloc.c.s
 
 jas_seq.obj: jas_seq.c.obj
@@ -423,7 +423,7 @@ jas_seq.obj: jas_seq.c.obj
 
 # target to build an object file
 jas_seq.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_seq.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_seq.c.obj
 .PHONY : jas_seq.c.obj
 
 jas_seq.i: jas_seq.c.i
@@ -432,7 +432,7 @@ jas_seq.i: jas_seq.c.i
 
 # target to preprocess a source file
 jas_seq.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_seq.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_seq.c.i
 .PHONY : jas_seq.c.i
 
 jas_seq.s: jas_seq.c.s
@@ -441,7 +441,7 @@ jas_seq.s: jas_seq.c.s
 
 # target to generate assembly for a file
 jas_seq.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_seq.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_seq.c.s
 .PHONY : jas_seq.c.s
 
 jas_stream.obj: jas_stream.c.obj
@@ -450,7 +450,7 @@ jas_stream.obj: jas_stream.c.obj
 
 # target to build an object file
 jas_stream.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_stream.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_stream.c.obj
 .PHONY : jas_stream.c.obj
 
 jas_stream.i: jas_stream.c.i
@@ -459,7 +459,7 @@ jas_stream.i: jas_stream.c.i
 
 # target to preprocess a source file
 jas_stream.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_stream.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_stream.c.i
 .PHONY : jas_stream.c.i
 
 jas_stream.s: jas_stream.c.s
@@ -468,7 +468,7 @@ jas_stream.s: jas_stream.c.s
 
 # target to generate assembly for a file
 jas_stream.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_stream.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_stream.c.s
 .PHONY : jas_stream.c.s
 
 jas_string.obj: jas_string.c.obj
@@ -477,7 +477,7 @@ jas_string.obj: jas_string.c.obj
 
 # target to build an object file
 jas_string.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_string.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_string.c.obj
 .PHONY : jas_string.c.obj
 
 jas_string.i: jas_string.c.i
@@ -486,7 +486,7 @@ jas_string.i: jas_string.c.i
 
 # target to preprocess a source file
 jas_string.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_string.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_string.c.i
 .PHONY : jas_string.c.i
 
 jas_string.s: jas_string.c.s
@@ -495,7 +495,7 @@ jas_string.s: jas_string.c.s
 
 # target to generate assembly for a file
 jas_string.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_string.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_string.c.s
 .PHONY : jas_string.c.s
 
 jas_tmr.obj: jas_tmr.c.obj
@@ -504,7 +504,7 @@ jas_tmr.obj: jas_tmr.c.obj
 
 # target to build an object file
 jas_tmr.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tmr.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tmr.c.obj
 .PHONY : jas_tmr.c.obj
 
 jas_tmr.i: jas_tmr.c.i
@@ -513,7 +513,7 @@ jas_tmr.i: jas_tmr.c.i
 
 # target to preprocess a source file
 jas_tmr.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tmr.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tmr.c.i
 .PHONY : jas_tmr.c.i
 
 jas_tmr.s: jas_tmr.c.s
@@ -522,7 +522,7 @@ jas_tmr.s: jas_tmr.c.s
 
 # target to generate assembly for a file
 jas_tmr.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tmr.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tmr.c.s
 .PHONY : jas_tmr.c.s
 
 jas_tvp.obj: jas_tvp.c.obj
@@ -531,7 +531,7 @@ jas_tvp.obj: jas_tvp.c.obj
 
 # target to build an object file
 jas_tvp.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tvp.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tvp.c.obj
 .PHONY : jas_tvp.c.obj
 
 jas_tvp.i: jas_tvp.c.i
@@ -540,7 +540,7 @@ jas_tvp.i: jas_tvp.c.i
 
 # target to preprocess a source file
 jas_tvp.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tvp.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tvp.c.i
 .PHONY : jas_tvp.c.i
 
 jas_tvp.s: jas_tvp.c.s
@@ -549,7 +549,7 @@ jas_tvp.s: jas_tvp.c.s
 
 # target to generate assembly for a file
 jas_tvp.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tvp.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_tvp.c.s
 .PHONY : jas_tvp.c.s
 
 jas_version.obj: jas_version.c.obj
@@ -558,7 +558,7 @@ jas_version.obj: jas_version.c.obj
 
 # target to build an object file
 jas_version.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_version.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_version.c.obj
 .PHONY : jas_version.c.obj
 
 jas_version.i: jas_version.c.i
@@ -567,7 +567,7 @@ jas_version.i: jas_version.c.i
 
 # target to preprocess a source file
 jas_version.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_version.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_version.c.i
 .PHONY : jas_version.c.i
 
 jas_version.s: jas_version.c.s
@@ -576,7 +576,7 @@ jas_version.s: jas_version.c.s
 
 # target to generate assembly for a file
 jas_version.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_version.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jas_version.c.s
 .PHONY : jas_version.c.s
 
 jp2_cod.obj: jp2_cod.c.obj
@@ -585,7 +585,7 @@ jp2_cod.obj: jp2_cod.c.obj
 
 # target to build an object file
 jp2_cod.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_cod.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_cod.c.obj
 .PHONY : jp2_cod.c.obj
 
 jp2_cod.i: jp2_cod.c.i
@@ -594,7 +594,7 @@ jp2_cod.i: jp2_cod.c.i
 
 # target to preprocess a source file
 jp2_cod.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_cod.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_cod.c.i
 .PHONY : jp2_cod.c.i
 
 jp2_cod.s: jp2_cod.c.s
@@ -603,7 +603,7 @@ jp2_cod.s: jp2_cod.c.s
 
 # target to generate assembly for a file
 jp2_cod.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_cod.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_cod.c.s
 .PHONY : jp2_cod.c.s
 
 jp2_dec.obj: jp2_dec.c.obj
@@ -612,7 +612,7 @@ jp2_dec.obj: jp2_dec.c.obj
 
 # target to build an object file
 jp2_dec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_dec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_dec.c.obj
 .PHONY : jp2_dec.c.obj
 
 jp2_dec.i: jp2_dec.c.i
@@ -621,7 +621,7 @@ jp2_dec.i: jp2_dec.c.i
 
 # target to preprocess a source file
 jp2_dec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_dec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_dec.c.i
 .PHONY : jp2_dec.c.i
 
 jp2_dec.s: jp2_dec.c.s
@@ -630,7 +630,7 @@ jp2_dec.s: jp2_dec.c.s
 
 # target to generate assembly for a file
 jp2_dec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_dec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_dec.c.s
 .PHONY : jp2_dec.c.s
 
 jp2_enc.obj: jp2_enc.c.obj
@@ -639,7 +639,7 @@ jp2_enc.obj: jp2_enc.c.obj
 
 # target to build an object file
 jp2_enc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_enc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_enc.c.obj
 .PHONY : jp2_enc.c.obj
 
 jp2_enc.i: jp2_enc.c.i
@@ -648,7 +648,7 @@ jp2_enc.i: jp2_enc.c.i
 
 # target to preprocess a source file
 jp2_enc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_enc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_enc.c.i
 .PHONY : jp2_enc.c.i
 
 jp2_enc.s: jp2_enc.c.s
@@ -657,7 +657,7 @@ jp2_enc.s: jp2_enc.c.s
 
 # target to generate assembly for a file
 jp2_enc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_enc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jp2_enc.c.s
 .PHONY : jp2_enc.c.s
 
 jpc_bs.obj: jpc_bs.c.obj
@@ -666,7 +666,7 @@ jpc_bs.obj: jpc_bs.c.obj
 
 # target to build an object file
 jpc_bs.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_bs.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_bs.c.obj
 .PHONY : jpc_bs.c.obj
 
 jpc_bs.i: jpc_bs.c.i
@@ -675,7 +675,7 @@ jpc_bs.i: jpc_bs.c.i
 
 # target to preprocess a source file
 jpc_bs.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_bs.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_bs.c.i
 .PHONY : jpc_bs.c.i
 
 jpc_bs.s: jpc_bs.c.s
@@ -684,7 +684,7 @@ jpc_bs.s: jpc_bs.c.s
 
 # target to generate assembly for a file
 jpc_bs.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_bs.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_bs.c.s
 .PHONY : jpc_bs.c.s
 
 jpc_cs.obj: jpc_cs.c.obj
@@ -693,7 +693,7 @@ jpc_cs.obj: jpc_cs.c.obj
 
 # target to build an object file
 jpc_cs.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_cs.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_cs.c.obj
 .PHONY : jpc_cs.c.obj
 
 jpc_cs.i: jpc_cs.c.i
@@ -702,7 +702,7 @@ jpc_cs.i: jpc_cs.c.i
 
 # target to preprocess a source file
 jpc_cs.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_cs.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_cs.c.i
 .PHONY : jpc_cs.c.i
 
 jpc_cs.s: jpc_cs.c.s
@@ -711,7 +711,7 @@ jpc_cs.s: jpc_cs.c.s
 
 # target to generate assembly for a file
 jpc_cs.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_cs.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_cs.c.s
 .PHONY : jpc_cs.c.s
 
 jpc_dec.obj: jpc_dec.c.obj
@@ -720,7 +720,7 @@ jpc_dec.obj: jpc_dec.c.obj
 
 # target to build an object file
 jpc_dec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_dec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_dec.c.obj
 .PHONY : jpc_dec.c.obj
 
 jpc_dec.i: jpc_dec.c.i
@@ -729,7 +729,7 @@ jpc_dec.i: jpc_dec.c.i
 
 # target to preprocess a source file
 jpc_dec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_dec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_dec.c.i
 .PHONY : jpc_dec.c.i
 
 jpc_dec.s: jpc_dec.c.s
@@ -738,7 +738,7 @@ jpc_dec.s: jpc_dec.c.s
 
 # target to generate assembly for a file
 jpc_dec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_dec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_dec.c.s
 .PHONY : jpc_dec.c.s
 
 jpc_enc.obj: jpc_enc.c.obj
@@ -747,7 +747,7 @@ jpc_enc.obj: jpc_enc.c.obj
 
 # target to build an object file
 jpc_enc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_enc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_enc.c.obj
 .PHONY : jpc_enc.c.obj
 
 jpc_enc.i: jpc_enc.c.i
@@ -756,7 +756,7 @@ jpc_enc.i: jpc_enc.c.i
 
 # target to preprocess a source file
 jpc_enc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_enc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_enc.c.i
 .PHONY : jpc_enc.c.i
 
 jpc_enc.s: jpc_enc.c.s
@@ -765,7 +765,7 @@ jpc_enc.s: jpc_enc.c.s
 
 # target to generate assembly for a file
 jpc_enc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_enc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_enc.c.s
 .PHONY : jpc_enc.c.s
 
 jpc_math.obj: jpc_math.c.obj
@@ -774,7 +774,7 @@ jpc_math.obj: jpc_math.c.obj
 
 # target to build an object file
 jpc_math.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_math.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_math.c.obj
 .PHONY : jpc_math.c.obj
 
 jpc_math.i: jpc_math.c.i
@@ -783,7 +783,7 @@ jpc_math.i: jpc_math.c.i
 
 # target to preprocess a source file
 jpc_math.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_math.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_math.c.i
 .PHONY : jpc_math.c.i
 
 jpc_math.s: jpc_math.c.s
@@ -792,7 +792,7 @@ jpc_math.s: jpc_math.c.s
 
 # target to generate assembly for a file
 jpc_math.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_math.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_math.c.s
 .PHONY : jpc_math.c.s
 
 jpc_mct.obj: jpc_mct.c.obj
@@ -801,7 +801,7 @@ jpc_mct.obj: jpc_mct.c.obj
 
 # target to build an object file
 jpc_mct.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mct.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mct.c.obj
 .PHONY : jpc_mct.c.obj
 
 jpc_mct.i: jpc_mct.c.i
@@ -810,7 +810,7 @@ jpc_mct.i: jpc_mct.c.i
 
 # target to preprocess a source file
 jpc_mct.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mct.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mct.c.i
 .PHONY : jpc_mct.c.i
 
 jpc_mct.s: jpc_mct.c.s
@@ -819,7 +819,7 @@ jpc_mct.s: jpc_mct.c.s
 
 # target to generate assembly for a file
 jpc_mct.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mct.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mct.c.s
 .PHONY : jpc_mct.c.s
 
 jpc_mqcod.obj: jpc_mqcod.c.obj
@@ -828,7 +828,7 @@ jpc_mqcod.obj: jpc_mqcod.c.obj
 
 # target to build an object file
 jpc_mqcod.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqcod.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqcod.c.obj
 .PHONY : jpc_mqcod.c.obj
 
 jpc_mqcod.i: jpc_mqcod.c.i
@@ -837,7 +837,7 @@ jpc_mqcod.i: jpc_mqcod.c.i
 
 # target to preprocess a source file
 jpc_mqcod.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqcod.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqcod.c.i
 .PHONY : jpc_mqcod.c.i
 
 jpc_mqcod.s: jpc_mqcod.c.s
@@ -846,7 +846,7 @@ jpc_mqcod.s: jpc_mqcod.c.s
 
 # target to generate assembly for a file
 jpc_mqcod.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqcod.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqcod.c.s
 .PHONY : jpc_mqcod.c.s
 
 jpc_mqdec.obj: jpc_mqdec.c.obj
@@ -855,7 +855,7 @@ jpc_mqdec.obj: jpc_mqdec.c.obj
 
 # target to build an object file
 jpc_mqdec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqdec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqdec.c.obj
 .PHONY : jpc_mqdec.c.obj
 
 jpc_mqdec.i: jpc_mqdec.c.i
@@ -864,7 +864,7 @@ jpc_mqdec.i: jpc_mqdec.c.i
 
 # target to preprocess a source file
 jpc_mqdec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqdec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqdec.c.i
 .PHONY : jpc_mqdec.c.i
 
 jpc_mqdec.s: jpc_mqdec.c.s
@@ -873,7 +873,7 @@ jpc_mqdec.s: jpc_mqdec.c.s
 
 # target to generate assembly for a file
 jpc_mqdec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqdec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqdec.c.s
 .PHONY : jpc_mqdec.c.s
 
 jpc_mqenc.obj: jpc_mqenc.c.obj
@@ -882,7 +882,7 @@ jpc_mqenc.obj: jpc_mqenc.c.obj
 
 # target to build an object file
 jpc_mqenc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqenc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqenc.c.obj
 .PHONY : jpc_mqenc.c.obj
 
 jpc_mqenc.i: jpc_mqenc.c.i
@@ -891,7 +891,7 @@ jpc_mqenc.i: jpc_mqenc.c.i
 
 # target to preprocess a source file
 jpc_mqenc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqenc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqenc.c.i
 .PHONY : jpc_mqenc.c.i
 
 jpc_mqenc.s: jpc_mqenc.c.s
@@ -900,7 +900,7 @@ jpc_mqenc.s: jpc_mqenc.c.s
 
 # target to generate assembly for a file
 jpc_mqenc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqenc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_mqenc.c.s
 .PHONY : jpc_mqenc.c.s
 
 jpc_qmfb.obj: jpc_qmfb.c.obj
@@ -909,7 +909,7 @@ jpc_qmfb.obj: jpc_qmfb.c.obj
 
 # target to build an object file
 jpc_qmfb.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_qmfb.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_qmfb.c.obj
 .PHONY : jpc_qmfb.c.obj
 
 jpc_qmfb.i: jpc_qmfb.c.i
@@ -918,7 +918,7 @@ jpc_qmfb.i: jpc_qmfb.c.i
 
 # target to preprocess a source file
 jpc_qmfb.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_qmfb.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_qmfb.c.i
 .PHONY : jpc_qmfb.c.i
 
 jpc_qmfb.s: jpc_qmfb.c.s
@@ -927,7 +927,7 @@ jpc_qmfb.s: jpc_qmfb.c.s
 
 # target to generate assembly for a file
 jpc_qmfb.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_qmfb.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_qmfb.c.s
 .PHONY : jpc_qmfb.c.s
 
 jpc_t1cod.obj: jpc_t1cod.c.obj
@@ -936,7 +936,7 @@ jpc_t1cod.obj: jpc_t1cod.c.obj
 
 # target to build an object file
 jpc_t1cod.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1cod.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1cod.c.obj
 .PHONY : jpc_t1cod.c.obj
 
 jpc_t1cod.i: jpc_t1cod.c.i
@@ -945,7 +945,7 @@ jpc_t1cod.i: jpc_t1cod.c.i
 
 # target to preprocess a source file
 jpc_t1cod.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1cod.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1cod.c.i
 .PHONY : jpc_t1cod.c.i
 
 jpc_t1cod.s: jpc_t1cod.c.s
@@ -954,7 +954,7 @@ jpc_t1cod.s: jpc_t1cod.c.s
 
 # target to generate assembly for a file
 jpc_t1cod.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1cod.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1cod.c.s
 .PHONY : jpc_t1cod.c.s
 
 jpc_t1dec.obj: jpc_t1dec.c.obj
@@ -963,7 +963,7 @@ jpc_t1dec.obj: jpc_t1dec.c.obj
 
 # target to build an object file
 jpc_t1dec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1dec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1dec.c.obj
 .PHONY : jpc_t1dec.c.obj
 
 jpc_t1dec.i: jpc_t1dec.c.i
@@ -972,7 +972,7 @@ jpc_t1dec.i: jpc_t1dec.c.i
 
 # target to preprocess a source file
 jpc_t1dec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1dec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1dec.c.i
 .PHONY : jpc_t1dec.c.i
 
 jpc_t1dec.s: jpc_t1dec.c.s
@@ -981,7 +981,7 @@ jpc_t1dec.s: jpc_t1dec.c.s
 
 # target to generate assembly for a file
 jpc_t1dec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1dec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1dec.c.s
 .PHONY : jpc_t1dec.c.s
 
 jpc_t1enc.obj: jpc_t1enc.c.obj
@@ -990,7 +990,7 @@ jpc_t1enc.obj: jpc_t1enc.c.obj
 
 # target to build an object file
 jpc_t1enc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1enc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1enc.c.obj
 .PHONY : jpc_t1enc.c.obj
 
 jpc_t1enc.i: jpc_t1enc.c.i
@@ -999,7 +999,7 @@ jpc_t1enc.i: jpc_t1enc.c.i
 
 # target to preprocess a source file
 jpc_t1enc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1enc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1enc.c.i
 .PHONY : jpc_t1enc.c.i
 
 jpc_t1enc.s: jpc_t1enc.c.s
@@ -1008,7 +1008,7 @@ jpc_t1enc.s: jpc_t1enc.c.s
 
 # target to generate assembly for a file
 jpc_t1enc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1enc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t1enc.c.s
 .PHONY : jpc_t1enc.c.s
 
 jpc_t2cod.obj: jpc_t2cod.c.obj
@@ -1017,7 +1017,7 @@ jpc_t2cod.obj: jpc_t2cod.c.obj
 
 # target to build an object file
 jpc_t2cod.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2cod.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2cod.c.obj
 .PHONY : jpc_t2cod.c.obj
 
 jpc_t2cod.i: jpc_t2cod.c.i
@@ -1026,7 +1026,7 @@ jpc_t2cod.i: jpc_t2cod.c.i
 
 # target to preprocess a source file
 jpc_t2cod.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2cod.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2cod.c.i
 .PHONY : jpc_t2cod.c.i
 
 jpc_t2cod.s: jpc_t2cod.c.s
@@ -1035,7 +1035,7 @@ jpc_t2cod.s: jpc_t2cod.c.s
 
 # target to generate assembly for a file
 jpc_t2cod.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2cod.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2cod.c.s
 .PHONY : jpc_t2cod.c.s
 
 jpc_t2dec.obj: jpc_t2dec.c.obj
@@ -1044,7 +1044,7 @@ jpc_t2dec.obj: jpc_t2dec.c.obj
 
 # target to build an object file
 jpc_t2dec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2dec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2dec.c.obj
 .PHONY : jpc_t2dec.c.obj
 
 jpc_t2dec.i: jpc_t2dec.c.i
@@ -1053,7 +1053,7 @@ jpc_t2dec.i: jpc_t2dec.c.i
 
 # target to preprocess a source file
 jpc_t2dec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2dec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2dec.c.i
 .PHONY : jpc_t2dec.c.i
 
 jpc_t2dec.s: jpc_t2dec.c.s
@@ -1062,7 +1062,7 @@ jpc_t2dec.s: jpc_t2dec.c.s
 
 # target to generate assembly for a file
 jpc_t2dec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2dec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2dec.c.s
 .PHONY : jpc_t2dec.c.s
 
 jpc_t2enc.obj: jpc_t2enc.c.obj
@@ -1071,7 +1071,7 @@ jpc_t2enc.obj: jpc_t2enc.c.obj
 
 # target to build an object file
 jpc_t2enc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2enc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2enc.c.obj
 .PHONY : jpc_t2enc.c.obj
 
 jpc_t2enc.i: jpc_t2enc.c.i
@@ -1080,7 +1080,7 @@ jpc_t2enc.i: jpc_t2enc.c.i
 
 # target to preprocess a source file
 jpc_t2enc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2enc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2enc.c.i
 .PHONY : jpc_t2enc.c.i
 
 jpc_t2enc.s: jpc_t2enc.c.s
@@ -1089,7 +1089,7 @@ jpc_t2enc.s: jpc_t2enc.c.s
 
 # target to generate assembly for a file
 jpc_t2enc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2enc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_t2enc.c.s
 .PHONY : jpc_t2enc.c.s
 
 jpc_tagtree.obj: jpc_tagtree.c.obj
@@ -1098,7 +1098,7 @@ jpc_tagtree.obj: jpc_tagtree.c.obj
 
 # target to build an object file
 jpc_tagtree.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tagtree.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tagtree.c.obj
 .PHONY : jpc_tagtree.c.obj
 
 jpc_tagtree.i: jpc_tagtree.c.i
@@ -1107,7 +1107,7 @@ jpc_tagtree.i: jpc_tagtree.c.i
 
 # target to preprocess a source file
 jpc_tagtree.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tagtree.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tagtree.c.i
 .PHONY : jpc_tagtree.c.i
 
 jpc_tagtree.s: jpc_tagtree.c.s
@@ -1116,7 +1116,7 @@ jpc_tagtree.s: jpc_tagtree.c.s
 
 # target to generate assembly for a file
 jpc_tagtree.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tagtree.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tagtree.c.s
 .PHONY : jpc_tagtree.c.s
 
 jpc_tsfb.obj: jpc_tsfb.c.obj
@@ -1125,7 +1125,7 @@ jpc_tsfb.obj: jpc_tsfb.c.obj
 
 # target to build an object file
 jpc_tsfb.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tsfb.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tsfb.c.obj
 .PHONY : jpc_tsfb.c.obj
 
 jpc_tsfb.i: jpc_tsfb.c.i
@@ -1134,7 +1134,7 @@ jpc_tsfb.i: jpc_tsfb.c.i
 
 # target to preprocess a source file
 jpc_tsfb.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tsfb.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tsfb.c.i
 .PHONY : jpc_tsfb.c.i
 
 jpc_tsfb.s: jpc_tsfb.c.s
@@ -1143,7 +1143,7 @@ jpc_tsfb.s: jpc_tsfb.c.s
 
 # target to generate assembly for a file
 jpc_tsfb.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tsfb.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_tsfb.c.s
 .PHONY : jpc_tsfb.c.s
 
 jpc_util.obj: jpc_util.c.obj
@@ -1152,7 +1152,7 @@ jpc_util.obj: jpc_util.c.obj
 
 # target to build an object file
 jpc_util.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_util.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_util.c.obj
 .PHONY : jpc_util.c.obj
 
 jpc_util.i: jpc_util.c.i
@@ -1161,7 +1161,7 @@ jpc_util.i: jpc_util.c.i
 
 # target to preprocess a source file
 jpc_util.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_util.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_util.c.i
 .PHONY : jpc_util.c.i
 
 jpc_util.s: jpc_util.c.s
@@ -1170,7 +1170,7 @@ jpc_util.s: jpc_util.c.s
 
 # target to generate assembly for a file
 jpc_util.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_util.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libjasper\CMakeFiles\libjasper.dir\build.make 3rdparty/libjasper/CMakeFiles/libjasper.dir/jpc_util.c.s
 .PHONY : jpc_util.c.s
 
 # Help Target
@@ -1308,6 +1308,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

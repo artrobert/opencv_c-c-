@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Utility rule file for pch_Generate_opencv_photo.
 
@@ -55,16 +55,16 @@ include modules/photo/CMakeFiles/pch_Generate_opencv_photo.dir/progress.make
 modules/photo/CMakeFiles/pch_Generate_opencv_photo: modules/photo/precomp.hpp.gch/opencv_photo_Release.gch
 
 
-modules/photo/precomp.hpp.gch/opencv_photo_Release.gch: C:/Users/rartin/Desktop/opencv/sources/modules/photo/src/precomp.hpp
+modules/photo/precomp.hpp.gch/opencv_photo_Release.gch: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/precomp.hpp
 modules/photo/precomp.hpp.gch/opencv_photo_Release.gch: modules/photo/precomp.hpp
 modules/photo/precomp.hpp.gch/opencv_photo_Release.gch: lib/libopencv_photo_pch_dephelp.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating precomp.hpp.gch/opencv_photo_Release.gch"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Desktop/build/modules/photo/precomp.hpp.gch
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" "-DCVAPI_EXPORTS" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include/opencl/1.2" -isystem"C:/Users/rartin/Desktop/build" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include/opencl/1.2" -isystem"C:/Users/rartin/Desktop/build" -I"C:/Users/rartin/Desktop/opencv/sources/modules/photo/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/photo/src" -isystem"C:/Users/rartin/Desktop/build/modules/photo" -I"C:/Users/rartin/Desktop/opencv/sources/modules/core/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -DCVAPI_EXPORTS -x c++-header -o C:/Users/rartin/Desktop/build/modules/photo/precomp.hpp.gch/opencv_photo_Release.gch C:/Users/rartin/Desktop/build/modules/photo/precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating precomp.hpp.gch/opencv_photo_Release.gch"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/precomp.hpp.gch
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" "-DCVAPI_EXPORTS" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -ffast-math -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -DCVAPI_EXPORTS -x c++-header -o C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/precomp.hpp.gch/opencv_photo_Release.gch C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/precomp.hpp
 
-modules/photo/precomp.hpp: C:/Users/rartin/Desktop/opencv/sources/modules/photo/src/precomp.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating precomp.hpp"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Desktop/opencv/sources/modules/photo/src/precomp.hpp C:/Users/rartin/Desktop/build/modules/photo/precomp.hpp
+modules/photo/precomp.hpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating precomp.hpp"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/precomp.hpp C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/precomp.hpp
 
 pch_Generate_opencv_photo: modules/photo/CMakeFiles/pch_Generate_opencv_photo
 pch_Generate_opencv_photo: modules/photo/precomp.hpp.gch/opencv_photo_Release.gch
@@ -79,10 +79,10 @@ modules/photo/CMakeFiles/pch_Generate_opencv_photo.dir/build: pch_Generate_openc
 .PHONY : modules/photo/CMakeFiles/pch_Generate_opencv_photo.dir/build
 
 modules/photo/CMakeFiles/pch_Generate_opencv_photo.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_photo.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_photo.dir\cmake_clean.cmake
 .PHONY : modules/photo/CMakeFiles/pch_Generate_opencv_photo.dir/clean
 
 modules/photo/CMakeFiles/pch_Generate_opencv_photo.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\photo C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\photo C:\Users\rartin\Desktop\build\modules\photo\CMakeFiles\pch_Generate_opencv_photo.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo\CMakeFiles\pch_Generate_opencv_photo.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/photo/CMakeFiles/pch_Generate_opencv_photo.dir/depend
 

@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/depend.make
@@ -56,28 +56,19 @@ include modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/progress.make
 # Include the compile flags for this target's objects.
 include modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/flags.make
 
-modules/ml/opencv_test_ml_pch_dephelp.cxx: C:/Users/rartin/Desktop/opencv/sources/modules/ml/test/test_precomp.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencv_test_ml_pch_dephelp.cxx"
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo #include \"C:/Users/rartin/Desktop/opencv/sources/modules/ml/test/test_precomp.hpp\" > C:/Users/rartin/Desktop/build/modules/ml/opencv_test_ml_pch_dephelp.cxx
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo "int testfunction();" >> C:/Users/rartin/Desktop/build/modules/ml/opencv_test_ml_pch_dephelp.cxx
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo "int testfunction()" >> C:/Users/rartin/Desktop/build/modules/ml/opencv_test_ml_pch_dephelp.cxx
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo { >> C:/Users/rartin/Desktop/build/modules/ml/opencv_test_ml_pch_dephelp.cxx
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo "    return 0;" >> C:/Users/rartin/Desktop/build/modules/ml/opencv_test_ml_pch_dephelp.cxx
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo } >> C:/Users/rartin/Desktop/build/modules/ml/opencv_test_ml_pch_dephelp.cxx
-
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.obj: modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/flags.make
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.obj: modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/includes_CXX.rsp
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.obj: modules/ml/opencv_test_ml_pch_dephelp.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_test_ml_pch_dephelp.dir\opencv_test_ml_pch_dephelp.cxx.obj -c C:\Users\rartin\Desktop\build\modules\ml\opencv_test_ml_pch_dephelp.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_test_ml_pch_dephelp.dir\opencv_test_ml_pch_dephelp.cxx.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml\opencv_test_ml_pch_dephelp.cxx
 
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\build\modules\ml\opencv_test_ml_pch_dephelp.cxx > CMakeFiles\opencv_test_ml_pch_dephelp.dir\opencv_test_ml_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml\opencv_test_ml_pch_dephelp.cxx > CMakeFiles\opencv_test_ml_pch_dephelp.dir\opencv_test_ml_pch_dephelp.cxx.i
 
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\build\modules\ml\opencv_test_ml_pch_dephelp.cxx -o CMakeFiles\opencv_test_ml_pch_dephelp.dir\opencv_test_ml_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml\opencv_test_ml_pch_dephelp.cxx -o CMakeFiles\opencv_test_ml_pch_dephelp.dir\opencv_test_ml_pch_dephelp.cxx.s
 
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.obj.requires:
 
@@ -100,9 +91,9 @@ opencv_test_ml_pch_dephelp_EXTERNAL_OBJECTS =
 lib/libopencv_test_ml_pch_dephelp.a: modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/opencv_test_ml_pch_dephelp.cxx.obj
 lib/libopencv_test_ml_pch_dephelp.a: modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/build.make
 lib/libopencv_test_ml_pch_dephelp.a: modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ..\..\lib\libopencv_test_ml_pch_dephelp.a"
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_ml_pch_dephelp.dir\cmake_clean_target.cmake
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_ml_pch_dephelp.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\..\lib\libopencv_test_ml_pch_dephelp.a"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_ml_pch_dephelp.dir\cmake_clean_target.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_ml_pch_dephelp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/build: lib/libopencv_test_ml_pch_dephelp.a
@@ -114,10 +105,10 @@ modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/requires: modules/ml/CMakeF
 .PHONY : modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/requires
 
 modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\ml && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_ml_pch_dephelp.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_ml_pch_dephelp.dir\cmake_clean.cmake
 .PHONY : modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/clean
 
-modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/depend: modules/ml/opencv_test_ml_pch_dephelp.cxx
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\ml C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\ml C:\Users\rartin\Desktop\build\modules\ml\CMakeFiles\opencv_test_ml_pch_dephelp.dir\DependInfo.cmake --color=$(COLOR)
+modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/depend:
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\ml C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ml\CMakeFiles\opencv_test_ml_pch_dephelp.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/ml/CMakeFiles/opencv_test_ml_pch_dephelp.dir/depend
 

@@ -4,47 +4,47 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_basic_props.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_basic_props.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_ffmpeg.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_ffmpeg.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_fourcc.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_fourcc.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_framecount.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_framecount.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_main.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_main.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_positioning.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_positioning.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_video_io.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_video_io.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_video_pos.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_video_pos.cpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_precomp.hpp",
 			"labels" : [ "Main", "opencv_videoio", "AccuracyTest" ]
 		}
 	],

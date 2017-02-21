@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Utility rule file for pch_Generate_opencv_videostab.
 
@@ -55,16 +55,16 @@ include modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/progress.
 modules/videostab/CMakeFiles/pch_Generate_opencv_videostab: modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch
 
 
-modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/precomp.hpp
+modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/precomp.hpp
 modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch: modules/videostab/precomp.hpp
 modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch: lib/libopencv_videostab_pch_dephelp.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating precomp.hpp.gch/opencv_videostab_Release.gch"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp.gch
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" "-DCVAPI_EXPORTS" -isystem"C:/Users/rartin/Desktop/build" -isystem"C:/Users/rartin/Desktop/build" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src" -isystem"C:/Users/rartin/Desktop/build/modules/videostab" -I"C:/Users/rartin/Desktop/opencv/sources/modules/core/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/flann/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/ml/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/photo/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/video/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/highgui/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/features2d/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/calib3d/include" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -DCVAPI_EXPORTS -x c++-header -o C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating precomp.hpp.gch/opencv_videostab_Release.gch"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp.gch
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" "-DCVAPI_EXPORTS" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/flann/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/calib3d/include" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -ffast-math -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -DCVAPI_EXPORTS -x c++-header -o C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp
 
-modules/videostab/precomp.hpp: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/precomp.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating precomp.hpp"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/precomp.hpp C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp
+modules/videostab/precomp.hpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating precomp.hpp"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/precomp.hpp C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp
 
 pch_Generate_opencv_videostab: modules/videostab/CMakeFiles/pch_Generate_opencv_videostab
 pch_Generate_opencv_videostab: modules/videostab/precomp.hpp.gch/opencv_videostab_Release.gch
@@ -79,10 +79,10 @@ modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/build: pch_Genera
 .PHONY : modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/build
 
 modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_videostab.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_videostab.dir\cmake_clean.cmake
 .PHONY : modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/clean
 
 modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\videostab C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\videostab C:\Users\rartin\Desktop\build\modules\videostab\CMakeFiles\pch_Generate_opencv_videostab.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab\CMakeFiles\pch_Generate_opencv_videostab.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/depend
 

@@ -47,46 +47,13 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	"C:\Program Files (x86)\CMake\bin\ctest.exe" --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -110,6 +77,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	"C:\Program Files (x86)\CMake\bin\ctest.exe" --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"libs\""
@@ -119,6 +97,28 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
 
 # Special rule for the target install
 install: preinstall
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\videoio\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 modules/videoio/CMakeFiles/opencv_videoio.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_videoio.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_videoio.dir/rule
 .PHONY : modules/videoio/CMakeFiles/opencv_videoio.dir/rule
 
 # Convenience name for target.
@@ -198,42 +198,12 @@ opencv_videoio: modules/videoio/CMakeFiles/opencv_videoio.dir/rule
 
 # fast build rule for target.
 opencv_videoio/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/build
 .PHONY : opencv_videoio/fast
 
 # Convenience name for target.
-modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/rule
-.PHONY : modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_videoio_pch_dephelp: modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_videoio_pch_dephelp
-
-# fast build rule for target.
-opencv_test_videoio_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/build
-.PHONY : opencv_test_videoio_pch_dephelp/fast
-
-# Convenience name for target.
-modules/videoio/CMakeFiles/opencv_videoio_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_videoio_object.dir/rule
-.PHONY : modules/videoio/CMakeFiles/opencv_videoio_object.dir/rule
-
-# Convenience name for target.
-opencv_videoio_object: modules/videoio/CMakeFiles/opencv_videoio_object.dir/rule
-
-.PHONY : opencv_videoio_object
-
-# fast build rule for target.
-opencv_videoio_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/build
-.PHONY : opencv_videoio_object/fast
-
-# Convenience name for target.
 modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/rule
 .PHONY : modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +213,12 @@ opencv_videoio_pch_dephelp: modules/videoio/CMakeFiles/opencv_videoio_pch_dephel
 
 # fast build rule for target.
 opencv_videoio_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/build
 .PHONY : opencv_videoio_pch_dephelp/fast
 
 # Convenience name for target.
 modules/videoio/CMakeFiles/pch_Generate_opencv_videoio.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/pch_Generate_opencv_videoio.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/pch_Generate_opencv_videoio.dir/rule
 .PHONY : modules/videoio/CMakeFiles/pch_Generate_opencv_videoio.dir/rule
 
 # Convenience name for target.
@@ -258,137 +228,8 @@ pch_Generate_opencv_videoio: modules/videoio/CMakeFiles/pch_Generate_opencv_vide
 
 # fast build rule for target.
 pch_Generate_opencv_videoio/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\pch_Generate_opencv_videoio.dir\build.make modules/videoio/CMakeFiles/pch_Generate_opencv_videoio.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\pch_Generate_opencv_videoio.dir\build.make modules/videoio/CMakeFiles/pch_Generate_opencv_videoio.dir/build
 .PHONY : pch_Generate_opencv_videoio/fast
-
-# Convenience name for target.
-modules/videoio/CMakeFiles/opencv_perf_videoio.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_perf_videoio.dir/rule
-.PHONY : modules/videoio/CMakeFiles/opencv_perf_videoio.dir/rule
-
-# Convenience name for target.
-opencv_perf_videoio: modules/videoio/CMakeFiles/opencv_perf_videoio.dir/rule
-
-.PHONY : opencv_perf_videoio
-
-# fast build rule for target.
-opencv_perf_videoio/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/build
-.PHONY : opencv_perf_videoio/fast
-
-# Convenience name for target.
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_test_videoio.dir/rule
-.PHONY : modules/videoio/CMakeFiles/opencv_test_videoio.dir/rule
-
-# Convenience name for target.
-opencv_test_videoio: modules/videoio/CMakeFiles/opencv_test_videoio.dir/rule
-
-.PHONY : opencv_test_videoio
-
-# fast build rule for target.
-opencv_test_videoio/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/build
-.PHONY : opencv_test_videoio/fast
-
-# Convenience name for target.
-modules/videoio/CMakeFiles/pch_Generate_opencv_test_videoio.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/pch_Generate_opencv_test_videoio.dir/rule
-.PHONY : modules/videoio/CMakeFiles/pch_Generate_opencv_test_videoio.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_videoio: modules/videoio/CMakeFiles/pch_Generate_opencv_test_videoio.dir/rule
-
-.PHONY : pch_Generate_opencv_test_videoio
-
-# fast build rule for target.
-pch_Generate_opencv_test_videoio/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\pch_Generate_opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/pch_Generate_opencv_test_videoio.dir/build
-.PHONY : pch_Generate_opencv_test_videoio/fast
-
-# Convenience name for target.
-modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/rule
-.PHONY : modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_perf_videoio_pch_dephelp: modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/rule
-
-.PHONY : opencv_perf_videoio_pch_dephelp
-
-# fast build rule for target.
-opencv_perf_videoio_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/build
-.PHONY : opencv_perf_videoio_pch_dephelp/fast
-
-# Convenience name for target.
-modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/rule
-.PHONY : modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_perf_videoio: modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/rule
-
-.PHONY : pch_Generate_opencv_perf_videoio
-
-# fast build rule for target.
-pch_Generate_opencv_perf_videoio/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\pch_Generate_opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/build
-.PHONY : pch_Generate_opencv_perf_videoio/fast
-
-opencv_perf_videoio_pch_dephelp.obj: opencv_perf_videoio_pch_dephelp.cxx.obj
-
-.PHONY : opencv_perf_videoio_pch_dephelp.obj
-
-# target to build an object file
-opencv_perf_videoio_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/opencv_perf_videoio_pch_dephelp.cxx.obj
-.PHONY : opencv_perf_videoio_pch_dephelp.cxx.obj
-
-opencv_perf_videoio_pch_dephelp.i: opencv_perf_videoio_pch_dephelp.cxx.i
-
-.PHONY : opencv_perf_videoio_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_perf_videoio_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/opencv_perf_videoio_pch_dephelp.cxx.i
-.PHONY : opencv_perf_videoio_pch_dephelp.cxx.i
-
-opencv_perf_videoio_pch_dephelp.s: opencv_perf_videoio_pch_dephelp.cxx.s
-
-.PHONY : opencv_perf_videoio_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_perf_videoio_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio_pch_dephelp.dir/opencv_perf_videoio_pch_dephelp.cxx.s
-.PHONY : opencv_perf_videoio_pch_dephelp.cxx.s
-
-opencv_test_videoio_pch_dephelp.obj: opencv_test_videoio_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_videoio_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_videoio_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/opencv_test_videoio_pch_dephelp.cxx.obj
-.PHONY : opencv_test_videoio_pch_dephelp.cxx.obj
-
-opencv_test_videoio_pch_dephelp.i: opencv_test_videoio_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_videoio_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_videoio_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/opencv_test_videoio_pch_dephelp.cxx.i
-.PHONY : opencv_test_videoio_pch_dephelp.cxx.i
-
-opencv_test_videoio_pch_dephelp.s: opencv_test_videoio_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_videoio_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_videoio_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio_pch_dephelp.dir/opencv_test_videoio_pch_dephelp.cxx.s
-.PHONY : opencv_test_videoio_pch_dephelp.cxx.s
 
 opencv_videoio_pch_dephelp.obj: opencv_videoio_pch_dephelp.cxx.obj
 
@@ -396,7 +237,7 @@ opencv_videoio_pch_dephelp.obj: opencv_videoio_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_videoio_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/opencv_videoio_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/opencv_videoio_pch_dephelp.cxx.obj
 .PHONY : opencv_videoio_pch_dephelp.cxx.obj
 
 opencv_videoio_pch_dephelp.i: opencv_videoio_pch_dephelp.cxx.i
@@ -405,7 +246,7 @@ opencv_videoio_pch_dephelp.i: opencv_videoio_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_videoio_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/opencv_videoio_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/opencv_videoio_pch_dephelp.cxx.i
 .PHONY : opencv_videoio_pch_dephelp.cxx.i
 
 opencv_videoio_pch_dephelp.s: opencv_videoio_pch_dephelp.cxx.s
@@ -414,89 +255,8 @@ opencv_videoio_pch_dephelp.s: opencv_videoio_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_videoio_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/opencv_videoio_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_pch_dephelp.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_pch_dephelp.dir/opencv_videoio_pch_dephelp.cxx.s
 .PHONY : opencv_videoio_pch_dephelp.cxx.s
-
-perf/perf_input.obj: perf/perf_input.cpp.obj
-
-.PHONY : perf/perf_input.obj
-
-# target to build an object file
-perf/perf_input.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_input.cpp.obj
-.PHONY : perf/perf_input.cpp.obj
-
-perf/perf_input.i: perf/perf_input.cpp.i
-
-.PHONY : perf/perf_input.i
-
-# target to preprocess a source file
-perf/perf_input.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_input.cpp.i
-.PHONY : perf/perf_input.cpp.i
-
-perf/perf_input.s: perf/perf_input.cpp.s
-
-.PHONY : perf/perf_input.s
-
-# target to generate assembly for a file
-perf/perf_input.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_input.cpp.s
-.PHONY : perf/perf_input.cpp.s
-
-perf/perf_main.obj: perf/perf_main.cpp.obj
-
-.PHONY : perf/perf_main.obj
-
-# target to build an object file
-perf/perf_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_main.cpp.obj
-.PHONY : perf/perf_main.cpp.obj
-
-perf/perf_main.i: perf/perf_main.cpp.i
-
-.PHONY : perf/perf_main.i
-
-# target to preprocess a source file
-perf/perf_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_main.cpp.i
-.PHONY : perf/perf_main.cpp.i
-
-perf/perf_main.s: perf/perf_main.cpp.s
-
-.PHONY : perf/perf_main.s
-
-# target to generate assembly for a file
-perf/perf_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_main.cpp.s
-.PHONY : perf/perf_main.cpp.s
-
-perf/perf_output.obj: perf/perf_output.cpp.obj
-
-.PHONY : perf/perf_output.obj
-
-# target to build an object file
-perf/perf_output.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_output.cpp.obj
-.PHONY : perf/perf_output.cpp.obj
-
-perf/perf_output.i: perf/perf_output.cpp.i
-
-.PHONY : perf/perf_output.i
-
-# target to preprocess a source file
-perf/perf_output.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_output.cpp.i
-.PHONY : perf/perf_output.cpp.i
-
-perf/perf_output.s: perf/perf_output.cpp.s
-
-.PHONY : perf/perf_output.s
-
-# target to generate assembly for a file
-perf/perf_output.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_perf_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_perf_videoio.dir/perf/perf_output.cpp.s
-.PHONY : perf/perf_output.cpp.s
 
 src/cap.obj: src/cap.cpp.obj
 
@@ -504,8 +264,7 @@ src/cap.obj: src/cap.cpp.obj
 
 # target to build an object file
 src/cap.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap.cpp.obj
 .PHONY : src/cap.cpp.obj
 
 src/cap.i: src/cap.cpp.i
@@ -514,8 +273,7 @@ src/cap.i: src/cap.cpp.i
 
 # target to preprocess a source file
 src/cap.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap.cpp.i
 .PHONY : src/cap.cpp.i
 
 src/cap.s: src/cap.cpp.s
@@ -524,8 +282,7 @@ src/cap.s: src/cap.cpp.s
 
 # target to generate assembly for a file
 src/cap.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap.cpp.s
 .PHONY : src/cap.cpp.s
 
 src/cap_cmu.obj: src/cap_cmu.cpp.obj
@@ -534,8 +291,7 @@ src/cap_cmu.obj: src/cap_cmu.cpp.obj
 
 # target to build an object file
 src/cap_cmu.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_cmu.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_cmu.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_cmu.cpp.obj
 .PHONY : src/cap_cmu.cpp.obj
 
 src/cap_cmu.i: src/cap_cmu.cpp.i
@@ -544,8 +300,7 @@ src/cap_cmu.i: src/cap_cmu.cpp.i
 
 # target to preprocess a source file
 src/cap_cmu.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_cmu.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_cmu.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_cmu.cpp.i
 .PHONY : src/cap_cmu.cpp.i
 
 src/cap_cmu.s: src/cap_cmu.cpp.s
@@ -554,8 +309,7 @@ src/cap_cmu.s: src/cap_cmu.cpp.s
 
 # target to generate assembly for a file
 src/cap_cmu.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_cmu.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_cmu.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_cmu.cpp.s
 .PHONY : src/cap_cmu.cpp.s
 
 src/cap_dshow.obj: src/cap_dshow.cpp.obj
@@ -564,8 +318,7 @@ src/cap_dshow.obj: src/cap_dshow.cpp.obj
 
 # target to build an object file
 src/cap_dshow.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_dshow.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_dshow.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_dshow.cpp.obj
 .PHONY : src/cap_dshow.cpp.obj
 
 src/cap_dshow.i: src/cap_dshow.cpp.i
@@ -574,8 +327,7 @@ src/cap_dshow.i: src/cap_dshow.cpp.i
 
 # target to preprocess a source file
 src/cap_dshow.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_dshow.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_dshow.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_dshow.cpp.i
 .PHONY : src/cap_dshow.cpp.i
 
 src/cap_dshow.s: src/cap_dshow.cpp.s
@@ -584,8 +336,7 @@ src/cap_dshow.s: src/cap_dshow.cpp.s
 
 # target to generate assembly for a file
 src/cap_dshow.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_dshow.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_dshow.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_dshow.cpp.s
 .PHONY : src/cap_dshow.cpp.s
 
 src/cap_ffmpeg.obj: src/cap_ffmpeg.cpp.obj
@@ -594,8 +345,7 @@ src/cap_ffmpeg.obj: src/cap_ffmpeg.cpp.obj
 
 # target to build an object file
 src/cap_ffmpeg.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_ffmpeg.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_ffmpeg.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_ffmpeg.cpp.obj
 .PHONY : src/cap_ffmpeg.cpp.obj
 
 src/cap_ffmpeg.i: src/cap_ffmpeg.cpp.i
@@ -604,8 +354,7 @@ src/cap_ffmpeg.i: src/cap_ffmpeg.cpp.i
 
 # target to preprocess a source file
 src/cap_ffmpeg.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_ffmpeg.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_ffmpeg.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_ffmpeg.cpp.i
 .PHONY : src/cap_ffmpeg.cpp.i
 
 src/cap_ffmpeg.s: src/cap_ffmpeg.cpp.s
@@ -614,8 +363,7 @@ src/cap_ffmpeg.s: src/cap_ffmpeg.cpp.s
 
 # target to generate assembly for a file
 src/cap_ffmpeg.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_ffmpeg.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_ffmpeg.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_ffmpeg.cpp.s
 .PHONY : src/cap_ffmpeg.cpp.s
 
 src/cap_images.obj: src/cap_images.cpp.obj
@@ -624,8 +372,7 @@ src/cap_images.obj: src/cap_images.cpp.obj
 
 # target to build an object file
 src/cap_images.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_images.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_images.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_images.cpp.obj
 .PHONY : src/cap_images.cpp.obj
 
 src/cap_images.i: src/cap_images.cpp.i
@@ -634,8 +381,7 @@ src/cap_images.i: src/cap_images.cpp.i
 
 # target to preprocess a source file
 src/cap_images.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_images.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_images.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_images.cpp.i
 .PHONY : src/cap_images.cpp.i
 
 src/cap_images.s: src/cap_images.cpp.s
@@ -644,8 +390,7 @@ src/cap_images.s: src/cap_images.cpp.s
 
 # target to generate assembly for a file
 src/cap_images.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_images.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_images.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_images.cpp.s
 .PHONY : src/cap_images.cpp.s
 
 src/cap_mjpeg_decoder.obj: src/cap_mjpeg_decoder.cpp.obj
@@ -654,8 +399,7 @@ src/cap_mjpeg_decoder.obj: src/cap_mjpeg_decoder.cpp.obj
 
 # target to build an object file
 src/cap_mjpeg_decoder.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_decoder.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_mjpeg_decoder.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_decoder.cpp.obj
 .PHONY : src/cap_mjpeg_decoder.cpp.obj
 
 src/cap_mjpeg_decoder.i: src/cap_mjpeg_decoder.cpp.i
@@ -664,8 +408,7 @@ src/cap_mjpeg_decoder.i: src/cap_mjpeg_decoder.cpp.i
 
 # target to preprocess a source file
 src/cap_mjpeg_decoder.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_decoder.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_mjpeg_decoder.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_decoder.cpp.i
 .PHONY : src/cap_mjpeg_decoder.cpp.i
 
 src/cap_mjpeg_decoder.s: src/cap_mjpeg_decoder.cpp.s
@@ -674,8 +417,7 @@ src/cap_mjpeg_decoder.s: src/cap_mjpeg_decoder.cpp.s
 
 # target to generate assembly for a file
 src/cap_mjpeg_decoder.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_decoder.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_mjpeg_decoder.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_decoder.cpp.s
 .PHONY : src/cap_mjpeg_decoder.cpp.s
 
 src/cap_mjpeg_encoder.obj: src/cap_mjpeg_encoder.cpp.obj
@@ -684,8 +426,7 @@ src/cap_mjpeg_encoder.obj: src/cap_mjpeg_encoder.cpp.obj
 
 # target to build an object file
 src/cap_mjpeg_encoder.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_encoder.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_mjpeg_encoder.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_encoder.cpp.obj
 .PHONY : src/cap_mjpeg_encoder.cpp.obj
 
 src/cap_mjpeg_encoder.i: src/cap_mjpeg_encoder.cpp.i
@@ -694,8 +435,7 @@ src/cap_mjpeg_encoder.i: src/cap_mjpeg_encoder.cpp.i
 
 # target to preprocess a source file
 src/cap_mjpeg_encoder.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_encoder.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_mjpeg_encoder.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_encoder.cpp.i
 .PHONY : src/cap_mjpeg_encoder.cpp.i
 
 src/cap_mjpeg_encoder.s: src/cap_mjpeg_encoder.cpp.s
@@ -704,8 +444,7 @@ src/cap_mjpeg_encoder.s: src/cap_mjpeg_encoder.cpp.s
 
 # target to generate assembly for a file
 src/cap_mjpeg_encoder.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_encoder.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_mjpeg_encoder.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_encoder.cpp.s
 .PHONY : src/cap_mjpeg_encoder.cpp.s
 
 src/cap_vfw.obj: src/cap_vfw.cpp.obj
@@ -714,8 +453,7 @@ src/cap_vfw.obj: src/cap_vfw.cpp.obj
 
 # target to build an object file
 src/cap_vfw.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_vfw.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_vfw.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_vfw.cpp.obj
 .PHONY : src/cap_vfw.cpp.obj
 
 src/cap_vfw.i: src/cap_vfw.cpp.i
@@ -724,8 +462,7 @@ src/cap_vfw.i: src/cap_vfw.cpp.i
 
 # target to preprocess a source file
 src/cap_vfw.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_vfw.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_vfw.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_vfw.cpp.i
 .PHONY : src/cap_vfw.cpp.i
 
 src/cap_vfw.s: src/cap_vfw.cpp.s
@@ -734,225 +471,8 @@ src/cap_vfw.s: src/cap_vfw.cpp.s
 
 # target to generate assembly for a file
 src/cap_vfw.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_vfw.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio_object.dir\build.make modules/videoio/CMakeFiles/opencv_videoio_object.dir/src/cap_vfw.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_videoio.dir/src/cap_vfw.cpp.s
 .PHONY : src/cap_vfw.cpp.s
-
-test/test_basic_props.obj: test/test_basic_props.cpp.obj
-
-.PHONY : test/test_basic_props.obj
-
-# target to build an object file
-test/test_basic_props.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj
-.PHONY : test/test_basic_props.cpp.obj
-
-test/test_basic_props.i: test/test_basic_props.cpp.i
-
-.PHONY : test/test_basic_props.i
-
-# target to preprocess a source file
-test/test_basic_props.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.i
-.PHONY : test/test_basic_props.cpp.i
-
-test/test_basic_props.s: test/test_basic_props.cpp.s
-
-.PHONY : test/test_basic_props.s
-
-# target to generate assembly for a file
-test/test_basic_props.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.s
-.PHONY : test/test_basic_props.cpp.s
-
-test/test_ffmpeg.obj: test/test_ffmpeg.cpp.obj
-
-.PHONY : test/test_ffmpeg.obj
-
-# target to build an object file
-test/test_ffmpeg.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj
-.PHONY : test/test_ffmpeg.cpp.obj
-
-test/test_ffmpeg.i: test/test_ffmpeg.cpp.i
-
-.PHONY : test/test_ffmpeg.i
-
-# target to preprocess a source file
-test/test_ffmpeg.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.i
-.PHONY : test/test_ffmpeg.cpp.i
-
-test/test_ffmpeg.s: test/test_ffmpeg.cpp.s
-
-.PHONY : test/test_ffmpeg.s
-
-# target to generate assembly for a file
-test/test_ffmpeg.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.s
-.PHONY : test/test_ffmpeg.cpp.s
-
-test/test_fourcc.obj: test/test_fourcc.cpp.obj
-
-.PHONY : test/test_fourcc.obj
-
-# target to build an object file
-test/test_fourcc.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj
-.PHONY : test/test_fourcc.cpp.obj
-
-test/test_fourcc.i: test/test_fourcc.cpp.i
-
-.PHONY : test/test_fourcc.i
-
-# target to preprocess a source file
-test/test_fourcc.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.i
-.PHONY : test/test_fourcc.cpp.i
-
-test/test_fourcc.s: test/test_fourcc.cpp.s
-
-.PHONY : test/test_fourcc.s
-
-# target to generate assembly for a file
-test/test_fourcc.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.s
-.PHONY : test/test_fourcc.cpp.s
-
-test/test_framecount.obj: test/test_framecount.cpp.obj
-
-.PHONY : test/test_framecount.obj
-
-# target to build an object file
-test/test_framecount.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj
-.PHONY : test/test_framecount.cpp.obj
-
-test/test_framecount.i: test/test_framecount.cpp.i
-
-.PHONY : test/test_framecount.i
-
-# target to preprocess a source file
-test/test_framecount.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.i
-.PHONY : test/test_framecount.cpp.i
-
-test/test_framecount.s: test/test_framecount.cpp.s
-
-.PHONY : test/test_framecount.s
-
-# target to generate assembly for a file
-test/test_framecount.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.s
-.PHONY : test/test_framecount.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
-
-test/test_positioning.obj: test/test_positioning.cpp.obj
-
-.PHONY : test/test_positioning.obj
-
-# target to build an object file
-test/test_positioning.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj
-.PHONY : test/test_positioning.cpp.obj
-
-test/test_positioning.i: test/test_positioning.cpp.i
-
-.PHONY : test/test_positioning.i
-
-# target to preprocess a source file
-test/test_positioning.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.i
-.PHONY : test/test_positioning.cpp.i
-
-test/test_positioning.s: test/test_positioning.cpp.s
-
-.PHONY : test/test_positioning.s
-
-# target to generate assembly for a file
-test/test_positioning.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.s
-.PHONY : test/test_positioning.cpp.s
-
-test/test_video_io.obj: test/test_video_io.cpp.obj
-
-.PHONY : test/test_video_io.obj
-
-# target to build an object file
-test/test_video_io.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj
-.PHONY : test/test_video_io.cpp.obj
-
-test/test_video_io.i: test/test_video_io.cpp.i
-
-.PHONY : test/test_video_io.i
-
-# target to preprocess a source file
-test/test_video_io.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.i
-.PHONY : test/test_video_io.cpp.i
-
-test/test_video_io.s: test/test_video_io.cpp.s
-
-.PHONY : test/test_video_io.s
-
-# target to generate assembly for a file
-test/test_video_io.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.s
-.PHONY : test/test_video_io.cpp.s
-
-test/test_video_pos.obj: test/test_video_pos.cpp.obj
-
-.PHONY : test/test_video_pos.obj
-
-# target to build an object file
-test/test_video_pos.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj
-.PHONY : test/test_video_pos.cpp.obj
-
-test/test_video_pos.i: test/test_video_pos.cpp.i
-
-.PHONY : test/test_video_pos.i
-
-# target to preprocess a source file
-test/test_video_pos.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.i
-.PHONY : test/test_video_pos.cpp.i
-
-test/test_video_pos.s: test/test_video_pos.cpp.s
-
-.PHONY : test/test_video_pos.s
-
-# target to generate assembly for a file
-test/test_video_pos.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videoio\CMakeFiles\opencv_test_videoio.dir\build.make modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.s
-.PHONY : test/test_video_pos.cpp.s
 
 # Help Target
 help:
@@ -960,43 +480,21 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... opencv_videoio
-	@echo ... opencv_test_videoio_pch_dephelp
-	@echo ... opencv_videoio_object
-	@echo ... opencv_videoio_pch_dephelp
-	@echo ... pch_Generate_opencv_videoio
-	@echo ... opencv_perf_videoio
-	@echo ... package_source
-	@echo ... opencv_test_videoio
-	@echo ... pch_Generate_opencv_test_videoio
-	@echo ... opencv_perf_videoio_pch_dephelp
-	@echo ... pch_Generate_opencv_perf_videoio
-	@echo ... package
-	@echo ... test
 	@echo ... edit_cache
+	@echo ... opencv_videoio
 	@echo ... rebuild_cache
+	@echo ... test
+	@echo ... opencv_videoio_pch_dephelp
 	@echo ... list_install_components
+	@echo ... pch_Generate_opencv_videoio
+	@echo ... package
+	@echo ... package_source
 	@echo ... install
 	@echo ... install/local
 	@echo ... install/strip
-	@echo ... opencv_perf_videoio_pch_dephelp.obj
-	@echo ... opencv_perf_videoio_pch_dephelp.i
-	@echo ... opencv_perf_videoio_pch_dephelp.s
-	@echo ... opencv_test_videoio_pch_dephelp.obj
-	@echo ... opencv_test_videoio_pch_dephelp.i
-	@echo ... opencv_test_videoio_pch_dephelp.s
 	@echo ... opencv_videoio_pch_dephelp.obj
 	@echo ... opencv_videoio_pch_dephelp.i
 	@echo ... opencv_videoio_pch_dephelp.s
-	@echo ... perf/perf_input.obj
-	@echo ... perf/perf_input.i
-	@echo ... perf/perf_input.s
-	@echo ... perf/perf_main.obj
-	@echo ... perf/perf_main.i
-	@echo ... perf/perf_main.s
-	@echo ... perf/perf_output.obj
-	@echo ... perf/perf_output.i
-	@echo ... perf/perf_output.s
 	@echo ... src/cap.obj
 	@echo ... src/cap.i
 	@echo ... src/cap.s
@@ -1021,30 +519,6 @@ help:
 	@echo ... src/cap_vfw.obj
 	@echo ... src/cap_vfw.i
 	@echo ... src/cap_vfw.s
-	@echo ... test/test_basic_props.obj
-	@echo ... test/test_basic_props.i
-	@echo ... test/test_basic_props.s
-	@echo ... test/test_ffmpeg.obj
-	@echo ... test/test_ffmpeg.i
-	@echo ... test/test_ffmpeg.s
-	@echo ... test/test_fourcc.obj
-	@echo ... test/test_fourcc.i
-	@echo ... test/test_fourcc.s
-	@echo ... test/test_framecount.obj
-	@echo ... test/test_framecount.i
-	@echo ... test/test_framecount.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
-	@echo ... test/test_positioning.obj
-	@echo ... test/test_positioning.i
-	@echo ... test/test_positioning.s
-	@echo ... test/test_video_io.obj
-	@echo ... test/test_video_io.i
-	@echo ... test/test_video_io.s
-	@echo ... test/test_video_pos.obj
-	@echo ... test/test_video_pos.i
-	@echo ... test/test_video_pos.s
 .PHONY : help
 
 
@@ -1056,6 +530,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

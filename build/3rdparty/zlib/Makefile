@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -69,7 +69,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\3rdparty\zlib\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\zlib\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 3rdparty/zlib/CMakeFiles/zlib.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/CMakeFiles/zlib.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/zlib/CMakeFiles/zlib.dir/rule
 .PHONY : 3rdparty/zlib/CMakeFiles/zlib.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ zlib: 3rdparty/zlib/CMakeFiles/zlib.dir/rule
 
 # fast build rule for target.
 zlib/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/build
 .PHONY : zlib/fast
 
 adler32.obj: adler32.c.obj
@@ -207,7 +207,7 @@ adler32.obj: adler32.c.obj
 
 # target to build an object file
 adler32.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.obj
 .PHONY : adler32.c.obj
 
 adler32.i: adler32.c.i
@@ -216,7 +216,7 @@ adler32.i: adler32.c.i
 
 # target to preprocess a source file
 adler32.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.i
 .PHONY : adler32.c.i
 
 adler32.s: adler32.c.s
@@ -225,7 +225,7 @@ adler32.s: adler32.c.s
 
 # target to generate assembly for a file
 adler32.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.s
 .PHONY : adler32.c.s
 
 compress.obj: compress.c.obj
@@ -234,7 +234,7 @@ compress.obj: compress.c.obj
 
 # target to build an object file
 compress.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/compress.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/compress.c.obj
 .PHONY : compress.c.obj
 
 compress.i: compress.c.i
@@ -243,7 +243,7 @@ compress.i: compress.c.i
 
 # target to preprocess a source file
 compress.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/compress.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/compress.c.i
 .PHONY : compress.c.i
 
 compress.s: compress.c.s
@@ -252,7 +252,7 @@ compress.s: compress.c.s
 
 # target to generate assembly for a file
 compress.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/compress.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/compress.c.s
 .PHONY : compress.c.s
 
 crc32.obj: crc32.c.obj
@@ -261,7 +261,7 @@ crc32.obj: crc32.c.obj
 
 # target to build an object file
 crc32.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.obj
 .PHONY : crc32.c.obj
 
 crc32.i: crc32.c.i
@@ -270,7 +270,7 @@ crc32.i: crc32.c.i
 
 # target to preprocess a source file
 crc32.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.i
 .PHONY : crc32.c.i
 
 crc32.s: crc32.c.s
@@ -279,7 +279,7 @@ crc32.s: crc32.c.s
 
 # target to generate assembly for a file
 crc32.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.s
 .PHONY : crc32.c.s
 
 deflate.obj: deflate.c.obj
@@ -288,7 +288,7 @@ deflate.obj: deflate.c.obj
 
 # target to build an object file
 deflate.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.obj
 .PHONY : deflate.c.obj
 
 deflate.i: deflate.c.i
@@ -297,7 +297,7 @@ deflate.i: deflate.c.i
 
 # target to preprocess a source file
 deflate.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.i
 .PHONY : deflate.c.i
 
 deflate.s: deflate.c.s
@@ -306,7 +306,7 @@ deflate.s: deflate.c.s
 
 # target to generate assembly for a file
 deflate.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.s
 .PHONY : deflate.c.s
 
 gzclose.obj: gzclose.c.obj
@@ -315,7 +315,7 @@ gzclose.obj: gzclose.c.obj
 
 # target to build an object file
 gzclose.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.obj
 .PHONY : gzclose.c.obj
 
 gzclose.i: gzclose.c.i
@@ -324,7 +324,7 @@ gzclose.i: gzclose.c.i
 
 # target to preprocess a source file
 gzclose.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.i
 .PHONY : gzclose.c.i
 
 gzclose.s: gzclose.c.s
@@ -333,7 +333,7 @@ gzclose.s: gzclose.c.s
 
 # target to generate assembly for a file
 gzclose.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.s
 .PHONY : gzclose.c.s
 
 gzlib.obj: gzlib.c.obj
@@ -342,7 +342,7 @@ gzlib.obj: gzlib.c.obj
 
 # target to build an object file
 gzlib.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzlib.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzlib.c.obj
 .PHONY : gzlib.c.obj
 
 gzlib.i: gzlib.c.i
@@ -351,7 +351,7 @@ gzlib.i: gzlib.c.i
 
 # target to preprocess a source file
 gzlib.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzlib.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzlib.c.i
 .PHONY : gzlib.c.i
 
 gzlib.s: gzlib.c.s
@@ -360,7 +360,7 @@ gzlib.s: gzlib.c.s
 
 # target to generate assembly for a file
 gzlib.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzlib.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzlib.c.s
 .PHONY : gzlib.c.s
 
 gzread.obj: gzread.c.obj
@@ -369,7 +369,7 @@ gzread.obj: gzread.c.obj
 
 # target to build an object file
 gzread.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzread.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzread.c.obj
 .PHONY : gzread.c.obj
 
 gzread.i: gzread.c.i
@@ -378,7 +378,7 @@ gzread.i: gzread.c.i
 
 # target to preprocess a source file
 gzread.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzread.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzread.c.i
 .PHONY : gzread.c.i
 
 gzread.s: gzread.c.s
@@ -387,7 +387,7 @@ gzread.s: gzread.c.s
 
 # target to generate assembly for a file
 gzread.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzread.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzread.c.s
 .PHONY : gzread.c.s
 
 gzwrite.obj: gzwrite.c.obj
@@ -396,7 +396,7 @@ gzwrite.obj: gzwrite.c.obj
 
 # target to build an object file
 gzwrite.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzwrite.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzwrite.c.obj
 .PHONY : gzwrite.c.obj
 
 gzwrite.i: gzwrite.c.i
@@ -405,7 +405,7 @@ gzwrite.i: gzwrite.c.i
 
 # target to preprocess a source file
 gzwrite.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzwrite.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzwrite.c.i
 .PHONY : gzwrite.c.i
 
 gzwrite.s: gzwrite.c.s
@@ -414,7 +414,7 @@ gzwrite.s: gzwrite.c.s
 
 # target to generate assembly for a file
 gzwrite.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzwrite.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/gzwrite.c.s
 .PHONY : gzwrite.c.s
 
 infback.obj: infback.c.obj
@@ -423,7 +423,7 @@ infback.obj: infback.c.obj
 
 # target to build an object file
 infback.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.obj
 .PHONY : infback.c.obj
 
 infback.i: infback.c.i
@@ -432,7 +432,7 @@ infback.i: infback.c.i
 
 # target to preprocess a source file
 infback.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.i
 .PHONY : infback.c.i
 
 infback.s: infback.c.s
@@ -441,7 +441,7 @@ infback.s: infback.c.s
 
 # target to generate assembly for a file
 infback.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.s
 .PHONY : infback.c.s
 
 inffast.obj: inffast.c.obj
@@ -450,7 +450,7 @@ inffast.obj: inffast.c.obj
 
 # target to build an object file
 inffast.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.obj
 .PHONY : inffast.c.obj
 
 inffast.i: inffast.c.i
@@ -459,7 +459,7 @@ inffast.i: inffast.c.i
 
 # target to preprocess a source file
 inffast.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.i
 .PHONY : inffast.c.i
 
 inffast.s: inffast.c.s
@@ -468,7 +468,7 @@ inffast.s: inffast.c.s
 
 # target to generate assembly for a file
 inffast.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.s
 .PHONY : inffast.c.s
 
 inflate.obj: inflate.c.obj
@@ -477,7 +477,7 @@ inflate.obj: inflate.c.obj
 
 # target to build an object file
 inflate.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inflate.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inflate.c.obj
 .PHONY : inflate.c.obj
 
 inflate.i: inflate.c.i
@@ -486,7 +486,7 @@ inflate.i: inflate.c.i
 
 # target to preprocess a source file
 inflate.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inflate.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inflate.c.i
 .PHONY : inflate.c.i
 
 inflate.s: inflate.c.s
@@ -495,7 +495,7 @@ inflate.s: inflate.c.s
 
 # target to generate assembly for a file
 inflate.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inflate.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inflate.c.s
 .PHONY : inflate.c.s
 
 inftrees.obj: inftrees.c.obj
@@ -504,7 +504,7 @@ inftrees.obj: inftrees.c.obj
 
 # target to build an object file
 inftrees.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inftrees.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inftrees.c.obj
 .PHONY : inftrees.c.obj
 
 inftrees.i: inftrees.c.i
@@ -513,7 +513,7 @@ inftrees.i: inftrees.c.i
 
 # target to preprocess a source file
 inftrees.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inftrees.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inftrees.c.i
 .PHONY : inftrees.c.i
 
 inftrees.s: inftrees.c.s
@@ -522,7 +522,7 @@ inftrees.s: inftrees.c.s
 
 # target to generate assembly for a file
 inftrees.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inftrees.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/inftrees.c.s
 .PHONY : inftrees.c.s
 
 trees.obj: trees.c.obj
@@ -531,7 +531,7 @@ trees.obj: trees.c.obj
 
 # target to build an object file
 trees.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.obj
 .PHONY : trees.c.obj
 
 trees.i: trees.c.i
@@ -540,7 +540,7 @@ trees.i: trees.c.i
 
 # target to preprocess a source file
 trees.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.i
 .PHONY : trees.c.i
 
 trees.s: trees.c.s
@@ -549,7 +549,7 @@ trees.s: trees.c.s
 
 # target to generate assembly for a file
 trees.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.s
 .PHONY : trees.c.s
 
 uncompr.obj: uncompr.c.obj
@@ -558,7 +558,7 @@ uncompr.obj: uncompr.c.obj
 
 # target to build an object file
 uncompr.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/uncompr.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/uncompr.c.obj
 .PHONY : uncompr.c.obj
 
 uncompr.i: uncompr.c.i
@@ -567,7 +567,7 @@ uncompr.i: uncompr.c.i
 
 # target to preprocess a source file
 uncompr.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/uncompr.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/uncompr.c.i
 .PHONY : uncompr.c.i
 
 uncompr.s: uncompr.c.s
@@ -576,7 +576,7 @@ uncompr.s: uncompr.c.s
 
 # target to generate assembly for a file
 uncompr.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/uncompr.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/uncompr.c.s
 .PHONY : uncompr.c.s
 
 zutil.obj: zutil.c.obj
@@ -585,7 +585,7 @@ zutil.obj: zutil.c.obj
 
 # target to build an object file
 zutil.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/zutil.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/zutil.c.obj
 .PHONY : zutil.c.obj
 
 zutil.i: zutil.c.i
@@ -594,7 +594,7 @@ zutil.i: zutil.c.i
 
 # target to preprocess a source file
 zutil.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/zutil.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/zutil.c.i
 .PHONY : zutil.c.i
 
 zutil.s: zutil.c.s
@@ -603,7 +603,7 @@ zutil.s: zutil.c.s
 
 # target to generate assembly for a file
 zutil.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/zutil.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\zlib\CMakeFiles\zlib.dir\build.make 3rdparty/zlib/CMakeFiles/zlib.dir/zutil.c.s
 .PHONY : zutil.c.s
 
 # Help Target
@@ -678,6 +678,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

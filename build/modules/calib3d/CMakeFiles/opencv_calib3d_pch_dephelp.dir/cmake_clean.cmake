@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "opencv_calib3d_pch_dephelp.cxx"
   "CMakeFiles/opencv_calib3d_pch_dephelp.dir/opencv_calib3d_pch_dephelp.cxx.obj"
   "../../lib/libopencv_calib3d_pch_dephelp.pdb"
   "../../lib/libopencv_calib3d_pch_dephelp.a"

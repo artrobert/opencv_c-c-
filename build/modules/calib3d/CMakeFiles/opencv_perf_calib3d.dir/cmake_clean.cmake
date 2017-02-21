@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/opencv_perf_calib3d.dir/perf/opencl/perf_stereobm.cpp.obj"
+  "CMakeFiles/opencv_perf_calib3d.dir/perf/perf_affine2d.cpp.obj"
   "CMakeFiles/opencv_perf_calib3d.dir/perf/perf_cicrlesGrid.cpp.obj"
   "CMakeFiles/opencv_perf_calib3d.dir/perf/perf_main.cpp.obj"
   "CMakeFiles/opencv_perf_calib3d.dir/perf/perf_pnp.cpp.obj"

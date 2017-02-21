@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,7 +91,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -102,7 +102,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\ts\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\ts\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 modules/ts/CMakeFiles/opencv_ts.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/CMakeFiles/opencv_ts.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/CMakeFiles/opencv_ts.dir/rule
 .PHONY : modules/ts/CMakeFiles/opencv_ts.dir/rule
 
 # Convenience name for target.
@@ -198,12 +198,12 @@ opencv_ts: modules/ts/CMakeFiles/opencv_ts.dir/rule
 
 # fast build rule for target.
 opencv_ts/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/build
 .PHONY : opencv_ts/fast
 
 # Convenience name for target.
 modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/rule
 .PHONY : modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -213,12 +213,12 @@ opencv_ts_pch_dephelp: modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/rule
 
 # fast build rule for target.
 opencv_ts_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/build
 .PHONY : opencv_ts_pch_dephelp/fast
 
 # Convenience name for target.
 modules/ts/CMakeFiles/pch_Generate_opencv_ts.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/CMakeFiles/pch_Generate_opencv_ts.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/ts/CMakeFiles/pch_Generate_opencv_ts.dir/rule
 .PHONY : modules/ts/CMakeFiles/pch_Generate_opencv_ts.dir/rule
 
 # Convenience name for target.
@@ -228,7 +228,7 @@ pch_Generate_opencv_ts: modules/ts/CMakeFiles/pch_Generate_opencv_ts.dir/rule
 
 # fast build rule for target.
 pch_Generate_opencv_ts/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\pch_Generate_opencv_ts.dir\build.make modules/ts/CMakeFiles/pch_Generate_opencv_ts.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\pch_Generate_opencv_ts.dir\build.make modules/ts/CMakeFiles/pch_Generate_opencv_ts.dir/build
 .PHONY : pch_Generate_opencv_ts/fast
 
 opencv_ts_pch_dephelp.obj: opencv_ts_pch_dephelp.cxx.obj
@@ -237,7 +237,7 @@ opencv_ts_pch_dephelp.obj: opencv_ts_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_ts_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.obj
 .PHONY : opencv_ts_pch_dephelp.cxx.obj
 
 opencv_ts_pch_dephelp.i: opencv_ts_pch_dephelp.cxx.i
@@ -246,7 +246,7 @@ opencv_ts_pch_dephelp.i: opencv_ts_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_ts_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.i
 .PHONY : opencv_ts_pch_dephelp.cxx.i
 
 opencv_ts_pch_dephelp.s: opencv_ts_pch_dephelp.cxx.s
@@ -255,7 +255,7 @@ opencv_ts_pch_dephelp.s: opencv_ts_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_ts_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts_pch_dephelp.dir\build.make modules/ts/CMakeFiles/opencv_ts_pch_dephelp.dir/opencv_ts_pch_dephelp.cxx.s
 .PHONY : opencv_ts_pch_dephelp.cxx.s
 
 src/cuda_perf.obj: src/cuda_perf.cpp.obj
@@ -264,7 +264,7 @@ src/cuda_perf.obj: src/cuda_perf.cpp.obj
 
 # target to build an object file
 src/cuda_perf.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.obj
 .PHONY : src/cuda_perf.cpp.obj
 
 src/cuda_perf.i: src/cuda_perf.cpp.i
@@ -273,7 +273,7 @@ src/cuda_perf.i: src/cuda_perf.cpp.i
 
 # target to preprocess a source file
 src/cuda_perf.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.i
 .PHONY : src/cuda_perf.cpp.i
 
 src/cuda_perf.s: src/cuda_perf.cpp.s
@@ -282,7 +282,7 @@ src/cuda_perf.s: src/cuda_perf.cpp.s
 
 # target to generate assembly for a file
 src/cuda_perf.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.s
 .PHONY : src/cuda_perf.cpp.s
 
 src/cuda_test.obj: src/cuda_test.cpp.obj
@@ -291,7 +291,7 @@ src/cuda_test.obj: src/cuda_test.cpp.obj
 
 # target to build an object file
 src/cuda_test.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.obj
 .PHONY : src/cuda_test.cpp.obj
 
 src/cuda_test.i: src/cuda_test.cpp.i
@@ -300,7 +300,7 @@ src/cuda_test.i: src/cuda_test.cpp.i
 
 # target to preprocess a source file
 src/cuda_test.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.i
 .PHONY : src/cuda_test.cpp.i
 
 src/cuda_test.s: src/cuda_test.cpp.s
@@ -309,7 +309,7 @@ src/cuda_test.s: src/cuda_test.cpp.s
 
 # target to generate assembly for a file
 src/cuda_test.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.s
 .PHONY : src/cuda_test.cpp.s
 
 src/ocl_perf.obj: src/ocl_perf.cpp.obj
@@ -318,7 +318,7 @@ src/ocl_perf.obj: src/ocl_perf.cpp.obj
 
 # target to build an object file
 src/ocl_perf.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.obj
 .PHONY : src/ocl_perf.cpp.obj
 
 src/ocl_perf.i: src/ocl_perf.cpp.i
@@ -327,7 +327,7 @@ src/ocl_perf.i: src/ocl_perf.cpp.i
 
 # target to preprocess a source file
 src/ocl_perf.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.i
 .PHONY : src/ocl_perf.cpp.i
 
 src/ocl_perf.s: src/ocl_perf.cpp.s
@@ -336,7 +336,7 @@ src/ocl_perf.s: src/ocl_perf.cpp.s
 
 # target to generate assembly for a file
 src/ocl_perf.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.s
 .PHONY : src/ocl_perf.cpp.s
 
 src/ocl_test.obj: src/ocl_test.cpp.obj
@@ -345,7 +345,7 @@ src/ocl_test.obj: src/ocl_test.cpp.obj
 
 # target to build an object file
 src/ocl_test.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.obj
 .PHONY : src/ocl_test.cpp.obj
 
 src/ocl_test.i: src/ocl_test.cpp.i
@@ -354,7 +354,7 @@ src/ocl_test.i: src/ocl_test.cpp.i
 
 # target to preprocess a source file
 src/ocl_test.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.i
 .PHONY : src/ocl_test.cpp.i
 
 src/ocl_test.s: src/ocl_test.cpp.s
@@ -363,7 +363,7 @@ src/ocl_test.s: src/ocl_test.cpp.s
 
 # target to generate assembly for a file
 src/ocl_test.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.s
 .PHONY : src/ocl_test.cpp.s
 
 src/ts.obj: src/ts.cpp.obj
@@ -372,7 +372,7 @@ src/ts.obj: src/ts.cpp.obj
 
 # target to build an object file
 src/ts.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.obj
 .PHONY : src/ts.cpp.obj
 
 src/ts.i: src/ts.cpp.i
@@ -381,7 +381,7 @@ src/ts.i: src/ts.cpp.i
 
 # target to preprocess a source file
 src/ts.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.i
 .PHONY : src/ts.cpp.i
 
 src/ts.s: src/ts.cpp.s
@@ -390,7 +390,7 @@ src/ts.s: src/ts.cpp.s
 
 # target to generate assembly for a file
 src/ts.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.s
 .PHONY : src/ts.cpp.s
 
 src/ts_arrtest.obj: src/ts_arrtest.cpp.obj
@@ -399,7 +399,7 @@ src/ts_arrtest.obj: src/ts_arrtest.cpp.obj
 
 # target to build an object file
 src/ts_arrtest.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.obj
 .PHONY : src/ts_arrtest.cpp.obj
 
 src/ts_arrtest.i: src/ts_arrtest.cpp.i
@@ -408,7 +408,7 @@ src/ts_arrtest.i: src/ts_arrtest.cpp.i
 
 # target to preprocess a source file
 src/ts_arrtest.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.i
 .PHONY : src/ts_arrtest.cpp.i
 
 src/ts_arrtest.s: src/ts_arrtest.cpp.s
@@ -417,7 +417,7 @@ src/ts_arrtest.s: src/ts_arrtest.cpp.s
 
 # target to generate assembly for a file
 src/ts_arrtest.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.s
 .PHONY : src/ts_arrtest.cpp.s
 
 src/ts_func.obj: src/ts_func.cpp.obj
@@ -426,7 +426,7 @@ src/ts_func.obj: src/ts_func.cpp.obj
 
 # target to build an object file
 src/ts_func.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.obj
 .PHONY : src/ts_func.cpp.obj
 
 src/ts_func.i: src/ts_func.cpp.i
@@ -435,7 +435,7 @@ src/ts_func.i: src/ts_func.cpp.i
 
 # target to preprocess a source file
 src/ts_func.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.i
 .PHONY : src/ts_func.cpp.i
 
 src/ts_func.s: src/ts_func.cpp.s
@@ -444,7 +444,7 @@ src/ts_func.s: src/ts_func.cpp.s
 
 # target to generate assembly for a file
 src/ts_func.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.s
 .PHONY : src/ts_func.cpp.s
 
 src/ts_gtest.obj: src/ts_gtest.cpp.obj
@@ -453,7 +453,7 @@ src/ts_gtest.obj: src/ts_gtest.cpp.obj
 
 # target to build an object file
 src/ts_gtest.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.obj
 .PHONY : src/ts_gtest.cpp.obj
 
 src/ts_gtest.i: src/ts_gtest.cpp.i
@@ -462,7 +462,7 @@ src/ts_gtest.i: src/ts_gtest.cpp.i
 
 # target to preprocess a source file
 src/ts_gtest.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.i
 .PHONY : src/ts_gtest.cpp.i
 
 src/ts_gtest.s: src/ts_gtest.cpp.s
@@ -471,7 +471,7 @@ src/ts_gtest.s: src/ts_gtest.cpp.s
 
 # target to generate assembly for a file
 src/ts_gtest.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.s
 .PHONY : src/ts_gtest.cpp.s
 
 src/ts_perf.obj: src/ts_perf.cpp.obj
@@ -480,7 +480,7 @@ src/ts_perf.obj: src/ts_perf.cpp.obj
 
 # target to build an object file
 src/ts_perf.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.obj
 .PHONY : src/ts_perf.cpp.obj
 
 src/ts_perf.i: src/ts_perf.cpp.i
@@ -489,7 +489,7 @@ src/ts_perf.i: src/ts_perf.cpp.i
 
 # target to preprocess a source file
 src/ts_perf.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.i
 .PHONY : src/ts_perf.cpp.i
 
 src/ts_perf.s: src/ts_perf.cpp.s
@@ -498,7 +498,7 @@ src/ts_perf.s: src/ts_perf.cpp.s
 
 # target to generate assembly for a file
 src/ts_perf.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\ts\CMakeFiles\opencv_ts.dir\build.make modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.s
 .PHONY : src/ts_perf.cpp.s
 
 # Help Target
@@ -560,6 +560,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

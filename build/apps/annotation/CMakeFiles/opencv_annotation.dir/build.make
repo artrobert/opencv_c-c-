@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include apps/annotation/CMakeFiles/opencv_annotation.dir/depend.make
@@ -58,17 +58,17 @@ include apps/annotation/CMakeFiles/opencv_annotation.dir/flags.make
 
 apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj: apps/annotation/CMakeFiles/opencv_annotation.dir/flags.make
 apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj: apps/annotation/CMakeFiles/opencv_annotation.dir/includes_CXX.rsp
-apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/annotation/opencv_annotation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\annotation && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_annotation.dir\opencv_annotation.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\annotation\opencv_annotation.cpp
+apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/annotation/opencv_annotation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_annotation.dir\opencv_annotation.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\annotation\opencv_annotation.cpp
 
 apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\annotation && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\annotation\opencv_annotation.cpp > CMakeFiles\opencv_annotation.dir\opencv_annotation.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\annotation\opencv_annotation.cpp > CMakeFiles\opencv_annotation.dir\opencv_annotation.cpp.i
 
 apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\annotation && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\annotation\opencv_annotation.cpp -o CMakeFiles\opencv_annotation.dir\opencv_annotation.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\annotation\opencv_annotation.cpp -o CMakeFiles\opencv_annotation.dir\opencv_annotation.cpp.s
 
 apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj.requires:
 
@@ -90,16 +90,16 @@ opencv_annotation_EXTERNAL_OBJECTS =
 
 bin/opencv_annotation.exe: apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj
 bin/opencv_annotation.exe: apps/annotation/CMakeFiles/opencv_annotation.dir/build.make
-bin/opencv_annotation.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_annotation.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_annotation.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_annotation.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_annotation.exe: lib/libopencv_core310.dll.a
+bin/opencv_annotation.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_annotation.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_annotation.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_annotation.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_annotation.exe: lib/libopencv_core320.dll.a
 bin/opencv_annotation.exe: apps/annotation/CMakeFiles/opencv_annotation.dir/linklibs.rsp
 bin/opencv_annotation.exe: apps/annotation/CMakeFiles/opencv_annotation.dir/objects1.rsp
 bin/opencv_annotation.exe: apps/annotation/CMakeFiles/opencv_annotation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ..\..\bin\opencv_annotation.exe"
-	cd /d C:\Users\rartin\Desktop\build\apps\annotation && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_annotation.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ..\..\bin\opencv_annotation.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_annotation.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 apps/annotation/CMakeFiles/opencv_annotation.dir/build: bin/opencv_annotation.exe
@@ -111,10 +111,10 @@ apps/annotation/CMakeFiles/opencv_annotation.dir/requires: apps/annotation/CMake
 .PHONY : apps/annotation/CMakeFiles/opencv_annotation.dir/requires
 
 apps/annotation/CMakeFiles/opencv_annotation.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\apps\annotation && $(CMAKE_COMMAND) -P CMakeFiles\opencv_annotation.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation && $(CMAKE_COMMAND) -P CMakeFiles\opencv_annotation.dir\cmake_clean.cmake
 .PHONY : apps/annotation/CMakeFiles/opencv_annotation.dir/clean
 
 apps/annotation/CMakeFiles/opencv_annotation.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\apps\annotation C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\apps\annotation C:\Users\rartin\Desktop\build\apps\annotation\CMakeFiles\opencv_annotation.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\annotation C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation\CMakeFiles\opencv_annotation.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : apps/annotation/CMakeFiles/opencv_annotation.dir/depend
 

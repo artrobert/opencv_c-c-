@@ -8,8 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_ts.dir/src/ts_func.cpp.obj"
   "CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.obj"
   "CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.obj"
-  "../../lib/libopencv_ts310.pdb"
-  "../../lib/libopencv_ts310.a"
+  "../../lib/libopencv_ts320.pdb"
+  "../../lib/libopencv_ts320.a"
 )
 
 # Per-language clean rules from dependency scanning.

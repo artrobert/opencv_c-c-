@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_test_ml.dir/test/test_mltests.cpp.obj"
   "CMakeFiles/opencv_test_ml.dir/test/test_mltests2.cpp.obj"
   "CMakeFiles/opencv_test_ml.dir/test/test_save_load.cpp.obj"
+  "CMakeFiles/opencv_test_ml.dir/test/test_svmsgd.cpp.obj"
   "CMakeFiles/opencv_test_ml.dir/test/test_svmtrainauto.cpp.obj"
   "../../bin/opencv_test_ml.pdb"
   "../../bin/opencv_test_ml.exe"

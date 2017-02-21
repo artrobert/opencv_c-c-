@@ -47,18 +47,39 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"libs\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -66,16 +87,16 @@ package/fast: package
 
 .PHONY : package/fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
-.PHONY : package_source
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target package_source
-package_source/fast: package_source
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : package_source/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -98,27 +119,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"libs\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\stitching\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 modules/stitching/CMakeFiles/opencv_stitching.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_stitching.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_stitching.dir/rule
 .PHONY : modules/stitching/CMakeFiles/opencv_stitching.dir/rule
 
 # Convenience name for target.
@@ -198,57 +198,12 @@ opencv_stitching: modules/stitching/CMakeFiles/opencv_stitching.dir/rule
 
 # fast build rule for target.
 opencv_stitching/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/build
 .PHONY : opencv_stitching/fast
 
 # Convenience name for target.
-modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule
-.PHONY : modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_stitching: modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule
-
-.PHONY : pch_Generate_opencv_stitching
-
-# fast build rule for target.
-pch_Generate_opencv_stitching/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\pch_Generate_opencv_stitching.dir\build.make modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/build
-.PHONY : pch_Generate_opencv_stitching/fast
-
-# Convenience name for target.
-modules/stitching/CMakeFiles/opencv_perf_stitching.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_perf_stitching.dir/rule
-.PHONY : modules/stitching/CMakeFiles/opencv_perf_stitching.dir/rule
-
-# Convenience name for target.
-opencv_perf_stitching: modules/stitching/CMakeFiles/opencv_perf_stitching.dir/rule
-
-.PHONY : opencv_perf_stitching
-
-# fast build rule for target.
-opencv_perf_stitching/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/build
-.PHONY : opencv_perf_stitching/fast
-
-# Convenience name for target.
-modules/stitching/CMakeFiles/opencv_stitching_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_stitching_object.dir/rule
-.PHONY : modules/stitching/CMakeFiles/opencv_stitching_object.dir/rule
-
-# Convenience name for target.
-opencv_stitching_object: modules/stitching/CMakeFiles/opencv_stitching_object.dir/rule
-
-.PHONY : opencv_stitching_object
-
-# fast build rule for target.
-opencv_stitching_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/build
-.PHONY : opencv_stitching_object/fast
-
-# Convenience name for target.
 modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/rule
 .PHONY : modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -258,83 +213,23 @@ opencv_stitching_pch_dephelp: modules/stitching/CMakeFiles/opencv_stitching_pch_
 
 # fast build rule for target.
 opencv_stitching_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/build
 .PHONY : opencv_stitching_pch_dephelp/fast
 
 # Convenience name for target.
-modules/stitching/CMakeFiles/opencv_test_stitching.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_test_stitching.dir/rule
-.PHONY : modules/stitching/CMakeFiles/opencv_test_stitching.dir/rule
+modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule
+.PHONY : modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule
 
 # Convenience name for target.
-opencv_test_stitching: modules/stitching/CMakeFiles/opencv_test_stitching.dir/rule
+pch_Generate_opencv_stitching: modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/rule
 
-.PHONY : opencv_test_stitching
+.PHONY : pch_Generate_opencv_stitching
 
 # fast build rule for target.
-opencv_test_stitching/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/build
-.PHONY : opencv_test_stitching/fast
-
-# Convenience name for target.
-modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/rule
-.PHONY : modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_stitching_pch_dephelp: modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_stitching_pch_dephelp
-
-# fast build rule for target.
-opencv_test_stitching_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/build
-.PHONY : opencv_test_stitching_pch_dephelp/fast
-
-# Convenience name for target.
-modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/rule
-.PHONY : modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_perf_stitching_pch_dephelp: modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/rule
-
-.PHONY : opencv_perf_stitching_pch_dephelp
-
-# fast build rule for target.
-opencv_perf_stitching_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/build
-.PHONY : opencv_perf_stitching_pch_dephelp/fast
-
-# Convenience name for target.
-modules/stitching/CMakeFiles/pch_Generate_opencv_test_stitching.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/pch_Generate_opencv_test_stitching.dir/rule
-.PHONY : modules/stitching/CMakeFiles/pch_Generate_opencv_test_stitching.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_stitching: modules/stitching/CMakeFiles/pch_Generate_opencv_test_stitching.dir/rule
-
-.PHONY : pch_Generate_opencv_test_stitching
-
-# fast build rule for target.
-pch_Generate_opencv_test_stitching/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\pch_Generate_opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/pch_Generate_opencv_test_stitching.dir/build
-.PHONY : pch_Generate_opencv_test_stitching/fast
-
-# Convenience name for target.
-modules/stitching/CMakeFiles/pch_Generate_opencv_perf_stitching.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/stitching/CMakeFiles/pch_Generate_opencv_perf_stitching.dir/rule
-.PHONY : modules/stitching/CMakeFiles/pch_Generate_opencv_perf_stitching.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_perf_stitching: modules/stitching/CMakeFiles/pch_Generate_opencv_perf_stitching.dir/rule
-
-.PHONY : pch_Generate_opencv_perf_stitching
-
-# fast build rule for target.
-pch_Generate_opencv_perf_stitching/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\pch_Generate_opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/pch_Generate_opencv_perf_stitching.dir/build
-.PHONY : pch_Generate_opencv_perf_stitching/fast
+pch_Generate_opencv_stitching/fast:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\pch_Generate_opencv_stitching.dir\build.make modules/stitching/CMakeFiles/pch_Generate_opencv_stitching.dir/build
+.PHONY : pch_Generate_opencv_stitching/fast
 
 opencl_kernels_stitching.obj: opencl_kernels_stitching.cpp.obj
 
@@ -342,8 +237,7 @@ opencl_kernels_stitching.obj: opencl_kernels_stitching.cpp.obj
 
 # target to build an object file
 opencl_kernels_stitching.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/opencl_kernels_stitching.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj
 .PHONY : opencl_kernels_stitching.cpp.obj
 
 opencl_kernels_stitching.i: opencl_kernels_stitching.cpp.i
@@ -352,8 +246,7 @@ opencl_kernels_stitching.i: opencl_kernels_stitching.cpp.i
 
 # target to preprocess a source file
 opencl_kernels_stitching.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/opencl_kernels_stitching.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.i
 .PHONY : opencl_kernels_stitching.cpp.i
 
 opencl_kernels_stitching.s: opencl_kernels_stitching.cpp.s
@@ -362,36 +255,8 @@ opencl_kernels_stitching.s: opencl_kernels_stitching.cpp.s
 
 # target to generate assembly for a file
 opencl_kernels_stitching.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/opencl_kernels_stitching.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.s
 .PHONY : opencl_kernels_stitching.cpp.s
-
-opencv_perf_stitching_pch_dephelp.obj: opencv_perf_stitching_pch_dephelp.cxx.obj
-
-.PHONY : opencv_perf_stitching_pch_dephelp.obj
-
-# target to build an object file
-opencv_perf_stitching_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/opencv_perf_stitching_pch_dephelp.cxx.obj
-.PHONY : opencv_perf_stitching_pch_dephelp.cxx.obj
-
-opencv_perf_stitching_pch_dephelp.i: opencv_perf_stitching_pch_dephelp.cxx.i
-
-.PHONY : opencv_perf_stitching_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_perf_stitching_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/opencv_perf_stitching_pch_dephelp.cxx.i
-.PHONY : opencv_perf_stitching_pch_dephelp.cxx.i
-
-opencv_perf_stitching_pch_dephelp.s: opencv_perf_stitching_pch_dephelp.cxx.s
-
-.PHONY : opencv_perf_stitching_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_perf_stitching_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching_pch_dephelp.dir/opencv_perf_stitching_pch_dephelp.cxx.s
-.PHONY : opencv_perf_stitching_pch_dephelp.cxx.s
 
 opencv_stitching_pch_dephelp.obj: opencv_stitching_pch_dephelp.cxx.obj
 
@@ -399,7 +264,7 @@ opencv_stitching_pch_dephelp.obj: opencv_stitching_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_stitching_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/opencv_stitching_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/opencv_stitching_pch_dephelp.cxx.obj
 .PHONY : opencv_stitching_pch_dephelp.cxx.obj
 
 opencv_stitching_pch_dephelp.i: opencv_stitching_pch_dephelp.cxx.i
@@ -408,7 +273,7 @@ opencv_stitching_pch_dephelp.i: opencv_stitching_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_stitching_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/opencv_stitching_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/opencv_stitching_pch_dephelp.cxx.i
 .PHONY : opencv_stitching_pch_dephelp.cxx.i
 
 opencv_stitching_pch_dephelp.s: opencv_stitching_pch_dephelp.cxx.s
@@ -417,143 +282,8 @@ opencv_stitching_pch_dephelp.s: opencv_stitching_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_stitching_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/opencv_stitching_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_pch_dephelp.dir/opencv_stitching_pch_dephelp.cxx.s
 .PHONY : opencv_stitching_pch_dephelp.cxx.s
-
-opencv_test_stitching_pch_dephelp.obj: opencv_test_stitching_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_stitching_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_stitching_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/opencv_test_stitching_pch_dephelp.cxx.obj
-.PHONY : opencv_test_stitching_pch_dephelp.cxx.obj
-
-opencv_test_stitching_pch_dephelp.i: opencv_test_stitching_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_stitching_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_stitching_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/opencv_test_stitching_pch_dephelp.cxx.i
-.PHONY : opencv_test_stitching_pch_dephelp.cxx.i
-
-opencv_test_stitching_pch_dephelp.s: opencv_test_stitching_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_stitching_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_stitching_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching_pch_dephelp.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching_pch_dephelp.dir/opencv_test_stitching_pch_dephelp.cxx.s
-.PHONY : opencv_test_stitching_pch_dephelp.cxx.s
-
-perf/opencl/perf_stitch.obj: perf/opencl/perf_stitch.cpp.obj
-
-.PHONY : perf/opencl/perf_stitch.obj
-
-# target to build an object file
-perf/opencl/perf_stitch.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/opencl/perf_stitch.cpp.obj
-.PHONY : perf/opencl/perf_stitch.cpp.obj
-
-perf/opencl/perf_stitch.i: perf/opencl/perf_stitch.cpp.i
-
-.PHONY : perf/opencl/perf_stitch.i
-
-# target to preprocess a source file
-perf/opencl/perf_stitch.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/opencl/perf_stitch.cpp.i
-.PHONY : perf/opencl/perf_stitch.cpp.i
-
-perf/opencl/perf_stitch.s: perf/opencl/perf_stitch.cpp.s
-
-.PHONY : perf/opencl/perf_stitch.s
-
-# target to generate assembly for a file
-perf/opencl/perf_stitch.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/opencl/perf_stitch.cpp.s
-.PHONY : perf/opencl/perf_stitch.cpp.s
-
-perf/opencl/perf_warpers.obj: perf/opencl/perf_warpers.cpp.obj
-
-.PHONY : perf/opencl/perf_warpers.obj
-
-# target to build an object file
-perf/opencl/perf_warpers.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/opencl/perf_warpers.cpp.obj
-.PHONY : perf/opencl/perf_warpers.cpp.obj
-
-perf/opencl/perf_warpers.i: perf/opencl/perf_warpers.cpp.i
-
-.PHONY : perf/opencl/perf_warpers.i
-
-# target to preprocess a source file
-perf/opencl/perf_warpers.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/opencl/perf_warpers.cpp.i
-.PHONY : perf/opencl/perf_warpers.cpp.i
-
-perf/opencl/perf_warpers.s: perf/opencl/perf_warpers.cpp.s
-
-.PHONY : perf/opencl/perf_warpers.s
-
-# target to generate assembly for a file
-perf/opencl/perf_warpers.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/opencl/perf_warpers.cpp.s
-.PHONY : perf/opencl/perf_warpers.cpp.s
-
-perf/perf_main.obj: perf/perf_main.cpp.obj
-
-.PHONY : perf/perf_main.obj
-
-# target to build an object file
-perf/perf_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/perf_main.cpp.obj
-.PHONY : perf/perf_main.cpp.obj
-
-perf/perf_main.i: perf/perf_main.cpp.i
-
-.PHONY : perf/perf_main.i
-
-# target to preprocess a source file
-perf/perf_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/perf_main.cpp.i
-.PHONY : perf/perf_main.cpp.i
-
-perf/perf_main.s: perf/perf_main.cpp.s
-
-.PHONY : perf/perf_main.s
-
-# target to generate assembly for a file
-perf/perf_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/perf_main.cpp.s
-.PHONY : perf/perf_main.cpp.s
-
-perf/perf_stich.obj: perf/perf_stich.cpp.obj
-
-.PHONY : perf/perf_stich.obj
-
-# target to build an object file
-perf/perf_stich.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/perf_stich.cpp.obj
-.PHONY : perf/perf_stich.cpp.obj
-
-perf/perf_stich.i: perf/perf_stich.cpp.i
-
-.PHONY : perf/perf_stich.i
-
-# target to preprocess a source file
-perf/perf_stich.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/perf_stich.cpp.i
-.PHONY : perf/perf_stich.cpp.i
-
-perf/perf_stich.s: perf/perf_stich.cpp.s
-
-.PHONY : perf/perf_stich.s
-
-# target to generate assembly for a file
-perf/perf_stich.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_perf_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_perf_stitching.dir/perf/perf_stich.cpp.s
-.PHONY : perf/perf_stich.cpp.s
 
 src/autocalib.obj: src/autocalib.cpp.obj
 
@@ -561,8 +291,7 @@ src/autocalib.obj: src/autocalib.cpp.obj
 
 # target to build an object file
 src/autocalib.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/autocalib.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj
 .PHONY : src/autocalib.cpp.obj
 
 src/autocalib.i: src/autocalib.cpp.i
@@ -571,8 +300,7 @@ src/autocalib.i: src/autocalib.cpp.i
 
 # target to preprocess a source file
 src/autocalib.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/autocalib.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.i
 .PHONY : src/autocalib.cpp.i
 
 src/autocalib.s: src/autocalib.cpp.s
@@ -581,8 +309,7 @@ src/autocalib.s: src/autocalib.cpp.s
 
 # target to generate assembly for a file
 src/autocalib.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/autocalib.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.s
 .PHONY : src/autocalib.cpp.s
 
 src/blenders.obj: src/blenders.cpp.obj
@@ -591,8 +318,7 @@ src/blenders.obj: src/blenders.cpp.obj
 
 # target to build an object file
 src/blenders.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/blenders.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj
 .PHONY : src/blenders.cpp.obj
 
 src/blenders.i: src/blenders.cpp.i
@@ -601,8 +327,7 @@ src/blenders.i: src/blenders.cpp.i
 
 # target to preprocess a source file
 src/blenders.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/blenders.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.i
 .PHONY : src/blenders.cpp.i
 
 src/blenders.s: src/blenders.cpp.s
@@ -611,8 +336,7 @@ src/blenders.s: src/blenders.cpp.s
 
 # target to generate assembly for a file
 src/blenders.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/blenders.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.s
 .PHONY : src/blenders.cpp.s
 
 src/camera.obj: src/camera.cpp.obj
@@ -621,8 +345,7 @@ src/camera.obj: src/camera.cpp.obj
 
 # target to build an object file
 src/camera.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/camera.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj
 .PHONY : src/camera.cpp.obj
 
 src/camera.i: src/camera.cpp.i
@@ -631,8 +354,7 @@ src/camera.i: src/camera.cpp.i
 
 # target to preprocess a source file
 src/camera.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/camera.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.i
 .PHONY : src/camera.cpp.i
 
 src/camera.s: src/camera.cpp.s
@@ -641,8 +363,7 @@ src/camera.s: src/camera.cpp.s
 
 # target to generate assembly for a file
 src/camera.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/camera.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.s
 .PHONY : src/camera.cpp.s
 
 src/exposure_compensate.obj: src/exposure_compensate.cpp.obj
@@ -651,8 +372,7 @@ src/exposure_compensate.obj: src/exposure_compensate.cpp.obj
 
 # target to build an object file
 src/exposure_compensate.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/exposure_compensate.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj
 .PHONY : src/exposure_compensate.cpp.obj
 
 src/exposure_compensate.i: src/exposure_compensate.cpp.i
@@ -661,8 +381,7 @@ src/exposure_compensate.i: src/exposure_compensate.cpp.i
 
 # target to preprocess a source file
 src/exposure_compensate.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/exposure_compensate.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.i
 .PHONY : src/exposure_compensate.cpp.i
 
 src/exposure_compensate.s: src/exposure_compensate.cpp.s
@@ -671,8 +390,7 @@ src/exposure_compensate.s: src/exposure_compensate.cpp.s
 
 # target to generate assembly for a file
 src/exposure_compensate.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/exposure_compensate.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.s
 .PHONY : src/exposure_compensate.cpp.s
 
 src/matchers.obj: src/matchers.cpp.obj
@@ -681,8 +399,7 @@ src/matchers.obj: src/matchers.cpp.obj
 
 # target to build an object file
 src/matchers.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/matchers.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj
 .PHONY : src/matchers.cpp.obj
 
 src/matchers.i: src/matchers.cpp.i
@@ -691,8 +408,7 @@ src/matchers.i: src/matchers.cpp.i
 
 # target to preprocess a source file
 src/matchers.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/matchers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.i
 .PHONY : src/matchers.cpp.i
 
 src/matchers.s: src/matchers.cpp.s
@@ -701,8 +417,7 @@ src/matchers.s: src/matchers.cpp.s
 
 # target to generate assembly for a file
 src/matchers.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/matchers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.s
 .PHONY : src/matchers.cpp.s
 
 src/motion_estimators.obj: src/motion_estimators.cpp.obj
@@ -711,8 +426,7 @@ src/motion_estimators.obj: src/motion_estimators.cpp.obj
 
 # target to build an object file
 src/motion_estimators.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/motion_estimators.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj
 .PHONY : src/motion_estimators.cpp.obj
 
 src/motion_estimators.i: src/motion_estimators.cpp.i
@@ -721,8 +435,7 @@ src/motion_estimators.i: src/motion_estimators.cpp.i
 
 # target to preprocess a source file
 src/motion_estimators.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/motion_estimators.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.i
 .PHONY : src/motion_estimators.cpp.i
 
 src/motion_estimators.s: src/motion_estimators.cpp.s
@@ -731,8 +444,7 @@ src/motion_estimators.s: src/motion_estimators.cpp.s
 
 # target to generate assembly for a file
 src/motion_estimators.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/motion_estimators.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.s
 .PHONY : src/motion_estimators.cpp.s
 
 src/seam_finders.obj: src/seam_finders.cpp.obj
@@ -741,8 +453,7 @@ src/seam_finders.obj: src/seam_finders.cpp.obj
 
 # target to build an object file
 src/seam_finders.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/seam_finders.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj
 .PHONY : src/seam_finders.cpp.obj
 
 src/seam_finders.i: src/seam_finders.cpp.i
@@ -751,8 +462,7 @@ src/seam_finders.i: src/seam_finders.cpp.i
 
 # target to preprocess a source file
 src/seam_finders.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/seam_finders.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.i
 .PHONY : src/seam_finders.cpp.i
 
 src/seam_finders.s: src/seam_finders.cpp.s
@@ -761,8 +471,7 @@ src/seam_finders.s: src/seam_finders.cpp.s
 
 # target to generate assembly for a file
 src/seam_finders.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/seam_finders.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.s
 .PHONY : src/seam_finders.cpp.s
 
 src/stitcher.obj: src/stitcher.cpp.obj
@@ -771,8 +480,7 @@ src/stitcher.obj: src/stitcher.cpp.obj
 
 # target to build an object file
 src/stitcher.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/stitcher.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj
 .PHONY : src/stitcher.cpp.obj
 
 src/stitcher.i: src/stitcher.cpp.i
@@ -781,8 +489,7 @@ src/stitcher.i: src/stitcher.cpp.i
 
 # target to preprocess a source file
 src/stitcher.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/stitcher.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.i
 .PHONY : src/stitcher.cpp.i
 
 src/stitcher.s: src/stitcher.cpp.s
@@ -791,8 +498,7 @@ src/stitcher.s: src/stitcher.cpp.s
 
 # target to generate assembly for a file
 src/stitcher.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/stitcher.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.s
 .PHONY : src/stitcher.cpp.s
 
 src/timelapsers.obj: src/timelapsers.cpp.obj
@@ -801,8 +507,7 @@ src/timelapsers.obj: src/timelapsers.cpp.obj
 
 # target to build an object file
 src/timelapsers.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/timelapsers.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj
 .PHONY : src/timelapsers.cpp.obj
 
 src/timelapsers.i: src/timelapsers.cpp.i
@@ -811,8 +516,7 @@ src/timelapsers.i: src/timelapsers.cpp.i
 
 # target to preprocess a source file
 src/timelapsers.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/timelapsers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.i
 .PHONY : src/timelapsers.cpp.i
 
 src/timelapsers.s: src/timelapsers.cpp.s
@@ -821,8 +525,7 @@ src/timelapsers.s: src/timelapsers.cpp.s
 
 # target to generate assembly for a file
 src/timelapsers.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/timelapsers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.s
 .PHONY : src/timelapsers.cpp.s
 
 src/util.obj: src/util.cpp.obj
@@ -831,8 +534,7 @@ src/util.obj: src/util.cpp.obj
 
 # target to build an object file
 src/util.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/util.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj
 .PHONY : src/util.cpp.obj
 
 src/util.i: src/util.cpp.i
@@ -841,8 +543,7 @@ src/util.i: src/util.cpp.i
 
 # target to preprocess a source file
 src/util.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/util.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.i
 .PHONY : src/util.cpp.i
 
 src/util.s: src/util.cpp.s
@@ -851,8 +552,7 @@ src/util.s: src/util.cpp.s
 
 # target to generate assembly for a file
 src/util.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/util.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.s
 .PHONY : src/util.cpp.s
 
 src/warpers.obj: src/warpers.cpp.obj
@@ -861,8 +561,7 @@ src/warpers.obj: src/warpers.cpp.obj
 
 # target to build an object file
 src/warpers.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/warpers.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj
 .PHONY : src/warpers.cpp.obj
 
 src/warpers.i: src/warpers.cpp.i
@@ -871,8 +570,7 @@ src/warpers.i: src/warpers.cpp.i
 
 # target to preprocess a source file
 src/warpers.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/warpers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.i
 .PHONY : src/warpers.cpp.i
 
 src/warpers.s: src/warpers.cpp.s
@@ -881,8 +579,7 @@ src/warpers.s: src/warpers.cpp.s
 
 # target to generate assembly for a file
 src/warpers.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/warpers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.s
 .PHONY : src/warpers.cpp.s
 
 src/warpers_cuda.obj: src/warpers_cuda.cpp.obj
@@ -891,8 +588,7 @@ src/warpers_cuda.obj: src/warpers_cuda.cpp.obj
 
 # target to build an object file
 src/warpers_cuda.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/warpers_cuda.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj
 .PHONY : src/warpers_cuda.cpp.obj
 
 src/warpers_cuda.i: src/warpers_cuda.cpp.i
@@ -901,8 +597,7 @@ src/warpers_cuda.i: src/warpers_cuda.cpp.i
 
 # target to preprocess a source file
 src/warpers_cuda.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/warpers_cuda.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.i
 .PHONY : src/warpers_cuda.cpp.i
 
 src/warpers_cuda.s: src/warpers_cuda.cpp.s
@@ -911,117 +606,8 @@ src/warpers_cuda.s: src/warpers_cuda.cpp.s
 
 # target to generate assembly for a file
 src/warpers_cuda.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching_object.dir\build.make modules/stitching/CMakeFiles/opencv_stitching_object.dir/src/warpers_cuda.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.s
 .PHONY : src/warpers_cuda.cpp.s
-
-test/ocl/test_warpers.obj: test/ocl/test_warpers.cpp.obj
-
-.PHONY : test/ocl/test_warpers.obj
-
-# target to build an object file
-test/ocl/test_warpers.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/ocl/test_warpers.cpp.obj
-.PHONY : test/ocl/test_warpers.cpp.obj
-
-test/ocl/test_warpers.i: test/ocl/test_warpers.cpp.i
-
-.PHONY : test/ocl/test_warpers.i
-
-# target to preprocess a source file
-test/ocl/test_warpers.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/ocl/test_warpers.cpp.i
-.PHONY : test/ocl/test_warpers.cpp.i
-
-test/ocl/test_warpers.s: test/ocl/test_warpers.cpp.s
-
-.PHONY : test/ocl/test_warpers.s
-
-# target to generate assembly for a file
-test/ocl/test_warpers.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/ocl/test_warpers.cpp.s
-.PHONY : test/ocl/test_warpers.cpp.s
-
-test/test_blenders.obj: test/test_blenders.cpp.obj
-
-.PHONY : test/test_blenders.obj
-
-# target to build an object file
-test/test_blenders.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_blenders.cpp.obj
-.PHONY : test/test_blenders.cpp.obj
-
-test/test_blenders.i: test/test_blenders.cpp.i
-
-.PHONY : test/test_blenders.i
-
-# target to preprocess a source file
-test/test_blenders.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_blenders.cpp.i
-.PHONY : test/test_blenders.cpp.i
-
-test/test_blenders.s: test/test_blenders.cpp.s
-
-.PHONY : test/test_blenders.s
-
-# target to generate assembly for a file
-test/test_blenders.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_blenders.cpp.s
-.PHONY : test/test_blenders.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
-
-test/test_matchers.obj: test/test_matchers.cpp.obj
-
-.PHONY : test/test_matchers.obj
-
-# target to build an object file
-test/test_matchers.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_matchers.cpp.obj
-.PHONY : test/test_matchers.cpp.obj
-
-test/test_matchers.i: test/test_matchers.cpp.i
-
-.PHONY : test/test_matchers.i
-
-# target to preprocess a source file
-test/test_matchers.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_matchers.cpp.i
-.PHONY : test/test_matchers.cpp.i
-
-test/test_matchers.s: test/test_matchers.cpp.s
-
-.PHONY : test/test_matchers.s
-
-# target to generate assembly for a file
-test/test_matchers.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\stitching\CMakeFiles\opencv_test_stitching.dir\build.make modules/stitching/CMakeFiles/opencv_test_stitching.dir/test/test_matchers.cpp.s
-.PHONY : test/test_matchers.cpp.s
 
 # Help Target
 help:
@@ -1030,48 +616,23 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... opencv_stitching
-	@echo ... pch_Generate_opencv_stitching
-	@echo ... opencv_perf_stitching
-	@echo ... opencv_stitching_object
-	@echo ... opencv_stitching_pch_dephelp
-	@echo ... opencv_test_stitching
-	@echo ... opencv_test_stitching_pch_dephelp
-	@echo ... opencv_perf_stitching_pch_dephelp
-	@echo ... pch_Generate_opencv_test_stitching
-	@echo ... pch_Generate_opencv_perf_stitching
-	@echo ... package
 	@echo ... package_source
+	@echo ... opencv_stitching_pch_dephelp
+	@echo ... list_install_components
+	@echo ... pch_Generate_opencv_stitching
+	@echo ... package
+	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... edit_cache
-	@echo ... rebuild_cache
-	@echo ... list_install_components
 	@echo ... install
 	@echo ... install/local
 	@echo ... install/strip
 	@echo ... opencl_kernels_stitching.obj
 	@echo ... opencl_kernels_stitching.i
 	@echo ... opencl_kernels_stitching.s
-	@echo ... opencv_perf_stitching_pch_dephelp.obj
-	@echo ... opencv_perf_stitching_pch_dephelp.i
-	@echo ... opencv_perf_stitching_pch_dephelp.s
 	@echo ... opencv_stitching_pch_dephelp.obj
 	@echo ... opencv_stitching_pch_dephelp.i
 	@echo ... opencv_stitching_pch_dephelp.s
-	@echo ... opencv_test_stitching_pch_dephelp.obj
-	@echo ... opencv_test_stitching_pch_dephelp.i
-	@echo ... opencv_test_stitching_pch_dephelp.s
-	@echo ... perf/opencl/perf_stitch.obj
-	@echo ... perf/opencl/perf_stitch.i
-	@echo ... perf/opencl/perf_stitch.s
-	@echo ... perf/opencl/perf_warpers.obj
-	@echo ... perf/opencl/perf_warpers.i
-	@echo ... perf/opencl/perf_warpers.s
-	@echo ... perf/perf_main.obj
-	@echo ... perf/perf_main.i
-	@echo ... perf/perf_main.s
-	@echo ... perf/perf_stich.obj
-	@echo ... perf/perf_stich.i
-	@echo ... perf/perf_stich.s
 	@echo ... src/autocalib.obj
 	@echo ... src/autocalib.i
 	@echo ... src/autocalib.s
@@ -1108,18 +669,6 @@ help:
 	@echo ... src/warpers_cuda.obj
 	@echo ... src/warpers_cuda.i
 	@echo ... src/warpers_cuda.s
-	@echo ... test/ocl/test_warpers.obj
-	@echo ... test/ocl/test_warpers.i
-	@echo ... test/ocl/test_warpers.s
-	@echo ... test/test_blenders.obj
-	@echo ... test/test_blenders.i
-	@echo ... test/test_blenders.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
-	@echo ... test/test_matchers.obj
-	@echo ... test/test_matchers.i
-	@echo ... test/test_matchers.s
 .PHONY : help
 
 
@@ -1131,6 +680,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

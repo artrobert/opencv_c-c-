@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/depend.make
@@ -58,17 +58,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jaricom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jaricom.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jaricom.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jaricom.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jaricom.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jaricom.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jaricom.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jaricom.c > CMakeFiles\libjpeg.dir\jaricom.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jaricom.c > CMakeFiles\libjpeg.dir\jaricom.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jaricom.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jaricom.c -o CMakeFiles\libjpeg.dir\jaricom.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jaricom.c -o CMakeFiles\libjpeg.dir\jaricom.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jaricom.c.obj.requires:
 
@@ -83,17 +83,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcapimin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcapimin.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcapimin.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcapimin.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcapimin.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcapimin.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcapimin.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcapimin.c > CMakeFiles\libjpeg.dir\jcapimin.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcapimin.c > CMakeFiles\libjpeg.dir\jcapimin.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcapimin.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcapimin.c -o CMakeFiles\libjpeg.dir\jcapimin.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcapimin.c -o CMakeFiles\libjpeg.dir\jcapimin.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapimin.c.obj.requires:
 
@@ -108,17 +108,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcapistd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcapistd.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcapistd.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcapistd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcapistd.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcapistd.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcapistd.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcapistd.c > CMakeFiles\libjpeg.dir\jcapistd.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcapistd.c > CMakeFiles\libjpeg.dir\jcapistd.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcapistd.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcapistd.c -o CMakeFiles\libjpeg.dir\jcapistd.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcapistd.c -o CMakeFiles\libjpeg.dir\jcapistd.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcapistd.c.obj.requires:
 
@@ -133,17 +133,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcarith.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcarith.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcarith.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcarith.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcarith.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcarith.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcarith.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcarith.c > CMakeFiles\libjpeg.dir\jcarith.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcarith.c > CMakeFiles\libjpeg.dir\jcarith.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcarith.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcarith.c -o CMakeFiles\libjpeg.dir\jcarith.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcarith.c -o CMakeFiles\libjpeg.dir\jcarith.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcarith.c.obj.requires:
 
@@ -158,17 +158,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jccoefct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jccoefct.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jccoefct.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jccoefct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jccoefct.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jccoefct.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jccoefct.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jccoefct.c > CMakeFiles\libjpeg.dir\jccoefct.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jccoefct.c > CMakeFiles\libjpeg.dir\jccoefct.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jccoefct.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jccoefct.c -o CMakeFiles\libjpeg.dir\jccoefct.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jccoefct.c -o CMakeFiles\libjpeg.dir\jccoefct.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccoefct.c.obj.requires:
 
@@ -183,17 +183,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jccolor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jccolor.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jccolor.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jccolor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jccolor.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jccolor.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jccolor.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jccolor.c > CMakeFiles\libjpeg.dir\jccolor.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jccolor.c > CMakeFiles\libjpeg.dir\jccolor.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jccolor.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jccolor.c -o CMakeFiles\libjpeg.dir\jccolor.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jccolor.c -o CMakeFiles\libjpeg.dir\jccolor.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jccolor.c.obj.requires:
 
@@ -208,17 +208,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcdctmgr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -O1 -o CMakeFiles\libjpeg.dir\jcdctmgr.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcdctmgr.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcdctmgr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -O1 -o CMakeFiles\libjpeg.dir\jcdctmgr.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcdctmgr.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcdctmgr.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -O1 -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcdctmgr.c > CMakeFiles\libjpeg.dir\jcdctmgr.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -O1 -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcdctmgr.c > CMakeFiles\libjpeg.dir\jcdctmgr.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcdctmgr.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -O1 -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcdctmgr.c -o CMakeFiles\libjpeg.dir\jcdctmgr.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -O1 -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcdctmgr.c -o CMakeFiles\libjpeg.dir\jcdctmgr.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcdctmgr.c.obj.requires:
 
@@ -233,17 +233,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jchuff.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jchuff.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jchuff.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jchuff.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jchuff.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jchuff.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jchuff.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jchuff.c > CMakeFiles\libjpeg.dir\jchuff.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jchuff.c > CMakeFiles\libjpeg.dir\jchuff.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jchuff.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jchuff.c -o CMakeFiles\libjpeg.dir\jchuff.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jchuff.c -o CMakeFiles\libjpeg.dir\jchuff.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jchuff.c.obj.requires:
 
@@ -258,17 +258,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcinit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcinit.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcinit.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcinit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcinit.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcinit.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcinit.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcinit.c > CMakeFiles\libjpeg.dir\jcinit.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcinit.c > CMakeFiles\libjpeg.dir\jcinit.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcinit.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcinit.c -o CMakeFiles\libjpeg.dir\jcinit.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcinit.c -o CMakeFiles\libjpeg.dir\jcinit.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcinit.c.obj.requires:
 
@@ -283,17 +283,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcmainct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcmainct.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmainct.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcmainct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcmainct.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmainct.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcmainct.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmainct.c > CMakeFiles\libjpeg.dir\jcmainct.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmainct.c > CMakeFiles\libjpeg.dir\jcmainct.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcmainct.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmainct.c -o CMakeFiles\libjpeg.dir\jcmainct.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmainct.c -o CMakeFiles\libjpeg.dir\jcmainct.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmainct.c.obj.requires:
 
@@ -308,17 +308,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcmarker.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcmarker.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmarker.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcmarker.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcmarker.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmarker.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcmarker.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmarker.c > CMakeFiles\libjpeg.dir\jcmarker.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmarker.c > CMakeFiles\libjpeg.dir\jcmarker.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcmarker.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmarker.c -o CMakeFiles\libjpeg.dir\jcmarker.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmarker.c -o CMakeFiles\libjpeg.dir\jcmarker.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmarker.c.obj.requires:
 
@@ -333,17 +333,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcmaster.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcmaster.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmaster.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcmaster.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcmaster.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmaster.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcmaster.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmaster.c > CMakeFiles\libjpeg.dir\jcmaster.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmaster.c > CMakeFiles\libjpeg.dir\jcmaster.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcmaster.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcmaster.c -o CMakeFiles\libjpeg.dir\jcmaster.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcmaster.c -o CMakeFiles\libjpeg.dir\jcmaster.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcmaster.c.obj.requires:
 
@@ -358,17 +358,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcomapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcomapi.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcomapi.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcomapi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcomapi.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcomapi.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcomapi.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcomapi.c > CMakeFiles\libjpeg.dir\jcomapi.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcomapi.c > CMakeFiles\libjpeg.dir\jcomapi.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcomapi.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcomapi.c -o CMakeFiles\libjpeg.dir\jcomapi.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcomapi.c -o CMakeFiles\libjpeg.dir\jcomapi.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcomapi.c.obj.requires:
 
@@ -383,17 +383,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcparam.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcparam.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcparam.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcparam.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcparam.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcparam.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcparam.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcparam.c > CMakeFiles\libjpeg.dir\jcparam.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcparam.c > CMakeFiles\libjpeg.dir\jcparam.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcparam.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcparam.c -o CMakeFiles\libjpeg.dir\jcparam.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcparam.c -o CMakeFiles\libjpeg.dir\jcparam.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcparam.c.obj.requires:
 
@@ -408,17 +408,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcprepct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcprepct.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcprepct.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcprepct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcprepct.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcprepct.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcprepct.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcprepct.c > CMakeFiles\libjpeg.dir\jcprepct.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcprepct.c > CMakeFiles\libjpeg.dir\jcprepct.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcprepct.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcprepct.c -o CMakeFiles\libjpeg.dir\jcprepct.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcprepct.c -o CMakeFiles\libjpeg.dir\jcprepct.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcprepct.c.obj.requires:
 
@@ -433,17 +433,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jcsample.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcsample.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcsample.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jcsample.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jcsample.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcsample.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jcsample.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcsample.c > CMakeFiles\libjpeg.dir\jcsample.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcsample.c > CMakeFiles\libjpeg.dir\jcsample.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jcsample.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jcsample.c -o CMakeFiles\libjpeg.dir\jcsample.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jcsample.c -o CMakeFiles\libjpeg.dir\jcsample.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jcsample.c.obj.requires:
 
@@ -458,17 +458,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jctrans.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jctrans.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jctrans.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jctrans.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jctrans.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jctrans.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jctrans.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jctrans.c > CMakeFiles\libjpeg.dir\jctrans.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jctrans.c > CMakeFiles\libjpeg.dir\jctrans.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jctrans.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jctrans.c -o CMakeFiles\libjpeg.dir\jctrans.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jctrans.c -o CMakeFiles\libjpeg.dir\jctrans.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jctrans.c.obj.requires:
 
@@ -483,17 +483,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdapimin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdapimin.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdapimin.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdapimin.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdapimin.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdapimin.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdapimin.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdapimin.c > CMakeFiles\libjpeg.dir\jdapimin.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdapimin.c > CMakeFiles\libjpeg.dir\jdapimin.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdapimin.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdapimin.c -o CMakeFiles\libjpeg.dir\jdapimin.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdapimin.c -o CMakeFiles\libjpeg.dir\jdapimin.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapimin.c.obj.requires:
 
@@ -508,17 +508,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdapistd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdapistd.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdapistd.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdapistd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdapistd.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdapistd.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdapistd.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdapistd.c > CMakeFiles\libjpeg.dir\jdapistd.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdapistd.c > CMakeFiles\libjpeg.dir\jdapistd.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdapistd.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdapistd.c -o CMakeFiles\libjpeg.dir\jdapistd.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdapistd.c -o CMakeFiles\libjpeg.dir\jdapistd.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdapistd.c.obj.requires:
 
@@ -533,17 +533,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdarith.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdarith.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdarith.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdarith.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdarith.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdarith.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdarith.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdarith.c > CMakeFiles\libjpeg.dir\jdarith.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdarith.c > CMakeFiles\libjpeg.dir\jdarith.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdarith.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdarith.c -o CMakeFiles\libjpeg.dir\jdarith.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdarith.c -o CMakeFiles\libjpeg.dir\jdarith.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdarith.c.obj.requires:
 
@@ -558,17 +558,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdatadst.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdatadst.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdatadst.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdatadst.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdatadst.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdatadst.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdatadst.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdatadst.c > CMakeFiles\libjpeg.dir\jdatadst.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdatadst.c > CMakeFiles\libjpeg.dir\jdatadst.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdatadst.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdatadst.c -o CMakeFiles\libjpeg.dir\jdatadst.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdatadst.c -o CMakeFiles\libjpeg.dir\jdatadst.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatadst.c.obj.requires:
 
@@ -583,17 +583,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdatasrc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdatasrc.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdatasrc.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdatasrc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdatasrc.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdatasrc.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdatasrc.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdatasrc.c > CMakeFiles\libjpeg.dir\jdatasrc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdatasrc.c > CMakeFiles\libjpeg.dir\jdatasrc.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdatasrc.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdatasrc.c -o CMakeFiles\libjpeg.dir\jdatasrc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdatasrc.c -o CMakeFiles\libjpeg.dir\jdatasrc.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdatasrc.c.obj.requires:
 
@@ -608,17 +608,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdcoefct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdcoefct.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdcoefct.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdcoefct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdcoefct.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdcoefct.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdcoefct.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdcoefct.c > CMakeFiles\libjpeg.dir\jdcoefct.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdcoefct.c > CMakeFiles\libjpeg.dir\jdcoefct.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdcoefct.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdcoefct.c -o CMakeFiles\libjpeg.dir\jdcoefct.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdcoefct.c -o CMakeFiles\libjpeg.dir\jdcoefct.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcoefct.c.obj.requires:
 
@@ -633,17 +633,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdcolor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdcolor.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdcolor.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdcolor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdcolor.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdcolor.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdcolor.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdcolor.c > CMakeFiles\libjpeg.dir\jdcolor.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdcolor.c > CMakeFiles\libjpeg.dir\jdcolor.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdcolor.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdcolor.c -o CMakeFiles\libjpeg.dir\jdcolor.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdcolor.c -o CMakeFiles\libjpeg.dir\jdcolor.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdcolor.c.obj.requires:
 
@@ -658,17 +658,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jddctmgr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jddctmgr.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jddctmgr.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jddctmgr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jddctmgr.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jddctmgr.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jddctmgr.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jddctmgr.c > CMakeFiles\libjpeg.dir\jddctmgr.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jddctmgr.c > CMakeFiles\libjpeg.dir\jddctmgr.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jddctmgr.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jddctmgr.c -o CMakeFiles\libjpeg.dir\jddctmgr.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jddctmgr.c -o CMakeFiles\libjpeg.dir\jddctmgr.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jddctmgr.c.obj.requires:
 
@@ -683,17 +683,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdhuff.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdhuff.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdhuff.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdhuff.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdhuff.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdhuff.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdhuff.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdhuff.c > CMakeFiles\libjpeg.dir\jdhuff.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdhuff.c > CMakeFiles\libjpeg.dir\jdhuff.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdhuff.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdhuff.c -o CMakeFiles\libjpeg.dir\jdhuff.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdhuff.c -o CMakeFiles\libjpeg.dir\jdhuff.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdhuff.c.obj.requires:
 
@@ -708,17 +708,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdinput.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdinput.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdinput.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdinput.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdinput.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdinput.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdinput.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdinput.c > CMakeFiles\libjpeg.dir\jdinput.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdinput.c > CMakeFiles\libjpeg.dir\jdinput.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdinput.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdinput.c -o CMakeFiles\libjpeg.dir\jdinput.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdinput.c -o CMakeFiles\libjpeg.dir\jdinput.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdinput.c.obj.requires:
 
@@ -733,17 +733,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdmainct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmainct.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmainct.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdmainct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmainct.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmainct.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdmainct.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmainct.c > CMakeFiles\libjpeg.dir\jdmainct.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmainct.c > CMakeFiles\libjpeg.dir\jdmainct.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdmainct.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmainct.c -o CMakeFiles\libjpeg.dir\jdmainct.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmainct.c -o CMakeFiles\libjpeg.dir\jdmainct.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmainct.c.obj.requires:
 
@@ -758,17 +758,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdmarker.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmarker.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmarker.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdmarker.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmarker.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmarker.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdmarker.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmarker.c > CMakeFiles\libjpeg.dir\jdmarker.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmarker.c > CMakeFiles\libjpeg.dir\jdmarker.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdmarker.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmarker.c -o CMakeFiles\libjpeg.dir\jdmarker.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmarker.c -o CMakeFiles\libjpeg.dir\jdmarker.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmarker.c.obj.requires:
 
@@ -783,17 +783,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdmaster.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmaster.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmaster.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdmaster.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmaster.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmaster.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdmaster.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmaster.c > CMakeFiles\libjpeg.dir\jdmaster.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmaster.c > CMakeFiles\libjpeg.dir\jdmaster.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdmaster.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmaster.c -o CMakeFiles\libjpeg.dir\jdmaster.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmaster.c -o CMakeFiles\libjpeg.dir\jdmaster.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmaster.c.obj.requires:
 
@@ -808,17 +808,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdmerge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmerge.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmerge.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdmerge.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdmerge.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmerge.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdmerge.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmerge.c > CMakeFiles\libjpeg.dir\jdmerge.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmerge.c > CMakeFiles\libjpeg.dir\jdmerge.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdmerge.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdmerge.c -o CMakeFiles\libjpeg.dir\jdmerge.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdmerge.c -o CMakeFiles\libjpeg.dir\jdmerge.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdmerge.c.obj.requires:
 
@@ -833,17 +833,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdpostct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdpostct.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdpostct.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdpostct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdpostct.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdpostct.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdpostct.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdpostct.c > CMakeFiles\libjpeg.dir\jdpostct.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdpostct.c > CMakeFiles\libjpeg.dir\jdpostct.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdpostct.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdpostct.c -o CMakeFiles\libjpeg.dir\jdpostct.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdpostct.c -o CMakeFiles\libjpeg.dir\jdpostct.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdpostct.c.obj.requires:
 
@@ -858,17 +858,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdsample.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdsample.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdsample.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdsample.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdsample.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdsample.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdsample.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdsample.c > CMakeFiles\libjpeg.dir\jdsample.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdsample.c > CMakeFiles\libjpeg.dir\jdsample.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdsample.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdsample.c -o CMakeFiles\libjpeg.dir\jdsample.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdsample.c -o CMakeFiles\libjpeg.dir\jdsample.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdsample.c.obj.requires:
 
@@ -883,17 +883,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jdtrans.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdtrans.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdtrans.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jdtrans.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jdtrans.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdtrans.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jdtrans.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdtrans.c > CMakeFiles\libjpeg.dir\jdtrans.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdtrans.c > CMakeFiles\libjpeg.dir\jdtrans.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jdtrans.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jdtrans.c -o CMakeFiles\libjpeg.dir\jdtrans.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jdtrans.c -o CMakeFiles\libjpeg.dir\jdtrans.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jdtrans.c.obj.requires:
 
@@ -908,17 +908,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jerror.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jerror.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jerror.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jerror.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jerror.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jerror.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jerror.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jerror.c > CMakeFiles\libjpeg.dir\jerror.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jerror.c > CMakeFiles\libjpeg.dir\jerror.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jerror.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jerror.c -o CMakeFiles\libjpeg.dir\jerror.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jerror.c -o CMakeFiles\libjpeg.dir\jerror.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jerror.c.obj.requires:
 
@@ -933,17 +933,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jfdctflt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jfdctflt.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctflt.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jfdctflt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jfdctflt.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctflt.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jfdctflt.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctflt.c > CMakeFiles\libjpeg.dir\jfdctflt.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctflt.c > CMakeFiles\libjpeg.dir\jfdctflt.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jfdctflt.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctflt.c -o CMakeFiles\libjpeg.dir\jfdctflt.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctflt.c -o CMakeFiles\libjpeg.dir\jfdctflt.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctflt.c.obj.requires:
 
@@ -958,17 +958,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jfdctfst.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jfdctfst.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctfst.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jfdctfst.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jfdctfst.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctfst.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jfdctfst.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctfst.c > CMakeFiles\libjpeg.dir\jfdctfst.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctfst.c > CMakeFiles\libjpeg.dir\jfdctfst.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jfdctfst.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctfst.c -o CMakeFiles\libjpeg.dir\jfdctfst.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctfst.c -o CMakeFiles\libjpeg.dir\jfdctfst.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctfst.c.obj.requires:
 
@@ -983,17 +983,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jfdctint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jfdctint.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctint.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jfdctint.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jfdctint.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctint.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jfdctint.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctint.c > CMakeFiles\libjpeg.dir\jfdctint.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctint.c > CMakeFiles\libjpeg.dir\jfdctint.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jfdctint.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jfdctint.c -o CMakeFiles\libjpeg.dir\jfdctint.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jfdctint.c -o CMakeFiles\libjpeg.dir\jfdctint.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jfdctint.c.obj.requires:
 
@@ -1008,17 +1008,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jidctflt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jidctflt.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctflt.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jidctflt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jidctflt.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctflt.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jidctflt.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctflt.c > CMakeFiles\libjpeg.dir\jidctflt.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctflt.c > CMakeFiles\libjpeg.dir\jidctflt.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jidctflt.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctflt.c -o CMakeFiles\libjpeg.dir\jidctflt.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctflt.c -o CMakeFiles\libjpeg.dir\jidctflt.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctflt.c.obj.requires:
 
@@ -1033,17 +1033,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jidctfst.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jidctfst.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctfst.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jidctfst.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jidctfst.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctfst.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jidctfst.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctfst.c > CMakeFiles\libjpeg.dir\jidctfst.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctfst.c > CMakeFiles\libjpeg.dir\jidctfst.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jidctfst.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctfst.c -o CMakeFiles\libjpeg.dir\jidctfst.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctfst.c -o CMakeFiles\libjpeg.dir\jidctfst.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctfst.c.obj.requires:
 
@@ -1058,17 +1058,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jidctint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jidctint.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctint.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jidctint.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jidctint.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctint.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jidctint.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctint.c > CMakeFiles\libjpeg.dir\jidctint.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctint.c > CMakeFiles\libjpeg.dir\jidctint.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jidctint.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jidctint.c -o CMakeFiles\libjpeg.dir\jidctint.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jidctint.c -o CMakeFiles\libjpeg.dir\jidctint.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jidctint.c.obj.requires:
 
@@ -1083,17 +1083,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jmemansi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jmemansi.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jmemansi.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jmemansi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jmemansi.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jmemansi.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jmemansi.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jmemansi.c > CMakeFiles\libjpeg.dir\jmemansi.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jmemansi.c > CMakeFiles\libjpeg.dir\jmemansi.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jmemansi.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jmemansi.c -o CMakeFiles\libjpeg.dir\jmemansi.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jmemansi.c -o CMakeFiles\libjpeg.dir\jmemansi.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemansi.c.obj.requires:
 
@@ -1108,17 +1108,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jmemmgr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jmemmgr.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jmemmgr.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jmemmgr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jmemmgr.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jmemmgr.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jmemmgr.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jmemmgr.c > CMakeFiles\libjpeg.dir\jmemmgr.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jmemmgr.c > CMakeFiles\libjpeg.dir\jmemmgr.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jmemmgr.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jmemmgr.c -o CMakeFiles\libjpeg.dir\jmemmgr.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jmemmgr.c -o CMakeFiles\libjpeg.dir\jmemmgr.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jmemmgr.c.obj.requires:
 
@@ -1133,17 +1133,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jquant1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jquant1.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jquant1.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jquant1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jquant1.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jquant1.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jquant1.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jquant1.c > CMakeFiles\libjpeg.dir\jquant1.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jquant1.c > CMakeFiles\libjpeg.dir\jquant1.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jquant1.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jquant1.c -o CMakeFiles\libjpeg.dir\jquant1.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jquant1.c -o CMakeFiles\libjpeg.dir\jquant1.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant1.c.obj.requires:
 
@@ -1158,17 +1158,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jquant2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jquant2.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jquant2.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jquant2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jquant2.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jquant2.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jquant2.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jquant2.c > CMakeFiles\libjpeg.dir\jquant2.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jquant2.c > CMakeFiles\libjpeg.dir\jquant2.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jquant2.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jquant2.c -o CMakeFiles\libjpeg.dir\jquant2.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jquant2.c -o CMakeFiles\libjpeg.dir\jquant2.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jquant2.c.obj.requires:
 
@@ -1183,17 +1183,17 @@ include 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/flags.make
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/includes_C.rsp
-3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libjpeg/jutils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jutils.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jutils.c
+3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg/jutils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libjpeg.dir\jutils.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jutils.c
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libjpeg.dir/jutils.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jutils.c > CMakeFiles\libjpeg.dir\jutils.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jutils.c > CMakeFiles\libjpeg.dir\jutils.c.i
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libjpeg.dir/jutils.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg\jutils.c -o CMakeFiles\libjpeg.dir\jutils.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg\jutils.c -o CMakeFiles\libjpeg.dir\jutils.c.s
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj.requires:
 
@@ -1306,9 +1306,9 @@ libjpeg_EXTERNAL_OBJECTS =
 3rdparty/lib/liblibjpeg.a: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/jutils.c.obj
 3rdparty/lib/liblibjpeg.a: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/build.make
 3rdparty/lib/liblibjpeg.a: 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C static library ..\lib\liblibjpeg.a"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && $(CMAKE_COMMAND) -P CMakeFiles\libjpeg.dir\cmake_clean_target.cmake
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\libjpeg.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C static library ..\lib\liblibjpeg.a"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && $(CMAKE_COMMAND) -P CMakeFiles\libjpeg.dir\cmake_clean_target.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\libjpeg.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/build: 3rdparty/lib/liblibjpeg.a
@@ -1365,10 +1365,10 @@ libjpeg_EXTERNAL_OBJECTS =
 .PHONY : 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/requires
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libjpeg && $(CMAKE_COMMAND) -P CMakeFiles\libjpeg.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg && $(CMAKE_COMMAND) -P CMakeFiles\libjpeg.dir\cmake_clean.cmake
 .PHONY : 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/clean
 
 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\3rdparty\libjpeg C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\3rdparty\libjpeg C:\Users\rartin\Desktop\build\3rdparty\libjpeg\CMakeFiles\libjpeg.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libjpeg C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libjpeg\CMakeFiles\libjpeg.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : 3rdparty/libjpeg/CMakeFiles/libjpeg.dir/depend
 

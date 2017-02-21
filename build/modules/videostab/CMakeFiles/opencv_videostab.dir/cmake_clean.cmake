@@ -10,10 +10,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj"
   "CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj"
   "CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj"
-  "../../bin/libopencv_videostab310.pdb"
-  "../../bin/libopencv_videostab310.dll"
-  "../../lib/libopencv_videostab310.dll.a"
-  "../../bin/libopencv_videostab310.dll.manifest"
+  "../../bin/libopencv_videostab320.pdb"
+  "../../bin/libopencv_videostab320.dll"
+  "../../lib/libopencv_videostab320.dll.a"
+  "../../bin/libopencv_videostab320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

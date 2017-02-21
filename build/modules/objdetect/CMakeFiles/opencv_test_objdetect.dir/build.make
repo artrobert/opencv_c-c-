@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/depend.make
@@ -58,17 +58,17 @@ include modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/flags.make
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/flags.make
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/includes_CXX.rsp
-modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/opencl/test_hogdetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_objdetect.dir\test\opencl\test_hogdetector.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\opencl\test_hogdetector.cpp
+modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/opencl/test_hogdetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_objdetect.dir\test\opencl\test_hogdetector.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\opencl\test_hogdetector.cpp
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\opencl\test_hogdetector.cpp > CMakeFiles\opencv_test_objdetect.dir\test\opencl\test_hogdetector.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\opencl\test_hogdetector.cpp > CMakeFiles\opencv_test_objdetect.dir\test\opencl\test_hogdetector.cpp.i
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\opencl\test_hogdetector.cpp -o CMakeFiles\opencv_test_objdetect.dir\test\opencl\test_hogdetector.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\opencl\test_hogdetector.cpp -o CMakeFiles\opencv_test_objdetect.dir\test\opencl\test_hogdetector.cpp.s
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetec
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/flags.make
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/includes_CXX.rsp
-modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_cascadeandhog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_objdetect.dir\test\test_cascadeandhog.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\test_cascadeandhog.cpp
+modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_cascadeandhog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_objdetect.dir\test\test_cascadeandhog.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\test_cascadeandhog.cpp
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\test_cascadeandhog.cpp > CMakeFiles\opencv_test_objdetect.dir\test\test_cascadeandhog.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\test_cascadeandhog.cpp > CMakeFiles\opencv_test_objdetect.dir\test\test_cascadeandhog.cpp.i
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\test_cascadeandhog.cpp -o CMakeFiles\opencv_test_objdetect.dir\test\test_cascadeandhog.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\test_cascadeandhog.cpp -o CMakeFiles\opencv_test_objdetect.dir\test\test_cascadeandhog.cpp.s
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj.requires:
 
@@ -108,17 +108,17 @@ modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.c
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/flags.make
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/includes_CXX.rsp
-modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_objdetect.dir\test\test_main.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\test_main.cpp
+modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_objdetect.dir\test\test_main.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\test_main.cpp
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\test_main.cpp > CMakeFiles\opencv_test_objdetect.dir\test\test_main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\test_main.cpp > CMakeFiles\opencv_test_objdetect.dir\test\test_main.cpp.i
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/objdetect/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\objdetect\test\test_main.cpp -o CMakeFiles\opencv_test_objdetect.dir\test\test_main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect\test\test_main.cpp -o CMakeFiles\opencv_test_objdetect.dir\test\test_main.cpp.s
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj.requires:
 
@@ -144,19 +144,19 @@ bin/opencv_test_objdetect.exe: modules/objdetect/CMakeFiles/opencv_test_objdetec
 bin/opencv_test_objdetect.exe: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj
 bin/opencv_test_objdetect.exe: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj
 bin/opencv_test_objdetect.exe: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/build.make
-bin/opencv_test_objdetect.exe: lib/libopencv_ts310.a
-bin/opencv_test_objdetect.exe: lib/libopencv_objdetect310.dll.a
-bin/opencv_test_objdetect.exe: lib/libopencv_ml310.dll.a
-bin/opencv_test_objdetect.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_test_objdetect.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_test_objdetect.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_test_objdetect.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_test_objdetect.exe: lib/libopencv_core310.dll.a
+bin/opencv_test_objdetect.exe: lib/libopencv_ts320.a
+bin/opencv_test_objdetect.exe: lib/libopencv_objdetect320.dll.a
+bin/opencv_test_objdetect.exe: lib/libopencv_ml320.dll.a
+bin/opencv_test_objdetect.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_test_objdetect.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_test_objdetect.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_test_objdetect.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_test_objdetect.exe: lib/libopencv_core320.dll.a
 bin/opencv_test_objdetect.exe: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/linklibs.rsp
 bin/opencv_test_objdetect.exe: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/objects1.rsp
 bin/opencv_test_objdetect.exe: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ..\..\bin\opencv_test_objdetect.exe"
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_objdetect.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ..\..\bin\opencv_test_objdetect.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_objdetect.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/build: bin/opencv_test_objdetect.exe
@@ -170,10 +170,10 @@ modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/requires: modules/objdete
 .PHONY : modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/requires
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\objdetect && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_objdetect.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_objdetect.dir\cmake_clean.cmake
 .PHONY : modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/clean
 
 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\objdetect C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\objdetect C:\Users\rartin\Desktop\build\modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\objdetect C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/depend
 

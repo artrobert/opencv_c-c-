@@ -47,13 +47,24 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -65,21 +76,10 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\videostab\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 modules/videostab/CMakeFiles/opencv_videostab.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/CMakeFiles/opencv_videostab.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/CMakeFiles/opencv_videostab.dir/rule
 .PHONY : modules/videostab/CMakeFiles/opencv_videostab.dir/rule
 
 # Convenience name for target.
@@ -198,42 +198,12 @@ opencv_videostab: modules/videostab/CMakeFiles/opencv_videostab.dir/rule
 
 # fast build rule for target.
 opencv_videostab/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/build
 .PHONY : opencv_videostab/fast
 
 # Convenience name for target.
-modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule
-.PHONY : modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_videostab: modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule
-
-.PHONY : pch_Generate_opencv_videostab
-
-# fast build rule for target.
-pch_Generate_opencv_videostab/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\pch_Generate_opencv_videostab.dir\build.make modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/build
-.PHONY : pch_Generate_opencv_videostab/fast
-
-# Convenience name for target.
-modules/videostab/CMakeFiles/opencv_videostab_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/CMakeFiles/opencv_videostab_object.dir/rule
-.PHONY : modules/videostab/CMakeFiles/opencv_videostab_object.dir/rule
-
-# Convenience name for target.
-opencv_videostab_object: modules/videostab/CMakeFiles/opencv_videostab_object.dir/rule
-
-.PHONY : opencv_videostab_object
-
-# fast build rule for target.
-opencv_videostab_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/build
-.PHONY : opencv_videostab_object/fast
-
-# Convenience name for target.
 modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/rule
 .PHONY : modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,8 +213,23 @@ opencv_videostab_pch_dephelp: modules/videostab/CMakeFiles/opencv_videostab_pch_
 
 # fast build rule for target.
 opencv_videostab_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/build
 .PHONY : opencv_videostab_pch_dephelp/fast
+
+# Convenience name for target.
+modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule
+.PHONY : modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule
+
+# Convenience name for target.
+pch_Generate_opencv_videostab: modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/rule
+
+.PHONY : pch_Generate_opencv_videostab
+
+# fast build rule for target.
+pch_Generate_opencv_videostab/fast:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\pch_Generate_opencv_videostab.dir\build.make modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/build
+.PHONY : pch_Generate_opencv_videostab/fast
 
 opencv_videostab_pch_dephelp.obj: opencv_videostab_pch_dephelp.cxx.obj
 
@@ -252,7 +237,7 @@ opencv_videostab_pch_dephelp.obj: opencv_videostab_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_videostab_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/opencv_videostab_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/opencv_videostab_pch_dephelp.cxx.obj
 .PHONY : opencv_videostab_pch_dephelp.cxx.obj
 
 opencv_videostab_pch_dephelp.i: opencv_videostab_pch_dephelp.cxx.i
@@ -261,7 +246,7 @@ opencv_videostab_pch_dephelp.i: opencv_videostab_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_videostab_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/opencv_videostab_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/opencv_videostab_pch_dephelp.cxx.i
 .PHONY : opencv_videostab_pch_dephelp.cxx.i
 
 opencv_videostab_pch_dephelp.s: opencv_videostab_pch_dephelp.cxx.s
@@ -270,7 +255,7 @@ opencv_videostab_pch_dephelp.s: opencv_videostab_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_videostab_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/opencv_videostab_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_pch_dephelp.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_pch_dephelp.dir/opencv_videostab_pch_dephelp.cxx.s
 .PHONY : opencv_videostab_pch_dephelp.cxx.s
 
 src/deblurring.obj: src/deblurring.cpp.obj
@@ -279,8 +264,7 @@ src/deblurring.obj: src/deblurring.cpp.obj
 
 # target to build an object file
 src/deblurring.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/deblurring.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj
 .PHONY : src/deblurring.cpp.obj
 
 src/deblurring.i: src/deblurring.cpp.i
@@ -289,8 +273,7 @@ src/deblurring.i: src/deblurring.cpp.i
 
 # target to preprocess a source file
 src/deblurring.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/deblurring.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.i
 .PHONY : src/deblurring.cpp.i
 
 src/deblurring.s: src/deblurring.cpp.s
@@ -299,8 +282,7 @@ src/deblurring.s: src/deblurring.cpp.s
 
 # target to generate assembly for a file
 src/deblurring.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/deblurring.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.s
 .PHONY : src/deblurring.cpp.s
 
 src/fast_marching.obj: src/fast_marching.cpp.obj
@@ -309,8 +291,7 @@ src/fast_marching.obj: src/fast_marching.cpp.obj
 
 # target to build an object file
 src/fast_marching.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/fast_marching.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj
 .PHONY : src/fast_marching.cpp.obj
 
 src/fast_marching.i: src/fast_marching.cpp.i
@@ -319,8 +300,7 @@ src/fast_marching.i: src/fast_marching.cpp.i
 
 # target to preprocess a source file
 src/fast_marching.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/fast_marching.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.i
 .PHONY : src/fast_marching.cpp.i
 
 src/fast_marching.s: src/fast_marching.cpp.s
@@ -329,8 +309,7 @@ src/fast_marching.s: src/fast_marching.cpp.s
 
 # target to generate assembly for a file
 src/fast_marching.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/fast_marching.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.s
 .PHONY : src/fast_marching.cpp.s
 
 src/frame_source.obj: src/frame_source.cpp.obj
@@ -339,8 +318,7 @@ src/frame_source.obj: src/frame_source.cpp.obj
 
 # target to build an object file
 src/frame_source.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/frame_source.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj
 .PHONY : src/frame_source.cpp.obj
 
 src/frame_source.i: src/frame_source.cpp.i
@@ -349,8 +327,7 @@ src/frame_source.i: src/frame_source.cpp.i
 
 # target to preprocess a source file
 src/frame_source.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/frame_source.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.i
 .PHONY : src/frame_source.cpp.i
 
 src/frame_source.s: src/frame_source.cpp.s
@@ -359,8 +336,7 @@ src/frame_source.s: src/frame_source.cpp.s
 
 # target to generate assembly for a file
 src/frame_source.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/frame_source.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.s
 .PHONY : src/frame_source.cpp.s
 
 src/global_motion.obj: src/global_motion.cpp.obj
@@ -369,8 +345,7 @@ src/global_motion.obj: src/global_motion.cpp.obj
 
 # target to build an object file
 src/global_motion.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/global_motion.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj
 .PHONY : src/global_motion.cpp.obj
 
 src/global_motion.i: src/global_motion.cpp.i
@@ -379,8 +354,7 @@ src/global_motion.i: src/global_motion.cpp.i
 
 # target to preprocess a source file
 src/global_motion.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/global_motion.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.i
 .PHONY : src/global_motion.cpp.i
 
 src/global_motion.s: src/global_motion.cpp.s
@@ -389,8 +363,7 @@ src/global_motion.s: src/global_motion.cpp.s
 
 # target to generate assembly for a file
 src/global_motion.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/global_motion.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.s
 .PHONY : src/global_motion.cpp.s
 
 src/inpainting.obj: src/inpainting.cpp.obj
@@ -399,8 +372,7 @@ src/inpainting.obj: src/inpainting.cpp.obj
 
 # target to build an object file
 src/inpainting.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/inpainting.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj
 .PHONY : src/inpainting.cpp.obj
 
 src/inpainting.i: src/inpainting.cpp.i
@@ -409,8 +381,7 @@ src/inpainting.i: src/inpainting.cpp.i
 
 # target to preprocess a source file
 src/inpainting.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/inpainting.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.i
 .PHONY : src/inpainting.cpp.i
 
 src/inpainting.s: src/inpainting.cpp.s
@@ -419,8 +390,7 @@ src/inpainting.s: src/inpainting.cpp.s
 
 # target to generate assembly for a file
 src/inpainting.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/inpainting.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.s
 .PHONY : src/inpainting.cpp.s
 
 src/log.obj: src/log.cpp.obj
@@ -429,8 +399,7 @@ src/log.obj: src/log.cpp.obj
 
 # target to build an object file
 src/log.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/log.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj
 .PHONY : src/log.cpp.obj
 
 src/log.i: src/log.cpp.i
@@ -439,8 +408,7 @@ src/log.i: src/log.cpp.i
 
 # target to preprocess a source file
 src/log.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/log.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.i
 .PHONY : src/log.cpp.i
 
 src/log.s: src/log.cpp.s
@@ -449,8 +417,7 @@ src/log.s: src/log.cpp.s
 
 # target to generate assembly for a file
 src/log.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/log.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.s
 .PHONY : src/log.cpp.s
 
 src/motion_stabilizing.obj: src/motion_stabilizing.cpp.obj
@@ -459,8 +426,7 @@ src/motion_stabilizing.obj: src/motion_stabilizing.cpp.obj
 
 # target to build an object file
 src/motion_stabilizing.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/motion_stabilizing.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj
 .PHONY : src/motion_stabilizing.cpp.obj
 
 src/motion_stabilizing.i: src/motion_stabilizing.cpp.i
@@ -469,8 +435,7 @@ src/motion_stabilizing.i: src/motion_stabilizing.cpp.i
 
 # target to preprocess a source file
 src/motion_stabilizing.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/motion_stabilizing.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.i
 .PHONY : src/motion_stabilizing.cpp.i
 
 src/motion_stabilizing.s: src/motion_stabilizing.cpp.s
@@ -479,8 +444,7 @@ src/motion_stabilizing.s: src/motion_stabilizing.cpp.s
 
 # target to generate assembly for a file
 src/motion_stabilizing.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/motion_stabilizing.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.s
 .PHONY : src/motion_stabilizing.cpp.s
 
 src/optical_flow.obj: src/optical_flow.cpp.obj
@@ -489,8 +453,7 @@ src/optical_flow.obj: src/optical_flow.cpp.obj
 
 # target to build an object file
 src/optical_flow.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/optical_flow.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj
 .PHONY : src/optical_flow.cpp.obj
 
 src/optical_flow.i: src/optical_flow.cpp.i
@@ -499,8 +462,7 @@ src/optical_flow.i: src/optical_flow.cpp.i
 
 # target to preprocess a source file
 src/optical_flow.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/optical_flow.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.i
 .PHONY : src/optical_flow.cpp.i
 
 src/optical_flow.s: src/optical_flow.cpp.s
@@ -509,8 +471,7 @@ src/optical_flow.s: src/optical_flow.cpp.s
 
 # target to generate assembly for a file
 src/optical_flow.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/optical_flow.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.s
 .PHONY : src/optical_flow.cpp.s
 
 src/outlier_rejection.obj: src/outlier_rejection.cpp.obj
@@ -519,8 +480,7 @@ src/outlier_rejection.obj: src/outlier_rejection.cpp.obj
 
 # target to build an object file
 src/outlier_rejection.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/outlier_rejection.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj
 .PHONY : src/outlier_rejection.cpp.obj
 
 src/outlier_rejection.i: src/outlier_rejection.cpp.i
@@ -529,8 +489,7 @@ src/outlier_rejection.i: src/outlier_rejection.cpp.i
 
 # target to preprocess a source file
 src/outlier_rejection.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/outlier_rejection.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.i
 .PHONY : src/outlier_rejection.cpp.i
 
 src/outlier_rejection.s: src/outlier_rejection.cpp.s
@@ -539,8 +498,7 @@ src/outlier_rejection.s: src/outlier_rejection.cpp.s
 
 # target to generate assembly for a file
 src/outlier_rejection.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/outlier_rejection.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.s
 .PHONY : src/outlier_rejection.cpp.s
 
 src/stabilizer.obj: src/stabilizer.cpp.obj
@@ -549,8 +507,7 @@ src/stabilizer.obj: src/stabilizer.cpp.obj
 
 # target to build an object file
 src/stabilizer.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/stabilizer.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj
 .PHONY : src/stabilizer.cpp.obj
 
 src/stabilizer.i: src/stabilizer.cpp.i
@@ -559,8 +516,7 @@ src/stabilizer.i: src/stabilizer.cpp.i
 
 # target to preprocess a source file
 src/stabilizer.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/stabilizer.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.i
 .PHONY : src/stabilizer.cpp.i
 
 src/stabilizer.s: src/stabilizer.cpp.s
@@ -569,8 +525,7 @@ src/stabilizer.s: src/stabilizer.cpp.s
 
 # target to generate assembly for a file
 src/stabilizer.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/stabilizer.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.s
 .PHONY : src/stabilizer.cpp.s
 
 src/wobble_suppression.obj: src/wobble_suppression.cpp.obj
@@ -579,8 +534,7 @@ src/wobble_suppression.obj: src/wobble_suppression.cpp.obj
 
 # target to build an object file
 src/wobble_suppression.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/wobble_suppression.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj
 .PHONY : src/wobble_suppression.cpp.obj
 
 src/wobble_suppression.i: src/wobble_suppression.cpp.i
@@ -589,8 +543,7 @@ src/wobble_suppression.i: src/wobble_suppression.cpp.i
 
 # target to preprocess a source file
 src/wobble_suppression.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/wobble_suppression.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.i
 .PHONY : src/wobble_suppression.cpp.i
 
 src/wobble_suppression.s: src/wobble_suppression.cpp.s
@@ -599,8 +552,7 @@ src/wobble_suppression.s: src/wobble_suppression.cpp.s
 
 # target to generate assembly for a file
 src/wobble_suppression.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab_object.dir\build.make modules/videostab/CMakeFiles/opencv_videostab_object.dir/src/wobble_suppression.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\videostab\CMakeFiles\opencv_videostab.dir\build.make modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.s
 .PHONY : src/wobble_suppression.cpp.s
 
 # Help Target
@@ -610,11 +562,10 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... opencv_videostab
-	@echo ... list_install_components
-	@echo ... pch_Generate_opencv_videostab
-	@echo ... opencv_videostab_object
 	@echo ... opencv_videostab_pch_dephelp
 	@echo ... package_source
+	@echo ... pch_Generate_opencv_videostab
+	@echo ... list_install_components
 	@echo ... package
 	@echo ... rebuild_cache
 	@echo ... test
@@ -669,6 +620,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

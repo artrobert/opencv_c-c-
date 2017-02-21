@@ -19,7 +19,11 @@ const struct ProgramEntry bgfg_mog2={"bgfg_mog2",
 "#define F_ZERO (0.0f)\n"
 "#define cnMode 1\n"
 "#define frameToMean(a, b) (b) = *(a);\n"
+"#if FL==0\n"
 "#define meanToFrame(a, b) *b = convert_uchar_sat(a);\n"
+"#else\n"
+"#define meanToFrame(a, b) *b = (float)a;\n"
+"#endif\n"
 "inline float sum(float val)\n"
 "{\n"
 "return val;\n"
@@ -28,10 +32,17 @@ const struct ProgramEntry bgfg_mog2={"bgfg_mog2",
 "#define T_MEAN float4\n"
 "#define F_ZERO (0.0f, 0.0f, 0.0f, 0.0f)\n"
 "#define cnMode 4\n"
+"#if FL == 0\n"
 "#define meanToFrame(a, b)\\\n"
 "b[0] = convert_uchar_sat(a.x); \\\n"
 "b[1] = convert_uchar_sat(a.y); \\\n"
 "b[2] = convert_uchar_sat(a.z);\n"
+"#else\n"
+"#define meanToFrame(a, b)\\\n"
+"b[0] = a.x; \\\n"
+"b[1] = a.y; \\\n"
+"b[2] = a.z;\n"
+"#endif\n"
 "#define frameToMean(a, b)\\\n"
 "b.x = a[0]; \\\n"
 "b.y = a[1]; \\\n"
@@ -60,7 +71,11 @@ const struct ProgramEntry bgfg_mog2={"bgfg_mog2",
 "int y = get_global_id(1);\n"
 "if( x < frame_col && y < frame_row)\n"
 "{\n"
+"#if FL==0\n"
 "__global const uchar* _frame = (frame + mad24(y, frame_step, mad24(x, CN, frame_offset)));\n"
+"#else\n"
+"__global const float* _frame = ((__global const float*)( frame + mad24(y, frame_step, frame_offset)) + mad24(x, CN, 0));\n"
+"#endif\n"
 "T_MEAN pix;\n"
 "frameToMean(_frame, pix);\n"
 "uchar foreground = 255;\n"
@@ -223,11 +238,16 @@ const struct ProgramEntry bgfg_mog2={"bgfg_mog2",
 "meanVal = meanVal / totalWeight;\n"
 "else\n"
 "meanVal = (T_MEAN)(0.f);\n"
+"#if FL==0\n"
 "__global uchar* _dst = dst + mad24(y, dst_step, mad24(x, CN, dst_offset));\n"
 "meanToFrame(meanVal, _dst);\n"
+"#else\n"
+"__global float* _dst = ((__global float*)( dst + mad24(y, dst_step, dst_offset)) + mad24(x, CN, 0));\n"
+"meanToFrame(meanVal, _dst);\n"
+"#endif\n"
 "}\n"
 "}\n"
-, "b6e3850899862b7f0ab67cb32f1d52e9"};
+, "a502386253c964907c0593109986217d"};
 ProgramSource bgfg_mog2_oclsrc(bgfg_mog2.programStr);
 const struct ProgramEntry optical_flow_farneback={"optical_flow_farneback",
 "#define tx  (int)get_local_id(0)\n"
@@ -628,7 +648,7 @@ const struct ProgramEntry optical_flow_tvl1={"optical_flow_tvl1",
 "rho[y * I1w_step + x] = I1wVal - I1wxVal * u1Val - I1wyVal * u2Val - I0Val;\n"
 "}\n"
 "}\n"
-"inline float readImage(__global float *image,  int x,  int y,  int rows,  int cols, int elemCntPerRow)\n"
+"inline float readImage(__global const float *image,  int x,  int y,  int rows,  int cols, int elemCntPerRow)\n"
 "{\n"
 "int i0 = clamp(x, 0, cols - 1);\n"
 "int j0 = clamp(y, 0, rows - 1);\n"
@@ -807,7 +827,7 @@ const struct ProgramEntry optical_flow_tvl1={"optical_flow_tvl1",
 "}\n"
 "}\n"
 "}\n"
-, "a9d306a49b405703820fae23312ebd28"};
+, "9474ca90cbcc7660f6c47b8a45d6730d"};
 ProgramSource optical_flow_tvl1_oclsrc(optical_flow_tvl1.programStr);
 const struct ProgramEntry pyrlk={"pyrlk",
 "#define GRIDSIZE    3\n"
@@ -1004,7 +1024,7 @@ const struct ProgramEntry pyrlk={"pyrlk",
 "float diff = read_imagef(J, sampler, (float2)(x,y)).x-*Pch;\n"
 "*errval += fabs(diff);\n"
 "}\n"
-"#define READI(_y,_x) IPatchLocal[mad24(mad24((_y), LSy, yid), LM_W, mad24((_x), LSx, xid))] = read_imagef(I, sampler, (float2)(mad((_x), LSx, Point.x + xid - 0.5f), mad((_y), LSy, Point.y + yid - 0.5f))).x;\n"
+"#define READI(_y,_x) IPatchLocal[mad24(mad24((_y), LSy, yid), LM_W, mad24((_x), LSx, xid))] = read_imagef(I, sampler, (float2)(mad((float)(_x), (float)LSx, Point.x + xid - 0.5f), mad((float)(_y), (float)LSy, Point.y + yid - 0.5f))).x;\n"
 "void ReadPatchIToLocalMem(image2d_t I, float2 Point, local float* IPatchLocal)\n"
 "{\n"
 "int xid=get_local_id(0);\n"
@@ -1211,7 +1231,7 @@ const struct ProgramEntry pyrlk={"pyrlk",
 "err[gid] = smem1[0] / (float)(c_winSize_x * c_winSize_y);\n"
 "}\n"
 "}\n"
-, "262b42292c06e392155f93aa93a3e77b"};
+, "fb98983832d9524321eecff2aff43ac1"};
 ProgramSource pyrlk_oclsrc(pyrlk.programStr);
 }
 }}

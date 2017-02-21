@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -69,7 +69,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\apps\traincascade\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/CMakeFiles/opencv_traincascade.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/traincascade/CMakeFiles/opencv_traincascade.dir/rule
 .PHONY : apps/traincascade/CMakeFiles/opencv_traincascade.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ opencv_traincascade: apps/traincascade/CMakeFiles/opencv_traincascade.dir/rule
 
 # fast build rule for target.
 opencv_traincascade/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/build
 .PHONY : opencv_traincascade/fast
 
 HOGfeatures.obj: HOGfeatures.cpp.obj
@@ -207,7 +207,7 @@ HOGfeatures.obj: HOGfeatures.cpp.obj
 
 # target to build an object file
 HOGfeatures.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj
 .PHONY : HOGfeatures.cpp.obj
 
 HOGfeatures.i: HOGfeatures.cpp.i
@@ -216,7 +216,7 @@ HOGfeatures.i: HOGfeatures.cpp.i
 
 # target to preprocess a source file
 HOGfeatures.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.i
 .PHONY : HOGfeatures.cpp.i
 
 HOGfeatures.s: HOGfeatures.cpp.s
@@ -225,7 +225,7 @@ HOGfeatures.s: HOGfeatures.cpp.s
 
 # target to generate assembly for a file
 HOGfeatures.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.s
 .PHONY : HOGfeatures.cpp.s
 
 boost.obj: boost.cpp.obj
@@ -234,7 +234,7 @@ boost.obj: boost.cpp.obj
 
 # target to build an object file
 boost.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj
 .PHONY : boost.cpp.obj
 
 boost.i: boost.cpp.i
@@ -243,7 +243,7 @@ boost.i: boost.cpp.i
 
 # target to preprocess a source file
 boost.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.i
 .PHONY : boost.cpp.i
 
 boost.s: boost.cpp.s
@@ -252,7 +252,7 @@ boost.s: boost.cpp.s
 
 # target to generate assembly for a file
 boost.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.s
 .PHONY : boost.cpp.s
 
 cascadeclassifier.obj: cascadeclassifier.cpp.obj
@@ -261,7 +261,7 @@ cascadeclassifier.obj: cascadeclassifier.cpp.obj
 
 # target to build an object file
 cascadeclassifier.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj
 .PHONY : cascadeclassifier.cpp.obj
 
 cascadeclassifier.i: cascadeclassifier.cpp.i
@@ -270,7 +270,7 @@ cascadeclassifier.i: cascadeclassifier.cpp.i
 
 # target to preprocess a source file
 cascadeclassifier.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.i
 .PHONY : cascadeclassifier.cpp.i
 
 cascadeclassifier.s: cascadeclassifier.cpp.s
@@ -279,7 +279,7 @@ cascadeclassifier.s: cascadeclassifier.cpp.s
 
 # target to generate assembly for a file
 cascadeclassifier.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.s
 .PHONY : cascadeclassifier.cpp.s
 
 features.obj: features.cpp.obj
@@ -288,7 +288,7 @@ features.obj: features.cpp.obj
 
 # target to build an object file
 features.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj
 .PHONY : features.cpp.obj
 
 features.i: features.cpp.i
@@ -297,7 +297,7 @@ features.i: features.cpp.i
 
 # target to preprocess a source file
 features.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.i
 .PHONY : features.cpp.i
 
 features.s: features.cpp.s
@@ -306,7 +306,7 @@ features.s: features.cpp.s
 
 # target to generate assembly for a file
 features.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.s
 .PHONY : features.cpp.s
 
 haarfeatures.obj: haarfeatures.cpp.obj
@@ -315,7 +315,7 @@ haarfeatures.obj: haarfeatures.cpp.obj
 
 # target to build an object file
 haarfeatures.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj
 .PHONY : haarfeatures.cpp.obj
 
 haarfeatures.i: haarfeatures.cpp.i
@@ -324,7 +324,7 @@ haarfeatures.i: haarfeatures.cpp.i
 
 # target to preprocess a source file
 haarfeatures.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.i
 .PHONY : haarfeatures.cpp.i
 
 haarfeatures.s: haarfeatures.cpp.s
@@ -333,7 +333,7 @@ haarfeatures.s: haarfeatures.cpp.s
 
 # target to generate assembly for a file
 haarfeatures.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.s
 .PHONY : haarfeatures.cpp.s
 
 imagestorage.obj: imagestorage.cpp.obj
@@ -342,7 +342,7 @@ imagestorage.obj: imagestorage.cpp.obj
 
 # target to build an object file
 imagestorage.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj
 .PHONY : imagestorage.cpp.obj
 
 imagestorage.i: imagestorage.cpp.i
@@ -351,7 +351,7 @@ imagestorage.i: imagestorage.cpp.i
 
 # target to preprocess a source file
 imagestorage.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.i
 .PHONY : imagestorage.cpp.i
 
 imagestorage.s: imagestorage.cpp.s
@@ -360,7 +360,7 @@ imagestorage.s: imagestorage.cpp.s
 
 # target to generate assembly for a file
 imagestorage.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.s
 .PHONY : imagestorage.cpp.s
 
 lbpfeatures.obj: lbpfeatures.cpp.obj
@@ -369,7 +369,7 @@ lbpfeatures.obj: lbpfeatures.cpp.obj
 
 # target to build an object file
 lbpfeatures.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj
 .PHONY : lbpfeatures.cpp.obj
 
 lbpfeatures.i: lbpfeatures.cpp.i
@@ -378,7 +378,7 @@ lbpfeatures.i: lbpfeatures.cpp.i
 
 # target to preprocess a source file
 lbpfeatures.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.i
 .PHONY : lbpfeatures.cpp.i
 
 lbpfeatures.s: lbpfeatures.cpp.s
@@ -387,7 +387,7 @@ lbpfeatures.s: lbpfeatures.cpp.s
 
 # target to generate assembly for a file
 lbpfeatures.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.s
 .PHONY : lbpfeatures.cpp.s
 
 old_ml_boost.obj: old_ml_boost.cpp.obj
@@ -396,7 +396,7 @@ old_ml_boost.obj: old_ml_boost.cpp.obj
 
 # target to build an object file
 old_ml_boost.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj
 .PHONY : old_ml_boost.cpp.obj
 
 old_ml_boost.i: old_ml_boost.cpp.i
@@ -405,7 +405,7 @@ old_ml_boost.i: old_ml_boost.cpp.i
 
 # target to preprocess a source file
 old_ml_boost.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.i
 .PHONY : old_ml_boost.cpp.i
 
 old_ml_boost.s: old_ml_boost.cpp.s
@@ -414,7 +414,7 @@ old_ml_boost.s: old_ml_boost.cpp.s
 
 # target to generate assembly for a file
 old_ml_boost.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.s
 .PHONY : old_ml_boost.cpp.s
 
 old_ml_data.obj: old_ml_data.cpp.obj
@@ -423,7 +423,7 @@ old_ml_data.obj: old_ml_data.cpp.obj
 
 # target to build an object file
 old_ml_data.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj
 .PHONY : old_ml_data.cpp.obj
 
 old_ml_data.i: old_ml_data.cpp.i
@@ -432,7 +432,7 @@ old_ml_data.i: old_ml_data.cpp.i
 
 # target to preprocess a source file
 old_ml_data.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.i
 .PHONY : old_ml_data.cpp.i
 
 old_ml_data.s: old_ml_data.cpp.s
@@ -441,7 +441,7 @@ old_ml_data.s: old_ml_data.cpp.s
 
 # target to generate assembly for a file
 old_ml_data.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.s
 .PHONY : old_ml_data.cpp.s
 
 old_ml_inner_functions.obj: old_ml_inner_functions.cpp.obj
@@ -450,7 +450,7 @@ old_ml_inner_functions.obj: old_ml_inner_functions.cpp.obj
 
 # target to build an object file
 old_ml_inner_functions.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj
 .PHONY : old_ml_inner_functions.cpp.obj
 
 old_ml_inner_functions.i: old_ml_inner_functions.cpp.i
@@ -459,7 +459,7 @@ old_ml_inner_functions.i: old_ml_inner_functions.cpp.i
 
 # target to preprocess a source file
 old_ml_inner_functions.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.i
 .PHONY : old_ml_inner_functions.cpp.i
 
 old_ml_inner_functions.s: old_ml_inner_functions.cpp.s
@@ -468,7 +468,7 @@ old_ml_inner_functions.s: old_ml_inner_functions.cpp.s
 
 # target to generate assembly for a file
 old_ml_inner_functions.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.s
 .PHONY : old_ml_inner_functions.cpp.s
 
 old_ml_tree.obj: old_ml_tree.cpp.obj
@@ -477,7 +477,7 @@ old_ml_tree.obj: old_ml_tree.cpp.obj
 
 # target to build an object file
 old_ml_tree.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj
 .PHONY : old_ml_tree.cpp.obj
 
 old_ml_tree.i: old_ml_tree.cpp.i
@@ -486,7 +486,7 @@ old_ml_tree.i: old_ml_tree.cpp.i
 
 # target to preprocess a source file
 old_ml_tree.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.i
 .PHONY : old_ml_tree.cpp.i
 
 old_ml_tree.s: old_ml_tree.cpp.s
@@ -495,7 +495,7 @@ old_ml_tree.s: old_ml_tree.cpp.s
 
 # target to generate assembly for a file
 old_ml_tree.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.s
 .PHONY : old_ml_tree.cpp.s
 
 traincascade.obj: traincascade.cpp.obj
@@ -504,7 +504,7 @@ traincascade.obj: traincascade.cpp.obj
 
 # target to build an object file
 traincascade.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj
 .PHONY : traincascade.cpp.obj
 
 traincascade.i: traincascade.cpp.i
@@ -513,7 +513,7 @@ traincascade.i: traincascade.cpp.i
 
 # target to preprocess a source file
 traincascade.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.i
 .PHONY : traincascade.cpp.i
 
 traincascade.s: traincascade.cpp.s
@@ -522,7 +522,7 @@ traincascade.s: traincascade.cpp.s
 
 # target to generate assembly for a file
 traincascade.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\traincascade\CMakeFiles\opencv_traincascade.dir\build.make apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.s
 .PHONY : traincascade.cpp.s
 
 # Help Target
@@ -588,6 +588,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

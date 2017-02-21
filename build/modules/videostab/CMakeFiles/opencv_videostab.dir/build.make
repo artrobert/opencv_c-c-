@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/videostab/CMakeFiles/opencv_videostab.dir/depend.make
@@ -58,17 +58,17 @@ include modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/deblurring.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\deblurring.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\deblurring.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/deblurring.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\deblurring.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\deblurring.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\deblurring.cpp > CMakeFiles\opencv_videostab.dir\src\deblurring.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\deblurring.cpp > CMakeFiles\opencv_videostab.dir\src\deblurring.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\deblurring.cpp -o CMakeFiles\opencv_videostab.dir\src\deblurring.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\deblurring.cpp -o CMakeFiles\opencv_videostab.dir\src\deblurring.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj.provide
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/fast_marching.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\fast_marching.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\fast_marching.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/fast_marching.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\fast_marching.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\fast_marching.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\fast_marching.cpp > CMakeFiles\opencv_videostab.dir\src\fast_marching.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\fast_marching.cpp > CMakeFiles\opencv_videostab.dir\src\fast_marching.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\fast_marching.cpp -o CMakeFiles\opencv_videostab.dir\src\fast_marching.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\fast_marching.cpp -o CMakeFiles\opencv_videostab.dir\src\fast_marching.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj.requires:
 
@@ -108,17 +108,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj.prov
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/frame_source.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\frame_source.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\frame_source.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/frame_source.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\frame_source.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\frame_source.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\frame_source.cpp > CMakeFiles\opencv_videostab.dir\src\frame_source.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\frame_source.cpp > CMakeFiles\opencv_videostab.dir\src\frame_source.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\frame_source.cpp -o CMakeFiles\opencv_videostab.dir\src\frame_source.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\frame_source.cpp -o CMakeFiles\opencv_videostab.dir\src\frame_source.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj.requires:
 
@@ -133,17 +133,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj.provi
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/global_motion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\global_motion.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\global_motion.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/global_motion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\global_motion.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\global_motion.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\global_motion.cpp > CMakeFiles\opencv_videostab.dir\src\global_motion.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\global_motion.cpp > CMakeFiles\opencv_videostab.dir\src\global_motion.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\global_motion.cpp -o CMakeFiles\opencv_videostab.dir\src\global_motion.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\global_motion.cpp -o CMakeFiles\opencv_videostab.dir\src\global_motion.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj.requires:
 
@@ -158,17 +158,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj.prov
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/inpainting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\inpainting.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\inpainting.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/inpainting.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\inpainting.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\inpainting.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\inpainting.cpp > CMakeFiles\opencv_videostab.dir\src\inpainting.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\inpainting.cpp > CMakeFiles\opencv_videostab.dir\src\inpainting.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\inpainting.cpp -o CMakeFiles\opencv_videostab.dir\src\inpainting.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\inpainting.cpp -o CMakeFiles\opencv_videostab.dir\src\inpainting.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj.requires:
 
@@ -183,17 +183,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj.provide
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\log.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\log.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\log.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\log.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/log.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\log.cpp > CMakeFiles\opencv_videostab.dir\src\log.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\log.cpp > CMakeFiles\opencv_videostab.dir\src\log.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/log.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\log.cpp -o CMakeFiles\opencv_videostab.dir\src\log.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\log.cpp -o CMakeFiles\opencv_videostab.dir\src\log.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj.requires:
 
@@ -208,17 +208,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj.provides.build
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/motion_stabilizing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\motion_stabilizing.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\motion_stabilizing.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/motion_stabilizing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\motion_stabilizing.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\motion_stabilizing.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\motion_stabilizing.cpp > CMakeFiles\opencv_videostab.dir\src\motion_stabilizing.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\motion_stabilizing.cpp > CMakeFiles\opencv_videostab.dir\src\motion_stabilizing.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\motion_stabilizing.cpp -o CMakeFiles\opencv_videostab.dir\src\motion_stabilizing.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\motion_stabilizing.cpp -o CMakeFiles\opencv_videostab.dir\src\motion_stabilizing.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj.requires:
 
@@ -233,17 +233,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/optical_flow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\optical_flow.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\optical_flow.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/optical_flow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\optical_flow.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\optical_flow.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\optical_flow.cpp > CMakeFiles\opencv_videostab.dir\src\optical_flow.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\optical_flow.cpp > CMakeFiles\opencv_videostab.dir\src\optical_flow.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\optical_flow.cpp -o CMakeFiles\opencv_videostab.dir\src\optical_flow.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\optical_flow.cpp -o CMakeFiles\opencv_videostab.dir\src\optical_flow.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj.requires:
 
@@ -258,17 +258,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj.provi
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/outlier_rejection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\outlier_rejection.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\outlier_rejection.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/outlier_rejection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\outlier_rejection.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\outlier_rejection.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\outlier_rejection.cpp > CMakeFiles\opencv_videostab.dir\src\outlier_rejection.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\outlier_rejection.cpp > CMakeFiles\opencv_videostab.dir\src\outlier_rejection.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\outlier_rejection.cpp -o CMakeFiles\opencv_videostab.dir\src\outlier_rejection.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\outlier_rejection.cpp -o CMakeFiles\opencv_videostab.dir\src\outlier_rejection.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj.requires:
 
@@ -283,17 +283,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj.
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/stabilizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\stabilizer.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\stabilizer.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/stabilizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\stabilizer.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\stabilizer.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\stabilizer.cpp > CMakeFiles\opencv_videostab.dir\src\stabilizer.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\stabilizer.cpp > CMakeFiles\opencv_videostab.dir\src\stabilizer.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\stabilizer.cpp -o CMakeFiles\opencv_videostab.dir\src\stabilizer.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\stabilizer.cpp -o CMakeFiles\opencv_videostab.dir\src\stabilizer.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj.requires:
 
@@ -308,17 +308,17 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj.provide
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/flags.make
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj: modules/videostab/CMakeFiles/opencv_videostab.dir/includes_CXX.rsp
-modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videostab/src/wobble_suppression.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\wobble_suppression.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\wobble_suppression.cpp
+modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/src/wobble_suppression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_videostab.dir\src\wobble_suppression.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\wobble_suppression.cpp
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\wobble_suppression.cpp > CMakeFiles\opencv_videostab.dir\src\wobble_suppression.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\wobble_suppression.cpp > CMakeFiles\opencv_videostab.dir\src\wobble_suppression.cpp.i
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videostab/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videostab\src\wobble_suppression.cpp -o CMakeFiles\opencv_videostab.dir\src\wobble_suppression.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videostab/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab\src\wobble_suppression.cpp -o CMakeFiles\opencv_videostab.dir\src\wobble_suppression.cpp.s
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj.requires:
 
@@ -348,37 +348,37 @@ opencv_videostab_OBJECTS = \
 # External object files for target opencv_videostab
 opencv_videostab_EXTERNAL_OBJECTS =
 
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/build.make
-bin/libopencv_videostab310.dll: lib/libopencv_photo310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_video310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_calib3d310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_features2d310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_flann310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_ml310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_highgui310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_videoio310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_imgcodecs310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_imgproc310.dll.a
-bin/libopencv_videostab310.dll: lib/libopencv_core310.dll.a
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/linklibs.rsp
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/objects1.rsp
-bin/libopencv_videostab310.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ..\..\bin\libopencv_videostab310.dll"
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_videostab.dir\link.txt --verbose=$(VERBOSE)
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.obj
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/build.make
+bin/libopencv_videostab320.dll: lib/libopencv_photo320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_video320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_calib3d320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_features2d320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_flann320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_ml320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_highgui320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_videoio320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_imgcodecs320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_imgproc320.dll.a
+bin/libopencv_videostab320.dll: lib/libopencv_core320.dll.a
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/linklibs.rsp
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/objects1.rsp
+bin/libopencv_videostab320.dll: modules/videostab/CMakeFiles/opencv_videostab.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ..\..\bin\libopencv_videostab320.dll"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_videostab.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-modules/videostab/CMakeFiles/opencv_videostab.dir/build: bin/libopencv_videostab310.dll
+modules/videostab/CMakeFiles/opencv_videostab.dir/build: bin/libopencv_videostab320.dll
 
 .PHONY : modules/videostab/CMakeFiles/opencv_videostab.dir/build
 
@@ -397,10 +397,10 @@ modules/videostab/CMakeFiles/opencv_videostab.dir/requires: modules/videostab/CM
 .PHONY : modules/videostab/CMakeFiles/opencv_videostab.dir/requires
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\videostab && $(CMAKE_COMMAND) -P CMakeFiles\opencv_videostab.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab && $(CMAKE_COMMAND) -P CMakeFiles\opencv_videostab.dir\cmake_clean.cmake
 .PHONY : modules/videostab/CMakeFiles/opencv_videostab.dir/clean
 
 modules/videostab/CMakeFiles/opencv_videostab.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\videostab C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\videostab C:\Users\rartin\Desktop\build\modules\videostab\CMakeFiles\opencv_videostab.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videostab C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videostab\CMakeFiles\opencv_videostab.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/videostab/CMakeFiles/opencv_videostab.dir/depend
 

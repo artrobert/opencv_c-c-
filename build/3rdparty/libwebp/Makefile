@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -79,7 +79,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\3rdparty\libwebp\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libwebp\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 3rdparty/libwebp/CMakeFiles/libwebp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/CMakeFiles/libwebp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 3rdparty/libwebp/CMakeFiles/libwebp.dir/rule
 .PHONY : 3rdparty/libwebp/CMakeFiles/libwebp.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ libwebp: 3rdparty/libwebp/CMakeFiles/libwebp.dir/rule
 
 # fast build rule for target.
 libwebp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/build
 .PHONY : libwebp/fast
 
 dec/alpha.obj: dec/alpha.c.obj
@@ -207,7 +207,7 @@ dec/alpha.obj: dec/alpha.c.obj
 
 # target to build an object file
 dec/alpha.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/alpha.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/alpha.c.obj
 .PHONY : dec/alpha.c.obj
 
 dec/alpha.i: dec/alpha.c.i
@@ -216,7 +216,7 @@ dec/alpha.i: dec/alpha.c.i
 
 # target to preprocess a source file
 dec/alpha.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/alpha.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/alpha.c.i
 .PHONY : dec/alpha.c.i
 
 dec/alpha.s: dec/alpha.c.s
@@ -225,7 +225,7 @@ dec/alpha.s: dec/alpha.c.s
 
 # target to generate assembly for a file
 dec/alpha.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/alpha.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/alpha.c.s
 .PHONY : dec/alpha.c.s
 
 dec/buffer.obj: dec/buffer.c.obj
@@ -234,7 +234,7 @@ dec/buffer.obj: dec/buffer.c.obj
 
 # target to build an object file
 dec/buffer.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/buffer.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/buffer.c.obj
 .PHONY : dec/buffer.c.obj
 
 dec/buffer.i: dec/buffer.c.i
@@ -243,7 +243,7 @@ dec/buffer.i: dec/buffer.c.i
 
 # target to preprocess a source file
 dec/buffer.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/buffer.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/buffer.c.i
 .PHONY : dec/buffer.c.i
 
 dec/buffer.s: dec/buffer.c.s
@@ -252,7 +252,7 @@ dec/buffer.s: dec/buffer.c.s
 
 # target to generate assembly for a file
 dec/buffer.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/buffer.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/buffer.c.s
 .PHONY : dec/buffer.c.s
 
 dec/frame.obj: dec/frame.c.obj
@@ -261,7 +261,7 @@ dec/frame.obj: dec/frame.c.obj
 
 # target to build an object file
 dec/frame.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/frame.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/frame.c.obj
 .PHONY : dec/frame.c.obj
 
 dec/frame.i: dec/frame.c.i
@@ -270,7 +270,7 @@ dec/frame.i: dec/frame.c.i
 
 # target to preprocess a source file
 dec/frame.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/frame.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/frame.c.i
 .PHONY : dec/frame.c.i
 
 dec/frame.s: dec/frame.c.s
@@ -279,7 +279,7 @@ dec/frame.s: dec/frame.c.s
 
 # target to generate assembly for a file
 dec/frame.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/frame.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/frame.c.s
 .PHONY : dec/frame.c.s
 
 dec/idec.obj: dec/idec.c.obj
@@ -288,7 +288,7 @@ dec/idec.obj: dec/idec.c.obj
 
 # target to build an object file
 dec/idec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/idec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/idec.c.obj
 .PHONY : dec/idec.c.obj
 
 dec/idec.i: dec/idec.c.i
@@ -297,7 +297,7 @@ dec/idec.i: dec/idec.c.i
 
 # target to preprocess a source file
 dec/idec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/idec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/idec.c.i
 .PHONY : dec/idec.c.i
 
 dec/idec.s: dec/idec.c.s
@@ -306,7 +306,7 @@ dec/idec.s: dec/idec.c.s
 
 # target to generate assembly for a file
 dec/idec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/idec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/idec.c.s
 .PHONY : dec/idec.c.s
 
 dec/io.obj: dec/io.c.obj
@@ -315,7 +315,7 @@ dec/io.obj: dec/io.c.obj
 
 # target to build an object file
 dec/io.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/io.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/io.c.obj
 .PHONY : dec/io.c.obj
 
 dec/io.i: dec/io.c.i
@@ -324,7 +324,7 @@ dec/io.i: dec/io.c.i
 
 # target to preprocess a source file
 dec/io.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/io.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/io.c.i
 .PHONY : dec/io.c.i
 
 dec/io.s: dec/io.c.s
@@ -333,7 +333,7 @@ dec/io.s: dec/io.c.s
 
 # target to generate assembly for a file
 dec/io.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/io.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/io.c.s
 .PHONY : dec/io.c.s
 
 dec/layer.obj: dec/layer.c.obj
@@ -342,7 +342,7 @@ dec/layer.obj: dec/layer.c.obj
 
 # target to build an object file
 dec/layer.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/layer.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/layer.c.obj
 .PHONY : dec/layer.c.obj
 
 dec/layer.i: dec/layer.c.i
@@ -351,7 +351,7 @@ dec/layer.i: dec/layer.c.i
 
 # target to preprocess a source file
 dec/layer.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/layer.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/layer.c.i
 .PHONY : dec/layer.c.i
 
 dec/layer.s: dec/layer.c.s
@@ -360,7 +360,7 @@ dec/layer.s: dec/layer.c.s
 
 # target to generate assembly for a file
 dec/layer.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/layer.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/layer.c.s
 .PHONY : dec/layer.c.s
 
 dec/quant.obj: dec/quant.c.obj
@@ -369,7 +369,7 @@ dec/quant.obj: dec/quant.c.obj
 
 # target to build an object file
 dec/quant.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/quant.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/quant.c.obj
 .PHONY : dec/quant.c.obj
 
 dec/quant.i: dec/quant.c.i
@@ -378,7 +378,7 @@ dec/quant.i: dec/quant.c.i
 
 # target to preprocess a source file
 dec/quant.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/quant.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/quant.c.i
 .PHONY : dec/quant.c.i
 
 dec/quant.s: dec/quant.c.s
@@ -387,7 +387,7 @@ dec/quant.s: dec/quant.c.s
 
 # target to generate assembly for a file
 dec/quant.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/quant.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/quant.c.s
 .PHONY : dec/quant.c.s
 
 dec/tree.obj: dec/tree.c.obj
@@ -396,7 +396,7 @@ dec/tree.obj: dec/tree.c.obj
 
 # target to build an object file
 dec/tree.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/tree.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/tree.c.obj
 .PHONY : dec/tree.c.obj
 
 dec/tree.i: dec/tree.c.i
@@ -405,7 +405,7 @@ dec/tree.i: dec/tree.c.i
 
 # target to preprocess a source file
 dec/tree.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/tree.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/tree.c.i
 .PHONY : dec/tree.c.i
 
 dec/tree.s: dec/tree.c.s
@@ -414,7 +414,7 @@ dec/tree.s: dec/tree.c.s
 
 # target to generate assembly for a file
 dec/tree.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/tree.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/tree.c.s
 .PHONY : dec/tree.c.s
 
 dec/vp8.obj: dec/vp8.c.obj
@@ -423,7 +423,7 @@ dec/vp8.obj: dec/vp8.c.obj
 
 # target to build an object file
 dec/vp8.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8.c.obj
 .PHONY : dec/vp8.c.obj
 
 dec/vp8.i: dec/vp8.c.i
@@ -432,7 +432,7 @@ dec/vp8.i: dec/vp8.c.i
 
 # target to preprocess a source file
 dec/vp8.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8.c.i
 .PHONY : dec/vp8.c.i
 
 dec/vp8.s: dec/vp8.c.s
@@ -441,7 +441,7 @@ dec/vp8.s: dec/vp8.c.s
 
 # target to generate assembly for a file
 dec/vp8.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8.c.s
 .PHONY : dec/vp8.c.s
 
 dec/vp8l.obj: dec/vp8l.c.obj
@@ -450,7 +450,7 @@ dec/vp8l.obj: dec/vp8l.c.obj
 
 # target to build an object file
 dec/vp8l.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8l.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8l.c.obj
 .PHONY : dec/vp8l.c.obj
 
 dec/vp8l.i: dec/vp8l.c.i
@@ -459,7 +459,7 @@ dec/vp8l.i: dec/vp8l.c.i
 
 # target to preprocess a source file
 dec/vp8l.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8l.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8l.c.i
 .PHONY : dec/vp8l.c.i
 
 dec/vp8l.s: dec/vp8l.c.s
@@ -468,7 +468,7 @@ dec/vp8l.s: dec/vp8l.c.s
 
 # target to generate assembly for a file
 dec/vp8l.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8l.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/vp8l.c.s
 .PHONY : dec/vp8l.c.s
 
 dec/webp.obj: dec/webp.c.obj
@@ -477,7 +477,7 @@ dec/webp.obj: dec/webp.c.obj
 
 # target to build an object file
 dec/webp.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/webp.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/webp.c.obj
 .PHONY : dec/webp.c.obj
 
 dec/webp.i: dec/webp.c.i
@@ -486,7 +486,7 @@ dec/webp.i: dec/webp.c.i
 
 # target to preprocess a source file
 dec/webp.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/webp.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/webp.c.i
 .PHONY : dec/webp.c.i
 
 dec/webp.s: dec/webp.c.s
@@ -495,7 +495,7 @@ dec/webp.s: dec/webp.c.s
 
 # target to generate assembly for a file
 dec/webp.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/webp.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dec/webp.c.s
 .PHONY : dec/webp.c.s
 
 dsp/cpu.obj: dsp/cpu.c.obj
@@ -504,7 +504,7 @@ dsp/cpu.obj: dsp/cpu.c.obj
 
 # target to build an object file
 dsp/cpu.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/cpu.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/cpu.c.obj
 .PHONY : dsp/cpu.c.obj
 
 dsp/cpu.i: dsp/cpu.c.i
@@ -513,7 +513,7 @@ dsp/cpu.i: dsp/cpu.c.i
 
 # target to preprocess a source file
 dsp/cpu.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/cpu.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/cpu.c.i
 .PHONY : dsp/cpu.c.i
 
 dsp/cpu.s: dsp/cpu.c.s
@@ -522,7 +522,7 @@ dsp/cpu.s: dsp/cpu.c.s
 
 # target to generate assembly for a file
 dsp/cpu.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/cpu.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/cpu.c.s
 .PHONY : dsp/cpu.c.s
 
 dsp/dec.obj: dsp/dec.c.obj
@@ -531,7 +531,7 @@ dsp/dec.obj: dsp/dec.c.obj
 
 # target to build an object file
 dsp/dec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec.c.obj
 .PHONY : dsp/dec.c.obj
 
 dsp/dec.i: dsp/dec.c.i
@@ -540,7 +540,7 @@ dsp/dec.i: dsp/dec.c.i
 
 # target to preprocess a source file
 dsp/dec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec.c.i
 .PHONY : dsp/dec.c.i
 
 dsp/dec.s: dsp/dec.c.s
@@ -549,7 +549,7 @@ dsp/dec.s: dsp/dec.c.s
 
 # target to generate assembly for a file
 dsp/dec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec.c.s
 .PHONY : dsp/dec.c.s
 
 dsp/dec_neon.obj: dsp/dec_neon.c.obj
@@ -558,7 +558,7 @@ dsp/dec_neon.obj: dsp/dec_neon.c.obj
 
 # target to build an object file
 dsp/dec_neon.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_neon.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_neon.c.obj
 .PHONY : dsp/dec_neon.c.obj
 
 dsp/dec_neon.i: dsp/dec_neon.c.i
@@ -567,7 +567,7 @@ dsp/dec_neon.i: dsp/dec_neon.c.i
 
 # target to preprocess a source file
 dsp/dec_neon.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_neon.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_neon.c.i
 .PHONY : dsp/dec_neon.c.i
 
 dsp/dec_neon.s: dsp/dec_neon.c.s
@@ -576,7 +576,7 @@ dsp/dec_neon.s: dsp/dec_neon.c.s
 
 # target to generate assembly for a file
 dsp/dec_neon.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_neon.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_neon.c.s
 .PHONY : dsp/dec_neon.c.s
 
 dsp/dec_sse2.obj: dsp/dec_sse2.c.obj
@@ -585,7 +585,7 @@ dsp/dec_sse2.obj: dsp/dec_sse2.c.obj
 
 # target to build an object file
 dsp/dec_sse2.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_sse2.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_sse2.c.obj
 .PHONY : dsp/dec_sse2.c.obj
 
 dsp/dec_sse2.i: dsp/dec_sse2.c.i
@@ -594,7 +594,7 @@ dsp/dec_sse2.i: dsp/dec_sse2.c.i
 
 # target to preprocess a source file
 dsp/dec_sse2.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_sse2.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_sse2.c.i
 .PHONY : dsp/dec_sse2.c.i
 
 dsp/dec_sse2.s: dsp/dec_sse2.c.s
@@ -603,7 +603,7 @@ dsp/dec_sse2.s: dsp/dec_sse2.c.s
 
 # target to generate assembly for a file
 dsp/dec_sse2.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_sse2.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/dec_sse2.c.s
 .PHONY : dsp/dec_sse2.c.s
 
 dsp/enc.obj: dsp/enc.c.obj
@@ -612,7 +612,7 @@ dsp/enc.obj: dsp/enc.c.obj
 
 # target to build an object file
 dsp/enc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc.c.obj
 .PHONY : dsp/enc.c.obj
 
 dsp/enc.i: dsp/enc.c.i
@@ -621,7 +621,7 @@ dsp/enc.i: dsp/enc.c.i
 
 # target to preprocess a source file
 dsp/enc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc.c.i
 .PHONY : dsp/enc.c.i
 
 dsp/enc.s: dsp/enc.c.s
@@ -630,7 +630,7 @@ dsp/enc.s: dsp/enc.c.s
 
 # target to generate assembly for a file
 dsp/enc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc.c.s
 .PHONY : dsp/enc.c.s
 
 dsp/enc_neon.obj: dsp/enc_neon.c.obj
@@ -639,7 +639,7 @@ dsp/enc_neon.obj: dsp/enc_neon.c.obj
 
 # target to build an object file
 dsp/enc_neon.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_neon.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_neon.c.obj
 .PHONY : dsp/enc_neon.c.obj
 
 dsp/enc_neon.i: dsp/enc_neon.c.i
@@ -648,7 +648,7 @@ dsp/enc_neon.i: dsp/enc_neon.c.i
 
 # target to preprocess a source file
 dsp/enc_neon.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_neon.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_neon.c.i
 .PHONY : dsp/enc_neon.c.i
 
 dsp/enc_neon.s: dsp/enc_neon.c.s
@@ -657,7 +657,7 @@ dsp/enc_neon.s: dsp/enc_neon.c.s
 
 # target to generate assembly for a file
 dsp/enc_neon.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_neon.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_neon.c.s
 .PHONY : dsp/enc_neon.c.s
 
 dsp/enc_sse2.obj: dsp/enc_sse2.c.obj
@@ -666,7 +666,7 @@ dsp/enc_sse2.obj: dsp/enc_sse2.c.obj
 
 # target to build an object file
 dsp/enc_sse2.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_sse2.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_sse2.c.obj
 .PHONY : dsp/enc_sse2.c.obj
 
 dsp/enc_sse2.i: dsp/enc_sse2.c.i
@@ -675,7 +675,7 @@ dsp/enc_sse2.i: dsp/enc_sse2.c.i
 
 # target to preprocess a source file
 dsp/enc_sse2.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_sse2.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_sse2.c.i
 .PHONY : dsp/enc_sse2.c.i
 
 dsp/enc_sse2.s: dsp/enc_sse2.c.s
@@ -684,7 +684,7 @@ dsp/enc_sse2.s: dsp/enc_sse2.c.s
 
 # target to generate assembly for a file
 dsp/enc_sse2.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_sse2.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/enc_sse2.c.s
 .PHONY : dsp/enc_sse2.c.s
 
 dsp/lossless.obj: dsp/lossless.c.obj
@@ -693,7 +693,7 @@ dsp/lossless.obj: dsp/lossless.c.obj
 
 # target to build an object file
 dsp/lossless.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/lossless.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/lossless.c.obj
 .PHONY : dsp/lossless.c.obj
 
 dsp/lossless.i: dsp/lossless.c.i
@@ -702,7 +702,7 @@ dsp/lossless.i: dsp/lossless.c.i
 
 # target to preprocess a source file
 dsp/lossless.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/lossless.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/lossless.c.i
 .PHONY : dsp/lossless.c.i
 
 dsp/lossless.s: dsp/lossless.c.s
@@ -711,7 +711,7 @@ dsp/lossless.s: dsp/lossless.c.s
 
 # target to generate assembly for a file
 dsp/lossless.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/lossless.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/lossless.c.s
 .PHONY : dsp/lossless.c.s
 
 dsp/upsampling.obj: dsp/upsampling.c.obj
@@ -720,7 +720,7 @@ dsp/upsampling.obj: dsp/upsampling.c.obj
 
 # target to build an object file
 dsp/upsampling.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling.c.obj
 .PHONY : dsp/upsampling.c.obj
 
 dsp/upsampling.i: dsp/upsampling.c.i
@@ -729,7 +729,7 @@ dsp/upsampling.i: dsp/upsampling.c.i
 
 # target to preprocess a source file
 dsp/upsampling.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling.c.i
 .PHONY : dsp/upsampling.c.i
 
 dsp/upsampling.s: dsp/upsampling.c.s
@@ -738,7 +738,7 @@ dsp/upsampling.s: dsp/upsampling.c.s
 
 # target to generate assembly for a file
 dsp/upsampling.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling.c.s
 .PHONY : dsp/upsampling.c.s
 
 dsp/upsampling_neon.obj: dsp/upsampling_neon.c.obj
@@ -747,7 +747,7 @@ dsp/upsampling_neon.obj: dsp/upsampling_neon.c.obj
 
 # target to build an object file
 dsp/upsampling_neon.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_neon.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_neon.c.obj
 .PHONY : dsp/upsampling_neon.c.obj
 
 dsp/upsampling_neon.i: dsp/upsampling_neon.c.i
@@ -756,7 +756,7 @@ dsp/upsampling_neon.i: dsp/upsampling_neon.c.i
 
 # target to preprocess a source file
 dsp/upsampling_neon.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_neon.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_neon.c.i
 .PHONY : dsp/upsampling_neon.c.i
 
 dsp/upsampling_neon.s: dsp/upsampling_neon.c.s
@@ -765,7 +765,7 @@ dsp/upsampling_neon.s: dsp/upsampling_neon.c.s
 
 # target to generate assembly for a file
 dsp/upsampling_neon.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_neon.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_neon.c.s
 .PHONY : dsp/upsampling_neon.c.s
 
 dsp/upsampling_sse2.obj: dsp/upsampling_sse2.c.obj
@@ -774,7 +774,7 @@ dsp/upsampling_sse2.obj: dsp/upsampling_sse2.c.obj
 
 # target to build an object file
 dsp/upsampling_sse2.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_sse2.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_sse2.c.obj
 .PHONY : dsp/upsampling_sse2.c.obj
 
 dsp/upsampling_sse2.i: dsp/upsampling_sse2.c.i
@@ -783,7 +783,7 @@ dsp/upsampling_sse2.i: dsp/upsampling_sse2.c.i
 
 # target to preprocess a source file
 dsp/upsampling_sse2.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_sse2.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_sse2.c.i
 .PHONY : dsp/upsampling_sse2.c.i
 
 dsp/upsampling_sse2.s: dsp/upsampling_sse2.c.s
@@ -792,7 +792,7 @@ dsp/upsampling_sse2.s: dsp/upsampling_sse2.c.s
 
 # target to generate assembly for a file
 dsp/upsampling_sse2.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_sse2.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/upsampling_sse2.c.s
 .PHONY : dsp/upsampling_sse2.c.s
 
 dsp/yuv.obj: dsp/yuv.c.obj
@@ -801,7 +801,7 @@ dsp/yuv.obj: dsp/yuv.c.obj
 
 # target to build an object file
 dsp/yuv.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/yuv.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/yuv.c.obj
 .PHONY : dsp/yuv.c.obj
 
 dsp/yuv.i: dsp/yuv.c.i
@@ -810,7 +810,7 @@ dsp/yuv.i: dsp/yuv.c.i
 
 # target to preprocess a source file
 dsp/yuv.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/yuv.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/yuv.c.i
 .PHONY : dsp/yuv.c.i
 
 dsp/yuv.s: dsp/yuv.c.s
@@ -819,7 +819,7 @@ dsp/yuv.s: dsp/yuv.c.s
 
 # target to generate assembly for a file
 dsp/yuv.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/yuv.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/dsp/yuv.c.s
 .PHONY : dsp/yuv.c.s
 
 enc/alpha.obj: enc/alpha.c.obj
@@ -828,7 +828,7 @@ enc/alpha.obj: enc/alpha.c.obj
 
 # target to build an object file
 enc/alpha.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/alpha.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/alpha.c.obj
 .PHONY : enc/alpha.c.obj
 
 enc/alpha.i: enc/alpha.c.i
@@ -837,7 +837,7 @@ enc/alpha.i: enc/alpha.c.i
 
 # target to preprocess a source file
 enc/alpha.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/alpha.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/alpha.c.i
 .PHONY : enc/alpha.c.i
 
 enc/alpha.s: enc/alpha.c.s
@@ -846,7 +846,7 @@ enc/alpha.s: enc/alpha.c.s
 
 # target to generate assembly for a file
 enc/alpha.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/alpha.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/alpha.c.s
 .PHONY : enc/alpha.c.s
 
 enc/analysis.obj: enc/analysis.c.obj
@@ -855,7 +855,7 @@ enc/analysis.obj: enc/analysis.c.obj
 
 # target to build an object file
 enc/analysis.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/analysis.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/analysis.c.obj
 .PHONY : enc/analysis.c.obj
 
 enc/analysis.i: enc/analysis.c.i
@@ -864,7 +864,7 @@ enc/analysis.i: enc/analysis.c.i
 
 # target to preprocess a source file
 enc/analysis.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/analysis.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/analysis.c.i
 .PHONY : enc/analysis.c.i
 
 enc/analysis.s: enc/analysis.c.s
@@ -873,7 +873,7 @@ enc/analysis.s: enc/analysis.c.s
 
 # target to generate assembly for a file
 enc/analysis.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/analysis.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/analysis.c.s
 .PHONY : enc/analysis.c.s
 
 enc/backward_references.obj: enc/backward_references.c.obj
@@ -882,7 +882,7 @@ enc/backward_references.obj: enc/backward_references.c.obj
 
 # target to build an object file
 enc/backward_references.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/backward_references.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/backward_references.c.obj
 .PHONY : enc/backward_references.c.obj
 
 enc/backward_references.i: enc/backward_references.c.i
@@ -891,7 +891,7 @@ enc/backward_references.i: enc/backward_references.c.i
 
 # target to preprocess a source file
 enc/backward_references.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/backward_references.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/backward_references.c.i
 .PHONY : enc/backward_references.c.i
 
 enc/backward_references.s: enc/backward_references.c.s
@@ -900,7 +900,7 @@ enc/backward_references.s: enc/backward_references.c.s
 
 # target to generate assembly for a file
 enc/backward_references.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/backward_references.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/backward_references.c.s
 .PHONY : enc/backward_references.c.s
 
 enc/config.obj: enc/config.c.obj
@@ -909,7 +909,7 @@ enc/config.obj: enc/config.c.obj
 
 # target to build an object file
 enc/config.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/config.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/config.c.obj
 .PHONY : enc/config.c.obj
 
 enc/config.i: enc/config.c.i
@@ -918,7 +918,7 @@ enc/config.i: enc/config.c.i
 
 # target to preprocess a source file
 enc/config.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/config.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/config.c.i
 .PHONY : enc/config.c.i
 
 enc/config.s: enc/config.c.s
@@ -927,7 +927,7 @@ enc/config.s: enc/config.c.s
 
 # target to generate assembly for a file
 enc/config.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/config.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/config.c.s
 .PHONY : enc/config.c.s
 
 enc/cost.obj: enc/cost.c.obj
@@ -936,7 +936,7 @@ enc/cost.obj: enc/cost.c.obj
 
 # target to build an object file
 enc/cost.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/cost.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/cost.c.obj
 .PHONY : enc/cost.c.obj
 
 enc/cost.i: enc/cost.c.i
@@ -945,7 +945,7 @@ enc/cost.i: enc/cost.c.i
 
 # target to preprocess a source file
 enc/cost.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/cost.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/cost.c.i
 .PHONY : enc/cost.c.i
 
 enc/cost.s: enc/cost.c.s
@@ -954,7 +954,7 @@ enc/cost.s: enc/cost.c.s
 
 # target to generate assembly for a file
 enc/cost.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/cost.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/cost.c.s
 .PHONY : enc/cost.c.s
 
 enc/filter.obj: enc/filter.c.obj
@@ -963,7 +963,7 @@ enc/filter.obj: enc/filter.c.obj
 
 # target to build an object file
 enc/filter.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/filter.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/filter.c.obj
 .PHONY : enc/filter.c.obj
 
 enc/filter.i: enc/filter.c.i
@@ -972,7 +972,7 @@ enc/filter.i: enc/filter.c.i
 
 # target to preprocess a source file
 enc/filter.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/filter.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/filter.c.i
 .PHONY : enc/filter.c.i
 
 enc/filter.s: enc/filter.c.s
@@ -981,7 +981,7 @@ enc/filter.s: enc/filter.c.s
 
 # target to generate assembly for a file
 enc/filter.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/filter.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/filter.c.s
 .PHONY : enc/filter.c.s
 
 enc/frame.obj: enc/frame.c.obj
@@ -990,7 +990,7 @@ enc/frame.obj: enc/frame.c.obj
 
 # target to build an object file
 enc/frame.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/frame.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/frame.c.obj
 .PHONY : enc/frame.c.obj
 
 enc/frame.i: enc/frame.c.i
@@ -999,7 +999,7 @@ enc/frame.i: enc/frame.c.i
 
 # target to preprocess a source file
 enc/frame.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/frame.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/frame.c.i
 .PHONY : enc/frame.c.i
 
 enc/frame.s: enc/frame.c.s
@@ -1008,7 +1008,7 @@ enc/frame.s: enc/frame.c.s
 
 # target to generate assembly for a file
 enc/frame.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/frame.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/frame.c.s
 .PHONY : enc/frame.c.s
 
 enc/histogram.obj: enc/histogram.c.obj
@@ -1017,7 +1017,7 @@ enc/histogram.obj: enc/histogram.c.obj
 
 # target to build an object file
 enc/histogram.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/histogram.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/histogram.c.obj
 .PHONY : enc/histogram.c.obj
 
 enc/histogram.i: enc/histogram.c.i
@@ -1026,7 +1026,7 @@ enc/histogram.i: enc/histogram.c.i
 
 # target to preprocess a source file
 enc/histogram.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/histogram.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/histogram.c.i
 .PHONY : enc/histogram.c.i
 
 enc/histogram.s: enc/histogram.c.s
@@ -1035,7 +1035,7 @@ enc/histogram.s: enc/histogram.c.s
 
 # target to generate assembly for a file
 enc/histogram.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/histogram.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/histogram.c.s
 .PHONY : enc/histogram.c.s
 
 enc/iterator.obj: enc/iterator.c.obj
@@ -1044,7 +1044,7 @@ enc/iterator.obj: enc/iterator.c.obj
 
 # target to build an object file
 enc/iterator.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/iterator.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/iterator.c.obj
 .PHONY : enc/iterator.c.obj
 
 enc/iterator.i: enc/iterator.c.i
@@ -1053,7 +1053,7 @@ enc/iterator.i: enc/iterator.c.i
 
 # target to preprocess a source file
 enc/iterator.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/iterator.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/iterator.c.i
 .PHONY : enc/iterator.c.i
 
 enc/iterator.s: enc/iterator.c.s
@@ -1062,7 +1062,7 @@ enc/iterator.s: enc/iterator.c.s
 
 # target to generate assembly for a file
 enc/iterator.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/iterator.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/iterator.c.s
 .PHONY : enc/iterator.c.s
 
 enc/layer.obj: enc/layer.c.obj
@@ -1071,7 +1071,7 @@ enc/layer.obj: enc/layer.c.obj
 
 # target to build an object file
 enc/layer.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/layer.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/layer.c.obj
 .PHONY : enc/layer.c.obj
 
 enc/layer.i: enc/layer.c.i
@@ -1080,7 +1080,7 @@ enc/layer.i: enc/layer.c.i
 
 # target to preprocess a source file
 enc/layer.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/layer.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/layer.c.i
 .PHONY : enc/layer.c.i
 
 enc/layer.s: enc/layer.c.s
@@ -1089,7 +1089,7 @@ enc/layer.s: enc/layer.c.s
 
 # target to generate assembly for a file
 enc/layer.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/layer.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/layer.c.s
 .PHONY : enc/layer.c.s
 
 enc/picture.obj: enc/picture.c.obj
@@ -1098,7 +1098,7 @@ enc/picture.obj: enc/picture.c.obj
 
 # target to build an object file
 enc/picture.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/picture.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/picture.c.obj
 .PHONY : enc/picture.c.obj
 
 enc/picture.i: enc/picture.c.i
@@ -1107,7 +1107,7 @@ enc/picture.i: enc/picture.c.i
 
 # target to preprocess a source file
 enc/picture.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/picture.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/picture.c.i
 .PHONY : enc/picture.c.i
 
 enc/picture.s: enc/picture.c.s
@@ -1116,7 +1116,7 @@ enc/picture.s: enc/picture.c.s
 
 # target to generate assembly for a file
 enc/picture.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/picture.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/picture.c.s
 .PHONY : enc/picture.c.s
 
 enc/quant.obj: enc/quant.c.obj
@@ -1125,7 +1125,7 @@ enc/quant.obj: enc/quant.c.obj
 
 # target to build an object file
 enc/quant.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/quant.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/quant.c.obj
 .PHONY : enc/quant.c.obj
 
 enc/quant.i: enc/quant.c.i
@@ -1134,7 +1134,7 @@ enc/quant.i: enc/quant.c.i
 
 # target to preprocess a source file
 enc/quant.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/quant.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/quant.c.i
 .PHONY : enc/quant.c.i
 
 enc/quant.s: enc/quant.c.s
@@ -1143,7 +1143,7 @@ enc/quant.s: enc/quant.c.s
 
 # target to generate assembly for a file
 enc/quant.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/quant.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/quant.c.s
 .PHONY : enc/quant.c.s
 
 enc/syntax.obj: enc/syntax.c.obj
@@ -1152,7 +1152,7 @@ enc/syntax.obj: enc/syntax.c.obj
 
 # target to build an object file
 enc/syntax.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/syntax.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/syntax.c.obj
 .PHONY : enc/syntax.c.obj
 
 enc/syntax.i: enc/syntax.c.i
@@ -1161,7 +1161,7 @@ enc/syntax.i: enc/syntax.c.i
 
 # target to preprocess a source file
 enc/syntax.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/syntax.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/syntax.c.i
 .PHONY : enc/syntax.c.i
 
 enc/syntax.s: enc/syntax.c.s
@@ -1170,7 +1170,7 @@ enc/syntax.s: enc/syntax.c.s
 
 # target to generate assembly for a file
 enc/syntax.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/syntax.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/syntax.c.s
 .PHONY : enc/syntax.c.s
 
 enc/token.obj: enc/token.c.obj
@@ -1179,7 +1179,7 @@ enc/token.obj: enc/token.c.obj
 
 # target to build an object file
 enc/token.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/token.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/token.c.obj
 .PHONY : enc/token.c.obj
 
 enc/token.i: enc/token.c.i
@@ -1188,7 +1188,7 @@ enc/token.i: enc/token.c.i
 
 # target to preprocess a source file
 enc/token.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/token.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/token.c.i
 .PHONY : enc/token.c.i
 
 enc/token.s: enc/token.c.s
@@ -1197,7 +1197,7 @@ enc/token.s: enc/token.c.s
 
 # target to generate assembly for a file
 enc/token.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/token.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/token.c.s
 .PHONY : enc/token.c.s
 
 enc/tree.obj: enc/tree.c.obj
@@ -1206,7 +1206,7 @@ enc/tree.obj: enc/tree.c.obj
 
 # target to build an object file
 enc/tree.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/tree.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/tree.c.obj
 .PHONY : enc/tree.c.obj
 
 enc/tree.i: enc/tree.c.i
@@ -1215,7 +1215,7 @@ enc/tree.i: enc/tree.c.i
 
 # target to preprocess a source file
 enc/tree.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/tree.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/tree.c.i
 .PHONY : enc/tree.c.i
 
 enc/tree.s: enc/tree.c.s
@@ -1224,7 +1224,7 @@ enc/tree.s: enc/tree.c.s
 
 # target to generate assembly for a file
 enc/tree.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/tree.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/tree.c.s
 .PHONY : enc/tree.c.s
 
 enc/vp8l.obj: enc/vp8l.c.obj
@@ -1233,7 +1233,7 @@ enc/vp8l.obj: enc/vp8l.c.obj
 
 # target to build an object file
 enc/vp8l.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/vp8l.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/vp8l.c.obj
 .PHONY : enc/vp8l.c.obj
 
 enc/vp8l.i: enc/vp8l.c.i
@@ -1242,7 +1242,7 @@ enc/vp8l.i: enc/vp8l.c.i
 
 # target to preprocess a source file
 enc/vp8l.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/vp8l.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/vp8l.c.i
 .PHONY : enc/vp8l.c.i
 
 enc/vp8l.s: enc/vp8l.c.s
@@ -1251,7 +1251,7 @@ enc/vp8l.s: enc/vp8l.c.s
 
 # target to generate assembly for a file
 enc/vp8l.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/vp8l.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/vp8l.c.s
 .PHONY : enc/vp8l.c.s
 
 enc/webpenc.obj: enc/webpenc.c.obj
@@ -1260,7 +1260,7 @@ enc/webpenc.obj: enc/webpenc.c.obj
 
 # target to build an object file
 enc/webpenc.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/webpenc.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/webpenc.c.obj
 .PHONY : enc/webpenc.c.obj
 
 enc/webpenc.i: enc/webpenc.c.i
@@ -1269,7 +1269,7 @@ enc/webpenc.i: enc/webpenc.c.i
 
 # target to preprocess a source file
 enc/webpenc.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/webpenc.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/webpenc.c.i
 .PHONY : enc/webpenc.c.i
 
 enc/webpenc.s: enc/webpenc.c.s
@@ -1278,7 +1278,7 @@ enc/webpenc.s: enc/webpenc.c.s
 
 # target to generate assembly for a file
 enc/webpenc.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/webpenc.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/enc/webpenc.c.s
 .PHONY : enc/webpenc.c.s
 
 mux/muxedit.obj: mux/muxedit.c.obj
@@ -1287,7 +1287,7 @@ mux/muxedit.obj: mux/muxedit.c.obj
 
 # target to build an object file
 mux/muxedit.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxedit.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxedit.c.obj
 .PHONY : mux/muxedit.c.obj
 
 mux/muxedit.i: mux/muxedit.c.i
@@ -1296,7 +1296,7 @@ mux/muxedit.i: mux/muxedit.c.i
 
 # target to preprocess a source file
 mux/muxedit.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxedit.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxedit.c.i
 .PHONY : mux/muxedit.c.i
 
 mux/muxedit.s: mux/muxedit.c.s
@@ -1305,7 +1305,7 @@ mux/muxedit.s: mux/muxedit.c.s
 
 # target to generate assembly for a file
 mux/muxedit.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxedit.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxedit.c.s
 .PHONY : mux/muxedit.c.s
 
 mux/muxinternal.obj: mux/muxinternal.c.obj
@@ -1314,7 +1314,7 @@ mux/muxinternal.obj: mux/muxinternal.c.obj
 
 # target to build an object file
 mux/muxinternal.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxinternal.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxinternal.c.obj
 .PHONY : mux/muxinternal.c.obj
 
 mux/muxinternal.i: mux/muxinternal.c.i
@@ -1323,7 +1323,7 @@ mux/muxinternal.i: mux/muxinternal.c.i
 
 # target to preprocess a source file
 mux/muxinternal.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxinternal.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxinternal.c.i
 .PHONY : mux/muxinternal.c.i
 
 mux/muxinternal.s: mux/muxinternal.c.s
@@ -1332,7 +1332,7 @@ mux/muxinternal.s: mux/muxinternal.c.s
 
 # target to generate assembly for a file
 mux/muxinternal.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxinternal.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxinternal.c.s
 .PHONY : mux/muxinternal.c.s
 
 mux/muxread.obj: mux/muxread.c.obj
@@ -1341,7 +1341,7 @@ mux/muxread.obj: mux/muxread.c.obj
 
 # target to build an object file
 mux/muxread.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxread.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxread.c.obj
 .PHONY : mux/muxread.c.obj
 
 mux/muxread.i: mux/muxread.c.i
@@ -1350,7 +1350,7 @@ mux/muxread.i: mux/muxread.c.i
 
 # target to preprocess a source file
 mux/muxread.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxread.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxread.c.i
 .PHONY : mux/muxread.c.i
 
 mux/muxread.s: mux/muxread.c.s
@@ -1359,7 +1359,7 @@ mux/muxread.s: mux/muxread.c.s
 
 # target to generate assembly for a file
 mux/muxread.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxread.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/mux/muxread.c.s
 .PHONY : mux/muxread.c.s
 
 utils/bit_reader.obj: utils/bit_reader.c.obj
@@ -1368,7 +1368,7 @@ utils/bit_reader.obj: utils/bit_reader.c.obj
 
 # target to build an object file
 utils/bit_reader.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_reader.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_reader.c.obj
 .PHONY : utils/bit_reader.c.obj
 
 utils/bit_reader.i: utils/bit_reader.c.i
@@ -1377,7 +1377,7 @@ utils/bit_reader.i: utils/bit_reader.c.i
 
 # target to preprocess a source file
 utils/bit_reader.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_reader.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_reader.c.i
 .PHONY : utils/bit_reader.c.i
 
 utils/bit_reader.s: utils/bit_reader.c.s
@@ -1386,7 +1386,7 @@ utils/bit_reader.s: utils/bit_reader.c.s
 
 # target to generate assembly for a file
 utils/bit_reader.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_reader.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_reader.c.s
 .PHONY : utils/bit_reader.c.s
 
 utils/bit_writer.obj: utils/bit_writer.c.obj
@@ -1395,7 +1395,7 @@ utils/bit_writer.obj: utils/bit_writer.c.obj
 
 # target to build an object file
 utils/bit_writer.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_writer.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_writer.c.obj
 .PHONY : utils/bit_writer.c.obj
 
 utils/bit_writer.i: utils/bit_writer.c.i
@@ -1404,7 +1404,7 @@ utils/bit_writer.i: utils/bit_writer.c.i
 
 # target to preprocess a source file
 utils/bit_writer.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_writer.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_writer.c.i
 .PHONY : utils/bit_writer.c.i
 
 utils/bit_writer.s: utils/bit_writer.c.s
@@ -1413,7 +1413,7 @@ utils/bit_writer.s: utils/bit_writer.c.s
 
 # target to generate assembly for a file
 utils/bit_writer.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_writer.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/bit_writer.c.s
 .PHONY : utils/bit_writer.c.s
 
 utils/color_cache.obj: utils/color_cache.c.obj
@@ -1422,7 +1422,7 @@ utils/color_cache.obj: utils/color_cache.c.obj
 
 # target to build an object file
 utils/color_cache.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/color_cache.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/color_cache.c.obj
 .PHONY : utils/color_cache.c.obj
 
 utils/color_cache.i: utils/color_cache.c.i
@@ -1431,7 +1431,7 @@ utils/color_cache.i: utils/color_cache.c.i
 
 # target to preprocess a source file
 utils/color_cache.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/color_cache.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/color_cache.c.i
 .PHONY : utils/color_cache.c.i
 
 utils/color_cache.s: utils/color_cache.c.s
@@ -1440,7 +1440,7 @@ utils/color_cache.s: utils/color_cache.c.s
 
 # target to generate assembly for a file
 utils/color_cache.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/color_cache.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/color_cache.c.s
 .PHONY : utils/color_cache.c.s
 
 utils/filters.obj: utils/filters.c.obj
@@ -1449,7 +1449,7 @@ utils/filters.obj: utils/filters.c.obj
 
 # target to build an object file
 utils/filters.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/filters.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/filters.c.obj
 .PHONY : utils/filters.c.obj
 
 utils/filters.i: utils/filters.c.i
@@ -1458,7 +1458,7 @@ utils/filters.i: utils/filters.c.i
 
 # target to preprocess a source file
 utils/filters.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/filters.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/filters.c.i
 .PHONY : utils/filters.c.i
 
 utils/filters.s: utils/filters.c.s
@@ -1467,7 +1467,7 @@ utils/filters.s: utils/filters.c.s
 
 # target to generate assembly for a file
 utils/filters.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/filters.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/filters.c.s
 .PHONY : utils/filters.c.s
 
 utils/huffman.obj: utils/huffman.c.obj
@@ -1476,7 +1476,7 @@ utils/huffman.obj: utils/huffman.c.obj
 
 # target to build an object file
 utils/huffman.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman.c.obj
 .PHONY : utils/huffman.c.obj
 
 utils/huffman.i: utils/huffman.c.i
@@ -1485,7 +1485,7 @@ utils/huffman.i: utils/huffman.c.i
 
 # target to preprocess a source file
 utils/huffman.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman.c.i
 .PHONY : utils/huffman.c.i
 
 utils/huffman.s: utils/huffman.c.s
@@ -1494,7 +1494,7 @@ utils/huffman.s: utils/huffman.c.s
 
 # target to generate assembly for a file
 utils/huffman.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman.c.s
 .PHONY : utils/huffman.c.s
 
 utils/huffman_encode.obj: utils/huffman_encode.c.obj
@@ -1503,7 +1503,7 @@ utils/huffman_encode.obj: utils/huffman_encode.c.obj
 
 # target to build an object file
 utils/huffman_encode.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman_encode.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman_encode.c.obj
 .PHONY : utils/huffman_encode.c.obj
 
 utils/huffman_encode.i: utils/huffman_encode.c.i
@@ -1512,7 +1512,7 @@ utils/huffman_encode.i: utils/huffman_encode.c.i
 
 # target to preprocess a source file
 utils/huffman_encode.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman_encode.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman_encode.c.i
 .PHONY : utils/huffman_encode.c.i
 
 utils/huffman_encode.s: utils/huffman_encode.c.s
@@ -1521,7 +1521,7 @@ utils/huffman_encode.s: utils/huffman_encode.c.s
 
 # target to generate assembly for a file
 utils/huffman_encode.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman_encode.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/huffman_encode.c.s
 .PHONY : utils/huffman_encode.c.s
 
 utils/quant_levels.obj: utils/quant_levels.c.obj
@@ -1530,7 +1530,7 @@ utils/quant_levels.obj: utils/quant_levels.c.obj
 
 # target to build an object file
 utils/quant_levels.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels.c.obj
 .PHONY : utils/quant_levels.c.obj
 
 utils/quant_levels.i: utils/quant_levels.c.i
@@ -1539,7 +1539,7 @@ utils/quant_levels.i: utils/quant_levels.c.i
 
 # target to preprocess a source file
 utils/quant_levels.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels.c.i
 .PHONY : utils/quant_levels.c.i
 
 utils/quant_levels.s: utils/quant_levels.c.s
@@ -1548,7 +1548,7 @@ utils/quant_levels.s: utils/quant_levels.c.s
 
 # target to generate assembly for a file
 utils/quant_levels.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels.c.s
 .PHONY : utils/quant_levels.c.s
 
 utils/quant_levels_dec.obj: utils/quant_levels_dec.c.obj
@@ -1557,7 +1557,7 @@ utils/quant_levels_dec.obj: utils/quant_levels_dec.c.obj
 
 # target to build an object file
 utils/quant_levels_dec.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels_dec.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels_dec.c.obj
 .PHONY : utils/quant_levels_dec.c.obj
 
 utils/quant_levels_dec.i: utils/quant_levels_dec.c.i
@@ -1566,7 +1566,7 @@ utils/quant_levels_dec.i: utils/quant_levels_dec.c.i
 
 # target to preprocess a source file
 utils/quant_levels_dec.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels_dec.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels_dec.c.i
 .PHONY : utils/quant_levels_dec.c.i
 
 utils/quant_levels_dec.s: utils/quant_levels_dec.c.s
@@ -1575,7 +1575,7 @@ utils/quant_levels_dec.s: utils/quant_levels_dec.c.s
 
 # target to generate assembly for a file
 utils/quant_levels_dec.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels_dec.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/quant_levels_dec.c.s
 .PHONY : utils/quant_levels_dec.c.s
 
 utils/rescaler.obj: utils/rescaler.c.obj
@@ -1584,7 +1584,7 @@ utils/rescaler.obj: utils/rescaler.c.obj
 
 # target to build an object file
 utils/rescaler.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/rescaler.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/rescaler.c.obj
 .PHONY : utils/rescaler.c.obj
 
 utils/rescaler.i: utils/rescaler.c.i
@@ -1593,7 +1593,7 @@ utils/rescaler.i: utils/rescaler.c.i
 
 # target to preprocess a source file
 utils/rescaler.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/rescaler.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/rescaler.c.i
 .PHONY : utils/rescaler.c.i
 
 utils/rescaler.s: utils/rescaler.c.s
@@ -1602,7 +1602,7 @@ utils/rescaler.s: utils/rescaler.c.s
 
 # target to generate assembly for a file
 utils/rescaler.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/rescaler.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/rescaler.c.s
 .PHONY : utils/rescaler.c.s
 
 utils/thread.obj: utils/thread.c.obj
@@ -1611,7 +1611,7 @@ utils/thread.obj: utils/thread.c.obj
 
 # target to build an object file
 utils/thread.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/thread.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/thread.c.obj
 .PHONY : utils/thread.c.obj
 
 utils/thread.i: utils/thread.c.i
@@ -1620,7 +1620,7 @@ utils/thread.i: utils/thread.c.i
 
 # target to preprocess a source file
 utils/thread.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/thread.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/thread.c.i
 .PHONY : utils/thread.c.i
 
 utils/thread.s: utils/thread.c.s
@@ -1629,7 +1629,7 @@ utils/thread.s: utils/thread.c.s
 
 # target to generate assembly for a file
 utils/thread.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/thread.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/thread.c.s
 .PHONY : utils/thread.c.s
 
 utils/utils.obj: utils/utils.c.obj
@@ -1638,7 +1638,7 @@ utils/utils.obj: utils/utils.c.obj
 
 # target to build an object file
 utils/utils.c.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/utils.c.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/utils.c.obj
 .PHONY : utils/utils.c.obj
 
 utils/utils.i: utils/utils.c.i
@@ -1647,7 +1647,7 @@ utils/utils.i: utils/utils.c.i
 
 # target to preprocess a source file
 utils/utils.c.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/utils.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/utils.c.i
 .PHONY : utils/utils.c.i
 
 utils/utils.s: utils/utils.c.s
@@ -1656,7 +1656,7 @@ utils/utils.s: utils/utils.c.s
 
 # target to generate assembly for a file
 utils/utils.c.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/utils.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f 3rdparty\libwebp\CMakeFiles\libwebp.dir\build.make 3rdparty/libwebp/CMakeFiles/libwebp.dir/utils/utils.c.s
 .PHONY : utils/utils.c.s
 
 # Help Target
@@ -1848,6 +1848,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

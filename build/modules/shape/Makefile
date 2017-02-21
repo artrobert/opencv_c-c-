@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,13 +68,35 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
 package/fast: package
 
 .PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -87,17 +109,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -108,17 +119,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\shape\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\shape\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,37 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/rule
-.PHONY : modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_shape_pch_dephelp: modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_shape_pch_dephelp
-
-# fast build rule for target.
-opencv_test_shape_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/build
-.PHONY : opencv_test_shape_pch_dephelp/fast
-
-# Convenience name for target.
 modules/shape/CMakeFiles/opencv_shape.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/opencv_shape.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/opencv_shape.dir/rule
 .PHONY : modules/shape/CMakeFiles/opencv_shape.dir/rule
 
 # Convenience name for target.
@@ -213,27 +198,12 @@ opencv_shape: modules/shape/CMakeFiles/opencv_shape.dir/rule
 
 # fast build rule for target.
 opencv_shape/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/build
 .PHONY : opencv_shape/fast
 
 # Convenience name for target.
-modules/shape/CMakeFiles/opencv_shape_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/opencv_shape_object.dir/rule
-.PHONY : modules/shape/CMakeFiles/opencv_shape_object.dir/rule
-
-# Convenience name for target.
-opencv_shape_object: modules/shape/CMakeFiles/opencv_shape_object.dir/rule
-
-.PHONY : opencv_shape_object
-
-# fast build rule for target.
-opencv_shape_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/build
-.PHONY : opencv_shape_object/fast
-
-# Convenience name for target.
 modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/rule
 .PHONY : modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +213,12 @@ opencv_shape_pch_dephelp: modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/
 
 # fast build rule for target.
 opencv_shape_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/build
 .PHONY : opencv_shape_pch_dephelp/fast
 
 # Convenience name for target.
 modules/shape/CMakeFiles/pch_Generate_opencv_shape.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/pch_Generate_opencv_shape.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/pch_Generate_opencv_shape.dir/rule
 .PHONY : modules/shape/CMakeFiles/pch_Generate_opencv_shape.dir/rule
 
 # Convenience name for target.
@@ -258,38 +228,8 @@ pch_Generate_opencv_shape: modules/shape/CMakeFiles/pch_Generate_opencv_shape.di
 
 # fast build rule for target.
 pch_Generate_opencv_shape/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\pch_Generate_opencv_shape.dir\build.make modules/shape/CMakeFiles/pch_Generate_opencv_shape.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\pch_Generate_opencv_shape.dir\build.make modules/shape/CMakeFiles/pch_Generate_opencv_shape.dir/build
 .PHONY : pch_Generate_opencv_shape/fast
-
-# Convenience name for target.
-modules/shape/CMakeFiles/opencv_test_shape.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/opencv_test_shape.dir/rule
-.PHONY : modules/shape/CMakeFiles/opencv_test_shape.dir/rule
-
-# Convenience name for target.
-opencv_test_shape: modules/shape/CMakeFiles/opencv_test_shape.dir/rule
-
-.PHONY : opencv_test_shape
-
-# fast build rule for target.
-opencv_test_shape/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape.dir\build.make modules/shape/CMakeFiles/opencv_test_shape.dir/build
-.PHONY : opencv_test_shape/fast
-
-# Convenience name for target.
-modules/shape/CMakeFiles/pch_Generate_opencv_test_shape.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/shape/CMakeFiles/pch_Generate_opencv_test_shape.dir/rule
-.PHONY : modules/shape/CMakeFiles/pch_Generate_opencv_test_shape.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_shape: modules/shape/CMakeFiles/pch_Generate_opencv_test_shape.dir/rule
-
-.PHONY : pch_Generate_opencv_test_shape
-
-# fast build rule for target.
-pch_Generate_opencv_test_shape/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\pch_Generate_opencv_test_shape.dir\build.make modules/shape/CMakeFiles/pch_Generate_opencv_test_shape.dir/build
-.PHONY : pch_Generate_opencv_test_shape/fast
 
 opencv_shape_pch_dephelp.obj: opencv_shape_pch_dephelp.cxx.obj
 
@@ -297,7 +237,7 @@ opencv_shape_pch_dephelp.obj: opencv_shape_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_shape_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/opencv_shape_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/opencv_shape_pch_dephelp.cxx.obj
 .PHONY : opencv_shape_pch_dephelp.cxx.obj
 
 opencv_shape_pch_dephelp.i: opencv_shape_pch_dephelp.cxx.i
@@ -306,7 +246,7 @@ opencv_shape_pch_dephelp.i: opencv_shape_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_shape_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/opencv_shape_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/opencv_shape_pch_dephelp.cxx.i
 .PHONY : opencv_shape_pch_dephelp.cxx.i
 
 opencv_shape_pch_dephelp.s: opencv_shape_pch_dephelp.cxx.s
@@ -315,35 +255,8 @@ opencv_shape_pch_dephelp.s: opencv_shape_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_shape_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/opencv_shape_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_shape_pch_dephelp.dir/opencv_shape_pch_dephelp.cxx.s
 .PHONY : opencv_shape_pch_dephelp.cxx.s
-
-opencv_test_shape_pch_dephelp.obj: opencv_test_shape_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_shape_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_shape_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/opencv_test_shape_pch_dephelp.cxx.obj
-.PHONY : opencv_test_shape_pch_dephelp.cxx.obj
-
-opencv_test_shape_pch_dephelp.i: opencv_test_shape_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_shape_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_shape_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/opencv_test_shape_pch_dephelp.cxx.i
-.PHONY : opencv_test_shape_pch_dephelp.cxx.i
-
-opencv_test_shape_pch_dephelp.s: opencv_test_shape_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_shape_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_shape_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape_pch_dephelp.dir\build.make modules/shape/CMakeFiles/opencv_test_shape_pch_dephelp.dir/opencv_test_shape_pch_dephelp.cxx.s
-.PHONY : opencv_test_shape_pch_dephelp.cxx.s
 
 src/aff_trans.obj: src/aff_trans.cpp.obj
 
@@ -351,8 +264,7 @@ src/aff_trans.obj: src/aff_trans.cpp.obj
 
 # target to build an object file
 src/aff_trans.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/aff_trans.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/aff_trans.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/aff_trans.cpp.obj
 .PHONY : src/aff_trans.cpp.obj
 
 src/aff_trans.i: src/aff_trans.cpp.i
@@ -361,8 +273,7 @@ src/aff_trans.i: src/aff_trans.cpp.i
 
 # target to preprocess a source file
 src/aff_trans.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/aff_trans.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/aff_trans.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/aff_trans.cpp.i
 .PHONY : src/aff_trans.cpp.i
 
 src/aff_trans.s: src/aff_trans.cpp.s
@@ -371,8 +282,7 @@ src/aff_trans.s: src/aff_trans.cpp.s
 
 # target to generate assembly for a file
 src/aff_trans.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/aff_trans.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/aff_trans.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/aff_trans.cpp.s
 .PHONY : src/aff_trans.cpp.s
 
 src/emdL1.obj: src/emdL1.cpp.obj
@@ -381,8 +291,7 @@ src/emdL1.obj: src/emdL1.cpp.obj
 
 # target to build an object file
 src/emdL1.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/emdL1.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/emdL1.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/emdL1.cpp.obj
 .PHONY : src/emdL1.cpp.obj
 
 src/emdL1.i: src/emdL1.cpp.i
@@ -391,8 +300,7 @@ src/emdL1.i: src/emdL1.cpp.i
 
 # target to preprocess a source file
 src/emdL1.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/emdL1.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/emdL1.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/emdL1.cpp.i
 .PHONY : src/emdL1.cpp.i
 
 src/emdL1.s: src/emdL1.cpp.s
@@ -401,8 +309,7 @@ src/emdL1.s: src/emdL1.cpp.s
 
 # target to generate assembly for a file
 src/emdL1.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/emdL1.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/emdL1.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/emdL1.cpp.s
 .PHONY : src/emdL1.cpp.s
 
 src/haus_dis.obj: src/haus_dis.cpp.obj
@@ -411,8 +318,7 @@ src/haus_dis.obj: src/haus_dis.cpp.obj
 
 # target to build an object file
 src/haus_dis.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/haus_dis.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/haus_dis.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/haus_dis.cpp.obj
 .PHONY : src/haus_dis.cpp.obj
 
 src/haus_dis.i: src/haus_dis.cpp.i
@@ -421,8 +327,7 @@ src/haus_dis.i: src/haus_dis.cpp.i
 
 # target to preprocess a source file
 src/haus_dis.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/haus_dis.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/haus_dis.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/haus_dis.cpp.i
 .PHONY : src/haus_dis.cpp.i
 
 src/haus_dis.s: src/haus_dis.cpp.s
@@ -431,8 +336,7 @@ src/haus_dis.s: src/haus_dis.cpp.s
 
 # target to generate assembly for a file
 src/haus_dis.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/haus_dis.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/haus_dis.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/haus_dis.cpp.s
 .PHONY : src/haus_dis.cpp.s
 
 src/hist_cost.obj: src/hist_cost.cpp.obj
@@ -441,8 +345,7 @@ src/hist_cost.obj: src/hist_cost.cpp.obj
 
 # target to build an object file
 src/hist_cost.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/hist_cost.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/hist_cost.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/hist_cost.cpp.obj
 .PHONY : src/hist_cost.cpp.obj
 
 src/hist_cost.i: src/hist_cost.cpp.i
@@ -451,8 +354,7 @@ src/hist_cost.i: src/hist_cost.cpp.i
 
 # target to preprocess a source file
 src/hist_cost.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/hist_cost.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/hist_cost.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/hist_cost.cpp.i
 .PHONY : src/hist_cost.cpp.i
 
 src/hist_cost.s: src/hist_cost.cpp.s
@@ -461,8 +363,7 @@ src/hist_cost.s: src/hist_cost.cpp.s
 
 # target to generate assembly for a file
 src/hist_cost.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/hist_cost.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/hist_cost.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/hist_cost.cpp.s
 .PHONY : src/hist_cost.cpp.s
 
 src/precomp.obj: src/precomp.cpp.obj
@@ -471,8 +372,7 @@ src/precomp.obj: src/precomp.cpp.obj
 
 # target to build an object file
 src/precomp.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/precomp.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/precomp.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/precomp.cpp.obj
 .PHONY : src/precomp.cpp.obj
 
 src/precomp.i: src/precomp.cpp.i
@@ -481,8 +381,7 @@ src/precomp.i: src/precomp.cpp.i
 
 # target to preprocess a source file
 src/precomp.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/precomp.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/precomp.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/precomp.cpp.i
 .PHONY : src/precomp.cpp.i
 
 src/precomp.s: src/precomp.cpp.s
@@ -491,8 +390,7 @@ src/precomp.s: src/precomp.cpp.s
 
 # target to generate assembly for a file
 src/precomp.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/precomp.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/precomp.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/precomp.cpp.s
 .PHONY : src/precomp.cpp.s
 
 src/sc_dis.obj: src/sc_dis.cpp.obj
@@ -501,8 +399,7 @@ src/sc_dis.obj: src/sc_dis.cpp.obj
 
 # target to build an object file
 src/sc_dis.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/sc_dis.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/sc_dis.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/sc_dis.cpp.obj
 .PHONY : src/sc_dis.cpp.obj
 
 src/sc_dis.i: src/sc_dis.cpp.i
@@ -511,8 +408,7 @@ src/sc_dis.i: src/sc_dis.cpp.i
 
 # target to preprocess a source file
 src/sc_dis.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/sc_dis.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/sc_dis.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/sc_dis.cpp.i
 .PHONY : src/sc_dis.cpp.i
 
 src/sc_dis.s: src/sc_dis.cpp.s
@@ -521,8 +417,7 @@ src/sc_dis.s: src/sc_dis.cpp.s
 
 # target to generate assembly for a file
 src/sc_dis.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/sc_dis.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/sc_dis.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/sc_dis.cpp.s
 .PHONY : src/sc_dis.cpp.s
 
 src/tps_trans.obj: src/tps_trans.cpp.obj
@@ -531,8 +426,7 @@ src/tps_trans.obj: src/tps_trans.cpp.obj
 
 # target to build an object file
 src/tps_trans.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/tps_trans.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/tps_trans.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/tps_trans.cpp.obj
 .PHONY : src/tps_trans.cpp.obj
 
 src/tps_trans.i: src/tps_trans.cpp.i
@@ -541,8 +435,7 @@ src/tps_trans.i: src/tps_trans.cpp.i
 
 # target to preprocess a source file
 src/tps_trans.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/tps_trans.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/tps_trans.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/tps_trans.cpp.i
 .PHONY : src/tps_trans.cpp.i
 
 src/tps_trans.s: src/tps_trans.cpp.s
@@ -551,63 +444,8 @@ src/tps_trans.s: src/tps_trans.cpp.s
 
 # target to generate assembly for a file
 src/tps_trans.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/tps_trans.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape_object.dir\build.make modules/shape/CMakeFiles/opencv_shape_object.dir/src/tps_trans.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_shape.dir\build.make modules/shape/CMakeFiles/opencv_shape.dir/src/tps_trans.cpp.s
 .PHONY : src/tps_trans.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape.dir\build.make modules/shape/CMakeFiles/opencv_test_shape.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape.dir\build.make modules/shape/CMakeFiles/opencv_test_shape.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape.dir\build.make modules/shape/CMakeFiles/opencv_test_shape.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
-
-test/test_shape.obj: test/test_shape.cpp.obj
-
-.PHONY : test/test_shape.obj
-
-# target to build an object file
-test/test_shape.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape.dir\build.make modules/shape/CMakeFiles/opencv_test_shape.dir/test/test_shape.cpp.obj
-.PHONY : test/test_shape.cpp.obj
-
-test/test_shape.i: test/test_shape.cpp.i
-
-.PHONY : test/test_shape.i
-
-# target to preprocess a source file
-test/test_shape.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape.dir\build.make modules/shape/CMakeFiles/opencv_test_shape.dir/test/test_shape.cpp.i
-.PHONY : test/test_shape.cpp.i
-
-test/test_shape.s: test/test_shape.cpp.s
-
-.PHONY : test/test_shape.s
-
-# target to generate assembly for a file
-test/test_shape.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\shape\CMakeFiles\opencv_test_shape.dir\build.make modules/shape/CMakeFiles/opencv_test_shape.dir/test/test_shape.cpp.s
-.PHONY : test/test_shape.cpp.s
 
 # Help Target
 help:
@@ -615,28 +453,21 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... opencv_test_shape_pch_dephelp
-	@echo ... list_install_components
 	@echo ... opencv_shape
-	@echo ... opencv_shape_object
+	@echo ... list_install_components
 	@echo ... opencv_shape_pch_dephelp
 	@echo ... pch_Generate_opencv_shape
 	@echo ... package
-	@echo ... opencv_test_shape
-	@echo ... test
-	@echo ... pch_Generate_opencv_test_shape
 	@echo ... package_source
-	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... test
+	@echo ... edit_cache
 	@echo ... install
 	@echo ... install/local
 	@echo ... install/strip
 	@echo ... opencv_shape_pch_dephelp.obj
 	@echo ... opencv_shape_pch_dephelp.i
 	@echo ... opencv_shape_pch_dephelp.s
-	@echo ... opencv_test_shape_pch_dephelp.obj
-	@echo ... opencv_test_shape_pch_dephelp.i
-	@echo ... opencv_test_shape_pch_dephelp.s
 	@echo ... src/aff_trans.obj
 	@echo ... src/aff_trans.i
 	@echo ... src/aff_trans.s
@@ -658,12 +489,6 @@ help:
 	@echo ... src/tps_trans.obj
 	@echo ... src/tps_trans.i
 	@echo ... src/tps_trans.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
-	@echo ... test/test_shape.obj
-	@echo ... test/test_shape.i
-	@echo ... test/test_shape.s
 .PHONY : help
 
 
@@ -675,6 +500,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

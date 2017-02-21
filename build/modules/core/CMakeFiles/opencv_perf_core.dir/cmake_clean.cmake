@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_perf_core.dir/perf/perf_dft.cpp.obj"
   "CMakeFiles/opencv_perf_core.dir/perf/perf_dot.cpp.obj"
   "CMakeFiles/opencv_perf_core.dir/perf/perf_inRange.cpp.obj"
+  "CMakeFiles/opencv_perf_core.dir/perf/perf_io_base64.cpp.obj"
   "CMakeFiles/opencv_perf_core.dir/perf/perf_main.cpp.obj"
   "CMakeFiles/opencv_perf_core.dir/perf/perf_mat.cpp.obj"
   "CMakeFiles/opencv_perf_core.dir/perf/perf_math.cpp.obj"

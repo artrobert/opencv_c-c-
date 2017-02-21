@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -65,10 +65,21 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -76,16 +87,16 @@ package_source/fast: package_source
 
 .PHONY : package_source/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
-.PHONY : package
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target package
-package/fast: package
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : package/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -108,17 +119,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\flann\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\flann\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 modules/flann/CMakeFiles/opencv_flann.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/opencv_flann.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/opencv_flann.dir/rule
 .PHONY : modules/flann/CMakeFiles/opencv_flann.dir/rule
 
 # Convenience name for target.
@@ -198,42 +198,12 @@ opencv_flann: modules/flann/CMakeFiles/opencv_flann.dir/rule
 
 # fast build rule for target.
 opencv_flann/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/build
 .PHONY : opencv_flann/fast
 
 # Convenience name for target.
-modules/flann/CMakeFiles/opencv_flann_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/opencv_flann_object.dir/rule
-.PHONY : modules/flann/CMakeFiles/opencv_flann_object.dir/rule
-
-# Convenience name for target.
-opencv_flann_object: modules/flann/CMakeFiles/opencv_flann_object.dir/rule
-
-.PHONY : opencv_flann_object
-
-# fast build rule for target.
-opencv_flann_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_object.dir\build.make modules/flann/CMakeFiles/opencv_flann_object.dir/build
-.PHONY : opencv_flann_object/fast
-
-# Convenience name for target.
-modules/flann/CMakeFiles/opencv_test_flann.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/opencv_test_flann.dir/rule
-.PHONY : modules/flann/CMakeFiles/opencv_test_flann.dir/rule
-
-# Convenience name for target.
-opencv_test_flann: modules/flann/CMakeFiles/opencv_test_flann.dir/rule
-
-.PHONY : opencv_test_flann
-
-# fast build rule for target.
-opencv_test_flann/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann.dir\build.make modules/flann/CMakeFiles/opencv_test_flann.dir/build
-.PHONY : opencv_test_flann/fast
-
-# Convenience name for target.
 modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/rule
 .PHONY : modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +213,12 @@ opencv_flann_pch_dephelp: modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/
 
 # fast build rule for target.
 opencv_flann_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/build
 .PHONY : opencv_flann_pch_dephelp/fast
 
 # Convenience name for target.
 modules/flann/CMakeFiles/pch_Generate_opencv_flann.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/pch_Generate_opencv_flann.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/pch_Generate_opencv_flann.dir/rule
 .PHONY : modules/flann/CMakeFiles/pch_Generate_opencv_flann.dir/rule
 
 # Convenience name for target.
@@ -258,38 +228,8 @@ pch_Generate_opencv_flann: modules/flann/CMakeFiles/pch_Generate_opencv_flann.di
 
 # fast build rule for target.
 pch_Generate_opencv_flann/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\pch_Generate_opencv_flann.dir\build.make modules/flann/CMakeFiles/pch_Generate_opencv_flann.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\pch_Generate_opencv_flann.dir\build.make modules/flann/CMakeFiles/pch_Generate_opencv_flann.dir/build
 .PHONY : pch_Generate_opencv_flann/fast
-
-# Convenience name for target.
-modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/rule
-.PHONY : modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_flann_pch_dephelp: modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_flann_pch_dephelp
-
-# fast build rule for target.
-opencv_test_flann_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/build
-.PHONY : opencv_test_flann_pch_dephelp/fast
-
-# Convenience name for target.
-modules/flann/CMakeFiles/pch_Generate_opencv_test_flann.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/flann/CMakeFiles/pch_Generate_opencv_test_flann.dir/rule
-.PHONY : modules/flann/CMakeFiles/pch_Generate_opencv_test_flann.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_flann: modules/flann/CMakeFiles/pch_Generate_opencv_test_flann.dir/rule
-
-.PHONY : pch_Generate_opencv_test_flann
-
-# fast build rule for target.
-pch_Generate_opencv_test_flann/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\pch_Generate_opencv_test_flann.dir\build.make modules/flann/CMakeFiles/pch_Generate_opencv_test_flann.dir/build
-.PHONY : pch_Generate_opencv_test_flann/fast
 
 opencv_flann_pch_dephelp.obj: opencv_flann_pch_dephelp.cxx.obj
 
@@ -297,7 +237,7 @@ opencv_flann_pch_dephelp.obj: opencv_flann_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_flann_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/opencv_flann_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/opencv_flann_pch_dephelp.cxx.obj
 .PHONY : opencv_flann_pch_dephelp.cxx.obj
 
 opencv_flann_pch_dephelp.i: opencv_flann_pch_dephelp.cxx.i
@@ -306,7 +246,7 @@ opencv_flann_pch_dephelp.i: opencv_flann_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_flann_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/opencv_flann_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/opencv_flann_pch_dephelp.cxx.i
 .PHONY : opencv_flann_pch_dephelp.cxx.i
 
 opencv_flann_pch_dephelp.s: opencv_flann_pch_dephelp.cxx.s
@@ -315,35 +255,8 @@ opencv_flann_pch_dephelp.s: opencv_flann_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_flann_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/opencv_flann_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_flann_pch_dephelp.dir/opencv_flann_pch_dephelp.cxx.s
 .PHONY : opencv_flann_pch_dephelp.cxx.s
-
-opencv_test_flann_pch_dephelp.obj: opencv_test_flann_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_flann_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_flann_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/opencv_test_flann_pch_dephelp.cxx.obj
-.PHONY : opencv_test_flann_pch_dephelp.cxx.obj
-
-opencv_test_flann_pch_dephelp.i: opencv_test_flann_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_flann_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_flann_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/opencv_test_flann_pch_dephelp.cxx.i
-.PHONY : opencv_test_flann_pch_dephelp.cxx.i
-
-opencv_test_flann_pch_dephelp.s: opencv_test_flann_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_flann_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_flann_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann_pch_dephelp.dir\build.make modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/opencv_test_flann_pch_dephelp.cxx.s
-.PHONY : opencv_test_flann_pch_dephelp.cxx.s
 
 src/flann.obj: src/flann.cpp.obj
 
@@ -351,8 +264,7 @@ src/flann.obj: src/flann.cpp.obj
 
 # target to build an object file
 src/flann.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/flann.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_object.dir\build.make modules/flann/CMakeFiles/opencv_flann_object.dir/src/flann.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/flann.cpp.obj
 .PHONY : src/flann.cpp.obj
 
 src/flann.i: src/flann.cpp.i
@@ -361,8 +273,7 @@ src/flann.i: src/flann.cpp.i
 
 # target to preprocess a source file
 src/flann.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/flann.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_object.dir\build.make modules/flann/CMakeFiles/opencv_flann_object.dir/src/flann.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/flann.cpp.i
 .PHONY : src/flann.cpp.i
 
 src/flann.s: src/flann.cpp.s
@@ -371,8 +282,7 @@ src/flann.s: src/flann.cpp.s
 
 # target to generate assembly for a file
 src/flann.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/flann.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_object.dir\build.make modules/flann/CMakeFiles/opencv_flann_object.dir/src/flann.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/flann.cpp.s
 .PHONY : src/flann.cpp.s
 
 src/miniflann.obj: src/miniflann.cpp.obj
@@ -381,8 +291,7 @@ src/miniflann.obj: src/miniflann.cpp.obj
 
 # target to build an object file
 src/miniflann.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/miniflann.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_object.dir\build.make modules/flann/CMakeFiles/opencv_flann_object.dir/src/miniflann.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/miniflann.cpp.obj
 .PHONY : src/miniflann.cpp.obj
 
 src/miniflann.i: src/miniflann.cpp.i
@@ -391,8 +300,7 @@ src/miniflann.i: src/miniflann.cpp.i
 
 # target to preprocess a source file
 src/miniflann.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/miniflann.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_object.dir\build.make modules/flann/CMakeFiles/opencv_flann_object.dir/src/miniflann.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/miniflann.cpp.i
 .PHONY : src/miniflann.cpp.i
 
 src/miniflann.s: src/miniflann.cpp.s
@@ -401,63 +309,8 @@ src/miniflann.s: src/miniflann.cpp.s
 
 # target to generate assembly for a file
 src/miniflann.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/miniflann.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann_object.dir\build.make modules/flann/CMakeFiles/opencv_flann_object.dir/src/miniflann.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_flann.dir\build.make modules/flann/CMakeFiles/opencv_flann.dir/src/miniflann.cpp.s
 .PHONY : src/miniflann.cpp.s
-
-test/test_lshtable_badarg.obj: test/test_lshtable_badarg.cpp.obj
-
-.PHONY : test/test_lshtable_badarg.obj
-
-# target to build an object file
-test/test_lshtable_badarg.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann.dir\build.make modules/flann/CMakeFiles/opencv_test_flann.dir/test/test_lshtable_badarg.cpp.obj
-.PHONY : test/test_lshtable_badarg.cpp.obj
-
-test/test_lshtable_badarg.i: test/test_lshtable_badarg.cpp.i
-
-.PHONY : test/test_lshtable_badarg.i
-
-# target to preprocess a source file
-test/test_lshtable_badarg.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann.dir\build.make modules/flann/CMakeFiles/opencv_test_flann.dir/test/test_lshtable_badarg.cpp.i
-.PHONY : test/test_lshtable_badarg.cpp.i
-
-test/test_lshtable_badarg.s: test/test_lshtable_badarg.cpp.s
-
-.PHONY : test/test_lshtable_badarg.s
-
-# target to generate assembly for a file
-test/test_lshtable_badarg.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann.dir\build.make modules/flann/CMakeFiles/opencv_test_flann.dir/test/test_lshtable_badarg.cpp.s
-.PHONY : test/test_lshtable_badarg.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann.dir\build.make modules/flann/CMakeFiles/opencv_test_flann.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann.dir\build.make modules/flann/CMakeFiles/opencv_test_flann.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\flann\CMakeFiles\opencv_test_flann.dir\build.make modules/flann/CMakeFiles/opencv_test_flann.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
 
 # Help Target
 help:
@@ -465,40 +318,27 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... list_install_components
 	@echo ... opencv_flann
-	@echo ... opencv_flann_object
-	@echo ... opencv_test_flann
+	@echo ... list_install_components
 	@echo ... opencv_flann_pch_dephelp
 	@echo ... pch_Generate_opencv_flann
-	@echo ... opencv_test_flann_pch_dephelp
-	@echo ... package_source
-	@echo ... pch_Generate_opencv_test_flann
 	@echo ... package
+	@echo ... package_source
+	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... edit_cache
-	@echo ... rebuild_cache
 	@echo ... install
 	@echo ... install/local
 	@echo ... install/strip
 	@echo ... opencv_flann_pch_dephelp.obj
 	@echo ... opencv_flann_pch_dephelp.i
 	@echo ... opencv_flann_pch_dephelp.s
-	@echo ... opencv_test_flann_pch_dephelp.obj
-	@echo ... opencv_test_flann_pch_dephelp.i
-	@echo ... opencv_test_flann_pch_dephelp.s
 	@echo ... src/flann.obj
 	@echo ... src/flann.i
 	@echo ... src/flann.s
 	@echo ... src/miniflann.obj
 	@echo ... src/miniflann.i
 	@echo ... src/miniflann.s
-	@echo ... test/test_lshtable_badarg.obj
-	@echo ... test/test_lshtable_badarg.i
-	@echo ... test/test_lshtable_badarg.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
 .PHONY : help
 
 
@@ -510,6 +350,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

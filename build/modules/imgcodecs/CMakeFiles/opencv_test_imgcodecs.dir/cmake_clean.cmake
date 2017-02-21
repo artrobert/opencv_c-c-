@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/opencv_test_imgcodecs.dir/test/test_drawing.cpp.obj"
   "CMakeFiles/opencv_test_imgcodecs.dir/test/test_grfmt.cpp.obj"
   "CMakeFiles/opencv_test_imgcodecs.dir/test/test_main.cpp.obj"
   "../../bin/opencv_test_imgcodecs.pdb"

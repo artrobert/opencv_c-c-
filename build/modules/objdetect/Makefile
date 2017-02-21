@@ -47,35 +47,24 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
-.PHONY : package
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target package
-package/fast: package
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : package/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -88,6 +77,28 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -98,17 +109,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\objdetect\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\objdetect\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,37 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/rule
-.PHONY : modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/rule
-
-# Convenience name for target.
-opencv_objdetect_object: modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/rule
-
-.PHONY : opencv_objdetect_object
-
-# fast build rule for target.
-opencv_objdetect_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/build
-.PHONY : opencv_objdetect_object/fast
-
-# Convenience name for target.
 modules/objdetect/CMakeFiles/opencv_objdetect.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_objdetect.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_objdetect.dir/rule
 .PHONY : modules/objdetect/CMakeFiles/opencv_objdetect.dir/rule
 
 # Convenience name for target.
@@ -213,27 +198,12 @@ opencv_objdetect: modules/objdetect/CMakeFiles/opencv_objdetect.dir/rule
 
 # fast build rule for target.
 opencv_objdetect/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/build
 .PHONY : opencv_objdetect/fast
 
 # Convenience name for target.
-modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/rule
-.PHONY : modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/rule
-
-# Convenience name for target.
-opencv_test_objdetect: modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/rule
-
-.PHONY : opencv_test_objdetect
-
-# fast build rule for target.
-opencv_test_objdetect/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/build
-.PHONY : opencv_test_objdetect/fast
-
-# Convenience name for target.
 modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/rule
 .PHONY : modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +213,12 @@ opencv_objdetect_pch_dephelp: modules/objdetect/CMakeFiles/opencv_objdetect_pch_
 
 # fast build rule for target.
 opencv_objdetect_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/build
 .PHONY : opencv_objdetect_pch_dephelp/fast
 
 # Convenience name for target.
 modules/objdetect/CMakeFiles/pch_Generate_opencv_objdetect.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/pch_Generate_opencv_objdetect.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/pch_Generate_opencv_objdetect.dir/rule
 .PHONY : modules/objdetect/CMakeFiles/pch_Generate_opencv_objdetect.dir/rule
 
 # Convenience name for target.
@@ -258,83 +228,8 @@ pch_Generate_opencv_objdetect: modules/objdetect/CMakeFiles/pch_Generate_opencv_
 
 # fast build rule for target.
 pch_Generate_opencv_objdetect/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\pch_Generate_opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/pch_Generate_opencv_objdetect.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\pch_Generate_opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/pch_Generate_opencv_objdetect.dir/build
 .PHONY : pch_Generate_opencv_objdetect/fast
-
-# Convenience name for target.
-modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/rule
-.PHONY : modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/rule
-
-# Convenience name for target.
-opencv_perf_objdetect: modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/rule
-
-.PHONY : opencv_perf_objdetect
-
-# fast build rule for target.
-opencv_perf_objdetect/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/build
-.PHONY : opencv_perf_objdetect/fast
-
-# Convenience name for target.
-modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/rule
-.PHONY : modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_objdetect_pch_dephelp: modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_objdetect_pch_dephelp
-
-# fast build rule for target.
-opencv_test_objdetect_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/build
-.PHONY : opencv_test_objdetect_pch_dephelp/fast
-
-# Convenience name for target.
-modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/rule
-.PHONY : modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_perf_objdetect_pch_dephelp: modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/rule
-
-.PHONY : opencv_perf_objdetect_pch_dephelp
-
-# fast build rule for target.
-opencv_perf_objdetect_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/build
-.PHONY : opencv_perf_objdetect_pch_dephelp/fast
-
-# Convenience name for target.
-modules/objdetect/CMakeFiles/pch_Generate_opencv_test_objdetect.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/pch_Generate_opencv_test_objdetect.dir/rule
-.PHONY : modules/objdetect/CMakeFiles/pch_Generate_opencv_test_objdetect.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_objdetect: modules/objdetect/CMakeFiles/pch_Generate_opencv_test_objdetect.dir/rule
-
-.PHONY : pch_Generate_opencv_test_objdetect
-
-# fast build rule for target.
-pch_Generate_opencv_test_objdetect/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\pch_Generate_opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/pch_Generate_opencv_test_objdetect.dir/build
-.PHONY : pch_Generate_opencv_test_objdetect/fast
-
-# Convenience name for target.
-modules/objdetect/CMakeFiles/pch_Generate_opencv_perf_objdetect.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/objdetect/CMakeFiles/pch_Generate_opencv_perf_objdetect.dir/rule
-.PHONY : modules/objdetect/CMakeFiles/pch_Generate_opencv_perf_objdetect.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_perf_objdetect: modules/objdetect/CMakeFiles/pch_Generate_opencv_perf_objdetect.dir/rule
-
-.PHONY : pch_Generate_opencv_perf_objdetect
-
-# fast build rule for target.
-pch_Generate_opencv_perf_objdetect/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\pch_Generate_opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/pch_Generate_opencv_perf_objdetect.dir/build
-.PHONY : pch_Generate_opencv_perf_objdetect/fast
 
 opencl_kernels_objdetect.obj: opencl_kernels_objdetect.cpp.obj
 
@@ -342,8 +237,7 @@ opencl_kernels_objdetect.obj: opencl_kernels_objdetect.cpp.obj
 
 # target to build an object file
 opencl_kernels_objdetect.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/opencl_kernels_objdetect.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.obj
 .PHONY : opencl_kernels_objdetect.cpp.obj
 
 opencl_kernels_objdetect.i: opencl_kernels_objdetect.cpp.i
@@ -352,8 +246,7 @@ opencl_kernels_objdetect.i: opencl_kernels_objdetect.cpp.i
 
 # target to preprocess a source file
 opencl_kernels_objdetect.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/opencl_kernels_objdetect.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.i
 .PHONY : opencl_kernels_objdetect.cpp.i
 
 opencl_kernels_objdetect.s: opencl_kernels_objdetect.cpp.s
@@ -362,8 +255,7 @@ opencl_kernels_objdetect.s: opencl_kernels_objdetect.cpp.s
 
 # target to generate assembly for a file
 opencl_kernels_objdetect.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/opencl_kernels_objdetect.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.s
 .PHONY : opencl_kernels_objdetect.cpp.s
 
 opencv_objdetect_pch_dephelp.obj: opencv_objdetect_pch_dephelp.cxx.obj
@@ -372,7 +264,7 @@ opencv_objdetect_pch_dephelp.obj: opencv_objdetect_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_objdetect_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/opencv_objdetect_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/opencv_objdetect_pch_dephelp.cxx.obj
 .PHONY : opencv_objdetect_pch_dephelp.cxx.obj
 
 opencv_objdetect_pch_dephelp.i: opencv_objdetect_pch_dephelp.cxx.i
@@ -381,7 +273,7 @@ opencv_objdetect_pch_dephelp.i: opencv_objdetect_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_objdetect_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/opencv_objdetect_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/opencv_objdetect_pch_dephelp.cxx.i
 .PHONY : opencv_objdetect_pch_dephelp.cxx.i
 
 opencv_objdetect_pch_dephelp.s: opencv_objdetect_pch_dephelp.cxx.s
@@ -390,143 +282,8 @@ opencv_objdetect_pch_dephelp.s: opencv_objdetect_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_objdetect_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/opencv_objdetect_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_pch_dephelp.dir/opencv_objdetect_pch_dephelp.cxx.s
 .PHONY : opencv_objdetect_pch_dephelp.cxx.s
-
-opencv_perf_objdetect_pch_dephelp.obj: opencv_perf_objdetect_pch_dephelp.cxx.obj
-
-.PHONY : opencv_perf_objdetect_pch_dephelp.obj
-
-# target to build an object file
-opencv_perf_objdetect_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/opencv_perf_objdetect_pch_dephelp.cxx.obj
-.PHONY : opencv_perf_objdetect_pch_dephelp.cxx.obj
-
-opencv_perf_objdetect_pch_dephelp.i: opencv_perf_objdetect_pch_dephelp.cxx.i
-
-.PHONY : opencv_perf_objdetect_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_perf_objdetect_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/opencv_perf_objdetect_pch_dephelp.cxx.i
-.PHONY : opencv_perf_objdetect_pch_dephelp.cxx.i
-
-opencv_perf_objdetect_pch_dephelp.s: opencv_perf_objdetect_pch_dephelp.cxx.s
-
-.PHONY : opencv_perf_objdetect_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_perf_objdetect_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect_pch_dephelp.dir/opencv_perf_objdetect_pch_dephelp.cxx.s
-.PHONY : opencv_perf_objdetect_pch_dephelp.cxx.s
-
-opencv_test_objdetect_pch_dephelp.obj: opencv_test_objdetect_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_objdetect_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_objdetect_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/opencv_test_objdetect_pch_dephelp.cxx.obj
-.PHONY : opencv_test_objdetect_pch_dephelp.cxx.obj
-
-opencv_test_objdetect_pch_dephelp.i: opencv_test_objdetect_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_objdetect_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_objdetect_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/opencv_test_objdetect_pch_dephelp.cxx.i
-.PHONY : opencv_test_objdetect_pch_dephelp.cxx.i
-
-opencv_test_objdetect_pch_dephelp.s: opencv_test_objdetect_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_objdetect_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_objdetect_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect_pch_dephelp.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect_pch_dephelp.dir/opencv_test_objdetect_pch_dephelp.cxx.s
-.PHONY : opencv_test_objdetect_pch_dephelp.cxx.s
-
-perf/opencl/perf_cascades.obj: perf/opencl/perf_cascades.cpp.obj
-
-.PHONY : perf/opencl/perf_cascades.obj
-
-# target to build an object file
-perf/opencl/perf_cascades.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/opencl/perf_cascades.cpp.obj
-.PHONY : perf/opencl/perf_cascades.cpp.obj
-
-perf/opencl/perf_cascades.i: perf/opencl/perf_cascades.cpp.i
-
-.PHONY : perf/opencl/perf_cascades.i
-
-# target to preprocess a source file
-perf/opencl/perf_cascades.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/opencl/perf_cascades.cpp.i
-.PHONY : perf/opencl/perf_cascades.cpp.i
-
-perf/opencl/perf_cascades.s: perf/opencl/perf_cascades.cpp.s
-
-.PHONY : perf/opencl/perf_cascades.s
-
-# target to generate assembly for a file
-perf/opencl/perf_cascades.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/opencl/perf_cascades.cpp.s
-.PHONY : perf/opencl/perf_cascades.cpp.s
-
-perf/opencl/perf_hogdetect.obj: perf/opencl/perf_hogdetect.cpp.obj
-
-.PHONY : perf/opencl/perf_hogdetect.obj
-
-# target to build an object file
-perf/opencl/perf_hogdetect.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/opencl/perf_hogdetect.cpp.obj
-.PHONY : perf/opencl/perf_hogdetect.cpp.obj
-
-perf/opencl/perf_hogdetect.i: perf/opencl/perf_hogdetect.cpp.i
-
-.PHONY : perf/opencl/perf_hogdetect.i
-
-# target to preprocess a source file
-perf/opencl/perf_hogdetect.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/opencl/perf_hogdetect.cpp.i
-.PHONY : perf/opencl/perf_hogdetect.cpp.i
-
-perf/opencl/perf_hogdetect.s: perf/opencl/perf_hogdetect.cpp.s
-
-.PHONY : perf/opencl/perf_hogdetect.s
-
-# target to generate assembly for a file
-perf/opencl/perf_hogdetect.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/opencl/perf_hogdetect.cpp.s
-.PHONY : perf/opencl/perf_hogdetect.cpp.s
-
-perf/perf_main.obj: perf/perf_main.cpp.obj
-
-.PHONY : perf/perf_main.obj
-
-# target to build an object file
-perf/perf_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/perf_main.cpp.obj
-.PHONY : perf/perf_main.cpp.obj
-
-perf/perf_main.i: perf/perf_main.cpp.i
-
-.PHONY : perf/perf_main.i
-
-# target to preprocess a source file
-perf/perf_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/perf_main.cpp.i
-.PHONY : perf/perf_main.cpp.i
-
-perf/perf_main.s: perf/perf_main.cpp.s
-
-.PHONY : perf/perf_main.s
-
-# target to generate assembly for a file
-perf/perf_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_perf_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_perf_objdetect.dir/perf/perf_main.cpp.s
-.PHONY : perf/perf_main.cpp.s
 
 src/cascadedetect.obj: src/cascadedetect.cpp.obj
 
@@ -534,8 +291,7 @@ src/cascadedetect.obj: src/cascadedetect.cpp.obj
 
 # target to build an object file
 src/cascadedetect.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/cascadedetect.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect.cpp.obj
 .PHONY : src/cascadedetect.cpp.obj
 
 src/cascadedetect.i: src/cascadedetect.cpp.i
@@ -544,8 +300,7 @@ src/cascadedetect.i: src/cascadedetect.cpp.i
 
 # target to preprocess a source file
 src/cascadedetect.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/cascadedetect.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect.cpp.i
 .PHONY : src/cascadedetect.cpp.i
 
 src/cascadedetect.s: src/cascadedetect.cpp.s
@@ -554,8 +309,7 @@ src/cascadedetect.s: src/cascadedetect.cpp.s
 
 # target to generate assembly for a file
 src/cascadedetect.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/cascadedetect.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect.cpp.s
 .PHONY : src/cascadedetect.cpp.s
 
 src/cascadedetect_convert.obj: src/cascadedetect_convert.cpp.obj
@@ -564,8 +318,7 @@ src/cascadedetect_convert.obj: src/cascadedetect_convert.cpp.obj
 
 # target to build an object file
 src/cascadedetect_convert.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/cascadedetect_convert.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect_convert.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect_convert.cpp.obj
 .PHONY : src/cascadedetect_convert.cpp.obj
 
 src/cascadedetect_convert.i: src/cascadedetect_convert.cpp.i
@@ -574,8 +327,7 @@ src/cascadedetect_convert.i: src/cascadedetect_convert.cpp.i
 
 # target to preprocess a source file
 src/cascadedetect_convert.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/cascadedetect_convert.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect_convert.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect_convert.cpp.i
 .PHONY : src/cascadedetect_convert.cpp.i
 
 src/cascadedetect_convert.s: src/cascadedetect_convert.cpp.s
@@ -584,8 +336,7 @@ src/cascadedetect_convert.s: src/cascadedetect_convert.cpp.s
 
 # target to generate assembly for a file
 src/cascadedetect_convert.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/cascadedetect_convert.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect_convert.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/cascadedetect_convert.cpp.s
 .PHONY : src/cascadedetect_convert.cpp.s
 
 src/detection_based_tracker.obj: src/detection_based_tracker.cpp.obj
@@ -594,8 +345,7 @@ src/detection_based_tracker.obj: src/detection_based_tracker.cpp.obj
 
 # target to build an object file
 src/detection_based_tracker.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/detection_based_tracker.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/detection_based_tracker.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/detection_based_tracker.cpp.obj
 .PHONY : src/detection_based_tracker.cpp.obj
 
 src/detection_based_tracker.i: src/detection_based_tracker.cpp.i
@@ -604,8 +354,7 @@ src/detection_based_tracker.i: src/detection_based_tracker.cpp.i
 
 # target to preprocess a source file
 src/detection_based_tracker.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/detection_based_tracker.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/detection_based_tracker.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/detection_based_tracker.cpp.i
 .PHONY : src/detection_based_tracker.cpp.i
 
 src/detection_based_tracker.s: src/detection_based_tracker.cpp.s
@@ -614,8 +363,7 @@ src/detection_based_tracker.s: src/detection_based_tracker.cpp.s
 
 # target to generate assembly for a file
 src/detection_based_tracker.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/detection_based_tracker.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/detection_based_tracker.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/detection_based_tracker.cpp.s
 .PHONY : src/detection_based_tracker.cpp.s
 
 src/haar.obj: src/haar.cpp.obj
@@ -624,8 +372,7 @@ src/haar.obj: src/haar.cpp.obj
 
 # target to build an object file
 src/haar.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/haar.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/haar.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/haar.cpp.obj
 .PHONY : src/haar.cpp.obj
 
 src/haar.i: src/haar.cpp.i
@@ -634,8 +381,7 @@ src/haar.i: src/haar.cpp.i
 
 # target to preprocess a source file
 src/haar.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/haar.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/haar.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/haar.cpp.i
 .PHONY : src/haar.cpp.i
 
 src/haar.s: src/haar.cpp.s
@@ -644,8 +390,7 @@ src/haar.s: src/haar.cpp.s
 
 # target to generate assembly for a file
 src/haar.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/haar.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/haar.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/haar.cpp.s
 .PHONY : src/haar.cpp.s
 
 src/hog.obj: src/hog.cpp.obj
@@ -654,8 +399,7 @@ src/hog.obj: src/hog.cpp.obj
 
 # target to build an object file
 src/hog.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/hog.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/hog.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/hog.cpp.obj
 .PHONY : src/hog.cpp.obj
 
 src/hog.i: src/hog.cpp.i
@@ -664,8 +408,7 @@ src/hog.i: src/hog.cpp.i
 
 # target to preprocess a source file
 src/hog.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/hog.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/hog.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/hog.cpp.i
 .PHONY : src/hog.cpp.i
 
 src/hog.s: src/hog.cpp.s
@@ -674,8 +417,7 @@ src/hog.s: src/hog.cpp.s
 
 # target to generate assembly for a file
 src/hog.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/hog.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/hog.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/hog.cpp.s
 .PHONY : src/hog.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -684,8 +426,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/main.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/main.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -694,8 +435,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/main.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -704,90 +444,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect_object.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect_object.dir/src/main.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_objdetect.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-test/opencl/test_hogdetector.obj: test/opencl/test_hogdetector.cpp.obj
-
-.PHONY : test/opencl/test_hogdetector.obj
-
-# target to build an object file
-test/opencl/test_hogdetector.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.obj
-.PHONY : test/opencl/test_hogdetector.cpp.obj
-
-test/opencl/test_hogdetector.i: test/opencl/test_hogdetector.cpp.i
-
-.PHONY : test/opencl/test_hogdetector.i
-
-# target to preprocess a source file
-test/opencl/test_hogdetector.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.i
-.PHONY : test/opencl/test_hogdetector.cpp.i
-
-test/opencl/test_hogdetector.s: test/opencl/test_hogdetector.cpp.s
-
-.PHONY : test/opencl/test_hogdetector.s
-
-# target to generate assembly for a file
-test/opencl/test_hogdetector.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/opencl/test_hogdetector.cpp.s
-.PHONY : test/opencl/test_hogdetector.cpp.s
-
-test/test_cascadeandhog.obj: test/test_cascadeandhog.cpp.obj
-
-.PHONY : test/test_cascadeandhog.obj
-
-# target to build an object file
-test/test_cascadeandhog.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.obj
-.PHONY : test/test_cascadeandhog.cpp.obj
-
-test/test_cascadeandhog.i: test/test_cascadeandhog.cpp.i
-
-.PHONY : test/test_cascadeandhog.i
-
-# target to preprocess a source file
-test/test_cascadeandhog.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.i
-.PHONY : test/test_cascadeandhog.cpp.i
-
-test/test_cascadeandhog.s: test/test_cascadeandhog.cpp.s
-
-.PHONY : test/test_cascadeandhog.s
-
-# target to generate assembly for a file
-test/test_cascadeandhog.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_cascadeandhog.cpp.s
-.PHONY : test/test_cascadeandhog.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\objdetect\CMakeFiles\opencv_test_objdetect.dir\build.make modules/objdetect/CMakeFiles/opencv_test_objdetect.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
 
 # Help Target
 help:
@@ -795,21 +453,14 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... opencv_objdetect_object
+	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... opencv_objdetect
-	@echo ... opencv_test_objdetect
 	@echo ... opencv_objdetect_pch_dephelp
 	@echo ... pch_Generate_opencv_objdetect
-	@echo ... opencv_perf_objdetect
-	@echo ... opencv_test_objdetect_pch_dephelp
-	@echo ... opencv_perf_objdetect_pch_dephelp
-	@echo ... pch_Generate_opencv_test_objdetect
-	@echo ... pch_Generate_opencv_perf_objdetect
 	@echo ... package
 	@echo ... package_source
-	@echo ... test
 	@echo ... edit_cache
-	@echo ... rebuild_cache
 	@echo ... list_install_components
 	@echo ... install
 	@echo ... install/local
@@ -820,21 +471,6 @@ help:
 	@echo ... opencv_objdetect_pch_dephelp.obj
 	@echo ... opencv_objdetect_pch_dephelp.i
 	@echo ... opencv_objdetect_pch_dephelp.s
-	@echo ... opencv_perf_objdetect_pch_dephelp.obj
-	@echo ... opencv_perf_objdetect_pch_dephelp.i
-	@echo ... opencv_perf_objdetect_pch_dephelp.s
-	@echo ... opencv_test_objdetect_pch_dephelp.obj
-	@echo ... opencv_test_objdetect_pch_dephelp.i
-	@echo ... opencv_test_objdetect_pch_dephelp.s
-	@echo ... perf/opencl/perf_cascades.obj
-	@echo ... perf/opencl/perf_cascades.i
-	@echo ... perf/opencl/perf_cascades.s
-	@echo ... perf/opencl/perf_hogdetect.obj
-	@echo ... perf/opencl/perf_hogdetect.i
-	@echo ... perf/opencl/perf_hogdetect.s
-	@echo ... perf/perf_main.obj
-	@echo ... perf/perf_main.i
-	@echo ... perf/perf_main.s
 	@echo ... src/cascadedetect.obj
 	@echo ... src/cascadedetect.i
 	@echo ... src/cascadedetect.s
@@ -853,15 +489,6 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... test/opencl/test_hogdetector.obj
-	@echo ... test/opencl/test_hogdetector.i
-	@echo ... test/opencl/test_hogdetector.s
-	@echo ... test/test_cascadeandhog.obj
-	@echo ... test/test_cascadeandhog.i
-	@echo ... test/test_cascadeandhog.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
 .PHONY : help
 
 
@@ -873,6 +500,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

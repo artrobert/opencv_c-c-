@@ -4,57 +4,57 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/ocl/test_denoising.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/ocl/test_denoising.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_cloning.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_cloning.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_decolor.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_decolor.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_denoise_tvl1.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_denoise_tvl1.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_denoising.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_denoising.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_denoising.cuda.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_denoising.cuda.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_hdr.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_hdr.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_inpaint.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_inpaint.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_main.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_main.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_npr.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_npr.cpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_precomp.hpp",
 			"labels" : [ "Main", "opencv_photo", "AccuracyTest" ]
 		}
 	],

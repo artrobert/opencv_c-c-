@@ -5,9 +5,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_bmp.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdal.cpp.obj"
+  "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdcm.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_hdr.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000.cpp.obj"
+  "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pam.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_png.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pxm.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_sunras.cpp.obj"
@@ -15,11 +17,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/bitstrm.cpp.obj"
   "CMakeFiles/opencv_imgcodecs.dir/src/rgbe.cpp.obj"
-  "CMakeFiles/opencv_imgcodecs.dir/src/jpeg_exif.cpp.obj"
-  "../../bin/libopencv_imgcodecs310.pdb"
-  "../../bin/libopencv_imgcodecs310.dll"
-  "../../lib/libopencv_imgcodecs310.dll.a"
-  "../../bin/libopencv_imgcodecs310.dll.manifest"
+  "CMakeFiles/opencv_imgcodecs.dir/src/exif.cpp.obj"
+  "../../bin/libopencv_imgcodecs320.pdb"
+  "../../bin/libopencv_imgcodecs320.dll"
+  "../../lib/libopencv_imgcodecs320.dll.a"
+  "../../bin/libopencv_imgcodecs320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

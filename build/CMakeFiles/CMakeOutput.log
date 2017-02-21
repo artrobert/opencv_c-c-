@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
 
-The CXX compiler identification is GNU, found in "C:/Users/rartin/Desktop/build/CMakeFiles/3.7.0/CompilerIdCXX/a.exe"
+The CXX compiler identification is GNU, found in "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/3.7.0/CompilerIdCXX/a.exe"
 
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: C:/MinGW/bin/gcc.exe 
@@ -23,37 +23,37 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
 
-The C compiler identification is GNU, found in "C:/Users/rartin/Desktop/build/CMakeFiles/3.7.0/CompilerIdC/a.exe"
+The C compiler identification is GNU, found in "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/3.7.0/CompilerIdC/a.exe"
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_e1cf7/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_e1cf7.dir\build.make CMakeFiles/cmTC_e1cf7.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e1cf7.dir/testCXXCompiler.cxx.obj
-C:\MinGW\bin\g++.exe      -o CMakeFiles\cmTC_e1cf7.dir\testCXXCompiler.cxx.obj -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-Linking CXX executable cmTC_e1cf7.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_e1cf7.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_e1cf7.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_e1cf7.dir/objects.a @CMakeFiles\cmTC_e1cf7.dir\objects1.rsp
-C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_e1cf7.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e1cf7.exe -Wl,--out-implib,libcmTC_e1cf7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_e1cf7.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_4f81d/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_4f81d.dir\build.make CMakeFiles/cmTC_4f81d.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4f81d.dir/testCXXCompiler.cxx.obj
+C:\MinGW\bin\g++.exe      -o CMakeFiles\cmTC_4f81d.dir\testCXXCompiler.cxx.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+Linking CXX executable cmTC_4f81d.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_4f81d.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_4f81d.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_4f81d.dir/objects.a @CMakeFiles\cmTC_4f81d.dir\objects1.rsp
+C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_4f81d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_4f81d.exe -Wl,--out-implib,libcmTC_4f81d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_4f81d.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f2db8/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f2db8.dir\build.make CMakeFiles/cmTC_f2db8.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f2db8.dir/CMakeCXXCompilerABI.cpp.obj
-C:\MinGW\bin\g++.exe      -o CMakeFiles\cmTC_f2db8.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
-Linking CXX executable cmTC_f2db8.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f2db8.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f2db8.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f2db8.dir/objects.a @CMakeFiles\cmTC_f2db8.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_f2db8.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f2db8.exe -Wl,--out-implib,libcmTC_f2db8.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_a62e5/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a62e5.dir\build.make CMakeFiles/cmTC_a62e5.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a62e5.dir/CMakeCXXCompilerABI.cpp.obj
+C:\MinGW\bin\g++.exe      -o CMakeFiles\cmTC_a62e5.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
+Linking CXX executable cmTC_a62e5.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a62e5.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_a62e5.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a62e5.dir/objects.a @CMakeFiles\cmTC_a62e5.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_a62e5.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a62e5.exe -Wl,--out-implib,libcmTC_a62e5.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
 Using built-in specs.
 COLLECT_GCC=C:\MinGW\bin\g++.exe
 COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe
@@ -63,25 +63,25 @@ Thread model: win32
 gcc version 5.3.0 (GCC) 
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/5.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f2db8.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
- c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\cciRfvYR.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_f2db8.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_f2db8.dir/objects.a --no-whole-archive --out-implib libcmTC_f2db8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a62e5.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccmmrYtf.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_a62e5.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_a62e5.dir/objects.a --no-whole-archive --out-implib libcmTC_a62e5.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f2db8/fast"]
-  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f2db8.dir\build.make CMakeFiles/cmTC_f2db8.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_f2db8.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [C:\MinGW\bin\g++.exe      -o CMakeFiles\cmTC_f2db8.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"]
-  ignore line: [Linking CXX executable cmTC_f2db8.exe]
-  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f2db8.dir\link.txt --verbose=1]
-  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f2db8.dir/objects.a]
-  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f2db8.dir/objects.a @CMakeFiles\cmTC_f2db8.dir\objects1.rsp]
-  ignore line: [C:\MinGW\bin\g++.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_f2db8.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f2db8.exe -Wl,--out-implib,libcmTC_f2db8.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
+  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_a62e5/fast"]
+  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a62e5.dir\build.make CMakeFiles/cmTC_a62e5.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_a62e5.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [C:\MinGW\bin\g++.exe      -o CMakeFiles\cmTC_a62e5.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX executable cmTC_a62e5.exe]
+  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a62e5.dir\link.txt --verbose=1]
+  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_a62e5.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a62e5.dir/objects.a @CMakeFiles\cmTC_a62e5.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\g++.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_a62e5.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a62e5.exe -Wl,--out-implib,libcmTC_a62e5.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\g++.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe]
@@ -96,13 +96,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib/gcc/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f2db8.exe' '-shared-libgcc' '-mtune=generic' '-march=i586']
-  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\cciRfvYR.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_f2db8.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_f2db8.dir/objects.a --no-whole-archive --out-implib libcmTC_f2db8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a62e5.exe' '-shared-libgcc' '-mtune=generic' '-march=i586']
+  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccmmrYtf.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_a62e5.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_a62e5.dir/objects.a --no-whole-archive --out-implib libcmTC_a62e5.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o]
     arg [c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll] ==> ignore
     arg [-plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\cciRfvYR.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccmmrYtf.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -125,7 +125,7 @@ Parsed CXX implicit link information from above output:
     arg [-u] ==> ignore
     arg [___deregister_frame_info] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f2db8.exe] ==> ignore
+    arg [cmTC_a62e5.exe] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o] ==> ignore
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/5.3.0]
@@ -133,10 +133,10 @@ Parsed CXX implicit link information from above output:
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib]
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../..] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_f2db8.dir/objects.a] ==> ignore
+    arg [CMakeFiles\cmTC_a62e5.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_f2db8.dll.a] ==> ignore
+    arg [libcmTC_a62e5.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -175,19 +175,19 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_cef72/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_cef72.dir\build.make CMakeFiles/cmTC_cef72.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cef72.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe     -std=c++14 -o CMakeFiles\cmTC_cef72.dir\feature_tests.cxx.obj -c C:\Users\rartin\Desktop\build\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_cef72.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_cef72.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_cef72.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_cef72.dir/objects.a @CMakeFiles\cmTC_cef72.dir\objects1.rsp
-C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_cef72.dir/objects.a -Wl,--no-whole-archive  -o cmTC_cef72.exe -Wl,--out-implib,libcmTC_cef72.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_cef72.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_c075c/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_c075c.dir\build.make CMakeFiles/cmTC_c075c.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c075c.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe     -std=c++14 -o CMakeFiles\cmTC_c075c.dir\feature_tests.cxx.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_c075c.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_c075c.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_c075c.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_c075c.dir/objects.a @CMakeFiles\cmTC_c075c.dir\objects1.rsp
+C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_c075c.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c075c.exe -Wl,--out-implib,libcmTC_c075c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_c075c.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -250,19 +250,19 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_a9037/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a9037.dir\build.make CMakeFiles/cmTC_a9037.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a9037.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe     -std=c++11 -o CMakeFiles\cmTC_a9037.dir\feature_tests.cxx.obj -c C:\Users\rartin\Desktop\build\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_a9037.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a9037.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_a9037.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a9037.dir/objects.a @CMakeFiles\cmTC_a9037.dir\objects1.rsp
-C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_a9037.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a9037.exe -Wl,--out-implib,libcmTC_a9037.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a9037.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_6fcd4/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_6fcd4.dir\build.make CMakeFiles/cmTC_6fcd4.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6fcd4.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe     -std=c++11 -o CMakeFiles\cmTC_6fcd4.dir\feature_tests.cxx.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_6fcd4.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_6fcd4.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_6fcd4.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_6fcd4.dir/objects.a @CMakeFiles\cmTC_6fcd4.dir\objects1.rsp
+C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_6fcd4.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6fcd4.exe -Wl,--out-implib,libcmTC_6fcd4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_6fcd4.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -325,19 +325,19 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_faf14/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_faf14.dir\build.make CMakeFiles/cmTC_faf14.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_faf14.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe     -std=c++98 -o CMakeFiles\cmTC_faf14.dir\feature_tests.cxx.obj -c C:\Users\rartin\Desktop\build\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_faf14.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_faf14.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_faf14.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_faf14.dir/objects.a @CMakeFiles\cmTC_faf14.dir\objects1.rsp
-C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_faf14.dir/objects.a -Wl,--no-whole-archive  -o cmTC_faf14.exe -Wl,--out-implib,libcmTC_faf14.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_faf14.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_2cb9f/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_2cb9f.dir\build.make CMakeFiles/cmTC_2cb9f.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2cb9f.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe     -std=c++98 -o CMakeFiles\cmTC_2cb9f.dir\feature_tests.cxx.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_2cb9f.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_2cb9f.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_2cb9f.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_2cb9f.dir/objects.a @CMakeFiles\cmTC_2cb9f.dir\objects1.rsp
+C:\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTC_2cb9f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_2cb9f.exe -Wl,--out-implib,libcmTC_2cb9f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_2cb9f.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -398,34 +398,34 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_10d74/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_10d74.dir\build.make CMakeFiles/cmTC_10d74.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_10d74.dir/testCCompiler.c.obj
-C:\MinGW\bin\gcc.exe     -o CMakeFiles\cmTC_10d74.dir\testCCompiler.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\testCCompiler.c
-Linking C executable cmTC_10d74.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_10d74.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_10d74.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_10d74.dir/objects.a @CMakeFiles\cmTC_10d74.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_10d74.dir/objects.a -Wl,--no-whole-archive  -o cmTC_10d74.exe -Wl,--out-implib,libcmTC_10d74.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_10d74.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_edff5/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_edff5.dir\build.make CMakeFiles/cmTC_edff5.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_edff5.dir/testCCompiler.c.obj
+C:\MinGW\bin\gcc.exe     -o CMakeFiles\cmTC_edff5.dir\testCCompiler.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_edff5.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_edff5.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_edff5.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_edff5.dir/objects.a @CMakeFiles\cmTC_edff5.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_edff5.dir/objects.a -Wl,--no-whole-archive  -o cmTC_edff5.exe -Wl,--out-implib,libcmTC_edff5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_edff5.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_72082/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_72082.dir\build.make CMakeFiles/cmTC_72082.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_72082.dir/CMakeCCompilerABI.c.obj
-C:\MinGW\bin\gcc.exe     -o CMakeFiles\cmTC_72082.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
-Linking C executable cmTC_72082.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_72082.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_72082.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_72082.dir/objects.a @CMakeFiles\cmTC_72082.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_72082.dir/objects.a -Wl,--no-whole-archive  -o cmTC_72082.exe -Wl,--out-implib,libcmTC_72082.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_d3658/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_d3658.dir\build.make CMakeFiles/cmTC_d3658.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d3658.dir/CMakeCCompilerABI.c.obj
+C:\MinGW\bin\gcc.exe     -o CMakeFiles\cmTC_d3658.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
+Linking C executable cmTC_d3658.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d3658.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_d3658.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_d3658.dir/objects.a @CMakeFiles\cmTC_d3658.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_d3658.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d3658.exe -Wl,--out-implib,libcmTC_d3658.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
 Using built-in specs.
 COLLECT_GCC=C:\MinGW\bin\gcc.exe
 COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe
@@ -435,25 +435,25 @@ Thread model: win32
 gcc version 5.3.0 (GCC) 
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/5.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_72082.exe' '-mtune=generic' '-march=i586'
- c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccxsFSQb.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_72082.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_72082.dir/objects.a --no-whole-archive --out-implib libcmTC_72082.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3658.exe' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccHYhyk8.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_d3658.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_d3658.dir/objects.a --no-whole-archive --out-implib libcmTC_d3658.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_72082/fast"]
-  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_72082.dir\build.make CMakeFiles/cmTC_72082.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_72082.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [C:\MinGW\bin\gcc.exe     -o CMakeFiles\cmTC_72082.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"]
-  ignore line: [Linking C executable cmTC_72082.exe]
-  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_72082.dir\link.txt --verbose=1]
-  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_72082.dir/objects.a]
-  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_72082.dir/objects.a @CMakeFiles\cmTC_72082.dir\objects1.rsp]
-  ignore line: [C:\MinGW\bin\gcc.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_72082.dir/objects.a -Wl,--no-whole-archive  -o cmTC_72082.exe -Wl,--out-implib,libcmTC_72082.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
+  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_d3658/fast"]
+  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_d3658.dir\build.make CMakeFiles/cmTC_d3658.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_d3658.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [C:\MinGW\bin\gcc.exe     -o CMakeFiles\cmTC_d3658.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"]
+  ignore line: [Linking C executable cmTC_d3658.exe]
+  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d3658.dir\link.txt --verbose=1]
+  ignore line: ["C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_d3658.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_d3658.dir/objects.a @CMakeFiles\cmTC_d3658.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\gcc.exe      -v -Wl,--whole-archive CMakeFiles\cmTC_d3658.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d3658.exe -Wl,--out-implib,libcmTC_d3658.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe]
@@ -468,13 +468,13 @@ Parsed C implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib/gcc/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_72082.exe' '-mtune=generic' '-march=i586']
-  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccxsFSQb.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_72082.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_72082.dir/objects.a --no-whole-archive --out-implib libcmTC_72082.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3658.exe' '-mtune=generic' '-march=i586']
+  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccHYhyk8.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_d3658.exe c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../.. --whole-archive CMakeFiles\cmTC_d3658.dir/objects.a --no-whole-archive --out-implib libcmTC_d3658.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtend.o]
     arg [c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/liblto_plugin-0.dll] ==> ignore
     arg [-plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/5.3.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccxsFSQb.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\rartin\AppData\Local\Temp\ccHYhyk8.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -493,7 +493,7 @@ Parsed C implicit link information from above output:
     arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
     arg [-Bdynamic] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_72082.exe] ==> ignore
+    arg [cmTC_d3658.exe] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../crt2.o] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/crtbegin.o] ==> ignore
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/5.3.0]
@@ -501,10 +501,10 @@ Parsed C implicit link information from above output:
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/lib]
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../..] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_72082.dir/objects.a] ==> ignore
+    arg [CMakeFiles\cmTC_d3658.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_72082.dll.a] ==> ignore
+    arg [libcmTC_d3658.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -542,19 +542,19 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_fdb21/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_fdb21.dir\build.make CMakeFiles/cmTC_fdb21.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fdb21.dir/feature_tests.c.obj
-C:\MinGW\bin\gcc.exe    -std=c11 -o CMakeFiles\cmTC_fdb21.dir\feature_tests.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\feature_tests.c
-Linking C executable cmTC_fdb21.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_fdb21.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_fdb21.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_fdb21.dir/objects.a @CMakeFiles\cmTC_fdb21.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_fdb21.dir/objects.a -Wl,--no-whole-archive  -o cmTC_fdb21.exe -Wl,--out-implib,libcmTC_fdb21.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_fdb21.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_9f0f2/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_9f0f2.dir\build.make CMakeFiles/cmTC_9f0f2.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f0f2.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe    -std=c11 -o CMakeFiles\cmTC_9f0f2.dir\feature_tests.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\feature_tests.c
+Linking C executable cmTC_9f0f2.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_9f0f2.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_9f0f2.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_9f0f2.dir/objects.a @CMakeFiles\cmTC_9f0f2.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_9f0f2.dir/objects.a -Wl,--no-whole-archive  -o cmTC_9f0f2.exe -Wl,--out-implib,libcmTC_9f0f2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_9f0f2.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -564,19 +564,19 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_29f78/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_29f78.dir\build.make CMakeFiles/cmTC_29f78.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_29f78.dir/feature_tests.c.obj
-C:\MinGW\bin\gcc.exe    -std=c99 -o CMakeFiles\cmTC_29f78.dir\feature_tests.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\feature_tests.c
-Linking C executable cmTC_29f78.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_29f78.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_29f78.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_29f78.dir/objects.a @CMakeFiles\cmTC_29f78.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_29f78.dir/objects.a -Wl,--no-whole-archive  -o cmTC_29f78.exe -Wl,--out-implib,libcmTC_29f78.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_29f78.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_38515/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_38515.dir\build.make CMakeFiles/cmTC_38515.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38515.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe    -std=c99 -o CMakeFiles\cmTC_38515.dir\feature_tests.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\feature_tests.c
+Linking C executable cmTC_38515.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_38515.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_38515.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_38515.dir/objects.a @CMakeFiles\cmTC_38515.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_38515.dir/objects.a -Wl,--no-whole-archive  -o cmTC_38515.exe -Wl,--out-implib,libcmTC_38515.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_38515.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -586,19 +586,19 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_0d76f/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_0d76f.dir\build.make CMakeFiles/cmTC_0d76f.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0d76f.dir/feature_tests.c.obj
-C:\MinGW\bin\gcc.exe    -std=c90 -o CMakeFiles\cmTC_0d76f.dir\feature_tests.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\feature_tests.c
-Linking C executable cmTC_0d76f.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_0d76f.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_0d76f.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_0d76f.dir/objects.a @CMakeFiles\cmTC_0d76f.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_0d76f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_0d76f.exe -Wl,--out-implib,libcmTC_0d76f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_0d76f.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f09d1/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f09d1.dir\build.make CMakeFiles/cmTC_f09d1.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f09d1.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe    -std=c90 -o CMakeFiles\cmTC_f09d1.dir\feature_tests.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\feature_tests.c
+Linking C executable cmTC_f09d1.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f09d1.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f09d1.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f09d1.dir/objects.a @CMakeFiles\cmTC_f09d1.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_f09d1.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f09d1.exe -Wl,--out-implib,libcmTC_f09d1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f09d1.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -606,83 +606,83 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the include file sys/types.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_c51ab/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_c51ab.dir\build.make CMakeFiles/cmTC_c51ab.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c51ab.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_c51ab.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_c51ab.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_c51ab.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_c51ab.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_c51ab.dir/objects.a @CMakeFiles\cmTC_c51ab.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_c51ab.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c51ab.exe -Wl,--out-implib,libcmTC_c51ab.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_c51ab.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7dfaf/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7dfaf.dir\build.make CMakeFiles/cmTC_7dfaf.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7dfaf.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_7dfaf.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_7dfaf.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7dfaf.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7dfaf.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7dfaf.dir/objects.a @CMakeFiles\cmTC_7dfaf.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_7dfaf.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7dfaf.exe -Wl,--out-implib,libcmTC_7dfaf.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_7dfaf.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stdint.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_c392f/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_c392f.dir\build.make CMakeFiles/cmTC_c392f.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c392f.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_c392f.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_c392f.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_c392f.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_c392f.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_c392f.dir/objects.a @CMakeFiles\cmTC_c392f.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_c392f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c392f.exe -Wl,--out-implib,libcmTC_c392f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_c392f.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_40390/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_40390.dir\build.make CMakeFiles/cmTC_40390.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40390.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_40390.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_40390.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_40390.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_40390.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_40390.dir/objects.a @CMakeFiles\cmTC_40390.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_40390.dir/objects.a -Wl,--no-whole-archive  -o cmTC_40390.exe -Wl,--out-implib,libcmTC_40390.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_40390.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stddef.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_3229a/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_3229a.dir\build.make CMakeFiles/cmTC_3229a.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3229a.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_3229a.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_3229a.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_3229a.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_3229a.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_3229a.dir/objects.a @CMakeFiles\cmTC_3229a.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_3229a.dir/objects.a -Wl,--no-whole-archive  -o cmTC_3229a.exe -Wl,--out-implib,libcmTC_3229a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_3229a.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_523ff/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_523ff.dir\build.make CMakeFiles/cmTC_523ff.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_523ff.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_523ff.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_523ff.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_523ff.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_523ff.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_523ff.dir/objects.a @CMakeFiles\cmTC_523ff.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_523ff.dir/objects.a -Wl,--no-whole-archive  -o cmTC_523ff.exe -Wl,--out-implib,libcmTC_523ff.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_523ff.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining size of unsigned short passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_4f3ef/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_4f3ef.dir\build.make CMakeFiles/cmTC_4f3ef.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4f3ef.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_4f3ef.dir\CMAKE_SIZEOF_UNSIGNED_SHORT.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c
-Linking C executable cmTC_4f3ef.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_4f3ef.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_4f3ef.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_4f3ef.dir/objects.a @CMakeFiles\cmTC_4f3ef.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_4f3ef.dir/objects.a -Wl,--no-whole-archive  -o cmTC_4f3ef.exe -Wl,--out-implib,libcmTC_4f3ef.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_4f3ef.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_db3cc/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_db3cc.dir\build.make CMakeFiles/cmTC_db3cc.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db3cc.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_db3cc.dir\CMAKE_SIZEOF_UNSIGNED_SHORT.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_db3cc.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_db3cc.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_db3cc.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_db3cc.dir/objects.a @CMakeFiles\cmTC_db3cc.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_db3cc.dir/objects.a -Wl,--no-whole-archive  -o cmTC_db3cc.exe -Wl,--out-implib,libcmTC_db3cc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_db3cc.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the system is big endian passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_0f4af/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_0f4af.dir\build.make CMakeFiles/cmTC_0f4af.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0f4af.dir/TestEndianess.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_0f4af.dir\TestEndianess.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\TestEndianess.c
-Linking C executable cmTC_0f4af.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_0f4af.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_0f4af.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_0f4af.dir/objects.a @CMakeFiles\cmTC_0f4af.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_0f4af.dir/objects.a -Wl,--no-whole-archive  -o cmTC_0f4af.exe -Wl,--out-implib,libcmTC_0f4af.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_0f4af.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_23253/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_23253.dir\build.make CMakeFiles/cmTC_23253.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23253.dir/TestEndianess.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_23253.dir\TestEndianess.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\TestEndianess.c
+Linking C executable cmTC_23253.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_23253.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_23253.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_23253.dir/objects.a @CMakeFiles\cmTC_23253.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_23253.dir/objects.a -Wl,--no-whole-archive  -o cmTC_23253.exe -Wl,--out-implib,libcmTC_23253.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_23253.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 TestEndianess.c:
 /* A 16 bit integer is required. */
@@ -711,130 +711,130 @@ int main(int argc, char *argv[])
 
 
 Determining if the include file unistd.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_269a4/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_269a4.dir\build.make CMakeFiles/cmTC_269a4.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_269a4.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_269a4.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_269a4.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_269a4.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_269a4.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_269a4.dir/objects.a @CMakeFiles\cmTC_269a4.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_269a4.dir/objects.a -Wl,--no-whole-archive  -o cmTC_269a4.exe -Wl,--out-implib,libcmTC_269a4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_269a4.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_bfd67/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_bfd67.dir\build.make CMakeFiles/cmTC_bfd67.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bfd67.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_bfd67.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_bfd67.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_bfd67.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_bfd67.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_bfd67.dir/objects.a @CMakeFiles\cmTC_bfd67.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_bfd67.dir/objects.a -Wl,--no-whole-archive  -o cmTC_bfd67.exe -Wl,--out-implib,libcmTC_bfd67.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_bfd67.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining size of off64_t passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_66c86/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_66c86.dir\build.make CMakeFiles/cmTC_66c86.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_66c86.dir/OFF64_T.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_66c86.dir\OFF64_T.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CheckTypeSize\OFF64_T.c
-Linking C executable cmTC_66c86.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_66c86.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_66c86.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_66c86.dir/objects.a @CMakeFiles\cmTC_66c86.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_66c86.dir/objects.a -Wl,--no-whole-archive  -o cmTC_66c86.exe -Wl,--out-implib,libcmTC_66c86.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_66c86.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_ac7f8/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_ac7f8.dir\build.make CMakeFiles/cmTC_ac7f8.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ac7f8.dir/OFF64_T.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_ac7f8.dir\OFF64_T.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CheckTypeSize\OFF64_T.c
+Linking C executable cmTC_ac7f8.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ac7f8.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_ac7f8.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_ac7f8.dir/objects.a @CMakeFiles\cmTC_ac7f8.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_ac7f8.dir/objects.a -Wl,--no-whole-archive  -o cmTC_ac7f8.exe -Wl,--out-implib,libcmTC_ac7f8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_ac7f8.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file assert.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7e916/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7e916.dir\build.make CMakeFiles/cmTC_7e916.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7e916.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_7e916.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_7e916.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7e916.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7e916.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7e916.dir/objects.a @CMakeFiles\cmTC_7e916.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_7e916.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7e916.exe -Wl,--out-implib,libcmTC_7e916.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_7e916.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_1a40d/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_1a40d.dir\build.make CMakeFiles/cmTC_1a40d.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a40d.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_1a40d.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_1a40d.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1a40d.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_1a40d.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_1a40d.dir/objects.a @CMakeFiles\cmTC_1a40d.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_1a40d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_1a40d.exe -Wl,--out-implib,libcmTC_1a40d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_1a40d.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file fcntl.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_11b4f/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_11b4f.dir\build.make CMakeFiles/cmTC_11b4f.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_11b4f.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_11b4f.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_11b4f.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_11b4f.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_11b4f.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_11b4f.dir/objects.a @CMakeFiles\cmTC_11b4f.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_11b4f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_11b4f.exe -Wl,--out-implib,libcmTC_11b4f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_11b4f.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_91f21/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_91f21.dir\build.make CMakeFiles/cmTC_91f21.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91f21.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_91f21.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_91f21.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_91f21.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_91f21.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_91f21.dir/objects.a @CMakeFiles\cmTC_91f21.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_91f21.dir/objects.a -Wl,--no-whole-archive  -o cmTC_91f21.exe -Wl,--out-implib,libcmTC_91f21.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_91f21.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file io.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f5c69/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f5c69.dir\build.make CMakeFiles/cmTC_f5c69.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f5c69.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_f5c69.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_f5c69.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f5c69.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f5c69.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f5c69.dir/objects.a @CMakeFiles\cmTC_f5c69.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_f5c69.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f5c69.exe -Wl,--out-implib,libcmTC_f5c69.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f5c69.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_db404/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_db404.dir\build.make CMakeFiles/cmTC_db404.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db404.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_db404.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_db404.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_db404.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_db404.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_db404.dir/objects.a @CMakeFiles\cmTC_db404.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_db404.dir/objects.a -Wl,--no-whole-archive  -o cmTC_db404.exe -Wl,--out-implib,libcmTC_db404.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_db404.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file search.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_830d9/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_830d9.dir\build.make CMakeFiles/cmTC_830d9.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_830d9.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_830d9.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_830d9.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_830d9.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_830d9.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_830d9.dir/objects.a @CMakeFiles\cmTC_830d9.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_830d9.dir/objects.a -Wl,--no-whole-archive  -o cmTC_830d9.exe -Wl,--out-implib,libcmTC_830d9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_830d9.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_9b063/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_9b063.dir\build.make CMakeFiles/cmTC_9b063.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9b063.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_9b063.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_9b063.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_9b063.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_9b063.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_9b063.dir/objects.a @CMakeFiles\cmTC_9b063.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_9b063.dir/objects.a -Wl,--no-whole-archive  -o cmTC_9b063.exe -Wl,--out-implib,libcmTC_9b063.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_9b063.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file string.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_20b02/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_20b02.dir\build.make CMakeFiles/cmTC_20b02.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_20b02.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_20b02.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_20b02.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_20b02.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_20b02.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_20b02.dir/objects.a @CMakeFiles\cmTC_20b02.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_20b02.dir/objects.a -Wl,--no-whole-archive  -o cmTC_20b02.exe -Wl,--out-implib,libcmTC_20b02.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_20b02.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_3b13d/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_3b13d.dir\build.make CMakeFiles/cmTC_3b13d.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b13d.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_3b13d.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_3b13d.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_3b13d.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_3b13d.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_3b13d.dir/objects.a @CMakeFiles\cmTC_3b13d.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_3b13d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_3b13d.exe -Wl,--out-implib,libcmTC_3b13d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_3b13d.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file unistd.h exists passed with the following output:
-Change Dir: C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_6d785/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_6d785.dir\build.make CMakeFiles/cmTC_6d785.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6d785.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_6d785.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Desktop\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-Linking C executable cmTC_6d785.exe
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_6d785.dir\link.txt --verbose=1
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_6d785.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_6d785.dir/objects.a @CMakeFiles\cmTC_6d785.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_6d785.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6d785.exe -Wl,--out-implib,libcmTC_6d785.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_6d785.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Desktop/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f379b/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f379b.dir\build.make CMakeFiles/cmTC_f379b.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f379b.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles\cmTC_f379b.dir\CheckIncludeFile.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_f379b.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f379b.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f379b.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f379b.dir/objects.a @CMakeFiles\cmTC_f379b.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--whole-archive CMakeFiles\cmTC_f379b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f379b.exe -Wl,--out-implib,libcmTC_f379b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f379b.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/CMakeTmp'
 
 

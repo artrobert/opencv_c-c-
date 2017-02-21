@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/videoio/CMakeFiles/opencv_test_videoio.dir/depend.make
@@ -58,17 +58,17 @@ include modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_basic_props.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_basic_props.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_basic_props.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_basic_props.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_basic_props.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_basic_props.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_basic_props.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_basic_props.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_basic_props.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_basic_props.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_basic_props.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_basic_props.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_basic_props.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_basic_props.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_basic_props.cpp.obj
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_ffmpeg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_ffmpeg.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_ffmpeg.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_ffmpeg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_ffmpeg.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_ffmpeg.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_ffmpeg.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_ffmpeg.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_ffmpeg.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_ffmpeg.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_ffmpeg.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_ffmpeg.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_ffmpeg.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_ffmpeg.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj.requires:
 
@@ -108,17 +108,17 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_ffmpeg.cpp.obj.prov
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_fourcc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_fourcc.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_fourcc.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_fourcc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_fourcc.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_fourcc.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_fourcc.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_fourcc.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_fourcc.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_fourcc.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_fourcc.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_fourcc.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_fourcc.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_fourcc.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj.requires:
 
@@ -133,17 +133,17 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_fourcc.cpp.obj.prov
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_framecount.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_framecount.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_framecount.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_framecount.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_framecount.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_framecount.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_framecount.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_framecount.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_framecount.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_framecount.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_framecount.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_framecount.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_framecount.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_framecount.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj.requires:
 
@@ -158,17 +158,17 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_framecount.cpp.obj.
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_main.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_main.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_main.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_main.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_main.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_main.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_main.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_main.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_main.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_main.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj.requires:
 
@@ -183,17 +183,17 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_main.cpp.obj.provid
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_positioning.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_positioning.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_positioning.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_positioning.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_positioning.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_positioning.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_positioning.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_positioning.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_positioning.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_positioning.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_positioning.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_positioning.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_positioning.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_positioning.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj.requires:
 
@@ -208,17 +208,17 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_positioning.cpp.obj
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_video_io.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_video_io.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_video_io.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_video_io.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_video_io.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_video_io.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_video_io.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_video_io.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_video_io.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_video_io.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_video_io.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_video_io.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_video_io.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_video_io.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj.requires:
 
@@ -233,17 +233,17 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj.pr
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/flags.make
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj: modules/videoio/CMakeFiles/opencv_test_videoio.dir/includes_CXX.rsp
-modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/test/test_video_pos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_video_pos.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_video_pos.cpp
+modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_video_pos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_videoio.dir\test\test_video_pos.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_video_pos.cpp
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_video_pos.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_video_pos.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_video_pos.cpp > CMakeFiles\opencv_test_videoio.dir\test\test_video_pos.cpp.i
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/videoio/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\videoio\test\test_video_pos.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_video_pos.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio\test\test_video_pos.cpp -o CMakeFiles\opencv_test_videoio.dir\test\test_video_pos.cpp.s
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj.requires:
 
@@ -279,17 +279,17 @@ bin/opencv_test_videoio.exe: modules/videoio/CMakeFiles/opencv_test_videoio.dir/
 bin/opencv_test_videoio.exe: modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_io.cpp.obj
 bin/opencv_test_videoio.exe: modules/videoio/CMakeFiles/opencv_test_videoio.dir/test/test_video_pos.cpp.obj
 bin/opencv_test_videoio.exe: modules/videoio/CMakeFiles/opencv_test_videoio.dir/build.make
-bin/opencv_test_videoio.exe: lib/libopencv_ts310.a
-bin/opencv_test_videoio.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_test_videoio.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_test_videoio.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_test_videoio.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_test_videoio.exe: lib/libopencv_core310.dll.a
+bin/opencv_test_videoio.exe: lib/libopencv_ts320.a
+bin/opencv_test_videoio.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_test_videoio.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_test_videoio.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_test_videoio.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_test_videoio.exe: lib/libopencv_core320.dll.a
 bin/opencv_test_videoio.exe: modules/videoio/CMakeFiles/opencv_test_videoio.dir/linklibs.rsp
 bin/opencv_test_videoio.exe: modules/videoio/CMakeFiles/opencv_test_videoio.dir/objects1.rsp
 bin/opencv_test_videoio.exe: modules/videoio/CMakeFiles/opencv_test_videoio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ..\..\bin\opencv_test_videoio.exe"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_videoio.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ..\..\bin\opencv_test_videoio.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_videoio.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/build: bin/opencv_test_videoio.exe
@@ -308,10 +308,10 @@ modules/videoio/CMakeFiles/opencv_test_videoio.dir/requires: modules/videoio/CMa
 .PHONY : modules/videoio/CMakeFiles/opencv_test_videoio.dir/requires
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_videoio.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_videoio.dir\cmake_clean.cmake
 .PHONY : modules/videoio/CMakeFiles/opencv_test_videoio.dir/clean
 
 modules/videoio/CMakeFiles/opencv_test_videoio.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\videoio C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\videoio C:\Users\rartin\Desktop\build\modules\videoio\CMakeFiles\opencv_test_videoio.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio\CMakeFiles\opencv_test_videoio.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/videoio/CMakeFiles/opencv_test_videoio.dir/depend
 

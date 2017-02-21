@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "opencv_video_pch_dephelp.cxx"
   "CMakeFiles/opencv_video_pch_dephelp.dir/opencv_video_pch_dephelp.cxx.obj"
   "../../lib/libopencv_video_pch_dephelp.pdb"
   "../../lib/libopencv_video_pch_dephelp.a"

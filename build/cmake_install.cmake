@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rartin/Desktop/opencv/sources
+# Install script for directory: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Desktop/build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -28,22 +28,18 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/rartin/Desktop/build/cvconfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/cvconfig.h")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/rartin/Desktop/build/opencv2/opencv_modules.hpp")
-endif()
-
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE FILE FILES "C:/Users/rartin/Desktop/build/win-install/OpenCVConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/opencv2/opencv_modules.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/lib/OpenCVModules.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/lib/OpenCVModules.cmake"
-         "C:/Users/rartin/Desktop/build/CMakeFiles/Export/x86/mingw/lib/OpenCVModules.cmake")
+         "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/Export/x86/mingw/lib/OpenCVModules.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/lib/OpenCVModules-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -52,62 +48,44 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE FILE FILES "C:/Users/rartin/Desktop/build/CMakeFiles/Export/x86/mingw/lib/OpenCVModules.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE FILE FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/Export/x86/mingw/lib/OpenCVModules.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE FILE FILES "C:/Users/rartin/Desktop/build/CMakeFiles/Export/x86/mingw/lib/OpenCVModules-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE FILE FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CMakeFiles/Export/x86/mingw/lib/OpenCVModules-release.cmake")
   endif()
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/rartin/Desktop/build/install/OpenCVConfig-version.cmake")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "C:/Users/rartin/Desktop/build/install" TYPE FILE FILES "C:/Users/rartin/Desktop/build/win-install/OpenCVConfig-version.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE FILE FILES
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/win-install/OpenCVConfig-version.cmake"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/win-install/x86/mingw/lib/OpenCVConfig.cmake"
+    )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/rartin/Desktop/build/install/OpenCVConfig.cmake")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "C:/Users/rartin/Desktop/build/install" TYPE FILE FILES "C:/Users/rartin/Desktop/opencv/sources/cmake/OpenCVConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/win-install/OpenCVConfig-version.cmake"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/win-install/OpenCVConfig.cmake"
+    )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/rartin/Desktop/build/install/LICENSE")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "C:/Users/rartin/Desktop/build/install" TYPE FILE PERMISSIONS OWNER_READ GROUP_READ WORLD_READ FILES "C:/Users/rartin/Desktop/opencv/sources/LICENSE")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE PERMISSIONS OWNER_READ GROUP_READ WORLD_READ FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/LICENSE")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/rartin/Desktop/build/3rdparty/zlib/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/3rdparty/libtiff/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/3rdparty/libjpeg/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/3rdparty/libwebp/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/3rdparty/libjasper/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/3rdparty/libpng/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/3rdparty/openexr/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/include/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/modules/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/doc/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/data/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/apps/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/3rdparty/zlib/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/3rdparty/libtiff/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/3rdparty/libjpeg/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/3rdparty/libwebp/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/3rdparty/libjasper/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/3rdparty/libpng/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/3rdparty/openexr/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/include/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/doc/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/data/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/apps/cmake_install.cmake")
 
 endif()
 
@@ -119,5 +97,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/rartin/Desktop/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rartin/Desktop/opencv/sources/include
+# Install script for directory: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Desktop/build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,21 +29,21 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv" TYPE FILE FILES
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cv.h"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cv.hpp"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cvaux.h"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cvaux.hpp"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cvwimage.h"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cxcore.h"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cxcore.hpp"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cxeigen.hpp"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/cxmisc.h"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/highgui.h"
-    "C:/Users/rartin/Desktop/opencv/sources/include/opencv/ml.h"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cv.h"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cv.hpp"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cvaux.h"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cvaux.hpp"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cvwimage.h"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cxcore.h"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cxcore.hpp"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cxeigen.hpp"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/cxmisc.h"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/highgui.h"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv/ml.h"
     )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/rartin/Desktop/opencv/sources/include/opencv2/opencv.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/include/opencv2/opencv.hpp")
 endif()
 

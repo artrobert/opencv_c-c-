@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rartin/Desktop/opencv/sources/data
+# Install script for directory: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Desktop/build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,32 +29,32 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/etc/haarcascades" TYPE FILE FILES
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_eye.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_frontalcatface.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_frontalcatface_extended.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_frontalface_alt2.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_frontalface_alt_tree.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_fullbody.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_lefteye_2splits.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_licence_plate_rus_16stages.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_lowerbody.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_profileface.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_righteye_2splits.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_russian_plate_number.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_smile.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/haarcascades/haarcascade_upperbody.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_eye.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_frontalcatface.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_frontalcatface_extended.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_frontalface_alt2.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_frontalface_alt_tree.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_fullbody.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_lefteye_2splits.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_licence_plate_rus_16stages.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_lowerbody.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_profileface.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_righteye_2splits.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_russian_plate_number.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_smile.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/haarcascades/haarcascade_upperbody.xml"
     )
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/etc/lbpcascades" TYPE FILE FILES
-    "C:/Users/rartin/Desktop/opencv/sources/data/lbpcascades/lbpcascade_frontalcatface.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/lbpcascades/lbpcascade_frontalface.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/lbpcascades/lbpcascade_profileface.xml"
-    "C:/Users/rartin/Desktop/opencv/sources/data/lbpcascades/lbpcascade_silverware.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/lbpcascades/lbpcascade_frontalcatface.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/lbpcascades/lbpcascade_frontalface.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/lbpcascades/lbpcascade_profileface.xml"
+    "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/data/lbpcascades/lbpcascade_silverware.xml"
     )
 endif()
 

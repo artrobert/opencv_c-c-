@@ -47,13 +47,24 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -69,7 +80,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -80,7 +91,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -98,17 +109,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\imgcodecs\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\imgcodecs\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,37 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/rule
-.PHONY : modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/rule
-
-# Convenience name for target.
-opencv_imgcodecs_object: modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/rule
-
-.PHONY : opencv_imgcodecs_object
-
-# fast build rule for target.
-opencv_imgcodecs_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/build
-.PHONY : opencv_imgcodecs_object/fast
-
-# Convenience name for target.
 modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/rule
 .PHONY : modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/rule
 
 # Convenience name for target.
@@ -213,27 +198,12 @@ opencv_imgcodecs: modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/rule
 
 # fast build rule for target.
 opencv_imgcodecs/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/build
 .PHONY : opencv_imgcodecs/fast
 
 # Convenience name for target.
-modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/rule
-.PHONY : modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/rule
-
-# Convenience name for target.
-opencv_test_imgcodecs: modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/rule
-
-.PHONY : opencv_test_imgcodecs
-
-# fast build rule for target.
-opencv_test_imgcodecs/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/build
-.PHONY : opencv_test_imgcodecs/fast
-
-# Convenience name for target.
 modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/rule
 .PHONY : modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +213,12 @@ opencv_imgcodecs_pch_dephelp: modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_
 
 # fast build rule for target.
 opencv_imgcodecs_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/build
 .PHONY : opencv_imgcodecs_pch_dephelp/fast
 
 # Convenience name for target.
 modules/imgcodecs/CMakeFiles/pch_Generate_opencv_imgcodecs.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/pch_Generate_opencv_imgcodecs.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/pch_Generate_opencv_imgcodecs.dir/rule
 .PHONY : modules/imgcodecs/CMakeFiles/pch_Generate_opencv_imgcodecs.dir/rule
 
 # Convenience name for target.
@@ -258,83 +228,8 @@ pch_Generate_opencv_imgcodecs: modules/imgcodecs/CMakeFiles/pch_Generate_opencv_
 
 # fast build rule for target.
 pch_Generate_opencv_imgcodecs/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\pch_Generate_opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/pch_Generate_opencv_imgcodecs.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\pch_Generate_opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/pch_Generate_opencv_imgcodecs.dir/build
 .PHONY : pch_Generate_opencv_imgcodecs/fast
-
-# Convenience name for target.
-modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/rule
-.PHONY : modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/rule
-
-# Convenience name for target.
-opencv_perf_imgcodecs: modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/rule
-
-.PHONY : opencv_perf_imgcodecs
-
-# fast build rule for target.
-opencv_perf_imgcodecs/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/build
-.PHONY : opencv_perf_imgcodecs/fast
-
-# Convenience name for target.
-modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/rule
-.PHONY : modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_imgcodecs_pch_dephelp: modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_imgcodecs_pch_dephelp
-
-# fast build rule for target.
-opencv_test_imgcodecs_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/build
-.PHONY : opencv_test_imgcodecs_pch_dephelp/fast
-
-# Convenience name for target.
-modules/imgcodecs/CMakeFiles/pch_Generate_opencv_test_imgcodecs.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/pch_Generate_opencv_test_imgcodecs.dir/rule
-.PHONY : modules/imgcodecs/CMakeFiles/pch_Generate_opencv_test_imgcodecs.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_imgcodecs: modules/imgcodecs/CMakeFiles/pch_Generate_opencv_test_imgcodecs.dir/rule
-
-.PHONY : pch_Generate_opencv_test_imgcodecs
-
-# fast build rule for target.
-pch_Generate_opencv_test_imgcodecs/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\pch_Generate_opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/pch_Generate_opencv_test_imgcodecs.dir/build
-.PHONY : pch_Generate_opencv_test_imgcodecs/fast
-
-# Convenience name for target.
-modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/rule
-.PHONY : modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_perf_imgcodecs_pch_dephelp: modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/rule
-
-.PHONY : opencv_perf_imgcodecs_pch_dephelp
-
-# fast build rule for target.
-opencv_perf_imgcodecs_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/build
-.PHONY : opencv_perf_imgcodecs_pch_dephelp/fast
-
-# Convenience name for target.
-modules/imgcodecs/CMakeFiles/pch_Generate_opencv_perf_imgcodecs.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/imgcodecs/CMakeFiles/pch_Generate_opencv_perf_imgcodecs.dir/rule
-.PHONY : modules/imgcodecs/CMakeFiles/pch_Generate_opencv_perf_imgcodecs.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_perf_imgcodecs: modules/imgcodecs/CMakeFiles/pch_Generate_opencv_perf_imgcodecs.dir/rule
-
-.PHONY : pch_Generate_opencv_perf_imgcodecs
-
-# fast build rule for target.
-pch_Generate_opencv_perf_imgcodecs/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\pch_Generate_opencv_perf_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/pch_Generate_opencv_perf_imgcodecs.dir/build
-.PHONY : pch_Generate_opencv_perf_imgcodecs/fast
 
 opencv_imgcodecs_pch_dephelp.obj: opencv_imgcodecs_pch_dephelp.cxx.obj
 
@@ -342,7 +237,7 @@ opencv_imgcodecs_pch_dephelp.obj: opencv_imgcodecs_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_imgcodecs_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.obj
 .PHONY : opencv_imgcodecs_pch_dephelp.cxx.obj
 
 opencv_imgcodecs_pch_dephelp.i: opencv_imgcodecs_pch_dephelp.cxx.i
@@ -351,7 +246,7 @@ opencv_imgcodecs_pch_dephelp.i: opencv_imgcodecs_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_imgcodecs_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.i
 .PHONY : opencv_imgcodecs_pch_dephelp.cxx.i
 
 opencv_imgcodecs_pch_dephelp.s: opencv_imgcodecs_pch_dephelp.cxx.s
@@ -360,89 +255,8 @@ opencv_imgcodecs_pch_dephelp.s: opencv_imgcodecs_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_imgcodecs_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_pch_dephelp.dir/opencv_imgcodecs_pch_dephelp.cxx.s
 .PHONY : opencv_imgcodecs_pch_dephelp.cxx.s
-
-opencv_perf_imgcodecs_pch_dephelp.obj: opencv_perf_imgcodecs_pch_dephelp.cxx.obj
-
-.PHONY : opencv_perf_imgcodecs_pch_dephelp.obj
-
-# target to build an object file
-opencv_perf_imgcodecs_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/opencv_perf_imgcodecs_pch_dephelp.cxx.obj
-.PHONY : opencv_perf_imgcodecs_pch_dephelp.cxx.obj
-
-opencv_perf_imgcodecs_pch_dephelp.i: opencv_perf_imgcodecs_pch_dephelp.cxx.i
-
-.PHONY : opencv_perf_imgcodecs_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_perf_imgcodecs_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/opencv_perf_imgcodecs_pch_dephelp.cxx.i
-.PHONY : opencv_perf_imgcodecs_pch_dephelp.cxx.i
-
-opencv_perf_imgcodecs_pch_dephelp.s: opencv_perf_imgcodecs_pch_dephelp.cxx.s
-
-.PHONY : opencv_perf_imgcodecs_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_perf_imgcodecs_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs_pch_dephelp.dir/opencv_perf_imgcodecs_pch_dephelp.cxx.s
-.PHONY : opencv_perf_imgcodecs_pch_dephelp.cxx.s
-
-opencv_test_imgcodecs_pch_dephelp.obj: opencv_test_imgcodecs_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_imgcodecs_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_imgcodecs_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/opencv_test_imgcodecs_pch_dephelp.cxx.obj
-.PHONY : opencv_test_imgcodecs_pch_dephelp.cxx.obj
-
-opencv_test_imgcodecs_pch_dephelp.i: opencv_test_imgcodecs_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_imgcodecs_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_imgcodecs_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/opencv_test_imgcodecs_pch_dephelp.cxx.i
-.PHONY : opencv_test_imgcodecs_pch_dephelp.cxx.i
-
-opencv_test_imgcodecs_pch_dephelp.s: opencv_test_imgcodecs_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_imgcodecs_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_imgcodecs_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs_pch_dephelp.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/opencv_test_imgcodecs_pch_dephelp.cxx.s
-.PHONY : opencv_test_imgcodecs_pch_dephelp.cxx.s
-
-perf/perf_main.obj: perf/perf_main.cpp.obj
-
-.PHONY : perf/perf_main.obj
-
-# target to build an object file
-perf/perf_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/perf/perf_main.cpp.obj
-.PHONY : perf/perf_main.cpp.obj
-
-perf/perf_main.i: perf/perf_main.cpp.i
-
-.PHONY : perf/perf_main.i
-
-# target to preprocess a source file
-perf/perf_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/perf/perf_main.cpp.i
-.PHONY : perf/perf_main.cpp.i
-
-perf/perf_main.s: perf/perf_main.cpp.s
-
-.PHONY : perf/perf_main.s
-
-# target to generate assembly for a file
-perf/perf_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_perf_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/perf/perf_main.cpp.s
-.PHONY : perf/perf_main.cpp.s
 
 src/bitstrm.obj: src/bitstrm.cpp.obj
 
@@ -450,8 +264,7 @@ src/bitstrm.obj: src/bitstrm.cpp.obj
 
 # target to build an object file
 src/bitstrm.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/bitstrm.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/bitstrm.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/bitstrm.cpp.obj
 .PHONY : src/bitstrm.cpp.obj
 
 src/bitstrm.i: src/bitstrm.cpp.i
@@ -460,8 +273,7 @@ src/bitstrm.i: src/bitstrm.cpp.i
 
 # target to preprocess a source file
 src/bitstrm.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/bitstrm.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/bitstrm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/bitstrm.cpp.i
 .PHONY : src/bitstrm.cpp.i
 
 src/bitstrm.s: src/bitstrm.cpp.s
@@ -470,9 +282,35 @@ src/bitstrm.s: src/bitstrm.cpp.s
 
 # target to generate assembly for a file
 src/bitstrm.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/bitstrm.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/bitstrm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/bitstrm.cpp.s
 .PHONY : src/bitstrm.cpp.s
+
+src/exif.obj: src/exif.cpp.obj
+
+.PHONY : src/exif.obj
+
+# target to build an object file
+src/exif.cpp.obj:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/exif.cpp.obj
+.PHONY : src/exif.cpp.obj
+
+src/exif.i: src/exif.cpp.i
+
+.PHONY : src/exif.i
+
+# target to preprocess a source file
+src/exif.cpp.i:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/exif.cpp.i
+.PHONY : src/exif.cpp.i
+
+src/exif.s: src/exif.cpp.s
+
+.PHONY : src/exif.s
+
+# target to generate assembly for a file
+src/exif.cpp.s:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/exif.cpp.s
+.PHONY : src/exif.cpp.s
 
 src/grfmt_base.obj: src/grfmt_base.cpp.obj
 
@@ -480,8 +318,7 @@ src/grfmt_base.obj: src/grfmt_base.cpp.obj
 
 # target to build an object file
 src/grfmt_base.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_base.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_base.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_base.cpp.obj
 .PHONY : src/grfmt_base.cpp.obj
 
 src/grfmt_base.i: src/grfmt_base.cpp.i
@@ -490,8 +327,7 @@ src/grfmt_base.i: src/grfmt_base.cpp.i
 
 # target to preprocess a source file
 src/grfmt_base.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_base.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_base.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_base.cpp.i
 .PHONY : src/grfmt_base.cpp.i
 
 src/grfmt_base.s: src/grfmt_base.cpp.s
@@ -500,8 +336,7 @@ src/grfmt_base.s: src/grfmt_base.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_base.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_base.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_base.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_base.cpp.s
 .PHONY : src/grfmt_base.cpp.s
 
 src/grfmt_bmp.obj: src/grfmt_bmp.cpp.obj
@@ -510,8 +345,7 @@ src/grfmt_bmp.obj: src/grfmt_bmp.cpp.obj
 
 # target to build an object file
 src/grfmt_bmp.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_bmp.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_bmp.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_bmp.cpp.obj
 .PHONY : src/grfmt_bmp.cpp.obj
 
 src/grfmt_bmp.i: src/grfmt_bmp.cpp.i
@@ -520,8 +354,7 @@ src/grfmt_bmp.i: src/grfmt_bmp.cpp.i
 
 # target to preprocess a source file
 src/grfmt_bmp.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_bmp.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_bmp.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_bmp.cpp.i
 .PHONY : src/grfmt_bmp.cpp.i
 
 src/grfmt_bmp.s: src/grfmt_bmp.cpp.s
@@ -530,8 +363,7 @@ src/grfmt_bmp.s: src/grfmt_bmp.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_bmp.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_bmp.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_bmp.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_bmp.cpp.s
 .PHONY : src/grfmt_bmp.cpp.s
 
 src/grfmt_exr.obj: src/grfmt_exr.cpp.obj
@@ -540,8 +372,7 @@ src/grfmt_exr.obj: src/grfmt_exr.cpp.obj
 
 # target to build an object file
 src/grfmt_exr.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_exr.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.obj
 .PHONY : src/grfmt_exr.cpp.obj
 
 src/grfmt_exr.i: src/grfmt_exr.cpp.i
@@ -550,8 +381,7 @@ src/grfmt_exr.i: src/grfmt_exr.cpp.i
 
 # target to preprocess a source file
 src/grfmt_exr.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_exr.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.i
 .PHONY : src/grfmt_exr.cpp.i
 
 src/grfmt_exr.s: src/grfmt_exr.cpp.s
@@ -560,8 +390,7 @@ src/grfmt_exr.s: src/grfmt_exr.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_exr.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_exr.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_exr.cpp.s
 .PHONY : src/grfmt_exr.cpp.s
 
 src/grfmt_gdal.obj: src/grfmt_gdal.cpp.obj
@@ -570,8 +399,7 @@ src/grfmt_gdal.obj: src/grfmt_gdal.cpp.obj
 
 # target to build an object file
 src/grfmt_gdal.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_gdal.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdal.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdal.cpp.obj
 .PHONY : src/grfmt_gdal.cpp.obj
 
 src/grfmt_gdal.i: src/grfmt_gdal.cpp.i
@@ -580,8 +408,7 @@ src/grfmt_gdal.i: src/grfmt_gdal.cpp.i
 
 # target to preprocess a source file
 src/grfmt_gdal.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_gdal.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdal.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdal.cpp.i
 .PHONY : src/grfmt_gdal.cpp.i
 
 src/grfmt_gdal.s: src/grfmt_gdal.cpp.s
@@ -590,9 +417,35 @@ src/grfmt_gdal.s: src/grfmt_gdal.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_gdal.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_gdal.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdal.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdal.cpp.s
 .PHONY : src/grfmt_gdal.cpp.s
+
+src/grfmt_gdcm.obj: src/grfmt_gdcm.cpp.obj
+
+.PHONY : src/grfmt_gdcm.obj
+
+# target to build an object file
+src/grfmt_gdcm.cpp.obj:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdcm.cpp.obj
+.PHONY : src/grfmt_gdcm.cpp.obj
+
+src/grfmt_gdcm.i: src/grfmt_gdcm.cpp.i
+
+.PHONY : src/grfmt_gdcm.i
+
+# target to preprocess a source file
+src/grfmt_gdcm.cpp.i:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdcm.cpp.i
+.PHONY : src/grfmt_gdcm.cpp.i
+
+src/grfmt_gdcm.s: src/grfmt_gdcm.cpp.s
+
+.PHONY : src/grfmt_gdcm.s
+
+# target to generate assembly for a file
+src/grfmt_gdcm.cpp.s:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_gdcm.cpp.s
+.PHONY : src/grfmt_gdcm.cpp.s
 
 src/grfmt_hdr.obj: src/grfmt_hdr.cpp.obj
 
@@ -600,8 +453,7 @@ src/grfmt_hdr.obj: src/grfmt_hdr.cpp.obj
 
 # target to build an object file
 src/grfmt_hdr.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_hdr.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_hdr.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_hdr.cpp.obj
 .PHONY : src/grfmt_hdr.cpp.obj
 
 src/grfmt_hdr.i: src/grfmt_hdr.cpp.i
@@ -610,8 +462,7 @@ src/grfmt_hdr.i: src/grfmt_hdr.cpp.i
 
 # target to preprocess a source file
 src/grfmt_hdr.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_hdr.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_hdr.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_hdr.cpp.i
 .PHONY : src/grfmt_hdr.cpp.i
 
 src/grfmt_hdr.s: src/grfmt_hdr.cpp.s
@@ -620,8 +471,7 @@ src/grfmt_hdr.s: src/grfmt_hdr.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_hdr.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_hdr.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_hdr.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_hdr.cpp.s
 .PHONY : src/grfmt_hdr.cpp.s
 
 src/grfmt_jpeg.obj: src/grfmt_jpeg.cpp.obj
@@ -630,8 +480,7 @@ src/grfmt_jpeg.obj: src/grfmt_jpeg.cpp.obj
 
 # target to build an object file
 src/grfmt_jpeg.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_jpeg.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg.cpp.obj
 .PHONY : src/grfmt_jpeg.cpp.obj
 
 src/grfmt_jpeg.i: src/grfmt_jpeg.cpp.i
@@ -640,8 +489,7 @@ src/grfmt_jpeg.i: src/grfmt_jpeg.cpp.i
 
 # target to preprocess a source file
 src/grfmt_jpeg.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_jpeg.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg.cpp.i
 .PHONY : src/grfmt_jpeg.cpp.i
 
 src/grfmt_jpeg.s: src/grfmt_jpeg.cpp.s
@@ -650,8 +498,7 @@ src/grfmt_jpeg.s: src/grfmt_jpeg.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_jpeg.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_jpeg.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg.cpp.s
 .PHONY : src/grfmt_jpeg.cpp.s
 
 src/grfmt_jpeg2000.obj: src/grfmt_jpeg2000.cpp.obj
@@ -660,8 +507,7 @@ src/grfmt_jpeg2000.obj: src/grfmt_jpeg2000.cpp.obj
 
 # target to build an object file
 src/grfmt_jpeg2000.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_jpeg2000.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000.cpp.obj
 .PHONY : src/grfmt_jpeg2000.cpp.obj
 
 src/grfmt_jpeg2000.i: src/grfmt_jpeg2000.cpp.i
@@ -670,8 +516,7 @@ src/grfmt_jpeg2000.i: src/grfmt_jpeg2000.cpp.i
 
 # target to preprocess a source file
 src/grfmt_jpeg2000.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_jpeg2000.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000.cpp.i
 .PHONY : src/grfmt_jpeg2000.cpp.i
 
 src/grfmt_jpeg2000.s: src/grfmt_jpeg2000.cpp.s
@@ -680,9 +525,35 @@ src/grfmt_jpeg2000.s: src/grfmt_jpeg2000.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_jpeg2000.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_jpeg2000.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_jpeg2000.cpp.s
 .PHONY : src/grfmt_jpeg2000.cpp.s
+
+src/grfmt_pam.obj: src/grfmt_pam.cpp.obj
+
+.PHONY : src/grfmt_pam.obj
+
+# target to build an object file
+src/grfmt_pam.cpp.obj:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pam.cpp.obj
+.PHONY : src/grfmt_pam.cpp.obj
+
+src/grfmt_pam.i: src/grfmt_pam.cpp.i
+
+.PHONY : src/grfmt_pam.i
+
+# target to preprocess a source file
+src/grfmt_pam.cpp.i:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pam.cpp.i
+.PHONY : src/grfmt_pam.cpp.i
+
+src/grfmt_pam.s: src/grfmt_pam.cpp.s
+
+.PHONY : src/grfmt_pam.s
+
+# target to generate assembly for a file
+src/grfmt_pam.cpp.s:
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pam.cpp.s
+.PHONY : src/grfmt_pam.cpp.s
 
 src/grfmt_png.obj: src/grfmt_png.cpp.obj
 
@@ -690,8 +561,7 @@ src/grfmt_png.obj: src/grfmt_png.cpp.obj
 
 # target to build an object file
 src/grfmt_png.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_png.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_png.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_png.cpp.obj
 .PHONY : src/grfmt_png.cpp.obj
 
 src/grfmt_png.i: src/grfmt_png.cpp.i
@@ -700,8 +570,7 @@ src/grfmt_png.i: src/grfmt_png.cpp.i
 
 # target to preprocess a source file
 src/grfmt_png.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_png.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_png.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_png.cpp.i
 .PHONY : src/grfmt_png.cpp.i
 
 src/grfmt_png.s: src/grfmt_png.cpp.s
@@ -710,8 +579,7 @@ src/grfmt_png.s: src/grfmt_png.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_png.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_png.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_png.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_png.cpp.s
 .PHONY : src/grfmt_png.cpp.s
 
 src/grfmt_pxm.obj: src/grfmt_pxm.cpp.obj
@@ -720,8 +588,7 @@ src/grfmt_pxm.obj: src/grfmt_pxm.cpp.obj
 
 # target to build an object file
 src/grfmt_pxm.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_pxm.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pxm.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pxm.cpp.obj
 .PHONY : src/grfmt_pxm.cpp.obj
 
 src/grfmt_pxm.i: src/grfmt_pxm.cpp.i
@@ -730,8 +597,7 @@ src/grfmt_pxm.i: src/grfmt_pxm.cpp.i
 
 # target to preprocess a source file
 src/grfmt_pxm.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_pxm.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pxm.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pxm.cpp.i
 .PHONY : src/grfmt_pxm.cpp.i
 
 src/grfmt_pxm.s: src/grfmt_pxm.cpp.s
@@ -740,8 +606,7 @@ src/grfmt_pxm.s: src/grfmt_pxm.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_pxm.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_pxm.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pxm.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_pxm.cpp.s
 .PHONY : src/grfmt_pxm.cpp.s
 
 src/grfmt_sunras.obj: src/grfmt_sunras.cpp.obj
@@ -750,8 +615,7 @@ src/grfmt_sunras.obj: src/grfmt_sunras.cpp.obj
 
 # target to build an object file
 src/grfmt_sunras.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_sunras.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_sunras.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_sunras.cpp.obj
 .PHONY : src/grfmt_sunras.cpp.obj
 
 src/grfmt_sunras.i: src/grfmt_sunras.cpp.i
@@ -760,8 +624,7 @@ src/grfmt_sunras.i: src/grfmt_sunras.cpp.i
 
 # target to preprocess a source file
 src/grfmt_sunras.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_sunras.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_sunras.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_sunras.cpp.i
 .PHONY : src/grfmt_sunras.cpp.i
 
 src/grfmt_sunras.s: src/grfmt_sunras.cpp.s
@@ -770,8 +633,7 @@ src/grfmt_sunras.s: src/grfmt_sunras.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_sunras.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_sunras.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_sunras.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_sunras.cpp.s
 .PHONY : src/grfmt_sunras.cpp.s
 
 src/grfmt_tiff.obj: src/grfmt_tiff.cpp.obj
@@ -780,8 +642,7 @@ src/grfmt_tiff.obj: src/grfmt_tiff.cpp.obj
 
 # target to build an object file
 src/grfmt_tiff.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_tiff.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_tiff.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_tiff.cpp.obj
 .PHONY : src/grfmt_tiff.cpp.obj
 
 src/grfmt_tiff.i: src/grfmt_tiff.cpp.i
@@ -790,8 +651,7 @@ src/grfmt_tiff.i: src/grfmt_tiff.cpp.i
 
 # target to preprocess a source file
 src/grfmt_tiff.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_tiff.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_tiff.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_tiff.cpp.i
 .PHONY : src/grfmt_tiff.cpp.i
 
 src/grfmt_tiff.s: src/grfmt_tiff.cpp.s
@@ -800,8 +660,7 @@ src/grfmt_tiff.s: src/grfmt_tiff.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_tiff.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_tiff.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_tiff.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_tiff.cpp.s
 .PHONY : src/grfmt_tiff.cpp.s
 
 src/grfmt_webp.obj: src/grfmt_webp.cpp.obj
@@ -810,8 +669,7 @@ src/grfmt_webp.obj: src/grfmt_webp.cpp.obj
 
 # target to build an object file
 src/grfmt_webp.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_webp.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.obj
 .PHONY : src/grfmt_webp.cpp.obj
 
 src/grfmt_webp.i: src/grfmt_webp.cpp.i
@@ -820,8 +678,7 @@ src/grfmt_webp.i: src/grfmt_webp.cpp.i
 
 # target to preprocess a source file
 src/grfmt_webp.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_webp.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.i
 .PHONY : src/grfmt_webp.cpp.i
 
 src/grfmt_webp.s: src/grfmt_webp.cpp.s
@@ -830,39 +687,8 @@ src/grfmt_webp.s: src/grfmt_webp.cpp.s
 
 # target to generate assembly for a file
 src/grfmt_webp.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/grfmt_webp.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/grfmt_webp.cpp.s
 .PHONY : src/grfmt_webp.cpp.s
-
-src/jpeg_exif.obj: src/jpeg_exif.cpp.obj
-
-.PHONY : src/jpeg_exif.obj
-
-# target to build an object file
-src/jpeg_exif.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/jpeg_exif.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/jpeg_exif.cpp.obj
-.PHONY : src/jpeg_exif.cpp.obj
-
-src/jpeg_exif.i: src/jpeg_exif.cpp.i
-
-.PHONY : src/jpeg_exif.i
-
-# target to preprocess a source file
-src/jpeg_exif.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/jpeg_exif.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/jpeg_exif.cpp.i
-.PHONY : src/jpeg_exif.cpp.i
-
-src/jpeg_exif.s: src/jpeg_exif.cpp.s
-
-.PHONY : src/jpeg_exif.s
-
-# target to generate assembly for a file
-src/jpeg_exif.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/jpeg_exif.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/jpeg_exif.cpp.s
-.PHONY : src/jpeg_exif.cpp.s
 
 src/loadsave.obj: src/loadsave.cpp.obj
 
@@ -870,8 +696,7 @@ src/loadsave.obj: src/loadsave.cpp.obj
 
 # target to build an object file
 src/loadsave.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/loadsave.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/loadsave.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/loadsave.cpp.obj
 .PHONY : src/loadsave.cpp.obj
 
 src/loadsave.i: src/loadsave.cpp.i
@@ -880,8 +705,7 @@ src/loadsave.i: src/loadsave.cpp.i
 
 # target to preprocess a source file
 src/loadsave.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/loadsave.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/loadsave.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/loadsave.cpp.i
 .PHONY : src/loadsave.cpp.i
 
 src/loadsave.s: src/loadsave.cpp.s
@@ -890,8 +714,7 @@ src/loadsave.s: src/loadsave.cpp.s
 
 # target to generate assembly for a file
 src/loadsave.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/loadsave.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/loadsave.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/loadsave.cpp.s
 .PHONY : src/loadsave.cpp.s
 
 src/rgbe.obj: src/rgbe.cpp.obj
@@ -900,8 +723,7 @@ src/rgbe.obj: src/rgbe.cpp.obj
 
 # target to build an object file
 src/rgbe.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/rgbe.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/rgbe.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/rgbe.cpp.obj
 .PHONY : src/rgbe.cpp.obj
 
 src/rgbe.i: src/rgbe.cpp.i
@@ -910,8 +732,7 @@ src/rgbe.i: src/rgbe.cpp.i
 
 # target to preprocess a source file
 src/rgbe.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/rgbe.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/rgbe.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/rgbe.cpp.i
 .PHONY : src/rgbe.cpp.i
 
 src/rgbe.s: src/rgbe.cpp.s
@@ -920,8 +741,7 @@ src/rgbe.s: src/rgbe.cpp.s
 
 # target to generate assembly for a file
 src/rgbe.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/rgbe.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/rgbe.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/rgbe.cpp.s
 .PHONY : src/rgbe.cpp.s
 
 src/utils.obj: src/utils.cpp.obj
@@ -930,8 +750,7 @@ src/utils.obj: src/utils.cpp.obj
 
 # target to build an object file
 src/utils.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/utils.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/utils.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/utils.cpp.obj
 .PHONY : src/utils.cpp.obj
 
 src/utils.i: src/utils.cpp.i
@@ -940,8 +759,7 @@ src/utils.i: src/utils.cpp.i
 
 # target to preprocess a source file
 src/utils.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/utils.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/utils.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/utils.cpp.i
 .PHONY : src/utils.cpp.i
 
 src/utils.s: src/utils.cpp.s
@@ -950,90 +768,8 @@ src/utils.s: src/utils.cpp.s
 
 # target to generate assembly for a file
 src/utils.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs_object.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs_object.dir/src/utils.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/utils.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
-
-test/test_drawing.obj: test/test_drawing.cpp.obj
-
-.PHONY : test/test_drawing.obj
-
-# target to build an object file
-test/test_drawing.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_drawing.cpp.obj
-.PHONY : test/test_drawing.cpp.obj
-
-test/test_drawing.i: test/test_drawing.cpp.i
-
-.PHONY : test/test_drawing.i
-
-# target to preprocess a source file
-test/test_drawing.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_drawing.cpp.i
-.PHONY : test/test_drawing.cpp.i
-
-test/test_drawing.s: test/test_drawing.cpp.s
-
-.PHONY : test/test_drawing.s
-
-# target to generate assembly for a file
-test/test_drawing.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_drawing.cpp.s
-.PHONY : test/test_drawing.cpp.s
-
-test/test_grfmt.obj: test/test_grfmt.cpp.obj
-
-.PHONY : test/test_grfmt.obj
-
-# target to build an object file
-test/test_grfmt.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_grfmt.cpp.obj
-.PHONY : test/test_grfmt.cpp.obj
-
-test/test_grfmt.i: test/test_grfmt.cpp.i
-
-.PHONY : test/test_grfmt.i
-
-# target to preprocess a source file
-test/test_grfmt.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_grfmt.cpp.i
-.PHONY : test/test_grfmt.cpp.i
-
-test/test_grfmt.s: test/test_grfmt.cpp.s
-
-.PHONY : test/test_grfmt.s
-
-# target to generate assembly for a file
-test/test_grfmt.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_grfmt.cpp.s
-.PHONY : test/test_grfmt.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\imgcodecs\CMakeFiles\opencv_test_imgcodecs.dir\build.make modules/imgcodecs/CMakeFiles/opencv_test_imgcodecs.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
 
 # Help Target
 help:
@@ -1041,21 +777,14 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... opencv_imgcodecs_object
 	@echo ... opencv_imgcodecs
-	@echo ... opencv_test_imgcodecs
 	@echo ... opencv_imgcodecs_pch_dephelp
-	@echo ... test
+	@echo ... rebuild_cache
 	@echo ... pch_Generate_opencv_imgcodecs
-	@echo ... opencv_perf_imgcodecs
-	@echo ... opencv_test_imgcodecs_pch_dephelp
-	@echo ... pch_Generate_opencv_test_imgcodecs
-	@echo ... opencv_perf_imgcodecs_pch_dephelp
-	@echo ... pch_Generate_opencv_perf_imgcodecs
+	@echo ... test
 	@echo ... package
 	@echo ... package_source
 	@echo ... edit_cache
-	@echo ... rebuild_cache
 	@echo ... list_install_components
 	@echo ... install
 	@echo ... install/local
@@ -1063,18 +792,12 @@ help:
 	@echo ... opencv_imgcodecs_pch_dephelp.obj
 	@echo ... opencv_imgcodecs_pch_dephelp.i
 	@echo ... opencv_imgcodecs_pch_dephelp.s
-	@echo ... opencv_perf_imgcodecs_pch_dephelp.obj
-	@echo ... opencv_perf_imgcodecs_pch_dephelp.i
-	@echo ... opencv_perf_imgcodecs_pch_dephelp.s
-	@echo ... opencv_test_imgcodecs_pch_dephelp.obj
-	@echo ... opencv_test_imgcodecs_pch_dephelp.i
-	@echo ... opencv_test_imgcodecs_pch_dephelp.s
-	@echo ... perf/perf_main.obj
-	@echo ... perf/perf_main.i
-	@echo ... perf/perf_main.s
 	@echo ... src/bitstrm.obj
 	@echo ... src/bitstrm.i
 	@echo ... src/bitstrm.s
+	@echo ... src/exif.obj
+	@echo ... src/exif.i
+	@echo ... src/exif.s
 	@echo ... src/grfmt_base.obj
 	@echo ... src/grfmt_base.i
 	@echo ... src/grfmt_base.s
@@ -1087,6 +810,9 @@ help:
 	@echo ... src/grfmt_gdal.obj
 	@echo ... src/grfmt_gdal.i
 	@echo ... src/grfmt_gdal.s
+	@echo ... src/grfmt_gdcm.obj
+	@echo ... src/grfmt_gdcm.i
+	@echo ... src/grfmt_gdcm.s
 	@echo ... src/grfmt_hdr.obj
 	@echo ... src/grfmt_hdr.i
 	@echo ... src/grfmt_hdr.s
@@ -1096,6 +822,9 @@ help:
 	@echo ... src/grfmt_jpeg2000.obj
 	@echo ... src/grfmt_jpeg2000.i
 	@echo ... src/grfmt_jpeg2000.s
+	@echo ... src/grfmt_pam.obj
+	@echo ... src/grfmt_pam.i
+	@echo ... src/grfmt_pam.s
 	@echo ... src/grfmt_png.obj
 	@echo ... src/grfmt_png.i
 	@echo ... src/grfmt_png.s
@@ -1111,9 +840,6 @@ help:
 	@echo ... src/grfmt_webp.obj
 	@echo ... src/grfmt_webp.i
 	@echo ... src/grfmt_webp.s
-	@echo ... src/jpeg_exif.obj
-	@echo ... src/jpeg_exif.i
-	@echo ... src/jpeg_exif.s
 	@echo ... src/loadsave.obj
 	@echo ... src/loadsave.i
 	@echo ... src/loadsave.s
@@ -1123,15 +849,6 @@ help:
 	@echo ... src/utils.obj
 	@echo ... src/utils.i
 	@echo ... src/utils.s
-	@echo ... test/test_drawing.obj
-	@echo ... test/test_drawing.i
-	@echo ... test/test_drawing.s
-	@echo ... test/test_grfmt.obj
-	@echo ... test/test_grfmt.i
-	@echo ... test/test_grfmt.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
 .PHONY : help
 
 
@@ -1143,6 +860,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rartin/Desktop/opencv/sources/modules/videostab
+# Install script for directory: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Desktop/build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -28,76 +28,76 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/rartin/Desktop/build/lib/libopencv_videostab310.dll.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_videostab320.dll.a")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/bin" TYPE SHARED_LIBRARY OPTIONAL FILES "C:/Users/rartin/Desktop/build/bin/libopencv_videostab310.dll")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/bin/libopencv_videostab310.dll" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/bin/libopencv_videostab310.dll")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x86/mingw/bin" TYPE SHARED_LIBRARY OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_videostab320.dll")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/bin/libopencv_videostab320.dll" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/bin/libopencv_videostab320.dll")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "C:/MinGW/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/bin/libopencv_videostab310.dll")
+      execute_process(COMMAND "C:/MinGW/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x86/mingw/bin/libopencv_videostab320.dll")
     endif()
   endif()
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/deblurring.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/deblurring.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/fast_marching.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/fast_marching.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/fast_marching_inl.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/fast_marching_inl.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/frame_source.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/frame_source.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/global_motion.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/global_motion.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/inpainting.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/inpainting.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/log.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/log.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/motion_core.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/motion_core.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/motion_stabilizing.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/motion_stabilizing.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/optical_flow.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/optical_flow.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/outlier_rejection.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/outlier_rejection.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/ring_buffer.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/ring_buffer.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/stabilizer.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/stabilizer.hpp")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Desktop/opencv/sources/modules/videostab/include/opencv2/videostab/wobble_suppression.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2/videostab" TYPE FILE OPTIONAL FILES "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videostab/include/opencv2/videostab/wobble_suppression.hpp")
 endif()
 

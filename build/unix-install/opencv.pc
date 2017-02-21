@@ -1,6 +1,6 @@
 # Package Information for pkg-config
 
-prefix=C:/Users/rartin/Desktop/build/install
+prefix=C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install
 exec_prefix=${prefix}
 libdir=${exec_prefix}/x86/mingw/lib
 includedir_old=${prefix}/include/opencv
@@ -8,7 +8,7 @@ includedir_new=${prefix}/include
 
 Name: OpenCV
 Description: Open Source Computer Vision Library
-Version: 3.1.0
-Libs: -L${exec_prefix}/x86/mingw/lib -lopencv_shape310 -lopencv_stitching310 -lopencv_objdetect310 -lopencv_superres310 -lopencv_videostab310 -lopencv_calib3d310 -lopencv_features2d310 -lopencv_highgui310 -lopencv_videoio310 -lopencv_imgcodecs310 -lopencv_video310 -lopencv_photo310 -lopencv_ml310 -lopencv_imgproc310 -lopencv_flann310 -lopencv_core310
+Version: 3.2.0
+Libs: -L${exec_prefix}/x86/mingw/lib -lopencv_shape320 -lopencv_stitching320 -lopencv_objdetect320 -lopencv_superres320 -lopencv_videostab320 -lopencv_calib3d320 -lopencv_features2d320 -lopencv_highgui320 -lopencv_videoio320 -lopencv_imgcodecs320 -lopencv_video320 -lopencv_photo320 -lopencv_ml320 -lopencv_imgproc320 -lopencv_flann320 -lopencv_core320
 Libs.private: -lcomctl32 -lgdi32 -lole32 -lsetupapi -lws2_32 -lvfw32 -lwinmm
 Cflags: -I${includedir_old} -I${includedir_new}

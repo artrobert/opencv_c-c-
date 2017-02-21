@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/stitching/CMakeFiles/opencv_stitching.dir/depend.make
@@ -56,28 +56,28 @@ include modules/stitching/CMakeFiles/opencv_stitching.dir/progress.make
 # Include the compile flags for this target's objects.
 include modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 
-modules/stitching/opencl_kernels_stitching.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/opencl/multibandblend.cl
-modules/stitching/opencl_kernels_stitching.cpp: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/opencl/warpers.cl
-modules/stitching/opencl_kernels_stitching.cpp: C:/Users/rartin/Desktop/opencv/sources/cmake/cl2cpp.cmake
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencl_kernels_stitching.cpp, opencl_kernels_stitching.hpp"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && "C:\Program Files (x86)\CMake\bin\cmake.exe" -DMODULE_NAME=stitching -DCL_DIR=C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/opencl -DOUTPUT=C:/Users/rartin/Desktop/build/modules/stitching/opencl_kernels_stitching.cpp -P C:/Users/rartin/Desktop/opencv/sources/cmake/cl2cpp.cmake
+modules/stitching/opencl_kernels_stitching.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/opencl/multibandblend.cl
+modules/stitching/opencl_kernels_stitching.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/opencl/warpers.cl
+modules/stitching/opencl_kernels_stitching.cpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/cmake/cl2cpp.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencl_kernels_stitching.cpp, opencl_kernels_stitching.hpp"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && "C:\Program Files (x86)\CMake\bin\cmake.exe" -DMODULE_NAME=stitching -DCL_DIR=C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/opencl -DOUTPUT=C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/opencl_kernels_stitching.cpp -P C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/cmake/cl2cpp.cmake
 
 modules/stitching/opencl_kernels_stitching.hpp: modules/stitching/opencl_kernels_stitching.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate modules\stitching\opencl_kernels_stitching.hpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/autocalib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\autocalib.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\autocalib.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/autocalib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\autocalib.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\autocalib.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\autocalib.cpp > CMakeFiles\opencv_stitching.dir\src\autocalib.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\autocalib.cpp > CMakeFiles\opencv_stitching.dir\src\autocalib.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\autocalib.cpp -o CMakeFiles\opencv_stitching.dir\src\autocalib.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\autocalib.cpp -o CMakeFiles\opencv_stitching.dir\src\autocalib.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj.requires:
 
@@ -92,17 +92,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj.provides
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/blenders.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\blenders.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\blenders.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/blenders.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\blenders.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\blenders.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/blenders.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\blenders.cpp > CMakeFiles\opencv_stitching.dir\src\blenders.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\blenders.cpp > CMakeFiles\opencv_stitching.dir\src\blenders.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/blenders.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\blenders.cpp -o CMakeFiles\opencv_stitching.dir\src\blenders.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\blenders.cpp -o CMakeFiles\opencv_stitching.dir\src\blenders.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj.requires:
 
@@ -117,17 +117,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj.provides.
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\camera.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\camera.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\camera.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\camera.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/camera.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\camera.cpp > CMakeFiles\opencv_stitching.dir\src\camera.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\camera.cpp > CMakeFiles\opencv_stitching.dir\src\camera.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/camera.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\camera.cpp -o CMakeFiles\opencv_stitching.dir\src\camera.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\camera.cpp -o CMakeFiles\opencv_stitching.dir\src\camera.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj.requires:
 
@@ -142,17 +142,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj.provides.bu
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/exposure_compensate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\exposure_compensate.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\exposure_compensate.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/exposure_compensate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\exposure_compensate.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\exposure_compensate.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\exposure_compensate.cpp > CMakeFiles\opencv_stitching.dir\src\exposure_compensate.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\exposure_compensate.cpp > CMakeFiles\opencv_stitching.dir\src\exposure_compensate.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\exposure_compensate.cpp -o CMakeFiles\opencv_stitching.dir\src\exposure_compensate.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\exposure_compensate.cpp -o CMakeFiles\opencv_stitching.dir\src\exposure_compensate.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj.requires:
 
@@ -167,17 +167,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.ob
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/matchers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\matchers.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\matchers.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/matchers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\matchers.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\matchers.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/matchers.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\matchers.cpp > CMakeFiles\opencv_stitching.dir\src\matchers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\matchers.cpp > CMakeFiles\opencv_stitching.dir\src\matchers.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/matchers.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\matchers.cpp -o CMakeFiles\opencv_stitching.dir\src\matchers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\matchers.cpp -o CMakeFiles\opencv_stitching.dir\src\matchers.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj.requires:
 
@@ -192,17 +192,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj.provides.
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/motion_estimators.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\motion_estimators.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\motion_estimators.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/motion_estimators.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\motion_estimators.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\motion_estimators.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\motion_estimators.cpp > CMakeFiles\opencv_stitching.dir\src\motion_estimators.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\motion_estimators.cpp > CMakeFiles\opencv_stitching.dir\src\motion_estimators.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\motion_estimators.cpp -o CMakeFiles\opencv_stitching.dir\src\motion_estimators.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\motion_estimators.cpp -o CMakeFiles\opencv_stitching.dir\src\motion_estimators.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj.requires:
 
@@ -217,17 +217,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj.
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/seam_finders.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\seam_finders.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\seam_finders.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/seam_finders.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\seam_finders.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\seam_finders.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\seam_finders.cpp > CMakeFiles\opencv_stitching.dir\src\seam_finders.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\seam_finders.cpp > CMakeFiles\opencv_stitching.dir\src\seam_finders.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\seam_finders.cpp -o CMakeFiles\opencv_stitching.dir\src\seam_finders.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\seam_finders.cpp -o CMakeFiles\opencv_stitching.dir\src\seam_finders.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj.requires:
 
@@ -242,17 +242,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj.provi
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/stitcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\stitcher.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\stitcher.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/stitcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\stitcher.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\stitcher.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\stitcher.cpp > CMakeFiles\opencv_stitching.dir\src\stitcher.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\stitcher.cpp > CMakeFiles\opencv_stitching.dir\src\stitcher.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\stitcher.cpp -o CMakeFiles\opencv_stitching.dir\src\stitcher.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\stitcher.cpp -o CMakeFiles\opencv_stitching.dir\src\stitcher.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj.requires:
 
@@ -267,17 +267,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj.provides.
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/timelapsers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\timelapsers.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\timelapsers.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/timelapsers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\timelapsers.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\timelapsers.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\timelapsers.cpp > CMakeFiles\opencv_stitching.dir\src\timelapsers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\timelapsers.cpp > CMakeFiles\opencv_stitching.dir\src\timelapsers.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\timelapsers.cpp -o CMakeFiles\opencv_stitching.dir\src\timelapsers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\timelapsers.cpp -o CMakeFiles\opencv_stitching.dir\src\timelapsers.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj.requires:
 
@@ -292,17 +292,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj.provid
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\util.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\util.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\util.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\util.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/util.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\util.cpp > CMakeFiles\opencv_stitching.dir\src\util.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\util.cpp > CMakeFiles\opencv_stitching.dir\src\util.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/util.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\util.cpp -o CMakeFiles\opencv_stitching.dir\src\util.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\util.cpp -o CMakeFiles\opencv_stitching.dir\src\util.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj.requires:
 
@@ -317,17 +317,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj.provides.buil
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/warpers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\warpers.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\warpers.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/warpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\warpers.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\warpers.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/warpers.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\warpers.cpp > CMakeFiles\opencv_stitching.dir\src\warpers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\warpers.cpp > CMakeFiles\opencv_stitching.dir\src\warpers.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/warpers.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\warpers.cpp -o CMakeFiles\opencv_stitching.dir\src\warpers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\warpers.cpp -o CMakeFiles\opencv_stitching.dir\src\warpers.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj.requires:
 
@@ -342,17 +342,17 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj.provides.b
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
-modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/stitching/src/warpers_cuda.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\warpers_cuda.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\warpers_cuda.cpp
+modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/warpers_cuda.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\src\warpers_cuda.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\warpers_cuda.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\warpers_cuda.cpp > CMakeFiles\opencv_stitching.dir\src\warpers_cuda.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\warpers_cuda.cpp > CMakeFiles\opencv_stitching.dir\src\warpers_cuda.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\stitching\src\warpers_cuda.cpp -o CMakeFiles\opencv_stitching.dir\src\warpers_cuda.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching\src\warpers_cuda.cpp -o CMakeFiles\opencv_stitching.dir\src\warpers_cuda.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj.requires:
 
@@ -368,16 +368,16 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj.provi
 modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/flags.make
 modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj: modules/stitching/CMakeFiles/opencv_stitching.dir/includes_CXX.rsp
 modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj: modules/stitching/opencl_kernels_stitching.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\opencl_kernels_stitching.cpp.obj -c C:\Users\rartin\Desktop\build\modules\stitching\opencl_kernels_stitching.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_stitching.dir\opencl_kernels_stitching.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching\opencl_kernels_stitching.cpp
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\build\modules\stitching\opencl_kernels_stitching.cpp > CMakeFiles\opencv_stitching.dir\opencl_kernels_stitching.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching\opencl_kernels_stitching.cpp > CMakeFiles\opencv_stitching.dir\opencl_kernels_stitching.cpp.i
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/stitching/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\build\modules\stitching\opencl_kernels_stitching.cpp -o CMakeFiles\opencv_stitching.dir\opencl_kernels_stitching.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching\opencl_kernels_stitching.cpp -o CMakeFiles\opencv_stitching.dir\opencl_kernels_stitching.cpp.s
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj.requires:
 
@@ -409,38 +409,38 @@ opencv_stitching_OBJECTS = \
 # External object files for target opencv_stitching
 opencv_stitching_EXTERNAL_OBJECTS =
 
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/build.make
-bin/libopencv_stitching310.dll: lib/libopencv_objdetect310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_calib3d310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_features2d310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_flann310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_ml310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_highgui310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_videoio310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_imgcodecs310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_imgproc310.dll.a
-bin/libopencv_stitching310.dll: lib/libopencv_core310.dll.a
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/linklibs.rsp
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/objects1.rsp
-bin/libopencv_stitching310.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library ..\..\bin\libopencv_stitching310.dll"
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_stitching.dir\link.txt --verbose=$(VERBOSE)
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/autocalib.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/blenders.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/camera.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/exposure_compensate.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/matchers.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/motion_estimators.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/seam_finders.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/stitcher.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/timelapsers.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/util.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/build.make
+bin/libopencv_stitching320.dll: lib/libopencv_objdetect320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_calib3d320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_features2d320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_flann320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_ml320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_highgui320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_videoio320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_imgcodecs320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_imgproc320.dll.a
+bin/libopencv_stitching320.dll: lib/libopencv_core320.dll.a
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/linklibs.rsp
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/objects1.rsp
+bin/libopencv_stitching320.dll: modules/stitching/CMakeFiles/opencv_stitching.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library ..\..\bin\libopencv_stitching320.dll"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_stitching.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-modules/stitching/CMakeFiles/opencv_stitching.dir/build: bin/libopencv_stitching310.dll
+modules/stitching/CMakeFiles/opencv_stitching.dir/build: bin/libopencv_stitching320.dll
 
 .PHONY : modules/stitching/CMakeFiles/opencv_stitching.dir/build
 
@@ -461,11 +461,11 @@ modules/stitching/CMakeFiles/opencv_stitching.dir/requires: modules/stitching/CM
 .PHONY : modules/stitching/CMakeFiles/opencv_stitching.dir/requires
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\stitching && $(CMAKE_COMMAND) -P CMakeFiles\opencv_stitching.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching && $(CMAKE_COMMAND) -P CMakeFiles\opencv_stitching.dir\cmake_clean.cmake
 .PHONY : modules/stitching/CMakeFiles/opencv_stitching.dir/clean
 
 modules/stitching/CMakeFiles/opencv_stitching.dir/depend: modules/stitching/opencl_kernels_stitching.cpp
 modules/stitching/CMakeFiles/opencv_stitching.dir/depend: modules/stitching/opencl_kernels_stitching.hpp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\stitching C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\stitching C:\Users\rartin\Desktop\build\modules\stitching\CMakeFiles\opencv_stitching.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\stitching C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\stitching\CMakeFiles\opencv_stitching.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/stitching/CMakeFiles/opencv_stitching.dir/depend
 

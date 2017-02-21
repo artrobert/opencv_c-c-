@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Utility rule file for pch_Generate_opencv_perf_videoio.
 
@@ -55,16 +55,16 @@ include modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/progress
 modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio: modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch
 
 
-modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/perf/perf_precomp.hpp
+modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf/perf_precomp.hpp
 modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch: modules/videoio/perf_precomp.hpp
 modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch: lib/libopencv_perf_videoio_pch_dephelp.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Desktop/build/modules/videoio/perf_precomp.hpp.gch
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" "-DVIDEOIO_EXPORTS" -isystem"C:/Users/rartin/Desktop/build" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include/ffmpeg_" -isystem"C:/Users/rartin/Desktop/build" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include/ffmpeg_" -I"C:/Users/rartin/Desktop/opencv/sources/modules/ts/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/core/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/core/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/highgui/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videoio/perf" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated-declarations -x c++-header -o C:/Users/rartin/Desktop/build/modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch C:/Users/rartin/Desktop/build/modules/videoio/perf_precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/perf_precomp.hpp.gch
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" "-DVIDEOIO_EXPORTS" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/ffmpeg_" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/ffmpeg_" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -ffast-math -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated-declarations -x c++-header -o C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/perf_precomp.hpp
 
-modules/videoio/perf_precomp.hpp: C:/Users/rartin/Desktop/opencv/sources/modules/videoio/perf/perf_precomp.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating perf_precomp.hpp"
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Desktop/opencv/sources/modules/videoio/perf/perf_precomp.hpp C:/Users/rartin/Desktop/build/modules/videoio/perf_precomp.hpp
+modules/videoio/perf_precomp.hpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf/perf_precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating perf_precomp.hpp"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf/perf_precomp.hpp C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/perf_precomp.hpp
 
 pch_Generate_opencv_perf_videoio: modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio
 pch_Generate_opencv_perf_videoio: modules/videoio/perf_precomp.hpp.gch/opencv_perf_videoio_Release.gch
@@ -79,10 +79,10 @@ modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/build: pch_Gener
 .PHONY : modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/build
 
 modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\videoio && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_perf_videoio.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_perf_videoio.dir\cmake_clean.cmake
 .PHONY : modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/clean
 
 modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\videoio C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\videoio C:\Users\rartin\Desktop\build\modules\videoio\CMakeFiles\pch_Generate_opencv_perf_videoio.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\videoio C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\videoio\CMakeFiles\pch_Generate_opencv_perf_videoio.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/videoio/CMakeFiles/pch_Generate_opencv_perf_videoio.dir/depend
 

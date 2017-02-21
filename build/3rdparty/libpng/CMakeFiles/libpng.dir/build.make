@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include 3rdparty/libpng/CMakeFiles/libpng.dir/depend.make
@@ -58,17 +58,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/png.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\png.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\png.c
+3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/png.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\png.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\png.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/png.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\png.c > CMakeFiles\libpng.dir\png.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\png.c > CMakeFiles\libpng.dir\png.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/png.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\png.c -o CMakeFiles\libpng.dir\png.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\png.c -o CMakeFiles\libpng.dir\png.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj.requires:
 
@@ -83,17 +83,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngerror.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngerror.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngerror.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngerror.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngerror.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngerror.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngerror.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngerror.c > CMakeFiles\libpng.dir\pngerror.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngerror.c > CMakeFiles\libpng.dir\pngerror.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngerror.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngerror.c -o CMakeFiles\libpng.dir\pngerror.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngerror.c -o CMakeFiles\libpng.dir\pngerror.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj.requires:
 
@@ -108,17 +108,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngget.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngget.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngget.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngget.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngget.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngget.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngget.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngget.c > CMakeFiles\libpng.dir\pngget.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngget.c > CMakeFiles\libpng.dir\pngget.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngget.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngget.c -o CMakeFiles\libpng.dir\pngget.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngget.c -o CMakeFiles\libpng.dir\pngget.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj.requires:
 
@@ -133,17 +133,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngmem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngmem.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngmem.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngmem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngmem.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngmem.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngmem.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngmem.c > CMakeFiles\libpng.dir\pngmem.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngmem.c > CMakeFiles\libpng.dir\pngmem.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngmem.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngmem.c -o CMakeFiles\libpng.dir\pngmem.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngmem.c -o CMakeFiles\libpng.dir\pngmem.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj.requires:
 
@@ -158,17 +158,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngpread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngpread.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngpread.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngpread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngpread.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngpread.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngpread.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngpread.c > CMakeFiles\libpng.dir\pngpread.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngpread.c > CMakeFiles\libpng.dir\pngpread.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngpread.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngpread.c -o CMakeFiles\libpng.dir\pngpread.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngpread.c -o CMakeFiles\libpng.dir\pngpread.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj.requires:
 
@@ -183,17 +183,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngread.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngread.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngread.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngread.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngread.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngread.c > CMakeFiles\libpng.dir\pngread.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngread.c > CMakeFiles\libpng.dir\pngread.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngread.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngread.c -o CMakeFiles\libpng.dir\pngread.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngread.c -o CMakeFiles\libpng.dir\pngread.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj.requires:
 
@@ -208,17 +208,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngrio.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngrio.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrio.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngrio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngrio.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrio.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngrio.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrio.c > CMakeFiles\libpng.dir\pngrio.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrio.c > CMakeFiles\libpng.dir\pngrio.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngrio.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrio.c -o CMakeFiles\libpng.dir\pngrio.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrio.c -o CMakeFiles\libpng.dir\pngrio.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj.requires:
 
@@ -233,17 +233,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngrtran.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngrtran.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrtran.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngrtran.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngrtran.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrtran.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngrtran.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrtran.c > CMakeFiles\libpng.dir\pngrtran.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrtran.c > CMakeFiles\libpng.dir\pngrtran.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngrtran.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrtran.c -o CMakeFiles\libpng.dir\pngrtran.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrtran.c -o CMakeFiles\libpng.dir\pngrtran.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj.requires:
 
@@ -258,17 +258,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngrutil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngrutil.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrutil.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngrutil.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngrutil.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrutil.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngrutil.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrutil.c > CMakeFiles\libpng.dir\pngrutil.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrutil.c > CMakeFiles\libpng.dir\pngrutil.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngrutil.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngrutil.c -o CMakeFiles\libpng.dir\pngrutil.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngrutil.c -o CMakeFiles\libpng.dir\pngrutil.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj.requires:
 
@@ -283,17 +283,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngset.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngset.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngset.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngset.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngset.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngset.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngset.c > CMakeFiles\libpng.dir\pngset.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngset.c > CMakeFiles\libpng.dir\pngset.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngset.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngset.c -o CMakeFiles\libpng.dir\pngset.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngset.c -o CMakeFiles\libpng.dir\pngset.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj.requires:
 
@@ -308,17 +308,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngtrans.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngtrans.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngtrans.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngtrans.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngtrans.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngtrans.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngtrans.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngtrans.c > CMakeFiles\libpng.dir\pngtrans.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngtrans.c > CMakeFiles\libpng.dir\pngtrans.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngtrans.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngtrans.c -o CMakeFiles\libpng.dir\pngtrans.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngtrans.c -o CMakeFiles\libpng.dir\pngtrans.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj.requires:
 
@@ -333,17 +333,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwio.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwio.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwio.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwio.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwio.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngwio.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwio.c > CMakeFiles\libpng.dir\pngwio.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwio.c > CMakeFiles\libpng.dir\pngwio.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngwio.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwio.c -o CMakeFiles\libpng.dir\pngwio.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwio.c -o CMakeFiles\libpng.dir\pngwio.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj.requires:
 
@@ -358,17 +358,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwrite.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwrite.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwrite.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwrite.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwrite.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwrite.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngwrite.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwrite.c > CMakeFiles\libpng.dir\pngwrite.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwrite.c > CMakeFiles\libpng.dir\pngwrite.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngwrite.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwrite.c -o CMakeFiles\libpng.dir\pngwrite.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwrite.c -o CMakeFiles\libpng.dir\pngwrite.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj.requires:
 
@@ -383,17 +383,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwtran.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwtran.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwtran.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwtran.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwtran.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwtran.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngwtran.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwtran.c > CMakeFiles\libpng.dir\pngwtran.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwtran.c > CMakeFiles\libpng.dir\pngwtran.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngwtran.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwtran.c -o CMakeFiles\libpng.dir\pngwtran.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwtran.c -o CMakeFiles\libpng.dir\pngwtran.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj.requires:
 
@@ -408,17 +408,17 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
-3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj: C:/Users/rartin/Desktop/opencv/sources/3rdparty/libpng/pngwutil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwutil.c.obj   -c C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwutil.c
+3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/pngwutil.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\pngwutil.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwutil.c
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/pngwutil.c.i"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwutil.c > CMakeFiles\libpng.dir\pngwutil.c.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwutil.c > CMakeFiles\libpng.dir\pngwutil.c.i
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/pngwutil.c.s"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng\pngwutil.c -o CMakeFiles\libpng.dir\pngwutil.c.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\pngwutil.c -o CMakeFiles\libpng.dir\pngwutil.c.s
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj.requires:
 
@@ -429,6 +429,56 @@ include 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
 .PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj.provides
 
 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj.provides.build: 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj
+
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/contrib/intel/intel_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\contrib\intel\intel_init.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\contrib\intel\intel_init.c
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/contrib/intel/intel_init.c.i"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\contrib\intel\intel_init.c > CMakeFiles\libpng.dir\contrib\intel\intel_init.c.i
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/contrib/intel/intel_init.c.s"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\contrib\intel\intel_init.c -o CMakeFiles\libpng.dir\contrib\intel\intel_init.c.s
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.requires:
+
+.PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.requires
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.provides: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.requires
+	$(MAKE) -f 3rdparty\libpng\CMakeFiles\libpng.dir\build.make 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.provides.build
+.PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.provides
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.provides.build: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj
+
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/flags.make
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj: 3rdparty/libpng/CMakeFiles/libpng.dir/includes_C.rsp
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng/contrib/intel/filter_sse2_intrinsics.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\libpng.dir\contrib\intel\filter_sse2_intrinsics.c.obj   -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\contrib\intel\filter_sse2_intrinsics.c
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.i"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\contrib\intel\filter_sse2_intrinsics.c > CMakeFiles\libpng.dir\contrib\intel\filter_sse2_intrinsics.c.i
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.s"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng\contrib\intel\filter_sse2_intrinsics.c -o CMakeFiles\libpng.dir\contrib\intel\filter_sse2_intrinsics.c.s
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.requires:
+
+.PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.requires
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.provides: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.requires
+	$(MAKE) -f 3rdparty\libpng\CMakeFiles\libpng.dir\build.make 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.provides.build
+.PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.provides
+
+3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.provides.build: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj
 
 
 # Object files for target libpng
@@ -447,7 +497,9 @@ libpng_OBJECTS = \
 "CMakeFiles/libpng.dir/pngwio.c.obj" \
 "CMakeFiles/libpng.dir/pngwrite.c.obj" \
 "CMakeFiles/libpng.dir/pngwtran.c.obj" \
-"CMakeFiles/libpng.dir/pngwutil.c.obj"
+"CMakeFiles/libpng.dir/pngwutil.c.obj" \
+"CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj" \
+"CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj"
 
 # External object files for target libpng
 libpng_EXTERNAL_OBJECTS =
@@ -467,11 +519,13 @@ libpng_EXTERNAL_OBJECTS =
 3rdparty/lib/liblibpng.a: 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj
 3rdparty/lib/liblibpng.a: 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj
 3rdparty/lib/liblibpng.a: 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj
+3rdparty/lib/liblibpng.a: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj
+3rdparty/lib/liblibpng.a: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj
 3rdparty/lib/liblibpng.a: 3rdparty/libpng/CMakeFiles/libpng.dir/build.make
 3rdparty/lib/liblibpng.a: 3rdparty/libpng/CMakeFiles/libpng.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C static library ..\lib\liblibpng.a"
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && $(CMAKE_COMMAND) -P CMakeFiles\libpng.dir\cmake_clean_target.cmake
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\libpng.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C static library ..\lib\liblibpng.a"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && $(CMAKE_COMMAND) -P CMakeFiles\libpng.dir\cmake_clean_target.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\libpng.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 3rdparty/libpng/CMakeFiles/libpng.dir/build: 3rdparty/lib/liblibpng.a
@@ -493,14 +547,16 @@ libpng_EXTERNAL_OBJECTS =
 3rdparty/libpng/CMakeFiles/libpng.dir/requires: 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj.requires
 3rdparty/libpng/CMakeFiles/libpng.dir/requires: 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj.requires
 3rdparty/libpng/CMakeFiles/libpng.dir/requires: 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj.requires
+3rdparty/libpng/CMakeFiles/libpng.dir/requires: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj.requires
+3rdparty/libpng/CMakeFiles/libpng.dir/requires: 3rdparty/libpng/CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj.requires
 
 .PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/requires
 
 3rdparty/libpng/CMakeFiles/libpng.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\3rdparty\libpng && $(CMAKE_COMMAND) -P CMakeFiles\libpng.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng && $(CMAKE_COMMAND) -P CMakeFiles\libpng.dir\cmake_clean.cmake
 .PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/clean
 
 3rdparty/libpng/CMakeFiles/libpng.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\3rdparty\libpng C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\3rdparty\libpng C:\Users\rartin\Desktop\build\3rdparty\libpng\CMakeFiles\libpng.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\3rdparty\libpng C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\3rdparty\libpng\CMakeFiles\libpng.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : 3rdparty/libpng/CMakeFiles/libpng.dir/depend
 

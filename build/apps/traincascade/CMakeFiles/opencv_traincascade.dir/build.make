@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include apps/traincascade/CMakeFiles/opencv_traincascade.dir/depend.make
@@ -58,17 +58,17 @@ include apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/HOGfeatures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\HOGfeatures.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\HOGfeatures.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/HOGfeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\HOGfeatures.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\HOGfeatures.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\HOGfeatures.cpp > CMakeFiles\opencv_traincascade.dir\HOGfeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\HOGfeatures.cpp > CMakeFiles\opencv_traincascade.dir\HOGfeatures.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\HOGfeatures.cpp -o CMakeFiles\opencv_traincascade.dir\HOGfeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\HOGfeatures.cpp -o CMakeFiles\opencv_traincascade.dir\HOGfeatures.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/HOGfeatures.cpp.obj.provide
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/boost.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\boost.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\boost.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/boost.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\boost.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\boost.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/boost.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\boost.cpp > CMakeFiles\opencv_traincascade.dir\boost.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\boost.cpp > CMakeFiles\opencv_traincascade.dir\boost.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/boost.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\boost.cpp -o CMakeFiles\opencv_traincascade.dir\boost.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\boost.cpp -o CMakeFiles\opencv_traincascade.dir\boost.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj.requires:
 
@@ -108,17 +108,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/boost.cpp.obj.provides.buil
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/cascadeclassifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\cascadeclassifier.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\cascadeclassifier.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/cascadeclassifier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\cascadeclassifier.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\cascadeclassifier.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\cascadeclassifier.cpp > CMakeFiles\opencv_traincascade.dir\cascadeclassifier.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\cascadeclassifier.cpp > CMakeFiles\opencv_traincascade.dir\cascadeclassifier.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\cascadeclassifier.cpp -o CMakeFiles\opencv_traincascade.dir\cascadeclassifier.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\cascadeclassifier.cpp -o CMakeFiles\opencv_traincascade.dir\cascadeclassifier.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj.requires:
 
@@ -133,17 +133,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/cascadeclassifier.cpp.obj.p
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/features.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\features.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\features.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/features.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\features.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\features.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/features.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\features.cpp > CMakeFiles\opencv_traincascade.dir\features.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\features.cpp > CMakeFiles\opencv_traincascade.dir\features.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/features.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\features.cpp -o CMakeFiles\opencv_traincascade.dir\features.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\features.cpp -o CMakeFiles\opencv_traincascade.dir\features.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj.requires:
 
@@ -158,17 +158,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/features.cpp.obj.provides.b
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/haarfeatures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\haarfeatures.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\haarfeatures.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/haarfeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\haarfeatures.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\haarfeatures.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\haarfeatures.cpp > CMakeFiles\opencv_traincascade.dir\haarfeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\haarfeatures.cpp > CMakeFiles\opencv_traincascade.dir\haarfeatures.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\haarfeatures.cpp -o CMakeFiles\opencv_traincascade.dir\haarfeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\haarfeatures.cpp -o CMakeFiles\opencv_traincascade.dir\haarfeatures.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj.requires:
 
@@ -183,17 +183,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/haarfeatures.cpp.obj.provid
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/imagestorage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\imagestorage.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\imagestorage.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/imagestorage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\imagestorage.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\imagestorage.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\imagestorage.cpp > CMakeFiles\opencv_traincascade.dir\imagestorage.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\imagestorage.cpp > CMakeFiles\opencv_traincascade.dir\imagestorage.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\imagestorage.cpp -o CMakeFiles\opencv_traincascade.dir\imagestorage.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\imagestorage.cpp -o CMakeFiles\opencv_traincascade.dir\imagestorage.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj.requires:
 
@@ -208,17 +208,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/imagestorage.cpp.obj.provid
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/lbpfeatures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\lbpfeatures.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\lbpfeatures.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/lbpfeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\lbpfeatures.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\lbpfeatures.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\lbpfeatures.cpp > CMakeFiles\opencv_traincascade.dir\lbpfeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\lbpfeatures.cpp > CMakeFiles\opencv_traincascade.dir\lbpfeatures.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\lbpfeatures.cpp -o CMakeFiles\opencv_traincascade.dir\lbpfeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\lbpfeatures.cpp -o CMakeFiles\opencv_traincascade.dir\lbpfeatures.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj.requires:
 
@@ -233,17 +233,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/lbpfeatures.cpp.obj.provide
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/old_ml_boost.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_boost.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_boost.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/old_ml_boost.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_boost.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_boost.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_boost.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_boost.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_boost.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_boost.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_boost.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_boost.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_boost.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_boost.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj.requires:
 
@@ -258,17 +258,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_boost.cpp.obj.provid
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/old_ml_data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_data.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_data.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/old_ml_data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_data.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_data.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_data.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_data.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_data.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_data.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_data.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_data.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_data.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_data.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj.requires:
 
@@ -283,17 +283,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_data.cpp.obj.provide
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/old_ml_inner_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_inner_functions.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_inner_functions.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/old_ml_inner_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_inner_functions.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_inner_functions.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_inner_functions.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_inner_functions.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_inner_functions.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_inner_functions.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_inner_functions.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_inner_functions.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_inner_functions.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_inner_functions.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.obj.requires:
 
@@ -308,17 +308,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_inner_functions.cpp.
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/old_ml_tree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_tree.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_tree.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/old_ml_tree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\old_ml_tree.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_tree.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_tree.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_tree.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_tree.cpp > CMakeFiles\opencv_traincascade.dir\old_ml_tree.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\old_ml_tree.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_tree.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\old_ml_tree.cpp -o CMakeFiles\opencv_traincascade.dir\old_ml_tree.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj.requires:
 
@@ -333,17 +333,17 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj.provide
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/flags.make
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj: apps/traincascade/CMakeFiles/opencv_traincascade.dir/includes_CXX.rsp
-apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/traincascade/traincascade.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\traincascade.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\traincascade.cpp
+apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/traincascade/traincascade.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_traincascade.dir\traincascade.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\traincascade.cpp
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_traincascade.dir/traincascade.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\traincascade.cpp > CMakeFiles\opencv_traincascade.dir\traincascade.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\traincascade.cpp > CMakeFiles\opencv_traincascade.dir\traincascade.cpp.i
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_traincascade.dir/traincascade.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\traincascade\traincascade.cpp -o CMakeFiles\opencv_traincascade.dir\traincascade.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade\traincascade.cpp -o CMakeFiles\opencv_traincascade.dir\traincascade.cpp.s
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj.requires:
 
@@ -387,21 +387,21 @@ bin/opencv_traincascade.exe: apps/traincascade/CMakeFiles/opencv_traincascade.di
 bin/opencv_traincascade.exe: apps/traincascade/CMakeFiles/opencv_traincascade.dir/old_ml_tree.cpp.obj
 bin/opencv_traincascade.exe: apps/traincascade/CMakeFiles/opencv_traincascade.dir/traincascade.cpp.obj
 bin/opencv_traincascade.exe: apps/traincascade/CMakeFiles/opencv_traincascade.dir/build.make
-bin/opencv_traincascade.exe: lib/libopencv_objdetect310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_calib3d310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_features2d310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_ml310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_flann310.dll.a
-bin/opencv_traincascade.exe: lib/libopencv_core310.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_objdetect320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_calib3d320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_features2d320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_ml320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_flann320.dll.a
+bin/opencv_traincascade.exe: lib/libopencv_core320.dll.a
 bin/opencv_traincascade.exe: apps/traincascade/CMakeFiles/opencv_traincascade.dir/linklibs.rsp
 bin/opencv_traincascade.exe: apps/traincascade/CMakeFiles/opencv_traincascade.dir/objects1.rsp
 bin/opencv_traincascade.exe: apps/traincascade/CMakeFiles/opencv_traincascade.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ..\..\bin\opencv_traincascade.exe"
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_traincascade.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ..\..\bin\opencv_traincascade.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_traincascade.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/build: bin/opencv_traincascade.exe
@@ -424,10 +424,10 @@ apps/traincascade/CMakeFiles/opencv_traincascade.dir/requires: apps/traincascade
 .PHONY : apps/traincascade/CMakeFiles/opencv_traincascade.dir/requires
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\apps\traincascade && $(CMAKE_COMMAND) -P CMakeFiles\opencv_traincascade.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade && $(CMAKE_COMMAND) -P CMakeFiles\opencv_traincascade.dir\cmake_clean.cmake
 .PHONY : apps/traincascade/CMakeFiles/opencv_traincascade.dir/clean
 
 apps/traincascade/CMakeFiles/opencv_traincascade.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\apps\traincascade C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\apps\traincascade C:\Users\rartin\Desktop\build\apps\traincascade\CMakeFiles\opencv_traincascade.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\traincascade C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\traincascade\CMakeFiles\opencv_traincascade.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : apps/traincascade/CMakeFiles/opencv_traincascade.dir/depend
 

@@ -4,206 +4,226 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs_c.h",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs_c.h",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/ios.h",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/ios.h",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/loadsave.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/loadsave.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/utils.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/utils.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/precomp.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/utils.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/utils.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_base.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_base.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_bmp.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_bmp.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_exr.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_exr.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_gdal.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_gdal.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_hdr.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_gdcm.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_jpeg.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_hdr.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_jpeg2000.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_jpeg.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_png.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_jpeg2000.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_pxm.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_pam.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_sunras.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_png.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_tiff.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_pxm.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_webp.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_sunras.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/bitstrm.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_tiff.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/rgbe.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_webp.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/jpeg_exif.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/bitstrm.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_base.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/rgbe.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_bmp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/exif.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_exr.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_base.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_gdal.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_bmp.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_hdr.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_exr.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_jpeg.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_gdal.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_jpeg2000.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_gdcm.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_png.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_hdr.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_pxm.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_jpeg.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_sunras.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_jpeg2000.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_tiff.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_pam.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmt_webp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_png.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/grfmts.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_pxm.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/bitstrm.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_sunras.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/rgbe.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_tiff.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/src/jpeg_exif.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmt_webp.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/build/cvconfig.h"
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/grfmts.hpp",
+			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/build/opencv2/opencv_modules.hpp"
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/bitstrm.hpp",
+			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/rgbe.hpp",
+			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/exif.hpp",
+			"labels" : [ "Main", "opencv_imgcodecs", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/cvconfig.h"
+		},
+		
+		{
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/opencv2/opencv_modules.hpp"
 		}
 	],
 	"target" : 

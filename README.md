@@ -1,4 +1,4 @@
-# opencv_c-c-
+# opencv_c-c- 3.1
 This contains the opencv code written and c/c++ to be exported
 
 *Tutorial followed : https://stackoverflow.com/questions/35984678/use-opencv-with-clion-ide-on-windows

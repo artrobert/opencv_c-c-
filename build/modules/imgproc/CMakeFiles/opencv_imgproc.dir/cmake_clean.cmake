@@ -53,10 +53,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_imgproc.dir/src/undistort.cpp.obj"
   "CMakeFiles/opencv_imgproc.dir/src/utils.cpp.obj"
   "CMakeFiles/opencv_imgproc.dir/opencl_kernels_imgproc.cpp.obj"
-  "../../bin/libopencv_imgproc310.pdb"
-  "../../bin/libopencv_imgproc310.dll"
-  "../../lib/libopencv_imgproc310.dll.a"
-  "../../bin/libopencv_imgproc310.dll.manifest"
+  "../../bin/libopencv_imgproc320.pdb"
+  "../../bin/libopencv_imgproc320.dll"
+  "../../lib/libopencv_imgproc320.dll.a"
+  "../../bin/libopencv_imgproc320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

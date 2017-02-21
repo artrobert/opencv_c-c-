@@ -8,10 +8,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_objdetect.dir/src/hog.cpp.obj"
   "CMakeFiles/opencv_objdetect.dir/src/main.cpp.obj"
   "CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.obj"
-  "../../bin/libopencv_objdetect310.pdb"
-  "../../bin/libopencv_objdetect310.dll"
-  "../../lib/libopencv_objdetect310.dll.a"
-  "../../bin/libopencv_objdetect310.dll.manifest"
+  "../../bin/libopencv_objdetect320.pdb"
+  "../../bin/libopencv_objdetect320.dll"
+  "../../lib/libopencv_objdetect320.dll.a"
+  "../../bin/libopencv_objdetect320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

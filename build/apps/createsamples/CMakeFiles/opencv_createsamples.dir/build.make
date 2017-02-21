@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include apps/createsamples/CMakeFiles/opencv_createsamples.dir/depend.make
@@ -58,17 +58,17 @@ include apps/createsamples/CMakeFiles/opencv_createsamples.dir/flags.make
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj: apps/createsamples/CMakeFiles/opencv_createsamples.dir/flags.make
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj: apps/createsamples/CMakeFiles/opencv_createsamples.dir/includes_CXX.rsp
-apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/createsamples/createsamples.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_createsamples.dir\createsamples.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\createsamples\createsamples.cpp
+apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/createsamples/createsamples.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_createsamples.dir\createsamples.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\createsamples\createsamples.cpp
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_createsamples.dir/createsamples.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\createsamples\createsamples.cpp > CMakeFiles\opencv_createsamples.dir\createsamples.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\createsamples\createsamples.cpp > CMakeFiles\opencv_createsamples.dir\createsamples.cpp.i
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_createsamples.dir/createsamples.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\createsamples\createsamples.cpp -o CMakeFiles\opencv_createsamples.dir\createsamples.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\createsamples\createsamples.cpp -o CMakeFiles\opencv_createsamples.dir\createsamples.cpp.s
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj.pro
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj: apps/createsamples/CMakeFiles/opencv_createsamples.dir/flags.make
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj: apps/createsamples/CMakeFiles/opencv_createsamples.dir/includes_CXX.rsp
-apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/apps/createsamples/utility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_createsamples.dir\utility.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\apps\createsamples\utility.cpp
+apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps/createsamples/utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\opencv_createsamples.dir\utility.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\createsamples\utility.cpp
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_createsamples.dir/utility.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Desktop\opencv\sources\apps\createsamples\utility.cpp > CMakeFiles\opencv_createsamples.dir\utility.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\createsamples\utility.cpp > CMakeFiles\opencv_createsamples.dir\utility.cpp.i
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_createsamples.dir/utility.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Desktop\opencv\sources\apps\createsamples\utility.cpp -o CMakeFiles\opencv_createsamples.dir\utility.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\createsamples\utility.cpp -o CMakeFiles\opencv_createsamples.dir\utility.cpp.s
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj.requires:
 
@@ -117,21 +117,21 @@ opencv_createsamples_EXTERNAL_OBJECTS =
 bin/opencv_createsamples.exe: apps/createsamples/CMakeFiles/opencv_createsamples.dir/createsamples.cpp.obj
 bin/opencv_createsamples.exe: apps/createsamples/CMakeFiles/opencv_createsamples.dir/utility.cpp.obj
 bin/opencv_createsamples.exe: apps/createsamples/CMakeFiles/opencv_createsamples.dir/build.make
-bin/opencv_createsamples.exe: lib/libopencv_objdetect310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_calib3d310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_features2d310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_ml310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_flann310.dll.a
-bin/opencv_createsamples.exe: lib/libopencv_core310.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_objdetect320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_calib3d320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_features2d320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_ml320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_flann320.dll.a
+bin/opencv_createsamples.exe: lib/libopencv_core320.dll.a
 bin/opencv_createsamples.exe: apps/createsamples/CMakeFiles/opencv_createsamples.dir/linklibs.rsp
 bin/opencv_createsamples.exe: apps/createsamples/CMakeFiles/opencv_createsamples.dir/objects1.rsp
 bin/opencv_createsamples.exe: apps/createsamples/CMakeFiles/opencv_createsamples.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ..\..\bin\opencv_createsamples.exe"
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_createsamples.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ..\..\bin\opencv_createsamples.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_createsamples.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/build: bin/opencv_createsamples.exe
@@ -144,10 +144,10 @@ apps/createsamples/CMakeFiles/opencv_createsamples.dir/requires: apps/createsamp
 .PHONY : apps/createsamples/CMakeFiles/opencv_createsamples.dir/requires
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\apps\createsamples && $(CMAKE_COMMAND) -P CMakeFiles\opencv_createsamples.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples && $(CMAKE_COMMAND) -P CMakeFiles\opencv_createsamples.dir\cmake_clean.cmake
 .PHONY : apps/createsamples/CMakeFiles/opencv_createsamples.dir/clean
 
 apps/createsamples/CMakeFiles/opencv_createsamples.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\apps\createsamples C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\apps\createsamples C:\Users\rartin\Desktop\build\apps\createsamples\CMakeFiles\opencv_createsamples.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\apps\createsamples C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\createsamples\CMakeFiles\opencv_createsamples.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : apps/createsamples/CMakeFiles/opencv_createsamples.dir/depend
 

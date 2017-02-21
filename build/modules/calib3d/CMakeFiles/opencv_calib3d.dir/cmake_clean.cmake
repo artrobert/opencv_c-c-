@@ -27,10 +27,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_calib3d.dir/src/triangulate.cpp.obj"
   "CMakeFiles/opencv_calib3d.dir/src/upnp.cpp.obj"
   "CMakeFiles/opencv_calib3d.dir/opencl_kernels_calib3d.cpp.obj"
-  "../../bin/libopencv_calib3d310.pdb"
-  "../../bin/libopencv_calib3d310.dll"
-  "../../lib/libopencv_calib3d310.dll.a"
-  "../../bin/libopencv_calib3d310.dll.manifest"
+  "../../bin/libopencv_calib3d320.pdb"
+  "../../bin/libopencv_calib3d320.dll"
+  "../../lib/libopencv_calib3d320.dll.a"
+  "../../bin/libopencv_calib3d320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

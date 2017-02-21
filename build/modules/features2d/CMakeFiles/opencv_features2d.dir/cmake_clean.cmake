@@ -25,10 +25,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj"
   "CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj"
   "CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj"
-  "../../bin/libopencv_features2d310.pdb"
-  "../../bin/libopencv_features2d310.dll"
-  "../../lib/libopencv_features2d310.dll.a"
-  "../../bin/libopencv_features2d310.dll.manifest"
+  "../../bin/libopencv_features2d320.pdb"
+  "../../bin/libopencv_features2d320.dll"
+  "../../lib/libopencv_features2d320.dll.a"
+  "../../bin/libopencv_features2d320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

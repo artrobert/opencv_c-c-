@@ -11,12 +11,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_ml.dir/src/nbayes.cpp.obj"
   "CMakeFiles/opencv_ml.dir/src/rtrees.cpp.obj"
   "CMakeFiles/opencv_ml.dir/src/svm.cpp.obj"
+  "CMakeFiles/opencv_ml.dir/src/svmsgd.cpp.obj"
   "CMakeFiles/opencv_ml.dir/src/testset.cpp.obj"
   "CMakeFiles/opencv_ml.dir/src/tree.cpp.obj"
-  "../../bin/libopencv_ml310.pdb"
-  "../../bin/libopencv_ml310.dll"
-  "../../lib/libopencv_ml310.dll.a"
-  "../../bin/libopencv_ml310.dll.manifest"
+  "../../bin/libopencv_ml320.pdb"
+  "../../bin/libopencv_ml320.dll"
+  "../../lib/libopencv_ml320.dll.a"
+  "../../bin/libopencv_ml320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

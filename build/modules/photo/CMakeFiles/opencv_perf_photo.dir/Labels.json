@@ -4,27 +4,27 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/perf/opencl/perf_denoising.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/perf/opencl/perf_denoising.cpp",
 			"labels" : [ "Main", "opencv_photo", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/perf/perf_cuda.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/perf/perf_cuda.cpp",
 			"labels" : [ "Main", "opencv_photo", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/perf/perf_inpaint.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/perf/perf_inpaint.cpp",
 			"labels" : [ "Main", "opencv_photo", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/perf/perf_main.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/perf/perf_main.cpp",
 			"labels" : [ "Main", "opencv_photo", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/photo/perf/perf_precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/perf/perf_precomp.hpp",
 			"labels" : [ "Main", "opencv_photo", "PerfTest" ]
 		}
 	],

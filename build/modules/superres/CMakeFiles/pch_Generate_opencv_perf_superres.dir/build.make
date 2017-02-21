@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Utility rule file for pch_Generate_opencv_perf_superres.
 
@@ -55,16 +55,16 @@ include modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/progre
 modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres: modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch
 
 
-modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch: C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_precomp.hpp
+modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/perf/perf_precomp.hpp
 modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch: modules/superres/perf_precomp.hpp
 modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch: lib/libopencv_perf_superres_pch_dephelp.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating perf_precomp.hpp.gch/opencv_perf_superres_Release.gch"
-	cd /d C:\Users\rartin\Desktop\build\modules\superres && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Desktop/build/modules/superres/perf_precomp.hpp.gch
-	cd /d C:\Users\rartin\Desktop\build\modules\superres && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include/opencl/1.2" -isystem"C:/Users/rartin/Desktop/build" -isystem"C:/Users/rartin/Desktop/opencv/sources/3rdparty/include/opencl/1.2" -isystem"C:/Users/rartin/Desktop/build" -I"C:/Users/rartin/Desktop/opencv/sources/modules/ts/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/superres/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/core/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/video/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/core/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/highgui/include" -I"C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Winit-self -Wpointer-arith -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -Wno-undef -Wno-shadow -x c++-header -o C:/Users/rartin/Desktop/build/modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch C:/Users/rartin/Desktop/build/modules/superres/perf_precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating perf_precomp.hpp.gch/opencv_perf_superres_Release.gch"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\superres && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/superres/perf_precomp.hpp.gch
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\superres && C:\MinGW\bin\g++.exe -O2 -DNDEBUG -DNDEBUG "-D__OPENCV_BUILD=1" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/video/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include" -I"C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/perf" -fsigned-char -mstackrealign -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Winit-self -Wpointer-arith -Wsign-promo -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -march=i686 -fomit-frame-pointer -ffast-math -msse -msse2 -mfpmath=sse -ffunction-sections -fvisibility=hidden -fvisibility-inlines-hidden -Wno-undef -Wno-shadow -x c++-header -o C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/superres/perf_precomp.hpp
 
-modules/superres/perf_precomp.hpp: C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_precomp.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating perf_precomp.hpp"
-	cd /d C:\Users\rartin\Desktop\build\modules\superres && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_precomp.hpp C:/Users/rartin/Desktop/build/modules/superres/perf_precomp.hpp
+modules/superres/perf_precomp.hpp: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/perf/perf_precomp.hpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating perf_precomp.hpp"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\superres && "C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/perf/perf_precomp.hpp C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/superres/perf_precomp.hpp
 
 pch_Generate_opencv_perf_superres: modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres
 pch_Generate_opencv_perf_superres: modules/superres/perf_precomp.hpp.gch/opencv_perf_superres_Release.gch
@@ -79,10 +79,10 @@ modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/build: pch_Gen
 .PHONY : modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/build
 
 modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\superres && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_perf_superres.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\superres && $(CMAKE_COMMAND) -P CMakeFiles\pch_Generate_opencv_perf_superres.dir\cmake_clean.cmake
 .PHONY : modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/clean
 
 modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\superres C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\superres C:\Users\rartin\Desktop\build\modules\superres\CMakeFiles\pch_Generate_opencv_perf_superres.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\superres C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\superres C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\superres\CMakeFiles\pch_Generate_opencv_perf_superres.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/depend
 

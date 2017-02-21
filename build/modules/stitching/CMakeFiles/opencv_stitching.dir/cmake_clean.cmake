@@ -14,10 +14,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_stitching.dir/src/warpers.cpp.obj"
   "CMakeFiles/opencv_stitching.dir/src/warpers_cuda.cpp.obj"
   "CMakeFiles/opencv_stitching.dir/opencl_kernels_stitching.cpp.obj"
-  "../../bin/libopencv_stitching310.pdb"
-  "../../bin/libopencv_stitching310.dll"
-  "../../lib/libopencv_stitching310.dll.a"
-  "../../bin/libopencv_stitching310.dll.manifest"
+  "../../bin/libopencv_stitching320.pdb"
+  "../../bin/libopencv_stitching320.dll"
+  "../../lib/libopencv_stitching320.dll.a"
+  "../../bin/libopencv_stitching320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

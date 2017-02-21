@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "opencv_test_imgcodecs_pch_dephelp.cxx"
   "CMakeFiles/opencv_test_imgcodecs_pch_dephelp.dir/opencv_test_imgcodecs_pch_dephelp.cxx.obj"
   "../../lib/libopencv_test_imgcodecs_pch_dephelp.pdb"
   "../../lib/libopencv_test_imgcodecs_pch_dephelp.a"

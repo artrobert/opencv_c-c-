@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rartin/Desktop/opencv/sources/modules/python
+# Install script for directory: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Desktop/build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,8 +29,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/rartin/Desktop/build/modules/python/.python/python2/cmake_install.cmake")
-  include("C:/Users/rartin/Desktop/build/modules/python/.python/python3/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/python/.python/python2/cmake_install.cmake")
+  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/python/.python/python3/cmake_install.cmake")
 
 endif()
 

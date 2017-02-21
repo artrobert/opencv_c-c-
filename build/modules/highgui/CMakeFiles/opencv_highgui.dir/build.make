@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/highgui/CMakeFiles/opencv_highgui.dir/depend.make
@@ -58,17 +58,17 @@ include modules/highgui/CMakeFiles/opencv_highgui.dir/flags.make
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj: modules/highgui/CMakeFiles/opencv_highgui.dir/flags.make
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj: modules/highgui/CMakeFiles/opencv_highgui.dir/includes_CXX.rsp
-modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/highgui/src/window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/highgui/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_highgui.dir\src\window.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\highgui\src\window.cpp
+modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/src/window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_highgui.dir\src\window.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\highgui\src\window.cpp
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_highgui.dir/src/window.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/highgui/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\highgui\src\window.cpp > CMakeFiles\opencv_highgui.dir\src\window.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\highgui\src\window.cpp > CMakeFiles\opencv_highgui.dir\src\window.cpp.i
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_highgui.dir/src/window.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/highgui/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\highgui\src\window.cpp -o CMakeFiles\opencv_highgui.dir\src\window.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\highgui\src\window.cpp -o CMakeFiles\opencv_highgui.dir\src\window.cpp.s
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj.provides.build:
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj: modules/highgui/CMakeFiles/opencv_highgui.dir/flags.make
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj: modules/highgui/CMakeFiles/opencv_highgui.dir/includes_CXX.rsp
-modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/highgui/src/window_w32.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/highgui/precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_highgui.dir\src\window_w32.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\highgui\src\window_w32.cpp
+modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/src/window_w32.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_highgui.dir\src\window_w32.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\highgui\src\window_w32.cpp
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/highgui/precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\highgui\src\window_w32.cpp > CMakeFiles\opencv_highgui.dir\src\window_w32.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\highgui\src\window_w32.cpp > CMakeFiles\opencv_highgui.dir\src\window_w32.cpp.i
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/highgui/precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\highgui\src\window_w32.cpp -o CMakeFiles\opencv_highgui.dir\src\window_w32.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\highgui\src\window_w32.cpp -o CMakeFiles\opencv_highgui.dir\src\window_w32.cpp.s
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj.requires:
 
@@ -114,21 +114,21 @@ opencv_highgui_OBJECTS = \
 # External object files for target opencv_highgui
 opencv_highgui_EXTERNAL_OBJECTS =
 
-bin/libopencv_highgui310.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj
-bin/libopencv_highgui310.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj
-bin/libopencv_highgui310.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/build.make
-bin/libopencv_highgui310.dll: lib/libopencv_videoio310.dll.a
-bin/libopencv_highgui310.dll: lib/libopencv_imgcodecs310.dll.a
-bin/libopencv_highgui310.dll: lib/libopencv_imgproc310.dll.a
-bin/libopencv_highgui310.dll: lib/libopencv_core310.dll.a
-bin/libopencv_highgui310.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/linklibs.rsp
-bin/libopencv_highgui310.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/objects1.rsp
-bin/libopencv_highgui310.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ..\..\bin\libopencv_highgui310.dll"
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_highgui.dir\link.txt --verbose=$(VERBOSE)
+bin/libopencv_highgui320.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.obj
+bin/libopencv_highgui320.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_w32.cpp.obj
+bin/libopencv_highgui320.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/build.make
+bin/libopencv_highgui320.dll: lib/libopencv_videoio320.dll.a
+bin/libopencv_highgui320.dll: lib/libopencv_imgcodecs320.dll.a
+bin/libopencv_highgui320.dll: lib/libopencv_imgproc320.dll.a
+bin/libopencv_highgui320.dll: lib/libopencv_core320.dll.a
+bin/libopencv_highgui320.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/linklibs.rsp
+bin/libopencv_highgui320.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/objects1.rsp
+bin/libopencv_highgui320.dll: modules/highgui/CMakeFiles/opencv_highgui.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ..\..\bin\libopencv_highgui320.dll"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_highgui.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-modules/highgui/CMakeFiles/opencv_highgui.dir/build: bin/libopencv_highgui310.dll
+modules/highgui/CMakeFiles/opencv_highgui.dir/build: bin/libopencv_highgui320.dll
 
 .PHONY : modules/highgui/CMakeFiles/opencv_highgui.dir/build
 
@@ -138,10 +138,10 @@ modules/highgui/CMakeFiles/opencv_highgui.dir/requires: modules/highgui/CMakeFil
 .PHONY : modules/highgui/CMakeFiles/opencv_highgui.dir/requires
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\highgui && $(CMAKE_COMMAND) -P CMakeFiles\opencv_highgui.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui && $(CMAKE_COMMAND) -P CMakeFiles\opencv_highgui.dir\cmake_clean.cmake
 .PHONY : modules/highgui/CMakeFiles/opencv_highgui.dir/clean
 
 modules/highgui/CMakeFiles/opencv_highgui.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\highgui C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\highgui C:\Users\rartin\Desktop\build\modules\highgui\CMakeFiles\opencv_highgui.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\highgui C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\highgui\CMakeFiles\opencv_highgui.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/highgui/CMakeFiles/opencv_highgui.dir/depend
 

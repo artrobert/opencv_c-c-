@@ -4,22 +4,22 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/opencl/test_hogdetector.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/opencl/test_hogdetector.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_cascadeandhog.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_cascadeandhog.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_main.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_main.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_precomp.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "AccuracyTest" ]
 		}
 	],

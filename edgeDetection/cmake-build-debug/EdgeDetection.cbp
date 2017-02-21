@@ -92,6 +92,12 @@
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h">
 			<Option target="test_cv"/>
 		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.cpp">
+			<Option target="test_cv"/>
+		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.h">
+			<Option target="test_cv"/>
+		</Unit>
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.cpp">
 			<Option target="test_cv"/>
 		</Unit>

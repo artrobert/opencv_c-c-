@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/libpng.dir/pngwrite.c.obj"
   "CMakeFiles/libpng.dir/pngwtran.c.obj"
   "CMakeFiles/libpng.dir/pngwutil.c.obj"
+  "CMakeFiles/libpng.dir/contrib/intel/intel_init.c.obj"
+  "CMakeFiles/libpng.dir/contrib/intel/filter_sse2_intrinsics.c.obj"
   "../lib/liblibpng.pdb"
   "../lib/liblibpng.a"
 )

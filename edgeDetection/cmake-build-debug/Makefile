@@ -149,6 +149,33 @@ IPM.cpp.s:
 	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/IPM.cpp.s
 .PHONY : IPM.cpp.s
 
+featureDetection.obj: featureDetection.cpp.obj
+
+.PHONY : featureDetection.obj
+
+# target to build an object file
+featureDetection.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/featureDetection.cpp.obj
+.PHONY : featureDetection.cpp.obj
+
+featureDetection.i: featureDetection.cpp.i
+
+.PHONY : featureDetection.i
+
+# target to preprocess a source file
+featureDetection.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/featureDetection.cpp.i
+.PHONY : featureDetection.cpp.i
+
+featureDetection.s: featureDetection.cpp.s
+
+.PHONY : featureDetection.s
+
+# target to generate assembly for a file
+featureDetection.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/featureDetection.cpp.s
+.PHONY : featureDetection.cpp.s
+
 imagePreparation.obj: imagePreparation.cpp.obj
 
 .PHONY : imagePreparation.obj
@@ -215,6 +242,9 @@ help:
 	@echo ... IPM.obj
 	@echo ... IPM.i
 	@echo ... IPM.s
+	@echo ... featureDetection.obj
+	@echo ... featureDetection.i
+	@echo ... featureDetection.s
 	@echo ... imagePreparation.obj
 	@echo ... imagePreparation.i
 	@echo ... imagePreparation.s

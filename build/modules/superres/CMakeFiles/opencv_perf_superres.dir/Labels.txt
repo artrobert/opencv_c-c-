@@ -3,15 +3,15 @@
  opencv_superres
  PerfTest
 # Source files and their labels
-C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_main.cpp
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/perf/perf_main.cpp
  Main
  opencv_superres
  PerfTest
-C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_superres.cpp
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/perf/perf_superres.cpp
  Main
  opencv_superres
  PerfTest
-C:/Users/rartin/Desktop/opencv/sources/modules/superres/perf/perf_precomp.hpp
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/perf/perf_precomp.hpp
  Main
  opencv_superres
  PerfTest

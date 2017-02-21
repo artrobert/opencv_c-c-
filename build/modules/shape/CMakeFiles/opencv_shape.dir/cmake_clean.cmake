@@ -6,10 +6,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/opencv_shape.dir/src/precomp.cpp.obj"
   "CMakeFiles/opencv_shape.dir/src/sc_dis.cpp.obj"
   "CMakeFiles/opencv_shape.dir/src/tps_trans.cpp.obj"
-  "../../bin/libopencv_shape310.pdb"
-  "../../bin/libopencv_shape310.dll"
-  "../../lib/libopencv_shape310.dll.a"
-  "../../bin/libopencv_shape310.dll.manifest"
+  "../../bin/libopencv_shape320.pdb"
+  "../../bin/libopencv_shape320.dll"
+  "../../lib/libopencv_shape320.dll.a"
+  "../../bin/libopencv_shape320.dll.manifest"
 )
 
 # Per-language clean rules from dependency scanning.

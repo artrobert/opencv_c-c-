@@ -4,12 +4,12 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/perf/perf_main.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/perf/perf_main.cpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/imgcodecs/perf/perf_precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/perf/perf_precomp.hpp",
 			"labels" : [ "Main", "opencv_imgcodecs", "PerfTest" ]
 		}
 	],

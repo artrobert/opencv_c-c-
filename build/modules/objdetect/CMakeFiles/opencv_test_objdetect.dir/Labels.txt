@@ -3,19 +3,19 @@
  opencv_objdetect
  AccuracyTest
 # Source files and their labels
-C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/opencl/test_hogdetector.cpp
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/opencl/test_hogdetector.cpp
  Main
  opencv_objdetect
  AccuracyTest
-C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_cascadeandhog.cpp
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_cascadeandhog.cpp
  Main
  opencv_objdetect
  AccuracyTest
-C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_main.cpp
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_main.cpp
  Main
  opencv_objdetect
  AccuracyTest
-C:/Users/rartin/Desktop/opencv/sources/modules/objdetect/test/test_precomp.hpp
+C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/test/test_precomp.hpp
  Main
  opencv_objdetect
  AccuracyTest

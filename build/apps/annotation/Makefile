@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -92,7 +92,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -103,7 +103,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\apps\annotation\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\apps\annotation\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 apps/annotation/CMakeFiles/opencv_annotation.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/CMakeFiles/opencv_annotation.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 apps/annotation/CMakeFiles/opencv_annotation.dir/rule
 .PHONY : apps/annotation/CMakeFiles/opencv_annotation.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ opencv_annotation: apps/annotation/CMakeFiles/opencv_annotation.dir/rule
 
 # fast build rule for target.
 opencv_annotation/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/build
 .PHONY : opencv_annotation/fast
 
 opencv_annotation.obj: opencv_annotation.cpp.obj
@@ -207,7 +207,7 @@ opencv_annotation.obj: opencv_annotation.cpp.obj
 
 # target to build an object file
 opencv_annotation.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj
 .PHONY : opencv_annotation.cpp.obj
 
 opencv_annotation.i: opencv_annotation.cpp.i
@@ -216,7 +216,7 @@ opencv_annotation.i: opencv_annotation.cpp.i
 
 # target to preprocess a source file
 opencv_annotation.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.i
 .PHONY : opencv_annotation.cpp.i
 
 opencv_annotation.s: opencv_annotation.cpp.s
@@ -225,7 +225,7 @@ opencv_annotation.s: opencv_annotation.cpp.s
 
 # target to generate assembly for a file
 opencv_annotation.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f apps\annotation\CMakeFiles\opencv_annotation.dir\build.make apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.s
 .PHONY : opencv_annotation.cpp.s
 
 # Help Target
@@ -258,6 +258,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

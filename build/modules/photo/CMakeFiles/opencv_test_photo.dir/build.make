@@ -42,10 +42,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 # Include any dependencies generated for this target.
 include modules/photo/CMakeFiles/opencv_test_photo.dir/depend.make
@@ -58,17 +58,17 @@ include modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/ocl/test_denoising.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\ocl\test_denoising.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\ocl\test_denoising.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/ocl/test_denoising.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\ocl\test_denoising.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\ocl\test_denoising.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\ocl\test_denoising.cpp > CMakeFiles\opencv_test_photo.dir\test\ocl\test_denoising.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\ocl\test_denoising.cpp > CMakeFiles\opencv_test_photo.dir\test\ocl\test_denoising.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\ocl\test_denoising.cpp -o CMakeFiles\opencv_test_photo.dir\test\ocl\test_denoising.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\ocl\test_denoising.cpp -o CMakeFiles\opencv_test_photo.dir\test\ocl\test_denoising.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj.requires:
 
@@ -83,17 +83,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/ocl/test_denoising.cpp.obj.p
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_cloning.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_cloning.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_cloning.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_cloning.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_cloning.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_cloning.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_cloning.cpp > CMakeFiles\opencv_test_photo.dir\test\test_cloning.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_cloning.cpp > CMakeFiles\opencv_test_photo.dir\test\test_cloning.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_cloning.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_cloning.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_cloning.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_cloning.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj.requires:
 
@@ -108,17 +108,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_cloning.cpp.obj.provide
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_decolor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_decolor.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_decolor.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_decolor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_decolor.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_decolor.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_decolor.cpp > CMakeFiles\opencv_test_photo.dir\test\test_decolor.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_decolor.cpp > CMakeFiles\opencv_test_photo.dir\test\test_decolor.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_decolor.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_decolor.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_decolor.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_decolor.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj.requires:
 
@@ -133,17 +133,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_decolor.cpp.obj.provide
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_denoise_tvl1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_denoise_tvl1.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoise_tvl1.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_denoise_tvl1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_denoise_tvl1.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoise_tvl1.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoise_tvl1.cpp > CMakeFiles\opencv_test_photo.dir\test\test_denoise_tvl1.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoise_tvl1.cpp > CMakeFiles\opencv_test_photo.dir\test\test_denoise_tvl1.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoise_tvl1.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_denoise_tvl1.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoise_tvl1.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_denoise_tvl1.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj.requires:
 
@@ -158,17 +158,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoise_tvl1.cpp.obj.pr
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_denoising.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoising.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_denoising.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoising.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoising.cpp > CMakeFiles\opencv_test_photo.dir\test\test_denoising.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoising.cpp > CMakeFiles\opencv_test_photo.dir\test\test_denoising.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoising.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoising.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj.requires:
 
@@ -183,17 +183,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cpp.obj.provi
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_denoising.cuda.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cuda.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoising.cuda.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_denoising.cuda.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cuda.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoising.cuda.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoising.cuda.cpp > CMakeFiles\opencv_test_photo.dir\test\test_denoising.cuda.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoising.cuda.cpp > CMakeFiles\opencv_test_photo.dir\test\test_denoising.cuda.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_denoising.cuda.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cuda.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_denoising.cuda.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_denoising.cuda.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj.requires:
 
@@ -208,17 +208,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_denoising.cuda.cpp.obj.
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_hdr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_hdr.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_hdr.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_hdr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_hdr.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_hdr.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_hdr.cpp > CMakeFiles\opencv_test_photo.dir\test\test_hdr.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_hdr.cpp > CMakeFiles\opencv_test_photo.dir\test\test_hdr.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_hdr.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_hdr.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_hdr.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_hdr.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj.requires:
 
@@ -233,17 +233,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_hdr.cpp.obj.provides.bu
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_inpaint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_inpaint.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_inpaint.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_inpaint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_inpaint.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_inpaint.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_inpaint.cpp > CMakeFiles\opencv_test_photo.dir\test\test_inpaint.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_inpaint.cpp > CMakeFiles\opencv_test_photo.dir\test\test_inpaint.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_inpaint.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_inpaint.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_inpaint.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_inpaint.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj.requires:
 
@@ -258,17 +258,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_inpaint.cpp.obj.provide
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_main.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_main.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_main.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_main.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_main.cpp > CMakeFiles\opencv_test_photo.dir\test\test_main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_main.cpp > CMakeFiles\opencv_test_photo.dir\test\test_main.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_main.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_main.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_main.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj.requires:
 
@@ -283,17 +283,17 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj.provides.b
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/flags.make
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj: modules/photo/CMakeFiles/opencv_test_photo.dir/includes_CXX.rsp
-modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj: C:/Users/rartin/Desktop/opencv/sources/modules/photo/test/test_npr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_npr.cpp.obj -c C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_npr.cpp
+modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/test/test_npr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -o CMakeFiles\opencv_test_photo.dir\test\test_npr.cpp.obj -c C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_npr.cpp
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.i"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -E C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_npr.cpp > CMakeFiles\opencv_test_photo.dir\test\test_npr.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -E C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_npr.cpp > CMakeFiles\opencv_test_photo.dir\test\test_npr.cpp.i
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.s"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS)  -include "C:/Users/rartin/Desktop/build/modules/photo/test_precomp.hpp" -Winvalid-pch  -S C:\Users\rartin\Desktop\opencv\sources\modules\photo\test\test_npr.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_npr.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/test_precomp.hpp"  -Winvalid-pch  -S C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo\test\test_npr.cpp -o CMakeFiles\opencv_test_photo.dir\test\test_npr.cpp.s
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj.requires:
 
@@ -333,18 +333,18 @@ bin/opencv_test_photo.exe: modules/photo/CMakeFiles/opencv_test_photo.dir/test/t
 bin/opencv_test_photo.exe: modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_main.cpp.obj
 bin/opencv_test_photo.exe: modules/photo/CMakeFiles/opencv_test_photo.dir/test/test_npr.cpp.obj
 bin/opencv_test_photo.exe: modules/photo/CMakeFiles/opencv_test_photo.dir/build.make
-bin/opencv_test_photo.exe: lib/libopencv_ts310.a
-bin/opencv_test_photo.exe: lib/libopencv_photo310.dll.a
-bin/opencv_test_photo.exe: lib/libopencv_highgui310.dll.a
-bin/opencv_test_photo.exe: lib/libopencv_videoio310.dll.a
-bin/opencv_test_photo.exe: lib/libopencv_imgcodecs310.dll.a
-bin/opencv_test_photo.exe: lib/libopencv_imgproc310.dll.a
-bin/opencv_test_photo.exe: lib/libopencv_core310.dll.a
+bin/opencv_test_photo.exe: lib/libopencv_ts320.a
+bin/opencv_test_photo.exe: lib/libopencv_photo320.dll.a
+bin/opencv_test_photo.exe: lib/libopencv_highgui320.dll.a
+bin/opencv_test_photo.exe: lib/libopencv_videoio320.dll.a
+bin/opencv_test_photo.exe: lib/libopencv_imgcodecs320.dll.a
+bin/opencv_test_photo.exe: lib/libopencv_imgproc320.dll.a
+bin/opencv_test_photo.exe: lib/libopencv_core320.dll.a
 bin/opencv_test_photo.exe: modules/photo/CMakeFiles/opencv_test_photo.dir/linklibs.rsp
 bin/opencv_test_photo.exe: modules/photo/CMakeFiles/opencv_test_photo.dir/objects1.rsp
 bin/opencv_test_photo.exe: modules/photo/CMakeFiles/opencv_test_photo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Desktop\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ..\..\bin\opencv_test_photo.exe"
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_photo.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ..\..\bin\opencv_test_photo.exe"
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencv_test_photo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 modules/photo/CMakeFiles/opencv_test_photo.dir/build: bin/opencv_test_photo.exe
@@ -365,10 +365,10 @@ modules/photo/CMakeFiles/opencv_test_photo.dir/requires: modules/photo/CMakeFile
 .PHONY : modules/photo/CMakeFiles/opencv_test_photo.dir/requires
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/clean:
-	cd /d C:\Users\rartin\Desktop\build\modules\photo && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_photo.dir\cmake_clean.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo && $(CMAKE_COMMAND) -P CMakeFiles\opencv_test_photo.dir\cmake_clean.cmake
 .PHONY : modules/photo/CMakeFiles/opencv_test_photo.dir/clean
 
 modules/photo/CMakeFiles/opencv_test_photo.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Desktop\opencv\sources C:\Users\rartin\Desktop\opencv\sources\modules\photo C:\Users\rartin\Desktop\build C:\Users\rartin\Desktop\build\modules\photo C:\Users\rartin\Desktop\build\modules\photo\CMakeFiles\opencv_test_photo.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources\modules\photo C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\photo\CMakeFiles\opencv_test_photo.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : modules/photo/CMakeFiles/opencv_test_photo.dir/depend
 

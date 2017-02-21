@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.cpp" "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/cmake-build-debug/CMakeFiles/test_cv.dir/IPM.cpp.obj"
+  "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.cpp" "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/cmake-build-debug/CMakeFiles/test_cv.dir/featureDetection.cpp.obj"
   "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.cpp" "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/cmake-build-debug/CMakeFiles/test_cv.dir/imagePreparation.cpp.obj"
   "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp" "D:/Facultate/c++Project/opencv_c-c-/edgeDetection/cmake-build-debug/CMakeFiles/test_cv.dir/main.cpp.obj"
   )

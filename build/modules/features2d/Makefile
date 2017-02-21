@@ -47,10 +47,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -66,28 +66,27 @@ package_source/fast: package_source
 
 .PHONY : package_source/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
 package/fast: package
 
 .PHONY : package/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -111,17 +110,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"libs\""
@@ -131,6 +119,18 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\features2d\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\features2d\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 modules/features2d/CMakeFiles/opencv_features2d.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_features2d.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_features2d.dir/rule
 .PHONY : modules/features2d/CMakeFiles/opencv_features2d.dir/rule
 
 # Convenience name for target.
@@ -198,42 +198,12 @@ opencv_features2d: modules/features2d/CMakeFiles/opencv_features2d.dir/rule
 
 # fast build rule for target.
 opencv_features2d/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/build
 .PHONY : opencv_features2d/fast
 
 # Convenience name for target.
-modules/features2d/CMakeFiles/opencv_features2d_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_features2d_object.dir/rule
-.PHONY : modules/features2d/CMakeFiles/opencv_features2d_object.dir/rule
-
-# Convenience name for target.
-opencv_features2d_object: modules/features2d/CMakeFiles/opencv_features2d_object.dir/rule
-
-.PHONY : opencv_features2d_object
-
-# fast build rule for target.
-opencv_features2d_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/build
-.PHONY : opencv_features2d_object/fast
-
-# Convenience name for target.
-modules/features2d/CMakeFiles/pch_Generate_opencv_test_features2d.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/pch_Generate_opencv_test_features2d.dir/rule
-.PHONY : modules/features2d/CMakeFiles/pch_Generate_opencv_test_features2d.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_features2d: modules/features2d/CMakeFiles/pch_Generate_opencv_test_features2d.dir/rule
-
-.PHONY : pch_Generate_opencv_test_features2d
-
-# fast build rule for target.
-pch_Generate_opencv_test_features2d/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\pch_Generate_opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/pch_Generate_opencv_test_features2d.dir/build
-.PHONY : pch_Generate_opencv_test_features2d/fast
-
-# Convenience name for target.
 modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/rule
 .PHONY : modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +213,12 @@ opencv_features2d_pch_dephelp: modules/features2d/CMakeFiles/opencv_features2d_p
 
 # fast build rule for target.
 opencv_features2d_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/build
 .PHONY : opencv_features2d_pch_dephelp/fast
 
 # Convenience name for target.
 modules/features2d/CMakeFiles/pch_Generate_opencv_features2d.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/pch_Generate_opencv_features2d.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/pch_Generate_opencv_features2d.dir/rule
 .PHONY : modules/features2d/CMakeFiles/pch_Generate_opencv_features2d.dir/rule
 
 # Convenience name for target.
@@ -258,83 +228,8 @@ pch_Generate_opencv_features2d: modules/features2d/CMakeFiles/pch_Generate_openc
 
 # fast build rule for target.
 pch_Generate_opencv_features2d/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\pch_Generate_opencv_features2d.dir\build.make modules/features2d/CMakeFiles/pch_Generate_opencv_features2d.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\pch_Generate_opencv_features2d.dir\build.make modules/features2d/CMakeFiles/pch_Generate_opencv_features2d.dir/build
 .PHONY : pch_Generate_opencv_features2d/fast
-
-# Convenience name for target.
-modules/features2d/CMakeFiles/opencv_perf_features2d.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_perf_features2d.dir/rule
-.PHONY : modules/features2d/CMakeFiles/opencv_perf_features2d.dir/rule
-
-# Convenience name for target.
-opencv_perf_features2d: modules/features2d/CMakeFiles/opencv_perf_features2d.dir/rule
-
-.PHONY : opencv_perf_features2d
-
-# fast build rule for target.
-opencv_perf_features2d/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/build
-.PHONY : opencv_perf_features2d/fast
-
-# Convenience name for target.
-modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/rule
-.PHONY : modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_features2d_pch_dephelp: modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_features2d_pch_dephelp
-
-# fast build rule for target.
-opencv_test_features2d_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/build
-.PHONY : opencv_test_features2d_pch_dephelp/fast
-
-# Convenience name for target.
-modules/features2d/CMakeFiles/opencv_test_features2d.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_test_features2d.dir/rule
-.PHONY : modules/features2d/CMakeFiles/opencv_test_features2d.dir/rule
-
-# Convenience name for target.
-opencv_test_features2d: modules/features2d/CMakeFiles/opencv_test_features2d.dir/rule
-
-.PHONY : opencv_test_features2d
-
-# fast build rule for target.
-opencv_test_features2d/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/build
-.PHONY : opencv_test_features2d/fast
-
-# Convenience name for target.
-modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/rule
-.PHONY : modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_perf_features2d_pch_dephelp: modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/rule
-
-.PHONY : opencv_perf_features2d_pch_dephelp
-
-# fast build rule for target.
-opencv_perf_features2d_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/build
-.PHONY : opencv_perf_features2d_pch_dephelp/fast
-
-# Convenience name for target.
-modules/features2d/CMakeFiles/pch_Generate_opencv_perf_features2d.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/features2d/CMakeFiles/pch_Generate_opencv_perf_features2d.dir/rule
-.PHONY : modules/features2d/CMakeFiles/pch_Generate_opencv_perf_features2d.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_perf_features2d: modules/features2d/CMakeFiles/pch_Generate_opencv_perf_features2d.dir/rule
-
-.PHONY : pch_Generate_opencv_perf_features2d
-
-# fast build rule for target.
-pch_Generate_opencv_perf_features2d/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\pch_Generate_opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/pch_Generate_opencv_perf_features2d.dir/build
-.PHONY : pch_Generate_opencv_perf_features2d/fast
 
 opencl_kernels_features2d.obj: opencl_kernels_features2d.cpp.obj
 
@@ -342,8 +237,7 @@ opencl_kernels_features2d.obj: opencl_kernels_features2d.cpp.obj
 
 # target to build an object file
 opencl_kernels_features2d.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/opencl_kernels_features2d.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.obj
 .PHONY : opencl_kernels_features2d.cpp.obj
 
 opencl_kernels_features2d.i: opencl_kernels_features2d.cpp.i
@@ -352,8 +246,7 @@ opencl_kernels_features2d.i: opencl_kernels_features2d.cpp.i
 
 # target to preprocess a source file
 opencl_kernels_features2d.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/opencl_kernels_features2d.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.i
 .PHONY : opencl_kernels_features2d.cpp.i
 
 opencl_kernels_features2d.s: opencl_kernels_features2d.cpp.s
@@ -362,8 +255,7 @@ opencl_kernels_features2d.s: opencl_kernels_features2d.cpp.s
 
 # target to generate assembly for a file
 opencl_kernels_features2d.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/opencl_kernels_features2d.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/opencl_kernels_features2d.cpp.s
 .PHONY : opencl_kernels_features2d.cpp.s
 
 opencv_features2d_pch_dephelp.obj: opencv_features2d_pch_dephelp.cxx.obj
@@ -372,7 +264,7 @@ opencv_features2d_pch_dephelp.obj: opencv_features2d_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_features2d_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/opencv_features2d_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/opencv_features2d_pch_dephelp.cxx.obj
 .PHONY : opencv_features2d_pch_dephelp.cxx.obj
 
 opencv_features2d_pch_dephelp.i: opencv_features2d_pch_dephelp.cxx.i
@@ -381,7 +273,7 @@ opencv_features2d_pch_dephelp.i: opencv_features2d_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_features2d_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/opencv_features2d_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/opencv_features2d_pch_dephelp.cxx.i
 .PHONY : opencv_features2d_pch_dephelp.cxx.i
 
 opencv_features2d_pch_dephelp.s: opencv_features2d_pch_dephelp.cxx.s
@@ -390,278 +282,8 @@ opencv_features2d_pch_dephelp.s: opencv_features2d_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_features2d_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/opencv_features2d_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_pch_dephelp.dir/opencv_features2d_pch_dephelp.cxx.s
 .PHONY : opencv_features2d_pch_dephelp.cxx.s
-
-opencv_perf_features2d_pch_dephelp.obj: opencv_perf_features2d_pch_dephelp.cxx.obj
-
-.PHONY : opencv_perf_features2d_pch_dephelp.obj
-
-# target to build an object file
-opencv_perf_features2d_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/opencv_perf_features2d_pch_dephelp.cxx.obj
-.PHONY : opencv_perf_features2d_pch_dephelp.cxx.obj
-
-opencv_perf_features2d_pch_dephelp.i: opencv_perf_features2d_pch_dephelp.cxx.i
-
-.PHONY : opencv_perf_features2d_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_perf_features2d_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/opencv_perf_features2d_pch_dephelp.cxx.i
-.PHONY : opencv_perf_features2d_pch_dephelp.cxx.i
-
-opencv_perf_features2d_pch_dephelp.s: opencv_perf_features2d_pch_dephelp.cxx.s
-
-.PHONY : opencv_perf_features2d_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_perf_features2d_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d_pch_dephelp.dir/opencv_perf_features2d_pch_dephelp.cxx.s
-.PHONY : opencv_perf_features2d_pch_dephelp.cxx.s
-
-opencv_test_features2d_pch_dephelp.obj: opencv_test_features2d_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_features2d_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_features2d_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/opencv_test_features2d_pch_dephelp.cxx.obj
-.PHONY : opencv_test_features2d_pch_dephelp.cxx.obj
-
-opencv_test_features2d_pch_dephelp.i: opencv_test_features2d_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_features2d_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_features2d_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/opencv_test_features2d_pch_dephelp.cxx.i
-.PHONY : opencv_test_features2d_pch_dephelp.cxx.i
-
-opencv_test_features2d_pch_dephelp.s: opencv_test_features2d_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_features2d_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_features2d_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d_pch_dephelp.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d_pch_dephelp.dir/opencv_test_features2d_pch_dephelp.cxx.s
-.PHONY : opencv_test_features2d_pch_dephelp.cxx.s
-
-perf/opencl/perf_brute_force_matcher.obj: perf/opencl/perf_brute_force_matcher.cpp.obj
-
-.PHONY : perf/opencl/perf_brute_force_matcher.obj
-
-# target to build an object file
-perf/opencl/perf_brute_force_matcher.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_brute_force_matcher.cpp.obj
-.PHONY : perf/opencl/perf_brute_force_matcher.cpp.obj
-
-perf/opencl/perf_brute_force_matcher.i: perf/opencl/perf_brute_force_matcher.cpp.i
-
-.PHONY : perf/opencl/perf_brute_force_matcher.i
-
-# target to preprocess a source file
-perf/opencl/perf_brute_force_matcher.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_brute_force_matcher.cpp.i
-.PHONY : perf/opencl/perf_brute_force_matcher.cpp.i
-
-perf/opencl/perf_brute_force_matcher.s: perf/opencl/perf_brute_force_matcher.cpp.s
-
-.PHONY : perf/opencl/perf_brute_force_matcher.s
-
-# target to generate assembly for a file
-perf/opencl/perf_brute_force_matcher.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_brute_force_matcher.cpp.s
-.PHONY : perf/opencl/perf_brute_force_matcher.cpp.s
-
-perf/opencl/perf_fast.obj: perf/opencl/perf_fast.cpp.obj
-
-.PHONY : perf/opencl/perf_fast.obj
-
-# target to build an object file
-perf/opencl/perf_fast.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_fast.cpp.obj
-.PHONY : perf/opencl/perf_fast.cpp.obj
-
-perf/opencl/perf_fast.i: perf/opencl/perf_fast.cpp.i
-
-.PHONY : perf/opencl/perf_fast.i
-
-# target to preprocess a source file
-perf/opencl/perf_fast.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_fast.cpp.i
-.PHONY : perf/opencl/perf_fast.cpp.i
-
-perf/opencl/perf_fast.s: perf/opencl/perf_fast.cpp.s
-
-.PHONY : perf/opencl/perf_fast.s
-
-# target to generate assembly for a file
-perf/opencl/perf_fast.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_fast.cpp.s
-.PHONY : perf/opencl/perf_fast.cpp.s
-
-perf/opencl/perf_orb.obj: perf/opencl/perf_orb.cpp.obj
-
-.PHONY : perf/opencl/perf_orb.obj
-
-# target to build an object file
-perf/opencl/perf_orb.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_orb.cpp.obj
-.PHONY : perf/opencl/perf_orb.cpp.obj
-
-perf/opencl/perf_orb.i: perf/opencl/perf_orb.cpp.i
-
-.PHONY : perf/opencl/perf_orb.i
-
-# target to preprocess a source file
-perf/opencl/perf_orb.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_orb.cpp.i
-.PHONY : perf/opencl/perf_orb.cpp.i
-
-perf/opencl/perf_orb.s: perf/opencl/perf_orb.cpp.s
-
-.PHONY : perf/opencl/perf_orb.s
-
-# target to generate assembly for a file
-perf/opencl/perf_orb.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/opencl/perf_orb.cpp.s
-.PHONY : perf/opencl/perf_orb.cpp.s
-
-perf/perf_agast.obj: perf/perf_agast.cpp.obj
-
-.PHONY : perf/perf_agast.obj
-
-# target to build an object file
-perf/perf_agast.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_agast.cpp.obj
-.PHONY : perf/perf_agast.cpp.obj
-
-perf/perf_agast.i: perf/perf_agast.cpp.i
-
-.PHONY : perf/perf_agast.i
-
-# target to preprocess a source file
-perf/perf_agast.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_agast.cpp.i
-.PHONY : perf/perf_agast.cpp.i
-
-perf/perf_agast.s: perf/perf_agast.cpp.s
-
-.PHONY : perf/perf_agast.s
-
-# target to generate assembly for a file
-perf/perf_agast.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_agast.cpp.s
-.PHONY : perf/perf_agast.cpp.s
-
-perf/perf_batchDistance.obj: perf/perf_batchDistance.cpp.obj
-
-.PHONY : perf/perf_batchDistance.obj
-
-# target to build an object file
-perf/perf_batchDistance.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_batchDistance.cpp.obj
-.PHONY : perf/perf_batchDistance.cpp.obj
-
-perf/perf_batchDistance.i: perf/perf_batchDistance.cpp.i
-
-.PHONY : perf/perf_batchDistance.i
-
-# target to preprocess a source file
-perf/perf_batchDistance.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_batchDistance.cpp.i
-.PHONY : perf/perf_batchDistance.cpp.i
-
-perf/perf_batchDistance.s: perf/perf_batchDistance.cpp.s
-
-.PHONY : perf/perf_batchDistance.s
-
-# target to generate assembly for a file
-perf/perf_batchDistance.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_batchDistance.cpp.s
-.PHONY : perf/perf_batchDistance.cpp.s
-
-perf/perf_fast.obj: perf/perf_fast.cpp.obj
-
-.PHONY : perf/perf_fast.obj
-
-# target to build an object file
-perf/perf_fast.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_fast.cpp.obj
-.PHONY : perf/perf_fast.cpp.obj
-
-perf/perf_fast.i: perf/perf_fast.cpp.i
-
-.PHONY : perf/perf_fast.i
-
-# target to preprocess a source file
-perf/perf_fast.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_fast.cpp.i
-.PHONY : perf/perf_fast.cpp.i
-
-perf/perf_fast.s: perf/perf_fast.cpp.s
-
-.PHONY : perf/perf_fast.s
-
-# target to generate assembly for a file
-perf/perf_fast.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_fast.cpp.s
-.PHONY : perf/perf_fast.cpp.s
-
-perf/perf_main.obj: perf/perf_main.cpp.obj
-
-.PHONY : perf/perf_main.obj
-
-# target to build an object file
-perf/perf_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_main.cpp.obj
-.PHONY : perf/perf_main.cpp.obj
-
-perf/perf_main.i: perf/perf_main.cpp.i
-
-.PHONY : perf/perf_main.i
-
-# target to preprocess a source file
-perf/perf_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_main.cpp.i
-.PHONY : perf/perf_main.cpp.i
-
-perf/perf_main.s: perf/perf_main.cpp.s
-
-.PHONY : perf/perf_main.s
-
-# target to generate assembly for a file
-perf/perf_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_main.cpp.s
-.PHONY : perf/perf_main.cpp.s
-
-perf/perf_orb.obj: perf/perf_orb.cpp.obj
-
-.PHONY : perf/perf_orb.obj
-
-# target to build an object file
-perf/perf_orb.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_orb.cpp.obj
-.PHONY : perf/perf_orb.cpp.obj
-
-perf/perf_orb.i: perf/perf_orb.cpp.i
-
-.PHONY : perf/perf_orb.i
-
-# target to preprocess a source file
-perf/perf_orb.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_orb.cpp.i
-.PHONY : perf/perf_orb.cpp.i
-
-perf/perf_orb.s: perf/perf_orb.cpp.s
-
-.PHONY : perf/perf_orb.s
-
-# target to generate assembly for a file
-perf/perf_orb.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_perf_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_perf_features2d.dir/perf/perf_orb.cpp.s
-.PHONY : perf/perf_orb.cpp.s
 
 src/agast.obj: src/agast.cpp.obj
 
@@ -669,8 +291,7 @@ src/agast.obj: src/agast.cpp.obj
 
 # target to build an object file
 src/agast.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/agast.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.obj
 .PHONY : src/agast.cpp.obj
 
 src/agast.i: src/agast.cpp.i
@@ -679,8 +300,7 @@ src/agast.i: src/agast.cpp.i
 
 # target to preprocess a source file
 src/agast.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/agast.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.i
 .PHONY : src/agast.cpp.i
 
 src/agast.s: src/agast.cpp.s
@@ -689,8 +309,7 @@ src/agast.s: src/agast.cpp.s
 
 # target to generate assembly for a file
 src/agast.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/agast.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast.cpp.s
 .PHONY : src/agast.cpp.s
 
 src/agast_score.obj: src/agast_score.cpp.obj
@@ -699,8 +318,7 @@ src/agast_score.obj: src/agast_score.cpp.obj
 
 # target to build an object file
 src/agast_score.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/agast_score.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.obj
 .PHONY : src/agast_score.cpp.obj
 
 src/agast_score.i: src/agast_score.cpp.i
@@ -709,8 +327,7 @@ src/agast_score.i: src/agast_score.cpp.i
 
 # target to preprocess a source file
 src/agast_score.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/agast_score.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.i
 .PHONY : src/agast_score.cpp.i
 
 src/agast_score.s: src/agast_score.cpp.s
@@ -719,8 +336,7 @@ src/agast_score.s: src/agast_score.cpp.s
 
 # target to generate assembly for a file
 src/agast_score.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/agast_score.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/agast_score.cpp.s
 .PHONY : src/agast_score.cpp.s
 
 src/akaze.obj: src/akaze.cpp.obj
@@ -729,8 +345,7 @@ src/akaze.obj: src/akaze.cpp.obj
 
 # target to build an object file
 src/akaze.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/akaze.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.obj
 .PHONY : src/akaze.cpp.obj
 
 src/akaze.i: src/akaze.cpp.i
@@ -739,8 +354,7 @@ src/akaze.i: src/akaze.cpp.i
 
 # target to preprocess a source file
 src/akaze.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/akaze.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.i
 .PHONY : src/akaze.cpp.i
 
 src/akaze.s: src/akaze.cpp.s
@@ -749,8 +363,7 @@ src/akaze.s: src/akaze.cpp.s
 
 # target to generate assembly for a file
 src/akaze.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/akaze.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/akaze.cpp.s
 .PHONY : src/akaze.cpp.s
 
 src/bagofwords.obj: src/bagofwords.cpp.obj
@@ -759,8 +372,7 @@ src/bagofwords.obj: src/bagofwords.cpp.obj
 
 # target to build an object file
 src/bagofwords.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/bagofwords.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.obj
 .PHONY : src/bagofwords.cpp.obj
 
 src/bagofwords.i: src/bagofwords.cpp.i
@@ -769,8 +381,7 @@ src/bagofwords.i: src/bagofwords.cpp.i
 
 # target to preprocess a source file
 src/bagofwords.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/bagofwords.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.i
 .PHONY : src/bagofwords.cpp.i
 
 src/bagofwords.s: src/bagofwords.cpp.s
@@ -779,8 +390,7 @@ src/bagofwords.s: src/bagofwords.cpp.s
 
 # target to generate assembly for a file
 src/bagofwords.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/bagofwords.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/bagofwords.cpp.s
 .PHONY : src/bagofwords.cpp.s
 
 src/blobdetector.obj: src/blobdetector.cpp.obj
@@ -789,8 +399,7 @@ src/blobdetector.obj: src/blobdetector.cpp.obj
 
 # target to build an object file
 src/blobdetector.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/blobdetector.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.obj
 .PHONY : src/blobdetector.cpp.obj
 
 src/blobdetector.i: src/blobdetector.cpp.i
@@ -799,8 +408,7 @@ src/blobdetector.i: src/blobdetector.cpp.i
 
 # target to preprocess a source file
 src/blobdetector.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/blobdetector.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.i
 .PHONY : src/blobdetector.cpp.i
 
 src/blobdetector.s: src/blobdetector.cpp.s
@@ -809,8 +417,7 @@ src/blobdetector.s: src/blobdetector.cpp.s
 
 # target to generate assembly for a file
 src/blobdetector.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/blobdetector.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/blobdetector.cpp.s
 .PHONY : src/blobdetector.cpp.s
 
 src/brisk.obj: src/brisk.cpp.obj
@@ -819,8 +426,7 @@ src/brisk.obj: src/brisk.cpp.obj
 
 # target to build an object file
 src/brisk.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/brisk.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.obj
 .PHONY : src/brisk.cpp.obj
 
 src/brisk.i: src/brisk.cpp.i
@@ -829,8 +435,7 @@ src/brisk.i: src/brisk.cpp.i
 
 # target to preprocess a source file
 src/brisk.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/brisk.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.i
 .PHONY : src/brisk.cpp.i
 
 src/brisk.s: src/brisk.cpp.s
@@ -839,8 +444,7 @@ src/brisk.s: src/brisk.cpp.s
 
 # target to generate assembly for a file
 src/brisk.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/brisk.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/brisk.cpp.s
 .PHONY : src/brisk.cpp.s
 
 src/draw.obj: src/draw.cpp.obj
@@ -849,8 +453,7 @@ src/draw.obj: src/draw.cpp.obj
 
 # target to build an object file
 src/draw.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/draw.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.obj
 .PHONY : src/draw.cpp.obj
 
 src/draw.i: src/draw.cpp.i
@@ -859,8 +462,7 @@ src/draw.i: src/draw.cpp.i
 
 # target to preprocess a source file
 src/draw.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/draw.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.i
 .PHONY : src/draw.cpp.i
 
 src/draw.s: src/draw.cpp.s
@@ -869,8 +471,7 @@ src/draw.s: src/draw.cpp.s
 
 # target to generate assembly for a file
 src/draw.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/draw.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/draw.cpp.s
 .PHONY : src/draw.cpp.s
 
 src/dynamic.obj: src/dynamic.cpp.obj
@@ -879,8 +480,7 @@ src/dynamic.obj: src/dynamic.cpp.obj
 
 # target to build an object file
 src/dynamic.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/dynamic.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.obj
 .PHONY : src/dynamic.cpp.obj
 
 src/dynamic.i: src/dynamic.cpp.i
@@ -889,8 +489,7 @@ src/dynamic.i: src/dynamic.cpp.i
 
 # target to preprocess a source file
 src/dynamic.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/dynamic.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.i
 .PHONY : src/dynamic.cpp.i
 
 src/dynamic.s: src/dynamic.cpp.s
@@ -899,8 +498,7 @@ src/dynamic.s: src/dynamic.cpp.s
 
 # target to generate assembly for a file
 src/dynamic.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/dynamic.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/dynamic.cpp.s
 .PHONY : src/dynamic.cpp.s
 
 src/evaluation.obj: src/evaluation.cpp.obj
@@ -909,8 +507,7 @@ src/evaluation.obj: src/evaluation.cpp.obj
 
 # target to build an object file
 src/evaluation.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/evaluation.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.obj
 .PHONY : src/evaluation.cpp.obj
 
 src/evaluation.i: src/evaluation.cpp.i
@@ -919,8 +516,7 @@ src/evaluation.i: src/evaluation.cpp.i
 
 # target to preprocess a source file
 src/evaluation.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/evaluation.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.i
 .PHONY : src/evaluation.cpp.i
 
 src/evaluation.s: src/evaluation.cpp.s
@@ -929,8 +525,7 @@ src/evaluation.s: src/evaluation.cpp.s
 
 # target to generate assembly for a file
 src/evaluation.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/evaluation.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/evaluation.cpp.s
 .PHONY : src/evaluation.cpp.s
 
 src/fast.obj: src/fast.cpp.obj
@@ -939,8 +534,7 @@ src/fast.obj: src/fast.cpp.obj
 
 # target to build an object file
 src/fast.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/fast.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.obj
 .PHONY : src/fast.cpp.obj
 
 src/fast.i: src/fast.cpp.i
@@ -949,8 +543,7 @@ src/fast.i: src/fast.cpp.i
 
 # target to preprocess a source file
 src/fast.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/fast.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.i
 .PHONY : src/fast.cpp.i
 
 src/fast.s: src/fast.cpp.s
@@ -959,8 +552,7 @@ src/fast.s: src/fast.cpp.s
 
 # target to generate assembly for a file
 src/fast.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/fast.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast.cpp.s
 .PHONY : src/fast.cpp.s
 
 src/fast_score.obj: src/fast_score.cpp.obj
@@ -969,8 +561,7 @@ src/fast_score.obj: src/fast_score.cpp.obj
 
 # target to build an object file
 src/fast_score.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/fast_score.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.obj
 .PHONY : src/fast_score.cpp.obj
 
 src/fast_score.i: src/fast_score.cpp.i
@@ -979,8 +570,7 @@ src/fast_score.i: src/fast_score.cpp.i
 
 # target to preprocess a source file
 src/fast_score.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/fast_score.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.i
 .PHONY : src/fast_score.cpp.i
 
 src/fast_score.s: src/fast_score.cpp.s
@@ -989,8 +579,7 @@ src/fast_score.s: src/fast_score.cpp.s
 
 # target to generate assembly for a file
 src/fast_score.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/fast_score.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/fast_score.cpp.s
 .PHONY : src/fast_score.cpp.s
 
 src/feature2d.obj: src/feature2d.cpp.obj
@@ -999,8 +588,7 @@ src/feature2d.obj: src/feature2d.cpp.obj
 
 # target to build an object file
 src/feature2d.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/feature2d.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.obj
 .PHONY : src/feature2d.cpp.obj
 
 src/feature2d.i: src/feature2d.cpp.i
@@ -1009,8 +597,7 @@ src/feature2d.i: src/feature2d.cpp.i
 
 # target to preprocess a source file
 src/feature2d.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/feature2d.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.i
 .PHONY : src/feature2d.cpp.i
 
 src/feature2d.s: src/feature2d.cpp.s
@@ -1019,8 +606,7 @@ src/feature2d.s: src/feature2d.cpp.s
 
 # target to generate assembly for a file
 src/feature2d.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/feature2d.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/feature2d.cpp.s
 .PHONY : src/feature2d.cpp.s
 
 src/gftt.obj: src/gftt.cpp.obj
@@ -1029,8 +615,7 @@ src/gftt.obj: src/gftt.cpp.obj
 
 # target to build an object file
 src/gftt.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/gftt.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.obj
 .PHONY : src/gftt.cpp.obj
 
 src/gftt.i: src/gftt.cpp.i
@@ -1039,8 +624,7 @@ src/gftt.i: src/gftt.cpp.i
 
 # target to preprocess a source file
 src/gftt.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/gftt.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.i
 .PHONY : src/gftt.cpp.i
 
 src/gftt.s: src/gftt.cpp.s
@@ -1049,8 +633,7 @@ src/gftt.s: src/gftt.cpp.s
 
 # target to generate assembly for a file
 src/gftt.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/gftt.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/gftt.cpp.s
 .PHONY : src/gftt.cpp.s
 
 src/kaze.obj: src/kaze.cpp.obj
@@ -1059,8 +642,7 @@ src/kaze.obj: src/kaze.cpp.obj
 
 # target to build an object file
 src/kaze.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.obj
 .PHONY : src/kaze.cpp.obj
 
 src/kaze.i: src/kaze.cpp.i
@@ -1069,8 +651,7 @@ src/kaze.i: src/kaze.cpp.i
 
 # target to preprocess a source file
 src/kaze.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.i
 .PHONY : src/kaze.cpp.i
 
 src/kaze.s: src/kaze.cpp.s
@@ -1079,8 +660,7 @@ src/kaze.s: src/kaze.cpp.s
 
 # target to generate assembly for a file
 src/kaze.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze.cpp.s
 .PHONY : src/kaze.cpp.s
 
 src/kaze/AKAZEFeatures.obj: src/kaze/AKAZEFeatures.cpp.obj
@@ -1089,8 +669,7 @@ src/kaze/AKAZEFeatures.obj: src/kaze/AKAZEFeatures.cpp.obj
 
 # target to build an object file
 src/kaze/AKAZEFeatures.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/AKAZEFeatures.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.obj
 .PHONY : src/kaze/AKAZEFeatures.cpp.obj
 
 src/kaze/AKAZEFeatures.i: src/kaze/AKAZEFeatures.cpp.i
@@ -1099,8 +678,7 @@ src/kaze/AKAZEFeatures.i: src/kaze/AKAZEFeatures.cpp.i
 
 # target to preprocess a source file
 src/kaze/AKAZEFeatures.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/AKAZEFeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.i
 .PHONY : src/kaze/AKAZEFeatures.cpp.i
 
 src/kaze/AKAZEFeatures.s: src/kaze/AKAZEFeatures.cpp.s
@@ -1109,8 +687,7 @@ src/kaze/AKAZEFeatures.s: src/kaze/AKAZEFeatures.cpp.s
 
 # target to generate assembly for a file
 src/kaze/AKAZEFeatures.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/AKAZEFeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/AKAZEFeatures.cpp.s
 .PHONY : src/kaze/AKAZEFeatures.cpp.s
 
 src/kaze/KAZEFeatures.obj: src/kaze/KAZEFeatures.cpp.obj
@@ -1119,8 +696,7 @@ src/kaze/KAZEFeatures.obj: src/kaze/KAZEFeatures.cpp.obj
 
 # target to build an object file
 src/kaze/KAZEFeatures.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/KAZEFeatures.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.obj
 .PHONY : src/kaze/KAZEFeatures.cpp.obj
 
 src/kaze/KAZEFeatures.i: src/kaze/KAZEFeatures.cpp.i
@@ -1129,8 +705,7 @@ src/kaze/KAZEFeatures.i: src/kaze/KAZEFeatures.cpp.i
 
 # target to preprocess a source file
 src/kaze/KAZEFeatures.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/KAZEFeatures.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.i
 .PHONY : src/kaze/KAZEFeatures.cpp.i
 
 src/kaze/KAZEFeatures.s: src/kaze/KAZEFeatures.cpp.s
@@ -1139,8 +714,7 @@ src/kaze/KAZEFeatures.s: src/kaze/KAZEFeatures.cpp.s
 
 # target to generate assembly for a file
 src/kaze/KAZEFeatures.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/KAZEFeatures.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/KAZEFeatures.cpp.s
 .PHONY : src/kaze/KAZEFeatures.cpp.s
 
 src/kaze/fed.obj: src/kaze/fed.cpp.obj
@@ -1149,8 +723,7 @@ src/kaze/fed.obj: src/kaze/fed.cpp.obj
 
 # target to build an object file
 src/kaze/fed.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/fed.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.obj
 .PHONY : src/kaze/fed.cpp.obj
 
 src/kaze/fed.i: src/kaze/fed.cpp.i
@@ -1159,8 +732,7 @@ src/kaze/fed.i: src/kaze/fed.cpp.i
 
 # target to preprocess a source file
 src/kaze/fed.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/fed.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.i
 .PHONY : src/kaze/fed.cpp.i
 
 src/kaze/fed.s: src/kaze/fed.cpp.s
@@ -1169,8 +741,7 @@ src/kaze/fed.s: src/kaze/fed.cpp.s
 
 # target to generate assembly for a file
 src/kaze/fed.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/fed.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/fed.cpp.s
 .PHONY : src/kaze/fed.cpp.s
 
 src/kaze/nldiffusion_functions.obj: src/kaze/nldiffusion_functions.cpp.obj
@@ -1179,8 +750,7 @@ src/kaze/nldiffusion_functions.obj: src/kaze/nldiffusion_functions.cpp.obj
 
 # target to build an object file
 src/kaze/nldiffusion_functions.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/nldiffusion_functions.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.obj
 .PHONY : src/kaze/nldiffusion_functions.cpp.obj
 
 src/kaze/nldiffusion_functions.i: src/kaze/nldiffusion_functions.cpp.i
@@ -1189,8 +759,7 @@ src/kaze/nldiffusion_functions.i: src/kaze/nldiffusion_functions.cpp.i
 
 # target to preprocess a source file
 src/kaze/nldiffusion_functions.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/nldiffusion_functions.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.i
 .PHONY : src/kaze/nldiffusion_functions.cpp.i
 
 src/kaze/nldiffusion_functions.s: src/kaze/nldiffusion_functions.cpp.s
@@ -1199,8 +768,7 @@ src/kaze/nldiffusion_functions.s: src/kaze/nldiffusion_functions.cpp.s
 
 # target to generate assembly for a file
 src/kaze/nldiffusion_functions.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/kaze/nldiffusion_functions.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/kaze/nldiffusion_functions.cpp.s
 .PHONY : src/kaze/nldiffusion_functions.cpp.s
 
 src/keypoint.obj: src/keypoint.cpp.obj
@@ -1209,8 +777,7 @@ src/keypoint.obj: src/keypoint.cpp.obj
 
 # target to build an object file
 src/keypoint.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/keypoint.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.obj
 .PHONY : src/keypoint.cpp.obj
 
 src/keypoint.i: src/keypoint.cpp.i
@@ -1219,8 +786,7 @@ src/keypoint.i: src/keypoint.cpp.i
 
 # target to preprocess a source file
 src/keypoint.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/keypoint.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.i
 .PHONY : src/keypoint.cpp.i
 
 src/keypoint.s: src/keypoint.cpp.s
@@ -1229,8 +795,7 @@ src/keypoint.s: src/keypoint.cpp.s
 
 # target to generate assembly for a file
 src/keypoint.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/keypoint.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/keypoint.cpp.s
 .PHONY : src/keypoint.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -1239,8 +804,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/main.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -1249,8 +813,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/main.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -1259,8 +822,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/main.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/matchers.obj: src/matchers.cpp.obj
@@ -1269,8 +831,7 @@ src/matchers.obj: src/matchers.cpp.obj
 
 # target to build an object file
 src/matchers.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/matchers.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.obj
 .PHONY : src/matchers.cpp.obj
 
 src/matchers.i: src/matchers.cpp.i
@@ -1279,8 +840,7 @@ src/matchers.i: src/matchers.cpp.i
 
 # target to preprocess a source file
 src/matchers.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/matchers.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.i
 .PHONY : src/matchers.cpp.i
 
 src/matchers.s: src/matchers.cpp.s
@@ -1289,8 +849,7 @@ src/matchers.s: src/matchers.cpp.s
 
 # target to generate assembly for a file
 src/matchers.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/matchers.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.s
 .PHONY : src/matchers.cpp.s
 
 src/mser.obj: src/mser.cpp.obj
@@ -1299,8 +858,7 @@ src/mser.obj: src/mser.cpp.obj
 
 # target to build an object file
 src/mser.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/mser.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.obj
 .PHONY : src/mser.cpp.obj
 
 src/mser.i: src/mser.cpp.i
@@ -1309,8 +867,7 @@ src/mser.i: src/mser.cpp.i
 
 # target to preprocess a source file
 src/mser.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/mser.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.i
 .PHONY : src/mser.cpp.i
 
 src/mser.s: src/mser.cpp.s
@@ -1319,8 +876,7 @@ src/mser.s: src/mser.cpp.s
 
 # target to generate assembly for a file
 src/mser.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/mser.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.s
 .PHONY : src/mser.cpp.s
 
 src/orb.obj: src/orb.cpp.obj
@@ -1329,8 +885,7 @@ src/orb.obj: src/orb.cpp.obj
 
 # target to build an object file
 src/orb.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/orb.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.obj
 .PHONY : src/orb.cpp.obj
 
 src/orb.i: src/orb.cpp.i
@@ -1339,8 +894,7 @@ src/orb.i: src/orb.cpp.i
 
 # target to preprocess a source file
 src/orb.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/orb.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.i
 .PHONY : src/orb.cpp.i
 
 src/orb.s: src/orb.cpp.s
@@ -1349,360 +903,8 @@ src/orb.s: src/orb.cpp.s
 
 # target to generate assembly for a file
 src/orb.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d_object.dir\build.make modules/features2d/CMakeFiles/opencv_features2d_object.dir/src/orb.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.s
 .PHONY : src/orb.cpp.s
-
-test/ocl/test_brute_force_matcher.obj: test/ocl/test_brute_force_matcher.cpp.obj
-
-.PHONY : test/ocl/test_brute_force_matcher.obj
-
-# target to build an object file
-test/ocl/test_brute_force_matcher.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/ocl/test_brute_force_matcher.cpp.obj
-.PHONY : test/ocl/test_brute_force_matcher.cpp.obj
-
-test/ocl/test_brute_force_matcher.i: test/ocl/test_brute_force_matcher.cpp.i
-
-.PHONY : test/ocl/test_brute_force_matcher.i
-
-# target to preprocess a source file
-test/ocl/test_brute_force_matcher.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/ocl/test_brute_force_matcher.cpp.i
-.PHONY : test/ocl/test_brute_force_matcher.cpp.i
-
-test/ocl/test_brute_force_matcher.s: test/ocl/test_brute_force_matcher.cpp.s
-
-.PHONY : test/ocl/test_brute_force_matcher.s
-
-# target to generate assembly for a file
-test/ocl/test_brute_force_matcher.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/ocl/test_brute_force_matcher.cpp.s
-.PHONY : test/ocl/test_brute_force_matcher.cpp.s
-
-test/test_agast.obj: test/test_agast.cpp.obj
-
-.PHONY : test/test_agast.obj
-
-# target to build an object file
-test/test_agast.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_agast.cpp.obj
-.PHONY : test/test_agast.cpp.obj
-
-test/test_agast.i: test/test_agast.cpp.i
-
-.PHONY : test/test_agast.i
-
-# target to preprocess a source file
-test/test_agast.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_agast.cpp.i
-.PHONY : test/test_agast.cpp.i
-
-test/test_agast.s: test/test_agast.cpp.s
-
-.PHONY : test/test_agast.s
-
-# target to generate assembly for a file
-test/test_agast.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_agast.cpp.s
-.PHONY : test/test_agast.cpp.s
-
-test/test_brisk.obj: test/test_brisk.cpp.obj
-
-.PHONY : test/test_brisk.obj
-
-# target to build an object file
-test/test_brisk.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_brisk.cpp.obj
-.PHONY : test/test_brisk.cpp.obj
-
-test/test_brisk.i: test/test_brisk.cpp.i
-
-.PHONY : test/test_brisk.i
-
-# target to preprocess a source file
-test/test_brisk.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_brisk.cpp.i
-.PHONY : test/test_brisk.cpp.i
-
-test/test_brisk.s: test/test_brisk.cpp.s
-
-.PHONY : test/test_brisk.s
-
-# target to generate assembly for a file
-test/test_brisk.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_brisk.cpp.s
-.PHONY : test/test_brisk.cpp.s
-
-test/test_descriptors_regression.obj: test/test_descriptors_regression.cpp.obj
-
-.PHONY : test/test_descriptors_regression.obj
-
-# target to build an object file
-test/test_descriptors_regression.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_descriptors_regression.cpp.obj
-.PHONY : test/test_descriptors_regression.cpp.obj
-
-test/test_descriptors_regression.i: test/test_descriptors_regression.cpp.i
-
-.PHONY : test/test_descriptors_regression.i
-
-# target to preprocess a source file
-test/test_descriptors_regression.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_descriptors_regression.cpp.i
-.PHONY : test/test_descriptors_regression.cpp.i
-
-test/test_descriptors_regression.s: test/test_descriptors_regression.cpp.s
-
-.PHONY : test/test_descriptors_regression.s
-
-# target to generate assembly for a file
-test/test_descriptors_regression.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_descriptors_regression.cpp.s
-.PHONY : test/test_descriptors_regression.cpp.s
-
-test/test_detectors_regression.obj: test/test_detectors_regression.cpp.obj
-
-.PHONY : test/test_detectors_regression.obj
-
-# target to build an object file
-test/test_detectors_regression.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_detectors_regression.cpp.obj
-.PHONY : test/test_detectors_regression.cpp.obj
-
-test/test_detectors_regression.i: test/test_detectors_regression.cpp.i
-
-.PHONY : test/test_detectors_regression.i
-
-# target to preprocess a source file
-test/test_detectors_regression.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_detectors_regression.cpp.i
-.PHONY : test/test_detectors_regression.cpp.i
-
-test/test_detectors_regression.s: test/test_detectors_regression.cpp.s
-
-.PHONY : test/test_detectors_regression.s
-
-# target to generate assembly for a file
-test/test_detectors_regression.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_detectors_regression.cpp.s
-.PHONY : test/test_detectors_regression.cpp.s
-
-test/test_fast.obj: test/test_fast.cpp.obj
-
-.PHONY : test/test_fast.obj
-
-# target to build an object file
-test/test_fast.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_fast.cpp.obj
-.PHONY : test/test_fast.cpp.obj
-
-test/test_fast.i: test/test_fast.cpp.i
-
-.PHONY : test/test_fast.i
-
-# target to preprocess a source file
-test/test_fast.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_fast.cpp.i
-.PHONY : test/test_fast.cpp.i
-
-test/test_fast.s: test/test_fast.cpp.s
-
-.PHONY : test/test_fast.s
-
-# target to generate assembly for a file
-test/test_fast.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_fast.cpp.s
-.PHONY : test/test_fast.cpp.s
-
-test/test_keypoints.obj: test/test_keypoints.cpp.obj
-
-.PHONY : test/test_keypoints.obj
-
-# target to build an object file
-test/test_keypoints.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_keypoints.cpp.obj
-.PHONY : test/test_keypoints.cpp.obj
-
-test/test_keypoints.i: test/test_keypoints.cpp.i
-
-.PHONY : test/test_keypoints.i
-
-# target to preprocess a source file
-test/test_keypoints.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_keypoints.cpp.i
-.PHONY : test/test_keypoints.cpp.i
-
-test/test_keypoints.s: test/test_keypoints.cpp.s
-
-.PHONY : test/test_keypoints.s
-
-# target to generate assembly for a file
-test/test_keypoints.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_keypoints.cpp.s
-.PHONY : test/test_keypoints.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
-
-test/test_matchers_algorithmic.obj: test/test_matchers_algorithmic.cpp.obj
-
-.PHONY : test/test_matchers_algorithmic.obj
-
-# target to build an object file
-test/test_matchers_algorithmic.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_matchers_algorithmic.cpp.obj
-.PHONY : test/test_matchers_algorithmic.cpp.obj
-
-test/test_matchers_algorithmic.i: test/test_matchers_algorithmic.cpp.i
-
-.PHONY : test/test_matchers_algorithmic.i
-
-# target to preprocess a source file
-test/test_matchers_algorithmic.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_matchers_algorithmic.cpp.i
-.PHONY : test/test_matchers_algorithmic.cpp.i
-
-test/test_matchers_algorithmic.s: test/test_matchers_algorithmic.cpp.s
-
-.PHONY : test/test_matchers_algorithmic.s
-
-# target to generate assembly for a file
-test/test_matchers_algorithmic.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_matchers_algorithmic.cpp.s
-.PHONY : test/test_matchers_algorithmic.cpp.s
-
-test/test_mser.obj: test/test_mser.cpp.obj
-
-.PHONY : test/test_mser.obj
-
-# target to build an object file
-test/test_mser.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_mser.cpp.obj
-.PHONY : test/test_mser.cpp.obj
-
-test/test_mser.i: test/test_mser.cpp.i
-
-.PHONY : test/test_mser.i
-
-# target to preprocess a source file
-test/test_mser.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_mser.cpp.i
-.PHONY : test/test_mser.cpp.i
-
-test/test_mser.s: test/test_mser.cpp.s
-
-.PHONY : test/test_mser.s
-
-# target to generate assembly for a file
-test/test_mser.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_mser.cpp.s
-.PHONY : test/test_mser.cpp.s
-
-test/test_nearestneighbors.obj: test/test_nearestneighbors.cpp.obj
-
-.PHONY : test/test_nearestneighbors.obj
-
-# target to build an object file
-test/test_nearestneighbors.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_nearestneighbors.cpp.obj
-.PHONY : test/test_nearestneighbors.cpp.obj
-
-test/test_nearestneighbors.i: test/test_nearestneighbors.cpp.i
-
-.PHONY : test/test_nearestneighbors.i
-
-# target to preprocess a source file
-test/test_nearestneighbors.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_nearestneighbors.cpp.i
-.PHONY : test/test_nearestneighbors.cpp.i
-
-test/test_nearestneighbors.s: test/test_nearestneighbors.cpp.s
-
-.PHONY : test/test_nearestneighbors.s
-
-# target to generate assembly for a file
-test/test_nearestneighbors.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_nearestneighbors.cpp.s
-.PHONY : test/test_nearestneighbors.cpp.s
-
-test/test_orb.obj: test/test_orb.cpp.obj
-
-.PHONY : test/test_orb.obj
-
-# target to build an object file
-test/test_orb.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_orb.cpp.obj
-.PHONY : test/test_orb.cpp.obj
-
-test/test_orb.i: test/test_orb.cpp.i
-
-.PHONY : test/test_orb.i
-
-# target to preprocess a source file
-test/test_orb.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_orb.cpp.i
-.PHONY : test/test_orb.cpp.i
-
-test/test_orb.s: test/test_orb.cpp.s
-
-.PHONY : test/test_orb.s
-
-# target to generate assembly for a file
-test/test_orb.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_orb.cpp.s
-.PHONY : test/test_orb.cpp.s
-
-test/test_rotation_and_scale_invariance.obj: test/test_rotation_and_scale_invariance.cpp.obj
-
-.PHONY : test/test_rotation_and_scale_invariance.obj
-
-# target to build an object file
-test/test_rotation_and_scale_invariance.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_rotation_and_scale_invariance.cpp.obj
-.PHONY : test/test_rotation_and_scale_invariance.cpp.obj
-
-test/test_rotation_and_scale_invariance.i: test/test_rotation_and_scale_invariance.cpp.i
-
-.PHONY : test/test_rotation_and_scale_invariance.i
-
-# target to preprocess a source file
-test/test_rotation_and_scale_invariance.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_rotation_and_scale_invariance.cpp.i
-.PHONY : test/test_rotation_and_scale_invariance.cpp.i
-
-test/test_rotation_and_scale_invariance.s: test/test_rotation_and_scale_invariance.cpp.s
-
-.PHONY : test/test_rotation_and_scale_invariance.s
-
-# target to generate assembly for a file
-test/test_rotation_and_scale_invariance.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\features2d\CMakeFiles\opencv_test_features2d.dir\build.make modules/features2d/CMakeFiles/opencv_test_features2d.dir/test/test_rotation_and_scale_invariance.cpp.s
-.PHONY : test/test_rotation_and_scale_invariance.cpp.s
 
 # Help Target
 help:
@@ -1711,22 +913,15 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... opencv_features2d
-	@echo ... opencv_features2d_object
-	@echo ... pch_Generate_opencv_test_features2d
-	@echo ... package_source
 	@echo ... opencv_features2d_pch_dephelp
+	@echo ... package_source
 	@echo ... pch_Generate_opencv_features2d
-	@echo ... opencv_perf_features2d
-	@echo ... opencv_test_features2d_pch_dephelp
-	@echo ... opencv_test_features2d
-	@echo ... opencv_perf_features2d_pch_dephelp
-	@echo ... install
-	@echo ... pch_Generate_opencv_perf_features2d
 	@echo ... package
+	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... edit_cache
-	@echo ... rebuild_cache
 	@echo ... list_install_components
+	@echo ... install
 	@echo ... install/local
 	@echo ... install/strip
 	@echo ... opencl_kernels_features2d.obj
@@ -1735,36 +930,6 @@ help:
 	@echo ... opencv_features2d_pch_dephelp.obj
 	@echo ... opencv_features2d_pch_dephelp.i
 	@echo ... opencv_features2d_pch_dephelp.s
-	@echo ... opencv_perf_features2d_pch_dephelp.obj
-	@echo ... opencv_perf_features2d_pch_dephelp.i
-	@echo ... opencv_perf_features2d_pch_dephelp.s
-	@echo ... opencv_test_features2d_pch_dephelp.obj
-	@echo ... opencv_test_features2d_pch_dephelp.i
-	@echo ... opencv_test_features2d_pch_dephelp.s
-	@echo ... perf/opencl/perf_brute_force_matcher.obj
-	@echo ... perf/opencl/perf_brute_force_matcher.i
-	@echo ... perf/opencl/perf_brute_force_matcher.s
-	@echo ... perf/opencl/perf_fast.obj
-	@echo ... perf/opencl/perf_fast.i
-	@echo ... perf/opencl/perf_fast.s
-	@echo ... perf/opencl/perf_orb.obj
-	@echo ... perf/opencl/perf_orb.i
-	@echo ... perf/opencl/perf_orb.s
-	@echo ... perf/perf_agast.obj
-	@echo ... perf/perf_agast.i
-	@echo ... perf/perf_agast.s
-	@echo ... perf/perf_batchDistance.obj
-	@echo ... perf/perf_batchDistance.i
-	@echo ... perf/perf_batchDistance.s
-	@echo ... perf/perf_fast.obj
-	@echo ... perf/perf_fast.i
-	@echo ... perf/perf_fast.s
-	@echo ... perf/perf_main.obj
-	@echo ... perf/perf_main.i
-	@echo ... perf/perf_main.s
-	@echo ... perf/perf_orb.obj
-	@echo ... perf/perf_orb.i
-	@echo ... perf/perf_orb.s
 	@echo ... src/agast.obj
 	@echo ... src/agast.i
 	@echo ... src/agast.s
@@ -1834,45 +999,6 @@ help:
 	@echo ... src/orb.obj
 	@echo ... src/orb.i
 	@echo ... src/orb.s
-	@echo ... test/ocl/test_brute_force_matcher.obj
-	@echo ... test/ocl/test_brute_force_matcher.i
-	@echo ... test/ocl/test_brute_force_matcher.s
-	@echo ... test/test_agast.obj
-	@echo ... test/test_agast.i
-	@echo ... test/test_agast.s
-	@echo ... test/test_brisk.obj
-	@echo ... test/test_brisk.i
-	@echo ... test/test_brisk.s
-	@echo ... test/test_descriptors_regression.obj
-	@echo ... test/test_descriptors_regression.i
-	@echo ... test/test_descriptors_regression.s
-	@echo ... test/test_detectors_regression.obj
-	@echo ... test/test_detectors_regression.i
-	@echo ... test/test_detectors_regression.s
-	@echo ... test/test_fast.obj
-	@echo ... test/test_fast.i
-	@echo ... test/test_fast.s
-	@echo ... test/test_keypoints.obj
-	@echo ... test/test_keypoints.i
-	@echo ... test/test_keypoints.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
-	@echo ... test/test_matchers_algorithmic.obj
-	@echo ... test/test_matchers_algorithmic.i
-	@echo ... test/test_matchers_algorithmic.s
-	@echo ... test/test_mser.obj
-	@echo ... test/test_mser.i
-	@echo ... test/test_mser.s
-	@echo ... test/test_nearestneighbors.obj
-	@echo ... test/test_nearestneighbors.i
-	@echo ... test/test_nearestneighbors.s
-	@echo ... test/test_orb.obj
-	@echo ... test/test_orb.i
-	@echo ... test/test_orb.s
-	@echo ... test/test_rotation_and_scale_invariance.obj
-	@echo ... test/test_rotation_and_scale_invariance.i
-	@echo ... test/test_rotation_and_scale_invariance.s
 .PHONY : help
 
 
@@ -1884,6 +1010,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

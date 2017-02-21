@@ -47,13 +47,24 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rartin\Desktop\opencv\sources
+CMAKE_SOURCE_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\opencv\sources
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rartin\Desktop\build
+CMAKE_BINARY_DIR = C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -69,7 +80,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Desktop/build/CPackSourceConfig.cmake
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -77,26 +88,16 @@ package_source/fast: package_source
 
 .PHONY : package_source/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"libs\""
-.PHONY : list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /d C:\Users\rartin\Desktop\build && "C:\Program Files (x86)\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target test
 test:
@@ -109,16 +110,15 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"libs\""
+.PHONY : list_install_components
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : rebuild_cache/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -156,14 +156,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles C:\Users\rartin\Desktop\build\modules\superres\CMakeFiles\progress.marks
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Desktop\build\CMakeFiles 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\modules\superres\CMakeFiles\progress.marks
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/clean
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/clean
 .PHONY : clean
 
 # The main clean target
@@ -173,22 +173,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/preinstall
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 modules/superres/CMakeFiles/opencv_superres.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_superres.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_superres.dir/rule
 .PHONY : modules/superres/CMakeFiles/opencv_superres.dir/rule
 
 # Convenience name for target.
@@ -198,42 +198,12 @@ opencv_superres: modules/superres/CMakeFiles/opencv_superres.dir/rule
 
 # fast build rule for target.
 opencv_superres/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/build
 .PHONY : opencv_superres/fast
 
 # Convenience name for target.
-modules/superres/CMakeFiles/opencv_superres_object.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_superres_object.dir/rule
-.PHONY : modules/superres/CMakeFiles/opencv_superres_object.dir/rule
-
-# Convenience name for target.
-opencv_superres_object: modules/superres/CMakeFiles/opencv_superres_object.dir/rule
-
-.PHONY : opencv_superres_object
-
-# fast build rule for target.
-opencv_superres_object/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/build
-.PHONY : opencv_superres_object/fast
-
-# Convenience name for target.
-modules/superres/CMakeFiles/pch_Generate_opencv_test_superres.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/pch_Generate_opencv_test_superres.dir/rule
-.PHONY : modules/superres/CMakeFiles/pch_Generate_opencv_test_superres.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_test_superres: modules/superres/CMakeFiles/pch_Generate_opencv_test_superres.dir/rule
-
-.PHONY : pch_Generate_opencv_test_superres
-
-# fast build rule for target.
-pch_Generate_opencv_test_superres/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\pch_Generate_opencv_test_superres.dir\build.make modules/superres/CMakeFiles/pch_Generate_opencv_test_superres.dir/build
-.PHONY : pch_Generate_opencv_test_superres/fast
-
-# Convenience name for target.
 modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/rule
 .PHONY : modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +213,12 @@ opencv_superres_pch_dephelp: modules/superres/CMakeFiles/opencv_superres_pch_dep
 
 # fast build rule for target.
 opencv_superres_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/build
 .PHONY : opencv_superres_pch_dephelp/fast
 
 # Convenience name for target.
 modules/superres/CMakeFiles/pch_Generate_opencv_superres.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/pch_Generate_opencv_superres.dir/rule
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/pch_Generate_opencv_superres.dir/rule
 .PHONY : modules/superres/CMakeFiles/pch_Generate_opencv_superres.dir/rule
 
 # Convenience name for target.
@@ -258,83 +228,8 @@ pch_Generate_opencv_superres: modules/superres/CMakeFiles/pch_Generate_opencv_su
 
 # fast build rule for target.
 pch_Generate_opencv_superres/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\pch_Generate_opencv_superres.dir\build.make modules/superres/CMakeFiles/pch_Generate_opencv_superres.dir/build
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\pch_Generate_opencv_superres.dir\build.make modules/superres/CMakeFiles/pch_Generate_opencv_superres.dir/build
 .PHONY : pch_Generate_opencv_superres/fast
-
-# Convenience name for target.
-modules/superres/CMakeFiles/opencv_perf_superres.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_perf_superres.dir/rule
-.PHONY : modules/superres/CMakeFiles/opencv_perf_superres.dir/rule
-
-# Convenience name for target.
-opencv_perf_superres: modules/superres/CMakeFiles/opencv_perf_superres.dir/rule
-
-.PHONY : opencv_perf_superres
-
-# fast build rule for target.
-opencv_perf_superres/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres.dir/build
-.PHONY : opencv_perf_superres/fast
-
-# Convenience name for target.
-modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/rule
-.PHONY : modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_test_superres_pch_dephelp: modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/rule
-
-.PHONY : opencv_test_superres_pch_dephelp
-
-# fast build rule for target.
-opencv_test_superres_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/build
-.PHONY : opencv_test_superres_pch_dephelp/fast
-
-# Convenience name for target.
-modules/superres/CMakeFiles/opencv_test_superres.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_test_superres.dir/rule
-.PHONY : modules/superres/CMakeFiles/opencv_test_superres.dir/rule
-
-# Convenience name for target.
-opencv_test_superres: modules/superres/CMakeFiles/opencv_test_superres.dir/rule
-
-.PHONY : opencv_test_superres
-
-# fast build rule for target.
-opencv_test_superres/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres.dir\build.make modules/superres/CMakeFiles/opencv_test_superres.dir/build
-.PHONY : opencv_test_superres/fast
-
-# Convenience name for target.
-modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/rule
-.PHONY : modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/rule
-
-# Convenience name for target.
-opencv_perf_superres_pch_dephelp: modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/rule
-
-.PHONY : opencv_perf_superres_pch_dephelp
-
-# fast build rule for target.
-opencv_perf_superres_pch_dephelp/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/build
-.PHONY : opencv_perf_superres_pch_dephelp/fast
-
-# Convenience name for target.
-modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/rule:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f CMakeFiles\Makefile2 modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/rule
-.PHONY : modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/rule
-
-# Convenience name for target.
-pch_Generate_opencv_perf_superres: modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/rule
-
-.PHONY : pch_Generate_opencv_perf_superres
-
-# fast build rule for target.
-pch_Generate_opencv_perf_superres/fast:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\pch_Generate_opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/pch_Generate_opencv_perf_superres.dir/build
-.PHONY : pch_Generate_opencv_perf_superres/fast
 
 opencl_kernels_superres.obj: opencl_kernels_superres.cpp.obj
 
@@ -342,8 +237,7 @@ opencl_kernels_superres.obj: opencl_kernels_superres.cpp.obj
 
 # target to build an object file
 opencl_kernels_superres.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/opencl_kernels_superres.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/opencl_kernels_superres.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/opencl_kernels_superres.cpp.obj
 .PHONY : opencl_kernels_superres.cpp.obj
 
 opencl_kernels_superres.i: opencl_kernels_superres.cpp.i
@@ -352,8 +246,7 @@ opencl_kernels_superres.i: opencl_kernels_superres.cpp.i
 
 # target to preprocess a source file
 opencl_kernels_superres.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/opencl_kernels_superres.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/opencl_kernels_superres.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/opencl_kernels_superres.cpp.i
 .PHONY : opencl_kernels_superres.cpp.i
 
 opencl_kernels_superres.s: opencl_kernels_superres.cpp.s
@@ -362,36 +255,8 @@ opencl_kernels_superres.s: opencl_kernels_superres.cpp.s
 
 # target to generate assembly for a file
 opencl_kernels_superres.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/opencl_kernels_superres.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/opencl_kernels_superres.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/opencl_kernels_superres.cpp.s
 .PHONY : opencl_kernels_superres.cpp.s
-
-opencv_perf_superres_pch_dephelp.obj: opencv_perf_superres_pch_dephelp.cxx.obj
-
-.PHONY : opencv_perf_superres_pch_dephelp.obj
-
-# target to build an object file
-opencv_perf_superres_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/opencv_perf_superres_pch_dephelp.cxx.obj
-.PHONY : opencv_perf_superres_pch_dephelp.cxx.obj
-
-opencv_perf_superres_pch_dephelp.i: opencv_perf_superres_pch_dephelp.cxx.i
-
-.PHONY : opencv_perf_superres_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_perf_superres_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/opencv_perf_superres_pch_dephelp.cxx.i
-.PHONY : opencv_perf_superres_pch_dephelp.cxx.i
-
-opencv_perf_superres_pch_dephelp.s: opencv_perf_superres_pch_dephelp.cxx.s
-
-.PHONY : opencv_perf_superres_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_perf_superres_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres_pch_dephelp.dir/opencv_perf_superres_pch_dephelp.cxx.s
-.PHONY : opencv_perf_superres_pch_dephelp.cxx.s
 
 opencv_superres_pch_dephelp.obj: opencv_superres_pch_dephelp.cxx.obj
 
@@ -399,7 +264,7 @@ opencv_superres_pch_dephelp.obj: opencv_superres_pch_dephelp.cxx.obj
 
 # target to build an object file
 opencv_superres_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/opencv_superres_pch_dephelp.cxx.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/opencv_superres_pch_dephelp.cxx.obj
 .PHONY : opencv_superres_pch_dephelp.cxx.obj
 
 opencv_superres_pch_dephelp.i: opencv_superres_pch_dephelp.cxx.i
@@ -408,7 +273,7 @@ opencv_superres_pch_dephelp.i: opencv_superres_pch_dephelp.cxx.i
 
 # target to preprocess a source file
 opencv_superres_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/opencv_superres_pch_dephelp.cxx.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/opencv_superres_pch_dephelp.cxx.i
 .PHONY : opencv_superres_pch_dephelp.cxx.i
 
 opencv_superres_pch_dephelp.s: opencv_superres_pch_dephelp.cxx.s
@@ -417,89 +282,8 @@ opencv_superres_pch_dephelp.s: opencv_superres_pch_dephelp.cxx.s
 
 # target to generate assembly for a file
 opencv_superres_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/opencv_superres_pch_dephelp.cxx.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_superres_pch_dephelp.dir/opencv_superres_pch_dephelp.cxx.s
 .PHONY : opencv_superres_pch_dephelp.cxx.s
-
-opencv_test_superres_pch_dephelp.obj: opencv_test_superres_pch_dephelp.cxx.obj
-
-.PHONY : opencv_test_superres_pch_dephelp.obj
-
-# target to build an object file
-opencv_test_superres_pch_dephelp.cxx.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/opencv_test_superres_pch_dephelp.cxx.obj
-.PHONY : opencv_test_superres_pch_dephelp.cxx.obj
-
-opencv_test_superres_pch_dephelp.i: opencv_test_superres_pch_dephelp.cxx.i
-
-.PHONY : opencv_test_superres_pch_dephelp.i
-
-# target to preprocess a source file
-opencv_test_superres_pch_dephelp.cxx.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/opencv_test_superres_pch_dephelp.cxx.i
-.PHONY : opencv_test_superres_pch_dephelp.cxx.i
-
-opencv_test_superres_pch_dephelp.s: opencv_test_superres_pch_dephelp.cxx.s
-
-.PHONY : opencv_test_superres_pch_dephelp.s
-
-# target to generate assembly for a file
-opencv_test_superres_pch_dephelp.cxx.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres_pch_dephelp.dir\build.make modules/superres/CMakeFiles/opencv_test_superres_pch_dephelp.dir/opencv_test_superres_pch_dephelp.cxx.s
-.PHONY : opencv_test_superres_pch_dephelp.cxx.s
-
-perf/perf_main.obj: perf/perf_main.cpp.obj
-
-.PHONY : perf/perf_main.obj
-
-# target to build an object file
-perf/perf_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_main.cpp.obj
-.PHONY : perf/perf_main.cpp.obj
-
-perf/perf_main.i: perf/perf_main.cpp.i
-
-.PHONY : perf/perf_main.i
-
-# target to preprocess a source file
-perf/perf_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_main.cpp.i
-.PHONY : perf/perf_main.cpp.i
-
-perf/perf_main.s: perf/perf_main.cpp.s
-
-.PHONY : perf/perf_main.s
-
-# target to generate assembly for a file
-perf/perf_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_main.cpp.s
-.PHONY : perf/perf_main.cpp.s
-
-perf/perf_superres.obj: perf/perf_superres.cpp.obj
-
-.PHONY : perf/perf_superres.obj
-
-# target to build an object file
-perf/perf_superres.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_superres.cpp.obj
-.PHONY : perf/perf_superres.cpp.obj
-
-perf/perf_superres.i: perf/perf_superres.cpp.i
-
-.PHONY : perf/perf_superres.i
-
-# target to preprocess a source file
-perf/perf_superres.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_superres.cpp.i
-.PHONY : perf/perf_superres.cpp.i
-
-perf/perf_superres.s: perf/perf_superres.cpp.s
-
-.PHONY : perf/perf_superres.s
-
-# target to generate assembly for a file
-perf/perf_superres.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_perf_superres.dir\build.make modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_superres.cpp.s
-.PHONY : perf/perf_superres.cpp.s
 
 src/btv_l1.obj: src/btv_l1.cpp.obj
 
@@ -507,8 +291,7 @@ src/btv_l1.obj: src/btv_l1.cpp.obj
 
 # target to build an object file
 src/btv_l1.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/btv_l1.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1.cpp.obj
 .PHONY : src/btv_l1.cpp.obj
 
 src/btv_l1.i: src/btv_l1.cpp.i
@@ -517,8 +300,7 @@ src/btv_l1.i: src/btv_l1.cpp.i
 
 # target to preprocess a source file
 src/btv_l1.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/btv_l1.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1.cpp.i
 .PHONY : src/btv_l1.cpp.i
 
 src/btv_l1.s: src/btv_l1.cpp.s
@@ -527,8 +309,7 @@ src/btv_l1.s: src/btv_l1.cpp.s
 
 # target to generate assembly for a file
 src/btv_l1.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/btv_l1.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1.cpp.s
 .PHONY : src/btv_l1.cpp.s
 
 src/btv_l1_cuda.obj: src/btv_l1_cuda.cpp.obj
@@ -537,8 +318,7 @@ src/btv_l1_cuda.obj: src/btv_l1_cuda.cpp.obj
 
 # target to build an object file
 src/btv_l1_cuda.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1_cuda.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/btv_l1_cuda.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1_cuda.cpp.obj
 .PHONY : src/btv_l1_cuda.cpp.obj
 
 src/btv_l1_cuda.i: src/btv_l1_cuda.cpp.i
@@ -547,8 +327,7 @@ src/btv_l1_cuda.i: src/btv_l1_cuda.cpp.i
 
 # target to preprocess a source file
 src/btv_l1_cuda.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1_cuda.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/btv_l1_cuda.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1_cuda.cpp.i
 .PHONY : src/btv_l1_cuda.cpp.i
 
 src/btv_l1_cuda.s: src/btv_l1_cuda.cpp.s
@@ -557,8 +336,7 @@ src/btv_l1_cuda.s: src/btv_l1_cuda.cpp.s
 
 # target to generate assembly for a file
 src/btv_l1_cuda.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1_cuda.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/btv_l1_cuda.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1_cuda.cpp.s
 .PHONY : src/btv_l1_cuda.cpp.s
 
 src/frame_source.obj: src/frame_source.cpp.obj
@@ -567,8 +345,7 @@ src/frame_source.obj: src/frame_source.cpp.obj
 
 # target to build an object file
 src/frame_source.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/frame_source.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/frame_source.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/frame_source.cpp.obj
 .PHONY : src/frame_source.cpp.obj
 
 src/frame_source.i: src/frame_source.cpp.i
@@ -577,8 +354,7 @@ src/frame_source.i: src/frame_source.cpp.i
 
 # target to preprocess a source file
 src/frame_source.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/frame_source.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/frame_source.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/frame_source.cpp.i
 .PHONY : src/frame_source.cpp.i
 
 src/frame_source.s: src/frame_source.cpp.s
@@ -587,8 +363,7 @@ src/frame_source.s: src/frame_source.cpp.s
 
 # target to generate assembly for a file
 src/frame_source.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/frame_source.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/frame_source.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/frame_source.cpp.s
 .PHONY : src/frame_source.cpp.s
 
 src/input_array_utility.obj: src/input_array_utility.cpp.obj
@@ -597,8 +372,7 @@ src/input_array_utility.obj: src/input_array_utility.cpp.obj
 
 # target to build an object file
 src/input_array_utility.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/input_array_utility.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/input_array_utility.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/input_array_utility.cpp.obj
 .PHONY : src/input_array_utility.cpp.obj
 
 src/input_array_utility.i: src/input_array_utility.cpp.i
@@ -607,8 +381,7 @@ src/input_array_utility.i: src/input_array_utility.cpp.i
 
 # target to preprocess a source file
 src/input_array_utility.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/input_array_utility.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/input_array_utility.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/input_array_utility.cpp.i
 .PHONY : src/input_array_utility.cpp.i
 
 src/input_array_utility.s: src/input_array_utility.cpp.s
@@ -617,8 +390,7 @@ src/input_array_utility.s: src/input_array_utility.cpp.s
 
 # target to generate assembly for a file
 src/input_array_utility.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/input_array_utility.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/input_array_utility.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/input_array_utility.cpp.s
 .PHONY : src/input_array_utility.cpp.s
 
 src/optical_flow.obj: src/optical_flow.cpp.obj
@@ -627,8 +399,7 @@ src/optical_flow.obj: src/optical_flow.cpp.obj
 
 # target to build an object file
 src/optical_flow.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/optical_flow.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/optical_flow.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/optical_flow.cpp.obj
 .PHONY : src/optical_flow.cpp.obj
 
 src/optical_flow.i: src/optical_flow.cpp.i
@@ -637,8 +408,7 @@ src/optical_flow.i: src/optical_flow.cpp.i
 
 # target to preprocess a source file
 src/optical_flow.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/optical_flow.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/optical_flow.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/optical_flow.cpp.i
 .PHONY : src/optical_flow.cpp.i
 
 src/optical_flow.s: src/optical_flow.cpp.s
@@ -647,8 +417,7 @@ src/optical_flow.s: src/optical_flow.cpp.s
 
 # target to generate assembly for a file
 src/optical_flow.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/optical_flow.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/optical_flow.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/optical_flow.cpp.s
 .PHONY : src/optical_flow.cpp.s
 
 src/super_resolution.obj: src/super_resolution.cpp.obj
@@ -657,8 +426,7 @@ src/super_resolution.obj: src/super_resolution.cpp.obj
 
 # target to build an object file
 src/super_resolution.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/super_resolution.cpp.obj
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/super_resolution.cpp.obj
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/super_resolution.cpp.obj
 .PHONY : src/super_resolution.cpp.obj
 
 src/super_resolution.i: src/super_resolution.cpp.i
@@ -667,8 +435,7 @@ src/super_resolution.i: src/super_resolution.cpp.i
 
 # target to preprocess a source file
 src/super_resolution.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/super_resolution.cpp.i
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/super_resolution.cpp.i
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/super_resolution.cpp.i
 .PHONY : src/super_resolution.cpp.i
 
 src/super_resolution.s: src/super_resolution.cpp.s
@@ -677,63 +444,8 @@ src/super_resolution.s: src/super_resolution.cpp.s
 
 # target to generate assembly for a file
 src/super_resolution.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/super_resolution.cpp.s
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres_object.dir\build.make modules/superres/CMakeFiles/opencv_superres_object.dir/src/super_resolution.cpp.s
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_superres.dir\build.make modules/superres/CMakeFiles/opencv_superres.dir/src/super_resolution.cpp.s
 .PHONY : src/super_resolution.cpp.s
-
-test/test_main.obj: test/test_main.cpp.obj
-
-.PHONY : test/test_main.obj
-
-# target to build an object file
-test/test_main.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres.dir\build.make modules/superres/CMakeFiles/opencv_test_superres.dir/test/test_main.cpp.obj
-.PHONY : test/test_main.cpp.obj
-
-test/test_main.i: test/test_main.cpp.i
-
-.PHONY : test/test_main.i
-
-# target to preprocess a source file
-test/test_main.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres.dir\build.make modules/superres/CMakeFiles/opencv_test_superres.dir/test/test_main.cpp.i
-.PHONY : test/test_main.cpp.i
-
-test/test_main.s: test/test_main.cpp.s
-
-.PHONY : test/test_main.s
-
-# target to generate assembly for a file
-test/test_main.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres.dir\build.make modules/superres/CMakeFiles/opencv_test_superres.dir/test/test_main.cpp.s
-.PHONY : test/test_main.cpp.s
-
-test/test_superres.obj: test/test_superres.cpp.obj
-
-.PHONY : test/test_superres.obj
-
-# target to build an object file
-test/test_superres.cpp.obj:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres.dir\build.make modules/superres/CMakeFiles/opencv_test_superres.dir/test/test_superres.cpp.obj
-.PHONY : test/test_superres.cpp.obj
-
-test/test_superres.i: test/test_superres.cpp.i
-
-.PHONY : test/test_superres.i
-
-# target to preprocess a source file
-test/test_superres.cpp.i:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres.dir\build.make modules/superres/CMakeFiles/opencv_test_superres.dir/test/test_superres.cpp.i
-.PHONY : test/test_superres.cpp.i
-
-test/test_superres.s: test/test_superres.cpp.s
-
-.PHONY : test/test_superres.s
-
-# target to generate assembly for a file
-test/test_superres.cpp.s:
-	cd /d C:\Users\rartin\Desktop\build && $(MAKE) -f modules\superres\CMakeFiles\opencv_test_superres.dir\build.make modules/superres/CMakeFiles/opencv_test_superres.dir/test/test_superres.cpp.s
-.PHONY : test/test_superres.cpp.s
 
 # Help Target
 help:
@@ -742,42 +454,23 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... opencv_superres
-	@echo ... opencv_superres_object
-	@echo ... pch_Generate_opencv_test_superres
-	@echo ... opencv_superres_pch_dephelp
-	@echo ... edit_cache
-	@echo ... pch_Generate_opencv_superres
-	@echo ... opencv_perf_superres
-	@echo ... opencv_test_superres_pch_dephelp
-	@echo ... package_source
-	@echo ... opencv_test_superres
-	@echo ... opencv_perf_superres_pch_dephelp
-	@echo ... list_install_components
-	@echo ... pch_Generate_opencv_perf_superres
 	@echo ... package
-	@echo ... test
+	@echo ... opencv_superres_pch_dephelp
+	@echo ... pch_Generate_opencv_superres
+	@echo ... edit_cache
+	@echo ... package_source
 	@echo ... rebuild_cache
+	@echo ... test
+	@echo ... list_install_components
 	@echo ... install
 	@echo ... install/local
 	@echo ... install/strip
 	@echo ... opencl_kernels_superres.obj
 	@echo ... opencl_kernels_superres.i
 	@echo ... opencl_kernels_superres.s
-	@echo ... opencv_perf_superres_pch_dephelp.obj
-	@echo ... opencv_perf_superres_pch_dephelp.i
-	@echo ... opencv_perf_superres_pch_dephelp.s
 	@echo ... opencv_superres_pch_dephelp.obj
 	@echo ... opencv_superres_pch_dephelp.i
 	@echo ... opencv_superres_pch_dephelp.s
-	@echo ... opencv_test_superres_pch_dephelp.obj
-	@echo ... opencv_test_superres_pch_dephelp.i
-	@echo ... opencv_test_superres_pch_dephelp.s
-	@echo ... perf/perf_main.obj
-	@echo ... perf/perf_main.i
-	@echo ... perf/perf_main.s
-	@echo ... perf/perf_superres.obj
-	@echo ... perf/perf_superres.i
-	@echo ... perf/perf_superres.s
 	@echo ... src/btv_l1.obj
 	@echo ... src/btv_l1.i
 	@echo ... src/btv_l1.s
@@ -796,12 +489,6 @@ help:
 	@echo ... src/super_resolution.obj
 	@echo ... src/super_resolution.i
 	@echo ... src/super_resolution.s
-	@echo ... test/test_main.obj
-	@echo ... test/test_main.i
-	@echo ... test/test_main.s
-	@echo ... test/test_superres.obj
-	@echo ... test/test_superres.i
-	@echo ... test/test_superres.s
 .PHONY : help
 
 
@@ -813,6 +500,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rartin\Desktop\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\rartin\Downloads\opencv-3.2.0-vc14\build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

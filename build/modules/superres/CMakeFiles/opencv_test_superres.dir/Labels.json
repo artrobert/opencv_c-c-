@@ -4,17 +4,17 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/superres/test/test_main.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/test/test_main.cpp",
 			"labels" : [ "Main", "opencv_superres", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/superres/test/test_superres.cpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/test/test_superres.cpp",
 			"labels" : [ "Main", "opencv_superres", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Desktop/opencv/sources/modules/superres/test/test_precomp.hpp",
+			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/test/test_precomp.hpp",
 			"labels" : [ "Main", "opencv_superres", "AccuracyTest" ]
 		}
 	],
