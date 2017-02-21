@@ -9,7 +9,6 @@
 class featureDetection {
 
 public:
-    static void detectFeatureORB();
 
     static void firstTry();
 };

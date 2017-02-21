@@ -14,11 +14,11 @@ void getCornerList();
 
 int main(int argc, char **argv) {
 
-//    Mat im,imGrey;
-//
-//    im = imagePreparation::readImage("../chess.jpg"); //read the image
-//    namedWindow("original", CV_WINDOW_AUTOSIZE);
-//    imshow("original", im);
+    Mat im,imGrey;
+
+    im = imagePreparation::readImage("../chess.jpg"); //read the image
+    namedWindow("original", CV_WINDOW_AUTOSIZE);
+    imshow("original", im);
 
 //    imGrey = imagePreparation::convertImageGreyscale(im); //convert it to greyscale
 //    im = imagePreparation::blurImage(imGrey); //blur the image
@@ -26,7 +26,6 @@ int main(int argc, char **argv) {
 //    im = imagePreparation::dilationImage(im,2,2); //apply dilation , 2,2 are good parameters
 //    warpImage();
 //    getCornerList();
-//    featureDetection::detectFeatureORB();
     featureDetection::firstTry();
     cv::waitKey(0); // Wait for a keystroke in the window
     return 0;
