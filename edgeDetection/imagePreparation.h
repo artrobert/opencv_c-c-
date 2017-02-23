@@ -18,13 +18,13 @@ public:
 
     static std::vector<cv::Point2f> getCornerPoints(cv::Mat &src);
 
-    static cv::Mat CannyThreshold(cv::Mat &src);
-
     static cv::Mat dilationImage(cv::Mat &src, int dilation_elem, int dilation_size);
 
     static cv::Mat warpImage(cv::Mat &image, std::vector<cv::Point2f> &points);
 
     static cv::Mat readImage(cv::String image_name);
+
+    static cv::Mat CannyThreshold(cv::Mat &src, int lowThreshold, int ratio);
 };
 
 

@@ -199,13 +199,19 @@ cv::Mat imagePreparation::warpImage(cv::Mat &image, vector<Point2f> &points) {
  * @param src The image we want to apply CANNY
  * @return Canny image
  */
-cv::Mat imagePreparation::CannyThreshold(cv::Mat &src) {
+cv::Mat imagePreparation::CannyThreshold(cv::Mat &src,int lowThreshold,int ratio) {
     Mat resultDst;
-    int lowThreshold = 80; //this is hardcoded because give the best result , TODO: maybe change it as a parameter
-    int ratio = 3;
+    int lt=lowThreshold;
+    int rat=ratio;
+    if(lowThreshold<0){
+        lt= 80; //this is hardcoded because give the best result , TODO: maybe change it as a parameter
+    }
+    if(ratio<0){
+        rat=2;
+    }
     int kernel_size = 3;
     /// Reduce noise with a kernel 3x3
     /// Canny detector
-    Canny(src, resultDst, lowThreshold, lowThreshold * ratio, kernel_size);
+    Canny(src, resultDst, lt, lt * rat, kernel_size);
     return resultDst;
 }
