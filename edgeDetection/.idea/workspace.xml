@@ -13,9 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08df883c-12d2-43ed-9f31-cbf838a61ca7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clear-495a83e08fc8e5d7569efe6339a1228ee08292fa1f2bee8e0be6532990cb3852.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/main.cpp.obj" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_C.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_CXX.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdC/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdC/a.exe" />
@@ -53,13 +51,25 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="111" column="12" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
+            <state relative-caret-position="228">
+              <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#1610#2144#0" expanded="false" />
-                <element signature="e#2146#2167#0" expanded="false" />
+                <element signature="e#1131#1672#0" expanded="false" />
+                <element signature="e#1674#2234#0" expanded="false" />
+                <element signature="e#2236#2257#0" expanded="false" />
+                <element signature="e#6932#7838#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imagePreparation.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imagePreparation.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,6 +92,7 @@
       <find>convexHull</find>
       <find>match</find>
       <find>warp</find>
+      <find>window_name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,10 +123,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1358" />
+    <option name="y" value="-156" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -378,27 +389,29 @@
       <workItem from="1487884653718" duration="80000" />
       <workItem from="1487884758987" duration="380000" />
       <workItem from="1487885240543" duration="681000" />
+      <workItem from="1487929255316" duration="38000" />
+      <workItem from="1487929396564" duration="13015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75885000" />
+    <option name="totallyTimeSpent" value="88938000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="1358" y="-156" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24851191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17597471" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50769234" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5072464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21880342" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2923077" sideWeight="0.5029762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37264958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5529543" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43701226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6666667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -423,28 +436,16 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="contours[1][1].x" language="ObjectiveC" />
-        <watch expression="contours[1]" language="ObjectiveC" />
-        <watch expression="corners" />
         <watch expression="cdst" />
         <watch expression="lines.size()" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/imgproc/imgproc_c.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3434">
-          <caret line="202" column="13" lean-forward="false" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/build/install/include/opencv2/imgcodecs/imgcodecs_c.h" />
-    <entry file="file://$USER_HOME$/Desktop/build/install/include/opencv2/imgcodecs.hpp" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -465,8 +466,10 @@
           <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#1610#2144#0" expanded="false" />
-            <element signature="e#2146#2167#0" expanded="false" />
+            <element signature="e#1131#1672#0" expanded="false" />
+            <element signature="e#1674#2234#0" expanded="false" />
+            <element signature="e#2236#2257#0" expanded="false" />
+            <element signature="e#6932#7838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -493,8 +496,10 @@
           <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#1610#2144#0" expanded="false" />
-            <element signature="e#2146#2167#0" expanded="false" />
+            <element signature="e#1131#1672#0" expanded="false" />
+            <element signature="e#1674#2234#0" expanded="false" />
+            <element signature="e#2236#2257#0" expanded="false" />
+            <element signature="e#6932#7838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -514,8 +519,10 @@
           <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#1610#2144#0" expanded="false" />
-            <element signature="e#2146#2167#0" expanded="false" />
+            <element signature="e#1131#1672#0" expanded="false" />
+            <element signature="e#1674#2234#0" expanded="false" />
+            <element signature="e#2236#2257#0" expanded="false" />
+            <element signature="e#6932#7838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -533,8 +540,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#1610#2144#0" expanded="false" />
-            <element signature="e#2146#2167#0" expanded="false" />
+            <element signature="e#1131#1672#0" expanded="false" />
+            <element signature="e#1674#2234#0" expanded="false" />
+            <element signature="e#2236#2257#0" expanded="false" />
+            <element signature="e#6932#7838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -543,13 +552,6 @@
     <entry file="file://$USER_HOME$/Desktop/build/install/include/opencv2/imgcodecs.hpp" />
     <entry file="file://$USER_HOME$/Desktop/build/install/include/opencv2/imgcodecs/imgcodecs_c.h" />
     <entry file="file://$USER_HOME$/Desktop/build/install/include/opencv2/core/mat.hpp" />
-    <entry file="file://$PROJECT_DIR$/FindOpenCV.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/imgproc/imgproc_c.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3434">
@@ -650,14 +652,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imagePreparation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/core/mat.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -665,40 +659,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/best_perspective_with_few_pieces_edited.jpg" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindOpenCV.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/imagePreparation.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+        <state relative-caret-position="217">
+          <caret line="79" column="83" lean-forward="false" selection-start-line="79" selection-start-column="83" selection-end-line="79" selection-end-column="83" />
           <folding>
             <element signature="e#4630#6302#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/imgproc.hpp">
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/mingw32/bits/c++config.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="1989" column="29" lean-forward="true" selection-start-line="1989" selection-start-column="19" selection-end-line="1989" selection-end-column="29" />
+        <state relative-caret-position="17">
+          <caret line="195" column="10" lean-forward="false" selection-start-line="195" selection-start-column="10" selection-end-line="195" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/best_perspective_with_few_pieces_edited.jpg" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/core/cvdef.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="217">
+          <caret line="301" column="1" lean-forward="true" selection-start-line="301" selection-start-column="1" selection-end-line="301" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/include/math.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="168" column="23" lean-forward="false" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imagePreparation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/imgproc.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="4479" column="67" lean-forward="false" selection-start-line="4479" selection-start-column="48" selection-end-line="4479" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="111" column="12" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
+        <state relative-caret-position="228">
+          <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#1610#2144#0" expanded="false" />
-            <element signature="e#2146#2167#0" expanded="false" />
+            <element signature="e#1131#1672#0" expanded="false" />
+            <element signature="e#1674#2234#0" expanded="false" />
+            <element signature="e#2236#2257#0" expanded="false" />
+            <element signature="e#6932#7838#0" expanded="false" />
           </folding>
         </state>
       </provider>

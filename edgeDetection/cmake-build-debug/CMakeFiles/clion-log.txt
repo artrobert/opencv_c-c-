@@ -1,4 +1,4 @@
-"C:\Program Files (x86)\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Facultate\c++Project\opencv_c-c-\edgeDetection
+"D:\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Facultate\c++Project\opencv_c-c-\edgeDetection
 -- OpenCV ARCH: x86
 -- OpenCV RUNTIME: mingw
 -- OpenCV STATIC: ON
