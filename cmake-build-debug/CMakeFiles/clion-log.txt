@@ -1,1 +1,0 @@
-CMakeLists.txt not found in D:\Facultate\Licenta folder\workplace\opencv_c-c-

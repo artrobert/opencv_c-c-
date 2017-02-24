@@ -108,7 +108,7 @@ void CannyThreshold(int, void*)
 //    dst = Scalar::all(0);
 //
 //    src.copyTo( dst, detected_edges);
-//    detected_edges=imagePreparation::dilationImage(detected_edges,2,2);
+    detected_edges=imagePreparation::dilationImage(detected_edges,2,2);
 //    imshow( window_name, dst );
 //    imshow( "Ceva", detected_edges );
 //    (dst, cdst, CV_GRAY2BGR);
@@ -128,7 +128,7 @@ void CannyThreshold(int, void*)
 int test()
 {
     /// Load an image
-    src= imagePreparation::readImage("../images/best_perspective_with_few_pieces_edited.jpg"); //read the image
+    src= imagePreparation::readImage("../images/manual_board.jpg"); //read the image
     Size size(1000,700);
     resize(src,src,size);
 
