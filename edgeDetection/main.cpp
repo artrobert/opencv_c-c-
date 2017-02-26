@@ -1,9 +1,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc.hpp>
-#include <cv.h>
-#include <stdio.h>
-#include <string>
+#include <io.h>
 
 #include "IPM.h"
 #include "imagePreparation.h"
@@ -20,7 +18,7 @@ void getEdgesTry();
 
 int test();
 
-void houghLines(cv::Mat &src,cv::Mat &gr);
+void houghLines(cv::Mat &src, cv::Mat &gr);
 
 
 int main(int argc, char **argv) {
@@ -110,7 +108,7 @@ void CannyThreshold(int, void *) {
     Canny(src, detected_edges, lowThreshold, lowThreshold * ratio, kernel_size);
     cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
 
-    houghLines(detected_edges,src_gray);
+    houghLines(detected_edges, src_gray);
 
     /// Using Canny's output as a mask, we display our result
 //    dst = Scalar::all(0);
@@ -128,15 +126,16 @@ void CannyThreshold(int, void *) {
  * @param pointY
  * @param iteration
  */
-void putTextIntoImage(cv::Mat &src,int pointNr,int pointX,int pointY, int iteration){
-    int fontFace=FONT_HERSHEY_SIMPLEX;
-    double fontScale=2;
-    int thickness=3;
+void putTextIntoImage(cv::Mat &src, int pointNr, int pointX, int pointY, int iteration) {
+    int check = mkdir("../images/result");
+    int fontFace = FONT_HERSHEY_SIMPLEX;
+    double fontScale = 2;
+    int thickness = 3;
     char s[30];
-    sprintf(s,"(%d) %d %d",pointNr,pointX,pointY);
-    putText(src,s,Point(pointX,pointY),fontFace,fontScale,Scalar(0,0,255),thickness,8,false);
+    sprintf(s, "(%d) %d %d", pointNr, pointX, pointY);
+    putText(src, s, Point(pointX, pointY), fontFace, fontScale, Scalar(0, 0, 255), thickness, 8, false);
     char path[50];
-    sprintf(path,"../images/result/grey_iteration_%d.jpg",iteration);
+    sprintf(path, "../images/result/grey_iteration_%d.jpg", iteration);
     imwrite(path, src);
 }
 
@@ -147,11 +146,11 @@ void putTextIntoImage(cv::Mat &src,int pointNr,int pointX,int pointY, int iterat
  * @param src The mat from where we will get the lines
  * @param gr The mat where we will write the lines for viewing
  */
-void houghLines(cv::Mat &src,cv::Mat &gr){
+void houghLines(cv::Mat &src, cv::Mat &gr) {
 
     // Apply a dilation to identify more lines
     src = imagePreparation::dilationImage(src, 2, 3);
-    imshow( window_name, src );
+    imshow(window_name, src);
 
     // The vector where we will keep the lines , they come in a pair of 4 coordinates 0-1 for the first point and 2-3 for the other , together they make the line
     vector<Vec4i> lines;
@@ -161,38 +160,95 @@ void houghLines(cv::Mat &src,cv::Mat &gr){
     //                             threshold : Only those liens are returned that get enough votes , current is 30
     //                             minLineLength : Minimum line length. Line segments shorter than that are rejected , current is 60
     //                             maxLineGap : Maximum allowed gap between points on the same line to link them , current is 3
-    HoughLinesP(src, lines,1, CV_PI/180 , 30, 60,3);
-    for (size_t i = 0; i < lines.size(); i++) {
-        Vec4i l = lines[i];
-        //We draw the line on the mat that we will gonna show with imShow(mat)
-        line(gr, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+    HoughLinesP(src, lines, 1, CV_PI / 180, 30, 100, 3);
 
-        //We use this if because the best threshold is >240 and we don't put it on 255 directly because of testing
-        if (lowThreshold >= 240) {
+    // These vectors will be used to separate the lines into 2 groups depending on their line angle using the ATAN2 function
+    // The results should be a VALUE1 and -VALUE1 and maybe some VALUE2,3,4 that are not important
+
+    // From test we saw that the prominent values are  2.XX and -2.XX and some 1.XX , -1.XX
+    // TODO we could hard code this or make an algorithm to search for the most prominent V/-V value
+    vector<Vec4i> linesAngle1, linesAngle2;
+
+    // This lowThreshold if is used only for testing values and not do useless work
+    if (lowThreshold >= 240) {
+
+        for (size_t i = 0; i < lines.size(); i++) {
+            Vec4i l = lines[i];
 
             //This will get the angle that the line is making with the X axis
             // Using this angle we can separate the lines into + and -
             Point p1, p2;
-            p1=Point(l[0], l[1]);
-            p2=Point(l[2], l[3]);
-            double angle = atan2((double)(p1.y - p2.y),(double) (p1.x - p2.x));
+            p1 = Point(l[0], l[1]);
+            p2 = Point(l[2], l[3]);
+            double angle = atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
 
-            //This mat will be used in writing a jpg file
-            //We will create a different image for every line and show the coordinates of the points that are forming the line
-            Mat externalMat;
-            cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
-            line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
-            //Create jpg files with the current line and the coordinates of its extremities
-            putTextIntoImage(externalMat,1,l[0],l[1],i);
-            putTextIntoImage(externalMat,2,l[2],l[3],i);
-
-            printf("Current iteration %d angles %lf  \n",i,angle);
+            // HARD CODED
+            int dec = (int) angle;
+            if (dec == 2) {
+                linesAngle1.push_back(l);
+            } else if (dec == -2) {
+                linesAngle2.push_back(l);
+            }
         }
+        printf("Lines found with angle 2:%d and with -2 : %d \n",linesAngle1.size(),linesAngle2.size());
     }
+
+    Mat oneTypeOfLines1,oneTypeOfLines2;
+    oneTypeOfLines1=gr.clone();
+    oneTypeOfLines2=gr.clone();
+
+    for (size_t i=0;i<linesAngle1.size();i++){
+        Vec4i l=linesAngle1[i];
+        for(size_t j=1;linesAngle1.size();j++){
+            Vec4i currentLine=linesAngle1[j];
+
+        }
+        line(oneTypeOfLines1, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+        Mat externalMat;
+        cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
+        line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+        //Create jpg files with the current line and the coordinates of its extremities
+        putTextIntoImage(externalMat, 1, l[0], l[1], i);
+        putTextIntoImage(externalMat, 2, l[2], l[3], i);
+        printf("%d) Calculation>>>>> slope %lf length %lf \n",i,(l[3]-l[1]/(double)(l[2]-l[0])),norm(Point(l[2], l[3])-Point(l[0], l[1])));
+    }
+    imshow("oneTypeOfLines1", oneTypeOfLines1);
+
+    for (size_t i=0;i<linesAngle2.size();i++){
+        Vec4i l=linesAngle2[i];
+        line(oneTypeOfLines2, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+    }
+    imshow("oneTypeOfLines2", oneTypeOfLines2);
+
+//    for (size_t i = 0; i < lines.size(); i++) {
+//        Vec4i l = lines[i];
+//        //We draw the line on the mat that we will gonna show with imShow(mat)
+//        line(gr, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+//
+//        //We use this if because the best threshold is >240 and we don't put it on 255 directly because of testing
+//        if (lowThreshold >= 240) {
+//
+//            //This will get the angle that the line is making with the X axis
+//            // Using this angle we can separate the lines into + and -
+//            Point p1, p2;
+//            p1 = Point(l[0], l[1]);
+//            p2 = Point(l[2], l[3]);
+//            double angle = atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
+//
+//            //This mat will be used in writing a jpg file
+//            //We will create a different image for every line and show the coordinates of the points that are forming the line
+//            Mat externalMat;
+//            cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
+//            line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+//            //Create jpg files with the current line and the coordinates of its extremities
+//            putTextIntoImage(externalMat, 1, l[0], l[1], i);
+//            putTextIntoImage(externalMat, 2, l[2], l[3], i);
+//
+//            printf("Current iteration %d angles %lf  \n", i, angle);
+//        }
+//    }
     imshow("detected lines", src_gray);
 }
-
-
 
 
 /** @function main */
@@ -212,7 +268,8 @@ int test() {
 
     /// Create a window
     namedWindow(window_name, CV_WINDOW_AUTOSIZE);
-//    namedWindow( "Ceva", CV_WINDOW_AUTOSIZE );
+    namedWindow( "oneTypeOfLines1", CV_WINDOW_AUTOSIZE );
+    namedWindow( "oneTypeOfLines2", CV_WINDOW_AUTOSIZE );
     namedWindow("detected lines", CV_WINDOW_AUTOSIZE);
 
 

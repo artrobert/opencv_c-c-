@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/cv.h
-opencv2/core/core_c.h
-D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/opencv2/core/core_c.h
-opencv2/imgproc/imgproc_c.h
-D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/opencv2/imgproc/imgproc_c.h
-opencv2/photo/photo_c.h
-D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/opencv2/photo/photo_c.h
-opencv2/video/tracking_c.h
-D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/opencv2/video/tracking_c.h
-opencv2/objdetect/objdetect_c.h
-D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/opencv2/objdetect/objdetect_c.h
-
 D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/cxcore.h
 opencv2/core/core_c.h
 D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/opencv2/core/core_c.h
@@ -1313,11 +1301,7 @@ opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc.hpp
 -
-cv.h
--
-stdio.h
--
-string
+io.h
 -
 IPM.h
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h

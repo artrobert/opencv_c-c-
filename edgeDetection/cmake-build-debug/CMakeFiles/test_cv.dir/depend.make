@@ -502,7 +502,6 @@ CMakeFiles/test_cv.dir/km.cpp.obj: D:/Facultate/c++Project/opencv_c-c-/build/ins
 CMakeFiles/test_cv.dir/km.cpp.obj: ../km.cpp
 CMakeFiles/test_cv.dir/km.cpp.obj: ../km.h
 
-CMakeFiles/test_cv.dir/main.cpp.obj: D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/cv.h
 CMakeFiles/test_cv.dir/main.cpp.obj: D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv/cxcore.h
 CMakeFiles/test_cv.dir/main.cpp.obj: D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/calib3d.hpp
 CMakeFiles/test_cv.dir/main.cpp.obj: D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/calib3d/calib3d.hpp
