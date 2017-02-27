@@ -127,8 +127,8 @@ void CannyThreshold(int, void *) {
  * @param pointY
  * @param iteration
  */
-void putTextIntoImage(cv::Mat &src, int pointNr, int pointX, int pointY, int iteration) {
-    int check = mkdir("../images/result");
+void putTextIntoImage(const char *pathdir,cv::Mat &src, int pointNr, int pointX, int pointY, int iteration) {
+    int check = mkdir(pathdir);
     int fontFace = FONT_HERSHEY_SIMPLEX;
     double fontScale = 2;
     int thickness = 3;
@@ -136,7 +136,7 @@ void putTextIntoImage(cv::Mat &src, int pointNr, int pointX, int pointY, int ite
     sprintf(s, "(%d) %d %d", pointNr, pointX, pointY);
     putText(src, s, Point(pointX, pointY), fontFace, fontScale, Scalar(0, 0, 255), thickness, 8, false);
     char path[50];
-    sprintf(path, "../images/result/grey_iteration_%d.jpg", iteration);
+    sprintf(path,"%s/grey_iteration_%d.jpg",pathdir,iteration);
     imwrite(path, src);
 }
 
@@ -147,7 +147,57 @@ void putTextIntoImage(cv::Mat &src, int pointNr, int pointX, int pointY, int ite
  * @return returns if the X of the first point is smaller than the second lines first point X
  */
 bool comparisonFirstPointX(Vec4i v1, Vec4i v2) {
-    return (v1[0] < v2[0]);
+    return (v1.val[0] <= v2.val[0]);
+}
+
+/**
+ * This function is used in the sort() call so we can sort the vector containing the lines after the Y of the first point
+ * @param v1 The first line
+ * @param v2 The second line
+ * @return returns if the X of the first point is smaller than the second lines first point X
+ */
+bool comparisonFirstPointY(Vec4i v1, Vec4i v2) {
+    return (v1.val[1] <= v2.val[1]);
+}
+
+/**
+ * Function used to compare the X and Y coordinates of 2 points to see if they are equal
+ * @param v1 A vector containing 4 points of a line, we take only the first point of the line
+ * @param v2 A vector containing 4 points of a line, we take only the first point of the line
+ * @return true if the X and Y of the points are equal
+ */
+bool uniquePointComparison(Vec4i v1,Vec4i v2){
+    return v1.val[0] == v2.val[0] && v1.val[1]==v2.val[1];
+}
+
+/**
+ * This will take each line and compare it with the others and if the coordinates of its P1.X/P1.Y and P2.X/P2.Y are like +/- 15&10 pixels around, they will
+ * select the line with the biggest length and override the smaller one so we can easily remove after
+ *
+ * Bug , some of the values are not erased !!!Strange!!
+ *
+ * @param src The vectorContaining the lines
+ * @param comparisonType Type of comparison TODO:
+ */
+void orderAndRemoveLines(vector<Vec4i> &lines, int comparisonType){
+    for (size_t i = 0; i < lines.size(); i++) {
+        Vec4i l = lines[i];
+        double line1Size = norm(Point(l[2], l[3]) - Point(l[0], l[1]));
+        for (size_t j = 0; j < lines.size(); j++) {
+            Vec4i l2 = lines[j];
+            if ((abs(l[0] - l2[0]) <= 15 && abs(l[1] - l2[1]) <= 10)||(abs(l[2] - l2[2]) <= 15 && abs(l[3] - l2[3]) <= 10) ) {
+                double line2Size = norm(Point(l2[2], l2[3]) - Point(l2[0], l2[1]));
+                if (line1Size < line2Size) {
+                    lines[i] = lines[j];
+                } else {
+                    lines[j] = lines[i];
+                }
+            }
+        }
+    }
+    // This will be used so we can remove the duplicates
+    sort(lines.begin(), lines.end(), comparisonFirstPointX);
+    lines.erase(unique(lines.begin(), lines.end(),uniquePointComparison), lines.end());
 }
 
 /**
@@ -201,31 +251,13 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
                 linesAngle2.push_back(l);
             }
         }
-        std::sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointX);
+//        std::sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointX);
+//        std::sort(linesAngle2.begin(), linesAngle2.end(), comparisonFirstPointY);
         printf("Lines found with angle 2:%d and with -2 : %d \n", linesAngle1.size(), linesAngle2.size());
     }
 
-    // TODO: this should be moved to a function
-    // This will take each line and compare it with the others and if the coordinates of its starting point P1.X and P1.Y are like +/- 15&20 pixels around, they will
-    // select the line with the biggest length and override the smaller one so we can easily remove after
-    for (size_t i = 0; i < linesAngle1.size(); i++) {
-        Vec4i l = linesAngle1[i];
-        double line1Size = norm(Point(l[2], l[3]) - Point(l[0], l[1]));
-        for (size_t j = 0; j < linesAngle1.size(); j++) {
-            Vec4i l2 = linesAngle1[j];
-            if (abs(l[0] - l2[0]) <= 20 && abs(l[1] - l2[1]) <= 15) {
-                double line2Size = norm(Point(l2[2], l2[3]) - Point(l2[0], l2[1]));
-                if (line1Size < line2Size) {
-                    linesAngle1[i] = linesAngle1[j];
-                } else {
-                    linesAngle1[j] = linesAngle1[i];
-                }
-            }
-        }
-    }
-    // This will be used so we can remove the duplicates
-    sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointX);
-    linesAngle1.erase(unique(linesAngle1.begin(), linesAngle1.end()), linesAngle1.end());
+    orderAndRemoveLines(linesAngle1,1);
+    orderAndRemoveLines(linesAngle2,2);
 
     Mat oneTypeOfLines1, oneTypeOfLines2;
     oneTypeOfLines1 = gr.clone();
@@ -238,8 +270,8 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
         cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
         line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
         //Create jpg files with the current line and the coordinates of its extremities
-        putTextIntoImage(externalMat, 1, l[0], l[1], i);
-        putTextIntoImage(externalMat, 2, l[2], l[3], i);
+        putTextIntoImage("../images/result/angle2",externalMat, 1, l[0], l[1], i);
+        putTextIntoImage("../images/result/angle2",externalMat, 2, l[2], l[3], i);
         printf("%d) Line P(%d,%d) P(%d,%d) slope %lf length %lf \n", i, l[0], l[1], l[2], l[3],
                (l[3] - l[1] / (double) (l[2] - l[0])), norm(Point(l[2], l[3]) - Point(l[0], l[1])));
     }
@@ -248,6 +280,14 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
     for (size_t i = 0; i < linesAngle2.size(); i++) {
         Vec4i l = linesAngle2[i];
         line(oneTypeOfLines2, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+        Mat externalMat;
+        cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
+        line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+        //Create jpg files with the current line and the coordinates of its extremities
+        putTextIntoImage("../images/result/anglen2",externalMat, 1, l[0], l[1], i);
+        putTextIntoImage("../images/result/anglen2",externalMat, 2, l[2], l[3], i);
+        printf("%d) Line P(%d,%d) P(%d,%d) slope %lf length %lf \n", i, l[0], l[1], l[2], l[3],
+               (l[3] - l[1] / (double) (l[2] - l[0])), norm(Point(l[2], l[3]) - Point(l[0], l[1])));
     }
     imshow("oneTypeOfLines2", oneTypeOfLines2);
 

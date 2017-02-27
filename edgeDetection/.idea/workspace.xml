@@ -14,24 +14,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08df883c-12d2-43ed-9f31-cbf838a61ca7" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/main.cpp.obj" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdC/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdC/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdCXX/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdCXX/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/objects.a" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/objects.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/test_cv.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/test_cv.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.6.3/CMakeSystem.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -51,26 +33,15 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="203" column="68" lean-forward="false" selection-start-line="203" selection-start-column="68" selection-end-line="203" selection-end-column="68" />
+            <state relative-caret-position="17">
+              <caret line="249" column="35" lean-forward="false" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
                 <element signature="e#348#1108#0" expanded="false" />
                 <element signature="e#1110#1651#0" expanded="false" />
                 <element signature="e#1653#2213#0" expanded="false" />
                 <element signature="e#2215#2236#0" expanded="false" />
-                <element signature="e#3495#4255#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stl_vector.h" pinned="false" current-in-tab="false">
-        <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/stl_vector.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="654" column="0" lean-forward="false" selection-start-line="654" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -399,12 +370,12 @@
       <workItem from="1488123143644" duration="3969000" />
       <workItem from="1488131892875" duration="104000" />
       <workItem from="1488132024353" duration="307000" />
-      <workItem from="1488193464711" duration="10352000" />
+      <workItem from="1488193464711" duration="15400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109702000" />
+    <option name="totallyTimeSpent" value="114750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-156" width="1936" height="1056" extended-state="6" />
@@ -416,11 +387,11 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21880342" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5039019" sideWeight="0.5036881" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.9219621" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41137123" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5429208" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59977704" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -465,26 +436,19 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="60" />
+      <option name="time" value="69" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="v1.val[0]" language="ObjectiveC" />
+        <watch expression="v2.val[0]" language="ObjectiveC" />
+        <watch expression="v1.val[1]" language="ObjectiveC" />
+        <watch expression="v2.val[1]" language="ObjectiveC" />
+        <watch expression="v1.val[0] == v2.val[0] &amp;&amp; v1.val[1]==v2.val[1]" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#348#1108#0" expanded="false" />
-            <element signature="e#1110#1651#0" expanded="false" />
-            <element signature="e#1653#2213#0" expanded="false" />
-            <element signature="e#2215#2236#0" expanded="false" />
-            <element signature="e#3495#4255#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/build/install/include/opencv2/imgcodecs/imgcodecs_c.h" />
     <entry file="file://$USER_HOME$/Desktop/build/install/include/opencv2/imgcodecs.hpp" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
@@ -511,7 +475,6 @@
             <element signature="e#1110#1651#0" expanded="false" />
             <element signature="e#1653#2213#0" expanded="false" />
             <element signature="e#2215#2236#0" expanded="false" />
-            <element signature="e#3495#4255#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -535,7 +498,6 @@
             <element signature="e#1110#1651#0" expanded="false" />
             <element signature="e#1653#2213#0" expanded="false" />
             <element signature="e#2215#2236#0" expanded="false" />
-            <element signature="e#3495#4255#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -557,7 +519,6 @@
             <element signature="e#1110#1651#0" expanded="false" />
             <element signature="e#1653#2213#0" expanded="false" />
             <element signature="e#2215#2236#0" expanded="false" />
-            <element signature="e#3495#4255#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -745,23 +706,30 @@
     </entry>
     <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/stl_vector.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="654" column="0" lean-forward="false" selection-start-line="654" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
+        <state relative-caret-position="127">
+          <caret line="547" column="41" lean-forward="true" selection-start-line="547" selection-start-column="41" selection-end-line="547" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/include/io.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="491" column="55" lean-forward="false" selection-start-line="491" selection-start-column="55" selection-end-line="491" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="203" column="68" lean-forward="false" selection-start-line="203" selection-start-column="68" selection-end-line="203" selection-end-column="68" />
+        <state relative-caret-position="17">
+          <caret line="249" column="35" lean-forward="false" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#348#1108#0" expanded="false" />
             <element signature="e#1110#1651#0" expanded="false" />
             <element signature="e#1653#2213#0" expanded="false" />
             <element signature="e#2215#2236#0" expanded="false" />
-            <element signature="e#3495#4255#0" expanded="false" />
           </folding>
         </state>
       </provider>
