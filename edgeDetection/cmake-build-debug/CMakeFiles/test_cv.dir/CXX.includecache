@@ -1303,6 +1303,8 @@ opencv2/imgproc.hpp
 -
 io.h
 -
+set
+-
 IPM.h
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
 imagePreparation.h
