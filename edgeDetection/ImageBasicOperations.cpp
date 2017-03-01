@@ -99,7 +99,7 @@ cv::Mat imagePreparation::dilationImage(cv::Mat &src,int dilation_elem,int dilat
  * @param src The image we want to find the corners. Should be blurred
  * @return The vectors with the corner points
  */
-vector<Point2f> imagePreparation::getCornerPoints(cv::Mat &src) {
+vector<cv::Point2f> imagePreparation::getCornerPoints(cv::Mat &src) {
     vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
     //using this thresh we will get get only the table outline

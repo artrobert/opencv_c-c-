@@ -5,9 +5,13 @@
 #ifndef EDGEDETECTION_EDGEDETECTING_H
 #define EDGEDETECTION_EDGEDETECTING_H
 
+#include <opencv2/core/matx.hpp>
 
 class EdgeDetecting {
 
+public:
+
+    static void startProcess(cv::Mat &src);
 };
 
 

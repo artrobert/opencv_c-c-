@@ -1237,8 +1237,20 @@ D:/Facultate/c++Project/opencv_c-c-/build/install/include/opencv2/videostab/open
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/EdgeDetecting.cpp
 EdgeDetecting.h
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/EdgeDetecting.h
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc.hpp
+-
+io.h
+-
+ImageBasicOperations.h
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/ImageBasicOperations.h
 
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/EdgeDetecting.h
+opencv2/core/matx.hpp
+-
 
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/FeatureDetection.cpp
 opencv2/core/core.hpp
@@ -1313,4 +1325,6 @@ IPM.h
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
 ImageBasicOperations.h
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/ImageBasicOperations.h
+EdgeDetecting.h
+D:/Facultate/c++Project/opencv_c-c-/edgeDetection/EdgeDetecting.h
 
