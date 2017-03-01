@@ -1,7 +1,6 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc.hpp>
-#include <io.h>
 
 #include "IPM.h"
 #include "ImageBasicOperations.h"

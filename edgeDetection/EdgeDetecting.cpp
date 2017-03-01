@@ -120,34 +120,34 @@ void putTextIntoImage(const char *pathdir, cv::Mat &src, int pointNr, int pointX
 void orderAndRemoveLines(vector<Vec4i> &lines, int comparisonType) {
     for (size_t i = 0; i < lines.size(); i++) {
         Vec4i l = lines[i];
-        double line1Size = norm(Point(l[2], l[3]) - Point(l[0], l[1]));
+        double line1Size = norm(Point(l[2], l[3]) - Point(l[0], l[1])); //length of the first line
         for (size_t j = 0; j < lines.size(); j++) {
             Vec4i l2 = lines[j];
-            if ((abs(l[0] - l2[0]) <= 15 && abs(l[1] - l2[1]) <= 10) ||
-                (abs(l[2] - l2[2]) <= 15 && abs(l[3] - l2[3]) <= 10)) {
-                double line2Size = norm(Point(l2[2], l2[3]) - Point(l2[0], l2[1]));
+            //if the point is around the other point
+            if ((abs(l[0] - l2[0]) <= 15 && abs(l[1] - l2[1]) <= 10) || //comparison between first point's coordinates
+                (abs(l[2] - l2[2]) <= 15 && abs(l[3] - l2[3]) <= 10)) { //comparison between second point's coordinates
+                double line2Size = norm(Point(l2[2], l2[3]) - Point(l2[0], l2[1])); //calculate the length of the second line
+                // if the lines have almost the same coordinates we keep the one with the biggest length
                 if (line1Size < line2Size) {
                     lines[i] = lines[j];
-                } else {
-                    lines[j] = lines[i];
                 }
+//                else {
+//                    lines[j] = lines[i];
+//                }
+                lines.erase(lines.begin()+j); //erase the J line that was already copied over the one with the smaller length
+                j--;
             }
         }
     }
+
     // This will be used so we can remove the duplicates
-    sort(lines.begin(), lines.end(), comparisonFirstPointXAsc);
+//    sort(lines.begin(), lines.end(), comparisonFirstPointXAsc);
     lines.erase(unique(lines.begin(), lines.end(), uniquePointComparison), lines.end());
 }
 
 
 /**
  * This method should detect the intersection of 2 lines
- * @param o1
- * @param p1
- * @param o2
- * @param p2
- * @param r
- * @return
  */
 // Finds the intersection of two lines, or returns false.
 // The lines are defined by (o1, p1) and (o2, p2).
@@ -227,6 +227,34 @@ void findSquareCoordinates(vector<Vec4i> &v1, vector<Vec4i> &v2) {
 
 }
 
+/**
+ * This function will separate the angle into 2 groups using an angle to differentiate between them.
+ *
+ * @param lines The vector of lines, found by Hough function, that will be separated into 2 vectors based on an angles positive and negative value.
+ * @param angle The angle used to separate the lines.
+ * @param angleGroup1 The list containing the lines that have a positive positive value.
+ * @param angleGroup2 The list containing the lines that have a negative angle value.
+ */
+void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleGroup1, vector<Vec4i> &angleGroup2) {
+    int lineSize = lines.size();
+    for (size_t i = 0; i < lineSize; i++) {
+        Vec4i l = lines[i];
+
+        //This will get the angle that the line is making with the X axis
+        // Using this angle we can separate the lines into + and -
+        Point p1, p2;
+        p1 = Point(l[0], l[1]);
+        p2 = Point(l[2], l[3]);
+
+        double angleMade = atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
+
+        if (angle == (int) angleMade) {
+            angleGroup1.push_back(l);
+        } else if (-angle == (int) angleMade) {
+            angleGroup2.push_back(l);
+        }
+    }
+}
 
 /**
  *
@@ -258,28 +286,14 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
     // TODO we could hard code this or make an algorithm to search for the most prominent V/-V value
     vector<Vec4i> linesAngle1, linesAngle2;
 
+    // Separate the lines into 2 groups after an angle (the positive and negative value)
+    // Angle used is 2
+    separateLinesByAngle(lines, 2, linesAngle1, linesAngle2);
 
-    for (size_t i = 0; i < lines.size(); i++) {
-        Vec4i l = lines[i];
+    printf("Lines found with angle 2:%d and with -2 : %d \n", linesAngle1.size(), linesAngle2.size());
 
-        //This will get the angle that the line is making with the X axis
-        // Using this angle we can separate the lines into + and -
-        Point p1, p2;
-        p1 = Point(l[0], l[1]);
-        p2 = Point(l[2], l[3]);
-        double angle = atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
-
-        // HARD CODED
-        int dec = (int) angle;
-        if (dec == 2) {
-            linesAngle1.push_back(l);
-        } else if (dec == -2) {
-            linesAngle2.push_back(l);
-        }
-    }
 //        std::sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointXAsc);
 //        std::sort(linesAngle2.begin(), linesAngle2.end(), comparisonFirstPointYAsc);
-    printf("Lines found with angle 2:%d and with -2 : %d \n", linesAngle1.size(), linesAngle2.size());
 
 
     orderAndRemoveLines(linesAngle1, 1);
@@ -310,6 +324,7 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 //        printf("These lines intersect %b",
 //               get_line_intersection(l6[0], l6[1], l6[2], l6[3], l8[0], l8[1], l8[2], l8[3], rx, ry));
     }
+    namedWindow("oneTypeOfLines1", CV_WINDOW_AUTOSIZE);
     imshow("oneTypeOfLines1", oneTypeOfLines1);
 
 //    for (size_t i = 0; i < linesAngle2.size(); i++) {
@@ -324,6 +339,7 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 //        printf("%d) Line P(%d,%d) P(%d,%d) slope %lf length %lf \n", i, l[0], l[1], l[2], l[3],
 //               (l[3] - l[1] / (double) (l[2] - l[0])), norm(Point(l[2], l[3]) - Point(l[0], l[1])));
 //    }
+//    namedWindow("oneTypeOfLines2", CV_WINDOW_AUTOSIZE);
 //    imshow("oneTypeOfLines2", oneTypeOfLines2);
 
 //    if (linesAngle1.size() > 0 && linesAngle2.size() > 0) {
@@ -358,6 +374,7 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 //            printf("Current iteration %d angles %lf  \n", i, angle);
 //        }
 //    }
+    namedWindow("detected lines", CV_WINDOW_AUTOSIZE);
     imshow("detected lines", src_gray);
 }
 
@@ -371,11 +388,6 @@ void EdgeDetecting::startProcess(Mat &src) {
     cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
 
     houghLines(detected_edges, src_gray);
-    /// Create a window
-    namedWindow("oneTypeOfLines1", CV_WINDOW_AUTOSIZE);
-    namedWindow("oneTypeOfLines2", CV_WINDOW_AUTOSIZE);
-    namedWindow("detected lines", CV_WINDOW_AUTOSIZE);
-
     /// Using Canny's output as a mask, we display our result
 //    dst = Scalar::all(0);
 //    src.copyTo( dst, detected_edges);
