@@ -122,6 +122,60 @@ test_cv/fast:
 	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/build
 .PHONY : test_cv/fast
 
+EdgeDetecting.obj: EdgeDetecting.cpp.obj
+
+.PHONY : EdgeDetecting.obj
+
+# target to build an object file
+EdgeDetecting.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj
+.PHONY : EdgeDetecting.cpp.obj
+
+EdgeDetecting.i: EdgeDetecting.cpp.i
+
+.PHONY : EdgeDetecting.i
+
+# target to preprocess a source file
+EdgeDetecting.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/EdgeDetecting.cpp.i
+.PHONY : EdgeDetecting.cpp.i
+
+EdgeDetecting.s: EdgeDetecting.cpp.s
+
+.PHONY : EdgeDetecting.s
+
+# target to generate assembly for a file
+EdgeDetecting.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/EdgeDetecting.cpp.s
+.PHONY : EdgeDetecting.cpp.s
+
+FeatureDetection.obj: FeatureDetection.cpp.obj
+
+.PHONY : FeatureDetection.obj
+
+# target to build an object file
+FeatureDetection.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj
+.PHONY : FeatureDetection.cpp.obj
+
+FeatureDetection.i: FeatureDetection.cpp.i
+
+.PHONY : FeatureDetection.i
+
+# target to preprocess a source file
+FeatureDetection.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/FeatureDetection.cpp.i
+.PHONY : FeatureDetection.cpp.i
+
+FeatureDetection.s: FeatureDetection.cpp.s
+
+.PHONY : FeatureDetection.s
+
+# target to generate assembly for a file
+FeatureDetection.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/FeatureDetection.cpp.s
+.PHONY : FeatureDetection.cpp.s
+
 IPM.obj: IPM.cpp.obj
 
 .PHONY : IPM.obj
@@ -149,86 +203,59 @@ IPM.cpp.s:
 	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/IPM.cpp.s
 .PHONY : IPM.cpp.s
 
-featureDetection.obj: featureDetection.cpp.obj
+ImageBasicOperations.obj: ImageBasicOperations.cpp.obj
 
-.PHONY : featureDetection.obj
-
-# target to build an object file
-featureDetection.cpp.obj:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/featureDetection.cpp.obj
-.PHONY : featureDetection.cpp.obj
-
-featureDetection.i: featureDetection.cpp.i
-
-.PHONY : featureDetection.i
-
-# target to preprocess a source file
-featureDetection.cpp.i:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/featureDetection.cpp.i
-.PHONY : featureDetection.cpp.i
-
-featureDetection.s: featureDetection.cpp.s
-
-.PHONY : featureDetection.s
-
-# target to generate assembly for a file
-featureDetection.cpp.s:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/featureDetection.cpp.s
-.PHONY : featureDetection.cpp.s
-
-imagePreparation.obj: imagePreparation.cpp.obj
-
-.PHONY : imagePreparation.obj
+.PHONY : ImageBasicOperations.obj
 
 # target to build an object file
-imagePreparation.cpp.obj:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.obj
-.PHONY : imagePreparation.cpp.obj
+ImageBasicOperations.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj
+.PHONY : ImageBasicOperations.cpp.obj
 
-imagePreparation.i: imagePreparation.cpp.i
+ImageBasicOperations.i: ImageBasicOperations.cpp.i
 
-.PHONY : imagePreparation.i
+.PHONY : ImageBasicOperations.i
 
 # target to preprocess a source file
-imagePreparation.cpp.i:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.i
-.PHONY : imagePreparation.cpp.i
+ImageBasicOperations.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.i
+.PHONY : ImageBasicOperations.cpp.i
 
-imagePreparation.s: imagePreparation.cpp.s
+ImageBasicOperations.s: ImageBasicOperations.cpp.s
 
-.PHONY : imagePreparation.s
+.PHONY : ImageBasicOperations.s
 
 # target to generate assembly for a file
-imagePreparation.cpp.s:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.s
-.PHONY : imagePreparation.cpp.s
+ImageBasicOperations.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.s
+.PHONY : ImageBasicOperations.cpp.s
 
-km.obj: km.cpp.obj
+KMeansImplementation.obj: KMeansImplementation.cpp.obj
 
-.PHONY : km.obj
+.PHONY : KMeansImplementation.obj
 
 # target to build an object file
-km.cpp.obj:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/km.cpp.obj
-.PHONY : km.cpp.obj
+KMeansImplementation.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj
+.PHONY : KMeansImplementation.cpp.obj
 
-km.i: km.cpp.i
+KMeansImplementation.i: KMeansImplementation.cpp.i
 
-.PHONY : km.i
+.PHONY : KMeansImplementation.i
 
 # target to preprocess a source file
-km.cpp.i:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/km.cpp.i
-.PHONY : km.cpp.i
+KMeansImplementation.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/KMeansImplementation.cpp.i
+.PHONY : KMeansImplementation.cpp.i
 
-km.s: km.cpp.s
+KMeansImplementation.s: KMeansImplementation.cpp.s
 
-.PHONY : km.s
+.PHONY : KMeansImplementation.s
 
 # target to generate assembly for a file
-km.cpp.s:
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/km.cpp.s
-.PHONY : km.cpp.s
+KMeansImplementation.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/KMeansImplementation.cpp.s
+.PHONY : KMeansImplementation.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -266,18 +293,21 @@ help:
 	@echo ... test_cv
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... EdgeDetecting.obj
+	@echo ... EdgeDetecting.i
+	@echo ... EdgeDetecting.s
+	@echo ... FeatureDetection.obj
+	@echo ... FeatureDetection.i
+	@echo ... FeatureDetection.s
 	@echo ... IPM.obj
 	@echo ... IPM.i
 	@echo ... IPM.s
-	@echo ... featureDetection.obj
-	@echo ... featureDetection.i
-	@echo ... featureDetection.s
-	@echo ... imagePreparation.obj
-	@echo ... imagePreparation.i
-	@echo ... imagePreparation.s
-	@echo ... km.obj
-	@echo ... km.i
-	@echo ... km.s
+	@echo ... ImageBasicOperations.obj
+	@echo ... ImageBasicOperations.i
+	@echo ... ImageBasicOperations.s
+	@echo ... KMeansImplementation.obj
+	@echo ... KMeansImplementation.i
+	@echo ... KMeansImplementation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

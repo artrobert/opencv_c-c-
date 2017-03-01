@@ -3,12 +3,12 @@
 #include <opencv2/features2d.hpp>
 #include <iostream>
 
-#include "imagePreparation.h"
+#include "ImageBasicOperations.h"
 
 using namespace cv;
 using namespace std;
 
-#include "featureDetection.h"
+#include "FeatureDetection.h"
 
 void featureDetection::firstTry(){
     Mat img1=imagePreparation::readImage("../chess_pie.jpg"); //read the image

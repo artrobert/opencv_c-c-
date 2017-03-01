@@ -106,97 +106,124 @@ CMakeFiles/test_cv.dir/IPM.cpp.obj.provides: CMakeFiles/test_cv.dir/IPM.cpp.obj.
 CMakeFiles/test_cv.dir/IPM.cpp.obj.provides.build: CMakeFiles/test_cv.dir/IPM.cpp.obj
 
 
-CMakeFiles/test_cv.dir/imagePreparation.cpp.obj: CMakeFiles/test_cv.dir/flags.make
-CMakeFiles/test_cv.dir/imagePreparation.cpp.obj: CMakeFiles/test_cv.dir/includes_CXX.rsp
-CMakeFiles/test_cv.dir/imagePreparation.cpp.obj: ../imagePreparation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_cv.dir/imagePreparation.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\test_cv.dir\imagePreparation.cpp.obj -c D:\Facultate\c++Project\opencv_c-c-\edgeDetection\imagePreparation.cpp
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj: CMakeFiles/test_cv.dir/flags.make
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj: CMakeFiles/test_cv.dir/includes_CXX.rsp
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj: ../ImageBasicOperations.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\test_cv.dir\ImageBasicOperations.cpp.obj -c D:\Facultate\c++Project\opencv_c-c-\edgeDetection\ImageBasicOperations.cpp
 
-CMakeFiles/test_cv.dir/imagePreparation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_cv.dir/imagePreparation.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Facultate\c++Project\opencv_c-c-\edgeDetection\imagePreparation.cpp > CMakeFiles\test_cv.dir\imagePreparation.cpp.i
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.i"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Facultate\c++Project\opencv_c-c-\edgeDetection\ImageBasicOperations.cpp > CMakeFiles\test_cv.dir\ImageBasicOperations.cpp.i
 
-CMakeFiles/test_cv.dir/imagePreparation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_cv.dir/imagePreparation.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Facultate\c++Project\opencv_c-c-\edgeDetection\imagePreparation.cpp -o CMakeFiles\test_cv.dir\imagePreparation.cpp.s
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.s"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Facultate\c++Project\opencv_c-c-\edgeDetection\ImageBasicOperations.cpp -o CMakeFiles\test_cv.dir\ImageBasicOperations.cpp.s
 
-CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.requires:
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.requires:
 
-.PHONY : CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.requires
+.PHONY : CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.requires
 
-CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.provides: CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.provides.build
-.PHONY : CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.provides
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.provides: CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.provides.build
+.PHONY : CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.provides
 
-CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.provides.build: CMakeFiles/test_cv.dir/imagePreparation.cpp.obj
-
-
-CMakeFiles/test_cv.dir/featureDetection.cpp.obj: CMakeFiles/test_cv.dir/flags.make
-CMakeFiles/test_cv.dir/featureDetection.cpp.obj: CMakeFiles/test_cv.dir/includes_CXX.rsp
-CMakeFiles/test_cv.dir/featureDetection.cpp.obj: ../featureDetection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_cv.dir/featureDetection.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\test_cv.dir\featureDetection.cpp.obj -c D:\Facultate\c++Project\opencv_c-c-\edgeDetection\featureDetection.cpp
-
-CMakeFiles/test_cv.dir/featureDetection.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_cv.dir/featureDetection.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Facultate\c++Project\opencv_c-c-\edgeDetection\featureDetection.cpp > CMakeFiles\test_cv.dir\featureDetection.cpp.i
-
-CMakeFiles/test_cv.dir/featureDetection.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_cv.dir/featureDetection.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Facultate\c++Project\opencv_c-c-\edgeDetection\featureDetection.cpp -o CMakeFiles\test_cv.dir\featureDetection.cpp.s
-
-CMakeFiles/test_cv.dir/featureDetection.cpp.obj.requires:
-
-.PHONY : CMakeFiles/test_cv.dir/featureDetection.cpp.obj.requires
-
-CMakeFiles/test_cv.dir/featureDetection.cpp.obj.provides: CMakeFiles/test_cv.dir/featureDetection.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/featureDetection.cpp.obj.provides.build
-.PHONY : CMakeFiles/test_cv.dir/featureDetection.cpp.obj.provides
-
-CMakeFiles/test_cv.dir/featureDetection.cpp.obj.provides.build: CMakeFiles/test_cv.dir/featureDetection.cpp.obj
+CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.provides.build: CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj
 
 
-CMakeFiles/test_cv.dir/km.cpp.obj: CMakeFiles/test_cv.dir/flags.make
-CMakeFiles/test_cv.dir/km.cpp.obj: CMakeFiles/test_cv.dir/includes_CXX.rsp
-CMakeFiles/test_cv.dir/km.cpp.obj: ../km.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test_cv.dir/km.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\test_cv.dir\km.cpp.obj -c D:\Facultate\c++Project\opencv_c-c-\edgeDetection\km.cpp
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj: CMakeFiles/test_cv.dir/flags.make
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj: CMakeFiles/test_cv.dir/includes_CXX.rsp
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj: ../FeatureDetection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\test_cv.dir\FeatureDetection.cpp.obj -c D:\Facultate\c++Project\opencv_c-c-\edgeDetection\FeatureDetection.cpp
 
-CMakeFiles/test_cv.dir/km.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_cv.dir/km.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Facultate\c++Project\opencv_c-c-\edgeDetection\km.cpp > CMakeFiles\test_cv.dir\km.cpp.i
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_cv.dir/FeatureDetection.cpp.i"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Facultate\c++Project\opencv_c-c-\edgeDetection\FeatureDetection.cpp > CMakeFiles\test_cv.dir\FeatureDetection.cpp.i
 
-CMakeFiles/test_cv.dir/km.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_cv.dir/km.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Facultate\c++Project\opencv_c-c-\edgeDetection\km.cpp -o CMakeFiles\test_cv.dir\km.cpp.s
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_cv.dir/FeatureDetection.cpp.s"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Facultate\c++Project\opencv_c-c-\edgeDetection\FeatureDetection.cpp -o CMakeFiles\test_cv.dir\FeatureDetection.cpp.s
 
-CMakeFiles/test_cv.dir/km.cpp.obj.requires:
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.requires:
 
-.PHONY : CMakeFiles/test_cv.dir/km.cpp.obj.requires
+.PHONY : CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.requires
 
-CMakeFiles/test_cv.dir/km.cpp.obj.provides: CMakeFiles/test_cv.dir/km.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/km.cpp.obj.provides.build
-.PHONY : CMakeFiles/test_cv.dir/km.cpp.obj.provides
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.provides: CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.provides.build
+.PHONY : CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.provides
 
-CMakeFiles/test_cv.dir/km.cpp.obj.provides.build: CMakeFiles/test_cv.dir/km.cpp.obj
+CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.provides.build: CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj
+
+
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj: CMakeFiles/test_cv.dir/flags.make
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj: CMakeFiles/test_cv.dir/includes_CXX.rsp
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj: ../KMeansImplementation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\test_cv.dir\KMeansImplementation.cpp.obj -c D:\Facultate\c++Project\opencv_c-c-\edgeDetection\KMeansImplementation.cpp
+
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_cv.dir/KMeansImplementation.cpp.i"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Facultate\c++Project\opencv_c-c-\edgeDetection\KMeansImplementation.cpp > CMakeFiles\test_cv.dir\KMeansImplementation.cpp.i
+
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_cv.dir/KMeansImplementation.cpp.s"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Facultate\c++Project\opencv_c-c-\edgeDetection\KMeansImplementation.cpp -o CMakeFiles\test_cv.dir\KMeansImplementation.cpp.s
+
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.requires:
+
+.PHONY : CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.requires
+
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.provides: CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.provides.build
+.PHONY : CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.provides
+
+CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.provides.build: CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj
+
+
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj: CMakeFiles/test_cv.dir/flags.make
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj: CMakeFiles/test_cv.dir/includes_CXX.rsp
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj: ../EdgeDetecting.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\test_cv.dir\EdgeDetecting.cpp.obj -c D:\Facultate\c++Project\opencv_c-c-\edgeDetection\EdgeDetecting.cpp
+
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_cv.dir/EdgeDetecting.cpp.i"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Facultate\c++Project\opencv_c-c-\edgeDetection\EdgeDetecting.cpp > CMakeFiles\test_cv.dir\EdgeDetecting.cpp.i
+
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_cv.dir/EdgeDetecting.cpp.s"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Facultate\c++Project\opencv_c-c-\edgeDetection\EdgeDetecting.cpp -o CMakeFiles\test_cv.dir\EdgeDetecting.cpp.s
+
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.requires:
+
+.PHONY : CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.requires
+
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.provides: CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.provides.build
+.PHONY : CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.provides
+
+CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.provides.build: CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj
 
 
 # Object files for target test_cv
 test_cv_OBJECTS = \
 "CMakeFiles/test_cv.dir/main.cpp.obj" \
 "CMakeFiles/test_cv.dir/IPM.cpp.obj" \
-"CMakeFiles/test_cv.dir/imagePreparation.cpp.obj" \
-"CMakeFiles/test_cv.dir/featureDetection.cpp.obj" \
-"CMakeFiles/test_cv.dir/km.cpp.obj"
+"CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj" \
+"CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj" \
+"CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj" \
+"CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj"
 
 # External object files for target test_cv
 test_cv_EXTERNAL_OBJECTS =
 
 test_cv.exe: CMakeFiles/test_cv.dir/main.cpp.obj
 test_cv.exe: CMakeFiles/test_cv.dir/IPM.cpp.obj
-test_cv.exe: CMakeFiles/test_cv.dir/imagePreparation.cpp.obj
-test_cv.exe: CMakeFiles/test_cv.dir/featureDetection.cpp.obj
-test_cv.exe: CMakeFiles/test_cv.dir/km.cpp.obj
+test_cv.exe: CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj
+test_cv.exe: CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj
+test_cv.exe: CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj
+test_cv.exe: CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj
 test_cv.exe: CMakeFiles/test_cv.dir/build.make
 test_cv.exe: D:/Facultate/c++Project/opencv_c-c-/build/install/x86/mingw/lib/libopencv_features2d320.dll.a
 test_cv.exe: D:/Facultate/c++Project/opencv_c-c-/build/install/x86/mingw/lib/libopencv_highgui320.dll.a
@@ -209,7 +236,7 @@ test_cv.exe: D:/Facultate/c++Project/opencv_c-c-/build/install/x86/mingw/lib/lib
 test_cv.exe: CMakeFiles/test_cv.dir/linklibs.rsp
 test_cv.exe: CMakeFiles/test_cv.dir/objects1.rsp
 test_cv.exe: CMakeFiles/test_cv.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable test_cv.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Facultate\c++Project\opencv_c-c-\edgeDetection\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable test_cv.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\test_cv.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -219,9 +246,10 @@ CMakeFiles/test_cv.dir/build: test_cv.exe
 
 CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/main.cpp.obj.requires
 CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/IPM.cpp.obj.requires
-CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/imagePreparation.cpp.obj.requires
-CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/featureDetection.cpp.obj.requires
-CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/km.cpp.obj.requires
+CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/ImageBasicOperations.cpp.obj.requires
+CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/FeatureDetection.cpp.obj.requires
+CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/KMeansImplementation.cpp.obj.requires
+CMakeFiles/test_cv.dir/requires: CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj.requires
 
 .PHONY : CMakeFiles/test_cv.dir/requires
 

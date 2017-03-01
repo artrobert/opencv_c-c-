@@ -9,7 +9,7 @@
 #include <ctime>
 
 #include "IPM.h"
-#include "imagePreparation.h"
+#include "ImageBasicOperations.h"
 
 using namespace cv;
 using namespace std;

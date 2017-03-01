@@ -2,7 +2,7 @@
 // Created by rartin on 21/2/2017.
 //
 
-#include "km.h"
+#include "KMeansImplementation.h"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
 

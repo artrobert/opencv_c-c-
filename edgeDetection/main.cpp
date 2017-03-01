@@ -4,7 +4,7 @@
 #include <io.h>
 
 #include "IPM.h"
-#include "imagePreparation.h"
+#include "ImageBasicOperations.h"
 
 
 using namespace cv;

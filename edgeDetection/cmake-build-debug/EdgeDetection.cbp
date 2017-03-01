@@ -86,28 +86,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/EdgeDetecting.cpp">
+			<Option target="test_cv"/>
+		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/EdgeDetecting.h">
+			<Option target="test_cv"/>
+		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/FeatureDetection.cpp">
+			<Option target="test_cv"/>
+		</Unit>
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/FeatureDetection.h">
+			<Option target="test_cv"/>
+		</Unit>
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.cpp">
 			<Option target="test_cv"/>
 		</Unit>
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h">
 			<Option target="test_cv"/>
 		</Unit>
-		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.cpp">
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/ImageBasicOperations.cpp">
 			<Option target="test_cv"/>
 		</Unit>
-		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/featureDetection.h">
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/ImageBasicOperations.h">
 			<Option target="test_cv"/>
 		</Unit>
-		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.cpp">
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/KMeansImplementation.cpp">
 			<Option target="test_cv"/>
 		</Unit>
-		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/imagePreparation.h">
-			<Option target="test_cv"/>
-		</Unit>
-		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/km.cpp">
-			<Option target="test_cv"/>
-		</Unit>
-		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/km.h">
+		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/KMeansImplementation.h">
 			<Option target="test_cv"/>
 		</Unit>
 		<Unit filename="D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp">
