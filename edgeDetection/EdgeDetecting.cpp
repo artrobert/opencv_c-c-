@@ -118,24 +118,40 @@ void putTextIntoImage(const char *pathdir, cv::Mat &src, int pointNr, int pointX
  * @param comparisonType Type of comparison TODO:
  */
 void orderAndRemoveLines(vector<Vec4i> &lines, int comparisonType) {
-    for (size_t i = 0; i < lines.size(); i++) {
+    for (size_t i = 0; i < lines.size() - 1; i++) {
         Vec4i l = lines[i];
         double line1Size = norm(Point(l[2], l[3]) - Point(l[0], l[1])); //length of the first line
-        for (size_t j = 0; j < lines.size(); j++) {
+        double lineOriginalSlope = (l[3] - l[1] / (double) (l[2] - l[0])); //slope of the first line (the reference one)
+        for (size_t j = 1; j < lines.size(); j++) {
             Vec4i l2 = lines[j];
             //if the point is around the other point
-            if ((abs(l[0] - l2[0]) <= 15 && abs(l[1] - l2[1]) <= 10) || //comparison between first point's coordinates
-                (abs(l[2] - l2[2]) <= 15 && abs(l[3] - l2[3]) <= 10)) { //comparison between second point's coordinates
-                double line2Size = norm(Point(l2[2], l2[3]) - Point(l2[0], l2[1])); //calculate the length of the second line
-                // if the lines have almost the same coordinates we keep the one with the biggest length
-                if (line1Size < line2Size) {
-                    lines[i] = lines[j];
+            if (i != j) { //to be sure we don't compare the same line
+                bool closeLinePoints = (abs(l[0] - l2[0]) <= 15 &&
+                                        abs(l[1] - l2[1]) <= 10)//comparison between first point's coordinates
+                                       || (abs(l[2] - l2[2]) <= 15 &&
+                                           abs(l[3] - l2[3]) <= 10);//comparison between second point's coordinates
+                double distinctSlope = (l2[3] - l[1] / (double) (l2[2] -
+                                                                 l[0])); // calculate the slope that the first point of the i line make with the second point of the line j
+                double distinctSlope2 = (l[3] - l2[1] / (double) (l[2] - l2[0]));
+                // ~error between the slopes must be around +-.30
+                bool closeSlopes = (abs(lineOriginalSlope - distinctSlope) <= 0.40) ||
+                                   (abs(lineOriginalSlope - distinctSlope2) <= 0.40);
+                if (closeLinePoints ||
+                    closeSlopes) { // if the points are close enough (e.g +-10px for coordinates) or their slopes are almost equal (e.g. +- 0.30) then is the same line
+                    double line2Size = norm(
+                            Point(l2[2], l2[3]) - Point(l2[0], l2[1])); //calculate the length of the second line
+                    // if the lines have almost the same coordinates we keep the one with the biggest length
+                    if (line1Size < line2Size) {
+                        lines[i] = lines[j];
+                    }
+                    lines.erase(lines.begin() +
+                                j); //erase the J line that was already copied over the one with the smaller length
+                    if (j < i) {
+                        i--;
+                        l = lines[i];
+                    }
+                    j--;
                 }
-//                else {
-//                    lines[j] = lines[i];
-//                }
-                lines.erase(lines.begin()+j); //erase the J line that was already copied over the one with the smaller length
-                j--;
             }
         }
     }
@@ -297,7 +313,9 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
 
     orderAndRemoveLines(linesAngle1, 1);
-    orderAndRemoveLines(linesAngle2, 2);
+
+
+//    orderAndRemoveLines(linesAngle2, 2);
 
     Mat oneTypeOfLines1, oneTypeOfLines2;
     oneTypeOfLines1 = gr.clone();

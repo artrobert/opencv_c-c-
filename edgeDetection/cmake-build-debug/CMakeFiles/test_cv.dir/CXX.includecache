@@ -1319,8 +1319,6 @@ opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc.hpp
 -
-io.h
--
 IPM.h
 D:/Facultate/c++Project/opencv_c-c-/edgeDetection/IPM.h
 ImageBasicOperations.h
