@@ -13,7 +13,6 @@ using namespace cv;
 using namespace std;
 
 
-int lowThreshold = 255;
 const char *window_name = "Edge Map";
 Mat detected_edges, src_gray;
 
@@ -45,6 +44,32 @@ bool comparisonFirstPointXDesc(Vec4i v1, Vec4i v2) {
  */
 bool comparisonFirstPointYAsc(Vec4i v1, Vec4i v2) {
     return (v1.val[1] <= v2.val[1]);
+}
+
+/**
+ * This function is used to sort the elements in ASCENDING order after Y and length (the line with the highest Y and the biggest length
+ * is the last in the vector )
+ * @param v1
+ * @param v2
+ * @return
+ */
+bool comparisonYmaxDMAx(Vec4i v1, Vec4i v2){
+    double d1=norm(Point(v1[2], v1[3]) - Point(v1[0], v1[1]));
+    double d2=norm(Point(v2[2], v2[3]) - Point(v2[0], v2[1]));
+    return (v1.val[1]<=v2.val[1] && d1<d2);
+}
+
+/**
+ * This function is used to sort the elements in DESCENDING order after X and length (the line with the lowest X and the biggest length
+ * is the last in the vector )
+ * @param v1
+ * @param v2
+ * @return
+ */
+bool comparisonXminDMAx(Vec4i v1, Vec4i v2){
+    double d1=norm(Point(v1[2], v1[3]) - Point(v1[0], v1[1]));
+    double d2=norm(Point(v2[2], v2[3]) - Point(v2[0], v2[1]));
+    return (v1.val[0]>=v2.val[0] && d1<d2);
 }
 
 /**
@@ -96,7 +121,7 @@ bool uniquePointComparison(Vec4i v1, Vec4i v2) {
  * @param iteration
  */
 void putTextIntoImage(const char *pathdir, cv::Mat &src, int pointNr, int pointX, int pointY, int iteration) {
-    int check = mkdir(pathdir);
+    mkdir(pathdir);
     int fontFace = FONT_HERSHEY_SIMPLEX;
     double fontScale = 2;
     int thickness = 3;
@@ -242,6 +267,32 @@ void printToSeparateFiles(vector<Vec4i> linesAngle,const char *pathdir,const cha
     imshow(windowName, matForOutput);
 }
 
+void getPointNewLocation(Vec4i &edge,double squareMulti){
+    double d1=norm(Point(edge[2], edge[3]) - Point(edge[0], edge[1]));
+    double squareDim=d1/8;
+
+//    Point2d A(bottomEdge[0],bottomEdge[1]);
+//    Point2d B(bottomEdge[2],bottomEdge[3]);
+//    Point2d C;
+//
+//    double lenAB = sqrt((A.x - B.x)*(A.x - B.x) + (A.y - B.y)*(A.y - B.y));
+//    C.x = B.x + (B.x - A.x) / d1*30;
+//    C.y = B.y + (B.y - A.y) / d1*30;
+//
+//    bottomEdge[2]= (int) C.x;
+//    bottomEdge[3]= (int) C.y;
+
+//    vector.set(x,y);
+//    vector.normalize();
+//    vector.multiply(10000);
+
+    double alpha=(edge[3] - edge[1] / (double) (edge[2] - edge[0]));
+    double x = edge[0] + squareDim*squareMulti * -cos(alpha);
+    double y = edge[1] + squareDim*squareMulti * -sin(alpha);
+    edge[2]= (int) x;
+    edge[3]= (int) y;
+}
+
 /**
  *
  * This function uses probabilistic Hough lines to identify all the lines in the image
@@ -282,8 +333,40 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 //        std::sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointXAsc);
 //        std::sort(linesAngle2.begin(), linesAngle2.end(), comparisonFirstPointYAsc);
 
-    sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointYAsc);
+    double squareMulti=2;
 
+    sort(linesAngle1.begin(), linesAngle1.end(), comparisonYmaxDMAx);
+    Vec4i bottomEdge=linesAngle1.back();
+    getPointNewLocation(bottomEdge,squareMulti);
+    linesAngle1.push_back(bottomEdge);
+
+    sort(linesAngle2.begin(), linesAngle2.end(), comparisonXminDMAx);
+    Vec4i leftEdge=linesAngle2.back();
+//    getPointNewLocation(leftEdge,squareMulti);
+    double d1=norm(Point(edge[2], edge[3]) - Point(edge[0], edge[1]));
+    double squareDim=d1/8;
+
+//    Point2d A(bottomEdge[0],bottomEdge[1]);
+//    Point2d B(bottomEdge[2],bottomEdge[3]);
+//    Point2d C;
+//
+//    double lenAB = sqrt((A.x - B.x)*(A.x - B.x) + (A.y - B.y)*(A.y - B.y));
+//    C.x = B.x + (B.x - A.x) / d1*30;
+//    C.y = B.y + (B.y - A.y) / d1*30;
+//
+//    bottomEdge[2]= (int) C.x;
+//    bottomEdge[3]= (int) C.y;
+
+//    vector.set(x,y);
+//    vector.normalize();
+//    vector.multiply(10000);
+
+    double alpha=(edge[3] - edge[1] / (double) (edge[2] - edge[0]));
+    double x = edge[0] + squareDim*squareMulti * -cos(alpha);
+    double y = edge[1] + squareDim*squareMulti * -sin(alpha);
+    edge[2]= (int) x;
+    edge[3]= (int) y;
+    linesAngle2.push_back(leftEdge);
 
 //    findSquareCoordinates(linesAngle1,linesAngle2);
 
@@ -292,16 +375,15 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
 //    orderAndRemoveLines(linesAngle2, 2);
 
-    Mat oneTypeOfLines1, oneTypeOfLines2;
-    oneTypeOfLines2 = gr.clone();
-
     printToSeparateFiles(linesAngle1,"../images/result/angle2","linesAngle2",gr);
-//    printToSeparateFiles(linesAngle2,"../images/result/anglen2","linesAngle2",gr);
+    printToSeparateFiles(linesAngle2,"../images/result/anglen2","linesAngle2",gr);
 //    printToSeparateFiles(lines,"../images/result/all","all",gr);
 
 }
 
 int kernel_size = 3;
+int lowThreshold = 255;
+
 
 void EdgeDetecting::startProcess(Mat &src) {
     /// Reduce noise with a kernel 3x3
@@ -314,6 +396,7 @@ void EdgeDetecting::startProcess(Mat &src) {
     /// Using Canny's output as a mask, we display our result
 //    dst = Scalar::all(0);
 //    src.copyTo( dst, detected_edges);
-//    imshow( "Ceva", detected_edges );
+    namedWindow("Ceva", CV_WINDOW_AUTOSIZE);
+    imshow( "Ceva", detected_edges );
 //    (dst, cdst, CV_GRAY2BGR);
 }
