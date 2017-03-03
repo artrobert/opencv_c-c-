@@ -161,54 +161,6 @@ void orderAndRemoveLines(vector<Vec4i> &lines, int comparisonType) {
     lines.erase(unique(lines.begin(), lines.end(), uniquePointComparison), lines.end());
 }
 
-
-/**
- * This method should detect the intersection of 2 lines
- */
-// Finds the intersection of two lines, or returns false.
-// The lines are defined by (o1, p1) and (o2, p2).
-bool intersection(Point2f o1, Point2f p1, Point2f o2, Point2f p2,
-                  Point2f &r) {
-    Point2f x = o2 - o1;
-    Point2f d1 = p1 - o1;
-    Point2f d2 = p2 - o2;
-
-    float cross = d1.x * d2.y - d1.y * d2.x;
-    if (abs(cross) < /*EPS*/1e-8)
-        return false;
-
-    double t1 = (x.x * d2.y - x.y * d2.x) / cross;
-    r = o1 + d1 * t1;
-    return true;
-}
-
-// Returns 1 if the lines intersect, otherwise 0. In addition, if the lines
-// intersect the intersection point may be stored in the floats i_x and i_y.
-char get_line_intersection(float p0_x, float p0_y, float p1_x, float p1_y,
-                           float p2_x, float p2_y, float p3_x, float p3_y, float *i_x, float *i_y) {
-    float s1_x, s1_y, s2_x, s2_y;
-    s1_x = p1_x - p0_x;
-    s1_y = p1_y - p0_y;
-    s2_x = p3_x - p2_x;
-    s2_y = p3_y - p2_y;
-
-    float s, t;
-    s = (-s1_y * (p0_x - p2_x) + s1_x * (p0_y - p2_y)) / (-s2_x * s1_y + s1_x * s2_y);
-    t = (s2_x * (p0_y - p2_y) - s2_y * (p0_x - p2_x)) / (-s2_x * s1_y + s1_x * s2_y);
-
-    if (s >= 0 && s <= 1 && t >= 0 && t <= 1) {
-        // Collision detected
-        if (i_x != NULL)
-            *i_x = p0_x + (t * s1_x);
-        if (i_y != NULL)
-            *i_y = p0_y + (t * s1_y);
-        return 1;
-    }
-
-    return 0; // No collision
-}
-
-
 void findSquareCoordinates(vector<Vec4i> &v1, vector<Vec4i> &v2) {
     vector<Vec4i> positiveAngleLines(v1);
     vector<Vec4i> negativeAngleLines(v2);
@@ -272,6 +224,24 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleG
     }
 }
 
+void printToSeparateFiles(vector<Vec4i> linesAngle,const char *pathdir,const char *windowName,cv::Mat &cloneForOutput){
+    Mat matForOutput=cloneForOutput.clone();
+    for (size_t i = 0; i < linesAngle.size(); i++) {
+        Vec4i l = linesAngle[i];
+        line(matForOutput, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+        Mat externalMat;
+        cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
+        line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
+        //Create jpg files with the current line and the coordinates of its extremities
+        putTextIntoImage(pathdir, externalMat, 1, l[0], l[1], i);
+        putTextIntoImage(pathdir, externalMat, 2, l[2], l[3], i);
+        printf("%d) Line P(%d,%d) P(%d,%d) slope %lf length %lf \n", i, l[0], l[1], l[2], l[3],
+               (l[3] - l[1] / (double) (l[2] - l[0])), norm(Point(l[2], l[3]) - Point(l[0], l[1])));
+    }
+    namedWindow(windowName, CV_WINDOW_AUTOSIZE);
+    imshow(windowName, matForOutput);
+}
+
 /**
  *
  * This function uses probabilistic Hough lines to identify all the lines in the image
@@ -279,6 +249,7 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleG
  * @param src The mat from where we will get the lines
  * @param gr The mat where we will write the lines for viewing
  */
+
 void houghLines(cv::Mat &src, cv::Mat &gr) {
 
     // Apply a dilation to identify more lines
@@ -311,89 +282,23 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 //        std::sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointXAsc);
 //        std::sort(linesAngle2.begin(), linesAngle2.end(), comparisonFirstPointYAsc);
 
+    sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointYAsc);
 
-    orderAndRemoveLines(linesAngle1, 1);
+
+//    findSquareCoordinates(linesAngle1,linesAngle2);
+
+//    orderAndRemoveLines(linesAngle1, 1);
 
 
 //    orderAndRemoveLines(linesAngle2, 2);
 
     Mat oneTypeOfLines1, oneTypeOfLines2;
-    oneTypeOfLines1 = gr.clone();
     oneTypeOfLines2 = gr.clone();
 
-    for (size_t i = 0; i < linesAngle1.size(); i++) {
-        Vec4i l = linesAngle1[i];
-        line(oneTypeOfLines1, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
-        Mat externalMat;
-        cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
-        line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
-        //Create jpg files with the current line and the coordinates of its extremities
-        putTextIntoImage("../images/result/angle2", externalMat, 1, l[0], l[1], i);
-        putTextIntoImage("../images/result/angle2", externalMat, 2, l[2], l[3], i);
-        printf("%d) Line P(%d,%d) P(%d,%d) slope %lf length %lf \n", i, l[0], l[1], l[2], l[3],
-               (l[3] - l[1] / (double) (l[2] - l[0])), norm(Point(l[2], l[3]) - Point(l[0], l[1])));
-    }
-    if (linesAngle2.size() > 10) {
-        Vec4i l6 = linesAngle1[8];
-        Vec4i l8 = linesAngle1[6]; // this is reference slope
-        float *rx, *ry;
-        printf(" Line P(%d,%d) P(%d,%d) slope %lf \n", l6[0], l6[1], l8[3], l8[2],
-               (l8[3] - l6[1] / (double) (l8[2] - l6[0])));
-//        printf("These lines intersect %b",
-//               get_line_intersection(l6[0], l6[1], l6[2], l6[3], l8[0], l8[1], l8[2], l8[3], rx, ry));
-    }
-    namedWindow("oneTypeOfLines1", CV_WINDOW_AUTOSIZE);
-    imshow("oneTypeOfLines1", oneTypeOfLines1);
+    printToSeparateFiles(linesAngle1,"../images/result/angle2","linesAngle2",gr);
+//    printToSeparateFiles(linesAngle2,"../images/result/anglen2","linesAngle2",gr);
+//    printToSeparateFiles(lines,"../images/result/all","all",gr);
 
-//    for (size_t i = 0; i < linesAngle2.size(); i++) {
-//        Vec4i l = linesAngle2[i];
-//        line(oneTypeOfLines2, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
-//        Mat externalMat;
-//        cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
-//        line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
-//        //Create jpg files with the current line and the coordinates of its extremities
-//        putTextIntoImage("../images/result/anglen2", externalMat, 1, l[0], l[1], i);
-//        putTextIntoImage("../images/result/anglen2", externalMat, 2, l[2], l[3], i);
-//        printf("%d) Line P(%d,%d) P(%d,%d) slope %lf length %lf \n", i, l[0], l[1], l[2], l[3],
-//               (l[3] - l[1] / (double) (l[2] - l[0])), norm(Point(l[2], l[3]) - Point(l[0], l[1])));
-//    }
-//    namedWindow("oneTypeOfLines2", CV_WINDOW_AUTOSIZE);
-//    imshow("oneTypeOfLines2", oneTypeOfLines2);
-
-//    if (linesAngle1.size() > 0 && linesAngle2.size() > 0) {
-//        findSquareCoordinates(linesAngle1, linesAngle2);
-//    }
-
-    // THIS WILL PRINT ALL THE LINES ON THE IMAGE
-//    for (size_t i = 0; i < lines.size(); i++) {
-//        Vec4i l = lines[i];
-//        //We draw the line on the mat that we will gonna show with imShow(mat)
-//        line(gr, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
-//
-//        //We use this if because the best threshold is >240 and we don't put it on 255 directly because of testing
-//        if (lowThreshold >= 240) {
-//
-//            //This will get the angle that the line is making with the X axis
-//            // Using this angle we can separate the lines into + and -
-//            Point p1, p2;
-//            p1 = Point(l[0], l[1]);
-//            p2 = Point(l[2], l[3]);
-//            double angle = atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
-//
-//            //This mat will be used in writing a jpg file
-//            //We will create a different image for every line and show the coordinates of the points that are forming the line
-//            Mat externalMat;
-//            cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
-//            line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
-//            //Create jpg files with the current line and the coordinates of its extremities
-//            putTextIntoImage(externalMat, 1, l[0], l[1], i);
-//            putTextIntoImage(externalMat, 2, l[2], l[3], i);
-//
-//            printf("Current iteration %d angles %lf  \n", i, angle);
-//        }
-//    }
-    namedWindow("detected lines", CV_WINDOW_AUTOSIZE);
-    imshow("detected lines", src_gray);
 }
 
 int kernel_size = 3;
