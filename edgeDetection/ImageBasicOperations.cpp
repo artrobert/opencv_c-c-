@@ -139,6 +139,9 @@ vector<cv::Point2f> imagePreparation::getCornerPoints(cv::Mat &src) {
         drawContours(drawing, contours, (int) i, color, 1, 8, hierarchy, 0, Point());
     }
 
+    namedWindow("bb", CV_WINDOW_AUTOSIZE);
+    imshow("bb", drawing);
+
     return corners;
 }
 

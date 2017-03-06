@@ -53,10 +53,10 @@ bool comparisonFirstPointYAsc(Vec4i v1, Vec4i v2) {
  * @param v2
  * @return
  */
-bool comparisonYmaxDMAx(Vec4i v1, Vec4i v2){
-    double d1=norm(Point(v1[2], v1[3]) - Point(v1[0], v1[1]));
-    double d2=norm(Point(v2[2], v2[3]) - Point(v2[0], v2[1]));
-    return (v1.val[1]<=v2.val[1] && d1<d2);
+bool comparisonYmaxDMAx(Vec4i v1, Vec4i v2) {
+    double d1 = norm(Point(v1[2], v1[3]) - Point(v1[0], v1[1]));
+    double d2 = norm(Point(v2[2], v2[3]) - Point(v2[0], v2[1]));
+    return (v1.val[1] <= v2.val[1] && d1 < d2);
 }
 
 /**
@@ -66,10 +66,10 @@ bool comparisonYmaxDMAx(Vec4i v1, Vec4i v2){
  * @param v2
  * @return
  */
-bool comparisonXminDMAx(Vec4i v1, Vec4i v2){
-    double d1=norm(Point(v1[2], v1[3]) - Point(v1[0], v1[1]));
-    double d2=norm(Point(v2[2], v2[3]) - Point(v2[0], v2[1]));
-    return (v1.val[0]>=v2.val[0] && d1<d2);
+bool comparisonXminDMAx(Vec4i v1, Vec4i v2) {
+    double d1 = norm(Point(v1[2], v1[3]) - Point(v1[0], v1[1]));
+    double d2 = norm(Point(v2[2], v2[3]) - Point(v2[0], v2[1]));
+    return (v1.val[0] >= v2.val[0] && d1 < d2);
 }
 
 /**
@@ -88,8 +88,28 @@ bool comparisonFirstPointYDesc(Vec4i v1, Vec4i v2) {
  * @param v2 Point line 2
  * @return true if P1's X is smaller & Y is greater than P2's X and Y false otherwise
  */
-bool comparisonFirstPointXLowYHigh(Vec4i v1, Vec4i v2) {
+bool comparisonVectorsXLowYHigh(Vec4i v1, Vec4i v2) {
     return (v1.val[0] <= v2.val[0] && v1.val[1] >= v2.val[1]);
+}
+
+bool comparisonPointsYHigh(Point v1, Point v2) {
+    return (v1.y > v2.y);
+}
+
+bool comparisonPointsYLow(Point v1, Point v2) {
+    return (v1.y < v2.y);
+}
+
+bool comparisonPointsXLow(Point v1, Point v2) {
+    return (v1.x > v2.x);
+}
+
+bool comparisonPointsXHigh(Point v1, Point v2) {
+    return (v1.x < v2.x);
+}
+
+bool comparisonPointsYHighXLow(Point v1, Point v2) {
+    return ( v1.y > v2.y && v1.x < v2.x);
 }
 
 /**
@@ -210,7 +230,7 @@ void findSquareCoordinates(vector<Vec4i> &v1, vector<Vec4i> &v2) {
     sort(positiveAngleLines.begin(), positiveAngleLines.end(), comparisonFirstPointXHighYHigh);
 
     //We sorted after the Y highest and X lowest value ASCENDING for the \ lines to get the one before the last line
-    sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXLowYHigh);
+    sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonVectorsXLowYHigh);
 
     secondLinePositive = positiveAngleLines[positiveAngleLines.size() - 1];
     positiveAngleLines.pop_back();
@@ -249,8 +269,9 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleG
     }
 }
 
-void printToSeparateFiles(vector<Vec4i> linesAngle,const char *pathdir,const char *windowName,cv::Mat &cloneForOutput){
-    Mat matForOutput=cloneForOutput.clone();
+void
+printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
+    Mat matForOutput = cloneForOutput.clone();
     for (size_t i = 0; i < linesAngle.size(); i++) {
         Vec4i l = linesAngle[i];
         line(matForOutput, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
@@ -267,30 +288,19 @@ void printToSeparateFiles(vector<Vec4i> linesAngle,const char *pathdir,const cha
     imshow(windowName, matForOutput);
 }
 
-void getPointNewLocation(Vec4i &edge,double squareMulti){
-    double d1=norm(Point(edge[2], edge[3]) - Point(edge[0], edge[1]));
-    double squareDim=d1/8;
+void getPointNewLocation(Vec4i &edge,int sqrtNr) {
+    Point starting = Point(edge[0], edge[1]);
+    Point ending = Point(edge[2], edge[3]);
+    double d = sqrt(
+            (ending.x - starting.x) * (ending.x - starting.x) + (ending.y - starting.y) * (ending.y - starting.y));
+    double density = d / 8;
+    double r = density / d * sqrtNr;
 
-//    Point2d A(bottomEdge[0],bottomEdge[1]);
-//    Point2d B(bottomEdge[2],bottomEdge[3]);
-//    Point2d C;
-//
-//    double lenAB = sqrt((A.x - B.x)*(A.x - B.x) + (A.y - B.y)*(A.y - B.y));
-//    C.x = B.x + (B.x - A.x) / d1*30;
-//    C.y = B.y + (B.y - A.y) / d1*30;
-//
-//    bottomEdge[2]= (int) C.x;
-//    bottomEdge[3]= (int) C.y;
+    double x3 = r * ending.x + (1 - r) * starting.x;
+    double y3 = r * ending.y + (1 - r) * starting.y;
 
-//    vector.set(x,y);
-//    vector.normalize();
-//    vector.multiply(10000);
-
-    double alpha=(edge[3] - edge[1] / (double) (edge[2] - edge[0]));
-    double x = edge[0] + squareDim*squareMulti * -cos(alpha);
-    double y = edge[1] + squareDim*squareMulti * -sin(alpha);
-    edge[2]= (int) x;
-    edge[3]= (int) y;
+    edge[2] = (int) x3;
+    edge[3] = (int) y3;
 }
 
 /**
@@ -333,39 +343,21 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 //        std::sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointXAsc);
 //        std::sort(linesAngle2.begin(), linesAngle2.end(), comparisonFirstPointYAsc);
 
-    double squareMulti=2;
+    double squareMulti = 2;
 
     sort(linesAngle1.begin(), linesAngle1.end(), comparisonYmaxDMAx);
     Vec4i bottomEdge=linesAngle1.back();
-    getPointNewLocation(bottomEdge,squareMulti);
-    linesAngle1.push_back(bottomEdge);
+    Vec4i b2;
+    b2[0]=bottomEdge[2];
+    b2[1]=bottomEdge[3];
+    b2[2]=bottomEdge[0];
+    b2[3]=bottomEdge[1];
+    getPointNewLocation(b2,1);
+    linesAngle1.push_back(b2);
 
     sort(linesAngle2.begin(), linesAngle2.end(), comparisonXminDMAx);
-    Vec4i leftEdge=linesAngle2.back();
-//    getPointNewLocation(leftEdge,squareMulti);
-    double d1=norm(Point(edge[2], edge[3]) - Point(edge[0], edge[1]));
-    double squareDim=d1/8;
-
-//    Point2d A(bottomEdge[0],bottomEdge[1]);
-//    Point2d B(bottomEdge[2],bottomEdge[3]);
-//    Point2d C;
-//
-//    double lenAB = sqrt((A.x - B.x)*(A.x - B.x) + (A.y - B.y)*(A.y - B.y));
-//    C.x = B.x + (B.x - A.x) / d1*30;
-//    C.y = B.y + (B.y - A.y) / d1*30;
-//
-//    bottomEdge[2]= (int) C.x;
-//    bottomEdge[3]= (int) C.y;
-
-//    vector.set(x,y);
-//    vector.normalize();
-//    vector.multiply(10000);
-
-    double alpha=(edge[3] - edge[1] / (double) (edge[2] - edge[0]));
-    double x = edge[0] + squareDim*squareMulti * -cos(alpha);
-    double y = edge[1] + squareDim*squareMulti * -sin(alpha);
-    edge[2]= (int) x;
-    edge[3]= (int) y;
+    Vec4i leftEdge = linesAngle2.back();
+    getPointNewLocation(leftEdge,1);
     linesAngle2.push_back(leftEdge);
 
 //    findSquareCoordinates(linesAngle1,linesAngle2);
@@ -375,8 +367,8 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
 //    orderAndRemoveLines(linesAngle2, 2);
 
-    printToSeparateFiles(linesAngle1,"../images/result/angle2","linesAngle2",gr);
-    printToSeparateFiles(linesAngle2,"../images/result/anglen2","linesAngle2",gr);
+    printToSeparateFiles(linesAngle1, "../images/result/angle2", "linesAngle2", gr);
+    printToSeparateFiles(linesAngle2, "../images/result/anglen2", "linesAngle2", gr);
 //    printToSeparateFiles(lines,"../images/result/all","all",gr);
 
 }
@@ -384,19 +376,78 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 int kernel_size = 3;
 int lowThreshold = 255;
 
+void getCornerList(cv::Mat &originalImage) {
+    Mat im, imGrey;
+    imGrey = imagePreparation::convertImageGreyscale(originalImage);
+    imGrey = imagePreparation::blurImage(imGrey);
+    vector<Point> corners,searchLeft,searchBottom;
+    goodFeaturesToTrack(imGrey, corners,100,0.01,20,noArray(),3,false,0.04);
+    Point lowX=corners[0];
+    Point highX=corners[0];
+    Point highY=corners[0];
+    for(Point p:corners){
+        if(p.x>highX.x){
+            highX=p;
+        }
+        if(p.x<lowX.x){
+            lowX=p;
+        }
+        if(p.y>highY.y){
+            highY=p;
+        }
+    }
+
+    for(Point p:corners){
+        if(p.y>=highX.y && p.x>=highY.x){
+            searchBottom.push_back(p);
+        }
+        if(p.y >=lowX.y && p.x<=highY.x){
+            searchLeft.push_back(p);
+
+        }
+    }
+    Mat imgrey2,imgrey3;
+    imgrey2=imGrey.clone();
+    imgrey3=imGrey.clone();
+
+    int fontFace = FONT_HERSHEY_SIMPLEX;
+    double fontScale = 1;
+    int thickness = 1;
+    for (int i = 0; i < searchLeft.size(); i++) {
+        circle(imgrey2, Point(searchLeft[i].x, searchLeft[i].y), 3, 255, 1, 8, 0);
+        char s[30];
+        sprintf(s, "(%d)", i);
+        putText(imgrey2, s, Point(searchLeft[i].x, searchLeft[i].y), fontFace, fontScale, Scalar(0, 0, 255), thickness, 8, false);
+    }
+    namedWindow("test", CV_WINDOW_AUTOSIZE);
+    imshow("test", imgrey2);
+
+    printf("line length %lf",sqrt(
+            (highX.x - highY.x) * (highX.x - highY.x) + (highX.y - highY.y) * (highX.y - highY.y)));
+
+    for (int i = 0; i < searchBottom.size(); i++) {
+        double distance=abs((highX.y-highY.y)*searchBottom[i].x - (highX.x-highY.x)*searchBottom[i].y +highX.x*highY.y - highX.y*highY.x)/sqrt((highX.y-highY.y)*(highX.y-highY.y)+(highX.x-highY.x)*(highX.x-highY.x));
+        printf("\n distance from %d) is : %lf",i,distance);
+        circle(imgrey3, Point(searchBottom[i].x, searchBottom[i].y), 3, 255, 1, 8, 0);
+        char s[30];
+        sprintf(s, "(%d)", i);
+        putText(imgrey3, s, Point(searchBottom[i].x, searchBottom[i].y), fontFace, fontScale, Scalar(0, 0, 255), thickness, 8, false);
+    }
+    namedWindow("test2", CV_WINDOW_AUTOSIZE);
+    imshow("test2", imgrey3);
+}
+
 
 void EdgeDetecting::startProcess(Mat &src) {
     /// Reduce noise with a kernel 3x3
 //    blur( src_gray, detected_edges, Size(3,3) );
     /// Canny detector
-    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
-    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+//    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
+//    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+//    namedWindow("t2", CV_WINDOW_AUTOSIZE);
+//    imshow("t2", detected_edges);
+    getCornerList(src);
 
-    houghLines(detected_edges, src_gray);
-    /// Using Canny's output as a mask, we display our result
-//    dst = Scalar::all(0);
-//    src.copyTo( dst, detected_edges);
-    namedWindow("Ceva", CV_WINDOW_AUTOSIZE);
-    imshow( "Ceva", detected_edges );
-//    (dst, cdst, CV_GRAY2BGR);
+//    houghLines(detected_edges, src_gray);
+
 }

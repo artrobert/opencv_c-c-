@@ -14,26 +14,27 @@
   <component name="ChangeListManager">
     <list default="true" id="08df883c-12d2-43ed-9f31-cbf838a61ca7" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/EdgeDetecting.cpp.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/main.cpp.obj" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/test_cv.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_9.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/objects.a" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/objects.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/manual_board_pieces_ed.jpg" afterPath="$PROJECT_DIR$/images/manual_board_pieces_ed.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_0.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_0.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_1.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_10.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_10.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_11.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_11.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_12.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_12.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_13.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_13.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_2.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_2.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_3.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_3.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_4.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_4.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_5.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_5.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_6.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_7.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_8.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/result/angle2/grey_iteration_9.jpg" afterPath="$PROJECT_DIR$/images/result/angle2/grey_iteration_9.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EdgeDetecting.cpp" afterPath="$PROJECT_DIR$/EdgeDetecting.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_cv.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageBasicOperations.cpp" afterPath="$PROJECT_DIR$/ImageBasicOperations.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,21 +48,23 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="EdgeDetection" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="EdgeDetecting.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EdgeDetecting.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="314" column="24" lean-forward="true" selection-start-line="314" selection-start-column="24" selection-end-line="314" selection-end-column="24" />
+            <state relative-caret-position="504">
+              <caret line="427" column="51" lean-forward="true" selection-start-line="427" selection-start-column="51" selection-end-line="427" selection-end-column="51" />
               <folding>
                 <element signature="e#42#68#0" expanded="true" />
-                <element signature="e#3044#3809#0" expanded="false" />
-                <element signature="e#3811#6906#0" expanded="false" />
-                <element signature="e#6974#7452#0" expanded="false" />
-                <element signature="e#7454#8364#0" expanded="false" />
-                <element signature="e#8367#10014#0" expanded="false" />
-                <element signature="e#10016#11220#0" expanded="false" />
+                <element signature="e#335#716#0" expanded="false" />
+                <element signature="e#718#1101#0" expanded="false" />
+                <element signature="e#5058#8153#0" expanded="false" />
+                <element signature="e#8155#9799#0" expanded="false" />
+                <element signature="e#9801#11005#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -70,11 +73,10 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-633">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="437">
+              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
-                <element signature="e#1621#2181#0" expanded="false" />
-                <element signature="e#2183#2204#0" expanded="false" />
+                <element signature="e#2231#2252#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,7 +99,6 @@
       <find>convexHull</find>
       <find>match</find>
       <find>warp</find>
-      <find>window_name</find>
       <find>houghLines</find>
       <find>CannyThreshold</find>
       <find>detected_edges</find>
@@ -106,6 +107,15 @@
       <find>feat</find>
       <find>detected lines</find>
       <find>slope</find>
+      <find>window_name</find>
+      <find>intersec</find>
+      <find>order</find>
+      <find>imshow</find>
+      <find>featureto</find>
+      <find>getpointnew</find>
+      <find>goodf</find>
+      <find>goo</find>
+      <find>text</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,8 +137,8 @@
         <option value="$PROJECT_DIR$/KMeans.cpp" />
         <option value="$PROJECT_DIR$/KMeansImplementation.cpp" />
         <option value="$PROJECT_DIR$/ImageBasicOperations.h" />
-        <option value="$PROJECT_DIR$/ImageBasicOperations.cpp" />
         <option value="$PROJECT_DIR$/EdgeDetecting.h" />
+        <option value="$PROJECT_DIR$/ImageBasicOperations.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/EdgeDetecting.cpp" />
       </list>
@@ -142,10 +152,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1358" />
+    <option name="y" value="-156" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,6 +185,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EdgeDetection" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edgeDetection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -183,7 +207,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="SearchEverywhereHistoryKey" value="ma&#9;FILE&#9;file://D:/Facultate/c++Project/opencv_c-c-/edgeDetection/main.cpp&#10;cm&#9;FILE&#9;file://D:/Facultate/c++Project/opencv_c-c-/edgeDetection/CMakeLists.txt&#10;c&#9;FILE&#9;file://D:/Facultate/c++Project/opencv_c-c-/edgeDetection/CMakeLists.txt&#10;cma&#9;FILE&#9;file://D:/Facultate/c++Project/opencv_c-c-/edgeDetection/CMakeLists.txt&#10;Registry&#9;ACTION&#9;ShowRegistry" />
   </component>
   <component name="RecentsManager">
@@ -415,32 +439,44 @@
       <workItem from="1488131892875" duration="104000" />
       <workItem from="1488132024353" duration="307000" />
       <workItem from="1488193464711" duration="42091000" />
-      <workItem from="1488377522058" duration="16559000" />
+      <workItem from="1488377522058" duration="17000000" />
+      <workItem from="1488470313738" duration="8198000" />
+      <workItem from="1488537839229" duration="10708000" />
+      <workItem from="1488552244849" duration="17613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158000000" />
+    <option name="totallyTimeSpent" value="194960000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="1358" y="-156" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50256413" sideWeight="0.4963119" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21880342" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5039019" sideWeight="0.5036881" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5846154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31876332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35451505" sideWeight="0.4963119" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21880342" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5039019" sideWeight="0.5036881" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.606466" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5982906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31982943" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -477,46 +513,42 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ImageBasicOperations.cpp</url>
-          <line>153</line>
+          <line>156</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/EdgeDetecting.cpp</url>
+          <line>216</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/EdgeDetecting.cpp</url>
+          <line>213</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/EdgeDetecting.cpp</url>
+          <line>413</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="92" />
+      <option name="time" value="112" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="lines[6]" />
-        <watch expression="p1" />
-        <watch expression="lenAB" />
+        <watch expression="alpha" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#1621#2181#0" expanded="false" />
-            <element signature="e#2183#2204#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1621#2181#0" expanded="false" />
-            <element signature="e#2183#2204#0" expanded="false" />
+            <element signature="e#0#32#0" expanded="false" />
+            <element signature="e#1645#2229#0" expanded="false" />
+            <element signature="e#2231#2252#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -529,13 +561,6 @@
     <entry file="file://$USER_HOME$/Desktop/opencv/sources/modules/imgproc/src/color.cpp" />
     <entry file="file://$USER_HOME$/Desktop/opencv/sources/modules/imgproc/src/contours.cpp" />
     <entry file="file://$USER_HOME$/Desktop/opencv/sources/modules/imgproc/src/drawing.cpp" />
-    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/core/types.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="596" column="24" lean-forward="false" selection-start-line="596" selection-start-column="24" selection-end-line="596" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/opencv/sources/modules/highgui/src/window.cpp" />
     <entry file="file://$PROJECT_DIR$/IPM.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -579,7 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FeatureDetection.cpp" />
     <entry file="file://$PROJECT_DIR$/KMeansImplementation.h" />
     <entry file="file://$PROJECT_DIR$/chess_pie.jpg">
       <provider selected="true" editor-type-id="images">
@@ -638,14 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/stl_algo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="4688" column="4" lean-forward="false" selection-start-line="4688" selection-start-column="4" selection-end-line="4688" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/MinGW/include/io.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -665,19 +681,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/core/matx.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1057" column="0" lean-forward="false" selection-start-line="1057" selection-start-column="0" selection-end-line="1057" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/MinGW/include/stdio.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="383" column="0" lean-forward="false" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="332" column="5" lean-forward="false" selection-start-line="332" selection-start-column="5" selection-end-line="332" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,66 +752,125 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KMeansImplementation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/src/copy.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/core/matx.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="380" column="22" lean-forward="false" selection-start-line="380" selection-start-column="22" selection-end-line="380" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="779" column="0" lean-forward="false" selection-start-line="779" selection-start-column="0" selection-end-line="779" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/core/types.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="1198" column="7" lean-forward="false" selection-start-line="1198" selection-start-column="7" selection-end-line="1198" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureDetection.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ImageBasicOperations.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="85" column="64" lean-forward="false" selection-start-line="85" selection-start-column="51" selection-end-line="85" selection-end-column="64" />
+        <state relative-caret-position="280">
+          <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
           <folding>
-            <element signature="e#4638#6310#0" expanded="false" />
+            <element signature="e#4709#6381#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/src/corner.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="286" column="0" lean-forward="false" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../build/install/include/opencv2/imgproc.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="1997" column="18" lean-forward="false" selection-start-line="1997" selection-start-column="18" selection-end-line="1997" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KMeansImplementation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="327">
+          <caret line="1879" column="18" lean-forward="false" selection-start-line="1879" selection-start-column="18" selection-end-line="1879" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-633">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="437">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
-            <element signature="e#1621#2181#0" expanded="false" />
-            <element signature="e#2183#2204#0" expanded="false" />
+            <element signature="e#2231#2252#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/stl_vector.h">
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/stl_algo.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="654" column="0" lean-forward="false" selection-start-line="654" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
+        <state relative-caret-position="218">
+          <caret line="4703" column="12" lean-forward="false" selection-start-line="4703" selection-start-column="7" selection-end-line="4703" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EdgeDetecting.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="314" column="24" lean-forward="true" selection-start-line="314" selection-start-column="24" selection-end-line="314" selection-end-column="24" />
+        <state relative-caret-position="504">
+          <caret line="427" column="51" lean-forward="true" selection-start-line="427" selection-start-column="51" selection-end-line="427" selection-end-column="51" />
           <folding>
             <element signature="e#42#68#0" expanded="true" />
-            <element signature="e#3044#3809#0" expanded="false" />
-            <element signature="e#3811#6906#0" expanded="false" />
-            <element signature="e#6974#7452#0" expanded="false" />
-            <element signature="e#7454#8364#0" expanded="false" />
-            <element signature="e#8367#10014#0" expanded="false" />
-            <element signature="e#10016#11220#0" expanded="false" />
+            <element signature="e#335#716#0" expanded="false" />
+            <element signature="e#718#1101#0" expanded="false" />
+            <element signature="e#5058#8153#0" expanded="false" />
+            <element signature="e#8155#9799#0" expanded="false" />
+            <element signature="e#9801#11005#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
