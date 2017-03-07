@@ -155,6 +155,44 @@ void putTextIntoImage(const char *pathdir, cv::Mat &src, int pointNr, int pointX
     imwrite(path, src);
 }
 
+void searchCommonSlopeAndRemove(vector<Vec4i> &lines){
+    for (size_t i = 0; i < lines.size() - 1; i++) {
+        Vec4i l = lines[i];
+        double line1Size =sqrt((l[3] -l[1])*(l[3] -l[1]) + (l[2] - l[1])*(l[2] - l[1]));
+        double lYDifference=l[3] - l[1];
+        double lXDifference=l[2] - l[0];
+        double lineOriginalSlope = lYDifference/ lXDifference ; //slope of the first line (the reference one)
+        for (size_t j = 1; j < lines.size(); j++) {
+            Vec4i l2 = lines[j];
+            if (i != j) { //to be sure we don't compare the same line
+                // calculate the slope that the first point of the i line make with the second point of the line j
+                double l2l1YDiff=l2[3] - l[1];
+                double l2l1XDiff=l2[2] - l[0];
+                double distinctSlope = l2l1YDiff / l2l1XDiff;
+                double l1l2YDiff=l[3] - l2[1];
+                double l1l2XDiff=(l[2] - l2[0]);
+                double distinctSlope2 = l1l2YDiff / l1l2XDiff;
+                // ~error between the slopes must be around +-.30
+                bool closeSlopes = (abs(lineOriginalSlope - distinctSlope) <= 0.20) ||
+                                   (abs(lineOriginalSlope - distinctSlope2) <= 0.20);
+                if(closeSlopes){
+                    double line2Size = sqrt((l2[3] -l2[1])*(l2[3] -l2[1]) + (l2[2] - l2[1])*(l2[2] - l2[1])); //calculate the length of the second line
+                    // if the lines have almost the same coordinates we keep the one with the biggest length
+                    if (line1Size < line2Size) {
+                        lines[i] = lines[j];
+                    }
+                    lines.erase(lines.begin() + j); //erase the J line that was already copied over the one with the smaller length
+                    if (j < i) {
+                        i--;
+                        l = lines[i];
+                    }
+                    j--;
+                }
+            }
+        }
+    }
+}
+
 /**
  * This will take each line and compare it with the others and if the coordinates of its P1.X/P1.Y and P2.X/P2.Y are like +/- 15&10 pixels around, they will
  * select the line with the biggest length and override the smaller one so we can easily remove after
@@ -164,29 +202,18 @@ void putTextIntoImage(const char *pathdir, cv::Mat &src, int pointNr, int pointX
  * @param src The vectorContaining the lines
  * @param comparisonType Type of comparison TODO:
  */
-void orderAndRemoveLines(vector<Vec4i> &lines, int comparisonType) {
+void searchCommonPointsAndRemove(vector<Vec4i> &lines) {
     for (size_t i = 0; i < lines.size() - 1; i++) {
         Vec4i l = lines[i];
-        double line1Size = norm(Point(l[2], l[3]) - Point(l[0], l[1])); //length of the first line
-        double lineOriginalSlope = (l[3] - l[1] / (double) (l[2] - l[0])); //slope of the first line (the reference one)
+        double line1Size = sqrt((l[3] -l[1])*(l[3] -l[1]) + (l[2] - l[1])*(l[2] - l[1])); //length of the first line
         for (size_t j = 1; j < lines.size(); j++) {
             Vec4i l2 = lines[j];
             //if the point is around the other point
             if (i != j) { //to be sure we don't compare the same line
-                bool closeLinePoints = (abs(l[0] - l2[0]) <= 15 &&
-                                        abs(l[1] - l2[1]) <= 10)//comparison between first point's coordinates
-                                       || (abs(l[2] - l2[2]) <= 15 &&
-                                           abs(l[3] - l2[3]) <= 10);//comparison between second point's coordinates
-                double distinctSlope = (l2[3] - l[1] / (double) (l2[2] -
-                                                                 l[0])); // calculate the slope that the first point of the i line make with the second point of the line j
-                double distinctSlope2 = (l[3] - l2[1] / (double) (l[2] - l2[0]));
-                // ~error between the slopes must be around +-.30
-                bool closeSlopes = (abs(lineOriginalSlope - distinctSlope) <= 0.40) ||
-                                   (abs(lineOriginalSlope - distinctSlope2) <= 0.40);
-                if (closeLinePoints ||
-                    closeSlopes) { // if the points are close enough (e.g +-10px for coordinates) or their slopes are almost equal (e.g. +- 0.30) then is the same line
-                    double line2Size = norm(
-                            Point(l2[2], l2[3]) - Point(l2[0], l2[1])); //calculate the length of the second line
+                bool closeLinePoints = (abs(l[0] - l2[0]) <= 15 && abs(l[1] - l2[1]) <= 10)//comparison between first point's coordinates
+                                       || (abs(l[2] - l2[2]) <= 15 && abs(l[3] - l2[3]) <= 10);//comparison between second point's coordinates
+                if (closeLinePoints) { // if the points are close enough (e.g +-10px for coordinates) or then is the same line
+                    double line2Size = sqrt((l2[3] -l2[1])*(l2[3] -l2[1]) + (l2[2] - l2[1])*(l2[2] - l2[1])); //calculate the length of the second line
                     // if the lines have almost the same coordinates we keep the one with the biggest length
                     if (line1Size < line2Size) {
                         lines[i] = lines[j];
@@ -202,10 +229,6 @@ void orderAndRemoveLines(vector<Vec4i> &lines, int comparisonType) {
             }
         }
     }
-
-    // This will be used so we can remove the duplicates
-//    sort(lines.begin(), lines.end(), comparisonFirstPointXAsc);
-//    lines.erase(unique(lines.begin(), lines.end(), uniquePointComparison), lines.end());
 }
 
 void findSquareCoordinates(vector<Vec4i> &v1, vector<Vec4i> &v2) {
@@ -325,8 +348,7 @@ Point getPointNewLocation(Point starting,Point ending, int sqrtNr) {
  * @param gr The mat where we will write the lines for viewing
  */
 
-void houghLines(cv::Mat &srcc, cv::Mat &gr) {
-    Mat src=srcc.clone();
+void houghLines(cv::Mat &src, cv::Mat &gr) {
 
     // Apply a dilation to identify more lines
     src = imagePreparation::dilationImage(src, 2, 3);
@@ -340,7 +362,7 @@ void houghLines(cv::Mat &srcc, cv::Mat &gr) {
     //                             threshold : Only those liens are returned that get enough votes , current is 30
     //                             minLineLength : Minimum line length. Line segments shorter than that are rejected , current is 60
     //                             maxLineGap : Maximum allowed gap between points on the same line to link them , current is 3
-    HoughLinesP(src, lines, 1, CV_PI / 180, 30, 100, 3);
+    HoughLinesP(src, lines, 1, CV_PI / 180, 30, 120, 3);
 
     // These vectors will be used to separate the lines into 2 groups depending on their line angle using the ATAN2 function
     // The results should be a VALUE1 and -VALUE1 and maybe some VALUE2,3,4 that are not important
@@ -360,17 +382,18 @@ void houghLines(cv::Mat &srcc, cv::Mat &gr) {
 
     double squareMulti = 2;
 
-
-
 //    sort(linesAngle2.begin(), linesAngle2.end(), comparisonXminDMAx);
 
 //    findSquareCoordinates(linesAngle1,linesAngle2);
 
-    orderAndRemoveLines(linesAngle1, 1);
+    searchCommonPointsAndRemove(linesAngle1);
+    searchCommonSlopeAndRemove(linesAngle1);
 //    sort(linesAngle1.begin(), linesAngle1.end(), comparisonYmaxDMAx);
 
 
-    orderAndRemoveLines(linesAngle2, 2);
+    searchCommonPointsAndRemove(linesAngle2);
+    searchCommonSlopeAndRemove(linesAngle2);
+
 
     printToSeparateFiles(linesAngle1, "../images/result/angle2", "linesAngle2", gr);
     printToSeparateFiles(linesAngle2, "../images/result/anglen2", "linesAngle2", gr);
@@ -505,12 +528,46 @@ void EdgeDetecting::startProcess(Mat &src) {
     /// Reduce noise with a kernel 3x3
 //    blur( src_gray, detected_edges, Size(3,3) );
     /// Canny detector
-    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
-    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
-//    namedWindow("t2", CV_WINDOW_AUTOSIZE);
-//    imshow("t2", detected_edges);
-    getCornerList(src);
+//    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
+//    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
 
-    houghLines(detected_edges, src_gray);
+//    getCornerList(src);
+
+//    houghLines(detected_edges, src_gray);
+
+    Mat dst, cdst;
+    Canny(src, dst, lowThreshold, lowThreshold * 3, kernel_size);
+    cvtColor(dst, cdst, CV_GRAY2BGR);
+
+    vector<Vec2f> lines;
+    HoughLines(dst, lines, 1, CV_PI/180, 120, 0, 0 );
+    vector<Vec4i> liness;
+
+    for( size_t i = 0; i < lines.size(); i++ )
+    {
+        float rho = lines[i][0], theta = lines[i][1];
+        Point pt1, pt2;
+        double a = cos(theta), b = sin(theta);
+        double x0 = a*rho, y0 = b*rho;
+        pt1.x = cvRound(x0 + 500*(-b));
+        pt1.y = cvRound(y0 + 500*(a));
+        pt2.x = cvRound(x0 - 500*(-b));
+        pt2.y = cvRound(y0 - 500*(a));
+        Vec4i v=Vec4i(pt1.x,pt1.y,pt2.x,pt2.y);
+        liness.push_back(v);
+//        line( cdst, pt1, pt2, Scalar(0,0,255), 3, CV_AA);
+    }
+
+    vector<Vec4i> angle1,angle2;
+    separateLinesByAngle(liness,2,angle1,angle2);
+    searchCommonPointsAndRemove(angle2);
+    for(Vec4i v:angle2){
+        line( cdst, Point(v[0],v[1]),Point(v[2],v[3]), Scalar(0,0,255), 3, CV_AA);
+    }
+
+
+    imshow("source", src);
+    imshow("detected lines", cdst);
+
 
 }
