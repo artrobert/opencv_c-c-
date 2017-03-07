@@ -8,6 +8,8 @@
 #include <opencv2/imgproc.hpp>
 #include <io.h>
 #include "ImageBasicOperations.h"
+#include <cmath>
+
 
 using namespace cv;
 using namespace std;
@@ -109,7 +111,7 @@ bool comparisonPointsXHigh(Point v1, Point v2) {
 }
 
 bool comparisonPointsYHighXLow(Point v1, Point v2) {
-    return ( v1.y > v2.y && v1.x < v2.x);
+    return (v1.y > v2.y && v1.x < v2.x);
 }
 
 /**
@@ -203,7 +205,7 @@ void orderAndRemoveLines(vector<Vec4i> &lines, int comparisonType) {
 
     // This will be used so we can remove the duplicates
 //    sort(lines.begin(), lines.end(), comparisonFirstPointXAsc);
-    lines.erase(unique(lines.begin(), lines.end(), uniquePointComparison), lines.end());
+//    lines.erase(unique(lines.begin(), lines.end(), uniquePointComparison), lines.end());
 }
 
 void findSquareCoordinates(vector<Vec4i> &v1, vector<Vec4i> &v2) {
@@ -269,8 +271,7 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleG
     }
 }
 
-void
-printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
+void printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
     Mat matForOutput = cloneForOutput.clone();
     for (size_t i = 0; i < linesAngle.size(); i++) {
         Vec4i l = linesAngle[i];
@@ -288,7 +289,7 @@ printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *
     imshow(windowName, matForOutput);
 }
 
-void getPointNewLocation(Vec4i &edge,int sqrtNr) {
+void getPointNewLocation(Vec4i &edge, int sqrtNr) {
     Point starting = Point(edge[0], edge[1]);
     Point ending = Point(edge[2], edge[3]);
     double d = sqrt(
@@ -303,6 +304,19 @@ void getPointNewLocation(Vec4i &edge,int sqrtNr) {
     edge[3] = (int) y3;
 }
 
+Point getPointNewLocation(Point starting,Point ending, int sqrtNr) {
+    double d = sqrt(
+            (ending.x - starting.x) * (ending.x - starting.x) + (ending.y - starting.y) * (ending.y - starting.y));
+    double density = d / 8;
+    double r = density / d * sqrtNr;
+
+    double x3 = r * ending.x + (1 - r) * starting.x;
+    double y3 = r * ending.y + (1 - r) * starting.y;
+
+    return Point(x3,y3);
+
+}
+
 /**
  *
  * This function uses probabilistic Hough lines to identify all the lines in the image
@@ -311,7 +325,8 @@ void getPointNewLocation(Vec4i &edge,int sqrtNr) {
  * @param gr The mat where we will write the lines for viewing
  */
 
-void houghLines(cv::Mat &src, cv::Mat &gr) {
+void houghLines(cv::Mat &srcc, cv::Mat &gr) {
+    Mat src=srcc.clone();
 
     // Apply a dilation to identify more lines
     src = imagePreparation::dilationImage(src, 2, 3);
@@ -345,27 +360,17 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
     double squareMulti = 2;
 
-    sort(linesAngle1.begin(), linesAngle1.end(), comparisonYmaxDMAx);
-    Vec4i bottomEdge=linesAngle1.back();
-    Vec4i b2;
-    b2[0]=bottomEdge[2];
-    b2[1]=bottomEdge[3];
-    b2[2]=bottomEdge[0];
-    b2[3]=bottomEdge[1];
-    getPointNewLocation(b2,1);
-    linesAngle1.push_back(b2);
 
-    sort(linesAngle2.begin(), linesAngle2.end(), comparisonXminDMAx);
-    Vec4i leftEdge = linesAngle2.back();
-    getPointNewLocation(leftEdge,1);
-    linesAngle2.push_back(leftEdge);
+
+//    sort(linesAngle2.begin(), linesAngle2.end(), comparisonXminDMAx);
 
 //    findSquareCoordinates(linesAngle1,linesAngle2);
 
-//    orderAndRemoveLines(linesAngle1, 1);
+    orderAndRemoveLines(linesAngle1, 1);
+//    sort(linesAngle1.begin(), linesAngle1.end(), comparisonYmaxDMAx);
 
 
-//    orderAndRemoveLines(linesAngle2, 2);
+    orderAndRemoveLines(linesAngle2, 2);
 
     printToSeparateFiles(linesAngle1, "../images/result/angle2", "linesAngle2", gr);
     printToSeparateFiles(linesAngle2, "../images/result/anglen2", "linesAngle2", gr);
@@ -380,40 +385,108 @@ void getCornerList(cv::Mat &originalImage) {
     Mat im, imGrey;
     imGrey = imagePreparation::convertImageGreyscale(originalImage);
     imGrey = imagePreparation::blurImage(imGrey);
-    vector<Point> corners,searchLeft,searchBottom;
-    goodFeaturesToTrack(imGrey, corners,100,0.01,20,noArray(),3,false,0.04);
-    Point lowX=corners[0];
-    Point highX=corners[0];
-    Point highY=corners[0];
-    for(Point p:corners){
-        if(p.x>highX.x){
-            highX=p;
+    vector<Point> corners, searchLeft, searchBottom;
+    goodFeaturesToTrack(imGrey, corners, 100, 0.01, 20, noArray(), 3, false, 0.04);
+    Point lowX = corners[0];
+    Point highX = corners[0];
+    Point highY = corners[0];
+    for (Point p:corners) {
+        if (p.x > highX.x) {
+            highX = p;
         }
-        if(p.x<lowX.x){
-            lowX=p;
+        if (p.x < lowX.x) {
+            lowX = p;
         }
-        if(p.y>highY.y){
-            highY=p;
+        if (p.y > highY.y) {
+            highY = p;
         }
     }
 
-    for(Point p:corners){
-        if(p.y>=highX.y && p.x>=highY.x){
+    Mat mask = Mat::zeros(imGrey.size(), imGrey.type());
+    line(mask, highY, highX, Scalar(255, 255, 255), 10, CV_AA);
+//    namedWindow("showMask1", CV_WINDOW_AUTOSIZE);
+//    imshow("showMask1", mask);
+    goodFeaturesToTrack(imGrey, corners, 100, 0.2, 20, mask, 3, false, 0.04);
+    for (Point p:corners) {
+        if (p.y >= highX.y && p.x >= highY.x) {
             searchBottom.push_back(p);
         }
-        if(p.y >=lowX.y && p.x<=highY.x){
+    }
+
+
+    mask = Mat::zeros(imGrey.size(), imGrey.type());
+    line(mask, highY, lowX, Scalar(255, 255, 255), 10, CV_AA);
+//    namedWindow("showMask2", CV_WINDOW_AUTOSIZE);
+//    imshow("showMask2", mask);
+    goodFeaturesToTrack(imGrey, corners, 100, 0.2, 20, mask, 3, false, 0.04);
+
+    for (Point p:corners) {
+        if (p.y >= lowX.y && p.x <= highY.x) {
             searchLeft.push_back(p);
 
         }
     }
-    Mat imgrey2,imgrey3;
-    imgrey2=imGrey.clone();
-    imgrey3=imGrey.clone();
+    sort(searchBottom.begin(),searchBottom.end(),comparisonPointsXHigh);
+    sort(searchLeft.begin(),searchLeft.end(),comparisonPointsXHigh);
+    Mat imgrey2, imgrey3;
+    imgrey2 = imGrey.clone();
+    imgrey3 = imGrey.clone();
+
 
     int fontFace = FONT_HERSHEY_SIMPLEX;
     double fontScale = 1;
     int thickness = 1;
+
+    vector<double> bottomEdgeSquareDimensions;
+    double alpha=atan2((double) (searchBottom[searchBottom.size()-1].y - searchBottom[0].y), (double) (searchBottom[searchBottom.size()-1].x - searchBottom[0].x));
+
+    double pastDim=0;
+    for(int i=0;i<searchBottom.size()-1;i++){
+        double length=sqrt(pow((double)(searchBottom[i].y - searchBottom[i+1].y),2.0) + pow((double)(searchBottom[i].x - searchBottom[i+1].x),2.0))+pastDim;
+        pastDim=length;
+        bottomEdgeSquareDimensions.push_back(length);
+    }
+
+
+    int sizeSearchLeft=searchLeft.size();
+    for(int i=0;i<sizeSearchLeft;i++){
+        for(int j=0;j<2;j++){
+            int x = (int) (searchLeft[i].x + bottomEdgeSquareDimensions[j] * cos(alpha));
+            int y = (int) (searchLeft[i].y + bottomEdgeSquareDimensions[j] * sin(alpha));
+            searchLeft.push_back(Point(x,y));
+        }
+    };
+
+
+    //this is for the bottom edge
+    for (int i = 0; i < searchBottom.size(); i++) {
+        double distance = abs((highX.y - highY.y) * searchBottom[i].x - (highX.x - highY.x) * searchBottom[i].y +
+                              highX.x * highY.y - highX.y * highY.x) /
+                          sqrt((highX.y - highY.y) * (highX.y - highY.y) + (highX.x - highY.x) * (highX.x - highY.x));
+        printf("\n distance from %d) is : %lf", i, distance);
+        if(i+1!=searchBottom.size()) {
+            printf("\n distance between point %d and %d is %lf)",
+                   i, i + 1,
+                   sqrt((searchBottom[i + 1].y - searchBottom[i].y) * (searchBottom[i + 1].y - searchBottom[i].y) +
+                        (searchBottom[i + 1].x - searchBottom[i].x) * (searchBottom[i + 1].x - searchBottom[i].x)));
+        }
+        circle(imgrey3, Point(searchBottom[i].x, searchBottom[i].y), 3, 255, 1, 8, 0);
+        char s[30];
+        sprintf(s, "(%d)", i);
+        putText(imgrey3, s, Point(searchBottom[i].x, searchBottom[i].y), fontFace, fontScale, Scalar(0, 0, 255),
+                thickness, 8, false);
+    }
+    namedWindow("test2", CV_WINDOW_AUTOSIZE);
+    imshow("test2", imgrey3);
+
+    //this is for the left edge
     for (int i = 0; i < searchLeft.size(); i++) {
+        if(i+1!=searchBottom.size()) {
+            printf("\n distance between point %d and %d is %lf)",
+                   i, i + 1,
+                   sqrt((searchLeft[i + 1].y - searchLeft[i].y) * (searchLeft[i + 1].y - searchLeft[i].y) +
+                        (searchLeft[i + 1].x - searchLeft[i].x) * (searchLeft[i + 1].x - searchLeft[i].x)));
+        }
         circle(imgrey2, Point(searchLeft[i].x, searchLeft[i].y), 3, 255, 1, 8, 0);
         char s[30];
         sprintf(s, "(%d)", i);
@@ -422,19 +495,9 @@ void getCornerList(cv::Mat &originalImage) {
     namedWindow("test", CV_WINDOW_AUTOSIZE);
     imshow("test", imgrey2);
 
-    printf("line length %lf",sqrt(
+    printf("line length %lf", sqrt(
             (highX.x - highY.x) * (highX.x - highY.x) + (highX.y - highY.y) * (highX.y - highY.y)));
 
-    for (int i = 0; i < searchBottom.size(); i++) {
-        double distance=abs((highX.y-highY.y)*searchBottom[i].x - (highX.x-highY.x)*searchBottom[i].y +highX.x*highY.y - highX.y*highY.x)/sqrt((highX.y-highY.y)*(highX.y-highY.y)+(highX.x-highY.x)*(highX.x-highY.x));
-        printf("\n distance from %d) is : %lf",i,distance);
-        circle(imgrey3, Point(searchBottom[i].x, searchBottom[i].y), 3, 255, 1, 8, 0);
-        char s[30];
-        sprintf(s, "(%d)", i);
-        putText(imgrey3, s, Point(searchBottom[i].x, searchBottom[i].y), fontFace, fontScale, Scalar(0, 0, 255), thickness, 8, false);
-    }
-    namedWindow("test2", CV_WINDOW_AUTOSIZE);
-    imshow("test2", imgrey3);
 }
 
 
@@ -442,12 +505,12 @@ void EdgeDetecting::startProcess(Mat &src) {
     /// Reduce noise with a kernel 3x3
 //    blur( src_gray, detected_edges, Size(3,3) );
     /// Canny detector
-//    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
-//    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
+    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
 //    namedWindow("t2", CV_WINDOW_AUTOSIZE);
 //    imshow("t2", detected_edges);
     getCornerList(src);
 
-//    houghLines(detected_edges, src_gray);
+    houghLines(detected_edges, src_gray);
 
 }

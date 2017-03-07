@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 
 //    Mat im,imGrey;
 //
-//    im = imagePreparation::readImage("../chess.jpg"); //read the image
+//    im = imagePreparation::readImage("../images/manual_board_pieces_ed.jpg"); //read the image
 //    namedWindow("original", CV_WINDOW_AUTOSIZE);
 //    imshow("original", im);
 
@@ -57,7 +57,7 @@ void warpImage() {
 
 void getCornerList() {
     Mat im, imGrey, originalImage;
-    originalImage = imagePreparation::readImage("../chess.jpg"); //read the image
+    originalImage = imagePreparation::readImage("../images/manual_board_pieces_ed.jpg"); //read the image
     imGrey = imagePreparation::convertImageGreyscale(originalImage);
     imGrey = imagePreparation::blurImage(imGrey);
     vector<Point> corners;
