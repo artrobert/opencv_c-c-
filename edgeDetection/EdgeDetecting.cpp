@@ -155,33 +155,35 @@ void putTextIntoImage(const char *pathdir, cv::Mat &src, int pointNr, int pointX
     imwrite(path, src);
 }
 
-void searchCommonSlopeAndRemove(vector<Vec4i> &lines){
+void searchCommonSlopeAndRemove(vector<Vec4i> &lines) {
     for (size_t i = 0; i < lines.size() - 1; i++) {
         Vec4i l = lines[i];
-        double line1Size =sqrt((l[3] -l[1])*(l[3] -l[1]) + (l[2] - l[1])*(l[2] - l[1]));
-        double lYDifference=l[3] - l[1];
-        double lXDifference=l[2] - l[0];
-        double lineOriginalSlope = lYDifference/ lXDifference ; //slope of the first line (the reference one)
+        double line1Size = sqrt((l[3] - l[1]) * (l[3] - l[1]) + (l[2] - l[1]) * (l[2] - l[1]));
+        double lYDifference = l[3] - l[1];
+        double lXDifference = l[2] - l[0];
+        double lineOriginalSlope = lYDifference / lXDifference; //slope of the first line (the reference one)
         for (size_t j = 1; j < lines.size(); j++) {
             Vec4i l2 = lines[j];
             if (i != j) { //to be sure we don't compare the same line
                 // calculate the slope that the first point of the i line make with the second point of the line j
-                double l2l1YDiff=l2[3] - l[1];
-                double l2l1XDiff=l2[2] - l[0];
+                double l2l1YDiff = l2[3] - l[1];
+                double l2l1XDiff = l2[2] - l[0];
                 double distinctSlope = l2l1YDiff / l2l1XDiff;
-                double l1l2YDiff=l[3] - l2[1];
-                double l1l2XDiff=(l[2] - l2[0]);
+                double l1l2YDiff = l[3] - l2[1];
+                double l1l2XDiff = (l[2] - l2[0]);
                 double distinctSlope2 = l1l2YDiff / l1l2XDiff;
                 // ~error between the slopes must be around +-.30
                 bool closeSlopes = (abs(lineOriginalSlope - distinctSlope) <= 0.20) ||
                                    (abs(lineOriginalSlope - distinctSlope2) <= 0.20);
-                if(closeSlopes){
-                    double line2Size = sqrt((l2[3] -l2[1])*(l2[3] -l2[1]) + (l2[2] - l2[1])*(l2[2] - l2[1])); //calculate the length of the second line
+                if (closeSlopes) {
+                    double line2Size = sqrt((l2[3] - l2[1]) * (l2[3] - l2[1]) + (l2[2] - l2[1]) * (l2[2] -
+                                                                                                   l2[1])); //calculate the length of the second line
                     // if the lines have almost the same coordinates we keep the one with the biggest length
                     if (line1Size < line2Size) {
                         lines[i] = lines[j];
                     }
-                    lines.erase(lines.begin() + j); //erase the J line that was already copied over the one with the smaller length
+                    lines.erase(lines.begin() +
+                                j); //erase the J line that was already copied over the one with the smaller length
                     if (j < i) {
                         i--;
                         l = lines[i];
@@ -205,15 +207,19 @@ void searchCommonSlopeAndRemove(vector<Vec4i> &lines){
 void searchCommonPointsAndRemove(vector<Vec4i> &lines) {
     for (size_t i = 0; i < lines.size() - 1; i++) {
         Vec4i l = lines[i];
-        double line1Size = sqrt((l[3] -l[1])*(l[3] -l[1]) + (l[2] - l[1])*(l[2] - l[1])); //length of the first line
+        double line1Size = sqrt(
+                (l[3] - l[1]) * (l[3] - l[1]) + (l[2] - l[1]) * (l[2] - l[1])); //length of the first line
         for (size_t j = 1; j < lines.size(); j++) {
             Vec4i l2 = lines[j];
             //if the point is around the other point
             if (i != j) { //to be sure we don't compare the same line
-                bool closeLinePoints = (abs(l[0] - l2[0]) <= 15 && abs(l[1] - l2[1]) <= 10)//comparison between first point's coordinates
-                                       || (abs(l[2] - l2[2]) <= 15 && abs(l[3] - l2[3]) <= 10);//comparison between second point's coordinates
+                bool closeLinePoints = (abs(l[0] - l2[0]) <= 15 &&
+                                        abs(l[1] - l2[1]) <= 10)//comparison between first point's coordinates
+                                       || (abs(l[2] - l2[2]) <= 15 &&
+                                           abs(l[3] - l2[3]) <= 10);//comparison between second point's coordinates
                 if (closeLinePoints) { // if the points are close enough (e.g +-10px for coordinates) or then is the same line
-                    double line2Size = sqrt((l2[3] -l2[1])*(l2[3] -l2[1]) + (l2[2] - l2[1])*(l2[2] - l2[1])); //calculate the length of the second line
+                    double line2Size = sqrt((l2[3] - l2[1]) * (l2[3] - l2[1]) + (l2[2] - l2[1]) * (l2[2] -
+                                                                                                   l2[1])); //calculate the length of the second line
                     // if the lines have almost the same coordinates we keep the one with the biggest length
                     if (line1Size < line2Size) {
                         lines[i] = lines[j];
@@ -294,13 +300,13 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleG
     }
 }
 
-void printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
+void
+printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
     Mat matForOutput = cloneForOutput.clone();
     for (size_t i = 0; i < linesAngle.size(); i++) {
         Vec4i l = linesAngle[i];
         line(matForOutput, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
         Mat externalMat;
-        cvtColor(detected_edges, externalMat, CV_GRAY2BGR);
         line(externalMat, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, CV_AA);
         //Create jpg files with the current line and the coordinates of its extremities
         putTextIntoImage(pathdir, externalMat, 1, l[0], l[1], i);
@@ -327,7 +333,7 @@ void getPointNewLocation(Vec4i &edge, int sqrtNr) {
     edge[3] = (int) y3;
 }
 
-Point getPointNewLocation(Point starting,Point ending, int sqrtNr) {
+Point getPointNewLocation(Point starting, Point ending, int sqrtNr) {
     double d = sqrt(
             (ending.x - starting.x) * (ending.x - starting.x) + (ending.y - starting.y) * (ending.y - starting.y));
     double density = d / 8;
@@ -336,7 +342,7 @@ Point getPointNewLocation(Point starting,Point ending, int sqrtNr) {
     double x3 = r * ending.x + (1 - r) * starting.x;
     double y3 = r * ending.y + (1 - r) * starting.y;
 
-    return Point(x3,y3);
+    return Point(x3, y3);
 
 }
 
@@ -404,11 +410,12 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 int kernel_size = 3;
 int lowThreshold = 255;
 
-void getCornerList(cv::Mat &originalImage) {
+void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<Point> &searchLeft,
+                   vector<double> &bottomEdgeSquareDimensions, vector<double> &leftEdgeSquareDimensions) {
     Mat im, imGrey;
     imGrey = imagePreparation::convertImageGreyscale(originalImage);
     imGrey = imagePreparation::blurImage(imGrey);
-    vector<Point> corners, searchLeft, searchBottom;
+    vector<Point> corners;
     goodFeaturesToTrack(imGrey, corners, 100, 0.01, 20, noArray(), 3, false, 0.04);
     Point lowX = corners[0];
     Point highX = corners[0];
@@ -449,8 +456,8 @@ void getCornerList(cv::Mat &originalImage) {
 
         }
     }
-    sort(searchBottom.begin(),searchBottom.end(),comparisonPointsXHigh);
-    sort(searchLeft.begin(),searchLeft.end(),comparisonPointsXHigh);
+    sort(searchBottom.begin(), searchBottom.end(), comparisonPointsXHigh);
+    sort(searchLeft.begin(), searchLeft.end(), comparisonPointsXHigh);
     Mat imgrey2, imgrey3;
     imgrey2 = imGrey.clone();
     imgrey3 = imGrey.clone();
@@ -460,25 +467,16 @@ void getCornerList(cv::Mat &originalImage) {
     double fontScale = 1;
     int thickness = 1;
 
-    vector<double> bottomEdgeSquareDimensions;
-    double alpha=atan2((double) (searchBottom[searchBottom.size()-1].y - searchBottom[0].y), (double) (searchBottom[searchBottom.size()-1].x - searchBottom[0].x));
-
-    double pastDim=0;
-    for(int i=0;i<searchBottom.size()-1;i++){
-        double length=sqrt(pow((double)(searchBottom[i].y - searchBottom[i+1].y),2.0) + pow((double)(searchBottom[i].x - searchBottom[i+1].x),2.0))+pastDim;
-        pastDim=length;
+    double pastDimBottom = 0, pastDimLeft = 0;
+    for (int i = 1; i < searchBottom.size(); i++) {
+        double length = sqrt(pow((double) (searchBottom[0].y - searchBottom[i].y), 2.0) +
+                             pow((double) (searchBottom[0].x - searchBottom[i].x), 2.0));
         bottomEdgeSquareDimensions.push_back(length);
+        length = sqrt(pow((double) (searchLeft[i].y - searchLeft[i + 1].y), 2.0) +
+                      pow((double) (searchLeft[i].x - searchLeft[i + 1].x), 2.0)) + pastDimLeft;
+        pastDimLeft = length;
+        leftEdgeSquareDimensions.push_back(length);
     }
-
-
-    int sizeSearchLeft=searchLeft.size();
-    for(int i=0;i<sizeSearchLeft;i++){
-        for(int j=0;j<2;j++){
-            int x = (int) (searchLeft[i].x + bottomEdgeSquareDimensions[j] * cos(alpha));
-            int y = (int) (searchLeft[i].y + bottomEdgeSquareDimensions[j] * sin(alpha));
-            searchLeft.push_back(Point(x,y));
-        }
-    };
 
 
     //this is for the bottom edge
@@ -487,7 +485,7 @@ void getCornerList(cv::Mat &originalImage) {
                               highX.x * highY.y - highX.y * highY.x) /
                           sqrt((highX.y - highY.y) * (highX.y - highY.y) + (highX.x - highY.x) * (highX.x - highY.x));
         printf("\n distance from %d) is : %lf", i, distance);
-        if(i+1!=searchBottom.size()) {
+        if (i + 1 != searchBottom.size()) {
             printf("\n distance between point %d and %d is %lf)",
                    i, i + 1,
                    sqrt((searchBottom[i + 1].y - searchBottom[i].y) * (searchBottom[i + 1].y - searchBottom[i].y) +
@@ -504,7 +502,7 @@ void getCornerList(cv::Mat &originalImage) {
 
     //this is for the left edge
     for (int i = 0; i < searchLeft.size(); i++) {
-        if(i+1!=searchBottom.size()) {
+        if (i + 1 != searchBottom.size()) {
             printf("\n distance between point %d and %d is %lf)",
                    i, i + 1,
                    sqrt((searchLeft[i + 1].y - searchLeft[i].y) * (searchLeft[i + 1].y - searchLeft[i].y) +
@@ -513,7 +511,8 @@ void getCornerList(cv::Mat &originalImage) {
         circle(imgrey2, Point(searchLeft[i].x, searchLeft[i].y), 3, 255, 1, 8, 0);
         char s[30];
         sprintf(s, "(%d)", i);
-        putText(imgrey2, s, Point(searchLeft[i].x, searchLeft[i].y), fontFace, fontScale, Scalar(0, 0, 255), thickness, 8, false);
+        putText(imgrey2, s, Point(searchLeft[i].x, searchLeft[i].y), fontFace, fontScale, Scalar(0, 0, 255), thickness,
+                8, false);
     }
     namedWindow("test", CV_WINDOW_AUTOSIZE);
     imshow("test", imgrey2);
@@ -529,9 +528,12 @@ void EdgeDetecting::startProcess(Mat &src) {
 //    blur( src_gray, detected_edges, Size(3,3) );
     /// Canny detector
 //    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
-//    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
 
-//    getCornerList(src);
+    vector<Point> bottomEdgePoints, leftEdgePoints;
+    vector<double> bottomEdgeSquareDims, leftEdgeSquareDims;
+
+    getCornerList(src, bottomEdgePoints, leftEdgePoints, bottomEdgeSquareDims, leftEdgeSquareDims);
 
 //    houghLines(detected_edges, src_gray);
 
@@ -540,34 +542,66 @@ void EdgeDetecting::startProcess(Mat &src) {
     cvtColor(dst, cdst, CV_GRAY2BGR);
 
     vector<Vec2f> lines;
-    HoughLines(dst, lines, 1, CV_PI/180, 120, 0, 0 );
+    HoughLines(dst, lines, 1, CV_PI / 180, 120, 0, 0);
     vector<Vec4i> liness;
 
-    for( size_t i = 0; i < lines.size(); i++ )
-    {
+    for (size_t i = 0; i < lines.size(); i++) {
         float rho = lines[i][0], theta = lines[i][1];
         Point pt1, pt2;
         double a = cos(theta), b = sin(theta);
-        double x0 = a*rho, y0 = b*rho;
-        pt1.x = cvRound(x0 + 500*(-b));
-        pt1.y = cvRound(y0 + 500*(a));
-        pt2.x = cvRound(x0 - 500*(-b));
-        pt2.y = cvRound(y0 - 500*(a));
-        Vec4i v=Vec4i(pt1.x,pt1.y,pt2.x,pt2.y);
+        double x0 = a * rho, y0 = b * rho;
+        pt1.x = cvRound(x0 + 250 * (-b));
+        pt1.y = cvRound(y0 + 250 * (a));
+        pt2.x = cvRound(x0 - 250 * (-b));
+        pt2.y = cvRound(y0 - 250 * (a));
+        Vec4i v = Vec4i(pt1.x, pt1.y, pt2.x, pt2.y);
         liness.push_back(v);
 //        line( cdst, pt1, pt2, Scalar(0,0,255), 3, CV_AA);
     }
 
-    vector<Vec4i> angle1,angle2;
-    separateLinesByAngle(liness,2,angle1,angle2);
-    searchCommonPointsAndRemove(angle2);
-    for(Vec4i v:angle2){
-        line( cdst, Point(v[0],v[1]),Point(v[2],v[3]), Scalar(0,0,255), 3, CV_AA);
+    vector<Vec4i> angle1, angle2;
+    separateLinesByAngle(liness, 2, angle1, angle2);
+    searchCommonPointsAndRemove(angle1);
+    sort(angle1.begin(), angle1.end(), comparisonFirstPointXAsc);
+
+    Vec4i l = angle1[0];
+
+    double lYDifference = l[3] - l[1];
+    double lXDifference = l[2] - l[0];
+    double lineOriginalSlope = lYDifference / lXDifference;
+
+    double alpha=atan2((double) (l[3] - l[1]), (double) (l[2] - l[0]));
+
+
+    int sizeSearchLeft = leftEdgePoints.size();
+    double leng=sqrt(pow((double) (bottomEdgePoints[0].y - bottomEdgePoints[bottomEdgePoints.size()-1].y), 2.0) +
+                     pow((double) (bottomEdgePoints[0].x - bottomEdgePoints[bottomEdgePoints.size()-1].x), 2.0));
+    for (int i = 0; i < 1; i++) {
+        for (int j = 1; j < 2; j++) {
+            int x = (int) (leftEdgePoints[i].x + leng * cos(alpha));
+            int y = (int) (leftEdgePoints[i].y + leng * sin(alpha));
+            leftEdgePoints.push_back(Point(x, y));
+        }
+    };
+
+    for (int i = 0; i < leftEdgePoints.size(); i++) {
+        circle(cdst, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), 3, 255, 1, 8, 0);
+        char s[30];
+        sprintf(s, "(%d)", i);
+        putText(cdst, s, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), FONT_HERSHEY_SIMPLEX, 1, Scalar(0, 0, 255), 1,
+                8, false);
     }
+    namedWindow("dsd", CV_WINDOW_AUTOSIZE);
+    imshow("dsd", cdst);
 
 
-    imshow("source", src);
-    imshow("detected lines", cdst);
+//    for (Vec4i v:angle1) {
+//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
+//    }
+//
+//
+//    imshow("source", src);
+//    imshow("detected lines", cdst);
 
 
 }
