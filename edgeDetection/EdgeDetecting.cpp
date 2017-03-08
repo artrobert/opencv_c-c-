@@ -407,7 +407,56 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
 }
 
+void tryPerspectiveCorrection(cv::Mat &src,Point &pXH,Point &pXL,Point &pYH,Point &pYL){
+    //Compute quad point for edge
+    Point Q1=pYL;
+    Point Q2=pXL;
+    Point Q3=pYH;
+    Point Q4=pXH;
+
+    // compute the size of the card by keeping aspect ratio.
+    double ratio=1;
+    double cardH=sqrt((Q3.x-Q2.x)*(Q3.x-Q2.x)+(Q3.y-Q2.y)*(Q3.y-Q2.y));//Or you can give your own height
+    double cardW=ratio*cardH;
+    Rect R(Q1.x,Q1.y,cardW,cardH);
+
+    Point R1=Point2f(R.x,R.y);
+    Point R2=Point2f(R.x+R.width,R.y);
+    Point R3=Point2f(Point2f(R.x+R.width,R.y+R.height));
+    Point R4=Point2f(Point2f(R.x,R.y+R.height));
+
+    std::vector<Point2f> quad_pts;
+    std::vector<Point2f> squre_pts;
+
+    quad_pts.push_back(Q1);
+    quad_pts.push_back(Q2);
+    quad_pts.push_back(Q3);
+    quad_pts.push_back(Q4);
+
+    squre_pts.push_back(R1);
+    squre_pts.push_back(R2);
+    squre_pts.push_back(R3);
+    squre_pts.push_back(R4);
+
+
+    Mat transmtx = getPerspectiveTransform(quad_pts,squre_pts);
+    int offsetSize=500;
+    Mat transformed = Mat::zeros(src.rows, src.cols, CV_8UC3);
+    warpPerspective(src, transformed, transmtx, transformed.size());
+
+    //rectangle(src, R, Scalar(0,255,0),1,8,0);
+
+    line(src,Q1,Q2, Scalar(0,0,255),1,CV_AA,0);
+    line(src,Q2,Q3, Scalar(0,0,255),1,CV_AA,0);
+    line(src,Q3,Q4, Scalar(0,0,255),1,CV_AA,0);
+    line(src,Q4,Q1, Scalar(0,0,255),1,CV_AA,0);
+
+    imshow("quadrilateral", transformed);
+    imshow("src",src);
+    waitKey();
+}
 int kernel_size = 3;
+
 int lowThreshold = 255;
 
 void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<Point> &searchLeft,
@@ -420,6 +469,7 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
     Point lowX = corners[0];
     Point highX = corners[0];
     Point highY = corners[0];
+    Point lowY = corners[0];
     for (Point p:corners) {
         if (p.x > highX.x) {
             highX = p;
@@ -430,7 +480,12 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
         if (p.y > highY.y) {
             highY = p;
         }
+        if(p.y < lowY.y){
+            lowY=p;
+        }
     }
+
+    tryPerspectiveCorrection(imGrey,highX,lowX,highY,lowY);
 
     Mat mask = Mat::zeros(imGrey.size(), imGrey.type());
     line(mask, highY, highX, Scalar(255, 255, 255), 10, CV_AA);
@@ -521,7 +576,6 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
             (highX.x - highY.x) * (highX.x - highY.x) + (highX.y - highY.y) * (highX.y - highY.y)));
 
 }
-
 
 void EdgeDetecting::startProcess(Mat &src) {
     /// Reduce noise with a kernel 3x3
