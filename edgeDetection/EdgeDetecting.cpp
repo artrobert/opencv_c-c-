@@ -203,7 +203,7 @@ void searchCommonSlopeAndRemove(vector<Vec4i> &lines) {
  * @param src The vectorContaining the lines
  * @param comparisonType Type of comparison TODO:
  */
-void searchCommonPointsAndRemove(vector<Vec4i> &lines) {
+void searchCommonPointsAndRemove(vector<Vec4i> &lines,int errorMarginX,int errorMarginY) {
     for (size_t i = 0; i < lines.size() - 1; i++) {
         Vec4i l = lines[i];
         double line1Size = sqrt(
@@ -212,10 +212,10 @@ void searchCommonPointsAndRemove(vector<Vec4i> &lines) {
             Vec4i l2 = lines[j];
             //if the point is around the other point
             if (i != j) { //to be sure we don't compare the same line
-                bool closeLinePoints = (abs(l[0] - l2[0]) <= 15 &&
-                                        abs(l[1] - l2[1]) <= 10)//comparison between first point's coordinates
-                                       || (abs(l[2] - l2[2]) <= 15 &&
-                                           abs(l[3] - l2[3]) <= 10);//comparison between second point's coordinates
+                bool closeLinePoints = (abs(l[0] - l2[0]) <= errorMarginX &&
+                                        abs(l[1] - l2[1]) <= errorMarginY)//comparison between first point's coordinates
+                                       || (abs(l[2] - l2[2]) <= errorMarginX &&
+                                           abs(l[3] - l2[3]) <= errorMarginY);//comparison between second point's coordinates
                 if (closeLinePoints) { // if the points are close enough (e.g +-10px for coordinates) or then is the same line
                     double line2Size = sqrt((l2[3] - l2[1]) * (l2[3] - l2[1]) + (l2[2] - l2[1]) * (l2[2] -
                                                                                                    l2[1])); //calculate the length of the second line
@@ -391,13 +391,13 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
 //    findSquareCoordinates(linesAngle1,linesAngle2);
 
-    searchCommonPointsAndRemove(linesAngle1);
-    searchCommonSlopeAndRemove(linesAngle1);
+    searchCommonPointsAndRemove(linesAngle1,20,20);
+//    searchCommonSlopeAndRemove(linesAngle1);
 //    sort(linesAngle1.begin(), linesAngle1.end(), comparisonYmaxDMAx);
 
 
-    searchCommonPointsAndRemove(linesAngle2);
-    searchCommonSlopeAndRemove(linesAngle2);
+//    searchCommonPointsAndRemove(linesAngle2);
+//    searchCommonSlopeAndRemove(linesAngle2);
 
 
     printToSeparateFiles(linesAngle1, "../images/result/angle2", "linesAngle2", gr);
@@ -450,8 +450,27 @@ void tryPerspectiveCorrection(cv::Mat &src, Point &pXH, Point &pXL, Point &pYH, 
     line(src, Q3, Q4, Scalar(0, 0, 255), 1, CV_AA, 0);
     line(src, Q4, Q1, Scalar(0, 0, 255), 1, CV_AA, 0);
 
+    Mat maskForCorners=Mat::zeros(src.size(),CV_8UC1);
+    R1.x-=20;
+    R1.y-=20;
+    R3.x+=20;
+    R3.y+=20;
+    rectangle( maskForCorners,R1,R3,Scalar( 255, 255, 255 ),-1, 8 );
+
+    transformed = imagePreparation::convertImageGreyscale(transformed);
+//    transformed = imagePreparation::blurImage(transformed);
+    vector<Point> corners;
+    goodFeaturesToTrack(transformed, corners, 200, 0.05, 20, maskForCorners, 3, false, 0.04);
+    for (int i = 0; i < corners.size(); i++) {
+        circle(transformed, Point(corners[i].x, corners[i].y), 3, 255, 1, 8, 0);
+        char s[30];
+        sprintf(s, "(%d)", i);
+        putText(transformed, s, Point(corners[i].x, corners[i].y), FONT_HERSHEY_SIMPLEX, 1, Scalar(0, 0, 255),
+                1, 8, false);
+    }
     imshow("quadrilateral", transformed);
     imshow("src", src);
+    imshow("fdsfds", maskForCorners);
     waitKey();
 }
 
@@ -614,7 +633,7 @@ void EdgeDetecting::startProcess(Mat &src) {
     cvtColor(dst, cdst, CV_GRAY2BGR);
 
     vector<Vec2f> lines;
-    HoughLines(dst, lines, 1, CV_PI / 180, 120, 0, 0);
+    HoughLines(dst, lines, 1, CV_PI / 180, 90, 0, 0);
     vector<Vec4i> liness;
 
     for (size_t i = 0; i < lines.size(); i++) {
@@ -670,14 +689,17 @@ void EdgeDetecting::startProcess(Mat &src) {
 //        circle(cdst, intersections[2], 3, 255, 1, 8, 0);
 //    }
 
-    tryPerspectiveCorrection(src,intersections[0],intersections[3],intersections[2],intersections[1]);
+//    tryPerspectiveCorrection(src,intersections[0],intersections[3],intersections[2],intersections[1]);
 
 
 
 
-//    searchCommonPointsAndRemove(angle1);
-//    sort(angle1.begin(), angle1.end(), comparisonFirstPointXAsc);
-//
+    searchCommonPointsAndRemove(angle1,20,20);
+//    searchCommonPointsAndRemove(angle2,5,5);
+//    searchCommonSlopeAndRemove(angle1);
+    sort(angle1.begin(), angle1.end(), comparisonFirstPointXAsc);
+    sort(angle2.begin(), angle2.end(), comparisonFirstPointXAsc);
+
 //    Vec4i l = angle1[0];
 //
 //    double lYDifference = l[3] - l[1];
@@ -706,13 +728,32 @@ void EdgeDetecting::startProcess(Mat &src) {
 //                8, false);
 //    }
 
+    for(int i=0;i<angle2.size()-1;i++){
+        Vec4i l=angle2[i];
+        double lastDistance=0;
+        for(int j=i+1;j<angle2.size();j++){
+            Vec4i l2=angle2[j];
+            double distance = sqrt(pow(double(l[3] - l2[3]),2.0) + pow(double(l[2] - l2[2]),2.0));
+            printf("\n distance (%d)->(%d) from (%d,%d) to (%d,%d) is : %lf",i+1,j+1, l[2],l[3],l2[2],l2[3], distance);
+            if(abs(distance-lastDistance<30)){
+                angle2.erase(angle2.begin()+j);
+                j--;
+            }else{
+                lastDistance=distance;
+
+            }
+        }
+
+    }
+    for (Vec4i v:angle2) {
+        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
+    }
+
     namedWindow("dsd", CV_WINDOW_AUTOSIZE);
     imshow("dsd", cdst);
 
 
-//    for (Vec4i v:angle1) {
-//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
-//    }
+
 //
 //
 //    imshow("source", src);
