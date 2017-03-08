@@ -8,7 +8,6 @@
 #include <opencv2/imgproc.hpp>
 #include <io.h>
 #include "ImageBasicOperations.h"
-#include <cmath>
 
 
 using namespace cv;
@@ -407,23 +406,23 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
 }
 
-void tryPerspectiveCorrection(cv::Mat &src,Point &pXH,Point &pXL,Point &pYH,Point &pYL){
+void tryPerspectiveCorrection(cv::Mat &src, Point &pXH, Point &pXL, Point &pYH, Point &pYL) {
     //Compute quad point for edge
-    Point Q1=pYL;
-    Point Q2=pXL;
-    Point Q3=pYH;
-    Point Q4=pXH;
+    Point Q1 = pYL;
+    Point Q2 = pXL;
+    Point Q3 = pYH;
+    Point Q4 = pXH;
 
     // compute the size of the card by keeping aspect ratio.
-    double ratio=1;
-    double cardH=sqrt((Q3.x-Q2.x)*(Q3.x-Q2.x)+(Q3.y-Q2.y)*(Q3.y-Q2.y));//Or you can give your own height
-    double cardW=ratio*cardH;
-    Rect R(Q1.x,Q1.y,cardW,cardH);
+    double ratio = 1;
+    double cardH = sqrt((Q3.x - Q2.x) * (Q3.x - Q2.x) + (Q3.y - Q2.y) * (Q3.y - Q2.y));//Or you can give your own height
+    double cardW = ratio * cardH;
+    Rect R(Q1.x, Q1.y, cardW, cardH);
 
-    Point R1=Point2f(R.x,R.y);
-    Point R2=Point2f(R.x+R.width,R.y);
-    Point R3=Point2f(Point2f(R.x+R.width,R.y+R.height));
-    Point R4=Point2f(Point2f(R.x,R.y+R.height));
+    Point R1 = Point2f(R.x, R.y);
+    Point R2 = Point2f(R.x + R.width, R.y);
+    Point R3 = Point2f(Point2f(R.x + R.width, R.y + R.height));
+    Point R4 = Point2f(Point2f(R.x, R.y + R.height));
 
     std::vector<Point2f> quad_pts;
     std::vector<Point2f> squre_pts;
@@ -439,22 +438,23 @@ void tryPerspectiveCorrection(cv::Mat &src,Point &pXH,Point &pXL,Point &pYH,Poin
     squre_pts.push_back(R4);
 
 
-    Mat transmtx = getPerspectiveTransform(quad_pts,squre_pts);
-    int offsetSize=500;
+    Mat transmtx = getPerspectiveTransform(quad_pts, squre_pts);
+    int offsetSize = 500;
     Mat transformed = Mat::zeros(src.rows, src.cols, CV_8UC3);
     warpPerspective(src, transformed, transmtx, transformed.size());
 
     //rectangle(src, R, Scalar(0,255,0),1,8,0);
 
-    line(src,Q1,Q2, Scalar(0,0,255),1,CV_AA,0);
-    line(src,Q2,Q3, Scalar(0,0,255),1,CV_AA,0);
-    line(src,Q3,Q4, Scalar(0,0,255),1,CV_AA,0);
-    line(src,Q4,Q1, Scalar(0,0,255),1,CV_AA,0);
+    line(src, Q1, Q2, Scalar(0, 0, 255), 1, CV_AA, 0);
+    line(src, Q2, Q3, Scalar(0, 0, 255), 1, CV_AA, 0);
+    line(src, Q3, Q4, Scalar(0, 0, 255), 1, CV_AA, 0);
+    line(src, Q4, Q1, Scalar(0, 0, 255), 1, CV_AA, 0);
 
     imshow("quadrilateral", transformed);
-    imshow("src",src);
+    imshow("src", src);
     waitKey();
 }
+
 int kernel_size = 3;
 
 int lowThreshold = 255;
@@ -480,12 +480,12 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
         if (p.y > highY.y) {
             highY = p;
         }
-        if(p.y < lowY.y){
-            lowY=p;
+        if (p.y < lowY.y) {
+            lowY = p;
         }
     }
 
-    tryPerspectiveCorrection(imGrey,highX,lowX,highY,lowY);
+//    tryPerspectiveCorrection(imGrey,highX,lowX,highY,lowY);
 
     Mat mask = Mat::zeros(imGrey.size(), imGrey.type());
     line(mask, highY, highX, Scalar(255, 255, 255), 10, CV_AA);
@@ -577,6 +577,24 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
 
 }
 
+Point2f getIntersection(Vec4i &line1, Vec4i &line2) {
+    Point2f o1 = Point(line1[0], line1[1]);
+    Point2f o2 = Point(line1[2], line1[3]);
+    Point2f p1 = Point(line2[0], line2[1]);
+    Point2f p2 = Point(line2[2], line2[3]);
+
+    Point2f x = p1 - o1;
+    Point2f d1 = o2 - o1;
+    Point2f d2 = p2 - p1;
+
+    float cross = d1.x * d2.y - d1.y * d2.x;
+    if (abs(cross) < /*EPS*/1e-8) {
+        return Point2f(0, 0);
+    }
+    double t1 = (x.x * d2.y - x.y * d2.x) / cross;
+    return (o1 + d1 * t1);
+}
+
 void EdgeDetecting::startProcess(Mat &src) {
     /// Reduce noise with a kernel 3x3
 //    blur( src_gray, detected_edges, Size(3,3) );
@@ -604,10 +622,11 @@ void EdgeDetecting::startProcess(Mat &src) {
         Point pt1, pt2;
         double a = cos(theta), b = sin(theta);
         double x0 = a * rho, y0 = b * rho;
-        pt1.x = cvRound(x0 + 250 * (-b));
-        pt1.y = cvRound(y0 + 250 * (a));
-        pt2.x = cvRound(x0 - 250 * (-b));
-        pt2.y = cvRound(y0 - 250 * (a));
+        double size = 1000;
+        pt1.x = cvRound(x0 + size * (-b));
+        pt1.y = cvRound(y0 + size * (a));
+        pt2.x = cvRound(x0 - size * (-b));
+        pt2.y = cvRound(y0 - size * (a));
         Vec4i v = Vec4i(pt1.x, pt1.y, pt2.x, pt2.y);
         liness.push_back(v);
 //        line( cdst, pt1, pt2, Scalar(0,0,255), 3, CV_AA);
@@ -615,36 +634,78 @@ void EdgeDetecting::startProcess(Mat &src) {
 
     vector<Vec4i> angle1, angle2;
     separateLinesByAngle(liness, 2, angle1, angle2);
-    searchCommonPointsAndRemove(angle1);
-    sort(angle1.begin(), angle1.end(), comparisonFirstPointXAsc);
 
-    Vec4i l = angle1[0];
+    Vec4i pozHighLine = angle1[0], pozLowLine = angle1[0], negLowLine = angle2[0], negHighLine = angle2[0];
 
-    double lYDifference = l[3] - l[1];
-    double lXDifference = l[2] - l[0];
-    double lineOriginalSlope = lYDifference / lXDifference;
-
-    double alpha=atan2((double) (l[3] - l[1]), (double) (l[2] - l[0]));
-
-
-    int sizeSearchLeft = leftEdgePoints.size();
-    double leng=sqrt(pow((double) (bottomEdgePoints[0].y - bottomEdgePoints[bottomEdgePoints.size()-1].y), 2.0) +
-                     pow((double) (bottomEdgePoints[0].x - bottomEdgePoints[bottomEdgePoints.size()-1].x), 2.0));
-    for (int i = 0; i < 1; i++) {
-        for (int j = 1; j < 2; j++) {
-            int x = (int) (leftEdgePoints[i].x + leng * cos(alpha));
-            int y = (int) (leftEdgePoints[i].y + leng * sin(alpha));
-            leftEdgePoints.push_back(Point(x, y));
+    for (Vec4i l:angle1) {
+        if (l[1] < pozLowLine[1]) {
+            pozLowLine = l;
         }
-    };
-
-    for (int i = 0; i < leftEdgePoints.size(); i++) {
-        circle(cdst, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), 3, 255, 1, 8, 0);
-        char s[30];
-        sprintf(s, "(%d)", i);
-        putText(cdst, s, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), FONT_HERSHEY_SIMPLEX, 1, Scalar(0, 0, 255), 1,
-                8, false);
+        if (l[1] > pozHighLine[1]) {
+            pozHighLine = l;
+        }
     }
+    for (Vec4i l:angle2) {
+        if (l[0] < negLowLine[0]) {
+            negLowLine = l;
+        }
+        if (l[0] > negHighLine[0]) {
+            negHighLine = l;
+        }
+    }
+
+//    line(cdst, Point(pozLowLine[0], pozLowLine[1]), Point(pozLowLine[2], pozLowLine[3]), Scalar(0, 0, 255), 3, CV_AA); //bottom line
+//     line( cdst, Point(pozHighLine[0],pozHighLine[1]), Point(pozHighLine[2],pozHighLine[3]), Scalar(0,0,255), 3, CV_AA); //top line
+//    line(cdst, Point(negLowLine[0], negLowLine[1]), Point(negLowLine[2], negLowLine[3]), Scalar(0, 0, 255), 3, CV_AA); //left line
+//     line( cdst, Point(negHighLine[0],negHighLine[1]), Point(negHighLine[2],negHighLine[3]), Scalar(0,0,255), 3, CV_AA); //right line
+
+    vector<Point> intersections;
+
+    intersections.push_back(getIntersection(pozLowLine, negLowLine)); //left point
+    intersections.push_back(getIntersection(pozLowLine, negHighLine)); //top top
+    intersections.push_back(getIntersection(pozHighLine, negLowLine)); //bottom
+    intersections.push_back(getIntersection(pozHighLine, negHighLine)); //right point
+
+//    for (Point2f r:intersections) {
+//        circle(cdst, intersections[2], 3, 255, 1, 8, 0);
+//    }
+
+    tryPerspectiveCorrection(src,intersections[0],intersections[3],intersections[2],intersections[1]);
+
+
+
+
+//    searchCommonPointsAndRemove(angle1);
+//    sort(angle1.begin(), angle1.end(), comparisonFirstPointXAsc);
+//
+//    Vec4i l = angle1[0];
+//
+//    double lYDifference = l[3] - l[1];
+//    double lXDifference = l[2] - l[0];
+//    double lineOriginalSlope = lYDifference / lXDifference;
+//
+//    double alpha=atan2((double) (l[3] - l[1]), (double) (l[2] - l[0]));
+//
+//
+//    int sizeSearchLeft = leftEdgePoints.size();
+//    double leng=sqrt(pow((double) (bottomEdgePoints[0].y - bottomEdgePoints[bottomEdgePoints.size()-1].y), 2.0) +
+//                     pow((double) (bottomEdgePoints[0].x - bottomEdgePoints[bottomEdgePoints.size()-1].x), 2.0));
+//    for (int i = 0; i < 1; i++) {
+//        for (int j = 1; j < 2; j++) {
+//            int x = (int) (leftEdgePoints[i].x + leng * cos(alpha));
+//            int y = (int) (leftEdgePoints[i].y + leng * sin(alpha));
+//            leftEdgePoints.push_back(Point(x, y));
+//        }
+//    };
+//
+//    for (int i = 0; i < leftEdgePoints.size(); i++) {
+//        circle(cdst, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), 3, 255, 1, 8, 0);
+//        char s[30];
+//        sprintf(s, "(%d)", i);
+//        putText(cdst, s, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), FONT_HERSHEY_SIMPLEX, 1, Scalar(0, 0, 255), 1,
+//                8, false);
+//    }
+
     namedWindow("dsd", CV_WINDOW_AUTOSIZE);
     imshow("dsd", cdst);
 
