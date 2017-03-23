@@ -203,7 +203,7 @@ void searchCommonSlopeAndRemove(vector<Vec4i> &lines) {
  * @param src The vectorContaining the lines
  * @param comparisonType Type of comparison TODO:
  */
-void searchCommonPointsAndRemove(vector<Vec4i> &lines,int errorMarginX,int errorMarginY) {
+void searchCommonPointsAndRemove(vector<Vec4i> &lines, int errorMarginX, int errorMarginY) {
     for (size_t i = 0; i < lines.size() - 1; i++) {
         Vec4i l = lines[i];
         double line1Size = sqrt(
@@ -215,7 +215,8 @@ void searchCommonPointsAndRemove(vector<Vec4i> &lines,int errorMarginX,int error
                 bool closeLinePoints = (abs(l[0] - l2[0]) <= errorMarginX &&
                                         abs(l[1] - l2[1]) <= errorMarginY)//comparison between first point's coordinates
                                        || (abs(l[2] - l2[2]) <= errorMarginX &&
-                                           abs(l[3] - l2[3]) <= errorMarginY);//comparison between second point's coordinates
+                                           abs(l[3] - l2[3]) <=
+                                           errorMarginY);//comparison between second point's coordinates
                 if (closeLinePoints) { // if the points are close enough (e.g +-10px for coordinates) or then is the same line
                     double line2Size = sqrt((l2[3] - l2[1]) * (l2[3] - l2[1]) + (l2[2] - l2[1]) * (l2[2] -
                                                                                                    l2[1])); //calculate the length of the second line
@@ -231,6 +232,31 @@ void searchCommonPointsAndRemove(vector<Vec4i> &lines,int errorMarginX,int error
                     }
                     j--;
                 }
+            }
+        }
+    }
+}
+
+/**
+ * This will receive a vector of lines(represented as a vector of 4 points) and will calculate the distance between the start points
+ * If they are closer than the distance limit, the second line it is compared to is erased
+ *
+ * @param $lines The vector containing the lines
+ * @param distanceLimit The max distance limit
+ */
+void searchCloseDistanceAndRemove(vector<Vec4i> &lines,int distanceLimit){
+    for (int i = 0; i < lines.size() - 1; i++) {
+        Vec4i l = lines[i];
+        double lastDistance = 0;
+        for (int j = i + 1; j < lines.size(); j++) {
+            Vec4i l2 = lines[j];
+            double distance = sqrt(pow(double(l[3] - l2[3]), 2.0) + pow(double(l[2] - l2[2]), 2.0));
+//            printf("\n distance (%d)->(%d) from (%d,%d) to (%d,%d) is : %lf", i + 1, j + 1, l[2], l[3], l2[2], l2[3], distance);
+            if (abs(distance - lastDistance < distanceLimit)) {
+                lines.erase(lines.begin() + j);
+                j--;
+            } else {
+                lastDistance = distance;
             }
         }
     }
@@ -299,8 +325,7 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleG
     }
 }
 
-void
-printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
+void printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
     Mat matForOutput = cloneForOutput.clone();
     for (size_t i = 0; i < linesAngle.size(); i++) {
         Vec4i l = linesAngle[i];
@@ -391,7 +416,7 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
 //    findSquareCoordinates(linesAngle1,linesAngle2);
 
-    searchCommonPointsAndRemove(linesAngle1,20,20);
+    searchCommonPointsAndRemove(linesAngle1, 20, 20);
 //    searchCommonSlopeAndRemove(linesAngle1);
 //    sort(linesAngle1.begin(), linesAngle1.end(), comparisonYmaxDMAx);
 
@@ -450,12 +475,12 @@ void tryPerspectiveCorrection(cv::Mat &src, Point &pXH, Point &pXL, Point &pYH, 
     line(src, Q3, Q4, Scalar(0, 0, 255), 1, CV_AA, 0);
     line(src, Q4, Q1, Scalar(0, 0, 255), 1, CV_AA, 0);
 
-    Mat maskForCorners=Mat::zeros(src.size(),CV_8UC1);
-    R1.x-=20;
-    R1.y-=20;
-    R3.x+=20;
-    R3.y+=20;
-    rectangle( maskForCorners,R1,R3,Scalar( 255, 255, 255 ),-1, 8 );
+    Mat maskForCorners = Mat::zeros(src.size(), CV_8UC1);
+    R1.x -= 20;
+    R1.y -= 20;
+    R3.x += 20;
+    R3.y += 20;
+    rectangle(maskForCorners, R1, R3, Scalar(255, 255, 255), -1, 8);
 
     transformed = imagePreparation::convertImageGreyscale(transformed);
 //    transformed = imagePreparation::blurImage(transformed);
@@ -614,30 +639,14 @@ Point2f getIntersection(Vec4i &line1, Vec4i &line2) {
     return (o1 + d1 * t1);
 }
 
-void EdgeDetecting::startProcess(Mat &src) {
-    /// Reduce noise with a kernel 3x3
-//    blur( src_gray, detected_edges, Size(3,3) );
-    /// Canny detector
-//    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
-    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+void houghSimpleLines(cv::Mat &cannyMat,vector<Vec4i> &resultLines){
 
-    vector<Point> bottomEdgePoints, leftEdgePoints;
-    vector<double> bottomEdgeSquareDims, leftEdgeSquareDims;
+    vector<Vec2f> houghResultLines;
 
-    getCornerList(src, bottomEdgePoints, leftEdgePoints, bottomEdgeSquareDims, leftEdgeSquareDims);
+    HoughLines(cannyMat, houghResultLines, 1, CV_PI / 180, 90, 0, 0);
 
-//    houghLines(detected_edges, src_gray);
-
-    Mat dst, cdst;
-    Canny(src, dst, lowThreshold, lowThreshold * 3, kernel_size);
-    cvtColor(dst, cdst, CV_GRAY2BGR);
-
-    vector<Vec2f> lines;
-    HoughLines(dst, lines, 1, CV_PI / 180, 90, 0, 0);
-    vector<Vec4i> liness;
-
-    for (size_t i = 0; i < lines.size(); i++) {
-        float rho = lines[i][0], theta = lines[i][1];
+    for (size_t i = 0; i < houghResultLines.size(); i++) {
+        float rho = houghResultLines[i][0], theta = houghResultLines[i][1];
         Point pt1, pt2;
         double a = cos(theta), b = sin(theta);
         double x0 = a * rho, y0 = b * rho;
@@ -647,16 +656,18 @@ void EdgeDetecting::startProcess(Mat &src) {
         pt2.x = cvRound(x0 - size * (-b));
         pt2.y = cvRound(y0 - size * (a));
         Vec4i v = Vec4i(pt1.x, pt1.y, pt2.x, pt2.y);
-        liness.push_back(v);
+        resultLines.push_back(v);
 //        line( cdst, pt1, pt2, Scalar(0,0,255), 3, CV_AA);
     }
+}
 
-    vector<Vec4i> angle1, angle2;
-    separateLinesByAngle(liness, 2, angle1, angle2);
+void filterAndRemoveLines(vector<Vec4i> houghLines,vector<Vec4i> &pozAngleLines,vector<Vec4i> &negAngleLines,vector<Point> &tableIntersectionPoints){
 
-    Vec4i pozHighLine = angle1[0], pozLowLine = angle1[0], negLowLine = angle2[0], negHighLine = angle2[0];
+    separateLinesByAngle(houghLines, 2, pozAngleLines, negAngleLines);
 
-    for (Vec4i l:angle1) {
+    Vec4i pozHighLine = pozAngleLines[0], pozLowLine = pozAngleLines[0], negLowLine = negAngleLines[0], negHighLine = negAngleLines[0];
+    //Search for the low line points
+    for (Vec4i l:pozAngleLines) {
         if (l[1] < pozLowLine[1]) {
             pozLowLine = l;
         }
@@ -664,7 +675,8 @@ void EdgeDetecting::startProcess(Mat &src) {
             pozHighLine = l;
         }
     }
-    for (Vec4i l:angle2) {
+    //Search for the left line points
+    for (Vec4i l:negAngleLines) {
         if (l[0] < negLowLine[0]) {
             negLowLine = l;
         }
@@ -673,32 +685,54 @@ void EdgeDetecting::startProcess(Mat &src) {
         }
     }
 
+    tableIntersectionPoints.push_back(getIntersection(pozLowLine, negLowLine)); //left point
+    tableIntersectionPoints.push_back(getIntersection(pozLowLine, negHighLine)); //top top
+    tableIntersectionPoints.push_back(getIntersection(pozHighLine, negLowLine)); //bottom
+    tableIntersectionPoints.push_back(getIntersection(pozHighLine, negHighLine)); //right point
 //    line(cdst, Point(pozLowLine[0], pozLowLine[1]), Point(pozLowLine[2], pozLowLine[3]), Scalar(0, 0, 255), 3, CV_AA); //bottom line
-//     line( cdst, Point(pozHighLine[0],pozHighLine[1]), Point(pozHighLine[2],pozHighLine[3]), Scalar(0,0,255), 3, CV_AA); //top line
+//    line( cdst, Point(pozHighLine[0],pozHighLine[1]), Point(pozHighLine[2],pozHighLine[3]), Scalar(0,0,255), 3, CV_AA); //top line
 //    line(cdst, Point(negLowLine[0], negLowLine[1]), Point(negLowLine[2], negLowLine[3]), Scalar(0, 0, 255), 3, CV_AA); //left line
-//     line( cdst, Point(negHighLine[0],negHighLine[1]), Point(negHighLine[2],negHighLine[3]), Scalar(0,0,255), 3, CV_AA); //right line
+//    line( cdst, Point(negHighLine[0],negHighLine[1]), Point(negHighLine[2],negHighLine[3]), Scalar(0,0,255), 3, CV_AA); //right line
 
-    vector<Point> intersections;
 
-    intersections.push_back(getIntersection(pozLowLine, negLowLine)); //left point
-    intersections.push_back(getIntersection(pozLowLine, negHighLine)); //top top
-    intersections.push_back(getIntersection(pozHighLine, negLowLine)); //bottom
-    intersections.push_back(getIntersection(pozHighLine, negHighLine)); //right point
+}
 
-//    for (Point2f r:intersections) {
-//        circle(cdst, intersections[2], 3, 255, 1, 8, 0);
+void EdgeDetecting::startProcess(Mat &src) {
+    /// Reduce noise with a kernel 3x3
+//    blur( src_gray, detected_edges, Size(3,3) );
+    /// Canny detector
+//    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
+    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+    vector<Point> bottomEdgePoints, leftEdgePoints;
+    vector<double> bottomEdgeSquareDims, leftEdgeSquareDims;
+    getCornerList(src, bottomEdgePoints, leftEdgePoints, bottomEdgeSquareDims, leftEdgeSquareDims);
+
+//    houghLines(detected_edges, src_gray);
+
+    Mat dst, cdst;
+    Canny(src, dst, lowThreshold, lowThreshold * 3, kernel_size);
+    cvtColor(dst, cdst, CV_GRAY2BGR);
+
+    vector<Vec4i> vecHoughLines,pozAngleLines,negativeAngleLines;
+    vector<Point> tableIntersectionPoints;
+
+    houghSimpleLines(dst,vecHoughLines);
+
+    filterAndRemoveLines(vecHoughLines,pozAngleLines,negativeAngleLines,tableIntersectionPoints);
+
+    //Change perspective
+//    for (Point2f r:tableIntersectionPoints) {
+//        circle(cdst, tableIntersectionPoints[2], 3, 255, 1, 8, 0);
 //    }
+//    tryPerspectiveCorrection(src,tableIntersectionPoints[0],tableIntersectionPoints[3],tableIntersectionPoints[2],tableIntersectionPoints[1]);
 
-//    tryPerspectiveCorrection(src,intersections[0],intersections[3],intersections[2],intersections[1]);
-
-
-
-
-    searchCommonPointsAndRemove(angle1,20,20);
-//    searchCommonPointsAndRemove(angle2,5,5);
-//    searchCommonSlopeAndRemove(angle1);
-    sort(angle1.begin(), angle1.end(), comparisonFirstPointXAsc);
-    sort(angle2.begin(), angle2.end(), comparisonFirstPointXAsc);
+    searchCommonPointsAndRemove(pozAngleLines, 20, 20);
+//    searchCommonPointsAndRemove(negativeAngleLines, 5, 5);
+//    searchCommonSlopeAndRemove(pozAngleLines);
+    sort(pozAngleLines.begin(), pozAngleLines.end(), comparisonFirstPointXAsc);
+    sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXAsc);
+//    searchCloseDistanceAndRemove(pozAngleLines,30); //distance limit 30
+    searchCloseDistanceAndRemove(negativeAngleLines,30); //distance limit 30
 
 //    Vec4i l = angle1[0];
 //
@@ -728,31 +762,13 @@ void EdgeDetecting::startProcess(Mat &src) {
 //                8, false);
 //    }
 
-    for(int i=0;i<angle2.size()-1;i++){
-        Vec4i l=angle2[i];
-        double lastDistance=0;
-        for(int j=i+1;j<angle2.size();j++){
-            Vec4i l2=angle2[j];
-            double distance = sqrt(pow(double(l[3] - l2[3]),2.0) + pow(double(l[2] - l2[2]),2.0));
-            printf("\n distance (%d)->(%d) from (%d,%d) to (%d,%d) is : %lf",i+1,j+1, l[2],l[3],l2[2],l2[3], distance);
-            if(abs(distance-lastDistance<30)){
-                angle2.erase(angle2.begin()+j);
-                j--;
-            }else{
-                lastDistance=distance;
-
-            }
-        }
-
-    }
-    for (Vec4i v:angle2) {
+    for (Vec4i v:negativeAngleLines) {
         line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
+//        break;
     }
 
     namedWindow("dsd", CV_WINDOW_AUTOSIZE);
     imshow("dsd", cdst);
-
-
 
 //
 //
