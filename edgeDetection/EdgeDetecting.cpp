@@ -823,6 +823,45 @@ void EdgeDetecting::startProcess(Mat &src) {
     printf(" %p\n",(void *) &pointMatrix[0][0]);
 
 
+    cv::Mat maskRoi=cv::Mat::zeros(src.size(),src.type());
+    cv::Mat d;
+
+    vector<Point> points;
+    points.push_back(Point((int) squareMatrix[0][0].topLeft.x, (int) squareMatrix[0][0].topLeft.y));
+    points.push_back(Point((int) squareMatrix[0][0].bottomLeft.x, (int) squareMatrix[0][0].bottomLeft.y));
+    points.push_back(Point((int) squareMatrix[0][0].bottmRight.x, (int) squareMatrix[0][0].bottmRight.y));
+    points.push_back(Point((int) squareMatrix[0][0].topRight.x, (int) squareMatrix[0][0].topRight.y));
+
+    Point rook_points[4];
+    rook_points[0]=Point((int) pointMatrix[0][0].x, (int) pointMatrix[0][0].y);
+    rook_points[1]=Point((int) pointMatrix[1][0].x, (int) pointMatrix[1][0].y);
+    rook_points[2]=Point((int) pointMatrix[1][1].x, (int) pointMatrix[1][1].y);
+    rook_points[3]=Point((int) pointMatrix[0][1].x, (int) pointMatrix[0][1].y);
+    //
+    // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
+    cv::fillConvexPoly(maskRoi,rook_points,4,cv::Scalar(255,255,255));
+
+    src.copyTo(d,maskRoi);
+    int channels[] = {0, 1};
+    MatND hist;
+    int hbins = 30, sbins = 32;
+
+    int histSize[] = {hbins, sbins};
+    float hranges[] = { 0, 180 };
+    // saturation varies from 0 (black-gray-white) to
+    // 255 (pure spectrum color)
+    float sranges[] = { 0, 256 };
+    const float* ranges[] = { hranges, sranges };
+
+    Mat histOut;
+
+    calcHist(src, 1, channels, maskRoi, // do not use mask
+                  histOut, 2, histSize, ranges,
+              true, // the histogram is uniform
+              false );
+
+    cvtColor( d, d, CV_BGR2GRAY );
+    threshold( d, d, 100, 255,0 );
 
 
 //    Point2f po=getIntersection(pozAngleLines[0],negativeAngleLines[0]);
@@ -832,7 +871,7 @@ void EdgeDetecting::startProcess(Mat &src) {
 
 
     namedWindow("dsd", CV_WINDOW_AUTOSIZE);
-    imshow("dsd", cdst);
+    imshow("dsd", d);
 
 //
 //
