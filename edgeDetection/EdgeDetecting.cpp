@@ -13,6 +13,21 @@
 using namespace cv;
 using namespace std;
 
+typedef struct chessSquare {
+    //Corners arrangement
+    // 1 4
+    // 2 3
+    Point2f topLeft;
+    Point2f topRight;
+    Point2f bottomLeft;
+    Point2f bottmRight;
+    bool color;
+    struct chessSquare *leftSquare;
+    struct chessSquare *topSquare;
+    struct chessSquare *rightSquare;
+    struct chessSquare *bottomSquare;
+    bool hasPiece;
+} chessSquare;
 
 const char *window_name = "Edge Map";
 Mat detected_edges, src_gray;
@@ -244,7 +259,7 @@ void searchCommonPointsAndRemove(vector<Vec4i> &lines, int errorMarginX, int err
  * @param $lines The vector containing the lines
  * @param distanceLimit The max distance limit
  */
-void searchCloseDistanceAndRemove(vector<Vec4i> &lines,int distanceLimit){
+void searchCloseDistanceAndRemove(vector<Vec4i> &lines, int distanceLimit) {
     for (int i = 0; i < lines.size() - 1; i++) {
         Vec4i l = lines[i];
         double lastDistance = 0;
@@ -325,7 +340,8 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, vector<Vec4i> &angleG
     }
 }
 
-void printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
+void
+printToSeparateFiles(vector<Vec4i> linesAngle, const char *pathdir, const char *windowName, cv::Mat &cloneForOutput) {
     Mat matForOutput = cloneForOutput.clone();
     for (size_t i = 0; i < linesAngle.size(); i++) {
         Vec4i l = linesAngle[i];
@@ -639,7 +655,7 @@ Point2f getIntersection(Vec4i &line1, Vec4i &line2) {
     return (o1 + d1 * t1);
 }
 
-void houghSimpleLines(cv::Mat &cannyMat,vector<Vec4i> &resultLines){
+void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
 
     vector<Vec2f> houghResultLines;
 
@@ -661,7 +677,8 @@ void houghSimpleLines(cv::Mat &cannyMat,vector<Vec4i> &resultLines){
     }
 }
 
-void filterAndRemoveLines(vector<Vec4i> houghLines,vector<Vec4i> &pozAngleLines,vector<Vec4i> &negAngleLines,vector<Point> &tableIntersectionPoints){
+void filterAndRemoveLines(vector<Vec4i> houghLines, vector<Vec4i> &pozAngleLines, vector<Vec4i> &negAngleLines,
+                          vector<Point> &tableIntersectionPoints) {
 
     separateLinesByAngle(houghLines, 2, pozAngleLines, negAngleLines);
 
@@ -713,12 +730,12 @@ void EdgeDetecting::startProcess(Mat &src) {
     Canny(src, dst, lowThreshold, lowThreshold * 3, kernel_size);
     cvtColor(dst, cdst, CV_GRAY2BGR);
 
-    vector<Vec4i> vecHoughLines,pozAngleLines,negativeAngleLines;
+    vector<Vec4i> vecHoughLines, pozAngleLines, negativeAngleLines;
     vector<Point> tableIntersectionPoints;
 
-    houghSimpleLines(dst,vecHoughLines);
+    houghSimpleLines(dst, vecHoughLines);
 
-    filterAndRemoveLines(vecHoughLines,pozAngleLines,negativeAngleLines,tableIntersectionPoints);
+    filterAndRemoveLines(vecHoughLines, pozAngleLines, negativeAngleLines, tableIntersectionPoints);
 
     //Change perspective
 //    for (Point2f r:tableIntersectionPoints) {
@@ -731,8 +748,8 @@ void EdgeDetecting::startProcess(Mat &src) {
 //    searchCommonSlopeAndRemove(pozAngleLines);
     sort(pozAngleLines.begin(), pozAngleLines.end(), comparisonFirstPointXAsc);
     sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXAsc);
-//    searchCloseDistanceAndRemove(pozAngleLines,30); //distance limit 30
-    searchCloseDistanceAndRemove(negativeAngleLines,30); //distance limit 30
+    searchCloseDistanceAndRemove(pozAngleLines, 30); //distance limit 30
+    searchCloseDistanceAndRemove(negativeAngleLines, 30); //distance limit 30
 
 //    Vec4i l = angle1[0];
 //
@@ -762,10 +779,57 @@ void EdgeDetecting::startProcess(Mat &src) {
 //                8, false);
 //    }
 
-    for (Vec4i v:negativeAngleLines) {
-        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
-//        break;
+//    for(int i = 0; i < 2; i++) {
+//        Vec4i v = pozAngleLines[i];
+//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
+//    }
+//
+//    for (int i = 0; i < 2; i++) {
+//        Vec4i v = negativeAngleLines[i];
+//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
+//    }
+
+    Point2f pointMatrix[9][9];
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+            Point2f point = getIntersection(pozAngleLines[i], negativeAngleLines[j]);
+            circle(cdst, point, 3, 255, 1, 8, 0);
+            pointMatrix[i][j] = point;
+        }
     }
+
+    chessSquare squareMatrix[8][8];
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            squareMatrix[i][j] = {};
+        }
+    }
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            squareMatrix[i][j].topLeft=pointMatrix[i][j];
+            squareMatrix[i][j].bottomLeft=pointMatrix[i + 1][j];
+            squareMatrix[i][j].bottmRight=pointMatrix[i + 1][j];
+            squareMatrix[i][j].topRight=pointMatrix[i + 1][j + 1];
+
+            squareMatrix[i][j].bottomSquare = &squareMatrix[i + i][j];
+            squareMatrix[i][j].topSquare = &squareMatrix[i - i][j];
+            squareMatrix[i][j].leftSquare = &squareMatrix[i][j - 1];
+            squareMatrix[i][j].rightSquare = &squareMatrix[i][j + 1];
+        }
+    }
+
+    printf(" %p \n",(void *) &squareMatrix[0][0].topLeft);
+    printf(" %p\n",(void *) &pointMatrix[0][0]);
+
+
+
+
+//    Point2f po=getIntersection(pozAngleLines[0],negativeAngleLines[0]);
+//
+//    circle(cdst,po, 3, 255, 1, 8, 0);
+
+
 
     namedWindow("dsd", CV_WINDOW_AUTOSIZE);
     imshow("dsd", cdst);
