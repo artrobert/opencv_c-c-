@@ -14,6 +14,8 @@ using namespace cv;
 using namespace std;
 
 typedef struct chessSquare {
+    //easier to track
+    int index;
     //Corners arrangement
     // 1 4
     // 2 3
@@ -21,7 +23,8 @@ typedef struct chessSquare {
     Point2f topRight;
     Point2f bottomLeft;
     Point2f bottmRight;
-    bool color;
+    // 1 - is white , 0 - is black
+    int color;
     struct chessSquare *leftSquare;
     struct chessSquare *topSquare;
     struct chessSquare *rightSquare;
@@ -714,6 +717,75 @@ void filterAndRemoveLines(vector<Vec4i> houghLines, vector<Vec4i> &pozAngleLines
 
 }
 
+void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f pointMatrix[9][9]) {
+
+    cv::Mat maskRoi = cv::Mat::zeros(src.size(), src.type());
+    cv::Mat maskRoiBlue = cv::Mat(src.size(), src.type(), Scalar(255, 0, 0));
+
+    cv::Mat binaryExtractedChessSquare;
+
+    Point rook_points[4];
+    rook_points[0] = Point((int) pointMatrix[0][0].x, (int) pointMatrix[0][0].y);
+    rook_points[1] = Point((int) pointMatrix[1][0].x, (int) pointMatrix[1][0].y);
+    rook_points[2] = Point((int) pointMatrix[1][1].x, (int) pointMatrix[1][1].y);
+    rook_points[3] = Point((int) pointMatrix[0][1].x, (int) pointMatrix[0][1].y);
+
+//    rook_points[0] = Point((int) pointMatrix[0][1].x, (int) pointMatrix[0][1].y);
+//    rook_points[1] = Point((int) pointMatrix[1][1].x, (int) pointMatrix[1][1].y);
+//    rook_points[2] = Point((int) pointMatrix[2][2].x, (int) pointMatrix[2][2].y);
+//    rook_points[3] = Point((int) pointMatrix[0][2].x, (int) pointMatrix[0][2].y);
+    //
+    // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
+    cv::fillConvexPoly(maskRoi, rook_points, 4, cv::Scalar(255, 255, 255));
+
+    src.copyTo(binaryExtractedChessSquare, maskRoi);
+    binaryExtractedChessSquare.copyTo(binaryExtractedChessSquare, maskRoiBlue);
+
+    cvtColor(binaryExtractedChessSquare, binaryExtractedChessSquare, CV_BGR2GRAY);
+    threshold(binaryExtractedChessSquare, binaryExtractedChessSquare, 100, 255, 0);
+
+    int black_pixels = 0, white_pixels = 0;
+    int new_black_pixels = 0, new_white_pixels = 0;
+
+    int im_width = maskRoi.cols, im_height = maskRoi.rows;
+    for (int i = 0; i < im_height; i++) {
+        for (int j = 0; j < im_width; j++) {
+            Vec3b bgrPixel = maskRoi.at<Vec3b>(i, j);
+            int val = bgrPixel[0] + bgrPixel[1] + bgrPixel[2];
+            if (val > 10) {
+                white_pixels++;
+            } else {
+                black_pixels++;
+            }
+
+            Vec3b bgrPixelBinaryImage = binaryExtractedChessSquare.at<Vec3b>(i, j);
+            int valBinary = bgrPixelBinaryImage[0] + bgrPixelBinaryImage[1] + bgrPixelBinaryImage[2];
+            if (valBinary > 10) {
+                new_white_pixels++;
+            } else {
+                new_black_pixels++;
+            }
+        }
+    }
+
+    double perc_of_white_stay_white = (new_white_pixels * 100) / white_pixels;
+    if (perc_of_white_stay_white < 50) {
+        squareMatrix[0][0].color = 0;
+    } else {
+        squareMatrix[0][0].color = 1;
+    }
+
+    for (int i = 0; i < 7; i += 2) {
+        chessSquare sq = squareMatrix[i][0];
+        while (sq.rightSquare != NULL) {
+            sq.rightSquare->color = abs(sq.color - 1);
+            sq.bottomSquare->color = abs(sq.color - 1);
+            sq = *sq.rightSquare;
+        }
+    }
+
+}
+
 void EdgeDetecting::startProcess(Mat &src) {
     /// Reduce noise with a kernel 3x3
 //    blur( src_gray, detected_edges, Size(3,3) );
@@ -804,74 +876,73 @@ void EdgeDetecting::startProcess(Mat &src) {
             squareMatrix[i][j] = {};
         }
     }
-
+    int k = 1;
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
-            squareMatrix[i][j].topLeft=pointMatrix[i][j];
-            squareMatrix[i][j].bottomLeft=pointMatrix[i + 1][j];
-            squareMatrix[i][j].bottmRight=pointMatrix[i + 1][j];
-            squareMatrix[i][j].topRight=pointMatrix[i + 1][j + 1];
+            squareMatrix[i][j].index = k;
+            squareMatrix[i][j].topLeft = pointMatrix[i][j];
+            squareMatrix[i][j].bottomLeft = pointMatrix[i + 1][j];
+            squareMatrix[i][j].bottmRight = pointMatrix[i + 1][j];
+            squareMatrix[i][j].topRight = pointMatrix[i + 1][j + 1];
 
-            squareMatrix[i][j].bottomSquare = &squareMatrix[i + i][j];
-            squareMatrix[i][j].topSquare = &squareMatrix[i - i][j];
-            squareMatrix[i][j].leftSquare = &squareMatrix[i][j - 1];
-            squareMatrix[i][j].rightSquare = &squareMatrix[i][j + 1];
+            if (i == 7) {
+                squareMatrix[i][j].bottomSquare = NULL;
+
+            } else {
+                squareMatrix[i][j].bottomSquare = &squareMatrix[i + 1][j];
+            }
+
+            if (i == 0) {
+                squareMatrix[i][j].topSquare = NULL;
+
+            } else {
+                squareMatrix[i][j].topSquare = &squareMatrix[i - 1][j];
+            }
+
+            if (j == 0) {
+                squareMatrix[i][j].leftSquare = NULL;
+            } else {
+                squareMatrix[i][j].leftSquare = &squareMatrix[i][j - 1];
+            }
+
+            if (j == 7) {
+                squareMatrix[i][j].rightSquare = NULL;
+            } else {
+                squareMatrix[i][j].rightSquare = &squareMatrix[i][j + 1];
+            }
+            k++;
         }
     }
 
-    printf(" %p \n",(void *) &squareMatrix[0][0].topLeft);
-    printf(" %p\n",(void *) &pointMatrix[0][0]);
+    printf(" %p \n", (void *) &squareMatrix[0][0].topLeft);
+    printf(" %p\n", (void *) &pointMatrix[0][0]);
 
 
-    cv::Mat maskRoi=cv::Mat::zeros(src.size(),src.type());
-    cv::Mat d;
+    determineSquareColors(src, squareMatrix, pointMatrix);
 
-    vector<Point> points;
-    points.push_back(Point((int) squareMatrix[0][0].topLeft.x, (int) squareMatrix[0][0].topLeft.y));
-    points.push_back(Point((int) squareMatrix[0][0].bottomLeft.x, (int) squareMatrix[0][0].bottomLeft.y));
-    points.push_back(Point((int) squareMatrix[0][0].bottmRight.x, (int) squareMatrix[0][0].bottmRight.y));
-    points.push_back(Point((int) squareMatrix[0][0].topRight.x, (int) squareMatrix[0][0].topRight.y));
 
-    Point rook_points[4];
-    rook_points[0]=Point((int) pointMatrix[0][0].x, (int) pointMatrix[0][0].y);
-    rook_points[1]=Point((int) pointMatrix[1][0].x, (int) pointMatrix[1][0].y);
-    rook_points[2]=Point((int) pointMatrix[1][1].x, (int) pointMatrix[1][1].y);
-    rook_points[3]=Point((int) pointMatrix[0][1].x, (int) pointMatrix[0][1].y);
-    //
-    // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
-    cv::fillConvexPoly(maskRoi,rook_points,4,cv::Scalar(255,255,255));
 
-    src.copyTo(d,maskRoi);
-    int channels[] = {0, 1};
-    MatND hist;
-    int hbins = 30, sbins = 32;
 
-    int histSize[] = {hbins, sbins};
-    float hranges[] = { 0, 180 };
-    // saturation varies from 0 (black-gray-white) to
-    // 255 (pure spectrum color)
-    float sranges[] = { 0, 256 };
-    const float* ranges[] = { hranges, sranges };
 
-    Mat histOut;
-
-    calcHist(src, 1, channels, maskRoi, // do not use mask
-                  histOut, 2, histSize, ranges,
-              true, // the histogram is uniform
-              false );
-
-    cvtColor( d, d, CV_BGR2GRAY );
-    threshold( d, d, 100, 255,0 );
+//
+//    cvtColor( d, d, CV_BGR2GRAY );
+//    threshold( d, d, 100, 255,0 );
 
 
 //    Point2f po=getIntersection(pozAngleLines[0],negativeAngleLines[0]);
 //
 //    circle(cdst,po, 3, 255, 1, 8, 0);
 
+    for(int i=0;i<8;i++){
+        for(int j=0;j<8;j++){
+            printf("%d  ",squareMatrix[i][j].color);
+        }
+        printf("\n");
+    }
 
 
     namedWindow("dsd", CV_WINDOW_AUTOSIZE);
-    imshow("dsd", d);
+//    imshow("dsd", d);
 
 //
 //
