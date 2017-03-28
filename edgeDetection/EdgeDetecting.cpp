@@ -738,6 +738,7 @@ void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f
     // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
     cv::fillConvexPoly(maskRoi, rook_points, 4, cv::Scalar(255, 255, 255));
 
+
     src.copyTo(binaryExtractedChessSquare, maskRoi);
     binaryExtractedChessSquare.copyTo(binaryExtractedChessSquare, maskRoiBlue);
 
@@ -784,6 +785,88 @@ void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f
         }
     }
 
+}
+
+Mat canny_thresh_src,canny_thresh_gray;
+Mat canny_thresh_dst,canny_thresh_detected_edges;
+int canny_low_threshold;
+int const canny_max_lowThreshold = 100;
+
+RNG rng(12345);
+
+void CannyThreshold(int, void*)
+{
+    /// Reduce noise with a kernel 3x3
+    blur( canny_thresh_gray, canny_thresh_detected_edges, Size(3,3) );
+
+    /// Canny detector
+    Canny( canny_thresh_gray, canny_thresh_detected_edges, canny_low_threshold, canny_low_threshold*2, 3 );
+
+    vector<vector<Point> > contours;
+    vector<Vec4i> hierarchy;
+    findContours( canny_thresh_detected_edges, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
+
+//    /// Using Canny's output as a mask, we display our result
+//    canny_thresh_dst = Scalar::all(0);
+//
+//    canny_thresh_src.copyTo( canny_thresh_dst, canny_thresh_detected_edges);
+//    imshow( "show canny thresh", canny_thresh_dst );
+    /// Draw contours
+    Mat drawing = Mat::zeros( canny_thresh_detected_edges.size(), CV_8UC3 );
+    for( int i = 0; i< contours.size(); i++ )
+    {
+        Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
+        drawContours( drawing, contours, i, color, 1, 8, hierarchy, 0, Point() );
+    }
+
+    /// Show in a window
+    imshow( "show canny thresh", drawing );
+}
+
+void GammaCorrection(Mat& src, Mat& dst, float fGamma)
+{
+    CV_Assert(src.data);
+
+    // accept only char type matrices
+    CV_Assert(src.depth() != sizeof(uchar));
+
+    // build look up table
+    unsigned char lut[256];
+    for (int i = 0; i < 256; i++)
+    {
+        lut[i] = saturate_cast<uchar>(pow((float)(i / 255.0), fGamma) * 255.0f);
+    }
+
+    dst = src.clone();
+    const int channels = dst.channels();
+    switch (channels)
+    {
+        case 1:
+        {
+
+            MatIterator_<uchar> it, end;
+            for (it = dst.begin<uchar>(), end = dst.end<uchar>(); it != end; it++)
+                //*it = pow((float)(((*it))/255.0), fGamma) * 255.0;
+                *it = lut[(*it)];
+
+            break;
+        }
+        case 3:
+        {
+
+            MatIterator_<Vec3b> it, end;
+            for (it = dst.begin<Vec3b>(), end = dst.end<Vec3b>(); it != end; it++)
+            {
+
+                (*it)[0] = lut[((*it)[0])];
+                (*it)[1] = lut[((*it)[1])];
+                (*it)[2] = lut[((*it)[2])];
+            }
+
+            break;
+
+        }
+    }
 }
 
 void EdgeDetecting::startProcess(Mat &src) {
@@ -882,8 +965,8 @@ void EdgeDetecting::startProcess(Mat &src) {
             squareMatrix[i][j].index = k;
             squareMatrix[i][j].topLeft = pointMatrix[i][j];
             squareMatrix[i][j].bottomLeft = pointMatrix[i + 1][j];
-            squareMatrix[i][j].bottmRight = pointMatrix[i + 1][j];
-            squareMatrix[i][j].topRight = pointMatrix[i + 1][j + 1];
+            squareMatrix[i][j].bottmRight = pointMatrix[i + 1][j+1];
+            squareMatrix[i][j].topRight = pointMatrix[i][j+1];
 
             if (i == 7) {
                 squareMatrix[i][j].bottomSquare = NULL;
@@ -920,10 +1003,6 @@ void EdgeDetecting::startProcess(Mat &src) {
 
     determineSquareColors(src, squareMatrix, pointMatrix);
 
-
-
-
-
 //
 //    cvtColor( d, d, CV_BGR2GRAY );
 //    threshold( d, d, 100, 255,0 );
@@ -940,9 +1019,36 @@ void EdgeDetecting::startProcess(Mat &src) {
         printf("\n");
     }
 
+    Point rook_points[4];
+    rook_points[0] = squareMatrix[5][3].topLeft; //top left
+    rook_points[1] = squareMatrix[5][3].bottomLeft; //bot left
+    rook_points[2] = squareMatrix[5][3].bottmRight; //bot right
+    rook_points[3] = squareMatrix[5][3].topRight; //top right
 
-    namedWindow("dsd", CV_WINDOW_AUTOSIZE);
-//    imshow("dsd", d);
+    namedWindow( "show canny thresh", CV_WINDOW_AUTOSIZE );
+
+    cv::Mat exSquare;
+    cv::Mat maskRoi = cv::Mat::zeros(src.size(), src.type());
+
+    // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
+    cv::fillConvexPoly(maskRoi, rook_points, 4, cv::Scalar(255, 255, 255));
+    src.copyTo(canny_thresh_src, maskRoi);
+
+//    canny_thresh_src.convertTo(canny_thresh_src, -1, 4, 1);
+    GammaCorrection(canny_thresh_src, canny_thresh_src,0.1);
+
+    imshow("2", dst);
+    imshow("dsd", canny_thresh_src);
+
+
+
+    cvtColor( canny_thresh_src, canny_thresh_gray, CV_BGR2GRAY );
+    createTrackbar( "Min Threshold:", "show canny thresh", &canny_low_threshold, 255, CannyThreshold );
+    CannyThreshold(0, 0);
+
+
+//    namedWindow("dsd", CV_WINDOW_AUTOSIZE);
+//    imshow("dsd", canny_thresh_src);
 
 //
 //
