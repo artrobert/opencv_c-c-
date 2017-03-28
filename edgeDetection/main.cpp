@@ -42,17 +42,22 @@ int detectEdges();
 
 int useEqualize = 0;
 int th1, blursSize;
+int saturation = 0;
+int scale = 1;
 const std::string winName = "Tuna fish";
 cv::Mat src, dst;
 cv::Mat brightness;
 
-void onTunaFishTrackbar(int, void*)
-{
+void onTunaFishTrackbar(int, void *) {
     cv::Mat hist, histImg, tmp;
     brightness.copyTo(tmp);
 
-    if (blursSize >= 3)
-    {
+    if (saturation >= 2) {
+        tmp.convertTo(tmp, CV_8UC1, scale, saturation);
+    }
+    cv::imshow("Result Fish Saturation", tmp);
+
+    if (blursSize >= 3) {
         blursSize += (1 - blursSize % 2);
         cv::GaussianBlur(tmp, tmp, cv::Size(blursSize, blursSize), 0);
     }
@@ -75,15 +80,13 @@ void onTunaFishTrackbar(int, void*)
     src.copyTo(dst);
     double maxDim = 0;
     int largest = -1;
-    for (int i = 0; i< contours.size(); i++)
-    {
+    for (int i = 0; i < contours.size(); i++) {
         // draw all contours in red
         cv::drawContours(dst, contours, largest, cv::Scalar(0, 0, 255), 1);
         int dim = contours[i].size(); //area is more accurate but more expensive
         //double dim = contourArea(contours[i]);
         //double dim = cvRound(arcLength(contours[i], true));
-        if (dim> maxDim)
-        {
+        if (dim > maxDim) {
             maxDim = dim;
             largest = i;
         }
@@ -93,8 +96,7 @@ void onTunaFishTrackbar(int, void*)
     cv::Mat fishMask = cv::Mat::zeros(src.size(), CV_8UC1);
     //The tuna as contour
     vector<cv::Point> theFish;
-    if (largest >= 0)
-    {
+    if (largest >= 0) {
         theFish = contours[largest];
         // draw selected contour in bold green
         cv::polylines(dst, theFish, true, cv::Scalar(0, 255, 0), 2);
@@ -107,24 +109,22 @@ void onTunaFishTrackbar(int, void*)
     cv::imwrite("../img/Result.png", dst);
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char *argv[]) {
     src = cv::imread("../images/shape_black_on_black.jpg");
-    Size size(500,500);
-    resize(src,src,size);
+    Size size(500, 500);
+    resize(src, src, size);
 
-    Mat saturated;
+//    Mat saturated;
 
-    double saturation = 100;
-    double scale = 1;
+//    double saturation = 100;
+///    double scale = 1;
 
 // what it does here is dst = (uchar) ((double)src*scale+saturation);
-    src.convertTo(saturated, CV_8UC1, scale, saturation);
+//    src.convertTo(saturated, CV_8UC1, scale, saturation);
 
-    cv::imshow("Result", saturated);
+//    cv::imshow("Result", saturated);
 
-    if (src.empty())
-    {
+    if (src.empty()) {
         cout << endl
              << "ERROR! Unable to read the image" << endl
              << "Press a key to terminate";
@@ -136,7 +136,7 @@ int main(int argc, char* argv[])
     imshow("Src", src);
 
     cvtColor(src, dst, CV_BGR2HSV);
-    vector<cv::Mat > hsv_planes;
+    vector<cv::Mat> hsv_planes;
     split(dst, hsv_planes);
     //hue = hsv_planes[0];
     //saturation = hsv_planes[1];
@@ -147,6 +147,8 @@ int main(int argc, char* argv[])
     blursSize = 21;
     th1 = 33.0 * 255 / 100; //tuna is dark than select dark zone below 33% of full range
     cv::createTrackbar("Equalize", winName, &useEqualize, 1, onTunaFishTrackbar, 0);
+    cv::createTrackbar("Saturation", winName, &saturation, 255, onTunaFishTrackbar, 0);
+    cv::createTrackbar("Saturation Scale", winName, &scale, 255, onTunaFishTrackbar, 0);
     cv::createTrackbar("Blur Sigma", winName, &blursSize, 100, onTunaFishTrackbar, 0);
     cv::createTrackbar("Threshold", winName, &th1, 255, onTunaFishTrackbar, 0);
 
@@ -210,7 +212,8 @@ int detectEdges() {
     // resize(src,src,size);
 
 
-    if (!src.data) { return -1; }else{
+    if (!src.data) { return -1; }
+    else {
         EdgeDetecting::startProcess(src);
     }
 }
