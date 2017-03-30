@@ -9,10 +9,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(test_cv main.cpp IPM.cpp IPM.h ImageBasicOperations.cpp ImageBasicOperations.h FeatureDetection.cpp FeatureDetection.h KMeansImplementation.cpp KMeansImplementation.h EdgeDetecting.cpp EdgeDetecting.h)
+add_executable(test_cv main.cpp IPM.cpp IPM.h ImageBasicOperations.cpp ImageBasicOperations.h FeatureDetection.cpp FeatureDetection.h KMeansImplementation.cpp KMeansImplementation.h EdgeDetecting.cpp EdgeDetecting.h backgroundSubtract.cpp backgroundSubtract.h)
 
 #add libs you need
-set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs opencv_features2d)
+set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs opencv_features2d opencv_videoio opencv_video)
 
 #linking
 target_link_libraries(test_cv ${OpenCV_LIBS})

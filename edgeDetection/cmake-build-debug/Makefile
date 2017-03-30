@@ -257,6 +257,33 @@ KMeansImplementation.cpp.s:
 	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/KMeansImplementation.cpp.s
 .PHONY : KMeansImplementation.cpp.s
 
+backgroundSubtract.obj: backgroundSubtract.cpp.obj
+
+.PHONY : backgroundSubtract.obj
+
+# target to build an object file
+backgroundSubtract.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/backgroundSubtract.cpp.obj
+.PHONY : backgroundSubtract.cpp.obj
+
+backgroundSubtract.i: backgroundSubtract.cpp.i
+
+.PHONY : backgroundSubtract.i
+
+# target to preprocess a source file
+backgroundSubtract.cpp.i:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/backgroundSubtract.cpp.i
+.PHONY : backgroundSubtract.cpp.i
+
+backgroundSubtract.s: backgroundSubtract.cpp.s
+
+.PHONY : backgroundSubtract.s
+
+# target to generate assembly for a file
+backgroundSubtract.cpp.s:
+	$(MAKE) -f CMakeFiles\test_cv.dir\build.make CMakeFiles/test_cv.dir/backgroundSubtract.cpp.s
+.PHONY : backgroundSubtract.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -308,6 +335,9 @@ help:
 	@echo ... KMeansImplementation.obj
 	@echo ... KMeansImplementation.i
 	@echo ... KMeansImplementation.s
+	@echo ... backgroundSubtract.obj
+	@echo ... backgroundSubtract.i
+	@echo ... backgroundSubtract.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

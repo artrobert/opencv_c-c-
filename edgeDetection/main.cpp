@@ -5,6 +5,7 @@
 #include "IPM.h"
 #include "ImageBasicOperations.h"
 #include "EdgeDetecting.h"
+#include "backgroundSubtract.h"
 
 
 using namespace cv;
@@ -35,7 +36,8 @@ int main(int argc, char **argv) {
 //    featureDetection::firstTry();
 //    km::kmeanstry();
 //    getEdgesTry();
-    detectEdges();
+//    detectEdges();
+    backgroundSubtract::startBackgroundSubtract();
     cv::waitKey(0); // Wait for a keystroke in the window
     return 0;
 }
