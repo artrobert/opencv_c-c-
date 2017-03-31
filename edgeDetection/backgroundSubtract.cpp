@@ -33,14 +33,14 @@ Ptr<BackgroundSubtractor> pMOG2; //MOG2 Background subtractor
 char keyboard; //input from keyboard
 
 /** Function Headers */
-void processVideo(char* videoFilename);
-void processImages(char* firstFrameFilename);
+void processVideo(char *videoFilename);
+
+void processImages(char *firstFrameFilename);
 
 /**
  * @function main
  */
-int backgroundSubtract::startBackgroundSubtract()
-{
+int backgroundSubtract::startBackgroundSubtract() {
     namedWindow("Frame");
     namedWindow("FG Mask MOG 2");
 
@@ -48,7 +48,7 @@ int backgroundSubtract::startBackgroundSubtract()
     pMOG2 = createBackgroundSubtractorMOG2(); //MOG2 approach
 
     processVideo((char *) "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\Video_005.avi");
-//        processImages(argv[2]);
+//    processImages((char *) "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\color\\color1.bmp");
     destroyAllWindows();
     return EXIT_SUCCESS;
 }
@@ -56,10 +56,10 @@ int backgroundSubtract::startBackgroundSubtract()
 /**
  * @function processVideo
  */
-void processVideo(char* videoFilename) {
+void processVideo(char *videoFilename) {
     //create the capture object
     VideoCapture capture(videoFilename);
-    if(!capture.isOpened()){
+    if (!capture.isOpened()) {
         //error in opening the video input
         cerr << "Unable to open video file: " << videoFilename << endl;
         exit(EXIT_FAILURE);
@@ -68,9 +68,9 @@ void processVideo(char* videoFilename) {
     //read input data. ESC or 'q' for quitting
     keyboard = 0;
 
-    while( keyboard != 'q' && keyboard != 27 ){
+    while (keyboard != 'q' && keyboard != 27) {
         //read the current frame
-        if(!capture.read(frame)) {
+        if (!capture.read(frame)) {
             cerr << "Unable to read next frame." << endl;
             cerr << "Exiting..." << endl;
             exit(EXIT_FAILURE);
@@ -79,17 +79,17 @@ void processVideo(char* videoFilename) {
         pMOG2->apply(frame, fgMaskMOG2);
         //get the frame number and write it on the current frame
         stringstream ss;
-        rectangle(frame, cv::Point(10, 2), cv::Point(100,20),
-                  cv::Scalar(255,255,255), -1);
+        rectangle(frame, cv::Point(10, 2), cv::Point(100, 20),
+                  cv::Scalar(255, 255, 255), -1);
         ss << capture.get(CAP_PROP_POS_FRAMES);
         string frameNumberString = ss.str();
         putText(frame, frameNumberString.c_str(), cv::Point(15, 15),
-                FONT_HERSHEY_SIMPLEX, 0.5 , cv::Scalar(0,0,0));
+                FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         //show the current frame and the fg masks
         imshow("Frame", frame);
         imshow("FG Mask MOG 2", fgMaskMOG2);
         //get the input from the keyboard
-        keyboard = (char)waitKey( 30 );
+        keyboard = (char) waitKey(30);
     }
     //delete capture object
     capture.release();
@@ -98,10 +98,10 @@ void processVideo(char* videoFilename) {
 /**
  * @function processImages
  */
-void processImages(char* fistFrameFilename) {
+void processImages(char *fistFrameFilename) {
     //read the first file of the sequence
     frame = imread(fistFrameFilename);
-    if(frame.empty()){
+    if (frame.empty()) {
         //error in opening the first image
         cerr << "Unable to open first image frame: " << fistFrameFilename << endl;
         exit(EXIT_FAILURE);
@@ -110,38 +110,43 @@ void processImages(char* fistFrameFilename) {
     string fn(fistFrameFilename);
     //read input data. ESC or 'q' for quitting
     keyboard = 0;
-    while( keyboard != 'q' && keyboard != 27 ){
+    while (keyboard != 'q' && keyboard != 27) {
         //update the background model
         pMOG2->apply(frame, fgMaskMOG2);
         //get the frame number and write it on the current frame
         size_t index = fn.find_last_of("/");
-        if(index == string::npos) {
+        if (index == string::npos) {
             index = fn.find_last_of("\\");
         }
         size_t index2 = fn.find_last_of(".");
-        string prefix = fn.substr(0,index+1);
+        string prefix = fn.substr(0, index + 1);
         string suffix = fn.substr(index2);
-        string frameNumberString = fn.substr(index+1, index2-index-1);
-        istringstream iss(frameNumberString);
-        int frameNumber = 0;
-        iss >> frameNumber;
-        rectangle(frame, cv::Point(10, 2), cv::Point(100,20),
-                  cv::Scalar(255,255,255), -1);
+        string frameNumberString = fn.substr(index + 1, index2 - index - 1);
+        string frNum = "", frName = "";
+        for (unsigned int i = 0; i < frameNumberString.size(); i++) {
+            if (isdigit(frameNumberString.at(i))) { // Upon finding a digit, ...
+                frNum += frameNumberString.at(i);
+            } else { // Otherwise, move on to the next character.
+                frName += frameNumberString.at(i);
+            }
+        }
+        int frameNumber = atoi(frNum.c_str())+1;
+        sprintf((char *) frNum.c_str(), "%d", frameNumber);
+//        iss >> frameNumber;
+        rectangle(frame, cv::Point(10, 2), cv::Point(100, 20),
+                  cv::Scalar(255, 255, 255), -1);
         putText(frame, frameNumberString.c_str(), cv::Point(15, 15),
-                FONT_HERSHEY_SIMPLEX, 0.5 , cv::Scalar(0,0,0));
+                FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         //show the current frame and the fg masks
         imshow("Frame", frame);
         imshow("FG Mask MOG 2", fgMaskMOG2);
         //get the input from the keyboard
-        keyboard = (char)waitKey( 30 );
+        keyboard = (char) waitKey(30);
         //search for the next image in the sequence
-        ostringstream oss;
-        oss << (frameNumber + 1);
-        string nextFrameNumberString = oss.str();
-        string nextFrameFilename = prefix + nextFrameNumberString + suffix;
+        string nextFrameFilename = prefix + frName +frNum + suffix;
         //read the next frame
         frame = imread(nextFrameFilename);
-        if(frame.empty()){
+        if (frame.empty()) {
             //error in opening the next image in the sequence
             cerr << "Unable to open image frame: " << nextFrameFilename << endl;
             exit(EXIT_FAILURE);
