@@ -518,10 +518,6 @@ void tryPerspectiveCorrection(cv::Mat &src, Point &pXH, Point &pXL, Point &pYH, 
     waitKey();
 }
 
-int kernel_size = 3;
-
-int lowThreshold = 255;
-
 void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<Point> &searchLeft,
                    vector<double> &bottomEdgeSquareDimensions, vector<double> &leftEdgeSquareDimensions) {
     Mat im, imGrey;
@@ -724,6 +720,7 @@ void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f
 
     cv::Mat binaryExtractedChessSquare;
 
+    // TODO, HERE WE CHOOSE THE TOP LEFT SQUARE, NEED TO SEE WHAT IS THE BEST ONE TO CHOOSE
     Point rook_points[4];
     rook_points[0] = Point((int) pointMatrix[0][0].x, (int) pointMatrix[0][0].y);
     rook_points[1] = Point((int) pointMatrix[1][0].x, (int) pointMatrix[1][0].y);
@@ -787,173 +784,17 @@ void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f
 
 }
 
-Mat canny_thresh_src,canny_thresh_gray;
-Mat canny_thresh_dst,canny_thresh_detected_edges;
-int canny_low_threshold;
-int const canny_max_lowThreshold = 100;
-
-RNG rng(12345);
-
-void CannyThreshold(int, void*)
-{
-    /// Reduce noise with a kernel 3x3
-    blur( canny_thresh_gray, canny_thresh_detected_edges, Size(3,3) );
-
-    /// Canny detector
-    Canny( canny_thresh_gray, canny_thresh_detected_edges, canny_low_threshold, canny_low_threshold*2, 3 );
-
-    vector<vector<Point> > contours;
-    vector<Vec4i> hierarchy;
-    findContours( canny_thresh_detected_edges, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
-
-//    /// Using Canny's output as a mask, we display our result
-//    canny_thresh_dst = Scalar::all(0);
-//
-//    canny_thresh_src.copyTo( canny_thresh_dst, canny_thresh_detected_edges);
-//    imshow( "show canny thresh", canny_thresh_dst );
-    /// Draw contours
-    Mat drawing = Mat::zeros( canny_thresh_detected_edges.size(), CV_8UC3 );
-    for( int i = 0; i< contours.size(); i++ )
-    {
-        Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
-        drawContours( drawing, contours, i, color, 1, 8, hierarchy, 0, Point() );
-    }
-
-    /// Show in a window
-    imshow( "show canny thresh", drawing );
-}
-
-void GammaCorrection(Mat& src, Mat& dst, float fGamma)
-{
-    CV_Assert(src.data);
-
-    // accept only char type matrices
-    CV_Assert(src.depth() != sizeof(uchar));
-
-    // build look up table
-    unsigned char lut[256];
-    for (int i = 0; i < 256; i++)
-    {
-        lut[i] = saturate_cast<uchar>(pow((float)(i / 255.0), fGamma) * 255.0f);
-    }
-
-    dst = src.clone();
-    const int channels = dst.channels();
-    switch (channels)
-    {
-        case 1:
-        {
-
-            MatIterator_<uchar> it, end;
-            for (it = dst.begin<uchar>(), end = dst.end<uchar>(); it != end; it++)
-                //*it = pow((float)(((*it))/255.0), fGamma) * 255.0;
-                *it = lut[(*it)];
-
-            break;
-        }
-        case 3:
-        {
-
-            MatIterator_<Vec3b> it, end;
-            for (it = dst.begin<Vec3b>(), end = dst.end<Vec3b>(); it != end; it++)
-            {
-
-                (*it)[0] = lut[((*it)[0])];
-                (*it)[1] = lut[((*it)[1])];
-                (*it)[2] = lut[((*it)[2])];
-            }
-
-            break;
-
-        }
-    }
-}
-
-void EdgeDetecting::startProcess(Mat &src) {
-    /// Reduce noise with a kernel 3x3
-//    blur( src_gray, detected_edges, Size(3,3) );
-    /// Canny detector
-//    Canny(src, detected_edges, lowThreshold, lowThreshold * 3, kernel_size);
-    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
-    vector<Point> bottomEdgePoints, leftEdgePoints;
-    vector<double> bottomEdgeSquareDims, leftEdgeSquareDims;
-    getCornerList(src, bottomEdgePoints, leftEdgePoints, bottomEdgeSquareDims, leftEdgeSquareDims);
-
-//    houghLines(detected_edges, src_gray);
-
-    Mat dst, cdst;
-    Canny(src, dst, lowThreshold, lowThreshold * 3, kernel_size);
-    cvtColor(dst, cdst, CV_GRAY2BGR);
-
-    vector<Vec4i> vecHoughLines, pozAngleLines, negativeAngleLines;
-    vector<Point> tableIntersectionPoints;
-
-    houghSimpleLines(dst, vecHoughLines);
-
-    filterAndRemoveLines(vecHoughLines, pozAngleLines, negativeAngleLines, tableIntersectionPoints);
-
-    //Change perspective
-//    for (Point2f r:tableIntersectionPoints) {
-//        circle(cdst, tableIntersectionPoints[2], 3, 255, 1, 8, 0);
-//    }
-//    tryPerspectiveCorrection(src,tableIntersectionPoints[0],tableIntersectionPoints[3],tableIntersectionPoints[2],tableIntersectionPoints[1]);
-
-    searchCommonPointsAndRemove(pozAngleLines, 20, 20);
-//    searchCommonPointsAndRemove(negativeAngleLines, 5, 5);
-//    searchCommonSlopeAndRemove(pozAngleLines);
-    sort(pozAngleLines.begin(), pozAngleLines.end(), comparisonFirstPointXAsc);
-    sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXAsc);
-    searchCloseDistanceAndRemove(pozAngleLines, 30); //distance limit 30
-    searchCloseDistanceAndRemove(negativeAngleLines, 30); //distance limit 30
-
-//    Vec4i l = angle1[0];
-//
-//    double lYDifference = l[3] - l[1];
-//    double lXDifference = l[2] - l[0];
-//    double lineOriginalSlope = lYDifference / lXDifference;
-//
-//    double alpha=atan2((double) (l[3] - l[1]), (double) (l[2] - l[0]));
-//
-//
-//    int sizeSearchLeft = leftEdgePoints.size();
-//    double leng=sqrt(pow((double) (bottomEdgePoints[0].y - bottomEdgePoints[bottomEdgePoints.size()-1].y), 2.0) +
-//                     pow((double) (bottomEdgePoints[0].x - bottomEdgePoints[bottomEdgePoints.size()-1].x), 2.0));
-//    for (int i = 0; i < 1; i++) {
-//        for (int j = 1; j < 2; j++) {
-//            int x = (int) (leftEdgePoints[i].x + leng * cos(alpha));
-//            int y = (int) (leftEdgePoints[i].y + leng * sin(alpha));
-//            leftEdgePoints.push_back(Point(x, y));
-//        }
-//    };
-//
-//    for (int i = 0; i < leftEdgePoints.size(); i++) {
-//        circle(cdst, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), 3, 255, 1, 8, 0);
-//        char s[30];
-//        sprintf(s, "(%d)", i);
-//        putText(cdst, s, Point(leftEdgePoints[i].x, leftEdgePoints[i].y), FONT_HERSHEY_SIMPLEX, 1, Scalar(0, 0, 255), 1,
-//                8, false);
-//    }
-
-//    for(int i = 0; i < 2; i++) {
-//        Vec4i v = pozAngleLines[i];
-//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
-//    }
-//
-//    for (int i = 0; i < 2; i++) {
-//        Vec4i v = negativeAngleLines[i];
-//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
-//    }
-
-    Point2f pointMatrix[9][9];
+void createSquarePointMatrix(vector<Vec4i> pozAngleLines,vector<Vec4i> negativeAngleLines,Point2f pointMatrix[9][9]){
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             Point2f point = getIntersection(pozAngleLines[i], negativeAngleLines[j]);
-            circle(cdst, point, 3, 255, 1, 8, 0);
             pointMatrix[i][j] = point;
         }
     }
+}
 
-    chessSquare squareMatrix[8][8];
+void createSquareMatrix(chessSquare squareMatrix[8][8],Point2f pointMatrix[9][9]){
+    //Init the matrix
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             squareMatrix[i][j] = {};
@@ -996,27 +837,66 @@ void EdgeDetecting::startProcess(Mat &src) {
             k++;
         }
     }
+}
 
-    printf(" %p \n", (void *) &squareMatrix[0][0].topLeft);
-    printf(" %p\n", (void *) &pointMatrix[0][0]);
+void extractSquare(Point corners[4],cv::Mat &src,cv::Mat &extractedSquare){
+    cv::Mat maskRoi = cv::Mat::zeros(src.size(), src.type());
+    // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
+    cv::fillConvexPoly(maskRoi, corners, 4, cv::Scalar(255, 255, 255));
+    src.copyTo(extractedSquare, maskRoi);
+}
 
+void EdgeDetecting::startProcess(Mat &src) {
+    /// Reduce noise with a kernel 3x3
+//    blur( src_gray, detected_edges, Size(3,3) );
+    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+    vector<Point> bottomEdgePoints, leftEdgePoints;
+    vector<double> bottomEdgeSquareDims, leftEdgeSquareDims;
+    getCornerList(src, bottomEdgePoints, leftEdgePoints, bottomEdgeSquareDims, leftEdgeSquareDims);
+
+//    houghLines(detected_edges, src_gray);
+
+    Mat dst, cdst;
+    int lowThreshold = 255;
+    Canny(src, dst, lowThreshold, lowThreshold * 3, 3);
+    cvtColor(dst, cdst, CV_GRAY2BGR);
+
+    vector<Vec4i> vecHoughLines, pozAngleLines, negativeAngleLines;
+    vector<Point> tableIntersectionPoints;
+
+    houghSimpleLines(dst, vecHoughLines); //This will get all lines in the image
+
+    filterAndRemoveLines(vecHoughLines, pozAngleLines, negativeAngleLines, tableIntersectionPoints);
+
+    //Change perspective
+//    for (Point2f r:tableIntersectionPoints) {
+//        circle(cdst, tableIntersectionPoints[2], 3, 255, 1, 8, 0);
+//    }
+//    tryPerspectiveCorrection(src,tableIntersectionPoints[0],tableIntersectionPoints[3],tableIntersectionPoints[2],tableIntersectionPoints[1]);
+
+    searchCommonPointsAndRemove(pozAngleLines, 20, 20);
+//    searchCommonPointsAndRemove(negativeAngleLines, 5, 5);
+//    searchCommonSlopeAndRemove(pozAngleLines);
+    sort(pozAngleLines.begin(), pozAngleLines.end(), comparisonFirstPointXAsc);
+    sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXAsc);
+    searchCloseDistanceAndRemove(pozAngleLines, 30); //distance limit 30
+    searchCloseDistanceAndRemove(negativeAngleLines, 30); //distance limit 30
+
+    Point2f pointMatrix[9][9];
+    createSquarePointMatrix(pozAngleLines,negativeAngleLines,pointMatrix); //Creates a 9x9 matrix with all the line intersection points of the table
+
+    chessSquare squareMatrix[8][8];
+    createSquareMatrix(squareMatrix,pointMatrix); //Creates a 8x8 matrix with the squares(corner points, neighbors,color,if it has piece) of the table
 
     determineSquareColors(src, squareMatrix, pointMatrix);
 
-//
-//    cvtColor( d, d, CV_BGR2GRAY );
-//    threshold( d, d, 100, 255,0 );
-
-
-//    Point2f po=getIntersection(pozAngleLines[0],negativeAngleLines[0]);
-//
-//    circle(cdst,po, 3, 255, 1, 8, 0);
-
+    //Print the square colors
+    printf("\nWhite = 1 ; Black = 0");
     for(int i=0;i<8;i++){
+        printf("\n");
         for(int j=0;j<8;j++){
             printf("%d  ",squareMatrix[i][j].color);
         }
-        printf("\n");
     }
 
     Point rook_points[4];
@@ -1025,35 +905,7 @@ void EdgeDetecting::startProcess(Mat &src) {
     rook_points[2] = squareMatrix[5][3].bottmRight; //bot right
     rook_points[3] = squareMatrix[5][3].topRight; //top right
 
-    namedWindow( "show canny thresh", CV_WINDOW_AUTOSIZE );
-
-    cv::Mat exSquare;
-    cv::Mat maskRoi = cv::Mat::zeros(src.size(), src.type());
-
-    // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
-    cv::fillConvexPoly(maskRoi, rook_points, 4, cv::Scalar(255, 255, 255));
-    src.copyTo(canny_thresh_src, maskRoi);
-
-//    canny_thresh_src.convertTo(canny_thresh_src, -1, 4, 1);
-    GammaCorrection(canny_thresh_src, canny_thresh_src,0.1);
-
-    imshow("2", dst);
-    imshow("dsd", canny_thresh_src);
-
-
-
-    cvtColor( canny_thresh_src, canny_thresh_gray, CV_BGR2GRAY );
-    createTrackbar( "Min Threshold:", "show canny thresh", &canny_low_threshold, 255, CannyThreshold );
-    CannyThreshold(0, 0);
-
-
-//    namedWindow("dsd", CV_WINDOW_AUTOSIZE);
-//    imshow("dsd", canny_thresh_src);
-
-//
-//
-//    imshow("source", src);
-//    imshow("detected lines", cdst);
-
-
+    Mat eqSq;
+    extractSquare(rook_points,src,eqSq);
+    imshow("dsd", eqSq);
 }
