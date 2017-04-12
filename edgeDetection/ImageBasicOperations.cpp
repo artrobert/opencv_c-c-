@@ -77,7 +77,7 @@ cv::Mat imagePreparation::blurImage(cv::Mat &src) {
  * @param src The Mat we want to apply the dilation
  * @return The Mat that the dilation was applied
  */
-cv::Mat imagePreparation::dilationImage(cv::Mat &src,int dilation_elem,int dilation_size) {
+cv::Mat imagePreparation::dilationImage(cv::Mat &src, int dilation_elem, int dilation_size) {
     Mat resultDst;
 
     int dilation_type;
@@ -90,6 +90,23 @@ cv::Mat imagePreparation::dilationImage(cv::Mat &src,int dilation_elem,int dilat
                                         Point(dilation_size, dilation_size));
     /// Apply the dilation operation
     dilate(src, resultDst, element);
+    return resultDst;
+}
+
+cv::Mat imagePreparation::erosionImage(cv::Mat &src, int erosion_elem, int erosion_size) {
+    Mat resultDst;
+
+    int erosion_type;
+    if (erosion_elem == 0) { erosion_type = MORPH_RECT; }
+    else if (erosion_elem == 1) { erosion_type = MORPH_CROSS; }
+    else if (erosion_elem == 2) { erosion_type = MORPH_ELLIPSE; }
+
+    Mat element = getStructuringElement(erosion_type,
+                                        Size(2 * erosion_size + 1, 2 * erosion_size + 1),
+                                        Point(erosion_size, erosion_size));
+
+    /// Apply the erosion operation
+    erode(src, resultDst, element);
     return resultDst;
 }
 
@@ -202,15 +219,15 @@ cv::Mat imagePreparation::warpImage(cv::Mat &image, vector<Point2f> &points) {
  * @param src The image we want to apply CANNY
  * @return Canny image
  */
-cv::Mat imagePreparation::CannyThreshold(cv::Mat &src,int lowThreshold,int ratio) {
+cv::Mat imagePreparation::CannyThreshold(cv::Mat &src, int lowThreshold, int ratio) {
     Mat resultDst;
-    int lt=lowThreshold;
-    int rat=ratio;
-    if(lowThreshold<0){
-        lt= 80; //this is hardcoded because give the best result , TODO: maybe change it as a parameter
+    int lt = lowThreshold;
+    int rat = ratio;
+    if (lowThreshold < 0) {
+        lt = 80; //this is hardcoded because give the best result , TODO: maybe change it as a parameter
     }
-    if(ratio<0){
-        rat=2;
+    if (ratio < 0) {
+        rat = 2;
     }
     int kernel_size = 3;
     /// Reduce noise with a kernel 3x3

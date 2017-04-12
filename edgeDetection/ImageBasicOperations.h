@@ -25,6 +25,8 @@ public:
     static cv::Mat readImage(cv::String image_name);
 
     static cv::Mat CannyThreshold(cv::Mat &src, int lowThreshold, int ratio);
+
+    static cv::Mat erosionImage(cv::Mat &src, int dilation_elem, int dilation_size);
 };
 
 
