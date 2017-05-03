@@ -1,2 +1,6 @@
 /../edgeDetection/images/result/*
-/../edgeDetection/cmake-build-debug/* 
+/../edgeDetection/cmake-build-debug/*
+*.jpg
+*.avi
+/edgeDetection/cmake-build-debug
+*.mp4
