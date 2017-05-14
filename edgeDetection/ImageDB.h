@@ -8,6 +8,14 @@
 
 class ImageDB {
 
+public:
+    static void loadSampleImages();
+
+    static int matchChessPieces(std::vector<cv::Point> incomingContour);
+
+    static void getContourFromMat(const cv::Mat &mat, std::vector<cv::Point> &c);
+
+    static void createDatabase();
 };
 
 

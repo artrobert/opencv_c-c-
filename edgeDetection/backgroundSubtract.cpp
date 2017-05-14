@@ -6,6 +6,7 @@
 #include "opencv2/video/background_segm.hpp"
 #include "ImageBasicOperations.h"
 #include "opencv2/shape.hpp"
+#include "ImageDB.h"
 
 
 #include <iostream>
@@ -44,17 +45,30 @@ int backgroundSubtract::startBackgroundSubtract() {
 
 //    namedWindow("Frame");
 //    namedWindow("FG Mask MOG 2");
-    pMOG2 = createBackgroundSubtractorMOG2();
-    pMOG2->setShadowValue(0);
+//    pMOG2 = createBackgroundSubtractorMOG2();
+//    pMOG2->setShadowValue(0);
 
 //    processVideo((char *) "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\videos\\vid5.mp4");
 //    processImages((char *) "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\color\\color1.bmp");
 //"D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\database\\attempt2\\cal\\piece_n_00.jpg"
     //"D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\database\\attempt2\\cal\\piece_00.jpg"
     //"D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\database\\attempt2\\cal\\result_00.jpg"
-//    createDatabase();
+//    ImageDB::createDatabase();
+    ImageDB::loadSampleImages();
+//    vector<Point> contour;
+//    string pion = "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\database\\regina.jpg";
+//    Mat mat_pion = imread(pion, IMREAD_GRAYSCALE);
+//    Size imageResizeSize(800, 600);
+//
+//    resize(mat_pion, mat_pion, imageResizeSize);
+//
+//    ImageDB::getContourFromMat(mat_pion, contour);
+//
+//    int distance = ImageDB::matchChessPieces(contour);
+//
+//    printf("Piece found:%d", distance);
 
-    identifyObject();
+//    identifyObject();
 //    destroyAllWindows();
     return EXIT_SUCCESS;
 }
@@ -75,33 +89,33 @@ void createDatabase() {
 //    createPathsAndImages(tura_folder, false);
 //    createPathsAndImages(nebun_folder, false);
 //    createPathsAndImages(rege_folder, false);
-    createPathsAndImages(regina_folder, false);
+//    createPathsAndImages(regina_folder, false);
     return;
 }
 
 //Extension to create the database
-string jpg_extension = ".jpg";
-string result_format = "result_";
-string piece_format = "piece_";
-string no_piece_format = "piece_n_";
+//string jpg_extension = ".jpg";
+//string result_format = "result_";
+//string piece_format = "piece_";
+//string no_piece_format = "piece_n_";
 
-void createPathsAndImages(string source_folder, bool createHorse) {
-    //format de nume al pieselor "piece_##" si doar background-ul "piece_n_##" si incepe de la 0
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 10; j++) {
-            char number[1];
-            sprintf(number, "%d%d", i, j); //transform the int to string
-            string nr = number;
-            string source_image =
-                    source_folder + piece_format + nr + jpg_extension; // we created "folderpath\piece_##.jpg"
-            string source_n_image =
-                    source_folder + no_piece_format + nr + jpg_extension; // we created "folderpath\piece_n_##.jpg"
-            string result_image =
-                    source_folder + result_format + nr + jpg_extension; // we created "folderpath\result_##.jpg"
-            tryProcessImages(source_n_image, source_image, result_image);
-        }
-    }
-}
+//void createPathsAndImages(string source_folder, bool createHorse) {
+//    //format de nume al pieselor "piece_##" si doar background-ul "piece_n_##" si incepe de la 0
+//    for (int i = 0; i < 2; i++) {
+//        for (int j = 0; j < 10; j++) {
+//            char number[1];
+//            sprintf(number, "%d%d", i, j); //transform the int to string
+//            string nr = number;
+//            string source_image =
+//                    source_folder + piece_format + nr + jpg_extension; // we created "folderpath\piece_##.jpg"
+//            string source_n_image =
+//                    source_folder + no_piece_format + nr + jpg_extension; // we created "folderpath\piece_n_##.jpg"
+//            string result_image =
+//                    source_folder + result_format + nr + jpg_extension; // we created "folderpath\result_##.jpg"
+//            tryProcessImages(source_n_image, source_image, result_image);
+//        }
+//    }
+//}
 
 void countPixels(cv::Mat &src, const char *frame, vector<int> wbPixels) {
     int count_black = 0;
@@ -122,7 +136,7 @@ void countPixels(cv::Mat &src, const char *frame, vector<int> wbPixels) {
     printf("\n Frame (%s) has White:%d black %d", frame, count_white, count_black);
 }
 
-void simpleContour(const Mat &mat,std::vector<Point> &c) {
+void simpleContour(const Mat &mat, std::vector<Point> &c) {
     vector<vector<Point>> bigcontour;
 
 
@@ -196,7 +210,7 @@ void identifyObject() {
     resize(mat_pion, mat_pion, sz2Sh);
 //    imshow("QUERY", mat_pion);
     vector<Point> contQuery;
-     simpleContour(mat_pion,contQuery);
+    simpleContour(mat_pion, contQuery);
 
     int bestMatch = 0;
     float bestDis = FLT_MAX;
@@ -206,12 +220,12 @@ void identifyObject() {
         char number[2];
         sprintf(number, "%d%d", i, j); //transform the int to string
         string nr = number;
-        string stringToCompare = pion_folder + nr + jpg_extension; // we created "folderpath\pion_##.jpg"
+        string stringToCompare = pion_folder + nr; // we created "folderpath\pion_##.jpg"
         Mat sample = imread(stringToCompare, 0);
         if (!(sample.cols == 0 || sample.rows == 0)) {
             resize(sample, sample, sz2Sh);
             vector<Point> contSample;
-            simpleContour(sample,contSample);
+            simpleContour(sample, contSample);
             float dis = mysc->computeDistance(contQuery, contSample);
             if (dis < bestDis) {
                 bestMatch = j;
