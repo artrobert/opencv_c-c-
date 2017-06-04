@@ -9,7 +9,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(test_cv main.cpp IPM.cpp IPM.h ImageBasicOperations.cpp ImageBasicOperations.h FeatureDetection.cpp FeatureDetection.h KMeansImplementation.cpp KMeansImplementation.h EdgeDetecting.cpp EdgeDetecting.h backgroundSubtract.cpp backgroundSubtract.h ImageDB.cpp ImageDB.h models/PieceContour.cpp models/PieceContour.h models/PieceModel.cpp models/PieceModel.h models/PieceType.h)
+add_executable(test_cv main.cpp IPM.cpp IPM.h ImageBasicOperations.cpp ImageBasicOperations.h FeatureDetection.cpp FeatureDetection.h KMeansImplementation.cpp KMeansImplementation.h EdgeDetecting.cpp EdgeDetecting.h backgroundSubtract.cpp backgroundSubtract.h ImageDB.cpp ImageDB.h models/PieceContour.cpp models/PieceContour.h models/PieceModel.cpp models/PieceModel.h models/PieceType.h chess/ChessMoves.cpp chess/ChessMoves.h models/ChessSquare.cpp models/ChessSquare.h)
 
 #add libs you need
 set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs opencv_features2d opencv_videoio opencv_video opencv_shape)

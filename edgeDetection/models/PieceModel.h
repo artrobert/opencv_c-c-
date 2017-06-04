@@ -9,10 +9,14 @@
 #include "PieceType.h"
 #include "PieceContour.h"
 
+/**
+ * This class will contain info about the PIECE TYPE and POSSIBLE CONTOURS
+ */
 class PieceModel {
 public:
     PieceType pieceType; // the type of the piece
     std::vector<PieceContour> contours; // the contours of the piece (from different angles)
+    bool isWhite; // the color of the piece
 };
 
 

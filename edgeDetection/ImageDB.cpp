@@ -85,11 +85,27 @@ PieceContour ImageDB::getContourFromMat(const Mat &mat) {
     vector<vector<Point>> fullContour;
 
     // We do a canny in order to get the contours of all the scene objects
-    Mat canny_output;
-    Canny(mat.clone(), canny_output, 255, 255, 3);
-    vector<Vec4i> hierarchy;
+    Mat canny_output, matInput = mat.clone();
+
+    // We do the following operations in order to eliminate noise, but we will also remove the details
+    matInput = imagePreparation::erosionImage(matInput, 2, 2);
+    matInput = imagePreparation::dilationImage(matInput, 2, 2);
+
+    Canny(matInput.clone(), canny_output, 255, 255, 3);
 
     findContours(canny_output, fullContour, CV_RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+
+//    TODO THIS IS USED TO PRINT THE Contour
+//    vector<Vec4i> hierarchy;
+//    namedWindow("Contours", CV_WINDOW_AUTOSIZE);
+//    Mat drawing = Mat::zeros(matInput.size(), CV_8UC3);
+//    for (int i = 0; i < fullContour.size(); i++) {
+//        Scalar color = Scalar(RNG(12345).uniform(0, 255), RNG(12345).uniform(0, 255), RNG(12345).uniform(0, 255));
+//        drawContours(drawing, fullContour, i, color, 2, 8, hierarchy, 0, Point());
+//        printf("\n%d / %d", i,fullContour.size());
+//        imshow("Contours", drawing);
+//        waitKey(500);
+//    }
 
     // Search for the object with the biggest contour (most likely that will be our piece if THE TABLE IS NOT MOVED)
     double maxContourArea = 0;
@@ -109,18 +125,6 @@ PieceContour ImageDB::getContourFromMat(const Mat &mat) {
     pc.contour = fullContour[indexMaxContour];
     pc.computeTheLowestPoint();
     pc.layer = findOriginLayer(pc.lowestPoint);
-    vector<vector<Point> > fdsfas;
-    fdsfas.push_back(pc.contour);
-
-
-    Mat drawing = Mat::zeros(mat.size(), CV_8UC3);
-    Scalar color = Scalar(RNG(12345).uniform(0, 255), RNG(12345).uniform(0, 255), RNG(12345).uniform(0, 255));
-    drawContours(drawing, fdsfas, 0, color, 2, 8, hierarchy, 0, Point());
-
-    /// Show in a window
-    namedWindow("Contours", CV_WINDOW_AUTOSIZE);
-    imshow("Contours", drawing);
-    waitKey(600 * 10);
 
     return pc;
 }
@@ -149,10 +153,10 @@ cv::Mat doSubtraction(cv::Mat &withoutImg, cv::Mat &withImg) {
  * by comparing it to all the samples we have and selecting the best match using a BEST AVERAGE
  *
  *
- * @param incomingContour The object containing the contour that should be identified
+ * @param pieceIncoming The object containing the contour that should be identified
  * @return The piece type of the contour {@link PieceType}
  */
-PieceType ImageDB::matchChessPieces(PieceContour incomingContour) {
+PieceType ImageDB::matchChessPieces(PieceContour pieceIncoming) {
     float bestDis = FLT_MAX;
     PieceType pieceType = PieceType::unknown;
 
@@ -167,13 +171,13 @@ PieceType ImageDB::matchChessPieces(PieceContour incomingContour) {
             // TODO we could ask for contours that are part of that layer or donno, figure it out :)
             PieceContour pieceContour = currentPiece.contours[j];
 
-            if (incomingContour.layer == 0) {
-                if (pieceContour.layer == incomingContour.layer) {
-                    float distanceFound = mysc->computeDistance(incomingContour.contour, pieceContour.contour);
+            if (pieceIncoming.layer == 0) {
+                if (pieceContour.layer == pieceIncoming.layer) {
+                    float distanceFound = mysc->computeDistance(pieceIncoming.contour, pieceContour.contour);
                     averageDistance += distanceFound;
                 }
             } else {
-                float distanceFound = mysc->computeDistance(incomingContour.contour, pieceContour.contour);
+                float distanceFound = mysc->computeDistance(pieceIncoming.contour, pieceContour.contour);
                 averageDistance += distanceFound;
             }
         }
