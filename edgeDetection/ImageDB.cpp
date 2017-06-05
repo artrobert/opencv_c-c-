@@ -11,7 +11,6 @@ using namespace std;
 
 const CvSize ImageDB::imageResizeSize = CvSize(imageResizeHeight, imageResizeWidth);
 
-
 string pathRoot = "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\database";
 string folderRoot = "\\attempt7";
 string pionText = "pion";

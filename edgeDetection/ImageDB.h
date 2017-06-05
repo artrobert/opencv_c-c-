@@ -33,7 +33,7 @@ public:
 
     static PieceContour getContourFromMat(const cv::Mat &mat);
 
-    PieceType matchChessPieces(PieceContour pieceIncoming);
+    static PieceType matchChessPieces(PieceContour pieceIncoming);
 };
 
 

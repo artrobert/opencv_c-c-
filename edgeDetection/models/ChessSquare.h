@@ -9,11 +9,16 @@
 #include <opencv2/core/types.hpp>
 #include "PieceModel.h"
 
+using namespace std;
+
 class ChessSquare {
 public:
     int index;
     int col;
     int row;
+
+    string indexString;
+    char rowAlpha;
 
     // 1 4
     // 2 3

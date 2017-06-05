@@ -8,29 +8,12 @@
 #include <opencv2/imgproc.hpp>
 #include <io.h>
 #include "ImageBasicOperations.h"
+#include "models/ChessSquare.h"
+#include "models/ChessSquareMatrix.h"
 
 
 using namespace cv;
 using namespace std;
-
-typedef struct chessSquare {
-    //easier to track
-    int index;
-    //Corners arrangement
-    // 1 4
-    // 2 3
-    Point2f topLeft;
-    Point2f topRight;
-    Point2f bottomLeft;
-    Point2f bottmRight;
-    // 1 - is white , 0 - is black
-    int color;
-    struct chessSquare *leftSquare;
-    struct chessSquare *topSquare;
-    struct chessSquare *rightSquare;
-    struct chessSquare *bottomSquare;
-    bool hasPiece;
-} chessSquare;
 
 const char *window_name = "Edge Map";
 Mat detected_edges, src_gray;
@@ -713,10 +696,19 @@ void filterAndRemoveLines(vector<Vec4i> houghLines, vector<Vec4i> &pozAngleLines
 
 }
 
-void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f pointMatrix[9][9]) {
+/**
+ * We extract a square from the image and determine its color by binarize it, counting the pixels
+ * and determine who are predominant
+ *
+ * @param src The Mat containing the chessboard
+ * @param squareMatrix A matrix of {@link ChessSquare} objects representing the chessboard table
+ * @param pointMatrix A matrix of points representing all the chessboard square corners
+ */
+void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, Point2f pointMatrix[9][9]) {
 
     cv::Mat maskRoi = cv::Mat::zeros(src.size(), src.type());
-    cv::Mat maskRoiBlue = cv::Mat(src.size(), src.type(), Scalar(255, 0, 0));
+    // Mask used to extract a single square, make it red so we can later binarize the image
+    cv::Mat maskRoiBlue = cv::Mat(src.size(), src.type(), Scalar(255, 0, 0)); //mask used to extract a single square
 
     cv::Mat binaryExtractedChessSquare;
 
@@ -733,12 +725,13 @@ void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f
 //    rook_points[3] = Point((int) pointMatrix[0][2].x, (int) pointMatrix[0][2].y);
     //
     // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
+    // Fill the mask Mat with white pixels in order to extract the chess board square
     cv::fillConvexPoly(maskRoi, rook_points, 4, cv::Scalar(255, 255, 255));
-
 
     src.copyTo(binaryExtractedChessSquare, maskRoi);
     binaryExtractedChessSquare.copyTo(binaryExtractedChessSquare, maskRoiBlue);
 
+    // Binarize the extracted image so we can count the white/black pixels
     cvtColor(binaryExtractedChessSquare, binaryExtractedChessSquare, CV_BGR2GRAY);
     threshold(binaryExtractedChessSquare, binaryExtractedChessSquare, 100, 255, 0);
 
@@ -766,25 +759,29 @@ void determineSquareColors(cv::Mat &src, chessSquare squareMatrix[8][8], Point2f
         }
     }
 
+    int squareColor = 0;
+    // See the precentage of the newly added pixels (what is more predominant whites/blacks)
     double perc_of_white_stay_white = (new_white_pixels * 100) / white_pixels;
     if (perc_of_white_stay_white < 50) {
-        squareMatrix[0][0].color = 0;
+        squareColor = 0; // the color is black
     } else {
-        squareMatrix[0][0].color = 1;
+        squareColor = 1; // the color is white
     }
 
+    // With the color we founded previously, we iterate top - bottom (2 by 2) and assign that color
+    // While iterating, we also iterate left - right and assign the opposite color to the right and bottom squares
     for (int i = 0; i < 7; i += 2) {
-        chessSquare sq = squareMatrix[i][0];
-        while (sq.rightSquare != NULL) {
-            sq.rightSquare->color = abs(sq.color - 1);
-            sq.bottomSquare->color = abs(sq.color - 1);
-            sq = *sq.rightSquare;
+        ChessSquare *sq = addressof(squareMatrix.getSquare(i, 0));
+        sq->color = squareColor;
+        while (sq->rightSquare != NULL) {
+            sq->rightSquare->color = abs(sq->color - 1);
+            sq->bottomSquare->color = abs(sq->color - 1);
+            sq = sq->rightSquare;
         }
     }
-
 }
 
-void createSquarePointMatrix(vector<Vec4i> pozAngleLines,vector<Vec4i> negativeAngleLines,Point2f pointMatrix[9][9]){
+void createSquarePointMatrix(vector<Vec4i> pozAngleLines, vector<Vec4i> negativeAngleLines, Point2f pointMatrix[9][9]) {
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             Point2f point = getIntersection(pozAngleLines[i], negativeAngleLines[j]);
@@ -793,53 +790,65 @@ void createSquarePointMatrix(vector<Vec4i> pozAngleLines,vector<Vec4i> negativeA
     }
 }
 
-void createSquareMatrix(chessSquare squareMatrix[8][8],Point2f pointMatrix[9][9]){
-    //Init the matrix
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            squareMatrix[i][j] = {};
-        }
-    }
+void createSquareMatrix(ChessSquareMatrix &squareMatrix, Point2f pointMatrix[9][9]) {
+
     int k = 1;
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            squareMatrix[i][j].index = k;
-            squareMatrix[i][j].topLeft = pointMatrix[i][j];
-            squareMatrix[i][j].bottomLeft = pointMatrix[i + 1][j];
-            squareMatrix[i][j].bottmRight = pointMatrix[i + 1][j+1];
-            squareMatrix[i][j].topRight = pointMatrix[i][j+1];
+    for (size_t i = 0; i < 8; i++) {
+        for (size_t j = 0; j < 8; j++) {
+            ChessSquare *currentSquare = addressof(squareMatrix.getSquare(i, j));
+            currentSquare->index = k;
+            // Set the corner points
+            currentSquare->topLeft = pointMatrix[i][j];
+            currentSquare->bottomLeft = pointMatrix[i + 1][j];
+            currentSquare->bottomRight = pointMatrix[i + 1][j + 1];
+            currentSquare->topRight = pointMatrix[i][j + 1];
 
-            if (i == 7) {
-                squareMatrix[i][j].bottomSquare = NULL;
+            // If not in the bottom row set the bottom squares (left , middle or right)
+            if (i != 7) {
+                currentSquare->bottomSquare = addressof(squareMatrix.getSquare(i + 1, j));
 
-            } else {
-                squareMatrix[i][j].bottomSquare = &squareMatrix[i + 1][j];
+                // If not in the first col, set the left square
+                if (j != 0) {
+                    currentSquare->bottomLeftSquare = addressof(squareMatrix.getSquare(i + 1, j - 1));
+                }
+
+                // If not in the last col, set the right square
+                if (j != 7) {
+                    currentSquare->bottomRightSquare = addressof(squareMatrix.getSquare(i + 1, j + 1));
+                }
             }
 
-            if (i == 0) {
-                squareMatrix[i][j].topSquare = NULL;
+            // If not in the first row, set the top squares (left, middle , right)
+            if (i != 0) {
+                currentSquare->topSquare = addressof(squareMatrix.getSquare(i - 1, j));
 
-            } else {
-                squareMatrix[i][j].topSquare = &squareMatrix[i - 1][j];
+                // If not in the first col, set the top left square
+                if (j != 0) {
+                    currentSquare->topLeftSquare = addressof(squareMatrix.getSquare(i - 1, j - 1));
+                }
+
+                // If not in the last col, set the top right square
+                if (j != 7) {
+                    currentSquare->topRightSquare = addressof(squareMatrix.getSquare(i - 1, j + 1));
+                }
             }
 
-            if (j == 0) {
-                squareMatrix[i][j].leftSquare = NULL;
-            } else {
-                squareMatrix[i][j].leftSquare = &squareMatrix[i][j - 1];
+            // Set the left square if not in the first col
+            if (j != 0) {
+                currentSquare->leftSquare = addressof(squareMatrix.getSquare(i, j - 1));
             }
 
-            if (j == 7) {
-                squareMatrix[i][j].rightSquare = NULL;
-            } else {
-                squareMatrix[i][j].rightSquare = &squareMatrix[i][j + 1];
+            // Set the right square if not in the last col
+            if (j != 7) {
+                currentSquare->rightSquare = addressof(squareMatrix.getSquare(i, j + 1));
             }
+
             k++;
         }
     }
 }
 
-void extractSquare(Point corners[4],cv::Mat &src,cv::Mat &extractedSquare){
+void extractSquare(Point corners[4], cv::Mat &src, cv::Mat &extractedSquare) {
     cv::Mat maskRoi = cv::Mat::zeros(src.size(), src.type());
     // http://study.marearts.com/2016/07/opencv-drawing-example-line-circle.html
     cv::fillConvexPoly(maskRoi, corners, 4, cv::Scalar(255, 255, 255));
@@ -883,29 +892,32 @@ void EdgeDetecting::startProcess(Mat &src) {
     searchCloseDistanceAndRemove(negativeAngleLines, 30); //distance limit 30
 
     Point2f pointMatrix[9][9];
-    createSquarePointMatrix(pozAngleLines,negativeAngleLines,pointMatrix); //Creates a 9x9 matrix with all the line intersection points of the table
+    //Creates a 9x9 matrix with all the line intersection points of the table
+    createSquarePointMatrix(pozAngleLines, negativeAngleLines, pointMatrix);
 
-    chessSquare squareMatrix[8][8];
-    createSquareMatrix(squareMatrix,pointMatrix); //Creates a 8x8 matrix with the squares(corner points, neighbors,color,if it has piece) of the table
+    ChessSquareMatrix squareMatrix(8);
+
+    //Creates a 8x8 matrix with the squares(corner points, neighbors,color,if it has piece) of the table
+    createSquareMatrix(squareMatrix, pointMatrix);
 
     determineSquareColors(src, squareMatrix, pointMatrix);
 
     //Print the square colors
     printf("\nWhite = 1 ; Black = 0");
-    for(int i=0;i<8;i++){
+    for (size_t i = 0; i < 8; i++) {
         printf("\n");
-        for(int j=0;j<8;j++){
-            printf("%d  ",squareMatrix[i][j].color);
+        for (size_t j = 0; j < 8; j++) {
+            printf("%d  ", squareMatrix.getSquare(i, j).color);
         }
     }
 
     Point rook_points[4];
-    rook_points[0] = squareMatrix[5][3].topLeft; //top left
-    rook_points[1] = squareMatrix[5][3].bottomLeft; //bot left
-    rook_points[2] = squareMatrix[5][3].bottmRight; //bot right
-    rook_points[3] = squareMatrix[5][3].topRight; //top right
+    rook_points[0] = squareMatrix.getSquare(5, 3).topLeft; //top left
+    rook_points[1] = squareMatrix.getSquare(5, 3).bottomLeft; //bot left
+    rook_points[2] = squareMatrix.getSquare(5, 3).bottomRight; //bot right
+    rook_points[3] = squareMatrix.getSquare(5, 3).topRight; //top right
 
     Mat eqSq;
-    extractSquare(rook_points,src,eqSq);
+    extractSquare(rook_points, src, eqSq);
     imshow("dsd", eqSq);
 }

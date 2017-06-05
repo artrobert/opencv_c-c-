@@ -166,41 +166,11 @@ void simpleContour(const Mat &mat, std::vector<Point> &c) {
 //    return c;
 }
 
-void checkMotion(cv::Mat &frame, const char *frameNr) {
-    vector<int> wbPixels; // 0 - white pixels , 1 - black pixels
-    countPixels(frame, frameNr, wbPixels); //get the number of the white and black pixels in each frame
-    if (!motionStarted && wbPixels[0] >= 10) {
-        frame.copyTo(startMotionFrame); // we save the current frame because we will use it to train the MOG2 object
-        motionStarted = true; // mark that the motion started
-    }
-    if (motionStarted && wbPixels[0] <= 10) {
-        frame.copyTo(
-                endMotionFrame); // we save the current frame because we will feed it to MOG2 to identify the moved object
-        feedBackgroundAndGetObject();
-        motionStarted = false; // mark that the motion
-    }
-}
-
-void feedBackgroundAndGetObject() {
-    Ptr<BackgroundSubtractorMOG2> mog2ObjectIdentifier = createBackgroundSubtractorMOG2();
-
-    // Feed the background to the MOG2 object for 20 times
-    for (int i = 0; i < 20; i++) {
-        mog2ObjectIdentifier->apply(startMotionFrame, extractedObject, 0.5);
-    }
-
-    // Apply the changed background and get the object as a filled contour image
-    pMOG2->apply(endMotionFrame, extractedObject, 0);
-    extractedObject = imagePreparation::erosionImage(extractedObject, 2, 3); // Apply an erosion to remove the noise
-
-    //Try to identify the piece
-    identifyObject();
-}
 
 void identifyObject() {
     //TODO double matchShapes(InputArray contour1, InputArray contour2, int method, double parameter)
     cv::Ptr<cv::ShapeContextDistanceExtractor> mysc = cv::createShapeContextDistanceExtractor();
-    Size sz2Sh(300, 300);
+    Size sz2Sh(800, 600);
     string pion = "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\database\\pion.jpg";
     string nebun = "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\database\\nebun.jpg";
     string pion_folder =
@@ -274,7 +244,7 @@ void processVideo(char *videoFilename) {
                   cv::Scalar(255, 255, 255), -1);
         ss << capture.get(CAP_PROP_POS_FRAMES);
         string frameNumberString = ss.str();
-        checkMotion(fgMaskMOG2, frameNumberString.c_str());
+//        checkMotion(fgMaskMOG2, frameNumberString.c_str());
         putText(frame, frameNumberString.c_str(), cv::Point(15, 15),
                 FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         //show the current frame and the fg masks

@@ -5,7 +5,7 @@
 #include "ImageBasicOperations.h"
 #include "EdgeDetecting.h"
 #include "backgroundSubtract.h"
-
+#include "src/VideoProcessing.h"
 
 using namespace cv;
 using namespace std;
@@ -14,46 +14,27 @@ void warpImage();
 
 void getCornerList();
 
-void getEdgesTry();
-
 int detectEdges();
-
-Mat src;
-Mat src_grayyy;
-int thresh = 1;
-int max_thresh = 255;
-RNG rng(12345);
 
 int main(int argc, char **argv) {
 
-//    Mat im,imGrey;
-//
-//    im = imagePreparation::readImage("../images/manual_board_pieces_ed.jpg"); //read the image
-//    namedWindow("original", CV_WINDOW_AUTOSIZE);
-//    imshow("original", im);
-
-//    imGrey = imagePreparation::convertImageGreyscale(im); //convert it to greyscale
-//    im = imagePreparation::blurImage(imGrey); //blur the image
-//    im = imagePreparation::CannyThreshold(im); //apply CANNY , the threshold is good at 80
-//    im = imagePreparation::dilationImage(im,2,2); //apply dilation , 2,2 are good parameters
 //    warpImage();
 //    getCornerList();
 //    featureDetection::firstTry();
 //    km::kmeanstry();
 //    getEdgesTry();
 //    detectEdges();
-    backgroundSubtract::startBackgroundSubtract();
-//    cv::waitKey(0); // Wait for a keystroke in the window
-
+//    backgroundSubtract::startBackgroundSubtract();
+//    VideoProcessing::watchTheVideo((char *) "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\videos\\Video_003.mp4");
+    detectEdges();
     waitKey(0);
     return (0);
-
-    return 0;
 }
 
-/**
- * This function will warp the image
- */
+void processTheFrames(){
+
+}
+
 void warpImage() {
     Mat im, imGrey, originalImage;
     originalImage = imagePreparation::readImage("../chess.jpg"); //read the image
@@ -80,24 +61,6 @@ void getCornerList() {
     imshow("test", originalImage);
 }
 
-//void getEdgesTry(){
-//    Mat im,imGrey;
-//    im= imagePreparation::readImage("../chess.jpg"); //read the image
-//    Size size(1000,1000);
-//    resize(im,im,size);
-//
-//
-//    imGrey = imagePreparation::convertImageGreyscale(im); //convert it to greyscale
-//    im = imagePreparation::blurImage(imGrey); //blur the image
-//    im=imagePreparation::CannyThreshold(im,40,3);
-//
-//    namedWindow("original", CV_WINDOW_AUTOSIZE);
-//    imshow("original", im);
-//
-//}
-
-
-/** @function main */
 int detectEdges() {
     /// Load an image
     Mat src = imagePreparation::readImage("../images/manual_board_pieces_ed.jpg"); //read the image
