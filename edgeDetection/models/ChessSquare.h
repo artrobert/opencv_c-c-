@@ -17,8 +17,7 @@ public:
     int col;
     int row;
 
-    string indexString;
-    char rowAlpha;
+    char indexColRow[2]={};
 
     // 1 4
     // 2 3

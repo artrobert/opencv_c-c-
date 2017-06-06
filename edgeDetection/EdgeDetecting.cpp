@@ -714,10 +714,10 @@ void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, Point2
 
     // TODO, HERE WE CHOOSE THE TOP LEFT SQUARE, NEED TO SEE WHAT IS THE BEST ONE TO CHOOSE
     Point rook_points[4];
-    rook_points[0] = Point((int) pointMatrix[0][0].x, (int) pointMatrix[0][0].y);
-    rook_points[1] = Point((int) pointMatrix[1][0].x, (int) pointMatrix[1][0].y);
-    rook_points[2] = Point((int) pointMatrix[1][1].x, (int) pointMatrix[1][1].y);
-    rook_points[3] = Point((int) pointMatrix[0][1].x, (int) pointMatrix[0][1].y);
+    rook_points[0] = Point((int) pointMatrix[8][0].x, (int) pointMatrix[8][0].y);
+    rook_points[1] = Point((int) pointMatrix[7][0].x, (int) pointMatrix[7][0].y);
+    rook_points[2] = Point((int) pointMatrix[7][1].x, (int) pointMatrix[7][1].y);
+    rook_points[3] = Point((int) pointMatrix[8][1].x, (int) pointMatrix[8][1].y);
 
 //    rook_points[0] = Point((int) pointMatrix[0][1].x, (int) pointMatrix[0][1].y);
 //    rook_points[1] = Point((int) pointMatrix[1][1].x, (int) pointMatrix[1][1].y);
@@ -730,6 +730,8 @@ void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, Point2
 
     src.copyTo(binaryExtractedChessSquare, maskRoi);
     binaryExtractedChessSquare.copyTo(binaryExtractedChessSquare, maskRoiBlue);
+
+//    imshow("before binarization", binaryExtractedChessSquare);
 
     // Binarize the extracted image so we can count the white/black pixels
     cvtColor(binaryExtractedChessSquare, binaryExtractedChessSquare, CV_BGR2GRAY);
@@ -768,9 +770,10 @@ void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, Point2
         squareColor = 1; // the color is white
     }
 
+    // !!!NOTE!! This is very dependent of the square we extracted (above code)
     // With the color we founded previously, we iterate top - bottom (2 by 2) and assign that color
     // While iterating, we also iterate left - right and assign the opposite color to the right and bottom squares
-    for (int i = 0; i < 7; i += 2) {
+    for (int i = 7; i >= 1; i -= 2) {
         ChessSquare *sq = addressof(squareMatrix.getSquare(i, 0));
         sq->color = squareColor;
         while (sq->rightSquare != NULL) {
@@ -781,55 +784,91 @@ void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, Point2
     }
 }
 
+/**
+ * Function will receive 2 vectors of lines (horizontally and vertically), will get the intersections
+ * and will form a matrix of 9x9 represeting the chess table square's corners
+ *
+ * @param pozAngleLines The vertical lines
+ * @param negativeAngleLines The horizontal lines
+ * @param pointMatrix The output matrix
+ */
 void createSquarePointMatrix(vector<Vec4i> pozAngleLines, vector<Vec4i> negativeAngleLines, Point2f pointMatrix[9][9]) {
-    for (int i = 0; i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
+    // This is commented because it set the top left corner as (0,0)
+//    for (int i = 0; i < 9; i++) {
+//        for (int j = 0; j < 9; j++) {
+//            Point2f point = getIntersection(pozAngleLines[i], negativeAngleLines[j]);
+//            pointMatrix[i][j] = point;
+//        }
+//    }
+
+    // To keep consistency of the chess table (1-8 rows / a-h cols) and because the points start from the right corner
+    // We will change their position in the matrix, this way (0,0) will start at the bottom left
+    int maxLimit = 8;
+    for (int i = 0; i <= maxLimit; i++) {
+        for (int j = 0; j <= maxLimit; j++) {
             Point2f point = getIntersection(pozAngleLines[i], negativeAngleLines[j]);
-            pointMatrix[i][j] = point;
+            pointMatrix[maxLimit - i][j] = point;
         }
     }
 }
 
+/**
+ * Creates the logic connections between the chess table squares and indexis them
+ *
+ * @param squareMatrix Object containing the {@link ChessSquare}s
+ * @param pointMatrix Matrix containing the square corner points that will be assigned to them
+ */
 void createSquareMatrix(ChessSquareMatrix &squareMatrix, Point2f pointMatrix[9][9]) {
 
     int k = 1;
+
+    char colChar = 'a';
+    char rowChar = '1';
+
     for (size_t i = 0; i < 8; i++) {
         for (size_t j = 0; j < 8; j++) {
             ChessSquare *currentSquare = addressof(squareMatrix.getSquare(i, j));
+
+            //Assign the index
             currentSquare->index = k;
+            currentSquare->indexColRow[0] = rowChar;
+            currentSquare->indexColRow[1] = colChar;
+            currentSquare->row = i;
+            currentSquare->col = j;
+
             // Set the corner points
-            currentSquare->topLeft = pointMatrix[i][j];
-            currentSquare->bottomLeft = pointMatrix[i + 1][j];
-            currentSquare->bottomRight = pointMatrix[i + 1][j + 1];
-            currentSquare->topRight = pointMatrix[i][j + 1];
+            currentSquare->topLeft = pointMatrix[i + 1][j];
+            currentSquare->bottomLeft = pointMatrix[i][j];
+            currentSquare->bottomRight = pointMatrix[i][j + 1];
+            currentSquare->topRight = pointMatrix[i + 1][j + 1];
 
             // If not in the bottom row set the bottom squares (left , middle or right)
-            if (i != 7) {
-                currentSquare->bottomSquare = addressof(squareMatrix.getSquare(i + 1, j));
+            if (i != 0) {
+                currentSquare->bottomSquare = addressof(squareMatrix.getSquare(i - 1, j));
 
                 // If not in the first col, set the left square
                 if (j != 0) {
-                    currentSquare->bottomLeftSquare = addressof(squareMatrix.getSquare(i + 1, j - 1));
+                    currentSquare->bottomLeftSquare = addressof(squareMatrix.getSquare(i - 1, j - 1));
                 }
 
                 // If not in the last col, set the right square
                 if (j != 7) {
-                    currentSquare->bottomRightSquare = addressof(squareMatrix.getSquare(i + 1, j + 1));
+                    currentSquare->bottomRightSquare = addressof(squareMatrix.getSquare(i - 1, j + 1));
                 }
             }
 
             // If not in the first row, set the top squares (left, middle , right)
-            if (i != 0) {
-                currentSquare->topSquare = addressof(squareMatrix.getSquare(i - 1, j));
+            if (i != 7) {
+                currentSquare->topSquare = addressof(squareMatrix.getSquare(i + 1, j));
 
                 // If not in the first col, set the top left square
                 if (j != 0) {
-                    currentSquare->topLeftSquare = addressof(squareMatrix.getSquare(i - 1, j - 1));
+                    currentSquare->topLeftSquare = addressof(squareMatrix.getSquare(i + 1, j - 1));
                 }
 
                 // If not in the last col, set the top right square
                 if (j != 7) {
-                    currentSquare->topRightSquare = addressof(squareMatrix.getSquare(i - 1, j + 1));
+                    currentSquare->topRightSquare = addressof(squareMatrix.getSquare(i + 1, j + 1));
                 }
             }
 
@@ -844,7 +883,10 @@ void createSquareMatrix(ChessSquareMatrix &squareMatrix, Point2f pointMatrix[9][
             }
 
             k++;
+            colChar++;
         }
+        colChar = 'a';
+        rowChar++;
     }
 }
 
@@ -904,9 +946,9 @@ void EdgeDetecting::startProcess(Mat &src) {
 
     //Print the square colors
     printf("\nWhite = 1 ; Black = 0");
-    for (size_t i = 0; i < 8; i++) {
+    for (int i = 7; i >= 0; i--) {
         printf("\n");
-        for (size_t j = 0; j < 8; j++) {
+        for (int j = 0; j < 8; j++) {
             printf("%d  ", squareMatrix.getSquare(i, j).color);
         }
     }
