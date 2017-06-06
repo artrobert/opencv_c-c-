@@ -6,12 +6,13 @@
 #define EDGEDETECTION_EDGEDETECTING_H
 
 #include <opencv2/core/matx.hpp>
+#include "models/ChessSquareMatrix.h"
 
 class EdgeDetecting {
 
 public:
 
-    static void startProcess(cv::Mat &src);
+    static void startProcess(cv::Mat &src,ChessSquareMatrix &squareMatrix);
 };
 
 

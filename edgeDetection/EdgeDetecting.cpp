@@ -594,8 +594,9 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
         putText(imgrey3, s, Point(searchBottom[i].x, searchBottom[i].y), fontFace, fontScale, Scalar(0, 0, 255),
                 thickness, 8, false);
     }
-    namedWindow("test2", CV_WINDOW_AUTOSIZE);
-    imshow("test2", imgrey3);
+    // SHOW HORIZONTAL LINES CORNER POINTS
+//    namedWindow("test2", CV_WINDOW_AUTOSIZE);
+//    imshow("test2", imgrey3);
 
     //this is for the left edge
     for (int i = 0; i < searchLeft.size(); i++) {
@@ -611,8 +612,9 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
         putText(imgrey2, s, Point(searchLeft[i].x, searchLeft[i].y), fontFace, fontScale, Scalar(0, 0, 255), thickness,
                 8, false);
     }
-    namedWindow("test", CV_WINDOW_AUTOSIZE);
-    imshow("test", imgrey2);
+    // SHOW VERTICAL LINE CORNER POINTS
+//    namedWindow("test", CV_WINDOW_AUTOSIZE);
+//    imshow("test", imgrey2);
 
     printf("line length %lf", sqrt(
             (highX.x - highY.x) * (highX.x - highY.x) + (highX.y - highY.y) * (highX.y - highY.y)));
@@ -692,8 +694,6 @@ void filterAndRemoveLines(vector<Vec4i> houghLines, vector<Vec4i> &pozAngleLines
 //    line( cdst, Point(pozHighLine[0],pozHighLine[1]), Point(pozHighLine[2],pozHighLine[3]), Scalar(0,0,255), 3, CV_AA); //top line
 //    line(cdst, Point(negLowLine[0], negLowLine[1]), Point(negLowLine[2], negLowLine[3]), Scalar(0, 0, 255), 3, CV_AA); //left line
 //    line( cdst, Point(negHighLine[0],negHighLine[1]), Point(negHighLine[2],negHighLine[3]), Scalar(0,0,255), 3, CV_AA); //right line
-
-
 }
 
 /**
@@ -897,7 +897,7 @@ void extractSquare(Point corners[4], cv::Mat &src, cv::Mat &extractedSquare) {
     src.copyTo(extractedSquare, maskRoi);
 }
 
-void EdgeDetecting::startProcess(Mat &src) {
+void EdgeDetecting::startProcess(Mat &src,ChessSquareMatrix &squareMatrix) {
     /// Reduce noise with a kernel 3x3
 //    blur( src_gray, detected_edges, Size(3,3) );
     cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
@@ -937,8 +937,6 @@ void EdgeDetecting::startProcess(Mat &src) {
     //Creates a 9x9 matrix with all the line intersection points of the table
     createSquarePointMatrix(pozAngleLines, negativeAngleLines, pointMatrix);
 
-    ChessSquareMatrix squareMatrix(8);
-
     //Creates a 8x8 matrix with the squares(corner points, neighbors,color,if it has piece) of the table
     createSquareMatrix(squareMatrix, pointMatrix);
 
@@ -953,13 +951,13 @@ void EdgeDetecting::startProcess(Mat &src) {
         }
     }
 
-    Point rook_points[4];
-    rook_points[0] = squareMatrix.getSquare(5, 3).topLeft; //top left
-    rook_points[1] = squareMatrix.getSquare(5, 3).bottomLeft; //bot left
-    rook_points[2] = squareMatrix.getSquare(5, 3).bottomRight; //bot right
-    rook_points[3] = squareMatrix.getSquare(5, 3).topRight; //top right
+//    Point rook_points[4];
+//    rook_points[0] = squareMatrix.getSquare(5, 3).topLeft; //top left
+//    rook_points[1] = squareMatrix.getSquare(5, 3).bottomLeft; //bot left
+//    rook_points[2] = squareMatrix.getSquare(5, 3).bottomRight; //bot right
+//    rook_points[3] = squareMatrix.getSquare(5, 3).topRight; //top right
 
-    Mat eqSq;
-    extractSquare(rook_points, src, eqSq);
-    imshow("dsd", eqSq);
+//    Mat eqSq;
+//    extractSquare(rook_points, src, eqSq);
+//    imshow("dsd", eqSq);
 }

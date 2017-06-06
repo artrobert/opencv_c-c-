@@ -70,6 +70,7 @@ int detectEdges() {
 
     if (!src.data) { return -1; }
     else {
-        EdgeDetecting::startProcess(src);
+        ChessSquareMatrix squareMatrix(8);
+        EdgeDetecting::startProcess(src,squareMatrix);
     }
 }
