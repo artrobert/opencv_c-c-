@@ -7,7 +7,9 @@
 
 
 class VideoProcessing {
+
 public:
+
     static void watchTheVideo(char *videoFilename);
 };
 

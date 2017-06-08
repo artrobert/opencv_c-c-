@@ -11,6 +11,8 @@
 #include "../ImageBasicOperations.h"
 #include "../models/PieceContour.h"
 #include "../ImageDB.h"
+#include "../models/ChessSquareMatrix.h"
+#include "../EdgeDetecting.h"
 
 using namespace cv;
 using namespace std;
@@ -35,6 +37,8 @@ void feedBackgroundAndGetObject(cv::Mat &extractedObjMat);
 void checkMotion(cv::Mat &frame, const char *frameNr);
 
 void VideoProcessing::watchTheVideo(char *videoFilename) {
+    // Chess table square matrix
+    ChessSquareMatrix *squareMatrix = NULL;
 
     //create the capture object
     VideoCapture capture(videoFilename);
@@ -45,6 +49,7 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
     }
 
     pMOG2 = createBackgroundSubtractorMOG2();
+    pMOG2->setShadowValue(0);
 
     //read input data. ESC or 'q' for quitting
     keyboard = 0;
@@ -60,8 +65,14 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
         if (remapBoardCounter == 0) {
             remapBoardCounter = remapTimer;
-            // Remap the board, in case it has moved
 
+            // Remap the board, in case it has moved
+            Mat src = imagePreparation::readImage("D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\images\\new_squares\\img1.jpg"); //read the image
+             Size size2(800,600);
+             resize(src,src,size2);
+            delete squareMatrix;
+            squareMatrix = new ChessSquareMatrix(8);
+            EdgeDetecting::startProcess(src, *squareMatrix);
             // TODO , call the function to detect edges again
         } else {
             remapBoardCounter--;
@@ -79,24 +90,24 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         ss << capture.get(CAP_PROP_POS_FRAMES);
         string frameNumberString = ss.str();
 
-        checkMotion(fgMaskMOG2, frameNumberString.c_str());
+//        checkMotion(fgMaskMOG2, frameNumberString.c_str());
 
         //
-        if (readyToExtractObject) {
-            Mat extractedObjMat; // binary Mat containing the obj
-            // Get the object was moved
-            feedBackgroundAndGetObject(extractedObjMat);
-            // Extract the contour of the extracted piece
-            PieceContour extractedPieceContour = ImageDB::getContourFromMat(extractedObjMat);
-            // Try to see if we can identify it;
-            PieceType pieceType = ImageDB::matchChessPieces(extractedPieceContour); // TODO this is not 100% accurate
-
-            //TODO return the piece type to the android
-        }
+//        if (readyToExtractObject) {
+//            Mat extractedObjMat; // binary Mat containing the obj
+//            // Get the object was moved
+//            feedBackgroundAndGetObject(extractedObjMat);
+//            // Extract the contour of the extracted piece
+//            PieceContour extractedPieceContour = ImageDB::getContourFromMat(extractedObjMat);
+//            // Try to see if we can identify it;
+//            PieceType pieceType = ImageDB::matchChessPieces(extractedPieceContour); // TODO this is not 100% accurate
+//
+//            //TODO return the piece type to the android
+//        }
         putText(frame, frameNumberString.c_str(), cv::Point(15, 15),
                 FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         //show the current frame and the fg masks
-        keyboard = (char) waitKey(1000);
+        keyboard = (char) waitKey(500);
         imshow("Frame", frame);
         imshow("FG Mask MOG 2", fgMaskMOG2);
         //get the input from the keyboard
@@ -104,6 +115,7 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
     //delete capture object
     capture.release();
 }
+
 
 /**
  * Iterates through the image Mat and counts the white and the black pixels and put them in a vector

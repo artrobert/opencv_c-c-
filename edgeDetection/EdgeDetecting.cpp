@@ -8,8 +8,6 @@
 #include <opencv2/imgproc.hpp>
 #include <io.h>
 #include "ImageBasicOperations.h"
-#include "models/ChessSquare.h"
-#include "models/ChessSquareMatrix.h"
 
 
 using namespace cv;
@@ -595,8 +593,8 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
                 thickness, 8, false);
     }
     // SHOW HORIZONTAL LINES CORNER POINTS
-//    namedWindow("test2", CV_WINDOW_AUTOSIZE);
-//    imshow("test2", imgrey3);
+    namedWindow("test2", CV_WINDOW_AUTOSIZE);
+    imshow("test2", imgrey3);
 
     //this is for the left edge
     for (int i = 0; i < searchLeft.size(); i++) {
@@ -613,8 +611,8 @@ void getCornerList(cv::Mat &originalImage, vector<Point> &searchBottom, vector<P
                 8, false);
     }
     // SHOW VERTICAL LINE CORNER POINTS
-//    namedWindow("test", CV_WINDOW_AUTOSIZE);
-//    imshow("test", imgrey2);
+    namedWindow("test", CV_WINDOW_AUTOSIZE);
+    imshow("test", imgrey2);
 
     printf("line length %lf", sqrt(
             (highX.x - highY.x) * (highX.x - highY.x) + (highX.y - highY.y) * (highX.y - highY.y)));
@@ -704,20 +702,21 @@ void filterAndRemoveLines(vector<Vec4i> houghLines, vector<Vec4i> &pozAngleLines
  * @param squareMatrix A matrix of {@link ChessSquare} objects representing the chessboard table
  * @param pointMatrix A matrix of points representing all the chessboard square corners
  */
-void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, Point2f pointMatrix[9][9]) {
+void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, int squareRow, int squareCol) {
 
     cv::Mat maskRoi = cv::Mat::zeros(src.size(), src.type());
     // Mask used to extract a single square, make it red so we can later binarize the image
     cv::Mat maskRoiBlue = cv::Mat(src.size(), src.type(), Scalar(255, 0, 0)); //mask used to extract a single square
 
     cv::Mat binaryExtractedChessSquare;
+    ChessSquare *currentSquare = addressof(squareMatrix.getSquare(squareRow, squareCol));
 
     // TODO, HERE WE CHOOSE THE TOP LEFT SQUARE, NEED TO SEE WHAT IS THE BEST ONE TO CHOOSE
     Point rook_points[4];
-    rook_points[0] = Point((int) pointMatrix[8][0].x, (int) pointMatrix[8][0].y);
-    rook_points[1] = Point((int) pointMatrix[7][0].x, (int) pointMatrix[7][0].y);
-    rook_points[2] = Point((int) pointMatrix[7][1].x, (int) pointMatrix[7][1].y);
-    rook_points[3] = Point((int) pointMatrix[8][1].x, (int) pointMatrix[8][1].y);
+    rook_points[0] = currentSquare->topLeft;
+    rook_points[1] = currentSquare->bottomLeft;
+    rook_points[2] = currentSquare->bottomRight;
+    rook_points[3] = currentSquare->topRight;
 
 //    rook_points[0] = Point((int) pointMatrix[0][1].x, (int) pointMatrix[0][1].y);
 //    rook_points[1] = Point((int) pointMatrix[1][1].x, (int) pointMatrix[1][1].y);
@@ -897,7 +896,7 @@ void extractSquare(Point corners[4], cv::Mat &src, cv::Mat &extractedSquare) {
     src.copyTo(extractedSquare, maskRoi);
 }
 
-void EdgeDetecting::startProcess(Mat &src,ChessSquareMatrix &squareMatrix) {
+void EdgeDetecting::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     /// Reduce noise with a kernel 3x3
 //    blur( src_gray, detected_edges, Size(3,3) );
     cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
@@ -908,9 +907,12 @@ void EdgeDetecting::startProcess(Mat &src,ChessSquareMatrix &squareMatrix) {
 //    houghLines(detected_edges, src_gray);
 
     Mat dst, cdst;
-    int lowThreshold = 255;
+    int lowThreshold = 220;
     Canny(src, dst, lowThreshold, lowThreshold * 3, 3);
     cvtColor(dst, cdst, CV_GRAY2BGR);
+
+    namedWindow("cann", CV_WINDOW_AUTOSIZE);
+    imshow("cann", cdst);
 
     vector<Vec4i> vecHoughLines, pozAngleLines, negativeAngleLines;
     vector<Point> tableIntersectionPoints;
@@ -918,6 +920,14 @@ void EdgeDetecting::startProcess(Mat &src,ChessSquareMatrix &squareMatrix) {
     houghSimpleLines(dst, vecHoughLines); //This will get all lines in the image
 
     filterAndRemoveLines(vecHoughLines, pozAngleLines, negativeAngleLines, tableIntersectionPoints);
+
+    // Print lines that were found , USEFUL FOR DEBUG
+//    for (Vec4i v:negativeAngleLines) {
+//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
+//    }
+//    namedWindow("lines", CV_WINDOW_AUTOSIZE);
+//    imshow("lines", cdst);
+
 
     //Change perspective
 //    for (Point2f r:tableIntersectionPoints) {
@@ -930,8 +940,17 @@ void EdgeDetecting::startProcess(Mat &src,ChessSquareMatrix &squareMatrix) {
 //    searchCommonSlopeAndRemove(pozAngleLines);
     sort(pozAngleLines.begin(), pozAngleLines.end(), comparisonFirstPointXAsc);
     sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXAsc);
-    searchCloseDistanceAndRemove(pozAngleLines, 30); //distance limit 30
-    searchCloseDistanceAndRemove(negativeAngleLines, 30); //distance limit 30
+    searchCloseDistanceAndRemove(pozAngleLines, 10); //distance limit 30
+    searchCloseDistanceAndRemove(negativeAngleLines, 10); //distance limit 30
+
+    for (Vec4i v:negativeAngleLines) {
+        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
+    }
+    for (Vec4i v:pozAngleLines) {
+        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
+    }
+    namedWindow("lines", CV_WINDOW_AUTOSIZE);
+    imshow("lines", cdst);
 
     Point2f pointMatrix[9][9];
     //Creates a 9x9 matrix with all the line intersection points of the table
@@ -940,7 +959,7 @@ void EdgeDetecting::startProcess(Mat &src,ChessSquareMatrix &squareMatrix) {
     //Creates a 8x8 matrix with the squares(corner points, neighbors,color,if it has piece) of the table
     createSquareMatrix(squareMatrix, pointMatrix);
 
-    determineSquareColors(src, squareMatrix, pointMatrix);
+    determineSquareColors(src, squareMatrix,0,3);
 
     //Print the square colors
     printf("\nWhite = 1 ; Black = 0");
@@ -951,13 +970,15 @@ void EdgeDetecting::startProcess(Mat &src,ChessSquareMatrix &squareMatrix) {
         }
     }
 
-//    Point rook_points[4];
-//    rook_points[0] = squareMatrix.getSquare(5, 3).topLeft; //top left
-//    rook_points[1] = squareMatrix.getSquare(5, 3).bottomLeft; //bot left
-//    rook_points[2] = squareMatrix.getSquare(5, 3).bottomRight; //bot right
-//    rook_points[3] = squareMatrix.getSquare(5, 3).topRight; //top right
 
-//    Mat eqSq;
-//    extractSquare(rook_points, src, eqSq);
-//    imshow("dsd", eqSq);
+    ChessSquare *currentSquare = addressof(squareMatrix.getSquare(0,4));
+    Point rook_points[4];
+    rook_points[0] = currentSquare->topLeft;
+    rook_points[1] = currentSquare->bottomLeft;
+    rook_points[2] = currentSquare->bottomRight;
+    rook_points[3] = currentSquare->topRight;
+
+    Mat eqSq;
+    extractSquare(rook_points, src, eqSq);
+    imshow("dsd", eqSq);
 }

@@ -25,8 +25,8 @@ int main(int argc, char **argv) {
 //    getEdgesTry();
 //    detectEdges();
 //    backgroundSubtract::startBackgroundSubtract();
-//    VideoProcessing::watchTheVideo((char *) "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\videos\\Video_003.mp4");
-    detectEdges();
+    VideoProcessing::watchTheVideo((char *) "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\videos\\vid_new_3.mp4");
+//    detectEdges();
     waitKey(0);
     return (0);
 }
