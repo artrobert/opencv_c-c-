@@ -14,7 +14,6 @@ using namespace cv;
 using namespace std;
 
 const char *window_name = "Edge Map";
-Mat detected_edges, src_gray;
 
 /**
  * This function is used in the sort() call so we can sort ASCENDING the vector containing the lines after the X of the first point
@@ -659,39 +658,98 @@ void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
     }
 }
 
-void filterAndRemoveLines(vector<Vec4i> houghLines, vector<Vec4i> &pozAngleLines, vector<Vec4i> &negAngleLines,
-                          vector<Point> &tableIntersectionPoints) {
+/**
+ * Method used find margin edges and calculate the table's corner points
+ * !NOTE! Vec4 is like P1([0],[1]) P2([2],[3])
+ *
+ * @param verticalLines The vector where the vertical lines will be placed (have pozitive angle)
+ * @param horizontalLines The vector where the horizontal lines will be placed (have negative angle)
+ * @param tableIntersectionPoints The vector where the tables corner points will be placed
+ * @param cdst Matrix used to show the points, ONLY FOR DEBUG NEEDED
+ */
+void findTableCornerPoints(vector<Vec4i> &verticalLines, vector<Vec4i> &horizontalLines,
+                           vector<Point> &tableIntersectionPoints, Mat &cdst) {
 
-    separateLinesByAngle(houghLines, 2, pozAngleLines, negAngleLines);
+    // These will hold the margin edges of the chess table
+    Vec4i verticalRightLine = verticalLines[0], verticalLeftLine = verticalLines[0];
+    Vec4i horizontalLowLine = horizontalLines[0], horizontalHighLine = horizontalLines[0];
 
-    Vec4i pozHighLine = pozAngleLines[0], pozLowLine = pozAngleLines[0], negLowLine = negAngleLines[0], negHighLine = negAngleLines[0];
-    //Search for the low line points
-    for (Vec4i l:pozAngleLines) {
-        if (l[1] < pozLowLine[1]) {
-            pozLowLine = l;
-        }
-        if (l[1] > pozHighLine[1]) {
-            pozHighLine = l;
+    for (int i = 0; i < verticalLines.size(); i++) {
+        Vec4i l1 = verticalLines.at(i);
+        for (int j = i; j < verticalLines.size(); j++) {
+            if (i != j) {
+                Vec4i l2 = verticalLines.at(j);
+                Point2f intersectionPoint = getIntersection(l1, l2);
+                if (intersectionPoint.y >= 0) {
+                    verticalLines.erase(verticalLines.begin() + j);
+                    j--;
+                }
+            }
         }
     }
-    //Search for the left line points
-    for (Vec4i l:negAngleLines) {
-        if (l[0] < negLowLine[0]) {
-            negLowLine = l;
+
+    //Search for the low line points (aka the bottom-est and top-est edges)
+    for (Vec4i l:verticalLines) {
+        for (Vec4i l2:verticalLines) {
+            Point2f inter = getIntersection(l, l2);
+            printf("\n(%f,%f)", inter.x, inter.y);
         }
-        if (l[0] > negHighLine[0]) {
-            negHighLine = l;
+        printf("\n\n");
+
+        if (l[1] < verticalLeftLine[1]) {
+            verticalLeftLine = l;
+        }
+        if (l[1] > verticalRightLine[1]) {
+            verticalRightLine = l;
+        }
+                line(cdst, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 255, 0), 3, CV_AA);
+    }
+
+    for (int i = 0; i < horizontalLines.size(); i++) {
+        Vec4i l1 = horizontalLines.at(i);
+        for (int j = i; j < horizontalLines.size(); j++) {
+            if (i != j) {
+                Vec4i l2 = horizontalLines.at(j);
+                Point2f intersectionPoint = getIntersection(l1, l2);
+                if (intersectionPoint.x >= 0 || intersectionPoint.y >= 0) {
+                    horizontalLines.erase(horizontalLines.begin() + j);
+                    j--;
+                }
+            }
         }
     }
 
-    tableIntersectionPoints.push_back(getIntersection(pozLowLine, negLowLine)); //left point
-    tableIntersectionPoints.push_back(getIntersection(pozLowLine, negHighLine)); //top top
-    tableIntersectionPoints.push_back(getIntersection(pozHighLine, negLowLine)); //bottom
-    tableIntersectionPoints.push_back(getIntersection(pozHighLine, negHighLine)); //right point
-//    line(cdst, Point(pozLowLine[0], pozLowLine[1]), Point(pozLowLine[2], pozLowLine[3]), Scalar(0, 0, 255), 3, CV_AA); //bottom line
-//    line( cdst, Point(pozHighLine[0],pozHighLine[1]), Point(pozHighLine[2],pozHighLine[3]), Scalar(0,0,255), 3, CV_AA); //top line
-//    line(cdst, Point(negLowLine[0], negLowLine[1]), Point(negLowLine[2], negLowLine[3]), Scalar(0, 0, 255), 3, CV_AA); //left line
-//    line( cdst, Point(negHighLine[0],negHighLine[1]), Point(negHighLine[2],negHighLine[3]), Scalar(0,0,255), 3, CV_AA); //right line
+
+    //Search for the left line points (aka the left-est and right-est edges)
+    for (Vec4i l:horizontalLines) {
+        if (l[1] > horizontalLowLine[1]) {
+            horizontalLowLine = l;
+        }
+
+        if (l[1] < horizontalHighLine[1]) {
+            horizontalHighLine = l;
+        }
+        line(cdst, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(255, 0, 0), 3, CV_AA);
+    }
+
+    tableIntersectionPoints.push_back(getIntersection(verticalLeftLine, horizontalLowLine)); //left point
+    tableIntersectionPoints.push_back(getIntersection(verticalLeftLine, horizontalHighLine)); //top top
+    tableIntersectionPoints.push_back(getIntersection(verticalRightLine, horizontalLowLine)); //bottom
+    tableIntersectionPoints.push_back(getIntersection(verticalRightLine, horizontalHighLine)); //right point
+
+
+    //Debug purpose
+    //bottom line
+//    line(cdst, Point(verticalLeftLine[0], verticalLeftLine[1]), Point(verticalLeftLine[2], verticalLeftLine[3]), Scalar(0, 0, 255), 3, CV_AA);
+//    //top line
+//    line(cdst, Point(verticalRightLine[0], verticalRightLine[1]), Point(verticalRightLine[2], verticalRightLine[3]), Scalar(0, 0, 255), 3, CV_AA);
+//    //left line
+//    line(cdst, Point(horizontalLowLine[0], horizontalLowLine[1]), Point(horizontalLowLine[2], horizontalLowLine[3]), Scalar(0, 0, 255), 3, CV_AA);
+//    //right line
+//    line(cdst, Point(horizontalHighLine[0], horizontalHighLine[1]), Point(horizontalHighLine[2], horizontalHighLine[3]), Scalar(0, 0, 255), 3, CV_AA);
+    const char *show_table_corner_points = "Table margin lines";
+    namedWindow(show_table_corner_points, CV_WINDOW_AUTOSIZE);
+    imshow(show_table_corner_points, cdst);
 }
 
 /**
@@ -897,56 +955,59 @@ void extractSquare(Point corners[4], cv::Mat &src, cv::Mat &extractedSquare) {
 }
 
 void EdgeDetecting::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
-    /// Reduce noise with a kernel 3x3
-//    blur( src_gray, detected_edges, Size(3,3) );
-    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
-    vector<Point> bottomEdgePoints, leftEdgePoints;
-    vector<double> bottomEdgeSquareDims, leftEdgeSquareDims;
-    getCornerList(src, bottomEdgePoints, leftEdgePoints, bottomEdgeSquareDims, leftEdgeSquareDims);
 
+    // << Detect edges the more work-ish way >>
+//    blur( src_gray, detected_edges, Size(3,3) );
+//    cvtColor(detected_edges, src_gray, CV_GRAY2BGR);
+    // << Declare  >>
+//    Mat detected_edges, src_gray;
+//    vector<Point> bottomEdgePoints, leftEdgePoints;
+//    vector<double> bottomEdgeSquareDims, leftEdgeSquareDims;
+//    getCornerList(src, bottomEdgePoints, leftEdgePoints, bottomEdgeSquareDims, leftEdgeSquareDims);
 //    houghLines(detected_edges, src_gray);
 
+
     Mat dst, cdst;
-    int lowThreshold = 220;
+    int lowThreshold = 220; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
     Canny(src, dst, lowThreshold, lowThreshold * 3, 3);
     cvtColor(dst, cdst, CV_GRAY2BGR);
 
-    namedWindow("cann", CV_WINDOW_AUTOSIZE);
-    imshow("cann", cdst);
+    const char *show_canny_startup_image = "Canny of the start input image";
+    namedWindow(show_canny_startup_image, CV_WINDOW_AUTOSIZE);
+    imshow(show_canny_startup_image, cdst);
 
-    vector<Vec4i> vecHoughLines, pozAngleLines, negativeAngleLines;
-    vector<Point> tableIntersectionPoints;
-
+    // This vector will contain the output lines from the library's function to detect lines
+    vector<Vec4i> vecHoughLines;
+    // This will detect 2 set of lines ( horizontal and vertical) but with different slopes
     houghSimpleLines(dst, vecHoughLines); //This will get all lines in the image
 
-    filterAndRemoveLines(vecHoughLines, pozAngleLines, negativeAngleLines, tableIntersectionPoints);
+    vector<Vec4i> verticalPositiveAngleLines, horizontalNegativeAngleLines;
 
-    // Print lines that were found , USEFUL FOR DEBUG
-//    for (Vec4i v:negativeAngleLines) {
-//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
-//    }
-//    namedWindow("lines", CV_WINDOW_AUTOSIZE);
-//    imshow("lines", cdst);
+    int angleSeparator = 2;
+    // Separates the lines in 2 sets after an angle
+    separateLinesByAngle(vecHoughLines, angleSeparator, verticalPositiveAngleLines, horizontalNegativeAngleLines);
 
+    // This variable will hold the chess table corner points
+    vector<Point> tableIntersectionPoints;
+    // Get the tables corner points
+    findTableCornerPoints(verticalPositiveAngleLines, horizontalNegativeAngleLines, tableIntersectionPoints, cdst);
 
     //Change perspective
-//    for (Point2f r:tableIntersectionPoints) {
-//        circle(cdst, tableIntersectionPoints[2], 3, 255, 1, 8, 0);
-//    }
 //    tryPerspectiveCorrection(src,tableIntersectionPoints[0],tableIntersectionPoints[3],tableIntersectionPoints[2],tableIntersectionPoints[1]);
 
-    searchCommonPointsAndRemove(pozAngleLines, 20, 20);
-//    searchCommonPointsAndRemove(negativeAngleLines, 5, 5);
-//    searchCommonSlopeAndRemove(pozAngleLines);
-    sort(pozAngleLines.begin(), pozAngleLines.end(), comparisonFirstPointXAsc);
-    sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXAsc);
-    searchCloseDistanceAndRemove(pozAngleLines, 10); //distance limit 30
-    searchCloseDistanceAndRemove(negativeAngleLines, 10); //distance limit 30
+    searchCommonPointsAndRemove(verticalPositiveAngleLines, 20, 20);
+//    searchCommonPointsAndRemove(horizontalNegativeAngleLines, 5, 5);
+//    searchCommonSlopeAndRemove(verticalPositiveAngleLines);
 
-    for (Vec4i v:negativeAngleLines) {
+    sort(verticalPositiveAngleLines.begin(), verticalPositiveAngleLines.end(), comparisonFirstPointXAsc);
+    sort(horizontalNegativeAngleLines.begin(), horizontalNegativeAngleLines.end(), comparisonFirstPointXAsc);
+    searchCloseDistanceAndRemove(verticalPositiveAngleLines, 10); //distance limit 30
+    searchCloseDistanceAndRemove(horizontalNegativeAngleLines, 10); //distance limit 30
+
+    for (Vec4i v:horizontalNegativeAngleLines) {
         line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
     }
-    for (Vec4i v:pozAngleLines) {
+    for (Vec4i v:verticalPositiveAngleLines) {
         line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(0, 0, 255), 3, CV_AA);
     }
     namedWindow("lines", CV_WINDOW_AUTOSIZE);
@@ -954,12 +1015,12 @@ void EdgeDetecting::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
 
     Point2f pointMatrix[9][9];
     //Creates a 9x9 matrix with all the line intersection points of the table
-    createSquarePointMatrix(pozAngleLines, negativeAngleLines, pointMatrix);
+    createSquarePointMatrix(verticalPositiveAngleLines, horizontalNegativeAngleLines, pointMatrix);
 
     //Creates a 8x8 matrix with the squares(corner points, neighbors,color,if it has piece) of the table
     createSquareMatrix(squareMatrix, pointMatrix);
 
-    determineSquareColors(src, squareMatrix,0,3);
+    determineSquareColors(src, squareMatrix, 0, 3);
 
     //Print the square colors
     printf("\nWhite = 1 ; Black = 0");
@@ -971,7 +1032,7 @@ void EdgeDetecting::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     }
 
 
-    ChessSquare *currentSquare = addressof(squareMatrix.getSquare(0,4));
+    ChessSquare *currentSquare = addressof(squareMatrix.getSquare(0, 4));
     Point rook_points[4];
     rook_points[0] = currentSquare->topLeft;
     rook_points[1] = currentSquare->bottomLeft;

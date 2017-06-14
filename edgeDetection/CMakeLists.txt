@@ -33,7 +33,7 @@ set(SOURCE_FILES
         models/ChessSquareMatrix.cpp
         models/ChessSquareMatrix.h
         src/VideoProcessing.h
-        src/VideoProcessing.cpp)
+        src/VideoProcessing.cpp src/EdgeProcessing.cpp src/EdgeProcessing.h)
 
 add_executable(test_cv ${SOURCE_FILES})
 
