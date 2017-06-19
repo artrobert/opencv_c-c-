@@ -21,7 +21,7 @@ const char *window_name = "Edge Map";
  * @param v2 The second line
  * @return returns if the X of the first point is smaller than the second lines first point X
  */
-bool comparisonFirstPointXAsc(Vec4i v1, Vec4i v2) {
+bool compXAsc(Vec4i v1, Vec4i v2) {
     return (v1.val[0] <= v2.val[0]);
 }
 
@@ -31,7 +31,7 @@ bool comparisonFirstPointXAsc(Vec4i v1, Vec4i v2) {
  * @param v2 The second line
  * @return returns if the X of the first point is smaller than the second lines first point X
  */
-bool comparisonFirstPointXDesc(Vec4i v1, Vec4i v2) {
+bool compXDesc(Vec4i v1, Vec4i v2) {
     return (v1.val[0] >= v2.val[0]);
 }
 
@@ -193,13 +193,13 @@ void searchCommonSlopeAndRemove(vector<Vec4i> &lines) {
 }
 
 /**
- * This will take each line and compare it with the others and if the coordinates of its P1.X/P1.Y and P2.X/P2.Y are like +/- 15&10 pixels around, they will
+ * This will take each line and compare it with the others and if the coordinates of its P1.X/P1.Y and P2.X/P2.Y
+ * are like +/- 15&10 pixels around (error margins)
  * select the line with the biggest length and override the smaller one so we can easily remove after
  *
- * Bug , some of the values are not erased !!!Strange!!
- *
- * @param src The vectorContaining the lines
- * @param comparisonType Type of comparison TODO:
+ * @param lines The vectorContaining the lines
+ * @param errorMarginX The max error margin for X points we accept
+ * @param errorMarginY The max error margin for the Y points we accept
  */
 void searchCommonPointsAndRemove(vector<Vec4i> &lines, int errorMarginX, int errorMarginY) {
     for (size_t i = 0; i < lines.size() - 1; i++) {
@@ -268,7 +268,7 @@ void findSquareCoordinates(vector<Vec4i> &v1, vector<Vec4i> &v2) {
     sort(positiveAngleLines.begin(), positiveAngleLines.end(), comparisonFirstPointYAsc);
 
     //We sorted after the X value DESCENDING for the \ lines in order to take the first value out (There are others ways but lets stick to this one)
-    sort(negativeAngleLines.begin(), negativeAngleLines.end(), comparisonFirstPointXDesc);
+    sort(negativeAngleLines.begin(), negativeAngleLines.end(), compXDesc);
 
     Vec4i fistLinePositive, secondLinePositive, firstLineNegative, secondLineNegative;
 
@@ -406,7 +406,7 @@ void houghLines(cv::Mat &src, cv::Mat &gr) {
 
     printf("Lines found with angle 2:%d and with -2 : %d \n", linesAngle1.size(), linesAngle2.size());
 
-//        std::sort(linesAngle1.begin(), linesAngle1.end(), comparisonFirstPointXAsc);
+//        std::sort(linesAngle1.begin(), linesAngle1.end(), compXAsc);
 //        std::sort(linesAngle2.begin(), linesAngle2.end(), comparisonFirstPointYAsc);
 
     double squareMulti = 2;
@@ -999,8 +999,8 @@ void EdgeDetecting::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
 //    searchCommonPointsAndRemove(horizontalNegativeAngleLines, 5, 5);
 //    searchCommonSlopeAndRemove(verticalPositiveAngleLines);
 
-    sort(verticalPositiveAngleLines.begin(), verticalPositiveAngleLines.end(), comparisonFirstPointXAsc);
-    sort(horizontalNegativeAngleLines.begin(), horizontalNegativeAngleLines.end(), comparisonFirstPointXAsc);
+    sort(verticalPositiveAngleLines.begin(), verticalPositiveAngleLines.end(), compXAsc);
+    sort(horizontalNegativeAngleLines.begin(), horizontalNegativeAngleLines.end(), compXAsc);
     searchCloseDistanceAndRemove(verticalPositiveAngleLines, 10); //distance limit 30
     searchCloseDistanceAndRemove(horizontalNegativeAngleLines, 10); //distance limit 30
 

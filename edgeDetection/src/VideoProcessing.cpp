@@ -13,6 +13,7 @@
 #include "../ImageDB.h"
 #include "../models/ChessSquareMatrix.h"
 #include "../EdgeDetecting.h"
+#include "EdgeProcessing.h"
 
 using namespace cv;
 using namespace std;
@@ -72,7 +73,7 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
              resize(src,src,size2);
             delete squareMatrix;
             squareMatrix = new ChessSquareMatrix(8);
-            EdgeDetecting::startProcess(src, *squareMatrix);
+            EdgeProcessing::startProcess(src, *squareMatrix);
             // TODO , call the function to detect edges again
         } else {
             remapBoardCounter--;

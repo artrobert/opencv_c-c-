@@ -8,10 +8,12 @@
 
 #include <opencv2/core/mat.hpp>
 #include "../models/ChessSquareMatrix.h"
+#include "../models/ChessTableEdges.h"
 
 class EdgeProcessing {
 
-    void startProcess(cv::Mat &src, ChessSquareMatrix &squareMatrix);
+public :
+    static void startProcess(cv::Mat &src, ChessSquareMatrix &squareMatrix);
 };
 
 

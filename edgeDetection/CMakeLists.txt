@@ -19,8 +19,6 @@ set(SOURCE_FILES
         FeatureDetection.h
         KMeansImplementation.cpp
         KMeansImplementation.h
-        EdgeDetecting.cpp
-        EdgeDetecting.h
         ImageDB.cpp
         ImageDB.h
         models/PieceContour.cpp
@@ -33,7 +31,9 @@ set(SOURCE_FILES
         models/ChessSquareMatrix.cpp
         models/ChessSquareMatrix.h
         src/VideoProcessing.h
-        src/VideoProcessing.cpp src/EdgeProcessing.cpp src/EdgeProcessing.h)
+        src/VideoProcessing.cpp
+        src/EdgeProcessing.h
+        src/EdgeProcessing.cpp models/ChessTableEdges.cpp models/ChessTableEdges.h)
 
 add_executable(test_cv ${SOURCE_FILES})
 
