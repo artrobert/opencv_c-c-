@@ -5,15 +5,16 @@
 #include <cstdlib>
 #include <opencv2/core/mat.hpp>
 #include <opencv2/videoio.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <opencv/cv.hpp>
 #include "VideoProcessing.h"
 #include "../ImageBasicOperations.h"
-#include "../models/PieceContour.h"
-#include "../ImageDB.h"
 #include "../models/ChessSquareMatrix.h"
-#include "../EdgeDetecting.h"
 #include "EdgeProcessing.h"
+#include <queue>
 
 using namespace cv;
 using namespace std;
@@ -25,6 +26,35 @@ char keyboard; //input from keyboard
 bool motionStarted = false;
 bool readyToExtractObject = false;
 
+const float mogLearningBeforeStart = 0.01;
+const float mogLearningAfterStart = 0.001;
+
+float mogLearningSpeed = 0.05;
+
+std::queue<cv::Mat> queueOfMats;
+std::queue<cv::Mat> queueOfMogs;
+
+int waitForFrames = -1;
+
+int queueSize=100;
+
+void addToQueue(cv::Mat &frame) {
+    if (queueOfMats.size() == queueSize) {
+        queueOfMats.pop();
+    }
+    queueOfMats.push(frame);
+}
+
+void addToQueueMog(cv::Mat &mog) {
+    if (queueOfMogs.size() == queueSize) {
+        queueOfMogs.pop();
+    }
+    queueOfMogs.push(mog);
+}
+
+vector<Mat> startingList;
+
+
 /**
  * Counter used to remap the board in case it was moved (the square were identified )
  */
@@ -35,7 +65,28 @@ Mat startMotionFrame, endMotionFrame;
 
 void feedBackgroundAndGetObject(cv::Mat &extractedObjMat);
 
-void checkMotion(cv::Mat &frame, const char *frameNr);
+void checkMotion(cv::Mat frame, cv::Mat &fmogFmare, const char *frameNr);
+
+/**
+ * Function used to take the frame containing the chess table and make a virtual representation of it
+ * NOTE now it runs on a image
+ * @param squareMatrix
+ */
+void virtualizeChessTable(ChessSquareMatrix *squareMatrix){
+    if (remapBoardCounter == 0) {
+        remapBoardCounter = remapTimer;
+
+        // Remap the board, in case it has moved
+        Mat src = imagePreparation::readImage(
+                "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\images\\new_squares\\img1.jpg"); //read the image
+        delete squareMatrix;
+        squareMatrix = new ChessSquareMatrix(8);
+        EdgeProcessing::startProcess(src, *squareMatrix);
+        // TODO , call the function to detect edges again
+    } else {
+        remapBoardCounter--;
+    }
+}
 
 void VideoProcessing::watchTheVideo(char *videoFilename) {
     // Chess table square matrix
@@ -50,11 +101,11 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
     }
 
     pMOG2 = createBackgroundSubtractorMOG2();
-    pMOG2->setShadowValue(0);
 
     //read input data. ESC or 'q' for quitting
     keyboard = 0;
     Size size(800, 600);
+
 
     while (keyboard != 'q' && keyboard != 27) {
         //read the current frame
@@ -64,26 +115,19 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
             exit(EXIT_FAILURE);
         }
 
-        if (remapBoardCounter == 0) {
-            remapBoardCounter = remapTimer;
-
-            // Remap the board, in case it has moved
-            Mat src = imagePreparation::readImage("D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\images\\new_squares\\img1.jpg"); //read the image
-             Size size2(800,600);
-             resize(src,src,size2);
-            delete squareMatrix;
-            squareMatrix = new ChessSquareMatrix(8);
-            EdgeProcessing::startProcess(src, *squareMatrix);
-            // TODO , call the function to detect edges again
-        } else {
-            remapBoardCounter--;
-        }
-
         resize(frame, frame, size);
-        GaussianBlur(frame, frame, Size(3, 3), 3.5, 3.5);
 
-        //update the background model
-        pMOG2->apply(frame, fgMaskMOG2, -1);
+        virtualizeChessTable(squareMatrix);
+        
+//        cv::cvtColor(frame, frame, CV_BGR2GRAY);
+//        GaussianBlur(frame, frame, Size(3, 3),0, 0);
+
+        addToQueue(frame);
+
+        //update the background model  0.001
+        pMOG2->apply(frame, fgMaskMOG2, mogLearningSpeed);
+        addToQueueMog(fgMaskMOG2);
+
         //get the frame number and write it on the current frame
         stringstream ss;
         rectangle(frame, cv::Point(10, 2), cv::Point(100, 20),
@@ -91,24 +135,51 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         ss << capture.get(CAP_PROP_POS_FRAMES);
         string frameNumberString = ss.str();
 
-//        checkMotion(fgMaskMOG2, frameNumberString.c_str());
+        checkMotion(frame, fgMaskMOG2, frameNumberString.c_str());
+
+        if (waitForFrames >= 0) {
+            if (waitForFrames == 0) {
+                endMotionFrame = queueOfMats.front();
+//                fastNlMeansDenoisingColored(endMotionFrame,endMotionFrame,3, 10, 7, 21);
+                namedWindow("Motion ended frame", CV_WINDOW_AUTOSIZE);
+                imshow("Motion ended frame", endMotionFrame);
+                readyToExtractObject = true; // set the flag in order to extract the object
+                waitForFrames--;
+
+                Mat endMog;
+                endMog = queueOfMogs.front();
+                namedWindow("Motion ended mog", CV_WINDOW_AUTOSIZE);
+                imshow("Motion ended mog", endMog);
+            } else {
+                waitForFrames--;
+            }
+        }
+
+//        if (motionStarted) {
+//            namedWindow("Motion started frame", CV_WINDOW_AUTOSIZE);
+//            imshow("Motion started frame", startMotionFrame);
+//        }
 
         //
-//        if (readyToExtractObject) {
-//            Mat extractedObjMat; // binary Mat containing the obj
-//            // Get the object was moved
-//            feedBackgroundAndGetObject(extractedObjMat);
+        if (readyToExtractObject) {
+            Mat extractedObjMat; // binary Mat containing the obj
+            // Get the object was moved
+            feedBackgroundAndGetObject(extractedObjMat);
 //            // Extract the contour of the extracted piece
 //            PieceContour extractedPieceContour = ImageDB::getContourFromMat(extractedObjMat);
 //            // Try to see if we can identify it;
 //            PieceType pieceType = ImageDB::matchChessPieces(extractedPieceContour); // TODO this is not 100% accurate
 //
 //            //TODO return the piece type to the android
-//        }
+            readyToExtractObject = false;
+        }
         putText(frame, frameNumberString.c_str(), cv::Point(15, 15),
                 FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         //show the current frame and the fg masks
-        keyboard = (char) waitKey(500);
+        keyboard = (char) waitKey(100);
+        namedWindow("Frame", CV_WINDOW_AUTOSIZE);
+        namedWindow("FG Mask MOG 2", CV_WINDOW_AUTOSIZE);
+
         imshow("Frame", frame);
         imshow("FG Mask MOG 2", fgMaskMOG2);
         //get the input from the keyboard
@@ -117,7 +188,6 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
     capture.release();
 }
 
-
 /**
  * Iterates through the image Mat and counts the white and the black pixels and put them in a vector
  *
@@ -125,7 +195,7 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
  * @param frameName The name ( count ) of the frame
  * @param wbPixels The returne vector that has on the FIRST position the white pixels and on the SECOND the black ones
  */
-void countPixels(cv::Mat &src, const char *frameName, vector<int> wbPixels) {
+void countPixels(cv::Mat &src, const char *frameName, vector<int> &wbPixels) {
     int count_black = 0;
     int count_white = 0;
     for (int y = 0; y < src.rows; y++) {
@@ -141,7 +211,7 @@ void countPixels(cv::Mat &src, const char *frameName, vector<int> wbPixels) {
     }
     wbPixels.push_back(count_white);
     wbPixels.push_back(count_black);
-//    printf("\n Frame (%s) has White:%d black %d", frameName, count_white, count_black); // print for debug purpose
+    printf("\n Frame (%s) has White:%d black %d", frameName, count_white, count_black); // print for debug purpose
 }
 
 /**
@@ -150,16 +220,26 @@ void countPixels(cv::Mat &src, const char *frameName, vector<int> wbPixels) {
  */
 void feedBackgroundAndGetObject(cv::Mat &extractedObjMat) {
     Ptr<BackgroundSubtractorMOG2> mog2ObjectIdentifier = createBackgroundSubtractorMOG2();
+    mog2ObjectIdentifier->setShadowThreshold(200);
+//    mog2ObjectIdentifier->setShadowValue(0);
+    // fastNlMeansDenoisingColored(startMotionFrame,startMotionFrame,3, 10, 7, 21);
+
+//    mog2ObjectIdentifier->setShadowThreshold(150);
+
 
     // Feed the background to the MOG2 object for 20 times
-    for (int i = 0; i < 20; i++) {
-        mog2ObjectIdentifier->apply(startMotionFrame, extractedObjMat, 0.5);
+    for (int i = 0; i < startingList.size(); i++) {
+        mog2ObjectIdentifier->apply(startingList[i], extractedObjMat,0.5);
     }
 
     // Apply the changed background and get the object as a filled contour image
-    pMOG2->apply(endMotionFrame, extractedObjMat, 0);
+    mog2ObjectIdentifier->apply(endMotionFrame, extractedObjMat, 0.0);
+    Mat toShow = extractedObjMat.clone();
+    namedWindow("Extract on this image", CV_WINDOW_AUTOSIZE);
+    imshow("Extract on this image", extractedObjMat);
     extractedObjMat = imagePreparation::erosionImage(extractedObjMat, 2, 3); // Apply an erosion to remove the noise
 }
+
 
 /**
  * Checks if a movement has started or is ending
@@ -167,26 +247,40 @@ void feedBackgroundAndGetObject(cv::Mat &extractedObjMat) {
  * If there is movement, the number of white pixels in the binary frame will increase
  * If the number of white pixels start to decrease , the moving is ending
  *
- * @param frame The binary frame that we will check for movement
+ * @param fmogFrame The binary frame that we will be checked for movement
  * @param frameNr The name ( count ) of the frame (for debug)
  */
-void checkMotion(cv::Mat &frame, const char *frameNr) {
+void checkMotion(cv::Mat frame, cv::Mat &fmogFrame, const char *frameNr) {
     vector<int> wbPixels; // 0 position - white pixels , 1 position - black pixels
 
-    countPixels(frame, frameNr, wbPixels); //count the number of white and black pixels
+    countPixels(fmogFrame, frameNr, wbPixels); //count the number of white and black pixels
+
 
     // If there wasn't motion yet and the number of white pixels are growing, it means the motion is STARTING
-    if (!motionStarted && wbPixels[0] >= 10) {
-        frame.copyTo(startMotionFrame); // save the Mat of the start motion, also used for MOG2 training
+    if (!motionStarted && wbPixels[0] >= 1000) {
+//        startMotionFrame = queueOfMats.front();
+        for(int i=0;i<50;i++){
+            Mat ceva;
+            ceva=queueOfMats.front();
+            startingList.push_back(ceva);
+            queueOfMats.pop();
+        }
         motionStarted = true; // set the motion started FLAG to TRUE
+        mogLearningSpeed = mogLearningAfterStart;
+
+        Mat endMog;
+        endMog = queueOfMogs.front();
+        namedWindow("Motion start mog", CV_WINDOW_AUTOSIZE);
+        imshow("Motion start mog", endMog);
     }
 
     // If there is already motion and the number of white pixels is reaching 0 it means the motion is ENDING
-    if (motionStarted && wbPixels[0] <= 10) {
+    if (motionStarted && wbPixels[0] <= 200) {
         //save the Mat at the end of the motion, also used to feed MOG2 to extract the piece
-        frame.copyTo(endMotionFrame);
-        readyToExtractObject = true; // set the flag in order to extract the object
+        waitForFrames = 40;
         motionStarted = false; // mark that the motion ended
+        mogLearningSpeed = mogLearningBeforeStart;
     }
 }
+
 

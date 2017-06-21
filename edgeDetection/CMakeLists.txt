@@ -46,7 +46,8 @@ set(OpenCV_LIBS
         opencv_features2d
         opencv_videoio
         opencv_video
-        opencv_shape)
+        opencv_shape
+        opencv_photo)
 
 #linking
 target_link_libraries(test_cv ${OpenCV_LIBS})

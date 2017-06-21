@@ -514,9 +514,9 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     Canny(src, dst, lowThreshold, lowThreshold * 3, 3);
     cvtColor(dst, cdst, CV_GRAY2BGR);
 
-    const char *show_canny_startup_image = "Canny of the start input image";
-    namedWindow(show_canny_startup_image, CV_WINDOW_AUTOSIZE);
-    imshow(show_canny_startup_image, src);
+//    const char *show_canny_startup_image = "Canny of the start input image";
+//    namedWindow(show_canny_startup_image, CV_WINDOW_AUTOSIZE);
+//    imshow(show_canny_startup_image, src);
 
     // This vector will contain the output lines from the library's function to detect lines
     vector<Vec4i> vecHoughLines;
