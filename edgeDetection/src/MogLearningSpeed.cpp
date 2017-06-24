@@ -6,7 +6,7 @@
 
 float mogLearningSpeed = 0.5;
 const float mogLearningBeforeStart = 0.05; // the mog learning rate before the motion started
-const float mogLearningAfterStart = 0.001; // the mog learning rate after the motion started
+const float mogLearningAfterStart = 0.0005; // the mog learning rate after the motion started
 
 void setLearningBeforeStart() {
     mogLearningSpeed = mogLearningBeforeStart;

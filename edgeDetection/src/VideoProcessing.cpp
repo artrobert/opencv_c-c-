@@ -12,7 +12,6 @@
 #include "../models/ChessSquareMatrix.h"
 #include "EdgeProcessing.h"
 #include "MotionProcessing.h"
-#include "../ImageDB.h"
 #include "MogLearningSpeed.h"
 
 using namespace cv;
@@ -77,14 +76,17 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         cerr << "Unable to open video file: " << videoFilename << endl;
         exit(EXIT_FAILURE);
     }
-    mogLearningSpeed=0.05;
+    mogLearningSpeed = 0.05;
 
     // Chess table square matrix
     ChessSquareMatrix *squareMatrix = NULL;
 
     // Background subtract object
     Ptr<BackgroundSubtractorMOG2> mog2MotionDetection = createBackgroundSubtractorMOG2();
-    mog2MotionDetection->setDetectShadows(false);
+//    mog2MotionDetection->setHistory(20);
+//    mog2MotionDetection->setShadowThreshold(0.01);
+    mog2MotionDetection->setDetectShadows(true);
+//    mog2MotionDetection->setBackgroundRatio(0.8);
 
     //read input data. ESC or 'q' for quitting
     char keyboard = 0;
@@ -99,15 +101,49 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
         resize(frame, frame, size);
 
+
+
 //        virtualizeChessTable(squareMatrix); // TODO THIS IS WORKING
 
 //        cv::cvtColor(frame, frame, CV_BGR2GRAY);
-//        GaussianBlur(frame, frame, Size(3, 3),0, 0);
+        GaussianBlur(frame, frame, Size(3, 3),0, 0);
 
+//        Mat cannyMat;
 //
-        printf(" Mog learning speed:%lf",mogLearningSpeed);
+//        int lowThreshold = 50; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
+//        Canny(frame, cannyMat, lowThreshold, lowThreshold * 3, 3);
+//        imshow("Canny mat", cannyMat);
+
+        cv::Mat lab_image;
+        cv::cvtColor(frame, lab_image, CV_BGR2Lab);
+
+        // Extract the L channel
+        std::vector<cv::Mat> lab_planes(3);
+        cv::split(lab_image, lab_planes);  // now we have the L image in lab_planes[0]
+
+        // apply the CLAHE algorithm to the L channel
+        cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE();
+        clahe->setClipLimit(4);
+        cv::Mat dst;
+        clahe->apply(lab_planes[0], dst);
+
+        // Merge the the color planes back into an Lab image
+        dst.copyTo(lab_planes[0]);
+        cv::merge(lab_planes, lab_image);
+
+        // convert back to RGB
+        cv::Mat image_clahe;
+        cv::cvtColor(lab_image, frame, CV_Lab2BGR);
+
+//        medianBlur ( frame, frame, 5 );
+//
+        printf(" Mog learning speed:%lf", mogLearningSpeed);
         // Update the background model
         mog2MotionDetection->apply(frame, fgMaskMOG2, mogLearningSpeed);
+//        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 1);
+//        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 2);
+//        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2, 2);
+
         addToQueueMog(fgMaskMOG2);
 
         //get the frame number and write it on the current frame
@@ -122,7 +158,7 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         Mat movedPiece;
 
         // If there was motion
-        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), movedPiece)) {
+        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), movedPiece, mog2MotionDetection)) {
 //            // Extract the contour of the extracted piece
 //            PieceContour extractedPieceContour = ImageDB::getContourFromMat(movedPiece);
 //            // Try to see if we can identify it;

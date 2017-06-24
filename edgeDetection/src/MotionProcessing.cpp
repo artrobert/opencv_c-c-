@@ -19,15 +19,20 @@ int frameQueueSize = 100;
 bool motionStarted = false;
 
 // value representing how much of % from the frames from the queue to save for BG SUB
-int queuePercentageSave = 50;
+float queuePercentageSave = 50.0;
 
 std::queue<cv::Mat> queueOfFrames;
 
 // here will be the frames that will be feed to the background subtraction
 vector<Mat> startingList;
 
+// here will be the frames that will be feed to the bg sub after the motion ended
+vector<Mat> endingList;
+
 // Variable indicating how many frames we should wait before taking the ending frame to do the BG SUB
 int waitForFrames = -1;
+
+int framesSavedAfterMotionEnded = 60;
 
 // Here we will save the 'after motion' frame to feed to BG SUB
 Mat endMotionFrame;
@@ -39,10 +44,11 @@ bool readyToExtractObject = false;
 int startMotionPixelsThreshold = 1000;
 
 // The number of white pixel needed to cosinder the motion ENDED
-int endMotionPixelsThreshold = 200;
+int endMotionPixelsThreshold = 300;
 
 int frameNumbers = 0;
 
+Ptr<BackgroundSubtractorMOG2> mogDetection;
 
 /**
  * Function used to keep a queue of {@link frameQueueSize} frames
@@ -84,16 +90,33 @@ void countPixels(cv::Mat &src, const char *frameName, vector<int> &wbPixels) {
 /**
  * If the motion ended, we need to wait some frames to get the 'before motion' frame
  */
-void handleMotionEnded() {
+void handleMotionEnded(cv::Mat &frame) {
+    bool endListReady = false;
     // If the frames we needed to wait in order to not have any hands in the frame passed
     if (waitForFrames == 0) {
-        endMotionFrame = queueOfFrames.front();
-//            namedWindow("Motion ended frame", CV_WINDOW_AUTOSIZE);
-//            imshow("Motion ended frame", endMotionFrame);
-        // set the flag in order to extract the object
-        readyToExtractObject = true;
-        // Decrement one more time to be negative
-        waitForFrames--;
+        if (framesSavedAfterMotionEnded != 0) {
+            Mat frameGray;
+            cv::cvtColor(frame, frameGray, CV_BGR2GRAY);
+            GaussianBlur(frameGray, frameGray, Size(3, 3), 0, 0);
+            endingList.push_back(frameGray);
+            framesSavedAfterMotionEnded--;
+        }
+        if (framesSavedAfterMotionEnded == 0 || motionStarted) {
+            unsigned int endListSize = endingList.size() - 10;
+            endingList.resize(endListSize);
+            framesSavedAfterMotionEnded--;
+            endListReady = true;
+        }
+
+        if (endListReady) {
+            // set the flag in order to extract the object
+            readyToExtractObject = true;
+            // Decrement one more time to be negative
+            waitForFrames--;
+        }
+        // For debug
+//        namedWindow("Motion ended frame", CV_WINDOW_AUTOSIZE);
+//        imshow("Motion ended frame", endMotionFrame);
     } else {
         waitForFrames--;
     }
@@ -109,9 +132,19 @@ void handleMotionStarted() {
     for (int i = 0; i < maxFramesToSave; i++) {
         Mat frameFromQueue;
         frameFromQueue = queueOfFrames.front();
+        cv::cvtColor(frameFromQueue, frameFromQueue, CV_BGR2GRAY);
+        GaussianBlur(frameFromQueue, frameFromQueue, Size(3, 3), 0, 0);
         startingList.push_back(frameFromQueue);
         queueOfFrames.pop();
+
     }
+
+    // For debug
+//    for(int i=0;i<startingList.size();i++){
+//        printf("\nSaved frames:%d",i);
+//        imshow("Saved frame", startingList.at(i));
+//        waitKey(1000);
+//    }
 }
 
 /**
@@ -140,8 +173,9 @@ void checkMotion(cv::Mat &fmogFrame, const char *frameNr) {
     if (motionStarted && wbPixels[0] <= endMotionPixelsThreshold) {
         //save the Mat at the end of the motion, also used to feed MOG2 to extract the piece
         waitForFrames = 40;
+        framesSavedAfterMotionEnded = 50;
         motionStarted = false; // mark that the motion ended
-        setLearningBeforeStart();
+//        setLearningBeforeStart();
         printf("Motion ended!");
     }
 }
@@ -152,26 +186,31 @@ void checkMotion(cv::Mat &fmogFrame, const char *frameNr) {
  */
 void feedBackgroundAndGetObject(cv::Mat &extractedObjMat) {
     Ptr<BackgroundSubtractorMOG2> mog2ObjectIdentifier = createBackgroundSubtractorMOG2();
-    mog2ObjectIdentifier->setShadowThreshold(200);
+    mog2ObjectIdentifier->setDetectShadows(true);
+    mog2ObjectIdentifier->setShadowValue(0);
 //    mog2ObjectIdentifier->setShadowValue(0);
 
 
     // Feed the background to the MOG2 object for 20 times
     for (int i = 0; i < startingList.size(); i++) {
-        mog2ObjectIdentifier->apply(startingList[i], extractedObjMat, 0.5);
+        mog2ObjectIdentifier->apply(startingList[i], extractedObjMat, 0.3);
     }
 
 
-    // TODO we could also store a list of frames after the motion ended, just and ideea
     // Apply the changed background and get the object as a filled contour image
-    mog2ObjectIdentifier->apply(endMotionFrame, extractedObjMat, 0.0);
+    for (int i = 0; i < endingList.size(); i++) {
+        mog2ObjectIdentifier->apply(endingList[i], extractedObjMat, 0.002);
+    }
+    extractedObjMat = imagePreparation::erosionImage(extractedObjMat, 2, 2);
     Mat toShow = extractedObjMat.clone();
     namedWindow("Extract on this image", CV_WINDOW_AUTOSIZE);
     imshow("Extract on this image", extractedObjMat);
-    extractedObjMat = imagePreparation::erosionImage(extractedObjMat, 2, 3); // Apply an erosion to remove the noise
 }
 
-bool MotionProcessing::watchMotion(Mat &frame, Mat &frameMogMask, const char *frameNr, Mat &motionResult) {
+bool MotionProcessing::watchMotion(cv::Mat frame, cv::Mat frameMogMask, const char *frameNr, cv::Mat motionResult,
+                                  cv::Ptr<cv::BackgroundSubtractorMOG2> ptr) {
+
+    mogDetection=ptr;
 
     // Add the frame to the queue
     addToQueueFrame(frame);
@@ -181,7 +220,7 @@ bool MotionProcessing::watchMotion(Mat &frame, Mat &frameMogMask, const char *fr
 
     // If the motion ended (bcs waitForFrames is >=0)
     if (waitForFrames >= 0) {
-        handleMotionEnded();
+        handleMotionEnded(frame);
     }
 
     frameNumbers++;
