@@ -183,7 +183,7 @@ void findMarginLines(ChessTableEdges &chessTableEdges, Mat &cdst) {
         if (l->val[1] > verticalRight->val[1]) {
             verticalRight = l;
         }
-//        line(cdst, Point(l->val[0], l->val[1]), Point(l->val[2], l->val[3]), Scalar(0, 255, 0), 3, CV_AA);
+//        line(cdst, Point(l->val[0], l->val[1]), Point(l->val[2], l->val[3]), Scalar(0, 0, 255), 3, CV_AA);
     }
 
 //    line(cdst, Point(verticalRight->val[0], verticalRight->val[1]), Point(verticalRight->val[2], verticalRight->val[3]), Scalar(0, 255, 0), 3, CV_AA);
@@ -245,17 +245,23 @@ void shortenEdges(ChessTableEdges &chessTableEdges) {
  * Function used to calculate the corner points of the table
  *
  * @param chessTableEdges The object containing the chess table edges
- * @param tableIntersectionPoints Vector to store the corner points
+ * @param cornerPoints Vector to store the corner points
  * @param cdst Matrix to display (FOR DEBUG)
  */
-void findTableCornerPoints(ChessTableEdges &chessTableEdges, vector<Point> &tableIntersectionPoints, Mat &cdst) {
-    tableIntersectionPoints.push_back(
+void findTableCornerPoints(ChessTableEdges &chessTableEdges, vector<Point> &cornerPoints, Mat &cdst) {
+
+    if (chessTableEdges.verticalLeft == NULL || chessTableEdges.verticalRight == NULL ||
+        chessTableEdges.horizontalHigh == NULL || chessTableEdges.horizontalLow == NULL) {
+        return;
+    }
+
+    cornerPoints.push_back(
             getIntersection(*chessTableEdges.verticalLeft, *chessTableEdges.horizontalLow)); //left point
-    tableIntersectionPoints.push_back(
+    cornerPoints.push_back(
             getIntersection(*chessTableEdges.verticalLeft, *chessTableEdges.horizontalHigh)); //top top
-    tableIntersectionPoints.push_back(
+    cornerPoints.push_back(
             getIntersection(*chessTableEdges.verticalRight, *chessTableEdges.horizontalLow)); //bottom
-    tableIntersectionPoints.push_back(
+    cornerPoints.push_back(
             getIntersection(*chessTableEdges.verticalRight, *chessTableEdges.horizontalHigh)); //right point
 
     //Debug purpose
@@ -543,6 +549,12 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     // Get the tables corner points
     findTableCornerPoints(chessTableEdges, tableIntersectionPoints, cdst);
 
+    // If there are no lines , we just return
+    if (!(chessTableEdges.verticalPositiveAngleLines.size() > 0 &&
+          chessTableEdges.horizontalNegativeAngleLines.size() > 0)) {
+        return;
+    }
+
     // TODO here needs work because it depends on the image and how the table is positioned
     sort(chessTableEdges.verticalPositiveAngleLines.begin(), chessTableEdges.verticalPositiveAngleLines.end(),
          compYDesc);
@@ -553,15 +565,15 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     searchCloseDistanceAndRemove(chessTableEdges.horizontalNegativeAngleLines, 10);
 
 //    int i = 0;
-//    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
-//        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
-//        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
-//
-//        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
-//        line(cdst, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
-//    }
-//    namedWindow("lines", CV_WINDOW_AUTOSIZE);
-//    imshow("lines", cdst);
+    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
+        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
+        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
+
+        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
+        line(cdst, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
+    }
+    namedWindow("lines", CV_WINDOW_AUTOSIZE);
+    imshow("lines", cdst);
 
     Point2f pointMatrix[9][9];
     //Creates a 9x9 matrix with all the line intersection points of the table

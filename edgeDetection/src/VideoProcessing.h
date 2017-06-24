@@ -6,7 +6,10 @@
 #define EDGEDETECTION_VIDEOPROCESSING_H
 
 
+
 class VideoProcessing {
+
+
 
 public:
 
