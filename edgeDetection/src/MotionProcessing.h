@@ -11,8 +11,7 @@ extern void setLearningAfterStart();
 class MotionProcessing {
 
 public:
-    static bool watchMotion(cv::Mat frame, cv::Mat frameMogMask, const char *frameNr, cv::Mat motionResult,
-                               cv::Ptr<cv::BackgroundSubtractorMOG2> ptr);
+    static bool watchMotion(cv::Mat &frame, cv::Mat &frameMogMask, const char *frameNr, cv::Mat &motionResult);
 };
 
 

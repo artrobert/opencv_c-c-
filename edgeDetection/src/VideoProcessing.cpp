@@ -68,6 +68,29 @@ void virtualizeChessTable(ChessSquareMatrix *squareMatrix) {
     }
 }
 
+void changeColorSpace(cv::Mat &frame){
+    cv::Mat lab_image;
+    cv::cvtColor(frame, lab_image, CV_BGR2Lab);
+
+    // Extract the L channel
+    std::vector<cv::Mat> lab_planes(3);
+    cv::split(lab_image, lab_planes);  // now we have the L image in lab_planes[0]
+
+    // apply the CLAHE algorithm to the L channel
+    cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE();
+    clahe->setClipLimit(4);
+    cv::Mat dst;
+    clahe->apply(lab_planes[0], dst);
+
+    // Merge the the color planes back into an Lab image
+    dst.copyTo(lab_planes[0]);
+    cv::merge(lab_planes, lab_image);
+
+    // convert back to RGB
+    cv::Mat image_clahe;
+    cv::cvtColor(lab_image, frame, CV_Lab2BGR);
+}
+
 void VideoProcessing::watchTheVideo(char *videoFilename) {
     //create the capture object
     VideoCapture capture(videoFilename);
@@ -101,47 +124,27 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
         resize(frame, frame, size);
 
+//        virtualizeChessTable(squareMatrix); // THIS IS WORKING
+
+//        changeColorSpace(frame);
 
 
-//        virtualizeChessTable(squareMatrix); // TODO THIS IS WORKING
+//        cv::cvtColor(frame, frame, COLOR_RGB2HSV_FULL);
+//        equalizeHist( frame, frame );
 
-//        cv::cvtColor(frame, frame, CV_BGR2GRAY);
-        GaussianBlur(frame, frame, Size(3, 3),0, 0);
+//        GaussianBlur(frame, frame, Size(3, 3),0, 0);
 
-//        Mat cannyMat;
-//
-//        int lowThreshold = 50; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
-//        Canny(frame, cannyMat, lowThreshold, lowThreshold * 3, 3);
-//        imshow("Canny mat", cannyMat);
+        Mat cannyMat;
 
-        cv::Mat lab_image;
-        cv::cvtColor(frame, lab_image, CV_BGR2Lab);
-
-        // Extract the L channel
-        std::vector<cv::Mat> lab_planes(3);
-        cv::split(lab_image, lab_planes);  // now we have the L image in lab_planes[0]
-
-        // apply the CLAHE algorithm to the L channel
-        cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE();
-        clahe->setClipLimit(4);
-        cv::Mat dst;
-        clahe->apply(lab_planes[0], dst);
-
-        // Merge the the color planes back into an Lab image
-        dst.copyTo(lab_planes[0]);
-        cv::merge(lab_planes, lab_image);
-
-        // convert back to RGB
-        cv::Mat image_clahe;
-        cv::cvtColor(lab_image, frame, CV_Lab2BGR);
+        int lowThreshold = 50; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
+        Canny(frame, cannyMat, lowThreshold, lowThreshold * 3, 3);
+        imshow("Canny mat", cannyMat);
 
 //        medianBlur ( frame, frame, 5 );
 //
-        printf(" Mog learning speed:%lf", mogLearningSpeed);
         // Update the background model
         mog2MotionDetection->apply(frame, fgMaskMOG2, mogLearningSpeed);
-//        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 1);
-//        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 2);
+        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 1);
 //        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2, 2);
 
         addToQueueMog(fgMaskMOG2);
@@ -158,7 +161,8 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         Mat movedPiece;
 
         // If there was motion
-        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), movedPiece, mog2MotionDetection)) {
+        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), movedPiece)) {
+            imshow("Motion result",movedPiece);
 //            // Extract the contour of the extracted piece
 //            PieceContour extractedPieceContour = ImageDB::getContourFromMat(movedPiece);
 //            // Try to see if we can identify it;
