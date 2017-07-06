@@ -33,6 +33,11 @@ cv::Ptr<cv::ShapeContextDistanceExtractor> mysc;
 
 void loadPiece(PieceType type, string pieceText);
 
+/**
+ * Function used to load all the pieces contour
+ *
+ * THIS SHOULD BE CALLED BEFORE MAKING A MATCHING
+ */
 void ImageDB::loadSampleImages() {
     mysc = cv::createShapeContextDistanceExtractor();
     loadPiece(PieceType::pion, pionText); //pt. pion
@@ -128,6 +133,16 @@ PieceContour ImageDB::getContourFromMat(const Mat &mat) {
     return pc;
 }
 
+/**
+ * This will do a background subtraction between two images and will return the result
+ *
+ * In this function, the input images will be blurred in order to remove the noise
+ *
+ *
+ * @param withoutImg The image with only the background
+ * @param withImg The image with the background and the piece
+ * @return A binary image highliting the contour of the piece
+ */
 cv::Mat doSubtraction(cv::Mat &withoutImg, cv::Mat &withImg) {
     Ptr<BackgroundSubtractorMOG2> pMOG2 = createBackgroundSubtractorMOG2();
     pMOG2->setShadowValue(0);
@@ -193,6 +208,15 @@ PieceType ImageDB::matchChessPieces(PieceContour pieceIncoming) {
 
 /** Create DB samples **/
 
+/**
+ * Function used to load 2 images from a path, these 2 images represent the imagine WITH the piece and the image
+ * WITHOUT the piece so in the end to do a background subtraction in order to remove the backgroun and highlight the
+ * pieces form
+ *
+ * In the end will produce a binari image of the piece's contour and will save it as a jpg file
+ *
+ * @param pieceName The name of the piece we want to create the binary images
+ */
 void createSamples(string pieceName) {
     string pieceRoot = piece_format;
     int maxTries = 3; // if we find a image that has cols/rows = 0 (doesn't exist) we exit
@@ -225,6 +249,11 @@ void createSamples(string pieceName) {
     printf("\nFinished creating samples for %s", pieceName.c_str());
 }
 
+/**
+ * Function that will call the function that create a binary image containing the shape of the image an save it raw
+ *
+ * THIS SHOULD BE CALLED IF WE DONT HAVE ANY BINARY IMAGES (OR "SAMPLES")
+ */
 void ImageDB::createDatabase() {
     createSamples(pionText);
 //    createSamples(calText);
