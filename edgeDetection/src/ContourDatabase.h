@@ -14,21 +14,22 @@ namespace cdb {
     using namespace cv;
     using namespace std;
 
-    const string pionText = "pion";
-    const string calText = "cal";
-    const string turaText = "tura";
-    const string nebunText = "nebun";
-    const string reginaText = "regina";
-    const string regeText = "rege";
-
-    const string jpg_extension = ".jpg";
-    const string piece_format = "\\piece_";
-    const string no_piece_format = "\\piece_n_";
-    const string result_format = "_result_";
 
     class ContourDatabase {
 
     public:
+
+        string pawnText = "pion";
+        string knightText = "cal";
+        string rookText = "tura";
+        string bishopText = "nebun";
+        string reginaText = "regina";
+        string kingText = "rege";
+
+        const string jpg_extension = ".jpg";
+        const string piece_format = "\\piece_";
+        const string no_piece_format = "\\piece_n_";
+        const string result_format = "_result_";
 
         static const int maxLayers = 4;
 

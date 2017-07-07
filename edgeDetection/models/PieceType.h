@@ -13,6 +13,7 @@ enum class PieceType {
     nebun = 4,
     regina = 5,
     rege = 6,
+    freeSpace = 7,
     unknown = -1
 };
 

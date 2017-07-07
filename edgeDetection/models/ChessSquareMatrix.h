@@ -13,20 +13,37 @@ class ChessSquareMatrix {
     std::vector<ChessSquare> m_squares; // matrix of chess squares , rows [0,7] ,cols [0,7]
     int matrixSize;
 
+
+
+private:
+
+    const char whiteFirstRowPieces[8] = {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'};
+    const char whiteSecondRowPieces[1] = {'P'};
+
+    const char blackFirstRowPieces[8] = {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'};
+    const char blackSecondRowPieces[1] = {'p'};
+
+    const char noPiece = '-';
+
+
 public:
 
-    ChessSquare & getSquare(size_t i, size_t j){
-        return m_squares[ i * matrixSize + j];
+    ChessSquare &getSquare(size_t i, size_t j) {
+        return m_squares[i * matrixSize + j];
     }
-    ~ChessSquareMatrix(){
+
+    ~ChessSquareMatrix() {
         m_squares.clear();
     }
-    ChessSquareMatrix(int size){
-        matrixSize=size;
-        for (int i = 0; i < matrixSize*matrixSize; ++i) {
+
+    ChessSquareMatrix(int size) {
+        matrixSize = size;
+        for (int i = 0; i < matrixSize * matrixSize; ++i) {
             m_squares.push_back(ChessSquare());
         }
     }
+
+    void initBasicModel();
 };
 
 

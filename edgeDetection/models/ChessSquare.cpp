@@ -10,3 +10,9 @@ bool ChessSquare::checkIfContainsPiece(cv::Point2f pieceBasePoint) {
            && pieceBasePoint.y > topLeft.y && pieceBasePoint.y > topRight.y // below the top edge
            && pieceBasePoint.y < bottomLeft.y && pieceBasePoint.y < bottomRight.y; // above the bottom edge
 }
+
+void ChessSquare::initWithPiece(PieceType type,bool isWhite ) {
+    piece=new PieceModel;
+    piece->pieceType=type;
+    piece->isWhite=isWhite;
+}

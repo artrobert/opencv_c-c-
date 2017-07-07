@@ -13,7 +13,7 @@
 class EdgeProcessing {
 
 public :
-    static void startProcess(cv::Mat &src, ChessSquareMatrix &squareMatrix);
+    static void startProcess(cv::Mat &src, ChessSquareMatrix &squareMatrix,bool virtualizeWithPieces);
 };
 
 

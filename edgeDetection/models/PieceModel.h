@@ -14,6 +14,7 @@
  */
 class PieceModel {
 public:
+    char type;
     PieceType pieceType; // the type of the piece
     std::vector<PieceContour> contours; // the contours of the piece (from different angles)
     bool isWhite; // the color of the piece

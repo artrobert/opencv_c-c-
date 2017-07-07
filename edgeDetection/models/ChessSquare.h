@@ -17,7 +17,7 @@ public:
     int col;
     int row;
 
-    char indexColRow[2]={};
+    char indexColRow[2] = {};
 
     // 1 4
     // 2 3
@@ -31,19 +31,25 @@ public:
     bool hasPiece;
 
     // neighbors
-    ChessSquare *leftSquare;
-    ChessSquare *rightSquare;
-    ChessSquare *topSquare;
-    ChessSquare *bottomSquare;
+    ChessSquare *leftSquare = NULL;
+    ChessSquare *rightSquare = NULL;
+    ChessSquare *topSquare = NULL;
+    ChessSquare *bottomSquare = NULL;
 
-    ChessSquare *topLeftSquare;
-    ChessSquare *topRightSquare;
-    ChessSquare *bottomLeftSquare;
-    ChessSquare *bottomRightSquare;
+    ChessSquare *topLeftSquare = NULL;
+    ChessSquare *topRightSquare = NULL;
+    ChessSquare *bottomLeftSquare = NULL;
+    ChessSquare *bottomRightSquare = NULL;
 
     bool checkIfContainsPiece(cv::Point2f pieceBasePoint);
 
     PieceModel *piece;
+
+    void initWithPiece(PieceType type, bool isWhite);
+
+    ChessSquare() {
+        piece = new PieceModel;
+    }
 };
 
 

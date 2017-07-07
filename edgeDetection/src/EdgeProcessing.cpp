@@ -435,10 +435,13 @@ void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, size_t
     // Fill the mask Mat with white pixels in order to extract the chess board square
     cv::fillConvexPoly(maskRoi, rook_points, 4, cv::Scalar(255, 255, 255));
 
+    imshow("before", maskRoi);
+
+
     src.copyTo(binaryExtractedChessSquare, maskRoi);
     binaryExtractedChessSquare.copyTo(binaryExtractedChessSquare, maskRoiBlue);
 
-//    imshow("before binarization", binaryExtractedChessSquare);
+    imshow("before binarization", binaryExtractedChessSquare);
 
     // Binarize the extracted image so we can count the white/black pixels
     cvtColor(binaryExtractedChessSquare, binaryExtractedChessSquare, CV_BGR2GRAY);
@@ -513,7 +516,11 @@ void extractSquare(Point corners[4], cv::Mat &src, cv::Mat &extractedSquare) {
     src.copyTo(extractedSquare, maskRoi);
 }
 
-void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
+void putPiecesOnBoard(ChessSquareMatrix &squareMatrix){
+    squareMatrix.initBasicModel();
+}
+
+void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, bool virtualizeWithPieces) {
 
     Mat dst, cdst;
     int lowThreshold = 220; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
@@ -594,6 +601,10 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
         }
     }
 
+    if(virtualizeWithPieces){
+        putPiecesOnBoard(squareMatrix);
+    }
+
 
 //    ChessSquare *currentSquare = addressof(squareMatrix.getSquare(0, 4));
 //    Point rook_points[4];
@@ -602,7 +613,7 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
 //    rook_points[2] = currentSquare->bottomRight;
 //    rook_points[3] = currentSquare->topRight;
 
-//    Mat eqSq;
+    Mat eqSq;
 //    extractSquare(rook_points, src, eqSq);
 //    imshow("dsd", eqSq);
 }

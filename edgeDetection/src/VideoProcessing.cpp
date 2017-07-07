@@ -24,6 +24,7 @@ Mat frame;
 // Size to resize the frames
 Size size(800, 600);
 
+bool vitualizeWithPieces = true;
 
 /**
  * Counter used to remap the board in case it was moved (the square were identified )
@@ -61,7 +62,7 @@ void virtualizeChessTable(ChessSquareMatrix *squareMatrix) {
         delete squareMatrix;
         resize(src, src, size);
         squareMatrix = new ChessSquareMatrix(8);
-        EdgeProcessing::startProcess(src, *squareMatrix);
+        EdgeProcessing::startProcess(src, *squareMatrix,vitualizeWithPieces);
         // TODO , call the function to detect edges again
     } else {
         remapBoardCounter--;
@@ -109,6 +110,7 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 //    mog2MotionDetection->setHistory(20);
 //    mog2MotionDetection->setShadowThreshold(0.01);
     mog2MotionDetection->setDetectShadows(true);
+    mog2MotionDetection->setShadowValue(255);
 //    mog2MotionDetection->setBackgroundRatio(0.8);
 
     //read input data. ESC or 'q' for quitting
@@ -124,28 +126,31 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
         resize(frame, frame, size);
 
-//        virtualizeChessTable(squareMatrix); // THIS IS WORKING
+        virtualizeChessTable(squareMatrix); // THIS IS WORKING
 
 //        changeColorSpace(frame);
 
 
-//        cv::cvtColor(frame, frame, COLOR_RGB2HSV_FULL);
+//        cv::cvtColor(frame, frame, COLOR_RGB2GRAY);
 //        equalizeHist( frame, frame );
 
-//        GaussianBlur(frame, frame, Size(3, 3),0, 0);
+        GaussianBlur(frame, frame, Size(3, 3),0, 0);
 
         Mat cannyMat;
 
-        int lowThreshold = 50; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
-        Canny(frame, cannyMat, lowThreshold, lowThreshold * 3, 3);
-        imshow("Canny mat", cannyMat);
+//        int lowThreshold = 50; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
+//        Canny(frame, cannyMat, lowThreshold, lowThreshold * 3, 3);
+//        imshow("Canny mat", cannyMat);
 
 //        medianBlur ( frame, frame, 5 );
 //
         // Update the background model
         mog2MotionDetection->apply(frame, fgMaskMOG2, mogLearningSpeed);
+
         fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 1);
-//        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2, 2);
+        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2, 1);
+        imshow("before operation", fgMaskMOG2);
+
 
         addToQueueMog(fgMaskMOG2);
 

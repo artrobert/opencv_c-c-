@@ -19,11 +19,11 @@ const CvSize ContourDatabase::imageResizeSize = CvSize(imageResizeHeight, imageR
  * THIS SHOULD BE CALLED IF WE DONT HAVE ANY BINARY IMAGES (OR "SAMPLES")
  */
 void ContourDatabase::createDatabase() {
-    createSamples(pionText);
-    createSamples(calText);
-    createSamples(turaText);
-    createSamples(nebunText);
-    createSamples(regeText);
+    createSamples(pawnText);
+    createSamples(knightText);
+    createSamples(rookText);
+    createSamples(bishopText);
+    createSamples(kingText);
     createSamples(reginaText);
 }
 
@@ -76,12 +76,12 @@ void ContourDatabase::createSamples(string pieceName) {
 * THIS SHOULD BE CALLED BEFORE MAKING A MATCHING
 */
 void ContourDatabase::loadSampleImages() {
-    loadPiece(pawn, PieceType::pion, pionText); //pt. pion
-    loadPiece(knight, PieceType::cal, calText); //pt. cal
-    loadPiece(rook, PieceType::tura, turaText); //pt. tura
-    loadPiece(bishop, PieceType::nebun, nebunText); //pt. nebun
+    loadPiece(pawn, PieceType::pion, pawnText); //pt. pion
+    loadPiece(knight, PieceType::cal, knightText); //pt. cal
+    loadPiece(rook, PieceType::tura, rookText); //pt. tura
+    loadPiece(bishop, PieceType::nebun, bishopText); //pt. nebun
     loadPiece(queen, PieceType::regina, reginaText); //pt. regina
-    loadPiece(king, PieceType::rege, regeText); //pt. rege
+    loadPiece(king, PieceType::rege, kingText); //pt. rege
     areSamplesLoaded = true;
 }
 
