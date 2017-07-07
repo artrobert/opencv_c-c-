@@ -3,6 +3,7 @@
 //
 
 #include <opencv/cv.hpp>
+#include <set>
 #include "EdgeProcessing.h"
 
 using namespace cv;
@@ -95,7 +96,38 @@ void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
  * @param chessTableEdges Object that will contain the edges
  */
 void separateLinesByAngle(vector<Vec4i> &lines, int angle, ChessTableEdges &chessTableEdges) {
+    vector<int> values;
+    set<int> uniqueValues;
+    int firstAngle = INT_MAX;
+    int appearancesCount = INT_MIN;
+    int secondAngle = INT_MAX;
+
     int lineSize = lines.size();
+
+    // Get angles that the lines are making with oX
+    for (size_t i = 0; i < lineSize; i++) {
+        Vec4i l = lines[i];
+
+        Point p1, p2;
+        p1 = Point(l[0], l[1]);
+        p2 = Point(l[2], l[3]);
+
+        int angleMade = (int) atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
+        values.push_back(angleMade);
+        uniqueValues.insert(angleMade);
+    }
+
+    for (size_t i = 0; i < uniqueValues.size(); i++) {
+        int currentValue = *std::next(uniqueValues.begin(), i);
+        int currentCount = count(values.begin(), values.end(), currentValue);
+        if (currentCount > appearancesCount) {
+            secondAngle = firstAngle;
+            firstAngle = currentValue;
+        }
+    }
+
+    printf("\nAngles found : %d , %d",firstAngle,secondAngle);
+
     for (size_t i = 0; i < lineSize; i++) {
         Vec4i l = lines[i];
 
@@ -105,11 +137,11 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, ChessTableEdges &ches
         p1 = Point(l[0], l[1]);
         p2 = Point(l[2], l[3]);
 
-        double angleMade = atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
+        int angleMade = (int) atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
 
-        if (angle == (int) angleMade) {
+        if (firstAngle == angleMade) {
             chessTableEdges.verticalPositiveAngleLines.push_back(l);
-        } else if (-angle == (int) angleMade) {
+        } else if (secondAngle == angleMade) {
             chessTableEdges.horizontalNegativeAngleLines.push_back(l);
         }
     }
@@ -435,13 +467,12 @@ void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, size_t
     // Fill the mask Mat with white pixels in order to extract the chess board square
     cv::fillConvexPoly(maskRoi, rook_points, 4, cv::Scalar(255, 255, 255));
 
-    imshow("before", maskRoi);
-
+//    imshow("before", maskRoi);
 
     src.copyTo(binaryExtractedChessSquare, maskRoi);
     binaryExtractedChessSquare.copyTo(binaryExtractedChessSquare, maskRoiBlue);
 
-    imshow("before binarization", binaryExtractedChessSquare);
+//    imshow("before binarization", binaryExtractedChessSquare);
 
     // Binarize the extracted image so we can count the white/black pixels
     cvtColor(binaryExtractedChessSquare, binaryExtractedChessSquare, CV_BGR2GRAY);
@@ -516,7 +547,7 @@ void extractSquare(Point corners[4], cv::Mat &src, cv::Mat &extractedSquare) {
     src.copyTo(extractedSquare, maskRoi);
 }
 
-void putPiecesOnBoard(ChessSquareMatrix &squareMatrix){
+void putPiecesOnBoard(ChessSquareMatrix &squareMatrix) {
     squareMatrix.initBasicModel();
 }
 
@@ -601,7 +632,7 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
         }
     }
 
-    if(virtualizeWithPieces){
+    if (virtualizeWithPieces) {
         putPiecesOnBoard(squareMatrix);
     }
 
