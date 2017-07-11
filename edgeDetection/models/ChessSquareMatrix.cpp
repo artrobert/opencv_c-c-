@@ -60,3 +60,15 @@ void ChessSquareMatrix::initBasicModel() {
     getSquare(7, 3).piece->pieceType = PieceType::regina;
     getSquare(7, 5).piece->pieceType = PieceType::rege;
 }
+
+int ChessSquareMatrix::searchSquareAfterValues(Point basePoint) {
+    printf("Piece coordinates: %d %d", basePoint.x, basePoint.y);
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            ChessSquare square = getSquare(i, j);
+            if (square.checkIfContainsPiece(basePoint)) {
+                return square.index;
+            }
+        }
+    }
+}

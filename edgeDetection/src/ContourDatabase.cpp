@@ -6,7 +6,6 @@
 #include <opencv/cv.hpp>
 #include "ContourDatabase.h"
 #include "../ImageBasicOperations.h"
-#include "../ImageDB.h"
 
 using namespace cdb;
 
@@ -114,7 +113,7 @@ PieceModel ContourDatabase::generatePieceModel(string pieceRoot) {
             resize(img, img, imageResizeSize);
             namedWindow("read", CV_WINDOW_AUTOSIZE);
             imshow("read", img);
-            PieceContour pieceContour = ImageDB::getContourFromMat(img);
+            PieceContour pieceContour = getContourFromMat(img);
             pieceModel.contours.push_back(pieceContour);
         }
         i++;

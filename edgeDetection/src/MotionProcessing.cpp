@@ -1,3 +1,7 @@
+//
+// Created by artin on 23/6/2017.
+//
+
 #include <opencv2/core/mat.hpp>
 #include <queue>
 #include <cstdio>
@@ -6,6 +10,8 @@
 #include "../ImageBasicOperations.h"
 #include "MotionProcessing.h"
 #include "MogLearningSpeed.h"
+#include "ContourDatabase.h"
+#include "../models/ChessSquareMatrix.h"
 
 using namespace cv;
 using namespace std;
@@ -28,7 +34,7 @@ vector<Mat> endingList;
 // Variable indicating how many frames we should wait before taking the ending frame to do the BG SUB
 int waitForFrames = -1;
 
-int framesSavedAfterMotionEnded = 60;
+int framesSavedAfterMotionEnded = 40;
 
 // Here we will save the 'after motion' frame to feed to BG SUB
 Mat endMotionFrame;
@@ -40,11 +46,11 @@ bool readyToExtractObject = false;
 int startMotionPixelsThreshold = 1000;
 
 // The number of white pixel needed to cosinder the motion ENDED
-int endMotionPixelsThreshold = 600;
+int endMotionPixelsThreshold = 1000;
 
 int frameNumbers = 0;
 
-Ptr<BackgroundSubtractorMOG2> mogDetection;
+Mat savedMogMask;
 
 /**
  * Function used to keep a queue of {@link frameQueueSize} frames
@@ -86,19 +92,25 @@ void countPixels(cv::Mat &src, const char *frameName, vector<int> &wbPixels) {
 /**
  * If the motion ended, we need to wait some frames to get the 'before motion' frame
  */
-void handleMotionEnded(cv::Mat &frame) {
+void handleMotionEnded(cv::Mat &frame, cv::Mat &frameMogMask) {
     bool endListReady = false;
     // If the frames we needed to wait in order to not have any hands in the frame passed
     if (waitForFrames == 0) {
+        // Because the mog for motion detection is doing well at detection them, we save the 40 mog mask frame as the
+        // binary image from where we will take the contour
+        if (framesSavedAfterMotionEnded == 40) {
+            savedMogMask = frameMogMask.clone();
+        }
         if (framesSavedAfterMotionEnded != 0) {
-            Mat frameGray=frame.clone();
+            Mat frameGray;
 //            cv::cvtColor(frame, frameGray, CV_BGR2GRAY);
+//            equalizeHist( frameGray, frameGray );
 //            GaussianBlur(frameGray, frameGray, Size(3, 3), 0, 0);
-            endingList.push_back(frameGray);
+            endingList.push_back(frame);
             framesSavedAfterMotionEnded--;
         }
         if (framesSavedAfterMotionEnded == 0 || motionStarted) {
-            unsigned int endListSize = endingList.size() - 10;
+            unsigned int endListSize = endingList.size() - 10; // just to be sure we didnt caught th han
             endingList.resize(endListSize);
             framesSavedAfterMotionEnded--;
             endListReady = true;
@@ -129,8 +141,9 @@ void handleMotionStarted() {
         Mat frameFromQueue;
         frameFromQueue = queueOfFrames.front();
 //        cv::cvtColor(frameFromQueue, frameFromQueue, CV_BGR2GRAY);
+//        equalizeHist(frameFromQueue, frameFromQueue);
 //        GaussianBlur(frameFromQueue, frameFromQueue, Size(3, 3), 0, 0);
-        startingList.push_back(frameFromQueue.clone());
+        startingList.push_back(frameFromQueue);
         queueOfFrames.pop();
 
     }
@@ -169,7 +182,7 @@ void checkMotion(cv::Mat &fmogFrame, const char *frameNr) {
     if (motionStarted && wbPixels[0] <= endMotionPixelsThreshold) {
         //save the Mat at the end of the motion, also used to feed MOG2 to extract the piece
         waitForFrames = 40;
-        framesSavedAfterMotionEnded = 50;
+        framesSavedAfterMotionEnded = 40;
         motionStarted = false; // mark that the motion ended
 //        setLearningBeforeStart();
         printf("Motion ended!");
@@ -178,12 +191,12 @@ void checkMotion(cv::Mat &fmogFrame, const char *frameNr) {
 
 /**
  * Uses MOG2 to extract the object that was moved
+ *
+ * 11/7/17 Currently this not used anymore
+ *
  * @param extractedObjMat
  */
 void feedBackgroundAndGetObject(cv::Mat &extractedObjMat) {
-
-
-
     Ptr<BackgroundSubtractorMOG2> mog2ObjectIdentifier = createBackgroundSubtractorMOG2();
     mog2ObjectIdentifier->setDetectShadows(true);
     mog2ObjectIdentifier->setShadowValue(0);
@@ -191,32 +204,34 @@ void feedBackgroundAndGetObject(cv::Mat &extractedObjMat) {
 
     // Feed the background to the MOG2 object for 20 times
     for (int i = 0; i < startingList.size(); i++) {
+//        // For debug
+//        imshow("startingList", startingList[i]);
+//        waitKey(500);
         mog2ObjectIdentifier->apply(startingList[i], extractedObjMat, 0.5);
-//        namedWindow("Extract on this image", CV_WINDOW_AUTOSIZE);
-//        imshow("Extract on this image", startingList[i]);
     }
+
 
 
 
     // Apply the changed background and get the object as a filled contour image
     for (int i = 0; i < endingList.size(); i++) {
-        mog2ObjectIdentifier->apply(endingList[i], extractedObjMat, 0.004);
-
+        mog2ObjectIdentifier->apply(endingList[i], extractedObjMat, 0.001);
+//        // For debug
+//        imshow("endingList", endingList[i]);
+//        imshow("inp", extractedObjMat);
+//        waitKey(500);
     }
 
-            namedWindow("on this image", CV_WINDOW_AUTOSIZE);
-        imshow("on this image", extractedObjMat);
-
-//    extractedObjMat = imagePreparation::erosionImage(extractedObjMat, 2, 2);
+//    extractedObjMat = imagePreparation::erosionImage(extractedObjMat, 2, 1);
     Mat toShow = extractedObjMat.clone();
-
-
+    namedWindow("Extract on this image", CV_WINDOW_AUTOSIZE);
+    imshow("Extract on this image", extractedObjMat);
+    cdb::ContourDatabase contourDatabase;
+    contourDatabase.getContourFromMat(toShow);
 }
 
-bool MotionProcessing::watchMotion(cv::Mat frame, cv::Mat frameMogMask, const char *frameNr, cv::Mat motionResult,
-                                   cv::Ptr<cv::BackgroundSubtractorMOG2> ptr) {
-
-    mogDetection=ptr;
+bool MotionProcessing::watchMotion(cv::Mat frame, cv::Mat frameMogMask, const char *frameNr,
+                                   ChessSquareMatrix &squareMatrix) {
 
     // Add the frame to the queue
     addToQueueFrame(frame);
@@ -226,18 +241,92 @@ bool MotionProcessing::watchMotion(cv::Mat frame, cv::Mat frameMogMask, const ch
 
     // If the motion ended (bcs waitForFrames is >=0)
     if (waitForFrames >= 0) {
-        handleMotionEnded(frame);
+        handleMotionEnded(frame, frameMogMask);
     }
 
     frameNumbers++;
 
+
     // If the BG SUB components are ready
     if (readyToExtractObject) {
         // Get the object was moved
-        feedBackgroundAndGetObject(motionResult);
+//        feedBackgroundAndGetObject(motionResult);
+        PieceContour contourBiggest;
+        PieceContour contourSecondBiggest;
+
+
+
+        getContourFromMat(savedMogMask, contourBiggest, contourSecondBiggest);
+        printf("\nSquare first %d",squareMatrix.searchSquareAfterValues(contourBiggest.lowestPoint));
+        printf("\nSquare first %d",squareMatrix.searchSquareAfterValues(contourSecondBiggest.lowestPoint));
         // Set the flag to false
         readyToExtractObject = false;
         return true;
     }
     return false;
+}
+
+void MotionProcessing::getContourFromMat(const Mat &mat, PieceContour &contour1, PieceContour &contour2) {
+    cdb::ContourDatabase contourDatabase; //used to calculate the layer of origin for the piece
+    vector<vector<Point>> fullContour;
+
+    // We do a canny in order to get the contours of all the scene objects
+    Mat canny_output, matInput = mat.clone();
+
+    // We do the following operations in order to eliminate noise, but we will also remove the details
+    matInput = imagePreparation::erosionImage(matInput, 2, 1);
+    matInput = imagePreparation::dilationImage(matInput, 2, 2);
+
+    imshow("inp", matInput);
+
+
+    Canny(matInput.clone(), canny_output, 255, 255, 3);
+
+    findContours(canny_output, fullContour, CV_RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+
+//    TODO THIS IS USED TO PRINT THE Contour
+    vector<Vec4i> hierarchy;
+    namedWindow("Contours", CV_WINDOW_AUTOSIZE);
+    Mat drawing = Mat::zeros(matInput.size(), CV_8UC3);
+    for (int i = 0; i < fullContour.size(); i++) {
+        Scalar color = Scalar(RNG(12345).uniform(0, 255), RNG(12345).uniform(0, 255), RNG(12345).uniform(0, 255));
+        drawContours(drawing, fullContour, i, color, 2, 8, hierarchy, 0, Point());
+        printf("\n%d / %d", i, fullContour.size());
+        imshow("Contours", drawing);
+//        waitKey(500);
+    }
+
+    int bigContourSize = fullContour.size();
+    vector<double> contoursLength;
+
+    // Iterate through all the contours to find the one with the biggest area
+    for (int i = 0; i < bigContourSize; i++) {
+//        double currentContourArea = contourArea(fullContour[i], false);
+        double currentContourArea = arcLength(fullContour[i], true);
+        contoursLength.push_back(currentContourArea);
+        printf("\n %d ) CurrentContourArea %lf arc length %lf", i, currentContourArea, arcLength(fullContour[i], true));
+    }
+
+    std::sort(contoursLength.begin(), contoursLength.end());
+
+    int biggestIndexContour = bigContourSize - 1;
+    int secondBiggestIndexContour = bigContourSize - 2;
+
+    contour1.contour = fullContour[biggestIndexContour];
+    contour1.computeTheLowestPoint();
+    contour1.layer = contourDatabase.findOriginLayer(contour1.lowestPoint);
+
+    contour2.contour = fullContour[secondBiggestIndexContour];
+    contour2.computeTheLowestPoint();
+    contour2.layer = contourDatabase.findOriginLayer(contour2.lowestPoint);
+
+    int radiusCircle = 5;
+    cv::Scalar colorCircle1(0, 0, 255);
+    int thicknessCircle1 = 2;
+
+    cv::circle(drawing, contour1.lowestPoint, radiusCircle, colorCircle1, thicknessCircle1);
+    cv::circle(drawing, contour2.lowestPoint, radiusCircle, colorCircle1, thicknessCircle1);
+    cv::circle(drawing, Point(10,10), radiusCircle, colorCircle1, thicknessCircle1);
+    imshow("dra", drawing);
+
 }

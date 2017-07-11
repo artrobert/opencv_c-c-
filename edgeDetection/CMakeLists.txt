@@ -19,8 +19,6 @@ set(SOURCE_FILES
         FeatureDetection.h
         KMeansImplementation.cpp
         KMeansImplementation.h
-        ImageDB.cpp
-        ImageDB.h
         models/PieceContour.cpp
         models/PieceContour.h
         models/PieceModel.cpp
@@ -33,7 +31,15 @@ set(SOURCE_FILES
         src/VideoProcessing.h
         src/VideoProcessing.cpp
         src/EdgeProcessing.h
-        src/EdgeProcessing.cpp models/ChessTableEdges.cpp models/ChessTableEdges.h src/MotionProcessing.cpp src/MotionProcessing.h src/MogLearningSpeed.h src/MogLearningSpeed.cpp src/ContourDatabase.cpp src/ContourDatabase.h)
+        src/EdgeProcessing.cpp
+        models/ChessTableEdges.cpp
+        models/ChessTableEdges.h
+        src/MotionProcessing.cpp
+        src/MotionProcessing.h
+        src/MogLearningSpeed.h
+        src/MogLearningSpeed.cpp
+        src/ContourDatabase.cpp
+        src/ContourDatabase.h)
 
 add_executable(test_cv ${SOURCE_FILES})
 

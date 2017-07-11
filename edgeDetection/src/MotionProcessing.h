@@ -5,6 +5,9 @@
 #ifndef EDGEDETECTION_MOTIONPROCESSING_H
 #define EDGEDETECTION_MOTIONPROCESSING_H
 
+#include "../models/PieceContour.h"
+#include "../models/ChessSquareMatrix.h"
+
 extern void setLearningBeforeStart();
 extern void setLearningAfterStart();
 
@@ -12,9 +15,9 @@ class MotionProcessing {
 
 public:
 
+    static void getContourFromMat(const Mat &mat, PieceContour &contour1, PieceContour &contour2);
 
-    static bool watchMotion(cv::Mat frame, cv::Mat frameMogMask, const char *frameNr, cv::Mat motionResult,
-                            cv::Ptr<cv::BackgroundSubtractorMOG2> ptr);
+    static bool watchMotion(Mat frame, Mat frameMogMask, const char *frameNr, ChessSquareMatrix &squareMatrix);
 };
 
 

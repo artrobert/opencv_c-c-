@@ -47,22 +47,23 @@ void addToQueueMog(cv::Mat &mog) {
     queueOfMogs.push(mog);
 }
 
+ChessSquareMatrix *squareMatrix=NULL;
+
 /**
  * Function used to take the frame containing the chess table and make a virtual representation of it
  * NOTE now it runs on a image
  * @param squareMatrix
  */
-void virtualizeChessTable(ChessSquareMatrix *squareMatrix) {
+void virtualizeChessTable(Mat &frame) {
     if (remapBoardCounter == 0) {
         remapBoardCounter = remapTimer;
 
         // Remap the board, in case it has moved
-        Mat src = imagePreparation::readImage(
-                "D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\images\\new_squares\\img1.jpg"); //read the image
-        delete squareMatrix;
-        resize(src, src, size);
-        squareMatrix = new ChessSquareMatrix(8);
-        EdgeProcessing::startProcess(src, *squareMatrix,vitualizeWithPieces);
+//        Mat src = imagePreparation::readImage("D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\images\\new_squares\\img1.jpg"); //read the image
+//        resize(frame, src, size);
+        squareMatrix=new ChessSquareMatrix(8);
+        EdgeProcessing::startProcess(frame, *squareMatrix,vitualizeWithPieces);
+        int ceva=6;
         // TODO , call the function to detect edges again
     } else {
         remapBoardCounter--;
@@ -103,14 +104,12 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
     mogLearningSpeed = 0.05;
 
     // Chess table square matrix
-    ChessSquareMatrix *squareMatrix = NULL;
 
     // Background subtract object
     Ptr<BackgroundSubtractorMOG2> mog2MotionDetection = createBackgroundSubtractorMOG2();
 //    mog2MotionDetection->setHistory(20);
 //    mog2MotionDetection->setShadowThreshold(0.01);
-    mog2MotionDetection->setDetectShadows(false);
-//    mog2MotionDetection->setShadowValue(255);
+    mog2MotionDetection->setDetectShadows(true);
 //    mog2MotionDetection->setBackgroundRatio(0.8);
 
     //read input data. ESC or 'q' for quitting
@@ -124,33 +123,28 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
             exit(EXIT_FAILURE);
         }
 
-        resize(frame, frame, size);
+       resize(frame, frame, size);
 
-//        virtualizeChessTable(squareMatrix); // THIS IS WORKING
+         virtualizeChessTable(frame); // TODO THIS IS WORKING
 
-//        changeColorSpace(frame);
-
-
-        cv::cvtColor(frame, frame, COLOR_RGB2GRAY);
-//        equalizeHist( frame, frame );
-
+//        cv::cvtColor(frame, frame, CV_BGR2GRAY);
         GaussianBlur(frame, frame, Size(3, 3),0, 0);
 
-        Mat cannyMat;
-
+//        Mat cannyMat;
+//
 //        int lowThreshold = 50; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
 //        Canny(frame, cannyMat, lowThreshold, lowThreshold * 3, 3);
 //        imshow("Canny mat", cannyMat);
 
+
 //        medianBlur ( frame, frame, 5 );
 //
+        printf(" Mog learning speed:%lf", mogLearningSpeed);
         // Update the background model
         mog2MotionDetection->apply(frame, fgMaskMOG2, mogLearningSpeed);
-
-        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 2);
-        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2,1 );
-//        imshow("before operation", fgMaskMOG2);
-
+        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 1);
+//        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 2);
+//        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2, 2);
 
         addToQueueMog(fgMaskMOG2);
 
@@ -166,13 +160,13 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         Mat movedPiece;
 
         // If there was motion
-        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), movedPiece, mog2MotionDetection)) {
-//            imshow("Motion result",movedPiece);
+        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), *squareMatrix)) {
 //            // Extract the contour of the extracted piece
 //            PieceContour extractedPieceContour = ImageDB::getContourFromMat(movedPiece);
 //            // Try to see if we can identify it;
 //            PieceType pieceType = ImageDB::matchChessPieces(extractedPieceContour); // TODO this is not 100% accurate
         }
+
 
         putText(frame, frameNumberString.c_str(), cv::Point(15, 15),
                 FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));

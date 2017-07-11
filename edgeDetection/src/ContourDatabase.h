@@ -66,7 +66,9 @@ namespace cdb {
         vector<PieceModel> allPieces;
 
         // Constructor
-        ContourDatabase();
+        ContourDatabase(){
+            mysc = createShapeContextDistanceExtractor();
+        };
 
         // If there is no database of images (binary mask images) CALL THIS FIRST
         void createDatabase();
@@ -92,8 +94,5 @@ namespace cdb {
         int findOriginLayer(Point basePoint);
     };
 
-    ContourDatabase::ContourDatabase() {
-        mysc = createShapeContextDistanceExtractor();
-    }
 }
 #endif //EDGEDETECTION_CONTOURDATABASE_H

@@ -4,6 +4,7 @@
 
 #include <opencv/cv.hpp>
 #include <set>
+#include <map>
 #include "EdgeProcessing.h"
 
 using namespace cv;
@@ -98,9 +99,6 @@ void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
 void separateLinesByAngle(vector<Vec4i> &lines, int angle, ChessTableEdges &chessTableEdges) {
     vector<int> values;
     set<int> uniqueValues;
-    int firstAngle = INT_MAX;
-    int appearancesCount = INT_MIN;
-    int secondAngle = INT_MAX;
 
     int lineSize = lines.size();
 
@@ -117,16 +115,27 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, ChessTableEdges &ches
         uniqueValues.insert(angleMade);
     }
 
+    std::map<int, int, std::greater<int>> m1; // map in decreasing order
+
     for (size_t i = 0; i < uniqueValues.size(); i++) {
         int currentValue = *std::next(uniqueValues.begin(), i);
         int currentCount = count(values.begin(), values.end(), currentValue);
-        if (currentCount > appearancesCount) {
-            secondAngle = firstAngle;
-            firstAngle = currentValue;
-        }
+        m1[currentCount] = currentValue;
     }
 
-    printf("\nAngles found : %d , %d",firstAngle,secondAngle);
+    int firstAngle;// this should always be positive
+    int secondAngle;
+    if (m1.begin()->second > 0) {
+        firstAngle = m1.begin()->second;
+        m1.erase(m1.begin());
+        secondAngle = m1.begin()->second;
+    } else {
+        secondAngle = m1.begin()->second;
+        m1.erase(m1.begin());
+        firstAngle = m1.begin()->second;
+    }
+
+    printf("\nAngles found : %d , %d", firstAngle, secondAngle);
 
     for (size_t i = 0; i < lineSize; i++) {
         Vec4i l = lines[i];
@@ -551,6 +560,95 @@ void putPiecesOnBoard(ChessSquareMatrix &squareMatrix) {
     squareMatrix.initBasicModel();
 }
 
+void filterByDistance(vector<Vec4i> &edges, Mat forDebug) {
+    if (edges.size() > 9) {
+        vector<Vec4i> newEdges;
+        vector<double> values;
+        set<double> uniqueValues;
+        double averageDistance = 0;
+        double biggestDistance = 0;
+        double acceptedError = 0;
+
+        bool lastLineIsUseless = false;
+
+        int lineSize = edges.size() - 1;
+
+        for (int i = 0; i < lineSize; i++) {
+            Point2i point11 = Point(edges[i][0], edges[i][1]);
+            Point2i point12 = Point(edges[i][2], edges[i][3]);
+
+            Point2i middle1 = Point((point11.x + point12.x) / 2, (point11.y + point12.y) / 2);
+
+            Point2i point21 = Point(edges[i + 1][0], edges[i + 1][1]);
+            Point2i point22 = Point(edges[i + 1][2], edges[i + 1][3]);
+
+            Point2i middle2 = Point((point21.x + point22.x) / 2, (point21.y + point22.y) / 2);
+
+//            line(forDebug, middle1, middle2, Scalar(255, 20 * i, 20 * i), 3, CV_AA);
+//            imshow("output", forDebug);
+//            waitKey(600);
+
+            double distance = sqrt(pow(double(middle2.x - middle1.x), 2.0) + pow(double(middle2.y - middle1.y), 2.0));
+            if (distance > biggestDistance) {
+                biggestDistance = distance;
+            }
+
+            printf("\n distances:%lf", distance);
+
+            averageDistance += distance;
+        }
+        averageDistance /= edges.size();
+        acceptedError = biggestDistance - averageDistance;
+        printf("\n distances:%lf", averageDistance);
+
+
+        for (int i = 0; i < lineSize; i++) {
+            Point2i point11 = Point(edges[i][0], edges[i][1]);
+            Point2i point12 = Point(edges[i][2], edges[i][3]);
+
+            Point2i middle1 = Point((point11.x + point12.x) / 2, (point11.y + point12.y) / 2);
+
+            Point2i point21 = Point(edges[i + 1][0], edges[i + 1][1]);
+            Point2i point22 = Point(edges[i + 1][2], edges[i + 1][3]);
+
+            Point2i middle2 = Point((point21.x + point22.x) / 2, (point21.y + point22.y) / 2);
+
+
+            double distanceBetweenFirstAndSecond = sqrt(
+                    pow(double(middle2.x - middle1.x), 2.0) + pow(double(middle2.y - middle1.y), 2.0));
+
+            if (distanceBetweenFirstAndSecond + acceptedError < averageDistance) {
+                if (i + 2 <= lineSize) {
+                    Point2i point31 = Point(edges[i + 2][0], edges[i + 2][1]);
+                    Point2i point32 = Point(edges[i + 2][2], edges[i + 2][3]);
+
+                    Point2i middle3 = Point((point31.x + point32.x) / 2, (point31.y + point32.y) / 2);
+
+
+                    double distanceBetweenFirstAndThird = sqrt(
+                            pow(double(middle3.x - middle1.x), 2.0) + pow(double(middle3.y - middle2.x), 2.0));
+
+                    if (!distanceBetweenFirstAndThird > averageDistance) {
+                        // This line is not good, remove it
+                        newEdges.push_back(edges[i]);
+                    } else {
+                        // do nothing because this line is useless
+                    }
+                } else {
+                    lastLineIsUseless = true;
+                    // the last edge doesnt have the small distance so dont add it
+                }
+            } else {
+                newEdges.push_back(edges[i]);
+            }
+        }
+        if (!lastLineIsUseless) {
+            newEdges.push_back(edges[lineSize]); // add the last line because is not useless
+        }
+        edges = newEdges;
+    }
+}
+
 void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, bool virtualizeWithPieces) {
 
     Mat dst, cdst;
@@ -584,6 +682,21 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
     // Shorten the edges
     shortenEdges(chessTableEdges);
 
+    // TODO here needs work because it depends on the image and how the table is positioned
+    sort(chessTableEdges.verticalPositiveAngleLines.begin(), chessTableEdges.verticalPositiveAngleLines.end(),
+         compYDesc);
+    sort(chessTableEdges.horizontalNegativeAngleLines.begin(), chessTableEdges.horizontalNegativeAngleLines.end(),
+         compYDesc);
+
+    filterByDistance(chessTableEdges.verticalPositiveAngleLines, cdst);
+    filterByDistance(chessTableEdges.horizontalNegativeAngleLines, cdst);
+
+    // Find the margin edges
+    findMarginLines(chessTableEdges, cdst);
+
+    // Shorten the edges
+    shortenEdges(chessTableEdges);
+
     // Get the tables corner points
     findTableCornerPoints(chessTableEdges, tableIntersectionPoints, cdst);
 
@@ -593,14 +706,11 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
         return;
     }
 
-    // TODO here needs work because it depends on the image and how the table is positioned
-    sort(chessTableEdges.verticalPositiveAngleLines.begin(), chessTableEdges.verticalPositiveAngleLines.end(),
-         compYDesc);
-    sort(chessTableEdges.horizontalNegativeAngleLines.begin(), chessTableEdges.horizontalNegativeAngleLines.end(),
-         compYDesc);
 
     searchCloseDistanceAndRemove(chessTableEdges.verticalPositiveAngleLines, 10);
     searchCloseDistanceAndRemove(chessTableEdges.horizontalNegativeAngleLines, 10);
+
+
 
 //    int i = 0;
     for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
@@ -635,6 +745,8 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
     if (virtualizeWithPieces) {
         putPiecesOnBoard(squareMatrix);
     }
+
+    squareMatrix.chessTableEdges = chessTableEdges;
 
 
 //    ChessSquare *currentSquare = addressof(squareMatrix.getSquare(0, 4));

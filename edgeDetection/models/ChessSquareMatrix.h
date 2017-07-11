@@ -8,14 +8,14 @@
 
 #include <array>
 #include "ChessSquare.h"
+#include "ChessTableEdges.h"
 
 class ChessSquareMatrix {
-    std::vector<ChessSquare> m_squares; // matrix of chess squares , rows [0,7] ,cols [0,7]
-    int matrixSize;
-
-
 
 private:
+
+    std::vector<ChessSquare> m_squares; // matrix of chess squares , rows [0,7] ,cols [0,7]
+    int matrixSize;
 
     const char whiteFirstRowPieces[8] = {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'};
     const char whiteSecondRowPieces[1] = {'P'};
@@ -27,6 +27,8 @@ private:
 
 
 public:
+
+    ChessTableEdges chessTableEdges;
 
     ChessSquare &getSquare(size_t i, size_t j) {
         return m_squares[i * matrixSize + j];
@@ -44,6 +46,9 @@ public:
     }
 
     void initBasicModel();
+
+
+    int searchSquareAfterValues(Point basePoint);
 };
 
 
