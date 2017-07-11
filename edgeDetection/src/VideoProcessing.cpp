@@ -109,8 +109,8 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
     Ptr<BackgroundSubtractorMOG2> mog2MotionDetection = createBackgroundSubtractorMOG2();
 //    mog2MotionDetection->setHistory(20);
 //    mog2MotionDetection->setShadowThreshold(0.01);
-    mog2MotionDetection->setDetectShadows(true);
-    mog2MotionDetection->setShadowValue(255);
+    mog2MotionDetection->setDetectShadows(false);
+//    mog2MotionDetection->setShadowValue(255);
 //    mog2MotionDetection->setBackgroundRatio(0.8);
 
     //read input data. ESC or 'q' for quitting
@@ -126,12 +126,12 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
         resize(frame, frame, size);
 
-        virtualizeChessTable(squareMatrix); // THIS IS WORKING
+//        virtualizeChessTable(squareMatrix); // THIS IS WORKING
 
 //        changeColorSpace(frame);
 
 
-//        cv::cvtColor(frame, frame, COLOR_RGB2GRAY);
+        cv::cvtColor(frame, frame, COLOR_RGB2GRAY);
 //        equalizeHist( frame, frame );
 
         GaussianBlur(frame, frame, Size(3, 3),0, 0);
@@ -147,9 +147,9 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         // Update the background model
         mog2MotionDetection->apply(frame, fgMaskMOG2, mogLearningSpeed);
 
-        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 1);
-        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2, 1);
-        imshow("before operation", fgMaskMOG2);
+        fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 2);
+        fgMaskMOG2 = imagePreparation::dilationImage(fgMaskMOG2, 2,1 );
+//        imshow("before operation", fgMaskMOG2);
 
 
         addToQueueMog(fgMaskMOG2);
@@ -166,8 +166,8 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
         Mat movedPiece;
 
         // If there was motion
-        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), movedPiece)) {
-            imshow("Motion result",movedPiece);
+        if (MotionProcessing::watchMotion(frame, fgMaskMOG2, frameNumberString.c_str(), movedPiece, mog2MotionDetection)) {
+//            imshow("Motion result",movedPiece);
 //            // Extract the contour of the extracted piece
 //            PieceContour extractedPieceContour = ImageDB::getContourFromMat(movedPiece);
 //            // Try to see if we can identify it;
