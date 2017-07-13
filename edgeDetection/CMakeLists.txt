@@ -38,8 +38,10 @@ set(SOURCE_FILES
         src/MotionProcessing.h
         src/MogLearningSpeed.h
         src/MogLearningSpeed.cpp
-        src/ContourDatabase.cpp
-        src/ContourDatabase.h)
+#        src/ContourDatabase.cpp
+#        src/ContourDatabase.h
+        src/MoveValidity.cpp
+        src/MoveValidity.h)
 
 add_executable(test_cv ${SOURCE_FILES})
 
@@ -53,7 +55,9 @@ set(OpenCV_LIBS
         opencv_videoio
         opencv_video
         opencv_shape
-        opencv_photo)
+        opencv_photo
+        opencv_xfeatures2d
+        opencv_calib3d)
 
 #linking
 target_link_libraries(test_cv ${OpenCV_LIBS})

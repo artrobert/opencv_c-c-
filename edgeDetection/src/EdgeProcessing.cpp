@@ -5,6 +5,7 @@
 #include <opencv/cv.hpp>
 #include <set>
 #include <map>
+#include <iostream>
 #include "EdgeProcessing.h"
 
 using namespace cv;
@@ -72,7 +73,7 @@ void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
 
     vector<Vec2f> houghResultLines;
 
-    HoughLines(cannyMat, houghResultLines, 1, CV_PI / 180, 90, 0, 0);
+    HoughLines(cannyMat, houghResultLines, 1, CV_PI / 180, 70, 0, 0);
 
     for (size_t i = 0; i < houghResultLines.size(); i++) {
         float rho = houghResultLines[i][0], theta = houghResultLines[i][1];
@@ -191,6 +192,7 @@ void filterLinesByIntersection(ChessTableEdges &chessTableEdges) {
             if (i != j) {
                 Vec4i l2 = horizontalLines->at(j);
                 Point2f intersectionPoint = getIntersection(l1, l2);
+                cout << "\nIntersection:" << i << " " << j << " " << intersectionPoint.x << " " << intersectionPoint.y;
                 if (intersectionPoint.x >= 0 || intersectionPoint.y >= 0) {
                     horizontalLines->erase(horizontalLines->begin() + j);
                     j--;
@@ -561,100 +563,135 @@ void putPiecesOnBoard(ChessSquareMatrix &squareMatrix) {
 }
 
 void filterByDistance(vector<Vec4i> &edges, Mat forDebug) {
-    if (edges.size() > 9) {
-        vector<Vec4i> newEdges;
-        vector<double> values;
-        set<double> uniqueValues;
-        double averageDistance = 0;
-        double biggestDistance = 0;
-        double acceptedError = 0;
+    bool itHasBeenChange=true;
+    while(itHasBeenChange) {
+        itHasBeenChange = false;
+        if (edges.size() > 9) {
+            vector<Vec4i> newEdges;
+            vector<double> values;
+            set<double> uniqueValues;
+            vector<double> allDistances;
+            double averageDistance = 0;
+            double biggestDistance = 0;
+            double acceptedError = 0;
 
-        bool lastLineIsUseless = false;
+            bool lastLineIsUseless = false;
 
-        int lineSize = edges.size() - 1;
+            int lineSize = edges.size() - 1;
 
-        for (int i = 0; i < lineSize; i++) {
-            Point2i point11 = Point(edges[i][0], edges[i][1]);
-            Point2i point12 = Point(edges[i][2], edges[i][3]);
+            for (int i = 0; i < lineSize; i++) {
+                Point2i point11 = Point(edges[i][0], edges[i][1]);
+                Point2i point12 = Point(edges[i][2], edges[i][3]);
 
-            Point2i middle1 = Point((point11.x + point12.x) / 2, (point11.y + point12.y) / 2);
+                Point2i middle1 = Point((point11.x + point12.x) / 2, (point11.y + point12.y) / 2);
 
-            Point2i point21 = Point(edges[i + 1][0], edges[i + 1][1]);
-            Point2i point22 = Point(edges[i + 1][2], edges[i + 1][3]);
+                Point2i point21 = Point(edges[i + 1][0], edges[i + 1][1]);
+                Point2i point22 = Point(edges[i + 1][2], edges[i + 1][3]);
 
-            Point2i middle2 = Point((point21.x + point22.x) / 2, (point21.y + point22.y) / 2);
+                Point2i middle2 = Point((point21.x + point22.x) / 2, (point21.y + point22.y) / 2);
 
-//            line(forDebug, middle1, middle2, Scalar(255, 20 * i, 20 * i), 3, CV_AA);
-//            imshow("output", forDebug);
-//            waitKey(600);
+//                line(forDebug, middle1, middle2, Scalar(255, 20 * i, 20 * i), 3, CV_AA);
+//                imshow("output", forDebug);
+//                waitKey(600);
 
-            double distance = sqrt(pow(double(middle2.x - middle1.x), 2.0) + pow(double(middle2.y - middle1.y), 2.0));
-            if (distance > biggestDistance) {
-                biggestDistance = distance;
-            }
+                double distance = sqrt(
+                        pow(double(middle2.x - middle1.x), 2.0) + pow(double(middle2.y - middle1.y), 2.0));
 
-            printf("\n distances:%lf", distance);
+                allDistances.push_back(distance);
 
-            averageDistance += distance;
-        }
-        averageDistance /= edges.size();
-        acceptedError = biggestDistance - averageDistance;
-        printf("\n distances:%lf", averageDistance);
-
-
-        for (int i = 0; i < lineSize; i++) {
-            Point2i point11 = Point(edges[i][0], edges[i][1]);
-            Point2i point12 = Point(edges[i][2], edges[i][3]);
-
-            Point2i middle1 = Point((point11.x + point12.x) / 2, (point11.y + point12.y) / 2);
-
-            Point2i point21 = Point(edges[i + 1][0], edges[i + 1][1]);
-            Point2i point22 = Point(edges[i + 1][2], edges[i + 1][3]);
-
-            Point2i middle2 = Point((point21.x + point22.x) / 2, (point21.y + point22.y) / 2);
-
-
-            double distanceBetweenFirstAndSecond = sqrt(
-                    pow(double(middle2.x - middle1.x), 2.0) + pow(double(middle2.y - middle1.y), 2.0));
-
-            if (distanceBetweenFirstAndSecond + acceptedError < averageDistance) {
-                if (i + 2 <= lineSize) {
-                    Point2i point31 = Point(edges[i + 2][0], edges[i + 2][1]);
-                    Point2i point32 = Point(edges[i + 2][2], edges[i + 2][3]);
-
-                    Point2i middle3 = Point((point31.x + point32.x) / 2, (point31.y + point32.y) / 2);
-
-
-                    double distanceBetweenFirstAndThird = sqrt(
-                            pow(double(middle3.x - middle1.x), 2.0) + pow(double(middle3.y - middle2.x), 2.0));
-
-                    if (!distanceBetweenFirstAndThird > averageDistance) {
-                        // This line is not good, remove it
-                        newEdges.push_back(edges[i]);
-                    } else {
-                        // do nothing because this line is useless
-                    }
-                } else {
-                    lastLineIsUseless = true;
-                    // the last edge doesnt have the small distance so dont add it
+                if (distance > biggestDistance) {
+                    biggestDistance = distance;
                 }
-            } else {
-                newEdges.push_back(edges[i]);
+
+                printf("\n distances:%lf", distance);
+
+                averageDistance += distance;
             }
+            averageDistance /= edges.size();
+            acceptedError = biggestDistance - averageDistance;
+            printf("\n Average:%lf Accepted error: %lf", averageDistance, acceptedError);
+
+//        double newAverage;
+//        double howManyEliminated = 0;
+//        for (int j = 0; j < allDistances.size(); ++j) {
+//            if (!allDistances[j] < acceptedError) {
+//                newAverage += allDistances[j];
+//            } else {
+//                howManyEliminated++;
+//            }
+//        }
+//
+//        newAverage /= (allDistances.size() - howManyEliminated);
+//        acceptedError = biggestDistance - newAverage;
+
+
+            for (int i = 0; i < edges.size(); i++) {
+                Point2i point11 = Point(edges[i][0], edges[i][1]);
+                Point2i point12 = Point(edges[i][2], edges[i][3]);
+
+                Point2i middle1 = Point((point11.x + point12.x) / 2, (point11.y + point12.y) / 2);
+
+                Point2i point21 = Point(edges[i + 1][0], edges[i + 1][1]);
+                Point2i point22 = Point(edges[i + 1][2], edges[i + 1][3]);
+
+                Point2i middle2 = Point((point21.x + point22.x) / 2, (point21.y + point22.y) / 2);
+
+
+                double distanceBetweenFirstAndSecond = sqrt(
+                        pow(double(middle2.x - middle1.x), 2.0) + pow(double(middle2.y - middle1.y), 2.0));
+
+                if (distanceBetweenFirstAndSecond + (acceptedError / 2) < averageDistance) {
+                    Vec4i newLine;
+                    newLine[0] = (edges[i][0] + edges[i + 1][0]) / 2;
+                    newLine[1] = (edges[i][1] + edges[i + 1][1]) / 2;
+                    newLine[2] = (edges[i][2] + edges[i + 1][2]) / 2;
+                    newLine[3] = (edges[i][3] + edges[i + 1][3]) / 2;
+                    newEdges.push_back(newLine);
+                    edges.erase(edges.begin() + i);
+                    itHasBeenChange=true;
+
+
+//                if (i + 2 <= lineSize) {
+//                    Point2i point31 = Point(edges[i + 2][0], edges[i + 2][1]);
+//                    Point2i point32 = Point(edges[i + 2][2], edges[i + 2][3]);
+//
+//                    Point2i middle3 = Point((point31.x + point32.x) / 2, (point31.y + point32.y) / 2);
+//
+//
+//                    double distanceBetweenFirstAndThird = sqrt(
+//                            pow(double(middle3.x - middle1.x), 2.0) + pow(double(middle3.y - middle2.x), 2.0));
+//
+//                    if (!distanceBetweenFirstAndThird > averageDistance) {
+//                        edges.erase(edges.begin() + (i + 1));
+////                         This line is not good, remove it
+//                        newEdges.push_back(edges[i]);
+//                    } else {
+//                        // do nothing because this line is useless
+//                    }
+//                } else {
+//                    edges.erase(edges.begin() + i);
+//                    lastLineIsUseless = true;
+//                    // the last edge doesnt have the small distance so dont add it
+//                }
+                } else {
+                    newEdges.push_back(edges[i]);
+                }
+            }
+//        if (!lastLineIsUseless) {
+//            newEdges.push_back(edges[lineSize]); // add the last line because is not useless
+//        }
+            edges = newEdges;
         }
-        if (!lastLineIsUseless) {
-            newEdges.push_back(edges[lineSize]); // add the last line because is not useless
-        }
-        edges = newEdges;
     }
 }
 
 void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, bool virtualizeWithPieces) {
 
-    Mat dst, cdst;
-    int lowThreshold = 220; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
+    Mat dst, cdst, cdfinal;
+    int lowThreshold = 170; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
     Canny(src, dst, lowThreshold, lowThreshold * 3, 3);
     cvtColor(dst, cdst, CV_GRAY2BGR);
+    cvtColor(dst, cdfinal, CV_GRAY2BGR);
 
 //    const char *show_canny_startup_image = "Canny of the start input image";
 //    namedWindow(show_canny_startup_image, CV_WINDOW_AUTOSIZE);
@@ -670,8 +707,34 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
     // Separates the lines in 2 sets after an angle
     separateLinesByAngle(vecHoughLines, angleSeparator, chessTableEdges);
 
+//    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
+//        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
+//        line(cdfinal, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
+//
+//        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
+//        line(cdfinal, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
+//    }
+//    namedWindow("All lines", CV_WINDOW_AUTOSIZE);
+//    imshow("All lines", cdfinal);
+
+
     // Filter lines by their intersection
     filterLinesByIntersection(chessTableEdges);
+
+    cout << "\nEdges after filterByIntersection  horiz:" << chessTableEdges.horizontalNegativeAngleLines.size()
+         << " vert " <<
+         chessTableEdges.verticalPositiveAngleLines.size();
+
+    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
+        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
+        line(cdfinal, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
+
+        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
+        line(cdfinal, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
+    }
+    namedWindow("All lines", CV_WINDOW_AUTOSIZE);
+    imshow("All lines", cdfinal);
+
 
     // This variable will hold the chess table corner points
     vector<Point> tableIntersectionPoints;
@@ -691,6 +754,10 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
     filterByDistance(chessTableEdges.verticalPositiveAngleLines, cdst);
     filterByDistance(chessTableEdges.horizontalNegativeAngleLines, cdst);
 
+    cout << "\nEdges after filterByDistance  horiz:" << chessTableEdges.horizontalNegativeAngleLines.size() << " vert "
+         <<
+         chessTableEdges.verticalPositiveAngleLines.size();
+
     // Find the margin edges
     findMarginLines(chessTableEdges, cdst);
 
@@ -706,13 +773,12 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
         return;
     }
 
+    cout << "\nEdges after filterByClose  horiz:" << chessTableEdges.horizontalNegativeAngleLines.size() << " vert " <<
+         chessTableEdges.verticalPositiveAngleLines.size();
 
     searchCloseDistanceAndRemove(chessTableEdges.verticalPositiveAngleLines, 10);
     searchCloseDistanceAndRemove(chessTableEdges.horizontalNegativeAngleLines, 10);
 
-
-
-//    int i = 0;
     for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
         Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
         line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);

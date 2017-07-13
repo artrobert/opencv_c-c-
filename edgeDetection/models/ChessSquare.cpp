@@ -16,22 +16,15 @@ bool ChessSquare::checkIfContainsPiece(cv::Point2f pieceBasePoint) {
     line(src, vert[1], vert[2], Scalar(255), 3, 8);
     line(src, vert[2], vert[3], Scalar(255), 3, 8);
     line(src, vert[3], vert[0], Scalar(255), 3, 8);
-    namedWindow("ifinside", CV_WINDOW_AUTOSIZE);
-    imshow("ifinside", src);
-    waitKey(500);
+//    namedWindow("ifinside", CV_WINDOW_AUTOSIZE);
+//    imshow("ifinside", src);
+//    waitKey(500);
     vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
     findContours(src, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE);
     double isInside = pointPolygonTest(contours[0], pieceBasePoint, false);
 
-    bool toTheRightOfTheLeftEdge = pieceBasePoint.x > topLeft.x && pieceBasePoint.x > bottomLeft.x;
-    bool toTheLeftOfThRightEdge = pieceBasePoint.x < topRight.x && pieceBasePoint.x < bottomRight.x;
-    bool belowTheTopEdge = pieceBasePoint.y > topLeft.y && pieceBasePoint.y > topRight.y;
-    bool aboveTheBottomEdge = pieceBasePoint.y < bottomLeft.y && pieceBasePoint.y < bottomRight.y;
-
     return isInside == 1 || isInside == 0;
-//    return toTheLeftOfThRightEdge&&toTheRightOfTheLeftEdge&&aboveTheBottomEdge&&belowTheTopEdge;
-
 }
 
 

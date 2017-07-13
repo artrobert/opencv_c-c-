@@ -48,7 +48,8 @@ public:
     void initBasicModel();
 
 
-    int searchSquareAfterValues(Point basePoint);
+    ChessSquare searchSquareAfterValues(Point basePoint);
+
 };
 
 

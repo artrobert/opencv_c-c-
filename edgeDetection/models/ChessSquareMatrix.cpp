@@ -8,6 +8,7 @@ void ChessSquareMatrix::initBasicModel() {
     for (int j = 0; j < 8; j++) {
         for (int i = 0; i < 2; i++) {
             getSquare(i, j).piece->isWhite = true;
+            getSquare(i, j).hasPiece = true;
             if (i == 0) {
                 getSquare(i, j).piece->type = whiteFirstRowPieces[j];
             } else {
@@ -18,12 +19,14 @@ void ChessSquareMatrix::initBasicModel() {
 
         // Set the free spaces
         for (int i = 2; i < 6; i++) {
+            getSquare(i, j).hasPiece = false;
             getSquare(i, j).piece->type = noPiece;
             getSquare(i, j).piece->pieceType = PieceType::freeSpace;
         }
 
 
         for (int i = 6; i < 8; i++) {
+            getSquare(i, j).hasPiece = true;
             getSquare(i, j).piece->isWhite = false;
             if (i == 6) {
                 getSquare(i, j).piece->type = blackSecondRowPieces[0];
@@ -45,7 +48,7 @@ void ChessSquareMatrix::initBasicModel() {
     getSquare(0, 5).piece->pieceType = PieceType::nebun;
 
     getSquare(0, 3).piece->pieceType = PieceType::regina;
-    getSquare(0, 5).piece->pieceType = PieceType::rege;
+    getSquare(0, 4).piece->pieceType = PieceType::rege;
 
     //blacks
     getSquare(7, 0).piece->pieceType = PieceType::tura;
@@ -58,16 +61,16 @@ void ChessSquareMatrix::initBasicModel() {
     getSquare(7, 5).piece->pieceType = PieceType::nebun;
 
     getSquare(7, 3).piece->pieceType = PieceType::regina;
-    getSquare(7, 5).piece->pieceType = PieceType::rege;
+    getSquare(7, 4).piece->pieceType = PieceType::rege;
 }
 
-int ChessSquareMatrix::searchSquareAfterValues(Point basePoint) {
+ChessSquare ChessSquareMatrix::searchSquareAfterValues(Point basePoint) {
     printf("Piece coordinates: %d %d", basePoint.x, basePoint.y);
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             ChessSquare square = getSquare(i, j);
             if (square.checkIfContainsPiece(basePoint)) {
-                return square.index;
+                return square;
             }
         }
     }

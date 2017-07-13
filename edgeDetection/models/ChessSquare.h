@@ -47,6 +47,11 @@ public:
 
     void initWithPiece(PieceType type, bool isWhite);
 
+    bool operator<(const ChessSquare &square) const {
+        return index < square.index;
+    }
+
+
     ChessSquare() {
         piece = new PieceModel;
     }

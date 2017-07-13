@@ -15,9 +15,10 @@ class MotionProcessing {
 
 public:
 
-    static void getContourFromMat(const Mat &mat, PieceContour &contour1, PieceContour &contour2);
 
     static bool watchMotion(Mat frame, Mat frameMogMask, const char *frameNr, ChessSquareMatrix &squareMatrix);
+
+    static void getContourFromMat(const Mat &mat, PieceContour &contour1, PieceContour &contour2, bool both, bool isCannyDid);
 };
 
 

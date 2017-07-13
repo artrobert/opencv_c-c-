@@ -133,7 +133,7 @@ void countPixels(cv::Mat &src, const char *frame, vector<int> wbPixels) {
     }
     wbPixels.push_back(count_white);
     wbPixels.push_back(count_black);
-    printf("\n Frame (%s) has White:%d black %d", frame, count_white, count_black);
+//    printf("\n Frame (%s) has White:%d black %d", frame, count_white, count_black);
 }
 
 void simpleContour(const Mat &mat, std::vector<Point> &c) {

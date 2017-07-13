@@ -24,6 +24,8 @@ Mat frame;
 // Size to resize the frames
 Size size(800, 600);
 
+bool once=true;
+
 bool vitualizeWithPieces = true;
 
 /**
@@ -107,9 +109,10 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
     // Background subtract object
     Ptr<BackgroundSubtractorMOG2> mog2MotionDetection = createBackgroundSubtractorMOG2();
-//    mog2MotionDetection->setHistory(20);
-//    mog2MotionDetection->setShadowThreshold(0.01);
     mog2MotionDetection->setDetectShadows(true);
+
+//    mog2MotionDetection->setHistory(20);
+//    mog2MotionDetection->setShadowThreshold(0q);
 //    mog2MotionDetection->setBackgroundRatio(0.8);
 
     //read input data. ESC or 'q' for quitting
@@ -125,6 +128,11 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
        resize(frame, frame, size);
 
+        if(once) {
+            imwrite("../Result_chess.png", frame);
+            once=false;
+        }
+
          virtualizeChessTable(frame); // TODO THIS IS WORKING
 
 //        cv::cvtColor(frame, frame, CV_BGR2GRAY);
@@ -139,7 +147,7 @@ void VideoProcessing::watchTheVideo(char *videoFilename) {
 
 //        medianBlur ( frame, frame, 5 );
 //
-        printf(" Mog learning speed:%lf", mogLearningSpeed);
+//        printf(" Mog learning speed:%lf", mogLearningSpeed);
         // Update the background model
         mog2MotionDetection->apply(frame, fgMaskMOG2, mogLearningSpeed);
         fgMaskMOG2 = imagePreparation::erosionImage(fgMaskMOG2, 2, 1);
