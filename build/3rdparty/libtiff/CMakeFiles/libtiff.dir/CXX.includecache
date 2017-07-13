@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -8,25 +8,25 @@
 
 3rdparty/libtiff/tif_config.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tif_dir.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tif_dir.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tif_stream.cxx
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tif_stream.cxx
 tiffiop.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffiop.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffiop.h
 tiffio.hxx
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffio.hxx
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffio.hxx
 iostream
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiff.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiff.h
 tif_config.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tif_config.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tif_config.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffio.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffio.h
 tiff.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiff.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiff.h
 tiffvers.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffvers.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffvers.h
 windows.h
 -
 stdio.h
@@ -34,15 +34,15 @@ stdio.h
 stdarg.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffio.hxx
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffio.hxx
 iostream
 -
 tiff.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiff.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiff.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffiop.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffiop.h
 tif_config.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tif_config.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tif_config.h
 fcntl.h
 -
 sys/types.h
@@ -54,9 +54,9 @@ assert.h
 search.h
 -
 tiffio.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffio.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffio.h
 tif_dir.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tif_dir.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tif_dir.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff/tiffvers.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tiffvers.h
 

@@ -3,7 +3,7 @@
 // and you want IlmBase to use it for multithreaded file I/O.
 //
 
-#define HAVE_PTHREAD 0
+#define HAVE_PTHREAD 1
 
 //
 // Define and set to 1 if the target system supports POSIX semaphores

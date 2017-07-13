@@ -4,47 +4,47 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/opencl/perf_brute_force_matcher.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/opencl/perf_brute_force_matcher.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/opencl/perf_fast.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/opencl/perf_fast.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/opencl/perf_orb.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/opencl/perf_orb.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/perf_agast.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/perf_agast.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/perf_batchDistance.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/perf_batchDistance.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/perf_fast.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/perf_fast.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/perf_main.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/perf_main.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/perf_orb.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/perf_orb.cpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/features2d/perf/perf_precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/perf/perf_precomp.hpp",
 			"labels" : [ "Main", "opencv_features2d", "PerfTest" ]
 		}
 	],

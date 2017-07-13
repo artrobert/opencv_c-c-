@@ -4,22 +4,22 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf/perf_input.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/perf/perf_input.cpp",
 			"labels" : [ "Main", "opencv_videoio", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf/perf_main.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/perf/perf_main.cpp",
 			"labels" : [ "Main", "opencv_videoio", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf/perf_output.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/perf/perf_output.cpp",
 			"labels" : [ "Main", "opencv_videoio", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/perf/perf_precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/perf/perf_precomp.hpp",
 			"labels" : [ "Main", "opencv_videoio", "PerfTest" ]
 		}
 	],

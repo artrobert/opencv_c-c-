@@ -1,0 +1,17 @@
+# Target labels
+ Extra
+ opencv_face
+ AccuracyTest
+# Source files and their labels
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/face/test/test_bif.cpp
+ Extra
+ opencv_face
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/face/test/test_main.cpp
+ Extra
+ opencv_face
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/face/test/test_precomp.hpp
+ Extra
+ opencv_face
+ AccuracyTest

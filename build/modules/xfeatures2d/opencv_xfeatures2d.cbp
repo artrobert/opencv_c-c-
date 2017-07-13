@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="opencv_xfeatures2d"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\checks\;CMake Files\cmake\templates\;CMake Files\modules\;CMake Files\modules\core\;CMake Files\modules\core\include\;CMake Files\modules\core\include\opencv2\;CMake Files\modules\core\include\opencv2\core\;CMake Files\modules\calib3d\;CMake Files\modules\cudaarithm\;CMake Files\modules\cudabgsegm\;CMake Files\modules\cudacodec\;CMake Files\modules\cudafeatures2d\;CMake Files\modules\cudafilters\;CMake Files\modules\cudaimgproc\;CMake Files\modules\cudalegacy\;CMake Files\modules\cudaobjdetect\;CMake Files\modules\cudaoptflow\;CMake Files\modules\cudastereo\;CMake Files\modules\cudawarping\;CMake Files\modules\cudev\;CMake Files\modules\features2d\;CMake Files\modules\flann\;CMake Files\modules\highgui\;CMake Files\modules\imgcodecs\;CMake Files\modules\imgproc\;CMake Files\modules\java\;CMake Files\modules\ml\;CMake Files\modules\objdetect\;CMake Files\modules\photo\;CMake Files\modules\python\;CMake Files\modules\python\python2\;CMake Files\modules\python\python3\;CMake Files\modules\shape\;CMake Files\modules\stitching\;CMake Files\modules\superres\;CMake Files\modules\ts\;CMake Files\modules\video\;CMake Files\modules\videoio\;CMake Files\modules\videostab\;CMake Files\modules\viz\;CMake Files\modules\world\;CMake Files\3rdparty\;CMake Files\3rdparty\ffmpeg\;CMake Files\3rdparty\zlib\;CMake Files\3rdparty\libtiff\;CMake Files\3rdparty\libjpeg\;CMake Files\3rdparty\libwebp\;CMake Files\3rdparty\libjasper\;CMake Files\3rdparty\libpng\;CMake Files\3rdparty\openexr\;CMake Files\include\;CMake Files\..\;CMake Files\..\opencv_contrib-3.2.0\;CMake Files\..\opencv_contrib-3.2.0\modules\;CMake Files\..\opencv_contrib-3.2.0\modules\aruco\;CMake Files\..\opencv_contrib-3.2.0\modules\bgsegm\;CMake Files\..\opencv_contrib-3.2.0\modules\bioinspired\;CMake Files\..\opencv_contrib-3.2.0\modules\ccalib\;CMake Files\..\opencv_contrib-3.2.0\modules\cnn_3dobj\;CMake Files\..\opencv_contrib-3.2.0\modules\contrib_world\;CMake Files\..\opencv_contrib-3.2.0\modules\cvv\;CMake Files\..\opencv_contrib-3.2.0\modules\datasets\;CMake Files\..\opencv_contrib-3.2.0\modules\dnn\;CMake Files\..\opencv_contrib-3.2.0\modules\dnn\cmake\;CMake Files\..\opencv_contrib-3.2.0\modules\dnn\3rdparty\;CMake Files\..\opencv_contrib-3.2.0\modules\dnn\3rdparty\protobuf\;CMake Files\..\opencv_contrib-3.2.0\modules\dpm\;CMake Files\..\opencv_contrib-3.2.0\modules\face\;CMake Files\..\opencv_contrib-3.2.0\modules\freetype\;CMake Files\..\opencv_contrib-3.2.0\modules\fuzzy\;CMake Files\..\opencv_contrib-3.2.0\modules\hdf\;CMake Files\..\opencv_contrib-3.2.0\modules\line_descriptor\;CMake Files\..\opencv_contrib-3.2.0\modules\matlab\;CMake Files\..\opencv_contrib-3.2.0\modules\optflow\;CMake Files\..\opencv_contrib-3.2.0\modules\phase_unwrapping\;CMake Files\..\opencv_contrib-3.2.0\modules\plot\;CMake Files\..\opencv_contrib-3.2.0\modules\reg\;CMake Files\..\opencv_contrib-3.2.0\modules\rgbd\;CMake Files\..\opencv_contrib-3.2.0\modules\saliency\;CMake Files\..\opencv_contrib-3.2.0\modules\sfm\;CMake Files\..\opencv_contrib-3.2.0\modules\stereo\;CMake Files\..\opencv_contrib-3.2.0\modules\structured_light\;CMake Files\..\opencv_contrib-3.2.0\modules\surface_matching\;CMake Files\..\opencv_contrib-3.2.0\modules\text\;CMake Files\..\opencv_contrib-3.2.0\modules\text\cmake\;CMake Files\..\opencv_contrib-3.2.0\modules\tracking\;CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\;CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\cmake\;CMake Files\..\opencv_contrib-3.2.0\modules\ximgproc\;CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\;CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\tools\;CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\tools\waldboost_detector\;CMake Files\..\opencv_contrib-3.2.0\modules\xphoto\;CMake Files\doc\;CMake Files\data\;CMake Files\apps\;CMake Files\apps\traincascade\;CMake Files\apps\createsamples\;CMake Files\apps\annotation\;CMake Files\apps\visualisation\;CMake Files\apps\interactive-calibration\;CMake Files\apps\version\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pch_Generate_opencv_test_xfeatures2d">
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 pch_Generate_opencv_test_xfeatures2d"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_xfeatures2d">
+				<Option output="C:/Users/artin/Desktop/build/bin/libopencv_xfeatures2d320.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCVAPI_EXPORTS"/>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src"/>
+					<Add directory="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_xfeatures2d"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_xfeatures2d/fast">
+				<Option output="C:/Users/artin/Desktop/build/bin/libopencv_xfeatures2d320.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCVAPI_EXPORTS"/>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src"/>
+					<Add directory="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_xfeatures2d/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_test_xfeatures2d_pch_dephelp">
+				<Option output="C:/Users/artin/Desktop/build/lib/libopencv_test_xfeatures2d_pch_dephelp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_test_xfeatures2d_pch_dephelp"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_test_xfeatures2d_pch_dephelp/fast">
+				<Option output="C:/Users/artin/Desktop/build/lib/libopencv_test_xfeatures2d_pch_dephelp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_test_xfeatures2d_pch_dephelp/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_xfeatures2d_pch_dephelp">
+				<Option output="C:/Users/artin/Desktop/build/lib/libopencv_xfeatures2d_pch_dephelp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src"/>
+					<Add directory="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_xfeatures2d_pch_dephelp"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_xfeatures2d_pch_dephelp/fast">
+				<Option output="C:/Users/artin/Desktop/build/lib/libopencv_xfeatures2d_pch_dephelp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src"/>
+					<Add directory="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_xfeatures2d_pch_dephelp/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_perf_xfeatures2d">
+				<Option output="C:/Users/artin/Desktop/build/bin/opencv_perf_xfeatures2d.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_perf_xfeatures2d"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_perf_xfeatures2d/fast">
+				<Option output="C:/Users/artin/Desktop/build/bin/opencv_perf_xfeatures2d.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_perf_xfeatures2d/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pch_Generate_opencv_xfeatures2d">
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 pch_Generate_opencv_xfeatures2d"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pch_Generate_opencv_perf_xfeatures2d">
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 pch_Generate_opencv_perf_xfeatures2d"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_perf_xfeatures2d_pch_dephelp">
+				<Option output="C:/Users/artin/Desktop/build/lib/libopencv_perf_xfeatures2d_pch_dephelp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_perf_xfeatures2d_pch_dephelp"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_perf_xfeatures2d_pch_dephelp/fast">
+				<Option output="C:/Users/artin/Desktop/build/lib/libopencv_perf_xfeatures2d_pch_dephelp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/modules/xfeatures2d"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_perf_xfeatures2d_pch_dephelp/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_test_xfeatures2d">
+				<Option output="C:/Users/artin/Desktop/build/bin/opencv_test_xfeatures2d.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_test_xfeatures2d"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencv_test_xfeatures2d/fast">
+				<Option output="C:/Users/artin/Desktop/build/bin/opencv_test_xfeatures2d.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/artin/Desktop/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D__OPENCV_BUILD=1"/>
+					<Add directory="C:/Users/artin/Desktop/build"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 opencv_test_xfeatures2d/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/artin/Desktop/build/modules/xfeatures2d/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/artin/Desktop/build/cvconfig.h">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/build/modules/xfeatures2d/opencl_kernels_xfeatures2d.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/build/modules/xfeatures2d/opencl_kernels_xfeatures2d.cpp.rule">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/build/modules/xfeatures2d/opencl_kernels_xfeatures2d.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/build/modules/xfeatures2d/opencv_perf_xfeatures2d_pch_dephelp.cxx">
+			<Option target="opencv_perf_xfeatures2d_pch_dephelp"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/build/modules/xfeatures2d/opencv_test_xfeatures2d_pch_dephelp.cxx">
+			<Option target="opencv_test_xfeatures2d_pch_dephelp"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/build/modules/xfeatures2d/opencv_xfeatures2d_pch_dephelp.cxx">
+			<Option target="opencv_xfeatures2d_pch_dephelp"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include/opencv2/xfeatures2d.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include/opencv2/xfeatures2d/cuda.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/include/opencv2/xfeatures2d/nonfree.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_daisy.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_latch.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_main.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_msd.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_precomp.hpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+			<Option target="opencv_perf_xfeatures2d_pch_dephelp"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_surf.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_surf.cuda.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_surf.ocl.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/perf/perf_vgg.cpp">
+			<Option target="opencv_perf_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/boostdesc.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/brief.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/daisy.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/freak.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/latch.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/lucid.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/msd.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/opencl/surf.cl">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/constants.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/distance.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/grayscale_bitmap.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/grayscale_bitmap.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/pct_clusterizer.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/pct_clusterizer.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/pct_sampler.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/pct_sampler.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures/similarity.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/pct_signatures_sqfd.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/precomp.hpp">
+			<Option target="opencv_xfeatures2d"/>
+			<Option target="opencv_xfeatures2d_pch_dephelp"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/sift.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/stardetector.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/surf.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/surf.cuda.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/surf.hpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/surf.ocl.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/vgg.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/src/xfeatures2d_init.cpp">
+			<Option target="opencv_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_detectors.cpp">
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_features2d.cpp">
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_keypoints.cpp">
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_main.cpp">
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_precomp.hpp">
+			<Option target="opencv_test_xfeatures2d_pch_dephelp"/>
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_rotation_and_scale_invariance.cpp">
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_surf.cuda.cpp">
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/xfeatures2d/test/test_surf.ocl.cpp">
+			<Option target="opencv_test_xfeatures2d"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVMinDepVersions.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVUtils.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVDetectCXXCompiler.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVCompilerOptions.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVPCHSupport.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVModule.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindLibsGrfmt.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindWebP.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindLibsGUI.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindLibsVideo.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/FindGstreamerWindows.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindLibsPerf.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVDetectCUDA.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindLAPACK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindMKL.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindOpenBLAS.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVDetectPython.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVDetectApacheAnt.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVDetectOpenCL.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVDetectDirectX.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVFindMatlab.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVDetectVTK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVExtraTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVGenHeaders.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVGenPkgconfig.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVGenAndroidMK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVGenConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVGenABI.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/OpenCVPackaging.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/checks/fp16.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/checks/win32uitest.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/checks/vfwtest.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/checks/opencl.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/checks/directx.cpp">
+			<Option virtualFolder="CMake Files\cmake\checks\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/custom_hal.hpp.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/cvconfig.h.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/cvconfig.h.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/opencv_modules.hpp.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/opencv-XXX.pc.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/OpenCVConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/OpenCVConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/OpenCVConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/OpenCVConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/cmake/templates/OpenCVConfig.root-WIN32.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\templates\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\core\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\core\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\core\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/version.hpp">
+			<Option virtualFolder="CMake Files\modules\core\include\opencv2\core\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\calib3d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\calib3d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/calib3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\calib3d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudaarithm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaarithm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudabgsegm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudabgsegm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudacodec/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudacodec\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudafeatures2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudafeatures2d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudafilters/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudafilters\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudaimgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaimgproc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudalegacy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudalegacy\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudaobjdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaobjdetect\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudaoptflow/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudaoptflow\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudastereo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudastereo\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudawarping/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudawarping\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/cudev/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\cudev\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\features2d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\features2d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/features2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\features2d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\flann\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\flann\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\flann\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\highgui\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\highgui\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\highgui\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgcodecs\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgcodecs\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgcodecs\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgproc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgproc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\imgproc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/java/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\java\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ml\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ml\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ml\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\objdetect\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\objdetect\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\objdetect\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\photo\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\photo\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\photo\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/python/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/python/python2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\python2\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/python/python3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\python\python3\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\shape\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\shape\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/shape/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\shape\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\stitching\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\stitching\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\stitching\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/superres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\superres\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/superres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\superres\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/superres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\superres\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ts\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ts\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\ts\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\video\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\video\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/video/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\video\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videoio\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videoio\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videoio\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/videostab/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videostab\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/videostab/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videostab\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/videostab/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\videostab\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/viz/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\viz\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/modules/world/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\modules\world\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/ffmpeg/ffmpeg.cmake">
+			<Option virtualFolder="CMake Files\3rdparty\ffmpeg\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/ffmpeg/ffmpeg_version.cmake">
+			<Option virtualFolder="CMake Files\3rdparty\ffmpeg\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/zlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\zlib\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/zlib/zconf.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\zlib\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/zlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\zlib\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/zlib/zconf.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\zlib\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tif_config.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff/tif_config.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\libtiff\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libjpeg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjpeg\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libjpeg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjpeg\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libwebp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libwebp\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libwebp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libwebp\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libjasper/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjasper\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libjasper/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libjasper\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libpng/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libpng\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libpng/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\libpng\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/IlmBaseConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/OpenEXRConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/IlmBaseConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/OpenEXRConfig.h.cmakein">
+			<Option virtualFolder="CMake Files\3rdparty\openexr\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/include/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/aruco/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\aruco\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/aruco/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\aruco\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/aruco/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\aruco\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/bgsegm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\bgsegm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/bgsegm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\bgsegm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/bgsegm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\bgsegm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/bioinspired/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\bioinspired\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/bioinspired/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\bioinspired\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/bioinspired/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\bioinspired\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/ccalib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\ccalib\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/ccalib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\ccalib\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/ccalib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\ccalib\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/cnn_3dobj/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\cnn_3dobj\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/cnn_3dobj/FindCaffe.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\cnn_3dobj\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/cnn_3dobj/FindProtobuf.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\cnn_3dobj\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/cnn_3dobj/FindGlog.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\cnn_3dobj\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/contrib_world/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\contrib_world\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/cvv/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\cvv\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/datasets/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\datasets\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/datasets/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\datasets\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/datasets/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\datasets\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/cmake/OpenCVFindLibProtobuf.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/cmake/download_protobuf.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/cmake/OpenCVFindLibProtobuf.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/cmake/download_protobuf.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/3rdparty/protobuf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\3rdparty\protobuf\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/3rdparty/protobuf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\3rdparty\protobuf\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dnn/3rdparty/protobuf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dnn\3rdparty\protobuf\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dpm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dpm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dpm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dpm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/dpm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\dpm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/face/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\face\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/face/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\face\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/face/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\face\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/freetype/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\freetype\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/fuzzy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\fuzzy\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/fuzzy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\fuzzy\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/fuzzy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\fuzzy\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/hdf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\hdf\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/line_descriptor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\line_descriptor\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/line_descriptor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\line_descriptor\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/line_descriptor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\line_descriptor\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/matlab/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\matlab\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/optflow/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\optflow\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/optflow/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\optflow\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/optflow/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\optflow\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/phase_unwrapping/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\phase_unwrapping\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/phase_unwrapping/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\phase_unwrapping\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/phase_unwrapping/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\phase_unwrapping\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/plot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\plot\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/plot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\plot\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/plot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\plot\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/reg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\reg\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/reg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\reg\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/reg/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\reg\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/rgbd/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\rgbd\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/rgbd/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\rgbd\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/rgbd/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\rgbd\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/saliency/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\saliency\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/saliency/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\saliency\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/saliency/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\saliency\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/sfm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\sfm\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/stereo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\stereo\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/stereo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\stereo\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/stereo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\stereo\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/structured_light/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\structured_light\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/structured_light/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\structured_light\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/structured_light/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\structured_light\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/surface_matching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\surface_matching\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/surface_matching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\surface_matching\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/surface_matching/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\surface_matching\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/text/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\text\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/text/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\text\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/text/text_config.hpp.in">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\text\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/text/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\text\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/text/text_config.hpp.in">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\text\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/text/cmake/FindTesseract.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\text\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/text/cmake/FindTesseract.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\text\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/tracking/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\tracking\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/tracking/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\tracking\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/tracking/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\tracking\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xfeatures2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xfeatures2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xfeatures2d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xfeatures2d/cmake/download_vgg.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xfeatures2d/cmake/download_boostdesc.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xfeatures2d/cmake/download_vgg.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xfeatures2d/cmake/download_boostdesc.cmake">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xfeatures2d\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/ximgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\ximgproc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/ximgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\ximgproc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/ximgproc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\ximgproc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\tools\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\tools\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/tools/waldboost_detector/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\tools\waldboost_detector\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/tools/waldboost_detector/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\tools\waldboost_detector\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xobjdetect/tools/waldboost_detector/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xobjdetect\tools\waldboost_detector\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xphoto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xphoto\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xphoto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xphoto\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/../opencv_contrib-3.2.0/modules/xphoto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\opencv_contrib-3.2.0\modules\xphoto\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/doc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/data/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\data\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/traincascade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\traincascade\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/traincascade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\traincascade\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/createsamples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\createsamples\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/createsamples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\createsamples\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/annotation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\annotation\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/annotation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\annotation\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/visualisation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\visualisation\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/visualisation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\visualisation\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/interactive-calibration/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\interactive-calibration\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/interactive-calibration/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\interactive-calibration\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/version/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\version\"/>
+		</Unit>
+		<Unit filename="C:/Users/artin/Desktop/opencv-3.2.0/apps/version/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\apps\version\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

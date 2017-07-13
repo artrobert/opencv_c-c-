@@ -1,0 +1,31 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/reg/test/test_main.cpp",
+			"labels" : [ "Extra", "opencv_reg", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/reg/test/test_precomp.cpp",
+			"labels" : [ "Extra", "opencv_reg", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/reg/test/test_reg.cpp",
+			"labels" : [ "Extra", "opencv_reg", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/reg/test/test_precomp.hpp",
+			"labels" : [ "Extra", "opencv_reg", "AccuracyTest" ]
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Extra", "opencv_reg", "AccuracyTest" ],
+		"name" : "opencv_test_reg"
+	}
+}

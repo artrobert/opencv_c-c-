@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/flann/opencv_test_flann_pch_dephelp.cxx" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/opencv_test_flann_pch_dephelp.cxx.obj"
+  "C:/Users/artin/Desktop/build/modules/flann/opencv_test_flann_pch_dephelp.cxx" "C:/Users/artin/Desktop/build/modules/flann/CMakeFiles/opencv_test_flann_pch_dephelp.dir/opencv_test_flann_pch_dephelp.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,14 +16,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/flann/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/flann/test"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/flann/test"
   )
 
 # Targets to which this target links.

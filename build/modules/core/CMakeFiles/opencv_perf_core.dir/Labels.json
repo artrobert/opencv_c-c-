@@ -4,157 +4,157 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/cuda/perf_gpumat.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/cuda/perf_gpumat.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_arithm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/opencl/perf_arithm.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_bufferpool.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/opencl/perf_bufferpool.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_channels.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/opencl/perf_channels.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_dxt.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/opencl/perf_dxt.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_gemm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/opencl/perf_gemm.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_matop.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/opencl/perf_matop.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/opencl/perf_usage_flags.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/opencl/perf_usage_flags.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_abs.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_abs.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_addWeighted.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_addWeighted.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_arithm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_arithm.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_bitwise.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_bitwise.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_compare.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_compare.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_convertTo.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_convertTo.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_cvround.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_cvround.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_dft.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_dft.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_dot.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_dot.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_inRange.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_inRange.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_io_base64.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_io_base64.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_main.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_main.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_mat.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_mat.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_math.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_math.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_merge.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_merge.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_minmaxloc.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_minmaxloc.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_norm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_norm.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_reduce.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_reduce.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_sort.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_sort.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_split.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_split.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_stat.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_stat.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_umat.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_umat.cpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/perf/perf_precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/perf/perf_precomp.hpp",
 			"labels" : [ "Main", "opencv_core", "PerfTest" ]
 		}
 	],

@@ -4,95 +4,95 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/include/opencv2/objdetect.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/include/opencv2/objdetect.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/include/opencv2/objdetect/detection_based_tracker.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/include/opencv2/objdetect/detection_based_tracker.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/include/opencv2/objdetect/objdetect.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/include/opencv2/objdetect/objdetect.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/include/opencv2/objdetect/objdetect_c.h",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/include/opencv2/objdetect/objdetect_c.h",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/cascadedetect.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/cascadedetect.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/cascadedetect_convert.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/cascadedetect_convert.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/detection_based_tracker.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/detection_based_tracker.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/haar.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/haar.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/hog.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/hog.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/main.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/main.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/opencl/cascadedetect.cl",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/opencl/cascadedetect.cl",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/opencl/objdetect_hog.cl",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/opencl/objdetect_hog.cl",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/opencl_kernels_objdetect.cpp",
+			"file" : "C:/Users/artin/Desktop/build/modules/objdetect/opencl_kernels_objdetect.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/opencl_kernels_objdetect.hpp",
+			"file" : "C:/Users/artin/Desktop/build/modules/objdetect/opencl_kernels_objdetect.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/cascadedetect.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/cascadedetect.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/src/precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/src/precomp.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/cvconfig.h"
+			"file" : "C:/Users/artin/Desktop/build/cvconfig.h"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/opencv2/opencv_modules.hpp"
+			"file" : "C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/objdetect/opencl_kernels_objdetect.cpp.rule"
+			"file" : "C:/Users/artin/Desktop/build/modules/objdetect/opencl_kernels_objdetect.cpp.rule"
 		}
 	],
 	"target" : 

@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_video opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_objdetect opencv_superres opencv_features2d opencv_calib3d opencv_stitching opencv_videostab)
+foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_reg opencv_surface_matching opencv_video opencv_dnn opencv_fuzzy opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_objdetect opencv_plot opencv_superres opencv_xobjdetect opencv_xphoto opencv_bgsegm opencv_bioinspired opencv_dpm opencv_face opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_rgbd opencv_stereo opencv_tracking opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_aruco opencv_optflow opencv_phase_unwrapping opencv_stitching opencv_structured_light)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -56,8 +56,20 @@ add_library(opencv_ml SHARED IMPORTED)
 # Create imported target opencv_photo
 add_library(opencv_photo SHARED IMPORTED)
 
+# Create imported target opencv_reg
+add_library(opencv_reg SHARED IMPORTED)
+
+# Create imported target opencv_surface_matching
+add_library(opencv_surface_matching SHARED IMPORTED)
+
 # Create imported target opencv_video
 add_library(opencv_video SHARED IMPORTED)
+
+# Create imported target opencv_dnn
+add_library(opencv_dnn SHARED IMPORTED)
+
+# Create imported target opencv_fuzzy
+add_library(opencv_fuzzy SHARED IMPORTED)
 
 # Create imported target opencv_imgcodecs
 add_library(opencv_imgcodecs SHARED IMPORTED)
@@ -74,150 +86,413 @@ add_library(opencv_highgui SHARED IMPORTED)
 # Create imported target opencv_objdetect
 add_library(opencv_objdetect SHARED IMPORTED)
 
+# Create imported target opencv_plot
+add_library(opencv_plot SHARED IMPORTED)
+
 # Create imported target opencv_superres
 add_library(opencv_superres SHARED IMPORTED)
+
+# Create imported target opencv_xobjdetect
+add_library(opencv_xobjdetect SHARED IMPORTED)
+
+# Create imported target opencv_xphoto
+add_library(opencv_xphoto SHARED IMPORTED)
+
+# Create imported target opencv_bgsegm
+add_library(opencv_bgsegm SHARED IMPORTED)
+
+# Create imported target opencv_bioinspired
+add_library(opencv_bioinspired SHARED IMPORTED)
+
+# Create imported target opencv_dpm
+add_library(opencv_dpm SHARED IMPORTED)
+
+# Create imported target opencv_face
+add_library(opencv_face SHARED IMPORTED)
 
 # Create imported target opencv_features2d
 add_library(opencv_features2d SHARED IMPORTED)
 
+# Create imported target opencv_line_descriptor
+add_library(opencv_line_descriptor SHARED IMPORTED)
+
+# Create imported target opencv_saliency
+add_library(opencv_saliency SHARED IMPORTED)
+
+# Create imported target opencv_text
+add_library(opencv_text SHARED IMPORTED)
+
 # Create imported target opencv_calib3d
 add_library(opencv_calib3d SHARED IMPORTED)
 
-# Create imported target opencv_stitching
-add_library(opencv_stitching SHARED IMPORTED)
+# Create imported target opencv_ccalib
+add_library(opencv_ccalib SHARED IMPORTED)
+
+# Create imported target opencv_datasets
+add_library(opencv_datasets SHARED IMPORTED)
+
+# Create imported target opencv_rgbd
+add_library(opencv_rgbd SHARED IMPORTED)
+
+# Create imported target opencv_stereo
+add_library(opencv_stereo SHARED IMPORTED)
+
+# Create imported target opencv_tracking
+add_library(opencv_tracking SHARED IMPORTED)
 
 # Create imported target opencv_videostab
 add_library(opencv_videostab SHARED IMPORTED)
 
+# Create imported target opencv_xfeatures2d
+add_library(opencv_xfeatures2d SHARED IMPORTED)
+
+# Create imported target opencv_ximgproc
+add_library(opencv_ximgproc SHARED IMPORTED)
+
+# Create imported target opencv_aruco
+add_library(opencv_aruco SHARED IMPORTED)
+
+# Create imported target opencv_optflow
+add_library(opencv_optflow SHARED IMPORTED)
+
+# Create imported target opencv_phase_unwrapping
+add_library(opencv_phase_unwrapping SHARED IMPORTED)
+
+# Create imported target opencv_stitching
+add_library(opencv_stitching SHARED IMPORTED)
+
+# Create imported target opencv_structured_light
+add_library(opencv_structured_light SHARED IMPORTED)
+
 # Import target "opencv_core" for configuration "Release"
 set_property(TARGET opencv_core APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_core PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_core320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_core320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_core320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_core320.dll"
   )
 
 # Import target "opencv_flann" for configuration "Release"
 set_property(TARGET opencv_flann APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_flann PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_flann320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_flann320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_flann320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_flann320.dll"
   )
 
 # Import target "opencv_imgproc" for configuration "Release"
 set_property(TARGET opencv_imgproc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_imgproc PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_imgproc320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_imgproc320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_imgproc320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_imgproc320.dll"
   )
 
 # Import target "opencv_ml" for configuration "Release"
 set_property(TARGET opencv_ml APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_ml PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_ml320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_ml320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_ml320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_ml320.dll"
   )
 
 # Import target "opencv_photo" for configuration "Release"
 set_property(TARGET opencv_photo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_photo PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_photo320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_photo320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_photo320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_photo320.dll"
+  )
+
+# Import target "opencv_reg" for configuration "Release"
+set_property(TARGET opencv_reg APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_reg PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_reg320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_reg320.dll"
+  )
+
+# Import target "opencv_surface_matching" for configuration "Release"
+set_property(TARGET opencv_surface_matching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_surface_matching PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_surface_matching320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_surface_matching320.dll"
   )
 
 # Import target "opencv_video" for configuration "Release"
 set_property(TARGET opencv_video APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_video PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_video320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_video320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_video320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_video320.dll"
+  )
+
+# Import target "opencv_dnn" for configuration "Release"
+set_property(TARGET opencv_dnn APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_dnn PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_dnn320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_dnn320.dll"
+  )
+
+# Import target "opencv_fuzzy" for configuration "Release"
+set_property(TARGET opencv_fuzzy APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_fuzzy PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_fuzzy320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_fuzzy320.dll"
   )
 
 # Import target "opencv_imgcodecs" for configuration "Release"
 set_property(TARGET opencv_imgcodecs APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_imgcodecs PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_imgcodecs320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_imgcodecs320.dll.a"
   IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "opencv_core;opencv_imgproc"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_imgcodecs320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_imgcodecs320.dll"
   )
 
 # Import target "opencv_shape" for configuration "Release"
 set_property(TARGET opencv_shape APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_shape PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_shape320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_shape320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_video"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_shape320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_shape320.dll"
   )
 
 # Import target "opencv_videoio" for configuration "Release"
 set_property(TARGET opencv_videoio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_videoio PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_videoio320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_videoio320.dll.a"
   IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_videoio320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_videoio320.dll"
   )
 
 # Import target "opencv_highgui" for configuration "Release"
 set_property(TARGET opencv_highgui APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_highgui PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_highgui320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_highgui320.dll.a"
   IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_highgui320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_highgui320.dll"
   )
 
 # Import target "opencv_objdetect" for configuration "Release"
 set_property(TARGET opencv_objdetect APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_objdetect PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_objdetect320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_objdetect320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_objdetect320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_objdetect320.dll"
+  )
+
+# Import target "opencv_plot" for configuration "Release"
+set_property(TARGET opencv_plot APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_plot PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_plot320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_plot320.dll"
   )
 
 # Import target "opencv_superres" for configuration "Release"
 set_property(TARGET opencv_superres APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_superres PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_superres320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_superres320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_superres320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_superres320.dll"
+  )
+
+# Import target "opencv_xobjdetect" for configuration "Release"
+set_property(TARGET opencv_xobjdetect APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_xobjdetect PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_xobjdetect320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_objdetect"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_xobjdetect320.dll"
+  )
+
+# Import target "opencv_xphoto" for configuration "Release"
+set_property(TARGET opencv_xphoto APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_xphoto PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_xphoto320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_photo;opencv_imgcodecs;opencv_videoio;opencv_highgui"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_xphoto320.dll"
+  )
+
+# Import target "opencv_bgsegm" for configuration "Release"
+set_property(TARGET opencv_bgsegm APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_bgsegm PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_bgsegm320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_bgsegm320.dll"
+  )
+
+# Import target "opencv_bioinspired" for configuration "Release"
+set_property(TARGET opencv_bioinspired APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_bioinspired PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_bioinspired320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_bioinspired320.dll"
+  )
+
+# Import target "opencv_dpm" for configuration "Release"
+set_property(TARGET opencv_dpm APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_dpm PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_dpm320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_objdetect"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_dpm320.dll"
+  )
+
+# Import target "opencv_face" for configuration "Release"
+set_property(TARGET opencv_face APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_face PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_face320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_objdetect"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_face320.dll"
   )
 
 # Import target "opencv_features2d" for configuration "Release"
 set_property(TARGET opencv_features2d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_features2d PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_features2d320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_features2d320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_features2d320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_features2d320.dll"
+  )
+
+# Import target "opencv_line_descriptor" for configuration "Release"
+set_property(TARGET opencv_line_descriptor APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_line_descriptor PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_line_descriptor320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_line_descriptor320.dll"
+  )
+
+# Import target "opencv_saliency" for configuration "Release"
+set_property(TARGET opencv_saliency APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_saliency PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_saliency320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_saliency320.dll"
+  )
+
+# Import target "opencv_text" for configuration "Release"
+set_property(TARGET opencv_text APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_text PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_text320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_text320.dll"
   )
 
 # Import target "opencv_calib3d" for configuration "Release"
 set_property(TARGET opencv_calib3d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_calib3d PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_calib3d320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_calib3d320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_calib3d320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_calib3d320.dll"
   )
 
-# Import target "opencv_stitching" for configuration "Release"
-set_property(TARGET opencv_stitching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(opencv_stitching PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_stitching320.dll.a"
-  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_objdetect;opencv_features2d;opencv_calib3d"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_stitching320.dll"
+# Import target "opencv_ccalib" for configuration "Release"
+set_property(TARGET opencv_ccalib APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_ccalib PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_ccalib320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_ccalib320.dll"
+  )
+
+# Import target "opencv_datasets" for configuration "Release"
+set_property(TARGET opencv_datasets APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_datasets PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_datasets320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_objdetect;opencv_face;opencv_features2d;opencv_text"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_datasets320.dll"
+  )
+
+# Import target "opencv_rgbd" for configuration "Release"
+set_property(TARGET opencv_rgbd APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_rgbd PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_rgbd320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_rgbd320.dll"
+  )
+
+# Import target "opencv_stereo" for configuration "Release"
+set_property(TARGET opencv_stereo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_stereo PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_stereo320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_stereo320.dll"
+  )
+
+# Import target "opencv_tracking" for configuration "Release"
+set_property(TARGET opencv_tracking APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_tracking PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_tracking320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_objdetect;opencv_plot;opencv_face;opencv_features2d;opencv_text;opencv_datasets"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_tracking320.dll"
   )
 
 # Import target "opencv_videostab" for configuration "Release"
 set_property(TARGET opencv_videostab APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_videostab PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/lib/libopencv_videostab320.dll.a"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_videostab320.dll.a"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_photo;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
-  IMPORTED_LOCATION_RELEASE "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/bin/libopencv_videostab320.dll"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_videostab320.dll"
+  )
+
+# Import target "opencv_xfeatures2d" for configuration "Release"
+set_property(TARGET opencv_xfeatures2d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_xfeatures2d PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_xfeatures2d320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_xfeatures2d320.dll"
+  )
+
+# Import target "opencv_ximgproc" for configuration "Release"
+set_property(TARGET opencv_ximgproc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_ximgproc PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_ximgproc320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_ximgproc320.dll"
+  )
+
+# Import target "opencv_aruco" for configuration "Release"
+set_property(TARGET opencv_aruco APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_aruco PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_aruco320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_aruco320.dll"
+  )
+
+# Import target "opencv_optflow" for configuration "Release"
+set_property(TARGET opencv_optflow APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_optflow PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_optflow320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ximgproc"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_optflow320.dll"
+  )
+
+# Import target "opencv_phase_unwrapping" for configuration "Release"
+set_property(TARGET opencv_phase_unwrapping APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_phase_unwrapping PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_phase_unwrapping320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_rgbd"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_phase_unwrapping320.dll"
+  )
+
+# Import target "opencv_stitching" for configuration "Release"
+set_property(TARGET opencv_stitching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_stitching PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_stitching320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_objdetect;opencv_features2d;opencv_calib3d;opencv_xfeatures2d"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_stitching320.dll"
+  )
+
+# Import target "opencv_structured_light" for configuration "Release"
+set_property(TARGET opencv_structured_light APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_structured_light PROPERTIES
+  IMPORTED_IMPLIB_RELEASE "C:/Users/artin/Desktop/build/lib/libopencv_structured_light320.dll.a"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_rgbd;opencv_phase_unwrapping"
+  IMPORTED_LOCATION_RELEASE "C:/Users/artin/Desktop/build/bin/libopencv_structured_light320.dll"
   )
 
 # This file does not depend on other imported targets which have

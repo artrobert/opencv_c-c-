@@ -4,22 +4,22 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/perf/opencl/perf_cascades.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/perf/opencl/perf_cascades.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/perf/opencl/perf_hogdetect.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/perf/opencl/perf_hogdetect.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/perf/perf_main.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/perf/perf_main.cpp",
 			"labels" : [ "Main", "opencv_objdetect", "PerfTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/objdetect/perf/perf_precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/objdetect/perf/perf_precomp.hpp",
 			"labels" : [ "Main", "opencv_objdetect", "PerfTest" ]
 		}
 	],

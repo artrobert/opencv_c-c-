@@ -1,0 +1,39 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/bgsegm/include/opencv2/bgsegm.hpp",
+			"labels" : [ "Extra", "opencv_bgsegm", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/bgsegm/src/bgfg_gaussmix.cpp",
+			"labels" : [ "Extra", "opencv_bgsegm", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/bgsegm/src/bgfg_gmg.cpp",
+			"labels" : [ "Extra", "opencv_bgsegm", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/bgsegm/src/precomp.hpp",
+			"labels" : [ "Extra", "opencv_bgsegm", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/build/cvconfig.h"
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Extra", "opencv_bgsegm", "Module" ],
+		"name" : "opencv_bgsegm"
+	}
+}

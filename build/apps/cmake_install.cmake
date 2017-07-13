@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/apps
+# Install script for directory: C:/Users/artin/Desktop/opencv-3.2.0/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/artin/Desktop/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,12 +29,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/apps/traincascade/cmake_install.cmake")
-  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/apps/createsamples/cmake_install.cmake")
-  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/apps/annotation/cmake_install.cmake")
-  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/apps/visualisation/cmake_install.cmake")
-  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/apps/interactive-calibration/cmake_install.cmake")
-  include("C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/apps/version/cmake_install.cmake")
+  include("C:/Users/artin/Desktop/build/apps/traincascade/cmake_install.cmake")
+  include("C:/Users/artin/Desktop/build/apps/createsamples/cmake_install.cmake")
+  include("C:/Users/artin/Desktop/build/apps/annotation/cmake_install.cmake")
+  include("C:/Users/artin/Desktop/build/apps/visualisation/cmake_install.cmake")
+  include("C:/Users/artin/Desktop/build/apps/interactive-calibration/cmake_install.cmake")
+  include("C:/Users/artin/Desktop/build/apps/version/cmake_install.cmake")
 
 endif()
 

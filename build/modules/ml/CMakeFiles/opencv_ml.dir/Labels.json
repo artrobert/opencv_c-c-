@@ -4,106 +4,106 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/include/opencv2/ml.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include/opencv2/ml.hpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/include/opencv2/ml/ml.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/include/opencv2/ml/ml.hpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/ann_mlp.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/ann_mlp.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/boost.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/boost.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/data.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/data.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/em.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/em.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/gbt.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/gbt.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/inner_functions.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/inner_functions.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/kdtree.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/kdtree.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/knearest.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/knearest.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/lr.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/lr.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/nbayes.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/nbayes.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/rtrees.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/rtrees.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/svm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/svm.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/svmsgd.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/svmsgd.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/testset.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/testset.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/tree.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/tree.cpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/kdtree.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/kdtree.hpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ml/src/precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/ml/src/precomp.hpp",
 			"labels" : [ "Main", "opencv_ml", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/cvconfig.h"
+			"file" : "C:/Users/artin/Desktop/build/cvconfig.h"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/opencv2/opencv_modules.hpp"
+			"file" : "C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp"
 		}
 	],
 	"target" : 

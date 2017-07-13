@@ -4,162 +4,162 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/ocl/test_arithm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/ocl/test_arithm.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/ocl/test_channels.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/ocl/test_channels.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/ocl/test_dft.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/ocl/test_dft.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/ocl/test_gemm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/ocl/test_gemm.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/ocl/test_image2d.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/ocl/test_image2d.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/ocl/test_matrix_expr.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/ocl/test_matrix_expr.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/ocl/test_matrix_operation.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/ocl/test_matrix_operation.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_arithm.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_arithm.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_concatenation.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_concatenation.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_conjugate_gradient.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_conjugate_gradient.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_countnonzero.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_countnonzero.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_downhill_simplex.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_downhill_simplex.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_ds.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_ds.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_dxt.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_dxt.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_eigen.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_eigen.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_hal_core.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_hal_core.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_intrin.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_intrin.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_io.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_io.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_ippasync.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_ippasync.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_lpsolver.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_lpsolver.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_main.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_main.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_mat.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_mat.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_math.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_math.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_misc.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_misc.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_operations.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_operations.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_ptr.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_ptr.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_rand.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_rand.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_rotatedrect.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_rotatedrect.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_umat.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_umat.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_utils.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_utils.cpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_intrin_utils.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_intrin_utils.hpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/test/test_precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/test/test_precomp.hpp",
 			"labels" : [ "Main", "opencv_core", "AccuracyTest" ]
 		}
 	],

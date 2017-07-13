@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/cuda_perf.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/cuda_test.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/ocl_perf.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/ocl_test.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/ts.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/ts_arrtest.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/ts_func.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/ts_gtest.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.obj"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src/ts_perf.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/cuda_perf.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_perf.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/cuda_test.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/cuda_test.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/ocl_perf.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_perf.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/ocl_test.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ocl_test.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/ts.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/ts_arrtest.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_arrtest.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/ts_func.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_func.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/ts_gtest.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_gtest.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src/ts_perf.cpp" "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/src/ts_perf.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -24,23 +24,23 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/src"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/src"
   "modules/ts"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/CMakeFiles/opencv_highgui.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/CMakeFiles/opencv_videoio.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/CMakeFiles/opencv_core.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/highgui/CMakeFiles/opencv_highgui.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/videoio/CMakeFiles/opencv_videoio.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/core/CMakeFiles/opencv_core.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

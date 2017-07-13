@@ -4,41 +4,41 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include/opencv2/highgui.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include/opencv2/highgui.hpp",
 			"labels" : [ "Main", "opencv_highgui", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include/opencv2/highgui/highgui.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include/opencv2/highgui/highgui.hpp",
 			"labels" : [ "Main", "opencv_highgui", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include/opencv2/highgui/highgui_c.h",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include/opencv2/highgui/highgui_c.h",
 			"labels" : [ "Main", "opencv_highgui", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/src/window.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/src/window.cpp",
 			"labels" : [ "Main", "opencv_highgui", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/src/window_w32.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/src/window_w32.cpp",
 			"labels" : [ "Main", "opencv_highgui", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/src/precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/src/precomp.hpp",
 			"labels" : [ "Main", "opencv_highgui", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/cvconfig.h"
+			"file" : "C:/Users/artin/Desktop/build/cvconfig.h"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/opencv2/opencv_modules.hpp"
+			"file" : "C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp"
 		}
 	],
 	"target" : 

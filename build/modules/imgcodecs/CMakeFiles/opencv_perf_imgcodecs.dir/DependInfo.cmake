@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/perf/perf_main.cpp" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/perf/perf_main.cpp.obj"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/perf/perf_main.cpp" "C:/Users/artin/Desktop/build/modules/imgcodecs/CMakeFiles/opencv_perf_imgcodecs.dir/perf/perf_main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,37 +17,37 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjasper"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libjasper"
   "3rdparty/libtiff"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libtiff"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libpng"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libwebp"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/libjpeg"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libtiff"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libpng"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libwebp"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/libjpeg"
   "3rdparty/zlib"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/zlib"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/zlib"
   "."
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/Half"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/Iex"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/IlmThread"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/Imath"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/openexr/IlmImf"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/ts/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/highgui/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/perf"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/Half"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/Iex"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/IlmThread"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/Imath"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/openexr/IlmImf"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/ts/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/highgui/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/perf"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/ts/CMakeFiles/opencv_ts.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/highgui/CMakeFiles/opencv_highgui.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/videoio/CMakeFiles/opencv_videoio.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/DependInfo.cmake"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/CMakeFiles/opencv_core.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/ts/CMakeFiles/opencv_ts.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/highgui/CMakeFiles/opencv_highgui.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/videoio/CMakeFiles/opencv_videoio.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/imgcodecs/CMakeFiles/opencv_imgcodecs.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/imgproc/CMakeFiles/opencv_imgproc.dir/DependInfo.cmake"
+  "C:/Users/artin/Desktop/build/modules/core/CMakeFiles/opencv_core.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

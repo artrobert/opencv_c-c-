@@ -1,0 +1,39 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/plot/include/opencv2/plot.hpp",
+			"labels" : [ "Extra", "opencv_plot", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/plot/src/plot.cpp",
+			"labels" : [ "Extra", "opencv_plot", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/plot/src/precomp.cpp",
+			"labels" : [ "Extra", "opencv_plot", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/plot/src/precomp.hpp",
+			"labels" : [ "Extra", "opencv_plot", "Module" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/build/cvconfig.h"
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Extra", "opencv_plot", "Module" ],
+		"name" : "opencv_plot"
+	}
+}

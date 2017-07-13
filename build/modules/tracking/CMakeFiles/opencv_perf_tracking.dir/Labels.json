@@ -1,0 +1,26 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/tracking/perf/perf_Tracker.cpp",
+			"labels" : [ "Extra", "opencv_tracking", "PerfTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/tracking/perf/perf_main.cpp",
+			"labels" : [ "Extra", "opencv_tracking", "PerfTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/tracking/perf/perf_precomp.hpp",
+			"labels" : [ "Extra", "opencv_tracking", "PerfTest" ]
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Extra", "opencv_tracking", "PerfTest" ],
+		"name" : "opencv_perf_tracking"
+	}
+}

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/_mingw_dxhelper.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/_mingw_dxhelper.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/amvideo.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/amvideo.h
 rpc.h
 -
 rpcndr.h
@@ -18,23 +18,23 @@ objidl.h
 dshow/ddraw.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/audevcod.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/audevcod.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/bdatypes.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/bdatypes.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/control.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/control.h
 rpc.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/rpc.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/rpc.h
 rpcndr.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/rpcndr.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/rpcndr.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/ddraw.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/ddraw.h
 objbase.h
 -
 dshow/_mingw_dxhelper.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/dshow.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/dshow.h
 windows.h
 -
 windowsx.h
@@ -66,105 +66,105 @@ dshow/errors.h
 dshow/audevcod.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/dvdmedia.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/dvdmedia.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/errors.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/errors.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/evcode.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/evcode.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/ksuuids.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/ksuuids.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/strmif.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/strmif.h
 rpc.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/rpc.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/rpc.h
 rpcndr.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/rpcndr.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/rpcndr.h
 windows.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/windows.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/windows.h
 ole2.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/ole2.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/ole2.h
 unknwn.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/unknwn.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/unknwn.h
 objidl.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/objidl.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/objidl.h
 oaidl.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/oaidl.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/oaidl.h
 ocidl.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/ocidl.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/ocidl.h
 dshow/ddraw.h
 -
 dshow/ddraw.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/uuids.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/uuids.h
 dshow/ksuuids.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/dshow/dshow/ksuuids.h
+C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/dshow/dshow/ksuuids.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core.hpp
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/cvdef.h
 opencv2/core/version.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/version.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/version.hpp
 opencv2/core/base.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/base.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/base.hpp
 opencv2/core/cvstd.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/cvstd.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/cvstd.hpp
 opencv2/core/traits.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/traits.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/traits.hpp
 opencv2/core/matx.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/matx.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/matx.hpp
 opencv2/core/types.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/types.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/types.hpp
 opencv2/core/mat.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/mat.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/mat.hpp
 opencv2/core/persistence.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/persistence.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/persistence.hpp
 opencv2/opencv.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/opencv.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/opencv.hpp
 opencv2/xfeatures2d.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/xfeatures2d.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/xfeatures2d.hpp
 opencv2/core/operations.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/operations.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/operations.hpp
 opencv2/core/cvstd.inl.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/cvstd.inl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/cvstd.inl.hpp
 opencv2/core/utility.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/utility.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/utility.hpp
 opencv2/core/optim.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/optim.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/optim.hpp
 opencv2/core/ovx.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/opencv2/core/ovx.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/opencv2/core/ovx.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/base.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/base.hpp
 opencv2/opencv_modules.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/opencv_modules.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/opencv_modules.hpp
 climits
 -
 algorithm
 -
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 opencv2/core/cvstd.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvstd.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvstd.hpp
 opencv2/core/neon_utils.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/neon_utils.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/neon_utils.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/bufferpool.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/bufferpool.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/core_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/core_c.h
 opencv2/core/types_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/types_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/types_c.h
 cxcore.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/cxcore.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/cxcore.h
 cxcore.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/cxcore.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/cxcore.h
 opencv2/core/utility.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/utility.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/utility.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/cvdef.h
 limits.h
 -
 opencv2/core/hal/interface.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/hal/interface.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/hal/interface.h
 emmintrin.h
 -
 pmmintrin.h
@@ -192,9 +192,9 @@ arm_neon.h
 intrin.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/cvstd.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/cvstd.hpp
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 cstddef
 -
 cstring
@@ -212,21 +212,21 @@ cstdlib
 cmath
 -
 opencv2/core/ptr.inl.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/ptr.inl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/ptr.inl.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/cvstd.inl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/cvstd.inl.hpp
 complex
 -
 ostream
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/eigen.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/eigen.hpp
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/fast_math.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/fast_math.hpp
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 fastmath.h
 -
 cmath
@@ -234,9 +234,9 @@ cmath
 math.h
 -
 tegra_round.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/tegra_round.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/tegra_round.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/hal/interface.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/hal/interface.h
 cstddef
 -
 stddef.h
@@ -248,87 +248,87 @@ cstdint
 stdint.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/mat.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/mat.hpp
 opencv2/core/matx.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/matx.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/matx.hpp
 opencv2/core/types.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/types.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/types.hpp
 opencv2/core/bufferpool.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/bufferpool.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/bufferpool.hpp
 opencv2/core/mat.inl.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/mat.inl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/mat.inl.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/mat.inl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/mat.inl.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/matx.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/matx.hpp
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 opencv2/core/base.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/base.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/base.hpp
 opencv2/core/traits.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/traits.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/traits.hpp
 opencv2/core/saturate.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/saturate.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/saturate.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/neon_utils.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/neon_utils.hpp
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/operations.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/operations.hpp
 cstdio
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/optim.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/optim.hpp
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/ovx.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/ovx.hpp
 cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/cvdef.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/persistence.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/persistence.hpp
 opencv2/core/types.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/types.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/types.hpp
 opencv2/core/mat.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/mat.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/mat.hpp
 opencv2/opencv.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/opencv.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/opencv.hpp
 time.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/private.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/private.hpp
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core.hpp
 cvconfig.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/cvconfig.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/cvconfig.h
 Eigen/Core
 -
 opencv2/core/eigen.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/eigen.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/eigen.hpp
 tbb/tbb.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/tbb/tbb.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/tbb/tbb.h
 tbb/task.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/tbb/task.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/tbb/task.h
 immintrin.h
 -
 ipp.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/ipp.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/ipp.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/ptr.inl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/ptr.inl.hpp
 algorithm
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/saturate.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/saturate.hpp
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 opencv2/core/fast_math.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/fast_math.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/fast_math.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/traits.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/traits.hpp
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/types.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/types.hpp
 climits
 -
 cfloat
@@ -338,19 +338,19 @@ vector
 limits
 -
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 opencv2/core/cvstd.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvstd.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvstd.hpp
 opencv2/core/matx.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/matx.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/matx.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/types_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/types_c.h
 ipl.h
 -
 ipl/ipl.h
 -
 opencv2/core/cvdef.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/cvdef.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/cvdef.h
 assert.h
 -
 stdlib.h
@@ -360,29 +360,29 @@ string.h
 float.h
 -
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/utility.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/utility.hpp
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core.hpp
 opencv2/core/core_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/opencv2/core/core_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/opencv2/core/core_c.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include/opencv2/core/version.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include/opencv2/core/version.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include/opencv2/imgcodecs.hpp
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include/opencv2/opencv2/core.hpp
 opencv2/opencv.hpp
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs_c.h
 opencv2/core/core_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/include/opencv2/imgcodecs/opencv2/core/core_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/include/opencv2/imgcodecs/opencv2/core/core_c.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/imgproc.hpp
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/opencv2/core.hpp
 opencv2/core.hpp
 -
 opencv2/imgproc.hpp
@@ -408,51 +408,51 @@ opencv2/imgproc.hpp
 opencv2/highgui.hpp
 -
 opencv2/imgproc.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/opencv2/imgproc.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/opencv2/imgproc.hpp
 opencv2/highgui.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/opencv2/highgui.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/opencv2/highgui.hpp
 opencv2/imgproc/imgproc_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/opencv2/imgproc/imgproc_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/opencv2/imgproc/imgproc_c.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/imgproc/imgproc_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/imgproc/imgproc_c.h
 opencv2/imgproc/types_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/imgproc/opencv2/imgproc/types_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/imgproc/opencv2/imgproc/types_c.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/imgproc/types_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/imgproc/types_c.h
 opencv2/core/core_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include/opencv2/imgproc/opencv2/core/core_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include/opencv2/imgproc/opencv2/core/core_c.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include/opencv2/videoio.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include/opencv2/videoio.hpp
 opencv2/core.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include/opencv2/opencv2/core.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include/opencv2/opencv2/core.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include/opencv2/videoio/videoio_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include/opencv2/videoio/videoio_c.h
 opencv2/core/core_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/include/opencv2/videoio/opencv2/core/core_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/include/opencv2/videoio/opencv2/core/core_c.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 cap_intelperc.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_intelperc.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_intelperc.hpp
 cap_dshow.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_dshow.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_dshow.hpp
 cap_winrt_capture.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_winrt_capture.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_winrt_capture.hpp
 cap_winrt_bridge.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_winrt_bridge.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_winrt_bridge.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_cmu.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_cmu.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 1394camera.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/1394camera.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/1394camera.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_dshow.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_dshow.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 cap_dshow.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_dshow.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_dshow.hpp
 tchar.h
 -
 stdlib.h
@@ -468,21 +468,21 @@ wchar.h
 vector
 -
 DShow.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/DShow.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/DShow.h
 strmif.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/strmif.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/strmif.h
 Aviriff.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/Aviriff.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/Aviriff.h
 dvdmedia.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/dvdmedia.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/dvdmedia.h
 bdaiface.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/bdaiface.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/bdaiface.h
 dshow/dshow.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/dshow/dshow.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/dshow/dshow.h
 dshow/dvdmedia.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/dshow/dvdmedia.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/dshow/dvdmedia.h
 dshow/bdatypes.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/dshow/bdatypes.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/dshow/bdatypes.h
 process.h
 -
 initguid.h
@@ -490,25 +490,25 @@ initguid.h
 strsafe.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_dshow.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_dshow.hpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_ffmpeg.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_ffmpeg.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 string
 -
 cap_ffmpeg_impl.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_ffmpeg_impl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_ffmpeg_impl.hpp
 cap_ffmpeg_api.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_ffmpeg_api.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_ffmpeg_api.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_ffmpeg_api.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_ffmpeg_api.hpp
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_ffmpeg_impl.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_ffmpeg_impl.hpp
 cap_ffmpeg_api.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_ffmpeg_api.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_ffmpeg_api.hpp
 pthread.h
 -
 assert.h
@@ -518,7 +518,7 @@ algorithm
 limits
 -
 ffmpeg_codecs.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/ffmpeg_codecs.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/ffmpeg_codecs.hpp
 libavutil/mathematics.h
 -
 libavutil/opt.h
@@ -548,45 +548,45 @@ mach/mach.h
 libkern/OSAtomic.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_images.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_images.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 sys/stat.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_intelperc.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_intelperc.hpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 pxcsession.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/pxcsession.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/pxcsession.h
 pxcsmartptr.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/pxcsmartptr.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/pxcsmartptr.h
 pxccapture.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/pxccapture.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/pxccapture.h
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_mjpeg_decoder.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_mjpeg_decoder.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 deque
 -
 stdint.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_mjpeg_encoder.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_mjpeg_encoder.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 vector
 -
 deque
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_vfw.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_vfw.cpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 vfw.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_winrt_bridge.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_winrt_bridge.hpp
 ppl.h
 -
 ppltasks.h
@@ -606,9 +606,9 @@ atomic
 functional
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/cap_winrt_capture.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/cap_winrt_capture.hpp
 precomp.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 mutex
 -
 memory
@@ -620,7 +620,7 @@ atomic
 agile.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/ffmpeg_codecs.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/ffmpeg_codecs.hpp
 stdint.h
 -
 errno.h
@@ -628,23 +628,23 @@ errno.h
 libavformat/avformat.h
 -
 
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/precomp.hpp
 opencv2/videoio.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/videoio.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/videoio.hpp
 opencv2/core/utility.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/core/utility.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/core/utility.hpp
 opencv2/core/private.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/core/private.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/core/private.hpp
 opencv2/imgcodecs.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/imgcodecs.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/imgcodecs.hpp
 opencv2/imgproc.hpp
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/imgproc.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/imgproc.hpp
 opencv2/imgproc/imgproc_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/imgproc/imgproc_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/imgproc/imgproc_c.h
 opencv2/imgcodecs/imgcodecs_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/imgcodecs/imgcodecs_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/imgcodecs/imgcodecs_c.h
 opencv2/videoio/videoio_c.h
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/src/opencv2/videoio/videoio_c.h
+C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/src/opencv2/videoio/videoio_c.h
 stdlib.h
 -
 stdio.h

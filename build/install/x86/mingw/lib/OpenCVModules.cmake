@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_video opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_objdetect opencv_superres opencv_features2d opencv_calib3d opencv_stitching opencv_videostab)
+foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_reg opencv_surface_matching opencv_video opencv_dnn opencv_fuzzy opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_objdetect opencv_plot opencv_superres opencv_xobjdetect opencv_xphoto opencv_bgsegm opencv_bioinspired opencv_dpm opencv_face opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_rgbd opencv_stereo opencv_tracking opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_aruco opencv_optflow opencv_phase_unwrapping opencv_stitching opencv_structured_light)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -65,8 +65,20 @@ add_library(opencv_ml SHARED IMPORTED)
 # Create imported target opencv_photo
 add_library(opencv_photo SHARED IMPORTED)
 
+# Create imported target opencv_reg
+add_library(opencv_reg SHARED IMPORTED)
+
+# Create imported target opencv_surface_matching
+add_library(opencv_surface_matching SHARED IMPORTED)
+
 # Create imported target opencv_video
 add_library(opencv_video SHARED IMPORTED)
+
+# Create imported target opencv_dnn
+add_library(opencv_dnn SHARED IMPORTED)
+
+# Create imported target opencv_fuzzy
+add_library(opencv_fuzzy SHARED IMPORTED)
 
 # Create imported target opencv_imgcodecs
 add_library(opencv_imgcodecs SHARED IMPORTED)
@@ -83,20 +95,83 @@ add_library(opencv_highgui SHARED IMPORTED)
 # Create imported target opencv_objdetect
 add_library(opencv_objdetect SHARED IMPORTED)
 
+# Create imported target opencv_plot
+add_library(opencv_plot SHARED IMPORTED)
+
 # Create imported target opencv_superres
 add_library(opencv_superres SHARED IMPORTED)
+
+# Create imported target opencv_xobjdetect
+add_library(opencv_xobjdetect SHARED IMPORTED)
+
+# Create imported target opencv_xphoto
+add_library(opencv_xphoto SHARED IMPORTED)
+
+# Create imported target opencv_bgsegm
+add_library(opencv_bgsegm SHARED IMPORTED)
+
+# Create imported target opencv_bioinspired
+add_library(opencv_bioinspired SHARED IMPORTED)
+
+# Create imported target opencv_dpm
+add_library(opencv_dpm SHARED IMPORTED)
+
+# Create imported target opencv_face
+add_library(opencv_face SHARED IMPORTED)
 
 # Create imported target opencv_features2d
 add_library(opencv_features2d SHARED IMPORTED)
 
+# Create imported target opencv_line_descriptor
+add_library(opencv_line_descriptor SHARED IMPORTED)
+
+# Create imported target opencv_saliency
+add_library(opencv_saliency SHARED IMPORTED)
+
+# Create imported target opencv_text
+add_library(opencv_text SHARED IMPORTED)
+
 # Create imported target opencv_calib3d
 add_library(opencv_calib3d SHARED IMPORTED)
+
+# Create imported target opencv_ccalib
+add_library(opencv_ccalib SHARED IMPORTED)
+
+# Create imported target opencv_datasets
+add_library(opencv_datasets SHARED IMPORTED)
+
+# Create imported target opencv_rgbd
+add_library(opencv_rgbd SHARED IMPORTED)
+
+# Create imported target opencv_stereo
+add_library(opencv_stereo SHARED IMPORTED)
+
+# Create imported target opencv_tracking
+add_library(opencv_tracking SHARED IMPORTED)
+
+# Create imported target opencv_videostab
+add_library(opencv_videostab SHARED IMPORTED)
+
+# Create imported target opencv_xfeatures2d
+add_library(opencv_xfeatures2d SHARED IMPORTED)
+
+# Create imported target opencv_ximgproc
+add_library(opencv_ximgproc SHARED IMPORTED)
+
+# Create imported target opencv_aruco
+add_library(opencv_aruco SHARED IMPORTED)
+
+# Create imported target opencv_optflow
+add_library(opencv_optflow SHARED IMPORTED)
+
+# Create imported target opencv_phase_unwrapping
+add_library(opencv_phase_unwrapping SHARED IMPORTED)
 
 # Create imported target opencv_stitching
 add_library(opencv_stitching SHARED IMPORTED)
 
-# Create imported target opencv_videostab
-add_library(opencv_videostab SHARED IMPORTED)
+# Create imported target opencv_structured_light
+add_library(opencv_structured_light SHARED IMPORTED)
 
 # Load information for each installed configuration.
 get_filename_component(_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)

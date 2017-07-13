@@ -3,15 +3,15 @@
  opencv_superres
  AccuracyTest
 # Source files and their labels
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/test/test_main.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/superres/test/test_main.cpp
  Main
  opencv_superres
  AccuracyTest
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/test/test_superres.cpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/superres/test/test_superres.cpp
  Main
  opencv_superres
  AccuracyTest
-C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/superres/test/test_precomp.hpp
+C:/Users/artin/Desktop/opencv-3.2.0/modules/superres/test/test_precomp.hpp
  Main
  opencv_superres
  AccuracyTest

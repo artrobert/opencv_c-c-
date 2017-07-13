@@ -1,0 +1,39 @@
+# Target labels
+ Extra
+ opencv_aruco
+ Module
+# Source files and their labels
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/include/opencv2/aruco.hpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/include/opencv2/aruco/charuco.hpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/include/opencv2/aruco/dictionary.hpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/src/aruco.cpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/src/charuco.cpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/src/dictionary.cpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/src/precomp.hpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/aruco/src/predefined_dictionaries.hpp
+ Extra
+ opencv_aruco
+ Module
+C:/Users/artin/Desktop/build/cvconfig.h
+C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp

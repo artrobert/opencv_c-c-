@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgproc/opencv_imgproc_pch_dephelp.cxx" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/imgproc/CMakeFiles/opencv_imgproc_pch_dephelp.dir/opencv_imgproc_pch_dephelp.cxx.obj"
+  "C:/Users/artin/Desktop/build/modules/imgproc/opencv_imgproc_pch_dephelp.cxx" "C:/Users/artin/Desktop/build/modules/imgproc/CMakeFiles/opencv_imgproc_pch_dephelp.dir/opencv_imgproc_pch_dephelp.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,10 +16,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgproc/src"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgproc/src"
   "modules/imgproc"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"
   )
 
 # Targets to which this target links.

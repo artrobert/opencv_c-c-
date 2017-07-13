@@ -1,0 +1,35 @@
+# Target labels
+ Extra
+ opencv_fuzzy
+ Module
+# Source files and their labels
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/fuzzy/include/opencv2/fuzzy.hpp
+ Extra
+ opencv_fuzzy
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F0_math.hpp
+ Extra
+ opencv_fuzzy
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/fuzzy/include/opencv2/fuzzy/fuzzy_image.hpp
+ Extra
+ opencv_fuzzy
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/fuzzy/include/opencv2/fuzzy/types.hpp
+ Extra
+ opencv_fuzzy
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/fuzzy/src/fuzzy_F0_math.cpp
+ Extra
+ opencv_fuzzy
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/fuzzy/src/fuzzy_image.cpp
+ Extra
+ opencv_fuzzy
+ Module
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/fuzzy/src/precomp.hpp
+ Extra
+ opencv_fuzzy
+ Module
+C:/Users/artin/Desktop/build/cvconfig.h
+C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp

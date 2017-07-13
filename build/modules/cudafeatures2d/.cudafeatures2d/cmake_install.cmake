@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/cudafeatures2d
+# Install script for directory: C:/Users/artin/Desktop/opencv-3.2.0/modules/cudafeatures2d
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/artin/Desktop/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

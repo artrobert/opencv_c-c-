@@ -4,27 +4,27 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/test/ocl/test_warpers.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/test/ocl/test_warpers.cpp",
 			"labels" : [ "Main", "opencv_stitching", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/test/test_blenders.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/test/test_blenders.cpp",
 			"labels" : [ "Main", "opencv_stitching", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/test/test_main.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/test/test_main.cpp",
 			"labels" : [ "Main", "opencv_stitching", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/test/test_matchers.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/test/test_matchers.cpp",
 			"labels" : [ "Main", "opencv_stitching", "AccuracyTest" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/test/test_precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/test/test_precomp.hpp",
 			"labels" : [ "Main", "opencv_stitching", "AccuracyTest" ]
 		}
 	],

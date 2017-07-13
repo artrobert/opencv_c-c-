@@ -1,0 +1,26 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/face/test/test_bif.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/face/test/test_main.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/face/test/test_precomp.hpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Extra", "opencv_face", "AccuracyTest" ],
+		"name" : "opencv_test_face"
+	}
+}

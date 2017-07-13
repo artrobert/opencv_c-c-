@@ -1,0 +1,33 @@
+file(REMOVE_RECURSE
+  "opencl_kernels_xfeatures2d.cpp"
+  "opencl_kernels_xfeatures2d.hpp"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/boostdesc.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/brief.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/daisy.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/freak.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/latch.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/lucid.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/msd.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/pct_signatures.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/pct_signatures/grayscale_bitmap.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/pct_signatures/pct_clusterizer.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/pct_signatures/pct_sampler.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/pct_signatures_sqfd.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/sift.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/stardetector.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/surf.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/surf.cuda.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/surf.ocl.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/vgg.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/src/xfeatures2d_init.cpp.obj"
+  "CMakeFiles/opencv_xfeatures2d.dir/opencl_kernels_xfeatures2d.cpp.obj"
+  "../../bin/libopencv_xfeatures2d320.pdb"
+  "../../bin/libopencv_xfeatures2d320.dll"
+  "../../lib/libopencv_xfeatures2d320.dll.a"
+  "../../bin/libopencv_xfeatures2d320.dll.manifest"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/opencv_xfeatures2d.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

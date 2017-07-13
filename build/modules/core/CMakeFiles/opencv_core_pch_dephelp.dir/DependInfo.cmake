@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/opencv_core_pch_dephelp.cxx" "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/core/CMakeFiles/opencv_core_pch_dephelp.dir/opencv_core_pch_dephelp.cxx.obj"
+  "C:/Users/artin/Desktop/build/modules/core/opencv_core_pch_dephelp.cxx" "C:/Users/artin/Desktop/build/modules/core/CMakeFiles/opencv_core_pch_dephelp.dir/opencv_core_pch_dephelp.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,12 +16,12 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/include"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/core/src"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/include"
+  "C:/Users/artin/Desktop/opencv-3.2.0/modules/core/src"
   "modules/core"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/zlib"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/zlib"
   "3rdparty/zlib"
-  "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/3rdparty/include/opencl/1.2"
+  "C:/Users/artin/Desktop/opencv-3.2.0/3rdparty/include/opencl/1.2"
   )
 
 # Targets to which this target links.

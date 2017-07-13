@@ -4,175 +4,175 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/warpers.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/warpers.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/autocalib.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/autocalib.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/blenders.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/blenders.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/camera.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/camera.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/matchers.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/matchers.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/motion_estimators.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/motion_estimators.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/seam_finders.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/seam_finders.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/timelapsers.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/timelapsers.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/util.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/util.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/util_inl.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/util_inl.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/warpers.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/warpers.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/include/opencv2/stitching/detail/warpers_inl.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/include/opencv2/stitching/detail/warpers_inl.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/autocalib.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/autocalib.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/blenders.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/blenders.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/camera.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/camera.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/exposure_compensate.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/exposure_compensate.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/matchers.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/matchers.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/motion_estimators.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/motion_estimators.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/seam_finders.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/seam_finders.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/stitcher.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/stitcher.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/timelapsers.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/timelapsers.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/util.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/util.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/warpers.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/warpers.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/warpers_cuda.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/warpers_cuda.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/opencl/multibandblend.cl",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/opencl/multibandblend.cl",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/opencl/warpers.cl",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/opencl/warpers.cl",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/opencl_kernels_stitching.cpp",
+			"file" : "C:/Users/artin/Desktop/build/modules/stitching/opencl_kernels_stitching.cpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/opencl_kernels_stitching.hpp",
+			"file" : "C:/Users/artin/Desktop/build/modules/stitching/opencl_kernels_stitching.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/precomp.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/stitching/src/util_log.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/stitching/src/util_log.hpp",
 			"labels" : [ "Main", "opencv_stitching", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/cvconfig.h"
+			"file" : "C:/Users/artin/Desktop/build/cvconfig.h"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/opencv2/opencv_modules.hpp"
+			"file" : "C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/stitching/opencl_kernels_stitching.cpp.rule"
+			"file" : "C:/Users/artin/Desktop/build/modules/stitching/opencl_kernels_stitching.cpp.rule"
 		}
 	],
 	"target" : 

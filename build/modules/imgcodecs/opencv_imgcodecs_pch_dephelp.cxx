@@ -1,4 +1,4 @@
-#include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/imgcodecs/src/precomp.hpp"
+#include "C:/Users/artin/Desktop/opencv-3.2.0/modules/imgcodecs/src/precomp.hpp"
 int testfunction();
 int testfunction()
 {

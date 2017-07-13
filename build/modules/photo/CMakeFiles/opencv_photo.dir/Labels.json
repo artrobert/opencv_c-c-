@@ -4,165 +4,165 @@
 	[
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/include/opencv2/photo.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/include/opencv2/photo.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/include/opencv2/photo/cuda.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/include/opencv2/photo/cuda.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/include/opencv2/photo/photo.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/include/opencv2/photo/photo.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/include/opencv2/photo/photo_c.h",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/include/opencv2/photo/photo_c.h",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/align.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/align.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/calibrate.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/calibrate.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/contrast_preserve.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/contrast_preserve.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/denoise_tvl1.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/denoise_tvl1.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/denoising.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/denoising.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/denoising.cuda.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/denoising.cuda.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/hdr_common.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/hdr_common.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/inpaint.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/inpaint.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/merge.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/merge.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/npr.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/npr.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/seamless_cloning.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/seamless_cloning.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/seamless_cloning_impl.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/seamless_cloning_impl.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/tonemap.cpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/tonemap.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/opencl/nlmeans.cl",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/opencl/nlmeans.cl",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/opencl_kernels_photo.cpp",
+			"file" : "C:/Users/artin/Desktop/build/modules/photo/opencl_kernels_photo.cpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/opencl_kernels_photo.hpp",
+			"file" : "C:/Users/artin/Desktop/build/modules/photo/opencl_kernels_photo.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/arrays.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/arrays.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/contrast_preserve.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/contrast_preserve.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/fast_nlmeans_denoising_invoker.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/fast_nlmeans_denoising_invoker.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/fast_nlmeans_denoising_opencl.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/fast_nlmeans_denoising_opencl.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/hdr_common.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/hdr_common.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/npr.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/npr.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/precomp.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/precomp.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/photo/src/seamless_cloning.hpp",
+			"file" : "C:/Users/artin/Desktop/opencv-3.2.0/modules/photo/src/seamless_cloning.hpp",
 			"labels" : [ "Main", "opencv_photo", "Module" ]
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/cvconfig.h"
+			"file" : "C:/Users/artin/Desktop/build/cvconfig.h"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/opencv2/opencv_modules.hpp"
+			"file" : "C:/Users/artin/Desktop/build/opencv2/opencv_modules.hpp"
 		},
 		
 		{
-			"file" : "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/build/modules/photo/opencl_kernels_photo.cpp.rule"
+			"file" : "C:/Users/artin/Desktop/build/modules/photo/opencl_kernels_photo.cpp.rule"
 		}
 	],
 	"target" : 

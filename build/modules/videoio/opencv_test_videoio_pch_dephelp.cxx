@@ -1,4 +1,4 @@
-#include "C:/Users/rartin/Downloads/opencv-3.2.0-vc14/opencv/sources/modules/videoio/test/test_precomp.hpp"
+#include "C:/Users/artin/Desktop/opencv-3.2.0/modules/videoio/test/test_precomp.hpp"
 int testfunction();
 int testfunction()
 {

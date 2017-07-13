@@ -1,0 +1,33 @@
+# Target labels
+ Extra
+ opencv_rgbd
+ AccuracyTest
+# Source files and their labels
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/rgbd/test/test_main.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/rgbd/test/test_normal.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/rgbd/test/test_odometry.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/rgbd/test/test_precomp.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/rgbd/test/test_registration.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/rgbd/test/test_utils.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+C:/Users/artin/Desktop/opencv_contrib-3.2.0/modules/rgbd/test/test_precomp.hpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
