@@ -7,8 +7,19 @@
 #include <map>
 #include <iostream>
 #include "EdgeProcessing.h"
+#include "../models/patch.h"
 
 using namespace cv;
+
+/**
+ * This function is used in the sort() call so we can sort ASCENDING the vector containing the lines after the Y of the first point
+ * @param v1 The first line
+ * @param v2 The second line
+ * @return returns if the Y of the first point is smaller than the second lines first point Y
+ */
+bool compYDesc(Vec4i v1, Vec4i v2) {
+    return v1.val[1] >= v2.val[1];
+}
 
 /**
  * This function is used in the sort() call so we can sort ASCENDING the vector containing the lines after the X of the first point
@@ -16,8 +27,8 @@ using namespace cv;
  * @param v2 The second line
  * @return returns if the X of the first point is smaller than the second lines first point X
  */
-bool compYDesc(Vec4i v1, Vec4i v2) {
-    return v1.val[1] >= v2.val[1];
+bool compXDesc(Vec4i v1, Vec4i v2) {
+    return v1.val[0] >= v2.val[0];
 }
 
 /**
@@ -69,7 +80,7 @@ Point2f getIntersection(Vec4i &line1, Vec4i &line2) {
  * @param cannyMat The BINARY Mat containing the edges after a canny(preferably) was applied
  * @param resultLines Vector containing extracted lines
  */
-void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
+int houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
 
     vector<Vec2f> houghResultLines;
 
@@ -88,6 +99,8 @@ void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
         Vec4i v = Vec4i(pt1.x, pt1.y, pt2.x, pt2.y);
         resultLines.push_back(v);
     }
+
+    return resultLines.size();
 }
 
 /**
@@ -97,7 +110,7 @@ void houghSimpleLines(cv::Mat &cannyMat, vector<Vec4i> &resultLines) {
  * @param angle The angle used to separate the lines.
  * @param chessTableEdges Object that will contain the edges
  */
-void separateLinesByAngle(vector<Vec4i> &lines, int angle, ChessTableEdges &chessTableEdges) {
+void separateLinesByAngle(vector<Vec4i> &lines, ChessTableEdges &chessTableEdges) {
     vector<int> values;
     set<int> uniqueValues;
 
@@ -111,9 +124,10 @@ void separateLinesByAngle(vector<Vec4i> &lines, int angle, ChessTableEdges &ches
         p1 = Point(l[0], l[1]);
         p2 = Point(l[2], l[3]);
 
-        int angleMade = (int) atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
-        values.push_back(angleMade);
-        uniqueValues.insert(angleMade);
+        double angleMade = atan2((double) (p1.y - p2.y), (double) (p1.x - p2.x));
+//        cout << "\nRadians:" << angleMade;
+        values.push_back((int) angleMade);
+        uniqueValues.insert((int) angleMade);
     }
 
     std::map<int, int, std::greater<int>> m1; // map in decreasing order
@@ -192,7 +206,6 @@ void filterLinesByIntersection(ChessTableEdges &chessTableEdges) {
             if (i != j) {
                 Vec4i l2 = horizontalLines->at(j);
                 Point2f intersectionPoint = getIntersection(l1, l2);
-                cout << "\nIntersection:" << i << " " << j << " " << intersectionPoint.x << " " << intersectionPoint.y;
                 if (intersectionPoint.x >= 0 || intersectionPoint.y >= 0) {
                     horizontalLines->erase(horizontalLines->begin() + j);
                     j--;
@@ -208,10 +221,10 @@ void filterLinesByIntersection(ChessTableEdges &chessTableEdges) {
  * @param chessTableEdges The object containing the chess table edges
  * @param cdst Matrix for debug
  */
-void findMarginLines(ChessTableEdges &chessTableEdges, Mat &cdst) {
+bool findMarginLines(ChessTableEdges &chessTableEdges, Mat &cdst) {
 
     // These will hold the margin edges of the chess table
-    Vec4i *verticalRight = NULL, *verticalLeft = NULL, *horizontalLow = NULL, *horizontalHigh = NULL;
+    Vec4i *verticalRight = nullptr, *verticalLeft = nullptr, *horizontalLow = nullptr, *horizontalHigh = nullptr;
     verticalLeft = &chessTableEdges.verticalPositiveAngleLines[0];
     verticalRight = &chessTableEdges.verticalPositiveAngleLines[0];
     horizontalLow = &chessTableEdges.horizontalNegativeAngleLines[0];
@@ -229,9 +242,6 @@ void findMarginLines(ChessTableEdges &chessTableEdges, Mat &cdst) {
 //        line(cdst, Point(l->val[0], l->val[1]), Point(l->val[2], l->val[3]), Scalar(0, 0, 255), 3, CV_AA);
     }
 
-//    line(cdst, Point(verticalRight->val[0], verticalRight->val[1]), Point(verticalRight->val[2], verticalRight->val[3]), Scalar(0, 255, 0), 3, CV_AA);
-//    line(cdst, Point(verticalLeft->val[0], verticalLeft->val[1]), Point(verticalLeft->val[2], verticalLeft->val[3]), Scalar(0, 255, 0), 3, CV_AA);
-
     chessTableEdges.verticalRight = verticalRight;
     chessTableEdges.verticalLeft = verticalLeft;
 
@@ -248,11 +258,13 @@ void findMarginLines(ChessTableEdges &chessTableEdges, Mat &cdst) {
 //        line(cdst, Point(l->val[0], l->val[1]), Point(l->val[2], l->val[3]), Scalar(255, 0, 0), 3, CV_AA);
     }
 
-//    line(cdst, Point(horizontalHigh->val[0], horizontalHigh->val[1]), Point(horizontalHigh->val[2], horizontalHigh->val[3]), Scalar(0, 255, 0), 3, CV_AA);
-//    line(cdst, Point(horizontalLow->val[0], horizontalLow->val[1]), Point(horizontalLow->val[2], horizontalLow->val[3]), Scalar(0, 255, 0), 3, CV_AA);
-
     chessTableEdges.horizontalHigh = horizontalHigh;
     chessTableEdges.horizontalLow = horizontalLow;
+
+    return chessTableEdges.horizontalHigh != nullptr
+           && chessTableEdges.horizontalLow != nullptr
+           && chessTableEdges.verticalLeft != nullptr
+           && chessTableEdges.verticalRight != nullptr;
 }
 
 /**
@@ -292,11 +304,6 @@ void shortenEdges(ChessTableEdges &chessTableEdges) {
  * @param cdst Matrix to display (FOR DEBUG)
  */
 void findTableCornerPoints(ChessTableEdges &chessTableEdges, vector<Point> &cornerPoints, Mat &cdst) {
-
-    if (chessTableEdges.verticalLeft == NULL || chessTableEdges.verticalRight == NULL ||
-        chessTableEdges.horizontalHigh == NULL || chessTableEdges.horizontalLow == NULL) {
-        return;
-    }
 
     cornerPoints.push_back(
             getIntersection(*chessTableEdges.verticalLeft, *chessTableEdges.horizontalLow)); //left point
@@ -468,6 +475,10 @@ void determineSquareColors(cv::Mat &src, ChessSquareMatrix &squareMatrix, size_t
     cv::Mat binaryExtractedChessSquare;
     ChessSquare *currentSquare = addressof(squareMatrix.getSquare(squareRow, squareCol));
 
+    if (currentSquare == nullptr) {
+        return;
+    }
+
     Point rook_points[4];
     rook_points[0] = currentSquare->topLeft;
     rook_points[1] = currentSquare->bottomLeft;
@@ -558,13 +569,10 @@ void extractSquare(Point corners[4], cv::Mat &src, cv::Mat &extractedSquare) {
     src.copyTo(extractedSquare, maskRoi);
 }
 
-void putPiecesOnBoard(ChessSquareMatrix &squareMatrix) {
-    squareMatrix.initBasicModel();
-}
-
 void filterByDistance(vector<Vec4i> &edges, Mat forDebug) {
-    bool itHasBeenChange=true;
-    while(itHasBeenChange) {
+    bool itHasBeenChange = true;
+
+    while (itHasBeenChange) {
         itHasBeenChange = false;
         if (edges.size() > 9) {
             vector<Vec4i> newEdges;
@@ -574,8 +582,6 @@ void filterByDistance(vector<Vec4i> &edges, Mat forDebug) {
             double averageDistance = 0;
             double biggestDistance = 0;
             double acceptedError = 0;
-
-            bool lastLineIsUseless = false;
 
             int lineSize = edges.size() - 1;
 
@@ -607,23 +613,10 @@ void filterByDistance(vector<Vec4i> &edges, Mat forDebug) {
 
                 averageDistance += distance;
             }
+
             averageDistance /= edges.size();
             acceptedError = biggestDistance - averageDistance;
             printf("\n Average:%lf Accepted error: %lf", averageDistance, acceptedError);
-
-//        double newAverage;
-//        double howManyEliminated = 0;
-//        for (int j = 0; j < allDistances.size(); ++j) {
-//            if (!allDistances[j] < acceptedError) {
-//                newAverage += allDistances[j];
-//            } else {
-//                howManyEliminated++;
-//            }
-//        }
-//
-//        newAverage /= (allDistances.size() - howManyEliminated);
-//        acceptedError = biggestDistance - newAverage;
-
 
             for (int i = 0; i < edges.size(); i++) {
                 Point2i point11 = Point(edges[i][0], edges[i][1]);
@@ -636,7 +629,6 @@ void filterByDistance(vector<Vec4i> &edges, Mat forDebug) {
 
                 Point2i middle2 = Point((point21.x + point22.x) / 2, (point21.y + point22.y) / 2);
 
-
                 double distanceBetweenFirstAndSecond = sqrt(
                         pow(double(middle2.x - middle1.x), 2.0) + pow(double(middle2.y - middle1.y), 2.0));
 
@@ -648,44 +640,32 @@ void filterByDistance(vector<Vec4i> &edges, Mat forDebug) {
                     newLine[3] = (edges[i][3] + edges[i + 1][3]) / 2;
                     newEdges.push_back(newLine);
                     edges.erase(edges.begin() + i);
-                    itHasBeenChange=true;
-
-
-//                if (i + 2 <= lineSize) {
-//                    Point2i point31 = Point(edges[i + 2][0], edges[i + 2][1]);
-//                    Point2i point32 = Point(edges[i + 2][2], edges[i + 2][3]);
-//
-//                    Point2i middle3 = Point((point31.x + point32.x) / 2, (point31.y + point32.y) / 2);
-//
-//
-//                    double distanceBetweenFirstAndThird = sqrt(
-//                            pow(double(middle3.x - middle1.x), 2.0) + pow(double(middle3.y - middle2.x), 2.0));
-//
-//                    if (!distanceBetweenFirstAndThird > averageDistance) {
-//                        edges.erase(edges.begin() + (i + 1));
-////                         This line is not good, remove it
-//                        newEdges.push_back(edges[i]);
-//                    } else {
-//                        // do nothing because this line is useless
-//                    }
-//                } else {
-//                    edges.erase(edges.begin() + i);
-//                    lastLineIsUseless = true;
-//                    // the last edge doesnt have the small distance so dont add it
-//                }
+                    itHasBeenChange = true;
                 } else {
                     newEdges.push_back(edges[i]);
                 }
             }
-//        if (!lastLineIsUseless) {
-//            newEdges.push_back(edges[lineSize]); // add the last line because is not useless
-//        }
             edges = newEdges;
         }
     }
 }
 
-void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, bool virtualizeWithPieces) {
+void showLines(const Mat mat, ChessTableEdges &chessTableEdges, const string &message) {
+    Mat src = mat.clone();
+    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
+        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
+        line(src, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
+        putText(src, patch::to_string(i), Point(v[0], v[1]), CV_FONT_HERSHEY_PLAIN, 2, Scalar::all(255), 2, 8);
+
+        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
+        line(src, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
+        putText(src, patch::to_string(i), Point(v2[0], v2[1]), CV_FONT_HERSHEY_PLAIN, 2, Scalar::all(255), 2, 8);
+    }
+    namedWindow(message, CV_WINDOW_AUTOSIZE);
+    imshow(message, src);
+}
+
+void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
 
     Mat dst, cdst, cdfinal;
     int lowThreshold = 170; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
@@ -699,99 +679,74 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
 
     // This vector will contain the output lines from the library's function to detect lines
     vector<Vec4i> vecHoughLines;
+
     // This will detect 2 set of lines ( horizontal and vertical) but with different slopes
-    houghSimpleLines(dst, vecHoughLines); //This will get all lines in the image
+    if (houghSimpleLines(dst, vecHoughLines) < 20) {
+        // for the performance
+        return;
+    }
 
-    int angleSeparator = 2;
-    ChessTableEdges chessTableEdges;
+    ChessTableEdges *chessTableEdges = &squareMatrix.chessTableEdges;
+
     // Separates the lines in 2 sets after an angle
-    separateLinesByAngle(vecHoughLines, angleSeparator, chessTableEdges);
+    separateLinesByAngle(vecHoughLines, *chessTableEdges);
 
-//    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
-//        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
-//        line(cdfinal, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
-//
-//        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
-//        line(cdfinal, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
-//    }
-//    namedWindow("All lines", CV_WINDOW_AUTOSIZE);
-//    imshow("All lines", cdfinal);
-
+//    showLines(cdfinal, *chessTableEdges, "Lines separated by angle");
 
     // Filter lines by their intersection
-    filterLinesByIntersection(chessTableEdges);
+    filterLinesByIntersection(*chessTableEdges);
 
-    cout << "\nEdges after filterByIntersection  horiz:" << chessTableEdges.horizontalNegativeAngleLines.size()
-         << " vert " <<
-         chessTableEdges.verticalPositiveAngleLines.size();
-
-    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
-        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
-        line(cdfinal, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
-
-        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
-        line(cdfinal, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
-    }
-    namedWindow("All lines", CV_WINDOW_AUTOSIZE);
-    imshow("All lines", cdfinal);
-
+    showLines(cdfinal, *chessTableEdges, "Lines filtered by intersection");
 
     // This variable will hold the chess table corner points
     vector<Point> tableIntersectionPoints;
 
     // Find the margin edges
-    findMarginLines(chessTableEdges, cdst);
-
-    // Shorten the edges
-    shortenEdges(chessTableEdges);
-
-    // TODO here needs work because it depends on the image and how the table is positioned
-    sort(chessTableEdges.verticalPositiveAngleLines.begin(), chessTableEdges.verticalPositiveAngleLines.end(),
-         compYDesc);
-    sort(chessTableEdges.horizontalNegativeAngleLines.begin(), chessTableEdges.horizontalNegativeAngleLines.end(),
-         compYDesc);
-
-    filterByDistance(chessTableEdges.verticalPositiveAngleLines, cdst);
-    filterByDistance(chessTableEdges.horizontalNegativeAngleLines, cdst);
-
-    cout << "\nEdges after filterByDistance  horiz:" << chessTableEdges.horizontalNegativeAngleLines.size() << " vert "
-         <<
-         chessTableEdges.verticalPositiveAngleLines.size();
-
-    // Find the margin edges
-    findMarginLines(chessTableEdges, cdst);
-
-    // Shorten the edges
-    shortenEdges(chessTableEdges);
-
-    // Get the tables corner points
-    findTableCornerPoints(chessTableEdges, tableIntersectionPoints, cdst);
-
-    // If there are no lines , we just return
-    if (!(chessTableEdges.verticalPositiveAngleLines.size() > 0 &&
-          chessTableEdges.horizontalNegativeAngleLines.size() > 0)) {
+    if (!findMarginLines(*chessTableEdges, cdst)) {
+        // If no margins were found, return
         return;
     }
 
-    cout << "\nEdges after filterByClose  horiz:" << chessTableEdges.horizontalNegativeAngleLines.size() << " vert " <<
-         chessTableEdges.verticalPositiveAngleLines.size();
+    // Shorten the edges
+    shortenEdges(*chessTableEdges);
 
-    searchCloseDistanceAndRemove(chessTableEdges.verticalPositiveAngleLines, 10);
-    searchCloseDistanceAndRemove(chessTableEdges.horizontalNegativeAngleLines, 10);
+    // To apply the filterByDistance (half distances) we must sort the edges otherwise the average distance will not be correct and remove usefull edges
+    sort(chessTableEdges->verticalPositiveAngleLines.begin(), chessTableEdges->verticalPositiveAngleLines.end(),
+         compYDesc);
 
-    for (int i = 0; i < chessTableEdges.horizontalNegativeAngleLines.size(); i++) {
-        Vec4i v = chessTableEdges.horizontalNegativeAngleLines[i];
-        line(cdst, Point(v[0], v[1]), Point(v[2], v[3]), Scalar(255, 0, 0), 3, CV_AA);
+    sort(chessTableEdges->horizontalNegativeAngleLines.begin(), chessTableEdges->horizontalNegativeAngleLines.end(),
+         compXDesc);
 
-        Vec4i v2 = chessTableEdges.verticalPositiveAngleLines[i];
-        line(cdst, Point(v2[0], v2[1]), Point(v2[2], v2[3]), Scalar(0, 255, 0), 3, CV_AA);
+    filterByDistance(chessTableEdges->verticalPositiveAngleLines, cdst);
+    filterByDistance(chessTableEdges->horizontalNegativeAngleLines, cdst);
+
+    // Call the margin edges again because it is possible they have been deleted
+    if (!findMarginLines(*chessTableEdges, cdst)) {
+        // If no margins were found, return because we depende on them in the future
+        return;
     }
-    namedWindow("lines", CV_WINDOW_AUTOSIZE);
-    imshow("lines", cdst);
+
+    // Shorten the edges
+    shortenEdges(*chessTableEdges);
+
+    // Get the tables corner points
+    findTableCornerPoints(*chessTableEdges, tableIntersectionPoints, cdst);
+
+    // If there are no lines , we just return
+    if (chessTableEdges->verticalPositiveAngleLines.empty() ||
+        chessTableEdges->horizontalNegativeAngleLines.empty()) {
+        return;
+    }
+
+    searchCloseDistanceAndRemove(chessTableEdges->verticalPositiveAngleLines, 10);
+    searchCloseDistanceAndRemove(chessTableEdges->horizontalNegativeAngleLines, 10);
+
+    showLines(cdfinal, *chessTableEdges, "Lines after full filter");
 
     Point2f pointMatrix[9][9];
     //Creates a 9x9 matrix with all the line intersection points of the table
-    createSquarePointMatrix(chessTableEdges.verticalPositiveAngleLines, chessTableEdges.horizontalNegativeAngleLines,
+    createSquarePointMatrix(chessTableEdges->verticalPositiveAngleLines,
+                            chessTableEdges->horizontalNegativeAngleLines,
                             pointMatrix);
 
     //Creates a 8x8 matrix with the squares(corner points, neighbors,color,if it has piece) of the table
@@ -807,13 +762,6 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix, boo
             printf("%d  ", squareMatrix.getSquare(i, j).color);
         }
     }
-
-    if (virtualizeWithPieces) {
-        putPiecesOnBoard(squareMatrix);
-    }
-
-    squareMatrix.chessTableEdges = chessTableEdges;
-
 
 //    ChessSquare *currentSquare = addressof(squareMatrix.getSquare(0, 4));
 //    Point rook_points[4];

@@ -43,10 +43,10 @@ public:
         for (int i = 0; i < matrixSize * matrixSize; ++i) {
             m_squares.push_back(ChessSquare());
         }
+        initBasicModel();
     }
 
     void initBasicModel();
-
 
     ChessSquare searchSquareAfterValues(Point basePoint);
 

@@ -64,7 +64,7 @@ void virtualizeChessTable(Mat &frame) {
 //        Mat src = imagePreparation::readImage("D:\\Facultate\\c++Project\\opencv_c-c-\\edgeDetection\\images\\new_squares\\img1.jpg"); //read the image
 //        resize(frame, src, size);
         squareMatrix=new ChessSquareMatrix(8);
-        EdgeProcessing::startProcess(frame, *squareMatrix,vitualizeWithPieces);
+        EdgeProcessing::startProcess(frame, *squareMatrix);
         int ceva=6;
         // TODO , call the function to detect edges again
     } else {

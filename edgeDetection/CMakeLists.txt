@@ -41,7 +41,7 @@ set(SOURCE_FILES
 #        src/ContourDatabase.cpp
 #        src/ContourDatabase.h
         src/MoveValidity.cpp
-        src/MoveValidity.h)
+        src/MoveValidity.h models/patch.cpp models/patch.h)
 
 add_executable(test_cv ${SOURCE_FILES})
 
