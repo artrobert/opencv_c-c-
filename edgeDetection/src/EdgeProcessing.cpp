@@ -665,7 +665,14 @@ void showLines(const Mat mat, ChessTableEdges &chessTableEdges, const string &me
     imshow(message, src);
 }
 
-void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
+/**
+ * Control function that will call all the function for edge detection in order to obtain a digital chess table
+ *
+ * @param src The input image
+ * @param squareMatrix The object that will contain all the info about the board digitalization
+ * @return true if there was no problem identified, false otherwise
+ */
+bool EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
 
     Mat dst, cdst, cdfinal;
     int lowThreshold = 170; // TODO THIS SHOULD BE AUTOMATIZED, SEARCH INTERNET
@@ -683,7 +690,7 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     // This will detect 2 set of lines ( horizontal and vertical) but with different slopes
     if (houghSimpleLines(dst, vecHoughLines) < 20) {
         // for the performance
-        return;
+        return false;
     }
 
     ChessTableEdges *chessTableEdges = &squareMatrix.chessTableEdges;
@@ -704,7 +711,7 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     // Find the margin edges
     if (!findMarginLines(*chessTableEdges, cdst)) {
         // If no margins were found, return
-        return;
+        return false;
     }
 
     // Shorten the edges
@@ -722,8 +729,8 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
 
     // Call the margin edges again because it is possible they have been deleted
     if (!findMarginLines(*chessTableEdges, cdst)) {
-        // If no margins were found, return because we depende on them in the future
-        return;
+        // If no margins were found, return because we depend on them in the future
+        return false;
     }
 
     // Shorten the edges
@@ -735,13 +742,20 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     // If there are no lines , we just return
     if (chessTableEdges->verticalPositiveAngleLines.empty() ||
         chessTableEdges->horizontalNegativeAngleLines.empty()) {
-        return;
+        return false;
     }
 
     searchCloseDistanceAndRemove(chessTableEdges->verticalPositiveAngleLines, 10);
     searchCloseDistanceAndRemove(chessTableEdges->horizontalNegativeAngleLines, 10);
 
     showLines(cdfinal, *chessTableEdges, "Lines after full filter");
+
+    // From here, we presume that 18 edges were identified (9x9)
+    // and we create the matrix's (point and square) based on them
+    if (chessTableEdges->verticalPositiveAngleLines.size() != 9 &&
+        chessTableEdges->horizontalNegativeAngleLines.size() != 9) {
+        return false;
+    }
 
     Point2f pointMatrix[9][9];
     //Creates a 9x9 matrix with all the line intersection points of the table
@@ -773,4 +787,5 @@ void EdgeProcessing::startProcess(Mat &src, ChessSquareMatrix &squareMatrix) {
     Mat eqSq;
 //    extractSquare(rook_points, src, eqSq);
 //    imshow("dsd", eqSq);
+    return true;
 }
